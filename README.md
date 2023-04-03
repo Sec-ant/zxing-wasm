@@ -78,7 +78,7 @@ interface ZXingReadOptions {
   /* Try better to find barcodes, default = true */
   tryHarder?: boolean;
   /* An array of barcode formats to detect, default = [] (indicates any format) */
-  formats?: readonly ZXingInputBarcodeFormat[];
+  formats?: readonly ZXingReadInputBarcodeFormat[];
   /* Upper limit of the number of barcodes to be detected, default = Infinite */
   maxNumberOfSymbols?: number;
 }
@@ -87,7 +87,7 @@ interface ZXingReadOptions {
 The allowed barcode formats to read are:
 
 ```ts
-type ZXingInputBarcodeFormat =
+type ZXingReadInputBarcodeFormat =
   | "Aztec"
   | "Codabar"
   | "Code128"
