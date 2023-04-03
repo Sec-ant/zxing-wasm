@@ -1,7 +1,7 @@
 {
   "name": "@sec-ant/zxing-wasm",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "exports": {
     ".": "./dist/full/index.js",
@@ -9,6 +9,9 @@
     "./writer": "./dist/writer/index.js",
     "./full": "./dist/full/index.js"
   },
+  "files": [
+    "./dist/**/*"
+  ],
   "config": {
     "zxing_wasm_repo_url": "https://github.com/Sec-ant/zxing-wasm-build",
     "zxing_wasm_path": "releases/latest/download",
