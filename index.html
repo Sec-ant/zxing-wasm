@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZXing Reader Demo</title>
+  </head>
+  <body>
+    <div></div>
+    <script type="module">
+      import {
+        scanBarcodeFromImageFile,
+        generateBarcodeToImageFile,
+      } from "./src/full/index.ts";
+      const text = "123";
+      const decodedText = (
+        await scanBarcodeFromImageFile(
+          (
+            await generateBarcodeToImageFile("123")
+          ).image
+        )
+      )[0].text;
+      console.log(text === decodedText);
+    </script>
+  </body>
+</html>
