@@ -7,14 +7,14 @@
     <div></div>
     <script type="module">
       import {
-        scanBarcodeFromImageFile,
-        generateBarcodeToImageFile,
+        readBarcodeFromImageFile,
+        writeBarcodeToImageFile,
       } from "./src/full/index.ts";
       const text = "123";
       const decodedText = (
-        await scanBarcodeFromImageFile(
+        await readBarcodeFromImageFile(
           (
-            await generateBarcodeToImageFile("123")
+            await writeBarcodeToImageFile("123")
           ).image
         )
       )[0].text;

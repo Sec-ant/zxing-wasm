@@ -1,30 +1,30 @@
 import ZXing from "./zxing_full.js";
 import {
-  scanBarcodeFromImageFile as _scanBarcodeFromImageFile,
-  scanBarcodeFromImageData as _scanBarcodeFromImageData,
-  generateBarcodeToImageFile as _generateBarcodeToImageFile,
+  readBarcodeFromImageFile as _readBarcodeFromImageFile,
+  readBarcodeFromImageData as _readBarcodeFromImageData,
+  writeBarcodeToImageFile as _writeBarcodeToImageFile,
   getZXingInstance as _getZXingInstance,
-  defaultZXingScanOptions,
-  ZXingScanOptions,
-  ZXingScanResult,
-  defaultZXingGenerateOptions,
-  ZXingGenerateOptions,
-  ZXingGenerateResult,
+  defaultZXingReadOptions,
+  ZXingReadOptions,
+  ZXingReadResult,
+  defaultZXingWriteOptions,
+  ZXingWriteOptions,
+  ZXingWriteResult,
 } from "../ZXing.js";
 
 export function getZXingInstance() {
-  return _getZXingInstance(ZXing);
+  _getZXingInstance(ZXing);
 }
 
-export async function scanBarcodeFromImageFile(
+export async function readBarcodeFromImageFile(
   imageFile: Blob | File,
   {
-    tryHarder = defaultZXingScanOptions.tryHarder,
-    formats = defaultZXingScanOptions.formats,
-    maxNumberOfSymbols = defaultZXingScanOptions.maxNumberOfSymbols,
-  }: ZXingScanOptions = defaultZXingScanOptions
-): Promise<ZXingScanResult[]> {
-  return _scanBarcodeFromImageFile(
+    tryHarder = defaultZXingReadOptions.tryHarder,
+    formats = defaultZXingReadOptions.formats,
+    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
+  }: ZXingReadOptions = defaultZXingReadOptions
+): Promise<ZXingReadResult[]> {
+  return _readBarcodeFromImageFile(
     imageFile,
     {
       tryHarder,
@@ -35,15 +35,15 @@ export async function scanBarcodeFromImageFile(
   );
 }
 
-export async function scanBarcodeFromImageData(
+export async function readBarcodeFromImageData(
   imageData: ImageData,
   {
-    tryHarder = defaultZXingScanOptions.tryHarder,
-    formats = defaultZXingScanOptions.formats,
-    maxNumberOfSymbols = defaultZXingScanOptions.maxNumberOfSymbols,
-  }: ZXingScanOptions = defaultZXingScanOptions
-): Promise<ZXingScanResult[]> {
-  return _scanBarcodeFromImageData(
+    tryHarder = defaultZXingReadOptions.tryHarder,
+    formats = defaultZXingReadOptions.formats,
+    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
+  }: ZXingReadOptions = defaultZXingReadOptions
+): Promise<ZXingReadResult[]> {
+  return _readBarcodeFromImageData(
     imageData,
     {
       tryHarder,
@@ -54,18 +54,18 @@ export async function scanBarcodeFromImageData(
   );
 }
 
-export async function generateBarcodeToImageFile(
+export async function writeBarcodeToImageFile(
   text: string,
   {
-    format = defaultZXingGenerateOptions.format,
-    charset = defaultZXingGenerateOptions.charset,
-    quietZone = defaultZXingGenerateOptions.quietZone,
-    width = defaultZXingGenerateOptions.width,
-    height = defaultZXingGenerateOptions.height,
-    eccLevel = defaultZXingGenerateOptions.eccLevel,
-  }: ZXingGenerateOptions = defaultZXingGenerateOptions
-): Promise<ZXingGenerateResult> {
-  return _generateBarcodeToImageFile(
+    format = defaultZXingWriteOptions.format,
+    charset = defaultZXingWriteOptions.charset,
+    quietZone = defaultZXingWriteOptions.quietZone,
+    width = defaultZXingWriteOptions.width,
+    height = defaultZXingWriteOptions.height,
+    eccLevel = defaultZXingWriteOptions.eccLevel,
+  }: ZXingWriteOptions = defaultZXingWriteOptions
+): Promise<ZXingWriteResult> {
+  return _writeBarcodeToImageFile(
     text,
     {
       format,
@@ -78,3 +78,5 @@ export async function generateBarcodeToImageFile(
     ZXing
   );
 }
+
+export * from "../exposed.js";

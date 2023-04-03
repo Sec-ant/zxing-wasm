@@ -36,7 +36,17 @@ export const ZXING_BARCODE_FORMAT_NAMES = [
 
 export type ZXingBarcodeFormat = typeof ZXING_BARCODE_FORMAT_NAMES[number];
 
-export type ZXingInputBarcodeFormat = Exclude<ZXingBarcodeFormat, "None">;
+export type ZXingReadResultBarcodeFormat = Exclude<
+  ZXingBarcodeFormat,
+  "Linear-Codes" | "Matrix-Codes"
+>;
+
+export type ZXingReadInputBarcodeFormat = Exclude<ZXingBarcodeFormat, "None">;
+
+export type ZXingWriteInputBarcodeFormat = Exclude<
+  ZXingBarcodeFormat,
+  "None" | "DataBar" | "DataBarExpanded" | "MaxiCode" | "MicroQRCode"
+>;
 
 export const ZXING_CHARACTOR_SET_NAMES = [
   "Cp437",
@@ -100,19 +110,19 @@ export interface ZXingPosition {
   topRight: ZXingPointI;
 }
 
-export interface ZXingReadResult {
+export interface ZXingInnerReadResult {
   format: string;
   text: string;
   error: string;
   position: ZXingPosition;
 }
 
-export interface ZXingReadResultVector {
+export interface ZXingInnerReadResultVector {
   size: () => number;
-  get: (i: number) => ZXingReadResult | undefined;
+  get: (i: number) => ZXingInnerReadResult | undefined;
 }
 
-export interface ZXingWriteResult {
+export interface ZXingInnerWriteResult {
   image: Uint8Array | null;
   error: string;
   delete: () => void;
@@ -138,7 +148,7 @@ export interface ZXingInstance extends WebAssembly.Instance {
     tryHarder: boolean,
     formats: string,
     maxNumberOfSymbols: number
-  ): ZXingReadResultVector;
+  ): ZXingInnerReadResultVector;
 
   // raw image data
   readBarcodeFromPixmap(
@@ -148,7 +158,7 @@ export interface ZXingInstance extends WebAssembly.Instance {
     tryHarder: boolean,
     formats: string,
     maxNumberOfSymbols: number
-  ): ZXingReadResultVector;
+  ): ZXingInnerReadResultVector;
 
   // png
   writeBarcodeToImage(
@@ -159,32 +169,32 @@ export interface ZXingInstance extends WebAssembly.Instance {
     width: number,
     height: number,
     eccLevel: number
-  ): ZXingWriteResult;
+  ): ZXingInnerWriteResult;
 }
 
-export interface ZXingScanResult extends Omit<ZXingReadResult, "format"> {
-  format: ZXingBarcodeFormat;
+export interface ZXingReadResult extends Omit<ZXingInnerReadResult, "format"> {
+  format: ZXingReadResultBarcodeFormat;
 }
 
-export interface ZXingScanOptions {
+export interface ZXingReadOptions {
   tryHarder?: boolean;
-  formats?: readonly ZXingInputBarcodeFormat[];
+  formats?: readonly ZXingReadInputBarcodeFormat[];
   maxNumberOfSymbols?: number;
 }
 
-export const defaultZXingScanOptions: Required<ZXingScanOptions> = {
+export const defaultZXingReadOptions: Required<ZXingReadOptions> = {
   tryHarder: true,
   formats: [],
   maxNumberOfSymbols: Infinity,
 };
 
-export interface ZXingGenerateResult
-  extends Omit<ZXingWriteResult, "image" | "delete"> {
+export interface ZXingWriteResult
+  extends Omit<ZXingInnerWriteResult, "image" | "delete"> {
   image: Blob | null;
 }
 
-export interface ZXingGenerateOptions {
-  format?: ZXingInputBarcodeFormat;
+export interface ZXingWriteOptions {
+  format?: ZXingWriteInputBarcodeFormat;
   charset?: ZXingCharacterSet;
   quietZone?: number;
   width?: number;
@@ -192,7 +202,7 @@ export interface ZXingGenerateOptions {
   eccLevel?: ZXingEccLevel;
 }
 
-export const defaultZXingGenerateOptions: Required<ZXingGenerateOptions> = {
+export const defaultZXingWriteOptions: Required<ZXingWriteOptions> = {
   format: "QRCode",
   charset: "UTF-8",
   quietZone: 10,
@@ -201,15 +211,15 @@ export const defaultZXingGenerateOptions: Required<ZXingGenerateOptions> = {
   eccLevel: -1,
 };
 
-export async function scanBarcodeFromImageFile(
+export async function readBarcodeFromImageFile(
   imageFile: Blob | File,
   {
-    tryHarder = defaultZXingScanOptions.tryHarder,
-    formats = defaultZXingScanOptions.formats,
-    maxNumberOfSymbols = defaultZXingScanOptions.maxNumberOfSymbols,
-  }: ZXingScanOptions = defaultZXingScanOptions,
+    tryHarder = defaultZXingReadOptions.tryHarder,
+    formats = defaultZXingReadOptions.formats,
+    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
+  }: ZXingReadOptions = defaultZXingReadOptions,
   ZXing: ZXingWasm
-): Promise<ZXingScanResult[]> {
+): Promise<ZXingReadResult[]> {
   const zxingInstance = await getZXingInstance(ZXing);
   const { size } = imageFile;
   const imageFileData = new Uint8Array(await imageFile.arrayBuffer());
@@ -223,26 +233,26 @@ export async function scanBarcodeFromImageFile(
     maxNumberOfSymbols
   );
   zxingInstance._free(bufferPtr);
-  const results: ZXingScanResult[] = [];
+  const results: ZXingReadResult[] = [];
   for (let i = 0; i < resultVector.size(); ++i) {
-    const result = resultVector.get(i) as ZXingReadResult;
+    const result = resultVector.get(i) as ZXingInnerReadResult;
     results.push({
       ...result,
-      format: formatFromString(result.format),
+      format: formatFromString(result.format) as ZXingReadResultBarcodeFormat,
     });
   }
   return results;
 }
 
-export async function scanBarcodeFromImageData(
+export async function readBarcodeFromImageData(
   imageData: ImageData,
   {
-    tryHarder = defaultZXingScanOptions.tryHarder,
-    formats = defaultZXingScanOptions.formats,
-    maxNumberOfSymbols = defaultZXingScanOptions.maxNumberOfSymbols,
-  }: ZXingScanOptions = defaultZXingScanOptions,
+    tryHarder = defaultZXingReadOptions.tryHarder,
+    formats = defaultZXingReadOptions.formats,
+    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
+  }: ZXingReadOptions = defaultZXingReadOptions,
   ZXing: ZXingWasm
-): Promise<ZXingScanResult[]> {
+): Promise<ZXingReadResult[]> {
   const zxingInstance = await getZXingInstance(ZXing);
   const {
     data,
@@ -261,29 +271,29 @@ export async function scanBarcodeFromImageData(
     maxNumberOfSymbols
   );
   zxingInstance._free(bufferPtr);
-  const results: ZXingScanResult[] = [];
+  const results: ZXingReadResult[] = [];
   for (let i = 0; i < resultVector.size(); ++i) {
-    const result = resultVector.get(i) as ZXingReadResult;
+    const result = resultVector.get(i) as ZXingInnerReadResult;
     results.push({
       ...result,
-      format: formatFromString(result.format),
+      format: formatFromString(result.format) as ZXingReadResultBarcodeFormat,
     });
   }
   return results;
 }
 
-export async function generateBarcodeToImageFile(
+export async function writeBarcodeToImageFile(
   text: string,
   {
-    format = defaultZXingGenerateOptions.format,
-    charset = defaultZXingGenerateOptions.charset,
-    quietZone = defaultZXingGenerateOptions.quietZone,
-    width = defaultZXingGenerateOptions.width,
-    height = defaultZXingGenerateOptions.height,
-    eccLevel = defaultZXingGenerateOptions.eccLevel,
-  }: ZXingGenerateOptions = defaultZXingGenerateOptions,
+    format = defaultZXingWriteOptions.format,
+    charset = defaultZXingWriteOptions.charset,
+    quietZone = defaultZXingWriteOptions.quietZone,
+    width = defaultZXingWriteOptions.width,
+    height = defaultZXingWriteOptions.height,
+    eccLevel = defaultZXingWriteOptions.eccLevel,
+  }: ZXingWriteOptions = defaultZXingWriteOptions,
   ZXing: ZXingWasm
-): Promise<ZXingGenerateResult> {
+): Promise<ZXingWriteResult> {
   const zxingInstance = await getZXingInstance(ZXing);
   const result = zxingInstance.writeBarcodeToImage(
     text,

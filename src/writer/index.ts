@@ -1,30 +1,28 @@
 import ZXing from "./zxing_writer.js";
 import {
-  scanBarcodeFromImageFile as _scanBarcodeFromImageFile,
-  scanBarcodeFromImageData as _scanBarcodeFromImageData,
-  generateBarcodeToImageFile as _generateBarcodeToImageFile,
+  writeBarcodeToImageFile as _writeBarcodeToImageFile,
   getZXingInstance as _getZXingInstance,
-  defaultZXingGenerateOptions,
-  ZXingGenerateOptions,
-  ZXingGenerateResult,
+  defaultZXingWriteOptions,
+  ZXingWriteOptions,
+  ZXingWriteResult,
 } from "../ZXing.js";
 
 export function getZXingInstance() {
   return _getZXingInstance(ZXing);
 }
 
-export async function generateBarcodeToImageFile(
+export async function writeBarcodeToImageFile(
   text: string,
   {
-    format = defaultZXingGenerateOptions.format,
-    charset = defaultZXingGenerateOptions.charset,
-    quietZone = defaultZXingGenerateOptions.quietZone,
-    width = defaultZXingGenerateOptions.width,
-    height = defaultZXingGenerateOptions.height,
-    eccLevel = defaultZXingGenerateOptions.eccLevel,
-  }: ZXingGenerateOptions = defaultZXingGenerateOptions
-): Promise<ZXingGenerateResult> {
-  return _generateBarcodeToImageFile(
+    format = defaultZXingWriteOptions.format,
+    charset = defaultZXingWriteOptions.charset,
+    quietZone = defaultZXingWriteOptions.quietZone,
+    width = defaultZXingWriteOptions.width,
+    height = defaultZXingWriteOptions.height,
+    eccLevel = defaultZXingWriteOptions.eccLevel,
+  }: ZXingWriteOptions = defaultZXingWriteOptions
+): Promise<ZXingWriteResult> {
+  return _writeBarcodeToImageFile(
     text,
     {
       format,
@@ -37,3 +35,5 @@ export async function generateBarcodeToImageFile(
     ZXing
   );
 }
+
+export * from "../exposed.js";
