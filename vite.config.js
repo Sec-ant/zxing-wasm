@@ -4,11 +4,11 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   build: {
     lib: {
-      entry: [
-        "src/reader/index.ts",
-        "src/writer/index.ts",
-        "src/full/index.ts",
-      ],
+      entry: {
+        "reader/index": "src/reader/index.ts",
+        "writer/index": "src/writer/index.ts",
+        "full/index": "src/full/index.ts",
+      },
       formats: ["es"],
     },
     rollupOptions: {
