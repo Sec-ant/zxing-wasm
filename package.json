@@ -1,7 +1,7 @@
 {
   "name": "@sec-ant/zxing-wasm",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "exports": {
     ".": "./dist/full/index.js",
@@ -24,6 +24,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "postbuild": "node replace-output.js",
+    "prepublishOnly": "npm run build",
     "preview": "vite preview"
   },
   "devDependencies": {
