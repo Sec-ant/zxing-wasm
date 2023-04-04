@@ -1,3 +1,3 @@
-import { ZXingWasm } from "../ZXing.js";
-declare var ZXing: ZXingWasm;
+import { ZXingModuleFactory } from "../ZXing.js";
+declare var ZXing: ZXingModuleFactory<"writer">;
 export default ZXing;

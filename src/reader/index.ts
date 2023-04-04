@@ -1,15 +1,18 @@
-import ZXing from "./zxing_reader.js";
+import zxingModuleFactory from "./zxing_reader.js";
 import {
   readBarcodeFromImageFile as _readBarcodeFromImageFile,
   readBarcodeFromImageData as _readBarcodeFromImageData,
-  getZXingInstance as _getZXingInstance,
+  writeBarcodeToImageFile as _writeBarcodeToImageFile,
+  getZXingModule as _getZXingModule,
   defaultZXingReadOptions,
   ZXingReadOptions,
-  ZXingReadResult,
+  ZXingReadOutput,
 } from "../ZXing.js";
 
-export function getZXingInstance() {
-  return _getZXingInstance(ZXing);
+export function getZXingInstance(
+  zxingModuleOverrides?: Partial<Awaited<ReturnType<typeof zxingModuleFactory>>>
+) {
+  _getZXingModule(zxingModuleFactory, zxingModuleOverrides);
 }
 
 export async function readBarcodeFromImageFile(
@@ -19,7 +22,7 @@ export async function readBarcodeFromImageFile(
     formats = defaultZXingReadOptions.formats,
     maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions
-): Promise<ZXingReadResult[]> {
+): Promise<ZXingReadOutput[]> {
   return _readBarcodeFromImageFile(
     imageFile,
     {
@@ -27,26 +30,7 @@ export async function readBarcodeFromImageFile(
       formats,
       maxNumberOfSymbols,
     },
-    ZXing
-  );
-}
-
-export async function readBarcodeFromImageData(
-  imageData: ImageData,
-  {
-    tryHarder = defaultZXingReadOptions.tryHarder,
-    formats = defaultZXingReadOptions.formats,
-    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
-  }: ZXingReadOptions = defaultZXingReadOptions
-): Promise<ZXingReadResult[]> {
-  return _readBarcodeFromImageData(
-    imageData,
-    {
-      tryHarder,
-      formats,
-      maxNumberOfSymbols,
-    },
-    ZXing
+    zxingModuleFactory
   );
 }
 

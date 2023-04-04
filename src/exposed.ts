@@ -4,15 +4,33 @@ export {
   defaultZXingReadOptions,
   defaultZXingWriteOptions,
 } from "./ZXing.js";
+
 export type {
+  // module
+  ZXingModuleType,
+  ZXingModuleFactory,
+  ZXingModule,
+  // barcode format
   ZXingBarcodeFormat,
   ZXingReadInputBarcodeFormat,
-  ZXingReadResultBarcodeFormat,
   ZXingWriteInputBarcodeFormat,
+  ZXingReadOutputBarcodeFormat,
+  // charset
   ZXingCharacterSet,
-  ZXingEccLevel,
-  ZXingReadResult,
+  // ecc level
+  ZXingECCLevel,
+  // point and position
+  ZXingPoint,
+  ZXingPosition,
+  // vector
+  ZXingVector,
+  // inner output
+  ZXingReadInnerOutput,
+  ZXingWriteInnerOutput,
+  // output
+  ZXingReadOutput,
+  ZXingWriteOutput,
+  // options
   ZXingReadOptions,
-  ZXingWriteResult,
   ZXingWriteOptions,
 } from "./ZXing.js";

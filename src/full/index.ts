@@ -1,19 +1,21 @@
-import ZXing from "./zxing_full.js";
+import zxingModuleFactory from "./zxing_full.js";
 import {
   readBarcodeFromImageFile as _readBarcodeFromImageFile,
   readBarcodeFromImageData as _readBarcodeFromImageData,
   writeBarcodeToImageFile as _writeBarcodeToImageFile,
-  getZXingInstance as _getZXingInstance,
+  getZXingModule as _getZXingModule,
   defaultZXingReadOptions,
   ZXingReadOptions,
-  ZXingReadResult,
+  ZXingReadOutput,
   defaultZXingWriteOptions,
   ZXingWriteOptions,
-  ZXingWriteResult,
+  ZXingWriteOutput,
 } from "../ZXing.js";
 
-export function getZXingInstance() {
-  _getZXingInstance(ZXing);
+export function getZXingInstance(
+  zxingModuleOverrides?: Partial<Awaited<ReturnType<typeof zxingModuleFactory>>>
+) {
+  _getZXingModule(zxingModuleFactory, zxingModuleOverrides);
 }
 
 export async function readBarcodeFromImageFile(
@@ -23,7 +25,7 @@ export async function readBarcodeFromImageFile(
     formats = defaultZXingReadOptions.formats,
     maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions
-): Promise<ZXingReadResult[]> {
+): Promise<ZXingReadOutput[]> {
   return _readBarcodeFromImageFile(
     imageFile,
     {
@@ -31,7 +33,7 @@ export async function readBarcodeFromImageFile(
       formats,
       maxNumberOfSymbols,
     },
-    ZXing
+    zxingModuleFactory
   );
 }
 
@@ -42,7 +44,7 @@ export async function readBarcodeFromImageData(
     formats = defaultZXingReadOptions.formats,
     maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions
-): Promise<ZXingReadResult[]> {
+): Promise<ZXingReadOutput[]> {
   return _readBarcodeFromImageData(
     imageData,
     {
@@ -50,7 +52,7 @@ export async function readBarcodeFromImageData(
       formats,
       maxNumberOfSymbols,
     },
-    ZXing
+    zxingModuleFactory
   );
 }
 
@@ -64,7 +66,7 @@ export async function writeBarcodeToImageFile(
     height = defaultZXingWriteOptions.height,
     eccLevel = defaultZXingWriteOptions.eccLevel,
   }: ZXingWriteOptions = defaultZXingWriteOptions
-): Promise<ZXingWriteResult> {
+): Promise<ZXingWriteOutput> {
   return _writeBarcodeToImageFile(
     text,
     {
@@ -75,7 +77,7 @@ export async function writeBarcodeToImageFile(
       height,
       eccLevel,
     },
-    ZXing
+    zxingModuleFactory
   );
 }
 
