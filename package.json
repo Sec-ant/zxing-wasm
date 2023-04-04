@@ -1,17 +1,18 @@
 {
   "name": "@sec-ant/zxing-wasm",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
+  "files": [
+    "./dist/**/*"
+  ],
+  "main": "./dist/full/index.js",
   "exports": {
     ".": "./dist/full/index.js",
     "./reader": "./dist/reader/index.js",
     "./writer": "./dist/writer/index.js",
     "./full": "./dist/full/index.js"
   },
-  "files": [
-    "./dist/**/*"
-  ],
   "config": {
     "zxing_wasm_repo_url": "https://github.com/Sec-ant/zxing-wasm-build",
     "zxing_wasm_path": "releases/latest/download",
@@ -27,6 +28,26 @@
     "prepublishOnly": "npm run build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sec-ant/zxing-wasm"
+  },
+  "homepage": "https://github.com/Sec-ant/zxing-wasm",
+  "bugs": {
+    "url": "https://github.com/Sec-ant/zxing-wasm/issues"
+  },
+  "keywords": [
+    "es6",
+    "qrcode",
+    "barcode",
+    "wasm",
+    "zxing",
+    "zxing-cpp",
+    "esmodule",
+    "webassembly"
+  ],
+  "author": "Ze-Zheng Wu",
+  "license": "MIT",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "replace-in-file": "^6.3.5",
