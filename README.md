@@ -31,7 +31,7 @@ import {
   readBarcodeFromImageFile,
   readBarcodeFromImageData,
   writeBarcodeToImageFile,
-} from "@sec-ant/zxing-wasm/full";
+} from "@sec-ant/zxing-wasm";
 ```
 
 or
@@ -41,7 +41,7 @@ import {
   readBarcodeFromImageFile,
   readBarcodeFromImageData,
   writeBarcodeToImageFile,
-} from "@sec-ant/zxing-wasm";
+} from "@sec-ant/zxing-wasm/full";
 ```
 
 ### `@sec-ant/zxing-wasm/reader`
@@ -131,22 +131,53 @@ interface ZXingReadResult {
 }
 ```
 
-e.g.:
+e.g.
 
 ```ts
-import { readBarcodeFromImageFile } from "@sec-ant/zxing-wasm/reader";
+import {
+  readBarcodeFromImageFile,
+  readBarcodeFromImageData,
+  ZXingReadOptions,
+} from "@sec-ant/zxing-wasm/reader";
 
-const imageBlob = await fetch(
+const zxingReadOptions: ZXingReadOptions = {
+  tryHarder: true,
+  formats: ["QRCode"],
+  maxNumberOfSymbols: 1,
+};
+
+/**
+ * Read from image file/blob
+ */
+const imageFile = await fetch(
   "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hello%20world!"
 ).then((resp) => resp.blob());
 
-const readResult = await readBarcodeFromImageFile(imageBlob, {
-  tryHarder: false,
-  formats: ["QRCode"],
-  maxNumberOfSymbols: 1,
+const imageFileReadResult = await readBarcodeFromImageFile(
+  imageFile,
+  zxingReadOptions
+);
+
+console.log(imageFileReadResult[0].text); // Hello world!
+
+/**
+ * Read from image data
+ */
+const imageData = await createImageBitmap(imageFile).then((imageBitmap) => {
+  const { width, height } = imageBitmap;
+  const context = new OffscreenCanvas(width, height).getContext(
+    "2d"
+  ) as OffscreenCanvasRenderingContext2D;
+  context.drawImage(imageBitmap, 0, 0, width, height);
+  return context.getImageData(0, 0, width, height);
 });
 
-console.log(readResult[0].text); // Hello world!
+const imageDataReadResult = await readBarcodeFromImageData(
+  imageData,
+  zxingReadOptions
+);
+
+console.log(imageDataReadResult[0].text); // Hello world!
 ```
 
 ### `writeBarcodeToImageFile`
@@ -202,7 +233,19 @@ console.log(writeResult.image);
 
 ## Notes
 
-The wasm binary won't be downloaded and instantiated unless a read or write function is firstly called, and will only be instantiated once. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manully trigger the download and instantiation of the wasm binary prior to any read or write functions, you can call the exported function `getZXingInstance()`.
+When using this package, the wasm binary needs to be served along with the JS glue code. In order to provide a smooth dev experience, the wasm binary serve path is automatically replaced with [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm/) urls after build. Further customization will be considered to provide a more flexible opt-in option.
+
+The wasm binary won't be downloaded and instantiated unless a [read](#readbarcodefromimagefile-and-readbarcodefromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manully trigger the download and instantiation of the wasm binary prior to any read or write functions, you can call the exported function `getZXingInstance`, this function will also return a `Promise` that resolves to a `ZXingInstance`, which this wrapper library is built upon.
+
+```ts
+import { getZXingInstance } from "@sec-ant/zxing-wasm/reader";
+
+/**
+ * This function will trigger the download and
+ * instantiation of the wasm binary immediately
+ */
+getZXingInstance();
+```
 
 ## License
 
