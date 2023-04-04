@@ -49,6 +49,7 @@
   "author": "Ze-Zheng Wu",
   "license": "MIT",
   "devDependencies": {
+    "@types/emscripten": "^1.39.6",
     "cross-env": "^7.0.3",
     "replace-in-file": "^6.3.5",
     "typescript": "^5.0.3",
