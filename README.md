@@ -20,11 +20,11 @@ npm i @sec-ant/zxing-wasm
 
 ## Usage
 
-This package exports 3 subpaths: full, reader and writer. You can choose whichever fits your needs.
+This package exports 3 subpaths: full, reader and writer. You can choose whichever fits your needs. However, bear in mind that [subpath imports needs a `moduleResolution` of `node16` or `nodenext` in your `tsconfig.json` file](https://github.com/microsoft/TypeScript/issues/44848#issuecomment-1212826554).
 
 ### `@sec-ant/zxing-wasm` or `@sec-ant/zxing-wasm/full`
 
-These paths includes functions to both read and write barcodes. The wasm binary size is ~1.25 MB.
+These imports includes functions to both read and write barcodes. The wasm binary size is ~1.25 MB.
 
 ```ts
 import {
@@ -109,12 +109,12 @@ type ZXingReadInputBarcodeFormat =
   | "UPC-E";
 ```
 
-The return result of these 2 functions is a `Promise` of an array of `ZXingReadResult`:
+The return result of these 2 functions is a `Promise` of an array of `ZXingReadOutput`:
 
 ```ts
-interface ZXingReadResult {
+interface ZXingReadOutput {
   /* detected barcode format */
-  format: ZXingReadResultBarcodeFormat;
+  format: ZXingReadOutputBarcodeFormat;
   /* detected barcode text */
   text: string;
   /* error message (if any) */
@@ -153,12 +153,12 @@ const imageFile = await fetch(
   "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hello%20world!"
 ).then((resp) => resp.blob());
 
-const imageFileReadResult = await readBarcodeFromImageFile(
+const imageFileReadOutputs = await readBarcodeFromImageFile(
   imageFile,
   zxingReadOptions
 );
 
-console.log(imageFileReadResult[0].text); // Hello world!
+console.log(imageFileReadOutputs[0].text); // Hello world!
 
 /**
  * Read from image data
@@ -172,12 +172,12 @@ const imageData = await createImageBitmap(imageFile).then((imageBitmap) => {
   return context.getImageData(0, 0, width, height);
 });
 
-const imageDataReadResult = await readBarcodeFromImageData(
+const imageDataReadOutputs = await readBarcodeFromImageData(
   imageData,
   zxingReadOptions
 );
 
-console.log(imageDataReadResult[0].text); // Hello world!
+console.log(imageDataReadOutputs[0].text); // Hello world!
 ```
 
 ### `writeBarcodeToImageFile`
@@ -199,14 +199,14 @@ interface ZXingWriteOptions {
   /* barcode height, default = 200 */
   height?: number;
   /* (E)rror (C)orrection (C)apability level, -1 ~ 8, default = -1 (default) */
-  eccLevel?: ZXingEccLevel;
+  eccLevel?: ZXingECCLevel;
 }
 ```
 
-The return result of this function is a `Promise` of `ZXingWriteResult`:
+The return result of this function is a `Promise` of `ZXingWriteOutput`:
 
 ```ts
-interface ZXingWriteResult {
+interface ZXingWriteOutput {
   /* a png image blob, or null */
   image: Blob | null;
   /* the error reason if image is null */
@@ -219,7 +219,7 @@ e.g.
 ```ts
 import { writeBarcodeToImageFile } from "@sec-ant/zxing-wasm/writer";
 
-const writeResult = await writeBarcodeToImageFile("Hello world!", {
+const writeOutput = await writeBarcodeToImageFile("Hello world!", {
   format: "QRCode",
   charset: "UTF-8",
   quietZone: 5,
@@ -228,23 +228,60 @@ const writeResult = await writeBarcodeToImageFile("Hello world!", {
   eccLevel: 2,
 });
 
-console.log(writeResult.image);
+console.log(writeOutput.image);
 ```
 
 ## Notes
 
-When using this package, the wasm binary needs to be served along with the JS glue code. In order to provide a smooth dev experience, the wasm binary serve path is automatically replaced with [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm/) urls after build. Further customization will be considered to provide a more flexible opt-in option.
+When using this package, the wasm binary needs to be served along with the JS glue code. In order to provide a smooth dev experience, the wasm binary serve path is automatically assigned the [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm/) url upon build.
 
-The wasm binary won't be downloaded and instantiated unless a [read](#readbarcodefromimagefile-and-readbarcodefromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manully trigger the download and instantiation of the wasm binary prior to any read or write functions, you can call the exported function `getZXingInstance`, this function will also return a `Promise` that resolves to a `ZXingInstance`, which this wrapper library is built upon.
+If you would like to change the serve path (to one of your local network hosts or other CDNs), please use `setZXingModuleOverrides` to override the [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function in advance. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#affecting-execution) that can affect the code execution of the `Module` object during its lifecycles.
 
 ```ts
-import { getZXingInstance } from "@sec-ant/zxing-wasm/reader";
+import {
+  setZXingModuleOverrides,
+  writeBarcodeToImageFile,
+} from "@sec-ant/zxing-wasm";
+
+// override the locateFile function
+setZXingModuleOverrides({
+  locateFile: (path, prefix) =>
+    path.endsWith(".wasm")
+      ? "https://www.your-custom-host.com/path/" + path
+      : prefix + path,
+});
+
+// call read or write functions afterwards
+const writeOutput = await writeBarcodeToImageFile("Hello world!");
+```
+
+The wasm binary won't be fetched or instantiated unless a [read](#readbarcodefromimagefile-and-readbarcodefromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once given the same module overrides. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manully trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use `getZXingModule`. This function will also return a `Promise` that resolves to a `ZXingModule`, the wasm `Module` object this wrapper library is built upon.
+
+```ts
+import { getZXingModule } from "@sec-ant/zxing-wasm";
 
 /**
  * This function will trigger the download and
  * instantiation of the wasm binary immediately
  */
-getZXingInstance();
+zxingModulePromise1 = getZXingModule();
+
+zxingModulePromise2 = getZXingModule();
+
+console.log(zxingModulePromise1 === zxingModulePromise2); // true
+```
+
+`getZXingModule` can also optionally accept a `ZXingModuleOverrides` argument.
+
+```ts
+import { getZXingModule } from "@sec-ant/zxing-wasm";
+
+getZXingModule({
+  locateFile: (path, prefix) =>
+    path.endsWith(".wasm")
+      ? "https://www.your-custom-host.com/path/" + path
+      : prefix + path,
+});
 ```
 
 ## License

@@ -1,14 +1,18 @@
 export {
+  setZXingModuleOverrides,
+  purgeZXingModule,
   ZXING_BARCODE_FORMAT_NAMES,
   ZXING_CHARACTOR_SET_NAMES,
   defaultZXingReadOptions,
   defaultZXingWriteOptions,
-} from "./ZXing.js";
+} from "./core.js";
 
 export type {
   // module
   ZXingModuleType,
   ZXingModuleFactory,
+  ZXingModuleFactoryTypeExtractor,
+  ZXingModuleOverrides,
   ZXingModule,
   // barcode format
   ZXingBarcodeFormat,
@@ -33,4 +37,4 @@ export type {
   // options
   ZXingReadOptions,
   ZXingWriteOptions,
-} from "./ZXing.js";
+} from "./core.js";

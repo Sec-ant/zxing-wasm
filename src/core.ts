@@ -1,3 +1,5 @@
+import { createStore } from "zustand/vanilla";
+
 // #region ZXing Module
 
 export type ZXingModuleType = "reader" | "writer";
@@ -6,24 +8,81 @@ export type ZXingModuleFactory<
   T extends ZXingModuleType = "reader" | "writer"
 > = EmscriptenModuleFactory<ZXingModule<T>>;
 
-const zxingModuleWeakMap: WeakMap<
-  ZXingModuleFactory,
-  Promise<ZXingModule>
-> = new WeakMap();
+export type ZXingModuleFactoryTypeExtractor<F> = F extends ZXingModuleFactory<
+  infer T
+>
+  ? T
+  : never;
+
+type ZXingModuleWeakMap<T extends ZXingModuleType = ZXingModuleType> = WeakMap<
+  ZXingModuleFactory<T>,
+  Promise<ZXingModule<T>>
+>;
+
+export type ZXingModuleOverrides<T extends ZXingModuleType = ZXingModuleType> =
+  Partial<ZXingModule<T>>;
+
+interface ZXingState {
+  zxingModuleWeakMap: ZXingModuleWeakMap;
+  zxingModuleOverrides: ZXingModuleOverrides;
+}
+
+const defaultZXingModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
+  ? {
+      locateFile: (path, prefix) => {
+        const subDir = path.match(/(?<=_).+?(?=\.wasm$)/)?.[0];
+        if (subDir) {
+          return `https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${subDir}/${path}`;
+        }
+        return prefix + path;
+      },
+    }
+  : {};
+
+const zxingStore = createStore<ZXingState>()(() => ({
+  zxingModuleWeakMap: new WeakMap(),
+  zxingModuleOverrides: defaultZXingModuleOverrides,
+}));
+
+export function setZXingModuleOverrides(
+  zxingModuleOverrides: ZXingModuleOverrides
+) {
+  zxingStore.setState({
+    zxingModuleOverrides,
+  });
+}
 
 export function getZXingModule<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides?: Partial<ZXingModule<T>>
+  zxingModuleOverrides = zxingStore.getState()
+    .zxingModuleOverrides as ZXingModuleOverrides<T>
 ): Promise<ZXingModule<T>> {
-  if (!zxingModuleWeakMap.has(zxingModuleFactory)) {
-    const zxingInstancePromise = zxingModuleFactory(zxingModuleOverrides);
-    zxingModuleWeakMap.set(zxingModuleFactory, zxingInstancePromise);
-    return zxingInstancePromise;
-  } else {
-    return zxingModuleWeakMap.get(zxingModuleFactory) as Promise<
-      ZXingModule<T>
-    >;
+  const { zxingModuleWeakMap } = zxingStore.getState();
+  const registeredZXingModulePromise = zxingModuleWeakMap.get(
+    zxingModuleFactory
+  ) as Promise<ZXingModule<T>> | undefined;
+  // already registered with the same overrides
+  if (
+    registeredZXingModulePromise &&
+    Object.is(zxingModuleOverrides, zxingStore.getState().zxingModuleOverrides)
+  ) {
+    return registeredZXingModulePromise;
   }
+  // otherwise
+  else {
+    zxingStore.setState({
+      zxingModuleOverrides,
+    });
+    const zxingModulePromise = zxingModuleFactory(zxingModuleOverrides);
+    zxingModuleWeakMap.set(zxingModuleFactory, zxingModulePromise);
+    return zxingModulePromise;
+  }
+}
+
+export function purgeZXingModule() {
+  zxingStore.setState({
+    zxingModuleWeakMap: new WeakMap(),
+  });
 }
 
 interface ZXingReaderModule extends EmscriptenModule {
@@ -270,12 +329,11 @@ export async function readBarcodeFromImageFile<T extends "reader">(
     formats = defaultZXingReadOptions.formats,
     maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions,
-  zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides?: Partial<ZXingModule<T>>
+  zxingModuleFactory: ZXingModuleFactory<T>
 ): Promise<ZXingReadOutput[]> {
   const zxingInstance = await getZXingModule(
     zxingModuleFactory,
-    zxingModuleOverrides
+    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>
   );
   const { size } = imageFile;
   const imageFileData = new Uint8Array(await imageFile.arrayBuffer());
@@ -307,12 +365,11 @@ export async function readBarcodeFromImageData<T extends "reader">(
     formats = defaultZXingReadOptions.formats,
     maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions,
-  zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides?: Partial<ZXingModule<T>>
+  zxingModuleFactory: ZXingModuleFactory<T>
 ): Promise<ZXingReadOutput[]> {
   const zxingInstance = await getZXingModule(
     zxingModuleFactory,
-    zxingModuleOverrides
+    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>
   );
   const {
     data,
@@ -352,12 +409,11 @@ export async function writeBarcodeToImageFile<T extends "writer">(
     height = defaultZXingWriteOptions.height,
     eccLevel = defaultZXingWriteOptions.eccLevel,
   }: ZXingWriteOptions = defaultZXingWriteOptions,
-  zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides?: Partial<ZXingModule<T>>
+  zxingModuleFactory: ZXingModuleFactory<T>
 ): Promise<ZXingWriteOutput> {
   const zxingInstance = await getZXingModule(
     zxingModuleFactory,
-    zxingModuleOverrides
+    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>
   );
   const result = zxingInstance.writeBarcodeToImage(
     text,

@@ -11,12 +11,9 @@ export default defineConfig({
       },
       formats: ["es"],
     },
-    rollupOptions: {
-      output: {
-        preserveModules: true,
-        preserveModulesRoot: "src",
-      },
-    },
   },
   plugins: [dts()],
+  define: {
+    NPM_PACKAGE_VERSION: JSON.stringify(process.env.npm_package_version),
+  },
 });

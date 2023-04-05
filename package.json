@@ -1,7 +1,7 @@
 {
   "name": "@sec-ant/zxing-wasm",
   "private": false,
-  "version": "0.0.5",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "./dist/**/*"
@@ -24,7 +24,6 @@
     "fetch": "cross-env ZXING_WASM_REPO_URL=$npm_package_config_zxing_wasm_repo_url ZXING_WASM_PATH=$npm_package_config_zxing_wasm_path ZXING_WASM_FULL_NAME=$npm_package_config_zxing_wasm_full_name ZXING_WASM_READER_NAME=$npm_package_config_zxing_wasm_reader_name ZXING_WASM_WRITER_NAME=$npm_package_config_zxing_wasm_writer_name bash fetch-artifacts.sh",
     "dev": "vite",
     "build": "tsc && vite build",
-    "postbuild": "node replace-output.js",
     "prepublishOnly": "npm run build",
     "preview": "vite preview"
   },
@@ -49,11 +48,14 @@
   "author": "Ze-Zheng Wu",
   "license": "MIT",
   "devDependencies": {
-    "@types/emscripten": "^1.39.6",
     "cross-env": "^7.0.3",
     "replace-in-file": "^6.3.5",
     "typescript": "^5.0.3",
     "vite": "^4.2.1",
     "vite-plugin-dts": "^2.1.0"
+  },
+  "dependencies": {
+    "@types/emscripten": "^1.39.6",
+    "zustand": "^4.3.7"
   }
 }
