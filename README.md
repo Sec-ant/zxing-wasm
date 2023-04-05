@@ -233,7 +233,7 @@ console.log(writeOutput.image);
 
 ## Notes
 
-When using this package, the wasm binary needs to be served along with the JS glue code. In order to provide a smooth dev experience, the wasm binary serve path is automatically assigned the [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm/) url upon build.
+When using this package, the wasm binary needs to be served along with the JS glue code. In order to provide a smooth dev experience, the wasm binary serve path is automatically assigned the [jsDelivr CDN](https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm@latest/) url upon build.
 
 If you would like to change the serve path (to one of your local network hosts or other CDNs), please use `setZXingModuleOverrides` to override the [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function in advance. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#affecting-execution) that can affect the code execution of the `Module` object during its lifecycles.
 
@@ -245,10 +245,12 @@ import {
 
 // override the locateFile function
 setZXingModuleOverrides({
-  locateFile: (path, prefix) =>
-    path.endsWith(".wasm")
-      ? "https://www.your-custom-host.com/path/" + path
-      : prefix + path,
+  locateFile: (path, prefix) => {
+    if (path.endsWith(".wasm")) {
+      return `https://esm.sh/@sec-ant/zxing-wasm/dist/full/${path}`;
+    }
+    return prefix + path;
+  },
 });
 
 // call read or write functions afterwards
@@ -277,10 +279,12 @@ console.log(zxingModulePromise1 === zxingModulePromise2); // true
 import { getZXingModule } from "@sec-ant/zxing-wasm";
 
 getZXingModule({
-  locateFile: (path, prefix) =>
-    path.endsWith(".wasm")
-      ? "https://www.your-custom-host.com/path/" + path
-      : prefix + path,
+  locateFile: (path, prefix) => {
+    if (path.endsWith(".wasm")) {
+      return `https://esm.sh/@sec-ant/zxing-wasm/dist/full/${path}`;
+    }
+    return prefix + path;
+  },
 });
 ```
 
