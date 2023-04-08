@@ -22,7 +22,8 @@ export type {
   // charset
   ZXingCharacterSet,
   // ecc level
-  ZXingECCLevel,
+  ZXingReadOutputECCLevel,
+  ZXingWriteInputECCLevel,
   // point and position
   ZXingPoint,
   ZXingPosition,

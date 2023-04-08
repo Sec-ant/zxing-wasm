@@ -228,7 +228,9 @@ export type ZXingCharacterSet = typeof ZXING_CHARACTOR_SET_NAMES[number];
 
 // #region ZXing ECC Level
 
-export type ZXingECCLevel = -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8; // default = -1
+export type ZXingWriteInputECCLevel = -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8; // default = -1
+
+export type ZXingReadOutputECCLevel = "L" | "M" | "Q" | "H";
 
 // #endregion
 
@@ -263,6 +265,11 @@ export interface ZXingReadInnerOutput {
   format: string;
   text: string;
   error: string;
+  eccLevel: ZXingReadOutputECCLevel;
+  version: string;
+  orientation: number;
+  isMirrored: boolean;
+  isInverted: boolean;
   position: ZXingPosition;
 }
 
@@ -300,7 +307,7 @@ export interface ZXingWriteOptions {
   quietZone?: number;
   width?: number;
   height?: number;
-  eccLevel?: ZXingECCLevel;
+  eccLevel?: ZXingWriteInputECCLevel;
 }
 
 export const defaultZXingReadOptions: Required<ZXingReadOptions> = {
