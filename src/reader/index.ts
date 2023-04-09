@@ -38,4 +38,23 @@ export async function readBarcodeFromImageFile(
   );
 }
 
+export async function readBarcodeFromImageData(
+  imageData: ImageData,
+  {
+    tryHarder = defaultZXingReadOptions.tryHarder,
+    formats = defaultZXingReadOptions.formats,
+    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
+  }: ZXingReadOptions = defaultZXingReadOptions
+): Promise<ZXingReadOutput[]> {
+  return _readBarcodeFromImageData(
+    imageData,
+    {
+      tryHarder,
+      formats,
+      maxNumberOfSymbols,
+    },
+    zxingModuleFactory
+  );
+}
+
 export * from "../exposed.js";
