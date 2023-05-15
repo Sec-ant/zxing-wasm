@@ -1,7 +1,7 @@
 {
   "name": "@sec-ant/zxing-wasm",
   "private": false,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "type": "module",
   "files": [
     "./dist/**/*"
@@ -51,11 +51,11 @@
     "cross-env": "^7.0.3",
     "replace-in-file": "^6.3.5",
     "typescript": "^5.0.4",
-    "vite": "^4.2.2",
+    "vite": "^4.3.5",
     "vite-plugin-dts": "^2.3.0"
   },
   "dependencies": {
     "@types/emscripten": "^1.39.6",
-    "zustand": "^4.3.7"
+    "zustand": "^4.3.8"
   }
 }
