@@ -267,7 +267,7 @@ setZXingModuleOverrides({
 const writeOutput = await writeBarcodeToImageFile("Hello world!");
 ```
 
-The wasm binary won't be fetched or instantiated unless a [read](#readbarcodefromimagefile-and-readbarcodefromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once given the same module overrides. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manully trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use `getZXingModule`. This function will also return a `Promise` that resolves to a `ZXingModule`, the wasm `Module` object this wrapper library is built upon.
+The wasm binary won't be fetched or instantiated unless a [read](#readbarcodefromimagefile-and-readbarcodefromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once given the same module overrides. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use `getZXingModule`. This function will also return a `Promise` that resolves to a `ZXingModule`, the wasm `Module` object this wrapper library is built upon.
 
 ```ts
 import { getZXingModule } from "@sec-ant/zxing-wasm";
@@ -276,9 +276,9 @@ import { getZXingModule } from "@sec-ant/zxing-wasm";
  * This function will trigger the download and
  * instantiation of the wasm binary immediately
  */
-zxingModulePromise1 = getZXingModule();
+const zxingModulePromise1 = getZXingModule();
 
-zxingModulePromise2 = getZXingModule();
+const zxingModulePromise2 = getZXingModule();
 
 console.log(zxingModulePromise1 === zxingModulePromise2); // true
 ```
