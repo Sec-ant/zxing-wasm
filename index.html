@@ -7,18 +7,18 @@
     <div></div>
     <script type="module">
       import {
-        readBarcodeFromImageFile,
+        readBarcodesFromImageFile,
         writeBarcodeToImageFile,
       } from "./src/full/index.ts";
-      const text = "123";
-      const decodedText = (
-        await readBarcodeFromImageFile(
-          (
-            await writeBarcodeToImageFile("123")
-          ).image
-        )
-      )[0].text;
-      console.log(text === decodedText);
+      const text = "Hello World!";
+
+      const barcodeImage = (await writeBarcodeToImageFile(text)).image;
+
+      const readResults = await readBarcodesFromImageFile(barcodeImage);
+
+      console.log(readResults);
+
+      console.log(readResults[0].text === text);
     </script>
   </body>
 </html>

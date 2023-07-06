@@ -87,22 +87,22 @@ export function purgeZXingModule() {
 
 interface ZXingReaderModule extends EmscriptenModule {
   // encoded image: .png, .jpeg, etc.
-  readBarcodeFromImage(
+  readBarcodesFromImage(
     bufferPtr: number,
     bufferLength: number,
     tryHarder: boolean,
     formats: string,
-    maxNumberOfSymbols: number
+    maxSymbols: number
   ): ZXingVector<ZXingReadInnerOutput>;
 
   // raw image data
-  readBarcodeFromPixmap(
+  readBarcodesFromPixmap(
     bufferPtr: number,
     imgWidth: number,
     imgHeight: number,
     tryHarder: boolean,
     formats: string,
-    maxNumberOfSymbols: number
+    maxSymbols: number
   ): ZXingVector<ZXingReadInnerOutput>;
 }
 
@@ -155,7 +155,7 @@ export const ZXING_BARCODE_FORMAT_NAMES = [
   "UPC-E",
 ] as const;
 
-export type ZXingBarcodeFormat = typeof ZXING_BARCODE_FORMAT_NAMES[number];
+export type ZXingBarcodeFormat = (typeof ZXING_BARCODE_FORMAT_NAMES)[number];
 
 export type ZXingReadInputBarcodeFormat = Exclude<ZXingBarcodeFormat, "None">;
 export type ZXingWriteInputBarcodeFormat = Exclude<
@@ -222,7 +222,7 @@ export const ZXING_CHARACTOR_SET_NAMES = [
   "BINARY",
 ] as const;
 
-export type ZXingCharacterSet = typeof ZXING_CHARACTOR_SET_NAMES[number];
+export type ZXingCharacterSet = (typeof ZXING_CHARACTOR_SET_NAMES)[number];
 
 // #endregion
 
@@ -265,12 +265,13 @@ export interface ZXingReadInnerOutput {
   format: string;
   text: string;
   error: string;
+  position: ZXingPosition;
+  symbologyIdentifier: string;
   eccLevel: ZXingReadOutputECCLevel;
   version: string;
   orientation: number;
   isMirrored: boolean;
   isInverted: boolean;
-  position: ZXingPosition;
 }
 
 export interface ZXingWriteInnerOutput {
@@ -298,7 +299,7 @@ export interface ZXingWriteOutput
 export interface ZXingReadOptions {
   tryHarder?: boolean;
   formats?: ZXingReadInputBarcodeFormat[];
-  maxNumberOfSymbols?: number;
+  maxSymbols?: number;
 }
 
 export interface ZXingWriteOptions {
@@ -313,7 +314,7 @@ export interface ZXingWriteOptions {
 export const defaultZXingReadOptions: Required<ZXingReadOptions> = {
   tryHarder: true,
   formats: [],
-  maxNumberOfSymbols: Infinity,
+  maxSymbols: 255,
 };
 
 export const defaultZXingWriteOptions: Required<ZXingWriteOptions> = {
@@ -329,12 +330,12 @@ export const defaultZXingWriteOptions: Required<ZXingWriteOptions> = {
 
 // #region Barcode Read/Write Functions
 
-export async function readBarcodeFromImageFile<T extends "reader">(
+export async function readBarcodesFromImageFile<T extends "reader">(
   imageFile: Blob | File,
   {
     tryHarder = defaultZXingReadOptions.tryHarder,
     formats = defaultZXingReadOptions.formats,
-    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
+    maxSymbols = defaultZXingReadOptions.maxSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions,
   zxingModuleFactory: ZXingModuleFactory<T>
 ): Promise<ZXingReadOutput[]> {
@@ -346,12 +347,12 @@ export async function readBarcodeFromImageFile<T extends "reader">(
   const imageFileData = new Uint8Array(await imageFile.arrayBuffer());
   const bufferPtr = zxingInstance._malloc(size);
   zxingInstance.HEAP8.set(imageFileData, bufferPtr);
-  const resultVector = zxingInstance.readBarcodeFromImage(
+  const resultVector = zxingInstance.readBarcodesFromImage(
     bufferPtr,
     size,
     tryHarder,
     formatsToString(formats),
-    maxNumberOfSymbols
+    maxSymbols
   );
   zxingInstance._free(bufferPtr);
   const results: ZXingReadOutput[] = [];
@@ -365,12 +366,12 @@ export async function readBarcodeFromImageFile<T extends "reader">(
   return results;
 }
 
-export async function readBarcodeFromImageData<T extends "reader">(
+export async function readBarcodesFromImageData<T extends "reader">(
   imageData: ImageData,
   {
     tryHarder = defaultZXingReadOptions.tryHarder,
     formats = defaultZXingReadOptions.formats,
-    maxNumberOfSymbols = defaultZXingReadOptions.maxNumberOfSymbols,
+    maxSymbols = defaultZXingReadOptions.maxSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions,
   zxingModuleFactory: ZXingModuleFactory<T>
 ): Promise<ZXingReadOutput[]> {
@@ -386,13 +387,13 @@ export async function readBarcodeFromImageData<T extends "reader">(
   } = imageData;
   const bufferPtr = zxingInstance._malloc(byteLength);
   zxingInstance.HEAP8.set(data, bufferPtr);
-  const resultVector = zxingInstance.readBarcodeFromPixmap(
+  const resultVector = zxingInstance.readBarcodesFromPixmap(
     bufferPtr,
     width,
     height,
     tryHarder,
     formatsToString(formats),
-    maxNumberOfSymbols
+    maxSymbols
   );
   zxingInstance._free(bufferPtr);
   const results: ZXingReadOutput[] = [];

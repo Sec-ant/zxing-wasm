@@ -2,8 +2,8 @@ import zxingModuleFactory from "./zxing_writer.js";
 import {
   ZXingModuleFactoryTypeExtractor,
   ZXingModuleOverrides,
-  readBarcodeFromImageFile as _readBarcodeFromImageFile,
-  readBarcodeFromImageData as _readBarcodeFromImageData,
+  readBarcodesFromImageFile as _readBarcodesFromImageFile,
+  readBarcodesFromImageData as _readBarcodesFromImageData,
   writeBarcodeToImageFile as _writeBarcodeToImageFile,
   getZXingModule as _getZXingModule,
   defaultZXingWriteOptions,

@@ -28,8 +28,8 @@ These imports includes functions to both read and write barcodes. The wasm binar
 
 ```ts
 import {
-  readBarcodeFromImageFile,
-  readBarcodeFromImageData,
+  readBarcodesFromImageFile,
+  readBarcodesFromImageData,
   writeBarcodeToImageFile,
 } from "@sec-ant/zxing-wasm";
 ```
@@ -38,38 +38,38 @@ or
 
 ```ts
 import {
-  readBarcodeFromImageFile,
-  readBarcodeFromImageData,
+  readBarcodesFromImageFile,
+  readBarcodesFromImageData,
   writeBarcodeToImageFile,
 } from "@sec-ant/zxing-wasm/full";
 ```
 
 ### `@sec-ant/zxing-wasm/reader`
 
-This subpath only includes functions to read barcodes. The wasm binary size is ~948 KB.
+This subpath only includes functions to read barcodes. The wasm binary size is ~967 KB.
 
 ```ts
 import {
-  readBarcodeFromImageFile,
-  readBarcodeFromImageData,
+  readBarcodesFromImageFile,
+  readBarcodesFromImageData,
 } from "@sec-ant/zxing-wasm/reader";
 ```
 
 ### `@sec-ant/zxing-wasm/writer`
 
-This subpath only includes functions to write barcodes. The wasm binary size is ~392 KB.
+This subpath only includes functions to write barcodes. The wasm binary size is ~380 KB.
 
 ```ts
 import { writeBarcodeToImageFile } from "@sec-ant/zxing-wasm/writer";
 ```
 
-### `readBarcodeFromImageFile` and `readBarcodeFromImageData`
+### `readBarcodesFromImageFile` and `readBarcodesFromImageData`
 
 These are 2 functions to read barcodes.
 
-`readBarcodeFromImageFile` accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob) or an image [`File`](https://developer.mozilla.org/docs/Web/API/File) as the first input. They're encoded images, e.g. `.png` `.jpg` files.
+`readBarcodesFromImageFile` accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob) or an image [`File`](https://developer.mozilla.org/docs/Web/API/File) as the first input. They're encoded images, e.g. `.png` `.jpg` files.
 
-`readBarcodeFromImageData` accepts an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as the first input. They're raw pixels that usually acquired from [`<canvas>`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) or related APIs.
+`readBarcodesFromImageData` accepts an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as the first input. They're raw pixels that usually acquired from [`<canvas>`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) or related APIs.
 
 Both of these 2 functions accepts the same second input: `ZXingReadOptions`:
 
@@ -79,8 +79,8 @@ interface ZXingReadOptions {
   tryHarder?: boolean;
   /* An array of barcode formats to detect, default = [] (indicates any format) */
   formats?: readonly ZXingReadInputBarcodeFormat[];
-  /* Upper limit of the number of barcodes to be detected, default = Infinite */
-  maxNumberOfSymbols?: number;
+  /* Upper limit of the number of barcodes to be detected, default = 255 (max) */
+  maxSymbols?: number;
 }
 ```
 
@@ -119,6 +119,17 @@ interface ZXingReadOutput {
   text: string;
   /* error message (if any) */
   error: string;
+  /* detected barcode position:
+    {
+      bottomLeft:  { x, y },
+      bottomRight: { x, y },
+      topLeft:     { x, y },
+      topLeft:     { x, y }
+    }
+  */
+  position: ZXingPosition;
+  /* symbology identifier: https://github.com/zxing-cpp/zxing-cpp/blob/1bb03a85ef9846076fc5068b05646454f7fe6f6f/core/src/Content.h#L24 */
+  symbologyIdentifier: string;
   /* error correction code level: L M Q H */
   eccLevel: ZXingReadOutputECCLevel;
   /* QRCode / DataMatrix / Aztec version or size */
@@ -129,15 +140,6 @@ interface ZXingReadOutput {
   isMirrored: boolean;
   /* is the symbol inverted / has reveresed reflectance */
   isInverted: boolean;
-  /* detected barcode position:
-    {
-      bottomLeft:  { x, y },
-      bottomRight: { x, y },
-      topLeft:     { x, y },
-      topLeft:     { x, y }
-    }
-  */
-  position: ZXingPosition;
 }
 ```
 
@@ -145,15 +147,15 @@ e.g.
 
 ```ts
 import {
-  readBarcodeFromImageFile,
-  readBarcodeFromImageData,
+  readBarcodesFromImageFile,
+  readBarcodesFromImageData,
   ZXingReadOptions,
 } from "@sec-ant/zxing-wasm/reader";
 
 const zxingReadOptions: ZXingReadOptions = {
   tryHarder: true,
   formats: ["QRCode"],
-  maxNumberOfSymbols: 1,
+  maxSymbols: 1,
 };
 
 /**
@@ -163,7 +165,7 @@ const imageFile = await fetch(
   "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hello%20world!"
 ).then((resp) => resp.blob());
 
-const imageFileReadOutputs = await readBarcodeFromImageFile(
+const imageFileReadOutputs = await readBarcodesFromImageFile(
   imageFile,
   zxingReadOptions
 );
@@ -182,7 +184,7 @@ const imageData = await createImageBitmap(imageFile).then((imageBitmap) => {
   return context.getImageData(0, 0, width, height);
 });
 
-const imageDataReadOutputs = await readBarcodeFromImageData(
+const imageDataReadOutputs = await readBarcodesFromImageData(
   imageData,
   zxingReadOptions
 );
