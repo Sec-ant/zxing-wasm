@@ -117,6 +117,8 @@ interface ZXingReadOutput {
   format: ZXingReadOutputBarcodeFormat;
   /* detected barcode text */
   text: string;
+  /* detected barcode raw bytes */
+  bytes: Uint8Array;
   /* error message (if any) */
   error: string;
   /* detected barcode position:

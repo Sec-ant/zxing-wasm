@@ -264,6 +264,7 @@ export interface ZXingVector<T> {
 export interface ZXingReadInnerOutput {
   format: string;
   text: string;
+  bytes: Uint8Array;
   error: string;
   position: ZXingPosition;
   symbologyIdentifier: string;
