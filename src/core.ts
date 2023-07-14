@@ -434,7 +434,6 @@ export async function writeBarcodeToImageFile<T extends "writer">(
     eccLevel
   );
   const { image, error } = result;
-  result.delete();
   if (image) {
     return {
       image: new Blob([new Uint8Array(image)], {
