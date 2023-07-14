@@ -46,7 +46,7 @@ import {
 
 ### `@sec-ant/zxing-wasm/reader`
 
-This subpath only includes functions to read barcodes. The wasm binary size is ~967 KB.
+This subpath only includes functions to read barcodes. The wasm binary size is ~968 KB.
 
 ```ts
 import {

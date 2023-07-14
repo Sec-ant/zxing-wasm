@@ -1,7 +1,7 @@
 {
   "name": "@sec-ant/zxing-wasm",
   "private": false,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "type": "module",
   "files": [
     "./dist/**/*"
@@ -48,14 +48,14 @@
   "author": "Ze-Zheng Wu",
   "license": "MIT",
   "devDependencies": {
+    "@types/emscripten": "^1.39.6",
     "cross-env": "^7.0.3",
     "replace-in-file": "^7.0.1",
     "typescript": "^5.1.6",
-    "vite": "^4.4.3",
+    "vite": "^4.4.4",
     "vite-plugin-dts": "^3.2.0"
   },
   "dependencies": {
-    "@types/emscripten": "^1.39.6",
     "zustand": "^4.3.9"
   }
 }
