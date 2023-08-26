@@ -75,7 +75,7 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vite-plugin-static-copy": "^0.17.0",
-    "vitest": "^0.34.2"
+    "vitest": "^0.34.3"
   },
   "dependencies": {
     "@types/emscripten": "^1.39.7",
