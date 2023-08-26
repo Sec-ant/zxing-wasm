@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   build: {
@@ -14,6 +15,24 @@ export default defineConfig({
         format === "es" ? `${entryName}.js` : `${entryName}.${format}.js`,
     },
   },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: "./src/full/*.d.ts",
+          dest: "./full",
+        },
+        {
+          src: "./src/reader/*.d.ts",
+          dest: "./reader",
+        },
+        {
+          src: "./src/writer/*.d.ts",
+          dest: "./writer",
+        },
+      ],
+    }),
+  ],
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(process.env.npm_package_version),
   },
