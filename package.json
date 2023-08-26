@@ -67,7 +67,7 @@
     "@vitest/coverage-istanbul": "^0.34.2",
     "@vitest/ui": "^0.34.2",
     "cross-env": "^7.0.3",
-    "eslint": "^8.47.0",
+    "eslint": "^8.48.0",
     "npm-check-updates": "^16.13.1",
     "playwright": "^1.37.1",
     "prettier": "^3.0.2",
