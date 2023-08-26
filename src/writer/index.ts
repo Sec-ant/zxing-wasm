@@ -2,8 +2,6 @@ import zxingModuleFactory from "./zxing_writer.js";
 import {
   ZXingModuleFactoryTypeExtractor,
   ZXingModuleOverrides,
-  readBarcodesFromImageFile as _readBarcodesFromImageFile,
-  readBarcodesFromImageData as _readBarcodesFromImageData,
   writeBarcodeToImageFile as _writeBarcodeToImageFile,
   getZXingModule as _getZXingModule,
   defaultZXingWriteOptions,
@@ -14,7 +12,7 @@ import {
 export function getZXingModule(
   zxingModuleOverrides?: ZXingModuleOverrides<
     ZXingModuleFactoryTypeExtractor<typeof zxingModuleFactory>
-  >
+  >,
 ): ReturnType<typeof _getZXingModule> {
   return _getZXingModule(zxingModuleFactory, zxingModuleOverrides);
 }
@@ -28,7 +26,7 @@ export async function writeBarcodeToImageFile(
     width = defaultZXingWriteOptions.width,
     height = defaultZXingWriteOptions.height,
     eccLevel = defaultZXingWriteOptions.eccLevel,
-  }: ZXingWriteOptions = defaultZXingWriteOptions
+  }: ZXingWriteOptions = defaultZXingWriteOptions,
 ): Promise<ZXingWriteOutput> {
   return _writeBarcodeToImageFile(
     text,
@@ -40,7 +38,7 @@ export async function writeBarcodeToImageFile(
       height,
       eccLevel,
     },
-    zxingModuleFactory
+    zxingModuleFactory,
   );
 }
 

@@ -1,6 +1,6 @@
 # @sec-ant/zxing-wasm
 
-An ES6 module wrapper of [zxing-wasm-build](https://github.com/Sec-ant/zxing-wasm-build). Read or write barcodes in your browser!
+An ES module wrapper of [zxing-wasm-build](https://github.com/Sec-ant/zxing-wasm-build). Read or write barcodes in your browser!
 
 ## Build
 
@@ -164,12 +164,12 @@ const zxingReadOptions: ZXingReadOptions = {
  * Read from image file/blob
  */
 const imageFile = await fetch(
-  "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hello%20world!"
+  "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hello%20world!",
 ).then((resp) => resp.blob());
 
 const imageFileReadOutputs = await readBarcodesFromImageFile(
   imageFile,
-  zxingReadOptions
+  zxingReadOptions,
 );
 
 console.log(imageFileReadOutputs[0].text); // Hello world!
@@ -180,7 +180,7 @@ console.log(imageFileReadOutputs[0].text); // Hello world!
 const imageData = await createImageBitmap(imageFile).then((imageBitmap) => {
   const { width, height } = imageBitmap;
   const context = new OffscreenCanvas(width, height).getContext(
-    "2d"
+    "2d",
   ) as OffscreenCanvasRenderingContext2D;
   context.drawImage(imageBitmap, 0, 0, width, height);
   return context.getImageData(0, 0, width, height);
@@ -188,7 +188,7 @@ const imageData = await createImageBitmap(imageFile).then((imageBitmap) => {
 
 const imageDataReadOutputs = await readBarcodesFromImageData(
   imageData,
-  zxingReadOptions
+  zxingReadOptions,
 );
 
 console.log(imageDataReadOutputs[0].text); // Hello world!

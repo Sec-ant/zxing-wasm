@@ -1,5 +1,5 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
 
 export default defineConfig({
   build: {
@@ -10,10 +10,23 @@ export default defineConfig({
         "full/index": "src/full/index.ts",
       },
       formats: ["es"],
+      fileName: (format, entryName) =>
+        format === "es" ? `${entryName}.js` : `${entryName}.${format}.js`,
     },
   },
-  plugins: [dts()],
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(process.env.npm_package_version),
+  },
+  test: {
+    passWithNoTests: true,
+    browser: {
+      enabled: true,
+      headless: true,
+      name: "chromium",
+      provider: "playwright",
+    },
+    coverage: {
+      provider: "istanbul",
+    },
   },
 });

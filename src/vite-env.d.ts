@@ -1,2 +1,2 @@
 /// <reference types="vite/client" />
-declare var NPM_PACKAGE_VERSION: string;
+declare const NPM_PACKAGE_VERSION: string;

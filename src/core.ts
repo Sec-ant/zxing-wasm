@@ -5,7 +5,7 @@ import { createStore } from "zustand/vanilla";
 export type ZXingModuleType = "reader" | "writer";
 
 export type ZXingModuleFactory<
-  T extends ZXingModuleType = "reader" | "writer"
+  T extends ZXingModuleType = "reader" | "writer",
 > = EmscriptenModuleFactory<ZXingModule<T>>;
 
 export type ZXingModuleFactoryTypeExtractor<F> = F extends ZXingModuleFactory<
@@ -45,7 +45,7 @@ const zxingStore = createStore<ZXingState>()(() => ({
 }));
 
 export function setZXingModuleOverrides(
-  zxingModuleOverrides: ZXingModuleOverrides
+  zxingModuleOverrides: ZXingModuleOverrides,
 ) {
   zxingStore.setState({
     zxingModuleOverrides,
@@ -55,11 +55,11 @@ export function setZXingModuleOverrides(
 export function getZXingModule<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
   zxingModuleOverrides = zxingStore.getState()
-    .zxingModuleOverrides as ZXingModuleOverrides<T>
+    .zxingModuleOverrides as ZXingModuleOverrides<T>,
 ): Promise<ZXingModule<T>> {
   const { zxingModuleWeakMap } = zxingStore.getState();
   const registeredZXingModulePromise = zxingModuleWeakMap.get(
-    zxingModuleFactory
+    zxingModuleFactory,
   ) as Promise<ZXingModule<T>> | undefined;
   // already registered with the same overrides
   if (
@@ -92,7 +92,7 @@ interface ZXingReaderModule extends EmscriptenModule {
     bufferLength: number,
     tryHarder: boolean,
     formats: string,
-    maxSymbols: number
+    maxSymbols: number,
   ): ZXingVector<ZXingReadInnerOutput>;
 
   // raw image data
@@ -102,7 +102,7 @@ interface ZXingReaderModule extends EmscriptenModule {
     imgHeight: number,
     tryHarder: boolean,
     formats: string,
-    maxSymbols: number
+    maxSymbols: number,
   ): ZXingVector<ZXingReadInnerOutput>;
 }
 
@@ -115,7 +115,7 @@ interface ZXingWriterModule extends EmscriptenModule {
     margin: number,
     width: number,
     height: number,
-    eccLevel: number
+    eccLevel: number,
   ): ZXingWriteInnerOutput;
 }
 
@@ -338,11 +338,11 @@ export async function readBarcodesFromImageFile<T extends "reader">(
     formats = defaultZXingReadOptions.formats,
     maxSymbols = defaultZXingReadOptions.maxSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions,
-  zxingModuleFactory: ZXingModuleFactory<T>
+  zxingModuleFactory: ZXingModuleFactory<T>,
 ): Promise<ZXingReadOutput[]> {
   const zxingInstance = await getZXingModule(
     zxingModuleFactory,
-    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>
+    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>,
   );
   const { size } = imageFile;
   const imageFileData = new Uint8Array(await imageFile.arrayBuffer());
@@ -353,7 +353,7 @@ export async function readBarcodesFromImageFile<T extends "reader">(
     size,
     tryHarder,
     formatsToString(formats),
-    maxSymbols
+    maxSymbols,
   );
   zxingInstance._free(bufferPtr);
   const results: ZXingReadOutput[] = [];
@@ -374,11 +374,11 @@ export async function readBarcodesFromImageData<T extends "reader">(
     formats = defaultZXingReadOptions.formats,
     maxSymbols = defaultZXingReadOptions.maxSymbols,
   }: ZXingReadOptions = defaultZXingReadOptions,
-  zxingModuleFactory: ZXingModuleFactory<T>
+  zxingModuleFactory: ZXingModuleFactory<T>,
 ): Promise<ZXingReadOutput[]> {
   const zxingInstance = await getZXingModule(
     zxingModuleFactory,
-    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>
+    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>,
   );
   const {
     data,
@@ -394,7 +394,7 @@ export async function readBarcodesFromImageData<T extends "reader">(
     height,
     tryHarder,
     formatsToString(formats),
-    maxSymbols
+    maxSymbols,
   );
   zxingInstance._free(bufferPtr);
   const results: ZXingReadOutput[] = [];
@@ -418,11 +418,11 @@ export async function writeBarcodeToImageFile<T extends "writer">(
     height = defaultZXingWriteOptions.height,
     eccLevel = defaultZXingWriteOptions.eccLevel,
   }: ZXingWriteOptions = defaultZXingWriteOptions,
-  zxingModuleFactory: ZXingModuleFactory<T>
+  zxingModuleFactory: ZXingModuleFactory<T>,
 ): Promise<ZXingWriteOutput> {
   const zxingInstance = await getZXingModule(
     zxingModuleFactory,
-    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>
+    zxingStore.getState().zxingModuleOverrides as ZXingModuleOverrides<T>,
   );
   const result = zxingInstance.writeBarcodeToImage(
     text,
@@ -431,7 +431,7 @@ export async function writeBarcodeToImageFile<T extends "writer">(
     quietZone,
     width,
     height,
-    eccLevel
+    eccLevel,
   );
   const { image, error } = result;
   if (image) {
@@ -457,12 +457,11 @@ function formatsToString(formats: ZXingBarcodeFormat[]): string {
   return formats.join("|");
 }
 
-// @ts-ignore
-function formatsFromString(formatString: string): ZXingBarcodeFormat[] {
-  return formatString
-    .split(/ |,|\|]/)
-    .map((format) => formatFromString(format));
-}
+// function formatsFromString(formatString: string): ZXingBarcodeFormat[] {
+//   return formatString
+//     .split(/ |,|\|]/)
+//     .map((format) => formatFromString(format));
+// }
 
 function formatFromString(format: string): ZXingBarcodeFormat {
   const normalizedTarget = normalizeFormatString(format);
