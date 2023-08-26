@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ZXing Reader Demo</title>
+  </head>
+  <body>
+    <div></div>
+    <script type="module">
+      import {
+        readBarcodesFromImageFile,
+        writeBarcodeToImageFile,
+      } from "./src/full/index.ts";
+      const text = "Hello World!";
+
+      const barcodeImage = (await writeBarcodeToImageFile(text)).image;
+
+      const readResults = await readBarcodesFromImageFile(barcodeImage);
+
+      console.log(readResults);
+
+      console.log(readResults[0].text === text);
+    </script>
+  </body>
+</html>

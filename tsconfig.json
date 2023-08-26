@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "NodeNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["emscripten"],
+    "skipLibCheck": true,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "./dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["./src"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
