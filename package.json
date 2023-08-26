@@ -64,7 +64,7 @@
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
     "@vitest/browser": "^0.34.2",
-    "@vitest/coverage-istanbul": "^0.34.2",
+    "@vitest/coverage-istanbul": "^0.34.3",
     "@vitest/ui": "^0.34.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
