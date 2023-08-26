@@ -53,8 +53,6 @@
     "prebuild": "npm run lint && npm run type-check && npm run format",
     "build": "vite build",
     "postbuild": "tsc",
-    "pretest": "npm run build",
-    "pretest:ui": "npm run build",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "preview": "vite preview",
