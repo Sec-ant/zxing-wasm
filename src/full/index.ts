@@ -17,7 +17,7 @@ import {
 export function getZXingModule(
   zxingModuleOverrides?: ZXingModuleOverrides<
     ZXingModuleFactoryTypeExtractor<typeof zxingModuleFactory>
-  >
+  >,
 ): ReturnType<typeof _getZXingModule> {
   return _getZXingModule(zxingModuleFactory, zxingModuleOverrides);
 }
@@ -28,7 +28,7 @@ export async function readBarcodesFromImageFile(
     tryHarder = defaultZXingReadOptions.tryHarder,
     formats = defaultZXingReadOptions.formats,
     maxSymbols = defaultZXingReadOptions.maxSymbols,
-  }: ZXingReadOptions = defaultZXingReadOptions
+  }: ZXingReadOptions = defaultZXingReadOptions,
 ): Promise<ZXingReadOutput[]> {
   return _readBarcodesFromImageFile(
     imageFile,
@@ -37,7 +37,7 @@ export async function readBarcodesFromImageFile(
       formats,
       maxSymbols,
     },
-    zxingModuleFactory
+    zxingModuleFactory,
   );
 }
 
@@ -47,7 +47,7 @@ export async function readBarcodeFromImageData(
     tryHarder = defaultZXingReadOptions.tryHarder,
     formats = defaultZXingReadOptions.formats,
     maxSymbols = defaultZXingReadOptions.maxSymbols,
-  }: ZXingReadOptions = defaultZXingReadOptions
+  }: ZXingReadOptions = defaultZXingReadOptions,
 ): Promise<ZXingReadOutput[]> {
   return _readBarcodesFromImageData(
     imageData,
@@ -56,7 +56,7 @@ export async function readBarcodeFromImageData(
       formats,
       maxSymbols,
     },
-    zxingModuleFactory
+    zxingModuleFactory,
   );
 }
 
@@ -69,7 +69,7 @@ export async function writeBarcodeToImageFile(
     width = defaultZXingWriteOptions.width,
     height = defaultZXingWriteOptions.height,
     eccLevel = defaultZXingWriteOptions.eccLevel,
-  }: ZXingWriteOptions = defaultZXingWriteOptions
+  }: ZXingWriteOptions = defaultZXingWriteOptions,
 ): Promise<ZXingWriteOutput> {
   return _writeBarcodeToImageFile(
     text,
@@ -81,7 +81,7 @@ export async function writeBarcodeToImageFile(
       height,
       eccLevel,
     },
-    zxingModuleFactory
+    zxingModuleFactory,
   );
 }
 
