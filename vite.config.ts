@@ -4,6 +4,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   build: {
+    target: ["es2020", "edge88", "firefox68", "chrome75", "safari13"],
     lib: {
       entry: {
         "reader/index": "src/reader/index.ts",
