@@ -2,7 +2,7 @@
   "name": "@sec-ant/zxing-wasm",
   "description": "An ES module wrapper of zxing-wasm-build",
   "private": false,
-  "version": "2.1.3",
+  "version": "2.1.4",
   "type": "module",
   "files": [
     "./dist"
