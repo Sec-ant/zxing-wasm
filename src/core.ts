@@ -32,7 +32,7 @@ const defaultZXingModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
       locateFile: (path, prefix) => {
         const subDir = path.match(/_(.+?)\.wasm$/)?.[1];
         if (subDir) {
-          return `https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${subDir}/${path}`;
+          return `https://fastly.jsdelivr.net/npm/@sec-ant/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${subDir}/${path}`;
         }
         return prefix + path;
       },
