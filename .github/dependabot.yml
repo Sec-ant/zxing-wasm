@@ -8,4 +8,15 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    groups:
+      minor-and-patch-updates:
+        update-types:
+          - "minor"
+          - "patch"
+      major-updates:
+        update-types:
+          - "major"
