@@ -347,7 +347,7 @@ export async function readBarcodesFromImageFile<T extends "reader">(
   const { size } = imageFile;
   const imageFileData = new Uint8Array(await imageFile.arrayBuffer());
   const bufferPtr = zxingInstance._malloc(size);
-  zxingInstance.HEAP8.set(imageFileData, bufferPtr);
+  zxingInstance.HEAPU8.set(imageFileData, bufferPtr);
   const resultVector = zxingInstance.readBarcodesFromImage(
     bufferPtr,
     size,
@@ -387,7 +387,7 @@ export async function readBarcodesFromImageData<T extends "reader">(
     data: { byteLength },
   } = imageData;
   const bufferPtr = zxingInstance._malloc(byteLength);
-  zxingInstance.HEAP8.set(data, bufferPtr);
+  zxingInstance.HEAPU8.set(data, bufferPtr);
   const resultVector = zxingInstance.readBarcodesFromPixmap(
     bufferPtr,
     width,
