@@ -1,5 +1,7 @@
 # @sec-ant/zxing-wasm
 
+[![npm](https://img.shields.io/npm/v/@sec-ant/zxing-wasm)](https://www.npmjs.com/package/@sec-ant/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@sec-ant/zxing-wasm)](https://www.npmjs.com/package/@sec-ant/zxing-wasm/v/latest) [![jsDelivr hits (npm scoped)](https://img.shields.io/jsdelivr/npm/hm/@sec-ant/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/@sec-ant/zxing-wasm@latest/)
+
 An ES module wrapper of [zxing-wasm-build](https://github.com/Sec-ant/zxing-wasm-build). Read or write barcodes in your browser!
 
 ## Build
@@ -20,11 +22,11 @@ npm i @sec-ant/zxing-wasm
 
 ## Usage
 
-This package exports 3 subpaths: full, reader and writer. You can choose whichever fits your needs. However, bear in mind that [subpath imports needs a `moduleResolution` of `node16` or `nodenext` in your `tsconfig.json` file](https://github.com/microsoft/TypeScript/issues/44848#issuecomment-1212826554).
+This package exports 3 subpaths: `full`, `reader` and `writer`. You can choose whichever fits your needs. If you use TypeScript, you should set [`moduleResolution`](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution) to `bundler`, `node16` or `nodenext` in your `tsconfig.json` file to properly resolve the exported module.
 
 ### `@sec-ant/zxing-wasm` or `@sec-ant/zxing-wasm/full`
 
-These imports includes functions to both read and write barcodes. The wasm binary size is ~1.25 MB.
+These 2 subpaths include functions to both read and write barcodes. The wasm binary size is ~1.26 MB.
 
 ```ts
 import {
@@ -46,7 +48,7 @@ import {
 
 ### `@sec-ant/zxing-wasm/reader`
 
-This subpath only includes functions to read barcodes. The wasm binary size is ~968 KB.
+This subpath only includes functions to read barcodes. The wasm binary size is ~976 KB.
 
 ```ts
 import {
@@ -57,7 +59,7 @@ import {
 
 ### `@sec-ant/zxing-wasm/writer`
 
-This subpath only includes functions to write barcodes. The wasm binary size is ~380 KB.
+This subpath only includes functions to write barcodes. The wasm binary size is ~383 KB.
 
 ```ts
 import { writeBarcodeToImageFile } from "@sec-ant/zxing-wasm/writer";
@@ -65,7 +67,7 @@ import { writeBarcodeToImageFile } from "@sec-ant/zxing-wasm/writer";
 
 ### `readBarcodesFromImageFile` and `readBarcodesFromImageData`
 
-These are 2 functions to read barcodes.
+These 2 functions are for reading barcodes.
 
 `readBarcodesFromImageFile` accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob) or an image [`File`](https://developer.mozilla.org/docs/Web/API/File) as the first input. They're encoded images, e.g. `.png` `.jpg` files.
 
@@ -75,7 +77,7 @@ Both of these 2 functions accepts the same second input: `ZXingReadOptions`:
 
 ```ts
 interface ZXingReadOptions {
-  /* Try better to find barcodes, default = true */
+  /* Try harder to find barcodes, default = true */
   tryHarder?: boolean;
   /* An array of barcode formats to detect, default = [] (indicates any format) */
   formats?: readonly ZXingReadInputBarcodeFormat[];
@@ -109,7 +111,7 @@ type ZXingReadInputBarcodeFormat =
   | "UPC-E";
 ```
 
-The return result of these 2 functions is a `Promise` of an array of `ZXingReadOutput`:
+The return result of these 2 functions is a `Promise` of an array of `ZXingReadOutput`s:
 
 ```ts
 interface ZXingReadOutput {
@@ -196,7 +198,7 @@ console.log(imageDataReadOutputs[0].text); // Hello world!
 
 ### `writeBarcodeToImageFile`
 
-There is currently only 1 function to write barcodes. The first argument of this function is a text string to be encoded and the second argument is a `ZXingWriteOptions`:
+There is only 1 function to write barcodes. The first argument of this function is a text string to be encoded and the second argument is a `ZXingWriteOptions`:
 
 ```ts
 interface ZXingWriteOptions {
@@ -271,7 +273,7 @@ setZXingModuleOverrides({
 const writeOutput = await writeBarcodeToImageFile("Hello world!");
 ```
 
-The wasm binary won't be fetched or instantiated unless a [read](#readbarcodefromimagefile-and-readbarcodefromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once given the same module overrides. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use `getZXingModule`. This function will also return a `Promise` that resolves to a `ZXingModule`, the wasm `Module` object this wrapper library is built upon.
+The wasm binary won't be fetched or instantiated unless a [read](#readbarcodefromimagefile-and-readbarcodefromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once given the same module overrides. So there'll be a cold start in the first function call (or several calls if they appear in a very short period). If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use `getZXingModule`. This function will also return a `Promise` that resolves to a `ZXingModule`.
 
 ```ts
 import { getZXingModule } from "@sec-ant/zxing-wasm";
