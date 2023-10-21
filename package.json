@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sec-ant/zxing-wasm"
+    "url": "git+https://github.com/Sec-ant/zxing-wasm.git"
   },
   "homepage": "https://github.com/Sec-ant/zxing-wasm",
   "bugs": {
@@ -67,7 +67,7 @@
     "@vitest/coverage-istanbul": "^0.34.6",
     "@vitest/ui": "^0.34.6",
     "cross-env": "^7.0.3",
-    "eslint": "^8.51.0",
+    "eslint": "^8.52.0",
     "npm-check-updates": "^16.14.6",
     "playwright": "^1.39.0",
     "prettier": "^3.0.3",
