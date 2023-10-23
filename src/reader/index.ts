@@ -1,58 +1,47 @@
-import zxingModuleFactory from "../wasm/zxing_reader.js";
+import zxingModuleFactory from "./zxing_reader.js";
 import {
-  ZXingModuleFactoryTypeExtractor,
-  ZXingModuleOverrides,
-  readBarcodesFromImageFile as _readBarcodesFromImageFile,
-  readBarcodesFromImageData as _readBarcodesFromImageData,
-  getZXingModule as _getZXingModule,
-  defaultZXingReadOptions,
-  ZXingReadOptions,
-  ZXingReadOutput,
+  type ZXingModuleOverrides,
+  getZXingModuleWithFactory,
+  setZXingModuleOverridesWithFactory,
+  readBarcodesFromImageDataWithFactory,
+  readBarcodesFromImageFileWithFactory,
 } from "../core.js";
+import type { DecodeHints } from "../bindings/decodeHints.js";
 
 export function getZXingModule(
-  zxingModuleOverrides?: ZXingModuleOverrides<
-    ZXingModuleFactoryTypeExtractor<typeof zxingModuleFactory>
-  >,
-): ReturnType<typeof _getZXingModule> {
-  return _getZXingModule(zxingModuleFactory, zxingModuleOverrides);
+  zxingModuleOverrides?: ZXingModuleOverrides<"reader">,
+) {
+  return getZXingModuleWithFactory(zxingModuleFactory, zxingModuleOverrides);
+}
+
+export function setZXingModuleOverrides(
+  zxingModuleOverrides: ZXingModuleOverrides<"reader">,
+) {
+  return setZXingModuleOverridesWithFactory(
+    zxingModuleFactory,
+    zxingModuleOverrides,
+  );
 }
 
 export async function readBarcodesFromImageFile(
   imageFile: Blob | File,
-  {
-    tryHarder = defaultZXingReadOptions.tryHarder,
-    formats = defaultZXingReadOptions.formats,
-    maxSymbols = defaultZXingReadOptions.maxSymbols,
-  }: ZXingReadOptions = defaultZXingReadOptions,
-): Promise<ZXingReadOutput[]> {
-  return _readBarcodesFromImageFile(
-    imageFile,
-    {
-      tryHarder,
-      formats,
-      maxSymbols,
-    },
+  decodeHints: DecodeHints,
+) {
+  return readBarcodesFromImageFileWithFactory(
     zxingModuleFactory,
+    imageFile,
+    decodeHints,
   );
 }
 
 export async function readBarcodesFromImageData(
   imageData: ImageData,
-  {
-    tryHarder = defaultZXingReadOptions.tryHarder,
-    formats = defaultZXingReadOptions.formats,
-    maxSymbols = defaultZXingReadOptions.maxSymbols,
-  }: ZXingReadOptions = defaultZXingReadOptions,
-): Promise<ZXingReadOutput[]> {
-  return _readBarcodesFromImageData(
-    imageData,
-    {
-      tryHarder,
-      formats,
-      maxSymbols,
-    },
+  decodeHints: DecodeHints,
+) {
+  return readBarcodesFromImageDataWithFactory(
     zxingModuleFactory,
+    imageData,
+    decodeHints,
   );
 }
 

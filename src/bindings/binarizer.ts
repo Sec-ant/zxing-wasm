@@ -1,3 +1,10 @@
+export enum ZXingBinarizer {
+  LocalAverage,
+  GlobalHistogram,
+  FixedThreshold,
+  BoolCast,
+}
+
 const binarizers = [
   "LocalAverage",
   "GlobalHistogram",

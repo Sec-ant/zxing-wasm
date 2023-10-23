@@ -1,3 +1,9 @@
+export interface ZXingWriteResult {
+  image: Uint8Array;
+  error: string;
+  delete: () => void;
+}
+
 export interface WriteResult
   extends Omit<ZXingWriteResult, "image" | "delete"> {
   image: Blob | null;

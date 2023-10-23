@@ -39,6 +39,8 @@
   "license": "MIT",
   "config": {},
   "scripts": {
+    "submodule:init": "git submodule update --init",
+    "submodule:update": "git submodule update --remote",
     "cmake": "emcmake cmake -S src/cpp -B build",
     "build:wasm": "cmake --build build -j$(($(nproc) - 1))",
     "dev": "vite",
@@ -66,14 +68,12 @@
     "npm-check-updates": "^16.14.6",
     "playwright": "^1.39.0",
     "prettier": "^3.0.3",
-    "replace-in-file": "^7.0.1",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
     "vite-plugin-static-copy": "^0.17.0",
     "vitest": "^0.34.6"
   },
   "dependencies": {
-    "@types/emscripten": "^1.39.9",
-    "zustand": "^4.4.3"
+    "@types/emscripten": "^1.39.9"
   }
 }

@@ -1,3 +1,12 @@
+export enum ZXingContentType {
+  Text,
+  Binary,
+  Mixed,
+  GS1,
+  ISO15434,
+  UnknownECI,
+}
+
 const contentTypes = [
   "Text",
   "Binary",

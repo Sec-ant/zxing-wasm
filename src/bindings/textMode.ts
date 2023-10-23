@@ -1,3 +1,11 @@
+export enum ZXingTextMode {
+  Plain,
+  ECI,
+  HRI,
+  Hex,
+  Escaped,
+}
+
 const textModes = ["Plain", "ECI", "HRI", "Hex", "Escaped"] as const;
 
 export type TextMode = (typeof textModes)[number];

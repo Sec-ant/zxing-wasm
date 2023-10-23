@@ -17,11 +17,15 @@
   "ignorePatterns": [
     "node_modules",
     "dist",
-    "zxing_reader.js",
-    "zxing_writer.js",
-    "zxing_full.js"
+    "build",
+    "zxing-cpp",
+    "src/**/zxing_*.js"
   ],
   "rules": {
-    "curly": "error"
+    "curly": "error",
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      { "allowSingleExtends": true }
+    ]
   }
 }

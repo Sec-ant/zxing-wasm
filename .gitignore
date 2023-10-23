@@ -27,5 +27,5 @@ dist-ssr
 
 build
 coverage
-src/wasm/*.wasm
-src/wasm/*.js
+src/**/zxing_*.wasm
+src/**/zxing_*.js

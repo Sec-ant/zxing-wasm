@@ -1,3 +1,9 @@
+export enum ZXingEanAddOnSymbol {
+  Ignore,
+  Read,
+  Require,
+}
+
 const eanAddOnSymbols = ["Ignore", "Read", "Require"] as const;
 
 export type EanAddOnSymbol = (typeof eanAddOnSymbols)[number];

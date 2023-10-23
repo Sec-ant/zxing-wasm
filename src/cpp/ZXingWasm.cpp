@@ -5,6 +5,8 @@
  */
 // SPDX-License-Identifier: Apache-2.0
 
+#include "BitMatrix.h"
+#include "MultiFormatWriter.h"
 #include "ReadBarcode.h"
 #include <emscripten/bind.h>
 #include <emscripten/val.h>
@@ -12,10 +14,19 @@
 #include <stdexcept>
 #include <string>
 
-#define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#if defined(READER)
+  #define STB_IMAGE_IMPLEMENTATION
+  #include <stb_image.h>
+#endif
+
+#if defined(WRITER)
+  #define STB_IMAGE_WRITE_IMPLEMENTATION
+  #include <stb_image_write.h>
+#endif
 
 using namespace emscripten;
+
+#if defined(READER)
 
 struct JsDecodeHints {
   std::string formats;
@@ -171,9 +182,120 @@ JsResults readBarcodesFromPixmap(
   );
 }
 
-EMSCRIPTEN_BINDINGS(BarcodeReader) {
+#endif
 
-  value_object<JsDecodeHints>("JsDecodeHints")
+#if defined(WRITER)
+
+struct JsEncodeHints {
+  int width;
+  int height;
+  std::string format;
+  ZXing::CharacterSet characterSet;
+  int eccLevel;
+  int margin;
+};
+
+struct JsWriteResult {
+  emscripten::val image;
+  std::string error;
+};
+
+JsWriteResult writeBarcodeToImage(
+  std::wstring text, const JsEncodeHints &jsEncodeHints
+) {
+  try {
+    auto format = ZXing::BarcodeFormatFromString(jsEncodeHints.format);
+    if (format == ZXing::BarcodeFormat::None) {
+      return {.error = "Unsupported format: " + jsEncodeHints.format};
+    }
+
+    ZXing::MultiFormatWriter writer(format);
+
+    auto margin = jsEncodeHints.margin;
+    if (margin >= 0) {
+      writer.setMargin(margin);
+    }
+
+    auto characterSet = jsEncodeHints.characterSet;
+    if (characterSet != ZXing::CharacterSet::Unknown) {
+      writer.setEncoding(characterSet);
+    }
+
+    auto eccLevel = jsEncodeHints.eccLevel;
+    if (eccLevel >= 0 && eccLevel <= 8) {
+      writer.setEccLevel(eccLevel);
+    }
+
+    auto buffer = ZXing::ToMatrix<uint8_t>(
+      writer.encode(text, jsEncodeHints.width, jsEncodeHints.height)
+    );
+
+    int len;
+    uint8_t *bytes = stbi_write_png_to_mem(
+      buffer.data(), 0, buffer.width(), buffer.height(), 1, &len
+    );
+
+    if (bytes == nullptr) {
+      return {.error = "Unknown error"};
+    };
+
+    thread_local const val Uint8Array = val::global("Uint8Array");
+
+    val js_bytes = Uint8Array.new_(typed_memory_view(len, bytes));
+    STBIW_FREE(bytes);
+
+    return {.image = js_bytes};
+
+  } catch (const std::exception &e) {
+    return {.error = e.what()};
+  } catch (...) {
+    return {.error = "Unknown error"};
+  }
+}
+
+#endif
+
+EMSCRIPTEN_BINDINGS(ZXingWasm) {
+
+#if defined(READER)
+
+  enum_<ZXing::Binarizer>("Binarizer")
+    .value("LocalAverage", ZXing::Binarizer::LocalAverage)
+    .value("GlobalHistogram", ZXing::Binarizer::GlobalHistogram)
+    .value("FixedThreshold", ZXing::Binarizer::FixedThreshold)
+    .value("BoolCast", ZXing::Binarizer::BoolCast);
+
+  enum_<ZXing::EanAddOnSymbol>("EanAddOnSymbol")
+    .value("Ignore", ZXing::EanAddOnSymbol::Ignore)
+    .value("Read", ZXing::EanAddOnSymbol::Read)
+    .value("Require", ZXing::EanAddOnSymbol::Require);
+
+  enum_<ZXing::TextMode>("TextMode")
+    .value("Plain", ZXing::TextMode::Plain)
+    .value("ECI", ZXing::TextMode::ECI)
+    .value("HRI", ZXing::TextMode::HRI)
+    .value("Hex", ZXing::TextMode::Hex)
+    .value("Escaped", ZXing::TextMode::Escaped);
+
+  enum_<ZXing::ContentType>("ContentType")
+    .value("Text", ZXing::ContentType::Text)
+    .value("Binary", ZXing::ContentType::Binary)
+    .value("Mixed", ZXing::ContentType::Mixed)
+    .value("GS1", ZXing::ContentType::GS1)
+    .value("ISO15434", ZXing::ContentType::ISO15434)
+    .value("UnknownECI", ZXing::ContentType::UnknownECI);
+
+  value_object<ZXing::PointI>("Point")
+    .field("x", &ZXing::PointI::x)
+    .field("y", &ZXing::PointI::y);
+
+  value_object<ZXing::Position>("Position")
+    .field("topLeft", emscripten::index<0>())
+    .field("topRight", emscripten::index<1>())
+    .field("bottomRight", emscripten::index<2>())
+    .field("bottomLeft", emscripten::index<3>());
+
+  value_object<JsDecodeHints>("DecodeHints")
     .field("formats", &JsDecodeHints::formats)
     .field("tryHarder", &JsDecodeHints::tryHarder)
     .field("tryRotate", &JsDecodeHints::tryRotate)
@@ -194,7 +316,7 @@ EMSCRIPTEN_BINDINGS(BarcodeReader) {
     .field("textMode", &JsDecodeHints::textMode)
     .field("characterSet", &JsDecodeHints::characterSet);
 
-  value_object<JsReadResult>("JsReadResult")
+  value_object<JsReadResult>("ReadResult")
     .field("isValid", &JsReadResult::isValid)
     .field("error", &JsReadResult::error)
     .field("format", &JsReadResult::format)
@@ -216,23 +338,30 @@ EMSCRIPTEN_BINDINGS(BarcodeReader) {
     .field("lineCount", &JsReadResult::lineCount)
     .field("version", &JsReadResult::version);
 
-  enum_<ZXing::Binarizer>("Binarizer")
-    .value("LocalAverage", ZXing::Binarizer::LocalAverage)
-    .value("GlobalHistogram", ZXing::Binarizer::GlobalHistogram)
-    .value("FixedThreshold", ZXing::Binarizer::FixedThreshold)
-    .value("BoolCast", ZXing::Binarizer::BoolCast);
+  register_vector<JsReadResult>("ReadResults");
 
-  enum_<ZXing::EanAddOnSymbol>("EanAddOnSymbol")
-    .value("Ignore", ZXing::EanAddOnSymbol::Ignore)
-    .value("Read", ZXing::EanAddOnSymbol::Read)
-    .value("Require", ZXing::EanAddOnSymbol::Require);
+  function("readBarcodesFromImage", &readBarcodesFromImage);
+  function("readBarcodesFromPixmap", &readBarcodesFromPixmap);
 
-  enum_<ZXing::TextMode>("TextMode")
-    .value("Plain", ZXing::TextMode::Plain)
-    .value("ECI", ZXing::TextMode::ECI)
-    .value("HRI", ZXing::TextMode::HRI)
-    .value("Hex", ZXing::TextMode::Hex)
-    .value("Escaped", ZXing::TextMode::Escaped);
+#endif
+
+#if defined(WRITER)
+
+  value_object<JsEncodeHints>("EncodeHints")
+    .field("width", &JsEncodeHints::width)
+    .field("height", &JsEncodeHints::height)
+    .field("format", &JsEncodeHints::format)
+    .field("characterSet", &JsEncodeHints::characterSet)
+    .field("eccLevel", &JsEncodeHints::eccLevel)
+    .field("margin", &JsEncodeHints::margin);
+
+  value_object<JsWriteResult>("WriteResult")
+    .field("image", &JsWriteResult::image)
+    .field("error", &JsWriteResult::error);
+
+  function("writeBarcodeToImage", &writeBarcodeToImage);
+
+#endif
 
   enum_<ZXing::CharacterSet>("CharacterSet")
     .value("Unknown", ZXing::CharacterSet::Unknown)
@@ -269,27 +398,4 @@ EMSCRIPTEN_BINDINGS(BarcodeReader) {
     .value("UTF32BE", ZXing::CharacterSet::UTF32BE)
     .value("UTF32LE", ZXing::CharacterSet::UTF32LE)
     .value("BINARY", ZXing::CharacterSet::BINARY);
-
-  enum_<ZXing::ContentType>("ContentType")
-    .value("Text", ZXing::ContentType::Text)
-    .value("Binary", ZXing::ContentType::Binary)
-    .value("Mixed", ZXing::ContentType::Mixed)
-    .value("GS1", ZXing::ContentType::GS1)
-    .value("ISO15434", ZXing::ContentType::ISO15434)
-    .value("UnknownECI", ZXing::ContentType::UnknownECI);
-
-  value_object<ZXing::PointI>("Point")
-    .field("x", &ZXing::PointI::x)
-    .field("y", &ZXing::PointI::y);
-
-  value_object<ZXing::Position>("Position")
-    .field("topLeft", emscripten::index<0>())
-    .field("topRight", emscripten::index<1>())
-    .field("bottomRight", emscripten::index<2>())
-    .field("bottomLeft", emscripten::index<3>());
-
-  register_vector<JsReadResult>("ReadResults");
-
-  function("readBarcodesFromImage", &readBarcodesFromImage);
-  function("readBarcodesFromPixmap", &readBarcodesFromPixmap);
 };

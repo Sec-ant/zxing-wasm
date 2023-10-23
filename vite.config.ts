@@ -16,21 +16,18 @@ export default defineConfig({
       fileName: (format, entryName) =>
         format === "es" ? `${entryName}.js` : `${entryName}.${format}.js`,
     },
+    rollupOptions: {
+      output: {
+        chunkFileNames: "chunk-[hash].js",
+      },
+    },
   },
   plugins: [
     viteStaticCopy({
       targets: [
         {
-          src: "./src/full/*.d.ts",
-          dest: "./full",
-        },
-        {
-          src: "./src/reader/*.d.ts",
-          dest: "./reader",
-        },
-        {
-          src: "./src/writer/*.d.ts",
-          dest: "./writer",
+          src: "./src/*/*.wasm",
+          dest: "./wasm",
         },
       ],
     }),

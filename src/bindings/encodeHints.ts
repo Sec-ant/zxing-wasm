@@ -1,9 +1,19 @@
 import { WriteInputBarcodeFormat } from "./barcodeFormat.js";
 import {
+  ZXingCharacterSet,
   CharacterSet,
   characterSetToZXingCharacterSet,
 } from "./characterSet.js";
 import { WriteInputEccLevel } from "./eccLevel.js";
+
+export interface ZXingEncodeHints {
+  width: number;
+  height: number;
+  format: string;
+  characterSet: ZXingCharacterSet;
+  eccLevel: number;
+  margin: number;
+}
 
 export interface EncodeHints
   extends Partial<

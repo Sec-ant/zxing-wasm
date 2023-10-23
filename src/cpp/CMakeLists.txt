@@ -21,9 +21,6 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
 endif()
 
-# Add definitions
-add_definitions("-s DISABLE_EXCEPTION_CATCHING=0")
-
 # Add subdirectories
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../zxing-cpp/core ${CMAKE_BINARY_DIR}/ZXing)
 
@@ -34,6 +31,7 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -s DISABLE_EXCEPTION_CATCHING=0 \
   -s FILESYSTEM=0 \
   -s EXPORT_ES6=1 \
+  -s USE_ES6_IMPORT_META=0 \
   -s MODULARIZE=1 \
   -s MIN_SAFARI_VERSION=130000 \
   -s DYNAMIC_EXECUTION=0 \
@@ -42,20 +40,27 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -s ALLOW_MEMORY_GROWTH=1"
 )
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../wasm)
-
 # Build targets
 if(BUILD_READERS AND BUILD_WRITERS)
-  add_executable(zxing_full BarcodeReader.cpp BarcodeWriter.cpp)
+  add_executable(zxing_full ZXingWasm.cpp)
+  target_compile_definitions(zxing_full PRIVATE READER WRITER)
   target_link_libraries(zxing_full ZXing::ZXing stb::stb)
+  set_target_properties(zxing_full PROPERTIES 
+                        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../full")
 endif()
 
 if(BUILD_READERS)
-  add_executable(zxing_reader BarcodeReader.cpp)
+  add_executable(zxing_reader ZXingWasm.cpp)
+  target_compile_definitions(zxing_reader PRIVATE READER)
   target_link_libraries(zxing_reader ZXing::ZXing stb::stb)
+  set_target_properties(zxing_reader PROPERTIES 
+                        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../reader")
 endif()
 
 if(BUILD_WRITERS)
-  add_executable(zxing_writer BarcodeWriter.cpp)
+  add_executable(zxing_writer ZXingWasm.cpp)
+  target_compile_definitions(zxing_writer PRIVATE WRITER)
   target_link_libraries(zxing_writer ZXing::ZXing stb::stb)
+  set_target_properties(zxing_writer PROPERTIES 
+                        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../writer")
 endif()

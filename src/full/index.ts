@@ -1,87 +1,60 @@
-import zxingModuleFactory from "../wasm/zxing_full.js";
+import zxingModuleFactory from "./zxing_full.js";
 import {
-  ZXingModuleFactoryTypeExtractor,
-  ZXingModuleOverrides,
-  readBarcodesFromImageFile as _readBarcodesFromImageFile,
-  readBarcodesFromImageData as _readBarcodesFromImageData,
-  writeBarcodeToImageFile as _writeBarcodeToImageFile,
-  getZXingModule as _getZXingModule,
-  defaultZXingReadOptions,
-  ZXingReadOptions,
-  ZXingReadOutput,
-  defaultZXingWriteOptions,
-  ZXingWriteOptions,
-  ZXingWriteOutput,
+  type ZXingModuleOverrides,
+  getZXingModuleWithFactory,
+  setZXingModuleOverridesWithFactory,
+  readBarcodesFromImageDataWithFactory,
+  readBarcodesFromImageFileWithFactory,
+  writeBarcodeToImageFileWithFactory,
 } from "../core.js";
+import type { DecodeHints } from "../bindings/decodeHints.js";
+import type { EncodeHints } from "../bindings/encodeHints.js";
 
 export function getZXingModule(
-  zxingModuleOverrides?: ZXingModuleOverrides<
-    ZXingModuleFactoryTypeExtractor<typeof zxingModuleFactory>
-  >,
-): ReturnType<typeof _getZXingModule> {
-  return _getZXingModule(zxingModuleFactory, zxingModuleOverrides);
+  zxingModuleOverrides?: ZXingModuleOverrides<"full">,
+) {
+  return getZXingModuleWithFactory(zxingModuleFactory, zxingModuleOverrides);
+}
+
+export function setZXingModuleOverrides(
+  zxingModuleOverrides: ZXingModuleOverrides<"full">,
+) {
+  return setZXingModuleOverridesWithFactory(
+    zxingModuleFactory,
+    zxingModuleOverrides,
+  );
 }
 
 export async function readBarcodesFromImageFile(
   imageFile: Blob | File,
-  {
-    tryHarder = defaultZXingReadOptions.tryHarder,
-    formats = defaultZXingReadOptions.formats,
-    maxSymbols = defaultZXingReadOptions.maxSymbols,
-  }: ZXingReadOptions = defaultZXingReadOptions,
-): Promise<ZXingReadOutput[]> {
-  return _readBarcodesFromImageFile(
-    imageFile,
-    {
-      tryHarder,
-      formats,
-      maxSymbols,
-    },
+  decodeHints: DecodeHints,
+) {
+  return readBarcodesFromImageFileWithFactory(
     zxingModuleFactory,
+    imageFile,
+    decodeHints,
   );
 }
 
-export async function readBarcodeFromImageData(
+export async function readBarcodesFromImageData(
   imageData: ImageData,
-  {
-    tryHarder = defaultZXingReadOptions.tryHarder,
-    formats = defaultZXingReadOptions.formats,
-    maxSymbols = defaultZXingReadOptions.maxSymbols,
-  }: ZXingReadOptions = defaultZXingReadOptions,
-): Promise<ZXingReadOutput[]> {
-  return _readBarcodesFromImageData(
-    imageData,
-    {
-      tryHarder,
-      formats,
-      maxSymbols,
-    },
+  decodeHints: DecodeHints,
+) {
+  return readBarcodesFromImageDataWithFactory(
     zxingModuleFactory,
+    imageData,
+    decodeHints,
   );
 }
 
 export async function writeBarcodeToImageFile(
   text: string,
-  {
-    format = defaultZXingWriteOptions.format,
-    charset = defaultZXingWriteOptions.charset,
-    quietZone = defaultZXingWriteOptions.quietZone,
-    width = defaultZXingWriteOptions.width,
-    height = defaultZXingWriteOptions.height,
-    eccLevel = defaultZXingWriteOptions.eccLevel,
-  }: ZXingWriteOptions = defaultZXingWriteOptions,
-): Promise<ZXingWriteOutput> {
-  return _writeBarcodeToImageFile(
-    text,
-    {
-      format,
-      charset,
-      quietZone,
-      width,
-      height,
-      eccLevel,
-    },
+  encodeHints: EncodeHints,
+) {
+  return writeBarcodeToImageFileWithFactory(
     zxingModuleFactory,
+    text,
+    encodeHints,
   );
 }
 

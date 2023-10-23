@@ -1,44 +1,35 @@
-import zxingModuleFactory from "../wasm/zxing_writer.js";
+import zxingModuleFactory from "./zxing_writer.js";
 import {
-  ZXingModuleFactoryTypeExtractor,
-  ZXingModuleOverrides,
-  writeBarcodeToImageFile as _writeBarcodeToImageFile,
-  getZXingModule as _getZXingModule,
-  defaultZXingWriteOptions,
-  ZXingWriteOptions,
-  ZXingWriteOutput,
+  type ZXingModuleOverrides,
+  getZXingModuleWithFactory,
+  setZXingModuleOverridesWithFactory,
+  writeBarcodeToImageFileWithFactory,
 } from "../core.js";
+import type { EncodeHints } from "../bindings/encodeHints.js";
 
 export function getZXingModule(
-  zxingModuleOverrides?: ZXingModuleOverrides<
-    ZXingModuleFactoryTypeExtractor<typeof zxingModuleFactory>
-  >,
-): ReturnType<typeof _getZXingModule> {
-  return _getZXingModule(zxingModuleFactory, zxingModuleOverrides);
+  zxingModuleOverrides?: ZXingModuleOverrides<"writer">,
+) {
+  return getZXingModuleWithFactory(zxingModuleFactory, zxingModuleOverrides);
+}
+
+export function setZXingModuleOverrides(
+  zxingModuleOverrides: ZXingModuleOverrides<"writer">,
+) {
+  return setZXingModuleOverridesWithFactory(
+    zxingModuleFactory,
+    zxingModuleOverrides,
+  );
 }
 
 export async function writeBarcodeToImageFile(
   text: string,
-  {
-    format = defaultZXingWriteOptions.format,
-    charset = defaultZXingWriteOptions.charset,
-    quietZone = defaultZXingWriteOptions.quietZone,
-    width = defaultZXingWriteOptions.width,
-    height = defaultZXingWriteOptions.height,
-    eccLevel = defaultZXingWriteOptions.eccLevel,
-  }: ZXingWriteOptions = defaultZXingWriteOptions,
-): Promise<ZXingWriteOutput> {
-  return _writeBarcodeToImageFile(
-    text,
-    {
-      format,
-      charset,
-      quietZone,
-      width,
-      height,
-      eccLevel,
-    },
+  encodeHints: EncodeHints,
+) {
+  return writeBarcodeToImageFileWithFactory(
     zxingModuleFactory,
+    text,
+    encodeHints,
   );
 }
 

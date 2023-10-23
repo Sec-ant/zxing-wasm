@@ -1,14 +1,46 @@
 import { ReadInputBarcodeFormat, formatsToString } from "./barcodeFormat.js";
-import { Binarizer, binarizerToZXingBinarizer } from "./binarizer.js";
 import {
+  ZXingBinarizer,
+  Binarizer,
+  binarizerToZXingBinarizer,
+} from "./binarizer.js";
+import {
+  ZXingCharacterSet,
   CharacterSet,
   characterSetToZXingCharacterSet,
 } from "./characterSet.js";
 import {
+  ZXingEanAddOnSymbol,
   EanAddOnSymbol,
   eanAddOnSymbolToZXingEanAddOnSymbol,
 } from "./eanAddOnSymbol.js";
-import { TextMode, textModeToZXingTextMode } from "./textMode.js";
+import {
+  ZXingTextMode,
+  TextMode,
+  textModeToZXingTextMode,
+} from "./textMode.js";
+
+export interface ZXingDecodeHints {
+  formats: string;
+  tryHarder: boolean;
+  tryRotate: boolean;
+  tryInvert: boolean;
+  tryDownscale: boolean;
+  binarizer: ZXingBinarizer;
+  isPure: boolean;
+  downscaleThreshold: number;
+  downscaleFactor: number;
+  minLineCount: number;
+  maxNumberOfSymbols: number;
+  tryCode39ExtendedMode: boolean;
+  validateCode39CheckSum: boolean;
+  validateITFCheckSum: boolean;
+  returnCodabarStartEnd: boolean;
+  returnErrors: boolean;
+  eanAddOnSymbol: ZXingEanAddOnSymbol;
+  textMode: ZXingTextMode;
+  characterSet: ZXingCharacterSet;
+}
 
 export interface DecodeHints
   extends Partial<
