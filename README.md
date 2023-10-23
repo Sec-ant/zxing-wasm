@@ -25,6 +25,10 @@ npm run build
 npm i zxing-wasm
 ```
 
+## Documentation
+
+https://zxing-wasm.netlify.app/
+
 ## Usage
 
 This package exports 3 subpaths: `full`, `reader` and `writer`. You can choose whichever fits your needs. If you use TypeScript, you should set [`moduleResolution`](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution) to [`bundler`](https://www.typescriptlang.org/docs/handbook/modules/reference.html#bundler), [`node16` or `nodenext`](https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext-1) in your `tsconfig.json` file to properly resolve the exported module.
