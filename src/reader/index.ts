@@ -1,6 +1,7 @@
 import zxingModuleFactory from "./zxing_reader.js";
 import {
   type ZXingModuleOverrides,
+  type ZXingModule,
   getZXingModuleWithFactory,
   setZXingModuleOverridesWithFactory,
   readBarcodesFromImageDataWithFactory,
@@ -11,7 +12,10 @@ import type { DecodeHints } from "../bindings/decodeHints.js";
 export function getZXingModule(
   zxingModuleOverrides?: ZXingModuleOverrides<"reader">,
 ) {
-  return getZXingModuleWithFactory(zxingModuleFactory, zxingModuleOverrides);
+  return getZXingModuleWithFactory(
+    zxingModuleFactory,
+    zxingModuleOverrides,
+  ) as Promise<ZXingModule<"reader">>;
 }
 
 export function setZXingModuleOverrides(

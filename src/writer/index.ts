@@ -1,6 +1,7 @@
 import zxingModuleFactory from "./zxing_writer.js";
 import {
   type ZXingModuleOverrides,
+  type ZXingModule,
   getZXingModuleWithFactory,
   setZXingModuleOverridesWithFactory,
   writeBarcodeToImageFileWithFactory,
@@ -10,7 +11,10 @@ import type { EncodeHints } from "../bindings/encodeHints.js";
 export function getZXingModule(
   zxingModuleOverrides?: ZXingModuleOverrides<"writer">,
 ) {
-  return getZXingModuleWithFactory(zxingModuleFactory, zxingModuleOverrides);
+  return getZXingModuleWithFactory(
+    zxingModuleFactory,
+    zxingModuleOverrides,
+  ) as Promise<ZXingModule<"writer">>;
 }
 
 export function setZXingModuleOverrides(

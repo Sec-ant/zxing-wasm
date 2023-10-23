@@ -1,6 +1,6 @@
 {
   "name": "zxing-wasm",
-  "description": "ZXing WebAssembly as an ES Module",
+  "description": "ZXing-C++ WebAssembly as an ES module with types",
   "private": false,
   "version": "1.0.0-rc.0",
   "type": "module",

@@ -103,12 +103,10 @@ type ZXingWeakMap = WeakMap<ZXingModuleFactory, ZXingWeakMapValue>;
 
 let zxingWeakMap: ZXingWeakMap = new WeakMap();
 
-export function getZXingModuleWithFactory<
-  T extends ZXingModuleType = ZXingModuleType,
->(
+export function getZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
   zxingModuleOverrides?: ZXingModuleOverrides<T>,
-) {
+): Promise<ZXingModule<T>> {
   const zxingWeakMapValue = zxingWeakMap.get(zxingModuleFactory) as
     | ZXingWeakMapValue<T>
     | undefined;
@@ -138,9 +136,7 @@ export function purgeZXingModule() {
   zxingWeakMap = new WeakMap();
 }
 
-export function setZXingModuleOverridesWithFactory<
-  T extends ZXingModuleType = ZXingModuleType,
->(
+export function setZXingModuleOverridesWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
   zxingModuleOverrides: ZXingModuleOverrides<T>,
 ) {
