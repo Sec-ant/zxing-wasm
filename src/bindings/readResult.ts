@@ -1,7 +1,8 @@
 import { ReadOutputBarcodeFormat, formatFromString } from "./barcodeFormat.js";
 import { ReadOutputEccLevel } from "./eccLevel.js";
-import { ZXingContentType } from "./contentType.js";
+import { ContentType, zxingEnumToContentType } from "./contentType.js";
 import { ZXingPosition, Position } from "./position.js";
+import { ZXingEnum } from "./enum.js";
 
 export interface ZXingReadResult {
   isValid: boolean;
@@ -11,7 +12,7 @@ export interface ZXingReadResult {
   bytesECI: Uint8Array;
   text: string;
   eccLevel: string;
-  contentType: ZXingContentType;
+  contentType: ZXingEnum;
   hasECI: boolean;
   position: ZXingPosition;
   orientation: number;
@@ -27,9 +28,13 @@ export interface ZXingReadResult {
 }
 
 export interface ReadResult
-  extends Omit<ZXingReadResult, "format" | "eccLevel" | "position"> {
+  extends Omit<
+    ZXingReadResult,
+    "format" | "eccLevel" | "contentType" | "position"
+  > {
   format: ReadOutputBarcodeFormat;
   eccLevel: ReadOutputEccLevel;
+  contentType: ContentType;
   position: Position;
 }
 
@@ -40,5 +45,6 @@ export function zxingReadResultToReadResult(
     ...zxingReadResult,
     format: formatFromString(zxingReadResult.format) as ReadOutputBarcodeFormat,
     eccLevel: zxingReadResult.eccLevel as ReadOutputEccLevel,
+    contentType: zxingEnumToContentType(zxingReadResult.contentType),
   };
 }

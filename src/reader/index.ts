@@ -25,7 +25,7 @@ export function setZXingModuleOverrides(
 
 export async function readBarcodesFromImageFile(
   imageFile: Blob | File,
-  decodeHints: DecodeHints,
+  decodeHints?: DecodeHints,
 ) {
   return readBarcodesFromImageFileWithFactory(
     zxingModuleFactory,
@@ -36,7 +36,7 @@ export async function readBarcodesFromImageFile(
 
 export async function readBarcodesFromImageData(
   imageData: ImageData,
-  decodeHints: DecodeHints,
+  decodeHints?: DecodeHints,
 ) {
   return readBarcodesFromImageDataWithFactory(
     zxingModuleFactory,

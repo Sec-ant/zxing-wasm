@@ -363,6 +363,8 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
 
 #endif
 
+#if defined(READER) || defined(WRITER)
+
   enum_<ZXing::CharacterSet>("CharacterSet")
     .value("Unknown", ZXing::CharacterSet::Unknown)
     .value("ASCII", ZXing::CharacterSet::ASCII)
@@ -398,4 +400,6 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .value("UTF32BE", ZXing::CharacterSet::UTF32BE)
     .value("UTF32LE", ZXing::CharacterSet::UTF32LE)
     .value("BINARY", ZXing::CharacterSet::BINARY);
+
+#endif
 };

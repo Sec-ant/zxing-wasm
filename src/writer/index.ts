@@ -24,7 +24,7 @@ export function setZXingModuleOverrides(
 
 export async function writeBarcodeToImageFile(
   text: string,
-  encodeHints: EncodeHints,
+  encodeHints?: EncodeHints,
 ) {
   return writeBarcodeToImageFileWithFactory(
     zxingModuleFactory,

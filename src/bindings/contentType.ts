@@ -1,11 +1,5 @@
-export enum ZXingContentType {
-  Text,
-  Binary,
-  Mixed,
-  GS1,
-  ISO15434,
-  UnknownECI,
-}
+import { ZXingModule } from "../core.js";
+import { ZXingEnum } from "./enum.js";
 
 const contentTypes = [
   "Text",
@@ -18,14 +12,15 @@ const contentTypes = [
 
 export type ContentType = (typeof contentTypes)[number];
 
-export function contentTypeToZXingContentType(
+export type ZXingContentType = Record<ContentType, ZXingEnum>;
+
+export function contentTypeToZXingEnum<T extends "reader" | "full">(
+  zxingModule: ZXingModule<T>,
   contentType: ContentType,
-): ZXingContentType {
-  return ZXingContentType[contentType];
+): ZXingEnum {
+  return zxingModule.ContentType[contentType];
 }
 
-export function zxingContentTypeToContentType(
-  zxingContentType: ZXingContentType,
-): ContentType {
-  return contentTypes[zxingContentType];
+export function zxingEnumToContentType(zxingEnum: ZXingEnum): ContentType {
+  return contentTypes[zxingEnum.value];
 }

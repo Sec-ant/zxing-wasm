@@ -1,24 +1,10 @@
+import { ZXingModule } from "../core.js";
 import { ReadInputBarcodeFormat, formatsToString } from "./barcodeFormat.js";
-import {
-  ZXingBinarizer,
-  Binarizer,
-  binarizerToZXingBinarizer,
-} from "./binarizer.js";
-import {
-  ZXingCharacterSet,
-  CharacterSet,
-  characterSetToZXingCharacterSet,
-} from "./characterSet.js";
-import {
-  ZXingEanAddOnSymbol,
-  EanAddOnSymbol,
-  eanAddOnSymbolToZXingEanAddOnSymbol,
-} from "./eanAddOnSymbol.js";
-import {
-  ZXingTextMode,
-  TextMode,
-  textModeToZXingTextMode,
-} from "./textMode.js";
+import { Binarizer, binarizerToZXingEnum } from "./binarizer.js";
+import { CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
+import { EanAddOnSymbol, eanAddOnSymbolToZXingEnum } from "./eanAddOnSymbol.js";
+import { TextMode, textModeToZXingEnum } from "./textMode.js";
+import { ZXingEnum } from "./enum.js";
 
 export interface ZXingDecodeHints {
   formats: string;
@@ -26,7 +12,7 @@ export interface ZXingDecodeHints {
   tryRotate: boolean;
   tryInvert: boolean;
   tryDownscale: boolean;
-  binarizer: ZXingBinarizer;
+  binarizer: ZXingEnum;
   isPure: boolean;
   downscaleThreshold: number;
   downscaleFactor: number;
@@ -37,9 +23,9 @@ export interface ZXingDecodeHints {
   validateITFCheckSum: boolean;
   returnCodabarStartEnd: boolean;
   returnErrors: boolean;
-  eanAddOnSymbol: ZXingEanAddOnSymbol;
-  textMode: ZXingTextMode;
-  characterSet: ZXingCharacterSet;
+  eanAddOnSymbol: ZXingEnum;
+  textMode: ZXingEnum;
+  characterSet: ZXingEnum;
 }
 
 export interface DecodeHints
@@ -78,17 +64,22 @@ export const defaultDecodeHints: Required<DecodeHints> = {
   characterSet: "Unknown",
 };
 
-export function decodeHintsToZXingDecodeHints(
+export function decodeHintsToZXingDecodeHints<T extends "reader" | "full">(
+  zxingModule: ZXingModule<T>,
   decodeHints: Required<DecodeHints>,
 ): ZXingDecodeHints {
   return {
     ...decodeHints,
     formats: formatsToString(decodeHints.formats),
-    binarizer: binarizerToZXingBinarizer(decodeHints.binarizer),
-    eanAddOnSymbol: eanAddOnSymbolToZXingEanAddOnSymbol(
+    binarizer: binarizerToZXingEnum(zxingModule, decodeHints.binarizer),
+    eanAddOnSymbol: eanAddOnSymbolToZXingEnum(
+      zxingModule,
       decodeHints.eanAddOnSymbol,
     ),
-    textMode: textModeToZXingTextMode(decodeHints.textMode),
-    characterSet: characterSetToZXingCharacterSet(decodeHints.characterSet),
+    textMode: textModeToZXingEnum(zxingModule, decodeHints.textMode),
+    characterSet: characterSetToZXingEnum(
+      zxingModule,
+      decodeHints.characterSet,
+    ),
   };
 }

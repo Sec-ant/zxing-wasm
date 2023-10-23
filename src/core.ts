@@ -3,22 +3,21 @@ import {
   DecodeHints,
   decodeHintsToZXingDecodeHints,
   defaultDecodeHints,
-} from "./bindings/decodeHints.js";
-import {
   ZXingEncodeHints,
   EncodeHints,
   defaultEncodeHints,
   encodeHintsToZXingEncodeHints,
-} from "./bindings/encodeHints.js";
-import {
   ZXingReadResult,
   ReadResult,
   zxingReadResultToReadResult,
-} from "./bindings/readResult.js";
-import {
   ZXingWriteResult,
   zxingWriteResultToWriteResult,
-} from "./bindings/writeResult.js";
+  ZXingBinarizer,
+  ZXingCharacterSet,
+  ZXingContentType,
+  ZXingEanAddOnSymbol,
+  ZXingTextMode,
+} from "./bindings/index.js";
 
 export interface ZXingVector<T> {
   size: () => number;
@@ -27,7 +26,16 @@ export interface ZXingVector<T> {
 
 export type ZXingModuleType = "reader" | "writer" | "full";
 
-export interface ZXingReaderModule extends EmscriptenModule {
+export interface ZXingBaseModule extends EmscriptenModule {
+  CharacterSet: ZXingCharacterSet;
+}
+
+export interface ZXingReaderModule extends ZXingBaseModule {
+  Binarizer: ZXingBinarizer;
+  ContentType: ZXingContentType;
+  EanAddOnSymbol: ZXingEanAddOnSymbol;
+  TextMode: ZXingTextMode;
+
   readBarcodesFromImage(
     bufferPtr: number,
     bufferLength: number,
@@ -42,7 +50,7 @@ export interface ZXingReaderModule extends EmscriptenModule {
   ): ZXingVector<ZXingReadResult>;
 }
 
-export interface ZXingWriterModule extends EmscriptenModule {
+export interface ZXingWriterModule extends ZXingBaseModule {
   writeBarcodeToImage(
     text: string,
     zxingEncodeHints: ZXingEncodeHints,
@@ -159,9 +167,10 @@ export async function readBarcodesFromImageFileWithFactory<
   const zxingReadResultVector = zxingModule.readBarcodesFromImage(
     bufferPtr,
     size,
-    decodeHintsToZXingDecodeHints(requiredDecodeHints),
+    decodeHintsToZXingDecodeHints(zxingModule, requiredDecodeHints),
   );
   zxingModule._free(bufferPtr);
+  console.log(zxingReadResultVector);
   const readResults: ReadResult[] = [];
   for (let i = 0; i < zxingReadResultVector.size(); ++i) {
     readResults.push(
@@ -195,7 +204,7 @@ export async function readBarcodesFromImageDataWithFactory<
     bufferPtr,
     width,
     height,
-    decodeHintsToZXingDecodeHints(requiredDecodeHints),
+    decodeHintsToZXingDecodeHints(zxingModule, requiredDecodeHints),
   );
   zxingModule._free(bufferPtr);
   const readResults: ReadResult[] = [];
@@ -221,7 +230,7 @@ export async function writeBarcodeToImageFileWithFactory<
   const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
   const zxingWriteResult = zxingModule.writeBarcodeToImage(
     text,
-    encodeHintsToZXingEncodeHints(requiredEncodeHints),
+    encodeHintsToZXingEncodeHints(zxingModule, requiredEncodeHints),
   );
   return zxingWriteResultToWriteResult(zxingWriteResult);
 }

@@ -1,9 +1,5 @@
-export enum ZXingBinarizer {
-  LocalAverage,
-  GlobalHistogram,
-  FixedThreshold,
-  BoolCast,
-}
+import { ZXingModule } from "../core.js";
+import { ZXingEnum } from "./enum.js";
 
 const binarizers = [
   "LocalAverage",
@@ -14,14 +10,15 @@ const binarizers = [
 
 export type Binarizer = (typeof binarizers)[number];
 
-export function binarizerToZXingBinarizer(
+export type ZXingBinarizer = Record<Binarizer, ZXingEnum>;
+
+export function binarizerToZXingEnum<T extends "reader" | "full">(
+  zxingModule: ZXingModule<T>,
   binarizer: Binarizer,
-): ZXingBinarizer {
-  return ZXingBinarizer[binarizer];
+): ZXingEnum {
+  return zxingModule.Binarizer[binarizer];
 }
 
-export function zxingBinarizerToBinarizer(
-  zxingBinarizer: ZXingBinarizer,
-): Binarizer {
-  return binarizers[zxingBinarizer];
+export function zxingEnumToBinarizer(zxingEnum: ZXingEnum): Binarizer {
+  return binarizers[zxingEnum.value];
 }

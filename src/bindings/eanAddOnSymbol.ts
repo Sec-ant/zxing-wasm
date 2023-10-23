@@ -1,21 +1,21 @@
-export enum ZXingEanAddOnSymbol {
-  Ignore,
-  Read,
-  Require,
-}
+import { ZXingModule } from "../core.js";
+import { ZXingEnum } from "./enum.js";
 
 const eanAddOnSymbols = ["Ignore", "Read", "Require"] as const;
 
 export type EanAddOnSymbol = (typeof eanAddOnSymbols)[number];
 
-export function eanAddOnSymbolToZXingEanAddOnSymbol(
+export type ZXingEanAddOnSymbol = Record<EanAddOnSymbol, ZXingEnum>;
+
+export function eanAddOnSymbolToZXingEnum<T extends "reader" | "full">(
+  zxingModule: ZXingModule<T>,
   eanAddOnSymbol: EanAddOnSymbol,
-): ZXingEanAddOnSymbol {
-  return ZXingEanAddOnSymbol[eanAddOnSymbol];
+): ZXingEnum {
+  return zxingModule.EanAddOnSymbol[eanAddOnSymbol];
 }
 
-export function zxingEanAddOnSymbolToEanAddOnSymbol(
-  zxingEanAddOnSymbol: ZXingEanAddOnSymbol,
+export function zxingEnumToEanAddOnSymbol(
+  zxingEnum: ZXingEnum,
 ): EanAddOnSymbol {
-  return eanAddOnSymbols[zxingEanAddOnSymbol];
+  return eanAddOnSymbols[zxingEnum.value];
 }

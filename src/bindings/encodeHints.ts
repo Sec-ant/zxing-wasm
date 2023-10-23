@@ -1,16 +1,14 @@
+import { ZXingModule } from "../core.js";
 import { WriteInputBarcodeFormat } from "./barcodeFormat.js";
-import {
-  ZXingCharacterSet,
-  CharacterSet,
-  characterSetToZXingCharacterSet,
-} from "./characterSet.js";
+import { CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
 import { WriteInputEccLevel } from "./eccLevel.js";
+import { ZXingEnum } from "./enum.js";
 
 export interface ZXingEncodeHints {
   width: number;
   height: number;
   format: string;
-  characterSet: ZXingCharacterSet;
+  characterSet: ZXingEnum;
   eccLevel: number;
   margin: number;
 }
@@ -33,11 +31,15 @@ export const defaultEncodeHints: Required<EncodeHints> = {
   margin: 10,
 };
 
-export function encodeHintsToZXingEncodeHints(
+export function encodeHintsToZXingEncodeHints<T extends "writer" | "full">(
+  zxingModule: ZXingModule<T>,
   encodeHints: Required<EncodeHints>,
 ): ZXingEncodeHints {
   return {
     ...encodeHints,
-    characterSet: characterSetToZXingCharacterSet(encodeHints.characterSet),
+    characterSet: characterSetToZXingEnum(
+      zxingModule,
+      encodeHints.characterSet,
+    ),
   };
 }
