@@ -6,6 +6,8 @@ export * from "./decodeHints.js";
 export * from "./eanAddOnSymbol.js";
 export * from "./eccLevel.js";
 export * from "./encodeHints.js";
+export * from "./enum.js";
+export * from "./position.js";
 export * from "./readResult.js";
 export * from "./textMode.js";
 export * from "./writeResult.js";

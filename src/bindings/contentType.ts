@@ -1,7 +1,7 @@
 import { ZXingModule } from "../core.js";
 import { ZXingEnum } from "./enum.js";
 
-const contentTypes = [
+export const contentTypes = [
   "Text",
   "Binary",
   "Mixed",

@@ -1,7 +1,7 @@
 import { ZXingModule } from "../core.js";
 import { ZXingEnum } from "./enum.js";
 
-const textModes = ["Plain", "ECI", "HRI", "Hex", "Escaped"] as const;
+export const textModes = ["Plain", "ECI", "HRI", "Hex", "Escaped"] as const;
 
 export type TextMode = (typeof textModes)[number];
 

@@ -1,7 +1,7 @@
 import { ZXingModule } from "../core.js";
 import { ZXingEnum } from "./enum.js";
 
-const eanAddOnSymbols = ["Ignore", "Read", "Require"] as const;
+export const eanAddOnSymbols = ["Ignore", "Read", "Require"] as const;
 
 export type EanAddOnSymbol = (typeof eanAddOnSymbols)[number];
 

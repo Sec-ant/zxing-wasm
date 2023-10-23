@@ -3,9 +3,12 @@ import {
   writeBarcodeToImageFile,
 } from "./src/full/index";
 
-const text = "Hello World!+++";
+// import { readBarcodesFromImageFile } from "./src/reader/index";
+
+// import { writeBarcodeToImageFile } from "./src/writer/index";
+
+const text = "Hello World!";
 const barcodeImage = (await writeBarcodeToImageFile(text)).image;
-console.log(barcodeImage);
 if (barcodeImage) {
   const readResults = await readBarcodesFromImageFile(barcodeImage, {
     formats: ["QRCode"],

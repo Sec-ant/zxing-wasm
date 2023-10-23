@@ -1,7 +1,7 @@
 import { ZXingModule } from "../core.js";
 import { ZXingEnum } from "./enum.js";
 
-const binarizers = [
+export const binarizers = [
   "LocalAverage",
   "GlobalHistogram",
   "FixedThreshold",

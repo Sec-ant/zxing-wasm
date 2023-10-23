@@ -77,8 +77,9 @@ export type ZXingModuleOverrides<T extends ZXingModuleType = ZXingModuleType> =
 const defaultZXingModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
   ? {
       locateFile: (path, prefix) => {
-        if (/\.wasm$/.test(path)) {
-          return `https://fastly.jsdelivr.net/npm/@sec-ant/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/wasm/${path}`;
+        const match = path.match(/_(.+?)\.wasm$/);
+        if (match) {
+          return `https://fastly.jsdelivr.net/npm/@sec-ant/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${match[1]}/${path}`;
         }
         return prefix + path;
       },
@@ -125,7 +126,7 @@ export function getZXingModuleWithFactory<
     zxingWeakMapValue?.moduleOverrides ??
     (defaultZXingModuleOverrides as ZXingModuleOverrides<T>);
 
-  const modulePromise = zxingModuleFactory(resolvedModuleOverrides);
+  const modulePromise = zxingModuleFactory({ ...resolvedModuleOverrides });
   zxingWeakMap.set(zxingModuleFactory, {
     moduleOverrides: resolvedModuleOverrides,
     modulePromise,
@@ -170,7 +171,6 @@ export async function readBarcodesFromImageFileWithFactory<
     decodeHintsToZXingDecodeHints(zxingModule, requiredDecodeHints),
   );
   zxingModule._free(bufferPtr);
-  console.log(zxingReadResultVector);
   const readResults: ReadResult[] = [];
   for (let i = 0; i < zxingReadResultVector.size(); ++i) {
     readResults.push(

@@ -26,8 +26,16 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: "./src/*/*.wasm",
-          dest: "./wasm",
+          src: "./src/reader/*.wasm",
+          dest: "./reader",
+        },
+        {
+          src: "./src/writer/*.wasm",
+          dest: "./writer",
+        },
+        {
+          src: "./src/full/*.wasm",
+          dest: "./full",
         },
       ],
     }),

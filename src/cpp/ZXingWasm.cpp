@@ -106,7 +106,8 @@ JsResults readBarcodes(
 
     thread_local const val Uint8Array = val::global("Uint8Array");
 
-    JsResults jsResults(results.size());
+    JsResults jsResults;
+    jsResults.reserve(results.size());
 
     for (auto &result : results) {
       const ZXing::ByteArray &bytes = result.bytes();

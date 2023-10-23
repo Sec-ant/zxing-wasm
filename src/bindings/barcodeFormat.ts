@@ -1,4 +1,4 @@
-const barcodeFormats = [
+export const barcodeFormats = [
   "Aztec",
   "Codabar",
   "Code128",

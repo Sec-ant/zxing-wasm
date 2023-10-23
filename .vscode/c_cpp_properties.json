@@ -3,7 +3,7 @@
     {
       "name": "Linux",
       "includePath": ["${workspaceFolder}/**"],
-      "defines": [],
+      "defines": ["READER", "WRITER"],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "c17",
       "cppStandard": "gnu++20",

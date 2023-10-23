@@ -16,6 +16,7 @@
   "plugins": ["@typescript-eslint"],
   "ignorePatterns": [
     "node_modules",
+    "docs",
     "dist",
     "build",
     "zxing-cpp",

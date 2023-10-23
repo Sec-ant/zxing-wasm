@@ -1,7 +1,7 @@
 import { ZXingModule, ZXingModuleType } from "../core.js";
 import { ZXingEnum } from "./enum.js";
 
-const characterSets = [
+export const characterSets = [
   "Unknown",
   "ASCII",
   "ISO8859_1",
