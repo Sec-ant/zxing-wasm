@@ -16,6 +16,7 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+!.vscode/c_cpp_properties.json
 .idea
 .DS_Store
 *.suo
@@ -24,8 +25,8 @@ dist-ssr
 *.sln
 *.sw?
 
-zxing_reader.js
-zxing_writer.js
-zxing_full.js
-*.wasm
+docs
+build
 coverage
+src/**/zxing_*.wasm
+src/**/zxing_*.js

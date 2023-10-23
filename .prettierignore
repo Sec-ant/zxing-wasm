@@ -1,0 +1,5 @@
+zxing-cpp
+docs
+dist
+build
+src/**/zxing_*.js

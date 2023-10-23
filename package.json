@@ -1,8 +1,8 @@
 {
-  "name": "@sec-ant/zxing-wasm",
-  "description": "An ES module wrapper of zxing-wasm-build",
+  "name": "zxing-wasm",
+  "description": "ZXing-C++ WebAssembly as an ES module with types",
   "private": false,
-  "version": "2.2.0",
+  "version": "1.0.0-rc.0",
   "type": "module",
   "files": [
     "./dist"
@@ -37,15 +37,15 @@
     "name": "Ze-Zheng Wu"
   },
   "license": "MIT",
-  "config": {
-    "zxing_wasm_repo_url": "https://github.com/Sec-ant/zxing-wasm-build",
-    "zxing_wasm_path": "releases/latest/download",
-    "zxing_wasm_full_name": "zxing_full",
-    "zxing_wasm_reader_name": "zxing_reader",
-    "zxing_wasm_writer_name": "zxing_writer"
-  },
+  "config": {},
   "scripts": {
-    "fetch": "cross-env ZXING_WASM_REPO_URL=$npm_package_config_zxing_wasm_repo_url ZXING_WASM_PATH=$npm_package_config_zxing_wasm_path ZXING_WASM_FULL_NAME=$npm_package_config_zxing_wasm_full_name ZXING_WASM_READER_NAME=$npm_package_config_zxing_wasm_reader_name ZXING_WASM_WRITER_NAME=$npm_package_config_zxing_wasm_writer_name bash fetch-artifacts.sh",
+    "submodule:init": "git submodule update --init",
+    "submodule:update": "git submodule update --remote",
+    "cmake": "emcmake cmake -S src/cpp -B build",
+    "build:wasm": "cmake --build build -j$(($(nproc) - 1))",
+    "docs:dev": "conc \"npm:docs:preview\" \"typedoc --watch\"",
+    "docs:build": "typedoc",
+    "docs:preview": "vite preview --outDir ./docs",
     "dev": "vite",
     "lint": "eslint . --ext .ts",
     "type-check": "tsc --noEmit --emitDeclarationOnly false",
@@ -66,19 +66,18 @@
     "@vitest/browser": "^0.34.6",
     "@vitest/coverage-istanbul": "^0.34.6",
     "@vitest/ui": "^0.34.6",
-    "cross-env": "^7.0.3",
+    "concurrently": "^8.2.2",
     "eslint": "^8.52.0",
     "npm-check-updates": "^16.14.6",
     "playwright": "^1.39.0",
     "prettier": "^3.0.3",
-    "replace-in-file": "^7.0.1",
+    "typedoc": "^0.25.2",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
     "vite-plugin-static-copy": "^0.17.0",
     "vitest": "^0.34.6"
   },
   "dependencies": {
-    "@types/emscripten": "^1.39.9",
-    "zustand": "^4.4.3"
+    "@types/emscripten": "^1.39.9"
   }
 }

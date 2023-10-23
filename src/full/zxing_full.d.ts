@@ -1,3 +1,2 @@
-import { ZXingModuleFactory } from "../core.js";
-declare const ZXing: ZXingModuleFactory<"reader" | "writer">;
+declare const ZXing: ZXingModuleFactory<"full">;
 export default ZXing;
