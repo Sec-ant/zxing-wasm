@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import { version } from "./package-lock.json";
 
 export default defineConfig({
   build: {
@@ -35,7 +36,7 @@ export default defineConfig({
     }),
   ],
   define: {
-    NPM_PACKAGE_VERSION: JSON.stringify(process.env.npm_package_version),
+    NPM_PACKAGE_VERSION: JSON.stringify(version),
   },
   test: {
     passWithNoTests: true,

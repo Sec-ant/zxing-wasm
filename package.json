@@ -37,15 +37,10 @@
     "name": "Ze-Zheng Wu"
   },
   "license": "MIT",
-  "config": {
-    "zxing_wasm_repo_url": "https://github.com/Sec-ant/zxing-wasm-build",
-    "zxing_wasm_path": "releases/latest/download",
-    "zxing_wasm_full_name": "zxing_full",
-    "zxing_wasm_reader_name": "zxing_reader",
-    "zxing_wasm_writer_name": "zxing_writer"
-  },
+  "config": {},
   "scripts": {
-    "fetch": "cross-env ZXING_WASM_REPO_URL=$npm_package_config_zxing_wasm_repo_url ZXING_WASM_PATH=$npm_package_config_zxing_wasm_path ZXING_WASM_FULL_NAME=$npm_package_config_zxing_wasm_full_name ZXING_WASM_READER_NAME=$npm_package_config_zxing_wasm_reader_name ZXING_WASM_WRITER_NAME=$npm_package_config_zxing_wasm_writer_name bash fetch-artifacts.sh",
+    "cmake": "emcmake cmake -S src/cpp -B build",
+    "build:wasm": "cmake --build build -j$(($(nproc) - 1))",
     "dev": "vite",
     "lint": "eslint . --ext .ts",
     "type-check": "tsc --noEmit --emitDeclarationOnly false",

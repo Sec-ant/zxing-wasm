@@ -1,4 +1,4 @@
-import zxingModuleFactory from "./zxing_reader.js";
+import zxingModuleFactory from "../wasm/zxing_reader.js";
 import {
   ZXingModuleFactoryTypeExtractor,
   ZXingModuleOverrides,

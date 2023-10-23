@@ -30,9 +30,8 @@ interface ZXingState {
 const defaultZXingModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
   ? {
       locateFile: (path, prefix) => {
-        const subDir = path.match(/_(.+?)\.wasm$/)?.[1];
-        if (subDir) {
-          return `https://fastly.jsdelivr.net/npm/@sec-ant/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${subDir}/${path}`;
+        if (/\.wasm$/.test(path)) {
+          return `https://fastly.jsdelivr.net/npm/@sec-ant/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/wasm/${path}`;
         }
         return prefix + path;
       },
