@@ -24,6 +24,8 @@ endif()
 # Add subdirectories
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../zxing-cpp/core ${CMAKE_BINARY_DIR}/ZXing)
 
+add_definitions("-s DISABLE_EXCEPTION_CATCHING=0")
+
 # Set linker flags
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -lembind \
