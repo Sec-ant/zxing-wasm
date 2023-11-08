@@ -10,6 +10,7 @@ export type {
 export {
   //
   barcodeFormats,
+  type BarcodeFormat,
   type ReadInputBarcodeFormat,
   type WriteInputBarcodeFormat,
   type ReadOutputBarcodeFormat,
