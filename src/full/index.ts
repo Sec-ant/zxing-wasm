@@ -59,8 +59,8 @@ export async function writeBarcodeToImageFile(
   );
 }
 
-export * from "../readerExposedBindings.js";
-export * from "../writerExposedBindings.js";
+export * from "../bindings/exposedReaderBindings.js";
+export * from "../bindings/exposedWriterBindings.js";
 export {
   purgeZXingModule,
   type ZXingFullModule,

@@ -30,4 +30,4 @@ export {
   type ZXingTextMode,
   type TextMode,
   type ZXingVector,
-} from "./bindings/index.js";
+} from "./index.js";

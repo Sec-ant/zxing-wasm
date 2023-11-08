@@ -12,4 +12,4 @@ export {
   type ZXingEnum,
   type ZXingWriteResult,
   type WriteResult,
-} from "./bindings/index.js";
+} from "./index.js";
