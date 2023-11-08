@@ -10,4 +10,5 @@ export * from "./enum.js";
 export * from "./position.js";
 export * from "./readResult.js";
 export * from "./textMode.js";
+export * from "./vector.js";
 export * from "./writeResult.js";

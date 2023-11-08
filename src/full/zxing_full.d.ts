@@ -1,2 +1,4 @@
-declare const ZXing: ZXingModuleFactory<"full">;
+import type { ZXingFullModuleFactory } from "../core.ts";
+
+declare const ZXing: ZXingFullModuleFactory;
 export default ZXing;

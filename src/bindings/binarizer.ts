@@ -10,6 +10,9 @@ export const binarizers = [
 
 export type Binarizer = (typeof binarizers)[number];
 
+/**
+ * @internal
+ */
 export type ZXingBinarizer = Record<Binarizer, ZXingEnum>;
 
 export function binarizerToZXingEnum<T extends "reader" | "full">(

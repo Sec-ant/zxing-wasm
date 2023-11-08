@@ -6,6 +6,9 @@ import { EanAddOnSymbol, eanAddOnSymbolToZXingEnum } from "./eanAddOnSymbol.js";
 import { TextMode, textModeToZXingEnum } from "./textMode.js";
 import { ZXingEnum } from "./enum.js";
 
+/**
+ * @internal
+ */
 export interface ZXingDecodeHints {
   formats: string;
   /**

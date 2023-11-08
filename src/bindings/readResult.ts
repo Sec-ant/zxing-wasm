@@ -4,6 +4,9 @@ import { ContentType, zxingEnumToContentType } from "./contentType.js";
 import { ZXingPosition, Position } from "./position.js";
 import { ZXingEnum } from "./enum.js";
 
+/**
+ * @internal
+ */
 export interface ZXingReadResult {
   /**
    * Whether the barcode is valid.

@@ -1,50 +1,33 @@
-export { purgeZXingModule } from "./core.js";
-export type {
-  ZXingVector,
-  ZXingModuleType,
-  ZXingModule,
-  ZXingModuleFactory,
-  ZXingModuleOverrides,
-} from "./core.js";
-
 export {
-  //
   barcodeFormats,
   type BarcodeFormat,
   type ReadInputBarcodeFormat,
-  type WriteInputBarcodeFormat,
   type ReadOutputBarcodeFormat,
-  //
   binarizers,
+  type ZXingBinarizer,
   type Binarizer,
-  //
   characterSets,
+  type ZXingCharacterSet,
   type CharacterSet,
-  //
   contentTypes,
+  type ZXingContentType,
   type ContentType,
-  //
-  defaultDecodeHints,
+  type ZXingDecodeHints,
   type DecodeHints,
-  //
   eanAddOnSymbols,
+  type ZXingEanAddOnSymbol,
   type EanAddOnSymbol,
-  //
-  writeInputEccLevels,
-  type WriteInputEccLevel,
   readOutputEccLevels,
   type ReadOutputEccLevel,
-  //
-  defaultEncodeHints,
-  type EncodeHints,
-  //
+  type ZXingEnum,
+  type ZXingPoint,
+  type ZXingPosition,
   type Point,
   type Position,
-  //
+  type ZXingReadResult,
   type ReadResult,
-  //
   textModes,
+  type ZXingTextMode,
   type TextMode,
-  //
-  type WriteResult,
+  type ZXingVector,
 } from "./bindings/index.js";

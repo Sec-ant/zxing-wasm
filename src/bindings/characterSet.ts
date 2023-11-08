@@ -40,6 +40,9 @@ export const characterSets = [
 
 export type CharacterSet = (typeof characterSets)[number];
 
+/**
+ * @internal
+ */
 export type ZXingCharacterSet = Record<CharacterSet, ZXingEnum>;
 
 export function characterSetToZXingEnum<T extends ZXingModuleType>(
