@@ -109,6 +109,9 @@ export interface ZXingDecodeHints {
   characterSet: ZXingEnum;
 }
 
+/**
+ * Decode hints for reading barcodes.
+ */
 export interface DecodeHints
   extends Partial<
     Omit<
@@ -120,7 +123,7 @@ export interface DecodeHints
    * A set of {@link ReadInputBarcodeFormat | `ReadInputBarcodeFormat`}s that should be searched for.
    * An empty list `[]` indicates all supported formats.
    *
-   * Available values in this list are:
+   * Supported values in this list are:
    * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
    * `"DataBar"`, `"DataBarExpanded"`, `"DataMatrix"`,
    * `"EAN-13"`, `"EAN-8"`, `"ITF"`, `"Linear-Codes"`, `"Matrix-Codes"`,

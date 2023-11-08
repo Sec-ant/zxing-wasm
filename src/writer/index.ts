@@ -1,3 +1,10 @@
+/**
+ * The writer part API of this package is subject to change a lot.
+ * Please track the status of [this issue](https://github.com/zxing-cpp/zxing-cpp/issues/332).
+ *
+ * @packageDocumentation
+ */
+
 import zxingModuleFactory from "./zxing_writer.js";
 import {
   getZXingModuleWithFactory,
@@ -35,7 +42,7 @@ export async function writeBarcodeToImageFile(
   );
 }
 
-export * from "../writerExposedBindings.js";
+export * from "../bindings/exposedWriterBindings.js";
 export {
   purgeZXingModule,
   type ZXingWriterModule,
