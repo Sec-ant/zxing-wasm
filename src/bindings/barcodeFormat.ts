@@ -23,8 +23,14 @@ export const barcodeFormats = [
 
 export type BarcodeFormat = (typeof barcodeFormats)[number];
 
+/**
+ * Barcode formats that can be used in {@link DecodeHints.formats | `DecodeHints.formats`} to read barcodes.
+ */
 export type ReadInputBarcodeFormat = Exclude<BarcodeFormat, "None">;
 
+/**
+ * Barcode formats that can be used in {@link EncodeHints.format | `DecodeHints.format`} to write barcodes.
+ */
 export type WriteInputBarcodeFormat = Exclude<
   BarcodeFormat,
   | "DataBar"
@@ -36,6 +42,9 @@ export type WriteInputBarcodeFormat = Exclude<
   | "Matrix-Codes"
 >;
 
+/**
+ * Barcode formats that may be returned in {@link ReadResult.format} in read functions.
+ */
 export type ReadOutputBarcodeFormat = Exclude<
   BarcodeFormat,
   "Linear-Codes" | "Matrix-Codes"
