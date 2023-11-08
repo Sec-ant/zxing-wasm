@@ -21,6 +21,9 @@ export const barcodeFormats = [
   "UPC-E",
 ] as const;
 
+/**
+ * @internal
+ */
 export type BarcodeFormat = (typeof barcodeFormats)[number];
 
 /**

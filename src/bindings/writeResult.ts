@@ -1,3 +1,6 @@
+/**
+ * @internal
+ */
 export interface ZXingWriteResult {
   image: Uint8Array;
   error: string;

@@ -5,6 +5,9 @@ export const textModes = ["Plain", "ECI", "HRI", "Hex", "Escaped"] as const;
 
 export type TextMode = (typeof textModes)[number];
 
+/**
+ * @internal
+ */
 export type ZXingTextMode = Record<TextMode, ZXingEnum>;
 
 export function textModeToZXingEnum<T extends "reader" | "full">(

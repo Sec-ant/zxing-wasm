@@ -4,6 +4,9 @@ import { CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
 import { WriteInputEccLevel } from "./eccLevel.js";
 import { ZXingEnum } from "./enum.js";
 
+/**
+ * @internal
+ */
 export interface ZXingEncodeHints {
   width: number;
   height: number;

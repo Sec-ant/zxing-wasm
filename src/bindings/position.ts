@@ -1,8 +1,14 @@
+/**
+ * @internal
+ */
 export interface ZXingPoint {
   x: number;
   y: number;
 }
 
+/**
+ * @internal
+ */
 export interface ZXingPosition {
   topLeft: ZXingPoint;
   topRight: ZXingPoint;

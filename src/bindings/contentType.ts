@@ -12,6 +12,9 @@ export const contentTypes = [
 
 export type ContentType = (typeof contentTypes)[number];
 
+/**
+ * @internal
+ */
 export type ZXingContentType = Record<ContentType, ZXingEnum>;
 
 export function contentTypeToZXingEnum<T extends "reader" | "full">(

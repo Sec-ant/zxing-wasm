@@ -1,35 +1,34 @@
 import {
-  ZXingDecodeHints,
-  DecodeHints,
+  type ZXingDecodeHints,
+  type DecodeHints,
   decodeHintsToZXingDecodeHints,
   defaultDecodeHints,
-  ZXingEncodeHints,
-  EncodeHints,
+  type ZXingEncodeHints,
+  type EncodeHints,
   defaultEncodeHints,
   encodeHintsToZXingEncodeHints,
-  ZXingReadResult,
-  ReadResult,
+  type ZXingReadResult,
+  type ReadResult,
   zxingReadResultToReadResult,
-  ZXingWriteResult,
+  type ZXingWriteResult,
   zxingWriteResultToWriteResult,
-  ZXingBinarizer,
-  ZXingCharacterSet,
-  ZXingContentType,
-  ZXingEanAddOnSymbol,
-  ZXingTextMode,
+  type ZXingBinarizer,
+  type ZXingCharacterSet,
+  type ZXingContentType,
+  type ZXingEanAddOnSymbol,
+  type ZXingTextMode,
+  type ZXingVector,
 } from "./bindings/index.js";
-
-export interface ZXingVector<T> {
-  size: () => number;
-  get: (i: number) => T | undefined;
-}
 
 export type ZXingModuleType = "reader" | "writer" | "full";
 
-export interface ZXingBaseModule extends EmscriptenModule {
+interface ZXingBaseModule extends EmscriptenModule {
   CharacterSet: ZXingCharacterSet;
 }
 
+/**
+ * @internal
+ */
 export interface ZXingReaderModule extends ZXingBaseModule {
   Binarizer: ZXingBinarizer;
   ContentType: ZXingContentType;
@@ -50,6 +49,9 @@ export interface ZXingReaderModule extends ZXingBaseModule {
   ): ZXingVector<ZXingReadResult>;
 }
 
+/**
+ * @internal
+ */
 export interface ZXingWriterModule extends ZXingBaseModule {
   writeBarcodeToImage(
     text: string,
@@ -57,6 +59,9 @@ export interface ZXingWriterModule extends ZXingBaseModule {
   ): ZXingWriteResult;
 }
 
+/**
+ * @internal
+ */
 export interface ZXingFullModule extends ZXingReaderModule, ZXingWriterModule {}
 
 export type ZXingModule<T extends ZXingModuleType = ZXingModuleType> =
@@ -68,13 +73,27 @@ export type ZXingModule<T extends ZXingModuleType = ZXingModuleType> =
     ? ZXingFullModule
     : ZXingReaderModule | ZXingWriterModule | ZXingFullModule;
 
+export type ZXingReaderModuleFactory =
+  EmscriptenModuleFactory<ZXingReaderModule>;
+export type ZXingWriterModuleFactory =
+  EmscriptenModuleFactory<ZXingWriterModule>;
+export type ZXingFullModuleFactory = EmscriptenModuleFactory<ZXingFullModule>;
+
 export type ZXingModuleFactory<T extends ZXingModuleType = ZXingModuleType> =
-  EmscriptenModuleFactory<ZXingModule<T>>;
+  T extends "reader"
+    ? ZXingReaderModuleFactory
+    : T extends "writer"
+    ? ZXingWriterModuleFactory
+    : T extends "full"
+    ? ZXingFullModuleFactory
+    :
+        | ZXingReaderModuleFactory
+        | ZXingWriterModuleFactory
+        | ZXingFullModuleFactory;
 
-export type ZXingModuleOverrides<T extends ZXingModuleType = ZXingModuleType> =
-  Partial<ZXingModule<T>>;
+export type ZXingModuleOverrides = Partial<EmscriptenModule>;
 
-const defaultZXingModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
+const defaultModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
   ? {
       locateFile: (path, prefix) => {
         const match = path.match(/_(.+?)\.wasm$/);
@@ -95,7 +114,7 @@ const defaultZXingModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
     };
 
 interface ZXingWeakMapValue<T extends ZXingModuleType = ZXingModuleType> {
-  moduleOverrides: ZXingModuleOverrides<T>;
+  moduleOverrides: ZXingModuleOverrides;
   modulePromise?: Promise<ZXingModule<T>>;
 }
 
@@ -105,7 +124,7 @@ let zxingWeakMap: ZXingWeakMap = new WeakMap();
 
 export function getZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides?: ZXingModuleOverrides<T>,
+  zxingModuleOverrides?: ZXingModuleOverrides,
 ): Promise<ZXingModule<T>> {
   const zxingWeakMapValue = zxingWeakMap.get(zxingModuleFactory) as
     | ZXingWeakMapValue<T>
@@ -122,13 +141,17 @@ export function getZXingModuleWithFactory<T extends ZXingModuleType>(
   const resolvedModuleOverrides =
     zxingModuleOverrides ??
     zxingWeakMapValue?.moduleOverrides ??
-    (defaultZXingModuleOverrides as ZXingModuleOverrides<T>);
+    defaultModuleOverrides;
 
-  const modulePromise = zxingModuleFactory({ ...resolvedModuleOverrides });
+  const modulePromise = zxingModuleFactory({
+    ...resolvedModuleOverrides,
+  }) as Promise<ZXingModule<T>>;
+
   zxingWeakMap.set(zxingModuleFactory, {
     moduleOverrides: resolvedModuleOverrides,
     modulePromise,
   });
+
   return modulePromise;
 }
 
@@ -138,7 +161,7 @@ export function purgeZXingModule() {
 
 export function setZXingModuleOverridesWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides: ZXingModuleOverrides<T>,
+  zxingModuleOverrides: ZXingModuleOverrides,
 ) {
   zxingWeakMap.set(zxingModuleFactory, {
     moduleOverrides: zxingModuleOverrides,

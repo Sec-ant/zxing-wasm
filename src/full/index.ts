@@ -1,27 +1,24 @@
 import zxingModuleFactory from "./zxing_full.js";
 import {
-  type ZXingModuleOverrides,
-  type ZXingModule,
   getZXingModuleWithFactory,
   setZXingModuleOverridesWithFactory,
   readBarcodesFromImageDataWithFactory,
   readBarcodesFromImageFileWithFactory,
   writeBarcodeToImageFileWithFactory,
+  type ZXingFullModule,
+  type ZXingModuleOverrides,
 } from "../core.js";
-import type { DecodeHints } from "../bindings/decodeHints.js";
-import type { EncodeHints } from "../bindings/encodeHints.js";
+import type { DecodeHints, EncodeHints } from "../bindings/index.js";
 
-export function getZXingModule(
-  zxingModuleOverrides?: ZXingModuleOverrides<"full">,
-) {
+export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
   return getZXingModuleWithFactory(
     zxingModuleFactory,
     zxingModuleOverrides,
-  ) as Promise<ZXingModule<"full">>;
+  ) as Promise<ZXingFullModule>;
 }
 
 export function setZXingModuleOverrides(
-  zxingModuleOverrides: ZXingModuleOverrides<"full">,
+  zxingModuleOverrides: ZXingModuleOverrides,
 ) {
   return setZXingModuleOverridesWithFactory(
     zxingModuleFactory,
@@ -62,4 +59,10 @@ export async function writeBarcodeToImageFile(
   );
 }
 
-export * from "../exposed.js";
+export * from "../readerExposedBindings.js";
+export * from "../writerExposedBindings.js";
+export {
+  purgeZXingModule,
+  type ZXingFullModule,
+  type ZXingModuleOverrides,
+} from "../core.js";
