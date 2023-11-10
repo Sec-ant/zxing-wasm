@@ -174,7 +174,7 @@ import { setZXingModuleOverrides, writeBarcodeToImageFile } from "zxing-wasm";
 setZXingModuleOverrides({
   locateFile: (path, prefix) => {
     if (path.endsWith(".wasm")) {
-      return `https://esm.sh/zxing-wasm/dist/full/${path}`;
+      return `https://unpkg.com/zxing-wasm@1/dist/full/${path}`;
     }
     return prefix + path;
   },
@@ -208,7 +208,7 @@ import { getZXingModule } from "zxing-wasm";
 getZXingModule({
   locateFile: (path, prefix) => {
     if (path.endsWith(".wasm")) {
-      return `https://esm.sh/zxing-wasm/dist/full/${path}`;
+      return `https://unpkg.com/zxing-wasm@1/dist/full/${path}`;
     }
     return prefix + path;
   },
