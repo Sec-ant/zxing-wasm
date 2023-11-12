@@ -48,7 +48,7 @@ export interface ZXingDecodeHints {
    * **WARNING**: this API is experimental and may change / disappear
    *
    * @experimental
-   * @defaultValue `3`
+   * @defaultValue `500`
    * @see {@link tryDownscale | `tryDownscale`} {@link downscaleFactor | `downscaleFactor`}
    */
   downscaleThreshold: number;
@@ -57,7 +57,7 @@ export interface ZXingDecodeHints {
    * **WARNING**: this API is experimental and may change / disappear
    *
    * @experimental
-   * @defaultValue `500`
+   * @defaultValue `3`
    * @see {@link tryDownscale | `tryDownscale`} {@link downscaleThreshold | `downscaleThreshold`}
    */
   downscaleFactor: number;
