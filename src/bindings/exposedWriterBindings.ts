@@ -1,3 +1,6 @@
+import { defaultEncodeHints as eh } from "./index.js";
+export const defaultEncodeHints = structuredClone(eh);
+
 export {
   barcodeFormats,
   type BarcodeFormat,

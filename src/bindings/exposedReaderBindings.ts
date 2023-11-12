@@ -1,3 +1,6 @@
+import { defaultDecodeHints as dh } from "./index.js";
+export const defaultDecodeHints = structuredClone(dh);
+
 export {
   barcodeFormats,
   type BarcodeFormat,
