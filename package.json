@@ -12,8 +12,11 @@
   "exports": {
     ".": "./dist/full/index.js",
     "./reader": "./dist/reader/index.js",
+    "./reader/zxing_reader.wasm": "./dist/reader/zxing_reader.wasm",
     "./writer": "./dist/writer/index.js",
-    "./full": "./dist/full/index.js"
+    "./writer/zxing_writer.wasm": "./dist/writer/zxing_writer.wasm",
+    "./full": "./dist/full/index.js",
+    "./full/zxing_full.wasm": "./dist/full/zxing_full.wasm"
   },
   "repository": {
     "type": "git",
