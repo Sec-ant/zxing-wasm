@@ -68,10 +68,10 @@ export type ZXingModule<T extends ZXingModuleType = ZXingModuleType> =
   T extends "reader"
     ? ZXingReaderModule
     : T extends "writer"
-    ? ZXingWriterModule
-    : T extends "full"
-    ? ZXingFullModule
-    : ZXingReaderModule | ZXingWriterModule | ZXingFullModule;
+      ? ZXingWriterModule
+      : T extends "full"
+        ? ZXingFullModule
+        : ZXingReaderModule | ZXingWriterModule | ZXingFullModule;
 
 export type ZXingReaderModuleFactory =
   EmscriptenModuleFactory<ZXingReaderModule>;
@@ -83,13 +83,13 @@ export type ZXingModuleFactory<T extends ZXingModuleType = ZXingModuleType> =
   T extends "reader"
     ? ZXingReaderModuleFactory
     : T extends "writer"
-    ? ZXingWriterModuleFactory
-    : T extends "full"
-    ? ZXingFullModuleFactory
-    :
-        | ZXingReaderModuleFactory
-        | ZXingWriterModuleFactory
-        | ZXingFullModuleFactory;
+      ? ZXingWriterModuleFactory
+      : T extends "full"
+        ? ZXingFullModuleFactory
+        :
+            | ZXingReaderModuleFactory
+            | ZXingWriterModuleFactory
+            | ZXingFullModuleFactory;
 
 export type ZXingModuleOverrides = Partial<EmscriptenModule>;
 
