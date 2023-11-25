@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits (npm scoped)](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![Netlify Status](https://api.netlify.com/api/v1/badges/743dfd74-1572-49fb-a758-c1840e174366/deploy-status?branch=main)](https://app.netlify.com/sites/zxing-wasm/deploys)
 
-[ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES module with types. Read or write barcodes in your browser!
+[ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES/CJS module with types. Read or write barcodes in your browser (or other JS runtimes like node)!
 
 Visit [this online demo](https://zxing-wasm-demo.netlify.app/) to quickly explore its basic functions. It works best on the latest chromium browsers.
 
