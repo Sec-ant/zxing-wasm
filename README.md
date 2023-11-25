@@ -4,6 +4,8 @@
 
 [ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES module with types. Read or write barcodes in your browser!
 
+Visit [this online demo](https://zxing-wasm-demo.netlify.app/) to quickly explore its basic functions. It works best on the latest chromium browsers.
+
 ## Build
 
 ```bash
@@ -28,6 +30,12 @@ npm i zxing-wasm
 ## Documentation
 
 https://zxing-wasm.netlify.app/
+
+## Demo
+
+Demo page: https://zxing-wasm-demo.netlify.app/
+
+Demo source: https://github.com/Sec-ant/zxing-wasm-demo
 
 ## Usage
 

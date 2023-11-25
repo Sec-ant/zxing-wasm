@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import { version } from "./package-lock.json";
@@ -42,17 +41,5 @@ export default defineConfig({
   ],
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(version),
-  },
-  test: {
-    passWithNoTests: true,
-    browser: {
-      enabled: true,
-      headless: true,
-      name: "chromium",
-      provider: "playwright",
-    },
-    coverage: {
-      provider: "istanbul",
-    },
   },
 });
