@@ -11,7 +11,7 @@
     "isolatedModules": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "./dist",
+    "declarationDir": "./dist/es",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,

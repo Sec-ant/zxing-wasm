@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 import { version } from "./package-lock.json";
 
 export default defineConfig({
@@ -12,33 +11,23 @@ export default defineConfig({
         "full/index": "src/full/index.ts",
       },
       formats: ["es"],
-      fileName: (format, entryName) =>
-        format === "es" ? `${entryName}.js` : `${entryName}.${format}.js`,
+      fileName: (_, entryName) => `${entryName}.js`,
     },
+    outDir: "dist/es",
     rollupOptions: {
       output: {
-        chunkFileNames: "chunk-[hash].js",
+        manualChunks: (id) => {
+          if (
+            /core\.ts|exposedReaderBindings\.ts|exposedWriterBindings\.ts/.test(
+              id,
+            )
+          ) {
+            return "core";
+          }
+        },
       },
     },
   },
-  plugins: [
-    viteStaticCopy({
-      targets: [
-        {
-          src: "./src/reader/*.wasm",
-          dest: "./reader",
-        },
-        {
-          src: "./src/writer/*.wasm",
-          dest: "./writer",
-        },
-        {
-          src: "./src/full/*.wasm",
-          dest: "./full",
-        },
-      ],
-    }),
-  ],
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(version),
   },
