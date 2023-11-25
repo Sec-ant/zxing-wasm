@@ -82,6 +82,21 @@ This subpath only includes a function to write barcodes. The wasm binary size is
 import { writeBarcodeToImageFile } from "zxing-wasm/writer";
 ```
 
+### IIFE Scripts
+
+Apart from ES and CJS modules, this package also ships IIFE scripts. The registered global variable is named `ZXingWASM`.
+
+```html
+<!-- full -->
+<script src="https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/iife/full/index.js"></script>
+
+<!-- reader -->
+<script src="https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/iife/reader/index.js"></script>
+
+<!-- writer -->
+<script src="https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/iife/writer/index.js"></script>
+```
+
 ### [`readBarcodesFromImageFile`](https://zxing-wasm.netlify.app/functions/full.readBarcodesFromImageFile.html) and [`readBarcodesFromImageData`](https://zxing-wasm.netlify.app/functions/full.readBarcodesFromImageData.html)
 
 These 2 functions are for reading barcodes.
