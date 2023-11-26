@@ -15,6 +15,11 @@
       "require": "./dist/cjs/full/index.js",
       "default": "./dist/es/full/index.js"
     },
+    "./full": {
+      "import": "./dist/es/full/index.js",
+      "require": "./dist/cjs/full/index.js",
+      "default": "./dist/es/full/index.js"
+    },
     "./reader": {
       "import": "./dist/es/reader/index.js",
       "require": "./dist/cjs/reader/index.js",
