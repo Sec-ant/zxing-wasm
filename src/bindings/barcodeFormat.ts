@@ -17,6 +17,7 @@ export const barcodeFormats = [
   "None",
   "PDF417",
   "QRCode",
+  "rMQRCode",
   "UPC-A",
   "UPC-E",
 ] as const;
@@ -40,6 +41,7 @@ export type WriteInputBarcodeFormat = Exclude<
   | "DataBarExpanded"
   | "MaxiCode"
   | "MicroQRCode"
+  | "rMQRCode"
   | "None"
   | "Linear-Codes"
   | "Matrix-Codes"

@@ -127,7 +127,7 @@ export interface DecodeHints
    * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
    * `"DataBar"`, `"DataBarExpanded"`, `"DataMatrix"`,
    * `"EAN-13"`, `"EAN-8"`, `"ITF"`, `"Linear-Codes"`, `"Matrix-Codes"`,
-   * `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`, `"QRCode"`, `"UPC-A"`, `"UPC-E"`
+   * `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
    *
    * @defaultValue `[]`
    */

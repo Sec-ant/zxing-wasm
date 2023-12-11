@@ -108,7 +108,7 @@ export interface ReadResult
    * `"DataBar"`, `"DataBarExpanded"`, `"DataMatrix"`,
    * `"EAN-13"`, `"EAN-8"`, `"ITF"`,
    * `"MaxiCode"`, `"MicroQRCode"`, `"None"`,
-   * `"PDF417"`, `"QRCode"`, `"UPC-A"`, `"UPC-E"`
+   * `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
    */
   format: ReadOutputBarcodeFormat;
   /**
