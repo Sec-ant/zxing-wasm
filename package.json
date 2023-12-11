@@ -118,10 +118,5 @@
   },
   "dependencies": {
     "@types/emscripten": "^1.39.10"
-  },
-  "overrides": {
-    "typedoc": {
-      "typescript": "$typescript"
-    }
   }
 }
