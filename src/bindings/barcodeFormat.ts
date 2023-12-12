@@ -7,6 +7,7 @@ export const barcodeFormats = [
   "DataBar",
   "DataBarExpanded",
   "DataMatrix",
+  "DXFilmEdge",
   "EAN-13",
   "EAN-8",
   "ITF",
@@ -39,6 +40,7 @@ export type WriteInputBarcodeFormat = Exclude<
   BarcodeFormat,
   | "DataBar"
   | "DataBarExpanded"
+  | "DXFilmEdge"
   | "MaxiCode"
   | "MicroQRCode"
   | "rMQRCode"
