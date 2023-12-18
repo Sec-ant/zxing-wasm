@@ -102,19 +102,19 @@
     "postncu": "npm i"
   },
   "devDependencies": {
-    "@types/node": "^20.10.4",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "concurrently": "^8.2.2",
     "copy-files-from-to": "^3.9.1",
-    "eslint": "^8.55.0",
-    "npm-check-updates": "^16.14.11",
+    "eslint": "^8.56.0",
+    "npm-check-updates": "^16.14.12",
     "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
     "tsx": "^4.6.2",
     "typedoc": "^0.25.4",
     "typescript": "^5.3.3",
-    "vite": "^5.0.7"
+    "vite": "^5.0.10"
   },
   "dependencies": {
     "@types/emscripten": "^1.39.10"
