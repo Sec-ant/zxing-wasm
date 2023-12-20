@@ -29,12 +29,12 @@ export const barcodeFormats = [
 export type BarcodeFormat = (typeof barcodeFormats)[number];
 
 /**
- * Barcode formats that can be used in {@link DecodeHints.formats | `DecodeHints.formats`} to read barcodes.
+ * Barcode formats that can be used in {@link ReaderOptions.formats | `ReaderOptions.formats`} to read barcodes.
  */
 export type ReadInputBarcodeFormat = Exclude<BarcodeFormat, "None">;
 
 /**
- * Barcode formats that can be used in {@link EncodeHints.format | `DecodeHints.format`} to write barcodes.
+ * Barcode formats that can be used in {@link WriterOptions.format | `WriterOptions.format`} to write barcodes.
  */
 export type WriteInputBarcodeFormat = Exclude<
   BarcodeFormat,

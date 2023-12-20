@@ -9,7 +9,7 @@ import { ZXingEnum } from "./enum.js";
 /**
  * @internal
  */
-export interface ZXingDecodeHints {
+export interface ZXingReaderOptions {
   formats: string;
   /**
    * Spend more time to try to find a barcode. Optimize for accuracy, not speed.
@@ -110,12 +110,12 @@ export interface ZXingDecodeHints {
 }
 
 /**
- * Decode hints for reading barcodes.
+ * Reader options for reading barcodes.
  */
-export interface DecodeHints
+export interface ReaderOptions
   extends Partial<
     Omit<
-      ZXingDecodeHints,
+      ZXingReaderOptions,
       "formats" | "binarizer" | "eanAddOnSymbol" | "textMode" | "characterSet"
     >
   > {
@@ -209,7 +209,7 @@ export interface DecodeHints
   characterSet?: CharacterSet;
 }
 
-export const defaultDecodeHints: Required<DecodeHints> = {
+export const defaultReaderOptions: Required<ReaderOptions> = {
   formats: [],
   tryHarder: true,
   tryRotate: true,
@@ -231,22 +231,22 @@ export const defaultDecodeHints: Required<DecodeHints> = {
   characterSet: "Unknown",
 };
 
-export function decodeHintsToZXingDecodeHints<T extends "reader" | "full">(
+export function readerOptionsToZXingReaderOptions<T extends "reader" | "full">(
   zxingModule: ZXingModule<T>,
-  decodeHints: Required<DecodeHints>,
-): ZXingDecodeHints {
+  readerOptions: Required<ReaderOptions>,
+): ZXingReaderOptions {
   return {
-    ...decodeHints,
-    formats: formatsToString(decodeHints.formats),
-    binarizer: binarizerToZXingEnum(zxingModule, decodeHints.binarizer),
+    ...readerOptions,
+    formats: formatsToString(readerOptions.formats),
+    binarizer: binarizerToZXingEnum(zxingModule, readerOptions.binarizer),
     eanAddOnSymbol: eanAddOnSymbolToZXingEnum(
       zxingModule,
-      decodeHints.eanAddOnSymbol,
+      readerOptions.eanAddOnSymbol,
     ),
-    textMode: textModeToZXingEnum(zxingModule, decodeHints.textMode),
+    textMode: textModeToZXingEnum(zxingModule, readerOptions.textMode),
     characterSet: characterSetToZXingEnum(
       zxingModule,
-      decodeHints.characterSet,
+      readerOptions.characterSet,
     ),
   };
 }

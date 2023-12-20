@@ -105,7 +105,7 @@ These 2 functions are for reading barcodes.
 
 [`readBarcodesFromImageData`](https://zxing-wasm.netlify.app/functions/full.readBarcodesFromImageData.html) accepts an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as the first input. They're raw pixels that usually acquired from [`<canvas>`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) or related APIs.
 
-Both of these 2 functions optionally accept the same second input: [`DecodeHints`](https://zxing-wasm.netlify.app/interfaces/full.DecodeHints.html).
+Both of these 2 functions optionally accept the same second input: [`ReaderOptions`](https://zxing-wasm.netlify.app/interfaces/full.ReaderOptions.html).
 
 The return result of these 2 functions is a `Promise` of an array of [`ReadResult`](https://zxing-wasm.netlify.app/interfaces/full.ReadResult.html)s.
 
@@ -115,10 +115,10 @@ e.g.
 import {
   readBarcodesFromImageFile,
   readBarcodesFromImageData,
-  type DecodeHints,
+  type ReaderOptions,
 } from "zxing-wasm/reader";
 
-const decodeHints: DecodeHints = {
+const readerOptions: ReaderOptions = {
   tryHarder: true,
   formats: ["QRCode"],
   maxNumberOfSymbols: 1,
@@ -133,7 +133,7 @@ const imageFile = await fetch(
 
 const imageFileReadResults = await readBarcodesFromImageFile(
   imageFile,
-  decodeHints,
+  readerOptions,
 );
 
 console.log(imageFileReadResults[0].text); // Hello world!
@@ -152,7 +152,7 @@ const imageData = await createImageBitmap(imageFile).then((imageBitmap) => {
 
 const imageDataReadResults = await readBarcodesFromImageData(
   imageData,
-  decodeHints,
+  readerOptions,
 );
 
 console.log(imageDataReadResults[0].text); // Hello world!
@@ -160,16 +160,16 @@ console.log(imageDataReadResults[0].text); // Hello world!
 
 ### [`writeBarcodeToImageFile`](https://zxing-wasm.netlify.app/functions/full.writeBarcodeToImageFile.html)
 
-This function is used to write barcodes. The first argument of this function is a text string to be encoded and the optional second argument is an [`EncodeHints`](https://zxing-wasm.netlify.app/interfaces/full.EncodeHints.html).
+This function is used to write barcodes. The first argument of this function is a text string to be encoded and the optional second argument is an [`WriterOptions`](https://zxing-wasm.netlify.app/interfaces/full.WriterOptions.html).
 
 The return result of this function is a `Promise` of a [`WriteResult`](https://zxing-wasm.netlify.app/interfaces/full.WriteResult.html).
 
 e.g.
 
 ```ts
-import { writeBarcodeToImageFile, type EncodeHints } from "zxing-wasm/writer";
+import { writeBarcodeToImageFile, type WriterOptions } from "zxing-wasm/writer";
 
-const encodeHints: EncodeHints = {
+const writerOptions: WriterOptions = {
   format: "QRCode",
   width: 150,
   height: 150,
@@ -177,7 +177,10 @@ const encodeHints: EncodeHints = {
   eccLevel: 2,
 };
 
-const writeOutput = await writeBarcodeToImageFile("Hello world!", encodeHints);
+const writeOutput = await writeBarcodeToImageFile(
+  "Hello world!",
+  writerOptions,
+);
 
 console.log(writeOutput.image);
 ```

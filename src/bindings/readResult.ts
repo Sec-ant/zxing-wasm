@@ -15,7 +15,7 @@ export interface ZXingReadResult {
   /**
    * Error message (if any).
    *
-   * @see {@link DecodeHints.returnErrors | `DecodeHints.returnErrors`}
+   * @see {@link ReaderOptions.returnErrors | `ReaderOptions.returnErrors`}
    */
   error: string;
   format: string;
@@ -29,7 +29,7 @@ export interface ZXingReadResult {
   bytesECI: Uint8Array;
   /**
    * The {@link ReadResult.bytes | `ReadResult.bytes`} content rendered to unicode / utf8 text
-   * accoring to specified {@link DecodeHints.textMode | `DecodeHints.textMode`}.
+   * accoring to specified {@link ReaderOptions.textMode | `ReaderOptions.textMode`}.
    */
   text: string;
   eccLevel: string;
@@ -50,7 +50,7 @@ export interface ZXingReadResult {
   /**
    * Whether the symbol is inverted / has reveresed reflectance.
    *
-   * @see {@link DecodeHints.tryInvert | `DecodeHints.tryInvert`}
+   * @see {@link ReaderOptions.tryInvert | `ReaderOptions.tryInvert`}
    */
   isInverted: boolean;
   /**

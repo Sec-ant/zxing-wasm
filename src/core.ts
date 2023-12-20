@@ -1,12 +1,12 @@
 import {
-  type ZXingDecodeHints,
-  type DecodeHints,
-  decodeHintsToZXingDecodeHints,
-  defaultDecodeHints,
-  type ZXingEncodeHints,
-  type EncodeHints,
-  defaultEncodeHints,
-  encodeHintsToZXingEncodeHints,
+  type ZXingReaderOptions,
+  type ReaderOptions,
+  readerOptionsToZXingReaderOptions,
+  defaultReaderOptions,
+  type ZXingWriterOptions,
+  type WriterOptions,
+  defaultWriterOptions,
+  writerOptionsToZXingWriterOptions,
   type ZXingReadResult,
   type ReadResult,
   zxingReadResultToReadResult,
@@ -38,14 +38,14 @@ export interface ZXingReaderModule extends ZXingBaseModule {
   readBarcodesFromImage(
     bufferPtr: number,
     bufferLength: number,
-    zxingDecodeHints: ZXingDecodeHints,
+    zxingReaderOptions: ZXingReaderOptions,
   ): ZXingVector<ZXingReadResult>;
 
   readBarcodesFromPixmap(
     bufferPtr: number,
     imgWidth: number,
     imgHeight: number,
-    zxingDecodeHints: ZXingDecodeHints,
+    zxingReaderOptions: ZXingReaderOptions,
   ): ZXingVector<ZXingReadResult>;
 }
 
@@ -55,7 +55,7 @@ export interface ZXingReaderModule extends ZXingBaseModule {
 export interface ZXingWriterModule extends ZXingBaseModule {
   writeBarcodeToImage(
     text: string,
-    zxingEncodeHints: ZXingEncodeHints,
+    zxingWriterOptions: ZXingWriterOptions,
   ): ZXingWriteResult;
 }
 
@@ -173,11 +173,11 @@ export async function readBarcodesFromImageFileWithFactory<
 >(
   zxingModuleFactory: ZXingModuleFactory<T>,
   imageFile: Blob | File,
-  decodeHints: DecodeHints = defaultDecodeHints,
+  readerOptions: ReaderOptions = defaultReaderOptions,
 ) {
-  const requiredDecodeHints: Required<DecodeHints> = {
-    ...defaultDecodeHints,
-    ...decodeHints,
+  const requiredReaderOptions: Required<ReaderOptions> = {
+    ...defaultReaderOptions,
+    ...readerOptions,
   };
   const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
   const { size } = imageFile;
@@ -187,7 +187,7 @@ export async function readBarcodesFromImageFileWithFactory<
   const zxingReadResultVector = zxingModule.readBarcodesFromImage(
     bufferPtr,
     size,
-    decodeHintsToZXingDecodeHints(zxingModule, requiredDecodeHints),
+    readerOptionsToZXingReaderOptions(zxingModule, requiredReaderOptions),
   );
   zxingModule._free(bufferPtr);
   const readResults: ReadResult[] = [];
@@ -204,11 +204,11 @@ export async function readBarcodesFromImageDataWithFactory<
 >(
   zxingModuleFactory: ZXingModuleFactory<T>,
   imageData: ImageData,
-  decodeHints: DecodeHints = defaultDecodeHints,
+  readerOptions: ReaderOptions = defaultReaderOptions,
 ) {
-  const requiredDecodeHints: Required<DecodeHints> = {
-    ...defaultDecodeHints,
-    ...decodeHints,
+  const requiredReaderOptions: Required<ReaderOptions> = {
+    ...defaultReaderOptions,
+    ...readerOptions,
   };
   const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
   const {
@@ -223,7 +223,7 @@ export async function readBarcodesFromImageDataWithFactory<
     bufferPtr,
     width,
     height,
-    decodeHintsToZXingDecodeHints(zxingModule, requiredDecodeHints),
+    readerOptionsToZXingReaderOptions(zxingModule, requiredReaderOptions),
   );
   zxingModule._free(bufferPtr);
   const readResults: ReadResult[] = [];
@@ -240,16 +240,16 @@ export async function writeBarcodeToImageFileWithFactory<
 >(
   zxingModuleFactory: ZXingModuleFactory<T>,
   text: string,
-  encodeHints: EncodeHints = defaultEncodeHints,
+  writerOptions: WriterOptions = defaultWriterOptions,
 ) {
-  const requiredEncodeHints: Required<EncodeHints> = {
-    ...defaultEncodeHints,
-    ...encodeHints,
+  const requiredWriterOptions: Required<WriterOptions> = {
+    ...defaultWriterOptions,
+    ...writerOptions,
   };
   const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
   const zxingWriteResult = zxingModule.writeBarcodeToImage(
     text,
-    encodeHintsToZXingEncodeHints(zxingModule, requiredEncodeHints),
+    writerOptionsToZXingWriterOptions(zxingModule, requiredWriterOptions),
   );
   return zxingWriteResultToWriteResult(zxingWriteResult);
 }

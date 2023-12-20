@@ -1,5 +1,5 @@
-import { defaultEncodeHints as eh } from "./index.js";
-export const defaultEncodeHints = structuredClone(eh);
+import { defaultWriterOptions as wo } from "./index.js";
+export const defaultWriterOptions = structuredClone(wo);
 
 export {
   barcodeFormats,
@@ -10,9 +10,26 @@ export {
   type CharacterSet,
   writeInputEccLevels,
   type WriteInputEccLevel,
-  type ZXingEncodeHints,
-  type EncodeHints,
+  type ZXingWriterOptions,
+  type WriterOptions,
   type ZXingEnum,
   type ZXingWriteResult,
   type WriteResult,
+} from "./index.js";
+
+export {
+  /**
+   * @deprecated renamed as `defaultWriterOptions`
+   */
+  defaultWriterOptions as defaultEncodeHints,
+};
+export {
+  /**
+   * @deprecated renamed as `ZXingWriterOptions`
+   */
+  type ZXingWriterOptions as ZXingEncodeHints,
+  /**
+   * @deprecated renamed as `WriterOptions`
+   */
+  type WriterOptions as EncodeHints,
 } from "./index.js";

@@ -13,7 +13,7 @@ import {
   type ZXingWriterModule,
   type ZXingModuleOverrides,
 } from "../core.js";
-import type { EncodeHints } from "../bindings/index.js";
+import type { WriterOptions } from "../bindings/index.js";
 
 export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
   return getZXingModuleWithFactory(
@@ -33,12 +33,12 @@ export function setZXingModuleOverrides(
 
 export async function writeBarcodeToImageFile(
   text: string,
-  encodeHints?: EncodeHints,
+  writerOptions?: WriterOptions,
 ) {
   return writeBarcodeToImageFileWithFactory(
     zxingModuleFactory,
     text,
-    encodeHints,
+    writerOptions,
   );
 }
 

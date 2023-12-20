@@ -8,7 +8,7 @@ import {
   type ZXingFullModule,
   type ZXingModuleOverrides,
 } from "../core.js";
-import type { DecodeHints, EncodeHints } from "../bindings/index.js";
+import type { ReaderOptions, WriterOptions } from "../bindings/index.js";
 
 export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
   return getZXingModuleWithFactory(
@@ -28,34 +28,34 @@ export function setZXingModuleOverrides(
 
 export async function readBarcodesFromImageFile(
   imageFile: Blob | File,
-  decodeHints?: DecodeHints,
+  readerOptions?: ReaderOptions,
 ) {
   return readBarcodesFromImageFileWithFactory(
     zxingModuleFactory,
     imageFile,
-    decodeHints,
+    readerOptions,
   );
 }
 
 export async function readBarcodesFromImageData(
   imageData: ImageData,
-  decodeHints?: DecodeHints,
+  readerOptions?: ReaderOptions,
 ) {
   return readBarcodesFromImageDataWithFactory(
     zxingModuleFactory,
     imageData,
-    decodeHints,
+    readerOptions,
   );
 }
 
 export async function writeBarcodeToImageFile(
   text: string,
-  encodeHints?: EncodeHints,
+  writerOptions?: WriterOptions,
 ) {
   return writeBarcodeToImageFileWithFactory(
     zxingModuleFactory,
     text,
-    encodeHints,
+    writerOptions,
   );
 }
 
