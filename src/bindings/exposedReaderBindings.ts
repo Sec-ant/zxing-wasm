@@ -1,6 +1,5 @@
-import { defaultDecodeHints as dh } from "./index.js";
-export const defaultDecodeHints = structuredClone(dh);
-
+import { defaultReaderOptions as ro } from "./index.js";
+export const defaultReaderOptions = structuredClone(ro);
 export {
   barcodeFormats,
   type BarcodeFormat,
@@ -15,8 +14,8 @@ export {
   contentTypes,
   type ZXingContentType,
   type ContentType,
-  type ZXingDecodeHints,
-  type DecodeHints,
+  type ZXingReaderOptions,
+  type ReaderOptions,
   eanAddOnSymbols,
   type ZXingEanAddOnSymbol,
   type EanAddOnSymbol,
@@ -33,4 +32,21 @@ export {
   type ZXingTextMode,
   type TextMode,
   type ZXingVector,
+} from "./index.js";
+
+export {
+  /**
+   * @deprecated renamed as `defaultReaderOptions`
+   */
+  defaultReaderOptions as defaultDecodeHints,
+};
+export {
+  /**
+   * @deprecated renamed as `ZXingReaderOptions`
+   */
+  type ZXingReaderOptions as ZXingDecodeHints,
+  /**
+   * @deprecated renamed as `ReaderOptions`
+   */
+  type ReaderOptions as DecodeHints,
 } from "./index.js";

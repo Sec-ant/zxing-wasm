@@ -7,7 +7,7 @@ import { ZXingEnum } from "./enum.js";
 /**
  * @internal
  */
-export interface ZXingEncodeHints {
+export interface ZXingWriterOptions {
   /**
    * Width of the barcode.
    *
@@ -32,11 +32,11 @@ export interface ZXingEncodeHints {
 }
 
 /**
- * Encode hints for writing barcodes.
+ * Writer options for writing barcodes.
  */
-export interface EncodeHints
+export interface WriterOptions
   extends Partial<
-    Omit<ZXingEncodeHints, "format" | "characterSet" | "eccLevel">
+    Omit<ZXingWriterOptions, "format" | "characterSet" | "eccLevel">
   > {
   /**
    * The format of the barcode to write.
@@ -66,7 +66,7 @@ export interface EncodeHints
   eccLevel?: WriteInputEccLevel;
 }
 
-export const defaultEncodeHints: Required<EncodeHints> = {
+export const defaultWriterOptions: Required<WriterOptions> = {
   width: 200,
   height: 200,
   format: "QRCode",
@@ -75,15 +75,15 @@ export const defaultEncodeHints: Required<EncodeHints> = {
   margin: 10,
 };
 
-export function encodeHintsToZXingEncodeHints<T extends "writer" | "full">(
+export function writerOptionsToZXingWriterOptions<T extends "writer" | "full">(
   zxingModule: ZXingModule<T>,
-  encodeHints: Required<EncodeHints>,
-): ZXingEncodeHints {
+  writerOptions: Required<WriterOptions>,
+): ZXingWriterOptions {
   return {
-    ...encodeHints,
+    ...writerOptions,
     characterSet: characterSetToZXingEnum(
       zxingModule,
-      encodeHints.characterSet,
+      writerOptions.characterSet,
     ),
   };
 }

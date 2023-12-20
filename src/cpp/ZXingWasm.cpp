@@ -28,7 +28,7 @@ using namespace emscripten;
 
 #if defined(READER)
 
-struct JsDecodeHints {
+struct JsReaderOptions {
   std::string formats;
   bool tryHarder;
   bool tryRotate;
@@ -73,40 +73,45 @@ struct JsReadResult {
   std::string version;
 };
 
-using JsResults = std::vector<JsReadResult>;
+using JsReadResults = std::vector<JsReadResult>;
 
-JsResults readBarcodes(
-  ZXing::ImageView imageView, const JsDecodeHints &jsDecodeHints
+JsReadResults readBarcodes(
+  ZXing::ImageView imageView, const JsReaderOptions &jsReaderOptions
 ) {
   try {
 
-    ZXing::DecodeHints decodeHints;
-    decodeHints.setFormats(ZXing::BarcodeFormatsFromString(jsDecodeHints.formats
-    ));
-    decodeHints.setTryHarder(jsDecodeHints.tryHarder);
-    decodeHints.setTryRotate(jsDecodeHints.tryRotate);
-    decodeHints.setTryInvert(jsDecodeHints.tryInvert);
-    decodeHints.setTryDownscale(jsDecodeHints.tryDownscale);
-    decodeHints.setBinarizer(jsDecodeHints.binarizer);
-    decodeHints.setIsPure(jsDecodeHints.isPure);
-    decodeHints.setDownscaleThreshold(jsDecodeHints.downscaleThreshold);
-    decodeHints.setDownscaleFactor(jsDecodeHints.downscaleFactor);
-    decodeHints.setMinLineCount(jsDecodeHints.minLineCount);
-    decodeHints.setMaxNumberOfSymbols(jsDecodeHints.maxNumberOfSymbols);
-    decodeHints.setTryCode39ExtendedMode(jsDecodeHints.tryCode39ExtendedMode);
-    decodeHints.setValidateCode39CheckSum(jsDecodeHints.validateCode39CheckSum);
-    decodeHints.setValidateITFCheckSum(jsDecodeHints.validateITFCheckSum);
-    decodeHints.setReturnCodabarStartEnd(jsDecodeHints.returnCodabarStartEnd);
-    decodeHints.setReturnErrors(jsDecodeHints.returnErrors);
-    decodeHints.setEanAddOnSymbol(jsDecodeHints.eanAddOnSymbol);
-    decodeHints.setTextMode(jsDecodeHints.textMode);
-    decodeHints.setCharacterSet(jsDecodeHints.characterSet);
+    ZXing::ReaderOptions readerOptions;
+    readerOptions.setFormats(
+      ZXing::BarcodeFormatsFromString(jsReaderOptions.formats)
+    );
+    readerOptions.setTryHarder(jsReaderOptions.tryHarder);
+    readerOptions.setTryRotate(jsReaderOptions.tryRotate);
+    readerOptions.setTryInvert(jsReaderOptions.tryInvert);
+    readerOptions.setTryDownscale(jsReaderOptions.tryDownscale);
+    readerOptions.setBinarizer(jsReaderOptions.binarizer);
+    readerOptions.setIsPure(jsReaderOptions.isPure);
+    readerOptions.setDownscaleThreshold(jsReaderOptions.downscaleThreshold);
+    readerOptions.setDownscaleFactor(jsReaderOptions.downscaleFactor);
+    readerOptions.setMinLineCount(jsReaderOptions.minLineCount);
+    readerOptions.setMaxNumberOfSymbols(jsReaderOptions.maxNumberOfSymbols);
+    readerOptions.setTryCode39ExtendedMode(jsReaderOptions.tryCode39ExtendedMode
+    );
+    readerOptions.setValidateCode39CheckSum(
+      jsReaderOptions.validateCode39CheckSum
+    );
+    readerOptions.setValidateITFCheckSum(jsReaderOptions.validateITFCheckSum);
+    readerOptions.setReturnCodabarStartEnd(jsReaderOptions.returnCodabarStartEnd
+    );
+    readerOptions.setReturnErrors(jsReaderOptions.returnErrors);
+    readerOptions.setEanAddOnSymbol(jsReaderOptions.eanAddOnSymbol);
+    readerOptions.setTextMode(jsReaderOptions.textMode);
+    readerOptions.setCharacterSet(jsReaderOptions.characterSet);
 
-    auto results = ZXing::ReadBarcodes(imageView, decodeHints);
+    auto results = ZXing::ReadBarcodes(imageView, readerOptions);
 
     thread_local const val Uint8Array = val::global("Uint8Array");
 
-    JsResults jsResults;
+    JsReadResults jsResults;
     jsResults.reserve(results.size());
 
     for (auto &result : results) {
@@ -148,8 +153,8 @@ JsResults readBarcodes(
   return {};
 }
 
-JsResults readBarcodesFromImage(
-  int bufferPtr, int bufferLength, const JsDecodeHints &jsDecodeHints
+JsReadResults readBarcodesFromImage(
+  int bufferPtr, int bufferLength, const JsReaderOptions &jsReaderOptions
 ) {
   int width, height, channels;
   std::unique_ptr<stbi_uc, void (*)(void *)> buffer(
@@ -167,19 +172,22 @@ JsResults readBarcodesFromImage(
     return {};
   }
   return readBarcodes(
-    {buffer.get(), width, height, ZXing::ImageFormat::Lum}, jsDecodeHints
+    {buffer.get(), width, height, ZXing::ImageFormat::Lum}, jsReaderOptions
   );
 }
 
-JsResults readBarcodesFromPixmap(
-  int bufferPtr, int imgWidth, int imgHeight, const JsDecodeHints &jsDecodeHints
+JsReadResults readBarcodesFromPixmap(
+  int bufferPtr,
+  int imgWidth,
+  int imgHeight,
+  const JsReaderOptions &jsReaderOptions
 ) {
   return readBarcodes(
     {reinterpret_cast<uint8_t *>(bufferPtr),
      imgWidth,
      imgHeight,
      ZXing::ImageFormat::RGBX},
-    jsDecodeHints
+    jsReaderOptions
   );
 }
 
@@ -187,7 +195,7 @@ JsResults readBarcodesFromPixmap(
 
 #if defined(WRITER)
 
-struct JsEncodeHints {
+struct JsWriterOptions {
   int width;
   int height;
   std::string format;
@@ -202,33 +210,33 @@ struct JsWriteResult {
 };
 
 JsWriteResult writeBarcodeToImage(
-  std::wstring text, const JsEncodeHints &jsEncodeHints
+  std::wstring text, const JsWriterOptions &jsWriterOptions
 ) {
   try {
-    auto format = ZXing::BarcodeFormatFromString(jsEncodeHints.format);
+    auto format = ZXing::BarcodeFormatFromString(jsWriterOptions.format);
     if (format == ZXing::BarcodeFormat::None) {
-      return {.error = "Unsupported format: " + jsEncodeHints.format};
+      return {.error = "Unsupported format: " + jsWriterOptions.format};
     }
 
     ZXing::MultiFormatWriter writer(format);
 
-    auto margin = jsEncodeHints.margin;
+    auto margin = jsWriterOptions.margin;
     if (margin >= 0) {
       writer.setMargin(margin);
     }
 
-    auto characterSet = jsEncodeHints.characterSet;
+    auto characterSet = jsWriterOptions.characterSet;
     if (characterSet != ZXing::CharacterSet::Unknown) {
       writer.setEncoding(characterSet);
     }
 
-    auto eccLevel = jsEncodeHints.eccLevel;
+    auto eccLevel = jsWriterOptions.eccLevel;
     if (eccLevel >= 0 && eccLevel <= 8) {
       writer.setEccLevel(eccLevel);
     }
 
     auto buffer = ZXing::ToMatrix<uint8_t>(
-      writer.encode(text, jsEncodeHints.width, jsEncodeHints.height)
+      writer.encode(text, jsWriterOptions.width, jsWriterOptions.height)
     );
 
     int len;
@@ -296,26 +304,26 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("bottomRight", emscripten::index<2>())
     .field("bottomLeft", emscripten::index<3>());
 
-  value_object<JsDecodeHints>("DecodeHints")
-    .field("formats", &JsDecodeHints::formats)
-    .field("tryHarder", &JsDecodeHints::tryHarder)
-    .field("tryRotate", &JsDecodeHints::tryRotate)
-    .field("tryInvert", &JsDecodeHints::tryInvert)
-    .field("tryDownscale", &JsDecodeHints::tryDownscale)
-    .field("binarizer", &JsDecodeHints::binarizer)
-    .field("isPure", &JsDecodeHints::isPure)
-    .field("downscaleThreshold", &JsDecodeHints::downscaleThreshold)
-    .field("downscaleFactor", &JsDecodeHints::downscaleFactor)
-    .field("minLineCount", &JsDecodeHints::minLineCount)
-    .field("maxNumberOfSymbols", &JsDecodeHints::maxNumberOfSymbols)
-    .field("tryCode39ExtendedMode", &JsDecodeHints::tryCode39ExtendedMode)
-    .field("validateCode39CheckSum", &JsDecodeHints::validateCode39CheckSum)
-    .field("validateITFCheckSum", &JsDecodeHints::validateITFCheckSum)
-    .field("returnCodabarStartEnd", &JsDecodeHints::returnCodabarStartEnd)
-    .field("returnErrors", &JsDecodeHints::returnErrors)
-    .field("eanAddOnSymbol", &JsDecodeHints::eanAddOnSymbol)
-    .field("textMode", &JsDecodeHints::textMode)
-    .field("characterSet", &JsDecodeHints::characterSet);
+  value_object<JsReaderOptions>("ReaderOptions")
+    .field("formats", &JsReaderOptions::formats)
+    .field("tryHarder", &JsReaderOptions::tryHarder)
+    .field("tryRotate", &JsReaderOptions::tryRotate)
+    .field("tryInvert", &JsReaderOptions::tryInvert)
+    .field("tryDownscale", &JsReaderOptions::tryDownscale)
+    .field("binarizer", &JsReaderOptions::binarizer)
+    .field("isPure", &JsReaderOptions::isPure)
+    .field("downscaleThreshold", &JsReaderOptions::downscaleThreshold)
+    .field("downscaleFactor", &JsReaderOptions::downscaleFactor)
+    .field("minLineCount", &JsReaderOptions::minLineCount)
+    .field("maxNumberOfSymbols", &JsReaderOptions::maxNumberOfSymbols)
+    .field("tryCode39ExtendedMode", &JsReaderOptions::tryCode39ExtendedMode)
+    .field("validateCode39CheckSum", &JsReaderOptions::validateCode39CheckSum)
+    .field("validateITFCheckSum", &JsReaderOptions::validateITFCheckSum)
+    .field("returnCodabarStartEnd", &JsReaderOptions::returnCodabarStartEnd)
+    .field("returnErrors", &JsReaderOptions::returnErrors)
+    .field("eanAddOnSymbol", &JsReaderOptions::eanAddOnSymbol)
+    .field("textMode", &JsReaderOptions::textMode)
+    .field("characterSet", &JsReaderOptions::characterSet);
 
   value_object<JsReadResult>("ReadResult")
     .field("isValid", &JsReadResult::isValid)
@@ -348,13 +356,13 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
 
 #if defined(WRITER)
 
-  value_object<JsEncodeHints>("EncodeHints")
-    .field("width", &JsEncodeHints::width)
-    .field("height", &JsEncodeHints::height)
-    .field("format", &JsEncodeHints::format)
-    .field("characterSet", &JsEncodeHints::characterSet)
-    .field("eccLevel", &JsEncodeHints::eccLevel)
-    .field("margin", &JsEncodeHints::margin);
+  value_object<JsWriterOptions>("WriterOptions")
+    .field("width", &JsWriterOptions::width)
+    .field("height", &JsWriterOptions::height)
+    .field("format", &JsWriterOptions::format)
+    .field("characterSet", &JsWriterOptions::characterSet)
+    .field("eccLevel", &JsWriterOptions::eccLevel)
+    .field("margin", &JsWriterOptions::margin);
 
   value_object<JsWriteResult>("WriteResult")
     .field("image", &JsWriteResult::image)

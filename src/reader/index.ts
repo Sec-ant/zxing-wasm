@@ -7,7 +7,7 @@ import {
   type ZXingReaderModule,
   type ZXingModuleOverrides,
 } from "../core.js";
-import type { DecodeHints } from "../bindings/index.js";
+import type { ReaderOptions } from "../bindings/index.js";
 
 export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
   return getZXingModuleWithFactory(
@@ -27,23 +27,23 @@ export function setZXingModuleOverrides(
 
 export async function readBarcodesFromImageFile(
   imageFile: Blob | File,
-  decodeHints?: DecodeHints,
+  readerOptions?: ReaderOptions,
 ) {
   return readBarcodesFromImageFileWithFactory(
     zxingModuleFactory,
     imageFile,
-    decodeHints,
+    readerOptions,
   );
 }
 
 export async function readBarcodesFromImageData(
   imageData: ImageData,
-  decodeHints?: DecodeHints,
+  readerOptions?: ReaderOptions,
 ) {
   return readBarcodesFromImageDataWithFactory(
     zxingModuleFactory,
     imageData,
-    decodeHints,
+    readerOptions,
   );
 }
 
