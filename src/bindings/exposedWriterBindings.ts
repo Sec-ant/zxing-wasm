@@ -1,5 +1,6 @@
 import { defaultWriterOptions as wo } from "./index.js";
-export const defaultWriterOptions = structuredClone(wo);
+
+export const defaultWriterOptions: typeof wo = { ...wo };
 
 export {
   barcodeFormats,

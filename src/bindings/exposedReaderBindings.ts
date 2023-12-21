@@ -1,5 +1,10 @@
 import { defaultReaderOptions as ro } from "./index.js";
-export const defaultReaderOptions = structuredClone(ro);
+
+export const defaultReaderOptions: typeof ro = {
+  ...ro,
+  formats: [...ro.formats],
+};
+
 export {
   barcodeFormats,
   type BarcodeFormat,
