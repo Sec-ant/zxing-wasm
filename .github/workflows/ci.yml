@@ -60,7 +60,7 @@ jobs:
         id: release-url
         uses: frabert/replace-string-action@v2
         with:
-          pattern: "^(.+?\/releases\/)tag(\/.+?)$"
+          pattern: "^(.+?/releases/)tag(/.+?)$"
           string: ${{ steps.release.outputs.html_url }}
           replace-with: "$1download$2/zxing-wasm-${{ steps.commit-id.outputs.id }}.tgz"
       - name: Get PR number
