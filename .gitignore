@@ -30,3 +30,5 @@ build
 coverage
 src/**/zxing_*.wasm
 src/**/zxing_*.js
+
+.emsdk-cache
