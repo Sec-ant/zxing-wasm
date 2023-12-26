@@ -48,7 +48,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "zxing-wasm-${{ steps.commit_id.outputs.commit_id }}.tgz"
-          commit: ${{ steps.commit_id.outputs.commit_id }}
+          commit: ${{ github.head_ref || github.ref_name }}
           tag: ${{ steps.commit_id.outputs.commit_id }}
           allowUpdates: true
           draft: true
