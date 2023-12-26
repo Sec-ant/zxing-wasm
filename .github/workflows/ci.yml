@@ -58,7 +58,7 @@ jobs:
           allowUpdates: true
       - name: Get PR Number
         id: get-pr-number
-        uses: mgaitan/gha-get-pr-number
+        uses: mgaitan/gha-get-pr-number@main
       - name: Build Finish Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
