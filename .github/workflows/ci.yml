@@ -56,11 +56,18 @@ jobs:
           commit: ${{ github.head_ref || github.ref_name }}
           tag: ${{ steps.commit-id.outputs.id }}
           allowUpdates: true
-      - name: Get PR Number
+      - name: Get release url
+        id: release-url
+        uses: frabert/replace-string-action@v2
+        with:
+          pattern: "^(.+?\/releases\/)tag(\/.+?)$"
+          string: ${{ steps.release.outputs.html_url }}
+          replace-with: "$1download$2/zxing-wasm-${{ steps.commit-id.outputs.id }}.tgz"
+      - name: Get PR number
         id: get-pr-number
         uses: mgaitan/gha-get-pr-number@main
       - name: Build Finish Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           event-type: build-finish
-          client-payload: '{ "release-url": "${{steps.release.outputs.html_url}}/zxing-wasm-${{ steps.commit-id.outputs.id }}.tgz", "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
+          client-payload: '{ "release-url": "${{steps.release-url.outputs.replaced}}", "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
