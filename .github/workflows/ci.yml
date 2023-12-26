@@ -56,9 +56,8 @@ jobs:
           commit: ${{ github.head_ref || github.ref_name }}
           tag: ${{ steps.commit_id.outputs.commit_id }}
           allowUpdates: true
-          draft: true
       - name: Build Finish Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           event-type: build-finish
-          client-payload: '{ "release-url": "${{steps.release.outputs.html_url}}", "upload_url": "${{steps.release.outputs.upload_url}}"}'
+          client-payload: '{ "release-url": "${{steps.release.outputs.html_url}}" }'
