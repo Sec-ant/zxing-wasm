@@ -3,6 +3,8 @@
   "compilerOptions": {
     "composite": true,
     "types": ["node"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "allowJs": true
   },

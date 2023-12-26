@@ -102,6 +102,9 @@
     "postncu": "npm i"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/types": "^7.23.6",
+    "@types/babel__core": "^7.20.5",
     "@types/node": "^20.10.5",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
@@ -114,7 +117,8 @@
     "tsx": "^4.7.0",
     "typedoc": "^0.25.4",
     "typescript": "^5.3.3",
-    "vite": "^5.0.10"
+    "vite": "^5.0.10",
+    "vite-plugin-babel": "^1.2.0"
   },
   "dependencies": {
     "@types/emscripten": "^1.39.10"
