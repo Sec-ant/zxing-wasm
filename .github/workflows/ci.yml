@@ -6,7 +6,7 @@ on:
 
 env:
   EM_VERSION: 3.1.51
-  EM_CACHE_FOLDER: "emsdk-cache"
+  EM_CACHE_FOLDER: "../emsdk-cache"
 
 jobs:
   build:
