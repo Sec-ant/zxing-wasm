@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  check-and-delete:
     runs-on: ubuntu-latest
     steps:
       - name: Get PR number
