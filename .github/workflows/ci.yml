@@ -13,6 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Comment PR when start building
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            I'm building the package. Please be patient.
+            **[workflow: ${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})** / attempt **${{ github.run_attempt }}**
+          comment_tag: ci-bot
+          mode: recreate
       - name: Setup system libraries cache
         id: cache-system-libraries
         uses: actions/cache@v2
@@ -33,3 +41,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build:all
+      - name: Comment PR when finish building
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Build finished.
+          comment_tag: ci-bot
+          mode: recreate
