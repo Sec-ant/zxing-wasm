@@ -1,0 +1,22 @@
+name: Delete CI Releases
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get PR number
+        id: get-pr-number
+        uses: mgaitan/gha-get-pr-number@main
+      - name: Delete CI releases
+        uses: dev-drprasad/delete-older-releases@v0.3.2
+        with:
+          keep_latest: 0
+          delete_tag_pattern: pr-${{ steps.get-pr-number.outputs.number }}-test-package
