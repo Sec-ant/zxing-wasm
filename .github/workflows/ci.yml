@@ -1,0 +1,35 @@
+name: Auto Build CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+env:
+  EM_VERSION: 3.1.51
+  EM_CACHE_FOLDER: "emsdk-cache"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup system libraries cache
+        id: cache-system-libraries
+        uses: actions/cache@v2
+        with:
+          path: ${{env.EM_CACHE_FOLDER}}
+          key: ${{env.EM_VERSION}}-${{ runner.os }}
+      - name: Setup emsdk cache
+        uses: mymindstorm/setup-emsdk@v13
+        with:
+          version: ${{env.EM_VERSION}}
+          actions-cache-folder: ${{env.EM_CACHE_FOLDER}}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "latest"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build:all
