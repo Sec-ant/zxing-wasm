@@ -6,6 +6,7 @@ on:
 
 permissions:
   pull-requests: write
+  contents: write
 
 env:
   EM_VERSION: 3.1.51
@@ -16,14 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Comment PR when start building
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            I'm building the package. Please be patient.
-            **[workflow: ${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})** / attempt **${{ github.run_attempt }}**
-          comment_tag: ci-bot
-          mode: recreate
       - name: Setup system libraries cache
         id: cache-system-libraries
         uses: actions/cache@v2
@@ -40,14 +33,22 @@ jobs:
         with:
           node-version: "latest"
           cache: "npm"
+      - name: Get commit ID
+        id: "commit_id"
+        run: echo "COMMIT_ID=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      - name: Patch package.json
+        run: npm pkg set version=$(git rev-parse --short HEAD)
       - name: Install dependencies
         run: npm ci
       - name: Build
         run: npm run build:all
-      - name: Comment PR when finish building
-        uses: thollander/actions-comment-pull-request@v2
+      - name: Pack
+        run: npm pack
+      - name: Release
+        uses: ncipollo/release-action@v1
         with:
-          message: |
-            Build finished.
-          comment_tag: ci-bot
-          mode: recreate
+          artifacts: "zxing-wasm-${{ steps.commit_id.outputs.commit_id }}.tgz"
+          commit: ${{ steps.commit_id.outputs.commit_id }}
+          tag: ${{ steps.commit_id.outputs.commit_id }}
+          allowUpdates: true
+          draft: true
