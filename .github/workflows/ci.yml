@@ -58,7 +58,7 @@ jobs:
         with:
           artifacts: "zxing-wasm-${{ steps.commit-id.outputs.id }}.tgz"
           commit: ${{ github.head_ref || github.ref_name }}
-          tag: ${{ steps.commit-id.outputs.id }}
+          tag: "pr-${{ steps.get-pr-number.outputs.number }}-test-package"
           allowUpdates: true
       - name: Get release url
         id: release-url
