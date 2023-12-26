@@ -172,7 +172,7 @@ export async function readBarcodesFromImageFileWithFactory<
   T extends "reader" | "full",
 >(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  imageFile: Blob | File,
+  imageFile: Blob,
   readerOptions: ReaderOptions = defaultReaderOptions,
 ) {
   const requiredReaderOptions: Required<ReaderOptions> = {
