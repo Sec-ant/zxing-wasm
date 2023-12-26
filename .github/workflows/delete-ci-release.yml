@@ -20,3 +20,5 @@ jobs:
         with:
           keep_latest: 0
           delete_tag_pattern: pr-${{ steps.get-pr-number.outputs.number }}-test-package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
