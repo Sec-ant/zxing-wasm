@@ -29,13 +29,13 @@ jobs:
         id: cache-system-libraries
         uses: actions/cache@v2
         with:
-          path: ${{env.EM_CACHE_FOLDER}}
-          key: ${{env.EM_VERSION}}-${{ runner.os }}
+          path: ${{ env.EM_CACHE_FOLDER }}
+          key: ${{ env.EM_VERSION }}-${{ runner.os }}
       - name: Setup emsdk cache
         uses: mymindstorm/setup-emsdk@v13
         with:
-          version: ${{env.EM_VERSION}}
-          actions-cache-folder: ${{env.EM_CACHE_FOLDER}}
+          version: ${{ env.EM_VERSION }}
+          actions-cache-folder: ${{ env.EM_CACHE_FOLDER }}
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -71,4 +71,10 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           event-type: build-finish
-          client-payload: '{ "release-url": "${{steps.release-url.outputs.replaced}}", "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
+          client-payload: '{ "release-url": "${{ steps.release-url.outputs.replaced }}", "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
+      - name: Clean up
+        if: failure()
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          event-type: build-fail
+          client-payload: '{ "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
