@@ -43,9 +43,9 @@ jobs:
           cache: "npm"
       - name: Get commit ID
         id: "commit-id"
-        run: echo "id=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+        run: echo "id=$(git rev-parse --short ${{ github.event.pull_request.head.sha }})" >> $GITHUB_OUTPUT
       - name: Patch package.json
-        run: npm pkg set version=$(git rev-parse --short HEAD)
+        run: npm pkg set version=${{ steps.commit-id.outputs.id }}
       - name: Install dependencies
         run: npm ci
       - name: Build

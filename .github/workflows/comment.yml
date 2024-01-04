@@ -27,7 +27,7 @@ jobs:
           body: |
             ## ci-bot
 
-            Now I'm building the new package reflecting the changes of this PR. Please be patient.
+            Now I'm building a test package reflecting the changes of this PR. Please be patient.
           comment-id: ${{ steps.fc.outputs.comment-id }}
       - name: Comment build finish message
         if: ${{ github.event.action == 'build-finish' }}
@@ -37,7 +37,7 @@ jobs:
           body: |
             ## ci-bot
 
-            CI build finished. Use the link below to test the packge:
+            The test package is successfully built. Use the link below to test the packge:
 
             ```
             ${{ github.event.client_payload.release-url }}
@@ -58,5 +58,5 @@ jobs:
           body: |
             ## ci-bot
 
-            CI Build failed.
+            Failed to build the test package.
           comment-id: ${{ steps.fc.outputs.comment-id }}
