@@ -78,6 +78,8 @@ using JsReadResults = std::vector<JsReadResult>;
 JsReadResults readBarcodes(
   ZXing::ImageView imageView, const JsReaderOptions &jsReaderOptions
 ) {
+  thread_local const val Uint8Array = val::global("Uint8Array");
+
   try {
 
     ZXing::ReaderOptions readerOptions;
@@ -108,8 +110,6 @@ JsReadResults readBarcodes(
     readerOptions.setCharacterSet(jsReaderOptions.characterSet);
 
     auto results = ZXing::ReadBarcodes(imageView, readerOptions);
-
-    thread_local const val Uint8Array = val::global("Uint8Array");
 
     JsReadResults jsResults;
     jsResults.reserve(results.size());
@@ -146,9 +146,17 @@ JsReadResults readBarcodes(
     }
     return jsResults;
   } catch (const std::exception &e) {
-    return {{.error = e.what()}};
+    return {
+      {.error = e.what(),
+       .bytes = std::move(Uint8Array.new_()),
+       .bytesECI = std::move(Uint8Array.new_())}
+    };
   } catch (...) {
-    return {{.error = "Unknown error"}};
+    return {
+      {.error = "Unknown error",
+       .bytes = std::move(Uint8Array.new_()),
+       .bytesECI = std::move(Uint8Array.new_())}
+    };
   }
   return {};
 }
