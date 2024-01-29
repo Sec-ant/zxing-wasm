@@ -1,0 +1,19 @@
+{
+  "copyFiles": [
+    {
+      "from": "./src/reader/*.wasm",
+      "to": "./dist/reader/"
+    },
+    {
+      "from": "./src/writer/*.wasm",
+      "to": "./dist/writer/"
+    },
+    {
+      "from": "./src/full/*.wasm",
+      "to": "./dist/full/"
+    }
+  ],
+  "copyFilesSettings": {
+    "whenFileExists": "overwrite"
+  }
+}
