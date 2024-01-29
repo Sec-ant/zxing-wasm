@@ -1,5 +1,5 @@
-import { ZXingModule, ZXingModuleType } from "../core.js";
-import { ZXingEnum } from "./enum.js";
+import type { ZXingModule, ZXingModuleType } from "../core.js";
+import type { ZXingEnum } from "./enum.js";
 
 export const characterSets = [
   "Unknown",

@@ -2,4 +2,13 @@ zxing-cpp
 docs
 dist
 build
-src/**/zxing_*.js
+*.js
+*.ts
+*.cjs
+*.mjs
+*.d.cts
+*.d.mts
+*.jsx
+*.tsx
+*.json
+*.jsonc

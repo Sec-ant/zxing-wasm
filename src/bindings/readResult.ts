@@ -1,8 +1,11 @@
-import { ReadOutputBarcodeFormat, formatFromString } from "./barcodeFormat.js";
-import { ReadOutputEccLevel } from "./eccLevel.js";
-import { ContentType, zxingEnumToContentType } from "./contentType.js";
-import { ZXingPosition, Position } from "./position.js";
-import { ZXingEnum } from "./enum.js";
+import {
+  type ReadOutputBarcodeFormat,
+  formatFromString,
+} from "./barcodeFormat.js";
+import { type ContentType, zxingEnumToContentType } from "./contentType.js";
+import type { ReadOutputEccLevel } from "./eccLevel.js";
+import type { ZXingEnum } from "./enum.js";
+import type { Position, ZXingPosition } from "./position.js";
 
 /**
  * @internal

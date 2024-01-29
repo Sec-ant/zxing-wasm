@@ -77,7 +77,8 @@ export function formatFromString(format: string): BarcodeFormat {
     const normalizedMidElement = normalizeFormatString(midElement);
     if (normalizedMidElement === normalizedTarget) {
       return midElement;
-    } else if (normalizedMidElement < normalizedTarget) {
+    }
+    if (normalizedMidElement < normalizedTarget) {
       start = mid + 1;
     } else {
       end = mid - 1;

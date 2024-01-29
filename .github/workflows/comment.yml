@@ -19,6 +19,7 @@ jobs:
           issue-number: ${{ github.event.client_payload.pr-number }}
           comment-author: "github-actions[bot]"
           body-includes: "## ci-bot\n\n"
+
       - name: Comment build start message
         if: ${{ github.event.action == 'build-start' }}
         uses: peter-evans/create-or-update-comment@v3
@@ -29,6 +30,7 @@ jobs:
 
             Now I'm building a test package reflecting the changes of this PR. Please be patient.
           comment-id: ${{ steps.fc.outputs.comment-id }}
+
       - name: Comment build finish message
         if: ${{ github.event.action == 'build-finish' }}
         uses: peter-evans/create-or-update-comment@v3
@@ -50,6 +52,7 @@ jobs:
             ```
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
+
       - name: Comment build fail message
         if: ${{ github.event.action == 'build-fail' }}
         uses: peter-evans/create-or-update-comment@v3
