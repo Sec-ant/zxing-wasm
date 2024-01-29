@@ -24,6 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
+      pull-requests: write
+      packages: write
     env:
       NPM_CONFIG_PROVENANCE: true
     steps:
