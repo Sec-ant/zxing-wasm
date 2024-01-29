@@ -1,16 +1,6 @@
 name: Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      mode:
-        description: "Release mode"
-        required: true
-        default: "no publish"
-        type: choice
-        options:
-          - "no publish"
-          - "publish"
   push:
     branches:
       - main
@@ -19,7 +9,6 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    if: ${{ github.repository != 'Sec-ant/vanilla-ts' }}
     name: Release
     runs-on: ubuntu-latest
     permissions:
@@ -36,38 +25,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: .nvmrc
 
       - name: Install Dependencies
         run: npm ci
 
-      - name: Get Package Version
+      - name: Get Next Package Version
         id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
+        run: echo "version=$(npx changeset status --output=release.json && jq -r '.releases[0].newVersion' release.json && rm release.json)" >> "$GITHUB_OUTPUT"
 
-      - name: No Publish Build and Pack
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'no publish' }}
-        run: |
-          npm run build
-          npm pack
-
-      - name: No Publish Artifact Upload
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'no publish' }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: package-artifact
-          path: package-${{steps.package-version.outputs.current-version}}.tgz
-          retention-days: 1
-          overwrite: true
-
-      - name: Create Release Pull Request or Publish to npm
-        if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish') }}
+      - name: Create Release Pull Request or Publish to NPM
         id: changesets
         uses: changesets/action@v1
         with:
           version: npm run bump
           publish: npx changeset publish
-          commit: "chore(release): v${{steps.package-version.outputs.current-version}}"
+          commit: "chore(release): v${{ steps.package-version.outputs.version }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
