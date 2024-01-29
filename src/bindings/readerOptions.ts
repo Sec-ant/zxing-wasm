@@ -84,21 +84,18 @@ export interface ZXingReaderOptions {
    * If `true`, the Code-39 reader will try to read extended mode.
    *
    * @defaultValue `false`
-   * @deprecated upstream
    */
   tryCode39ExtendedMode: boolean;
   /**
    * Assume Code-39 codes employ a check digit and validate it.
    *
    * @defaultValue `false`
-   * @deprecated upstream
    */
   validateCode39CheckSum: boolean;
   /**
    * Assume ITF codes employ a GS1 check digit and validate it.
    *
    * @defaultValue `false`
-   * @deprecated upstream
    */
   validateITFCheckSum: boolean;
   /**
