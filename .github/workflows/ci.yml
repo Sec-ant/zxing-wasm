@@ -19,39 +19,51 @@ jobs:
       - name: Get PR number
         id: get-pr-number
         uses: mgaitan/gha-get-pr-number@main
+
       - name: Build Start Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           event-type: build-start
           client-payload: '{ "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
-      - uses: actions/checkout@v4
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Setup system libraries cache
         id: cache-system-libraries
         uses: actions/cache@v2
         with:
           path: ${{ env.EM_CACHE_FOLDER }}
           key: ${{ env.EM_VERSION }}-${{ runner.os }}
+
       - name: Setup emsdk cache
         uses: mymindstorm/setup-emsdk@v13
         with:
           version: ${{ env.EM_VERSION }}
           actions-cache-folder: ${{ env.EM_CACHE_FOLDER }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "latest"
           cache: "npm"
+
       - name: Get commit ID
         id: "commit-id"
         run: echo "id=$(git rev-parse --short ${{ github.event.pull_request.head.sha }})" >> $GITHUB_OUTPUT
+
       - name: Patch package.json
         run: npm pkg set version=${{ steps.commit-id.outputs.id }}
+
       - name: Install dependencies
         run: npm ci
+
       - name: Build
         run: npm run build:all
+
       - name: Pack
         run: npm pack
+
       - name: Release
         id: "release"
         uses: ncipollo/release-action@v1
@@ -61,6 +73,9 @@ jobs:
           tag: "pr-${{ steps.get-pr-number.outputs.number }}-test-package"
           prerelease: true
           allowUpdates: true
+          removeArtifacts: true
+          artifactContentType: application/gzip
+
       - name: Get release url
         id: release-url
         uses: frabert/replace-string-action@v2
@@ -68,11 +83,13 @@ jobs:
           pattern: "^(.+?/releases/)tag(/.+?)$"
           string: ${{ steps.release.outputs.html_url }}
           replace-with: "$1download$2/zxing-wasm-${{ steps.commit-id.outputs.id }}.tgz"
+
       - name: Build Finish Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           event-type: build-finish
           client-payload: '{ "release-url": "${{ steps.release-url.outputs.replaced }}", "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
+
       - name: Clean up
         if: failure()
         uses: peter-evans/repository-dispatch@v2

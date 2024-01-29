@@ -15,6 +15,7 @@ jobs:
       - name: Get PR number
         id: get-pr-number
         uses: mgaitan/gha-get-pr-number@main
+
       - name: Delete CI releases
         uses: dev-drprasad/delete-older-releases@v0.3.2
         with:
