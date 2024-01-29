@@ -35,10 +35,9 @@ export function zxingWriteResultToWriteResult(
       }),
       error: "",
     };
-  } else {
-    return {
-      image: null,
-      error: error,
-    };
   }
+  return {
+    image: null,
+    error: error,
+  };
 }

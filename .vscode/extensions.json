@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "biomejs.biome",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "ms-vscode.cpptools-extension-pack"

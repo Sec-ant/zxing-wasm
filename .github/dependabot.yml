@@ -20,3 +20,5 @@ updates:
       major-updates:
         update-types:
           - "major"
+    ignore:
+      - dependency-name: "@biomejs/biome"

@@ -5,15 +5,15 @@
  * @packageDocumentation
  */
 
-import zxingModuleFactory from "./zxing_writer.js";
+import type { WriterOptions } from "../bindings/index.js";
 import {
+  type ZXingModuleOverrides,
+  type ZXingWriterModule,
   getZXingModuleWithFactory,
   setZXingModuleOverridesWithFactory,
   writeBarcodeToImageFileWithFactory,
-  type ZXingWriterModule,
-  type ZXingModuleOverrides,
 } from "../core.js";
-import type { WriterOptions } from "../bindings/index.js";
+import zxingModuleFactory from "./zxing_writer.js";
 
 export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
   return getZXingModuleWithFactory(

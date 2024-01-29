@@ -1,5 +1,5 @@
-import { ZXingModule } from "../core.js";
-import { ZXingEnum } from "./enum.js";
+import type { ZXingModule } from "../core.js";
+import type { ZXingEnum } from "./enum.js";
 
 export const contentTypes = [
   "Text",

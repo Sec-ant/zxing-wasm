@@ -1,14 +1,14 @@
-import zxingModuleFactory from "./zxing_full.js";
+import type { ReaderOptions, WriterOptions } from "../bindings/index.js";
 import {
-  getZXingModuleWithFactory,
-  setZXingModuleOverridesWithFactory,
-  readBarcodesFromImageDataWithFactory,
-  readBarcodesFromImageFileWithFactory,
-  writeBarcodeToImageFileWithFactory,
   type ZXingFullModule,
   type ZXingModuleOverrides,
+  getZXingModuleWithFactory,
+  readBarcodesFromImageDataWithFactory,
+  readBarcodesFromImageFileWithFactory,
+  setZXingModuleOverridesWithFactory,
+  writeBarcodeToImageFileWithFactory,
 } from "../core.js";
-import type { ReaderOptions, WriterOptions } from "../bindings/index.js";
+import zxingModuleFactory from "./zxing_full.js";
 
 export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
   return getZXingModuleWithFactory(

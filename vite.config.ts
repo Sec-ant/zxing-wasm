@@ -1,5 +1,3 @@
-import { defineConfig } from "vite";
-import babel from "vite-plugin-babel";
 import type { PluginItem } from "@babel/core";
 import {
   binaryExpression,
@@ -10,6 +8,8 @@ import {
   variableDeclaration,
   variableDeclarator,
 } from "@babel/types";
+import { defineConfig } from "vite";
+import babel from "vite-plugin-babel";
 import { version } from "./package-lock.json";
 
 function emscriptenBun(): PluginItem {

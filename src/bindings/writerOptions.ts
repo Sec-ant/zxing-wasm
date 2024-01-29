@@ -1,8 +1,8 @@
-import { ZXingModule } from "../core.js";
-import { WriteInputBarcodeFormat } from "./barcodeFormat.js";
-import { CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
-import { WriteInputEccLevel } from "./eccLevel.js";
-import { ZXingEnum } from "./enum.js";
+import type { ZXingModule } from "../core.js";
+import type { WriteInputBarcodeFormat } from "./barcodeFormat.js";
+import { type CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
+import type { WriteInputEccLevel } from "./eccLevel.js";
+import type { ZXingEnum } from "./enum.js";
 
 /**
  * @internal

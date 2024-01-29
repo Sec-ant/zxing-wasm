@@ -1,10 +1,16 @@
-import { ZXingModule } from "../core.js";
-import { ReadInputBarcodeFormat, formatsToString } from "./barcodeFormat.js";
-import { Binarizer, binarizerToZXingEnum } from "./binarizer.js";
-import { CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
-import { EanAddOnSymbol, eanAddOnSymbolToZXingEnum } from "./eanAddOnSymbol.js";
-import { TextMode, textModeToZXingEnum } from "./textMode.js";
-import { ZXingEnum } from "./enum.js";
+import type { ZXingModule } from "../core.js";
+import {
+  type ReadInputBarcodeFormat,
+  formatsToString,
+} from "./barcodeFormat.js";
+import { type Binarizer, binarizerToZXingEnum } from "./binarizer.js";
+import { type CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
+import {
+  type EanAddOnSymbol,
+  eanAddOnSymbolToZXingEnum,
+} from "./eanAddOnSymbol.js";
+import type { ZXingEnum } from "./enum.js";
+import { type TextMode, textModeToZXingEnum } from "./textMode.js";
 
 /**
  * @internal
