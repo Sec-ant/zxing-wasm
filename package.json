@@ -39,7 +39,7 @@
   "homepage": "https://github.com/Sec-ant/zxing-wasm",
   "bugs": {
     "url": "https://github.com/Sec-ant/zxing-wasm/issues",
-    "email": "zzwu@zju.edu.cn"
+    "email": "zezhengwu@proton.me"
   },
   "keywords": [
     "qrcode",
@@ -54,23 +54,6 @@
     "name": "Ze-Zheng Wu"
   },
   "license": "MIT",
-  "copyFiles": [
-    {
-      "from": "./src/reader/*.wasm",
-      "to": "./dist/reader/"
-    },
-    {
-      "from": "./src/writer/*.wasm",
-      "to": "./dist/writer/"
-    },
-    {
-      "from": "./src/full/*.wasm",
-      "to": "./dist/full/"
-    }
-  ],
-  "copyFilesSettings": {
-    "whenFileExists": "overwrite"
-  },
   "scripts": {
     "update-hooks": "simple-git-hooks",
     "changeset": "changeset",
