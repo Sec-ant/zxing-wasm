@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 env:
-  EM_VERSION: 3.1.51
+  EM_VERSION: 3.1.52
   EM_CACHE_FOLDER: ".emsdk-cache"
 
 jobs:
@@ -31,13 +31,13 @@ jobs:
 
       - name: Setup system libraries cache
         id: cache-system-libraries
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ env.EM_CACHE_FOLDER }}
           key: ${{ env.EM_VERSION }}-${{ runner.os }}
 
       - name: Setup emsdk cache
-        uses: mymindstorm/setup-emsdk@v13
+        uses: mymindstorm/setup-emsdk@v14
         with:
           version: ${{ env.EM_VERSION }}
           actions-cache-folder: ${{ env.EM_CACHE_FOLDER }}

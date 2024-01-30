@@ -59,7 +59,7 @@
   "scripts": {
     "update-hooks": "simple-git-hooks",
     "changeset": "changeset",
-    "bump": "changeset version 2>/dev/null | grep . && npm i",
+    "bump": "changeset version 2>/dev/null | grep . && npm i; exit 0",
     "submodule:init": "git submodule update --init",
     "submodule:update": "git submodule update --remote",
     "cmake": "emcmake cmake -S src/cpp -B build",
