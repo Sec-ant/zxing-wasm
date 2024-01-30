@@ -1,4 +1,4 @@
-name: Auto Build CI
+name: Prerelease
 
 on:
   pull_request:
@@ -13,10 +13,10 @@ env:
   EM_CACHE_FOLDER: ".emsdk-cache"
 
 jobs:
-  build:
+  prerelease:
     runs-on: ubuntu-latest
     steps:
-      - name: Get PR number
+      - name: Get PR Number
         id: get-pr-number
         uses: mgaitan/gha-get-pr-number@main
 
@@ -26,63 +26,65 @@ jobs:
           event-type: build-start
           client-payload: '{ "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
 
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Setup system libraries cache
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Setup System Libraries Cache
         id: cache-system-libraries
         uses: actions/cache@v4
         with:
           path: ${{ env.EM_CACHE_FOLDER }}
           key: ${{ env.EM_VERSION }}-${{ runner.os }}
 
-      - name: Setup emsdk cache
+      - name: Setup EMSDK
         uses: mymindstorm/setup-emsdk@v14
         with:
           version: ${{ env.EM_VERSION }}
           actions-cache-folder: ${{ env.EM_CACHE_FOLDER }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: ".nvmrc"
-          cache: "npm"
-
-      - name: Get commit ID
-        id: "commit-id"
-        run: echo "id=$(git rev-parse --short ${{ github.event.pull_request.head.sha }})" >> $GITHUB_OUTPUT
+      - name: Get Commit ID
+        id: get-commit-id
+        run: |
+          echo "short-commit-id=$(git rev-parse --short ${{ github.event.pull_request.head.sha }})" >> $GITHUB_OUTPUT
+          echo "commit-id=$(git rev-parse ${{ github.event.pull_request.head.sha }})" >> $GITHUB_OUTPUT
 
       - name: Patch package.json
-        run: npm pkg set version=${{ steps.commit-id.outputs.id }}
+        run: npm pkg set version=${{ steps.get-commit-id.outputs.short-commit-id }}
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build:all
-
-      - name: Pack
-        run: npm pack
+      - name: Build and Pack
+        run: |
+          npm run build:all
+          npm pack
 
       - name: Release
-        id: "release"
+        id: release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "zxing-wasm-${{ steps.commit-id.outputs.id }}.tgz"
-          commit: ${{ github.head_ref || github.ref_name }}
-          tag: "pr-${{ steps.get-pr-number.outputs.number }}-test-package"
-          prerelease: true
           allowUpdates: true
-          removeArtifacts: true
+          artifacts: "zxing-wasm-${{ steps.get-commit-id.outputs.short-commit-id }}.tgz"
           artifactContentType: application/gzip
+          body: "This is a prerelease of zxing-wasm: ${{ steps.get-commit-id.outputs.short-commit-id }} from #${{ steps.get-pr-number.outputs.number }}."
+          commit: ${{ steps.get-commit-id.outputs.commit-id }}
+          tag: "pr-${{ steps.get-pr-number.outputs.number }}"
+          prerelease: true
+          name: "pr-${{ steps.get-pr-number.outputs.number }}"
+          removeArtifacts: true
 
-      - name: Get release url
+      - name: Get Release URL
         id: release-url
         uses: frabert/replace-string-action@v2
         with:
           pattern: "^(.+?/releases/)tag(/.+?)$"
           string: ${{ steps.release.outputs.html_url }}
-          replace-with: "$1download$2/zxing-wasm-${{ steps.commit-id.outputs.id }}.tgz"
+          replace-with: "$1download$2/zxing-wasm-${{ steps.get-commit-id.outputs.short-commit-id }}.tgz"
 
       - name: Build Finish Dispatch
         uses: peter-evans/repository-dispatch@v2
@@ -90,7 +92,7 @@ jobs:
           event-type: build-finish
           client-payload: '{ "release-url": "${{ steps.release-url.outputs.replaced }}", "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
 
-      - name: Clean up
+      - name: Clean Up
         if: failure()
         uses: peter-evans/repository-dispatch@v2
         with:

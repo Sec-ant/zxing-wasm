@@ -1,4 +1,4 @@
-name: Delete CI Releases
+name: Delete PR Prereleases
 
 on:
   pull_request:
@@ -9,18 +9,18 @@ permissions:
   contents: write
 
 jobs:
-  check-and-delete:
+  delete-pr-prereleases:
     runs-on: ubuntu-latest
     steps:
-      - name: Get PR number
+      - name: Get PR Number
         id: get-pr-number
         uses: mgaitan/gha-get-pr-number@main
 
-      - name: Delete CI releases
+      - name: Delete PR Prereleases
         uses: dev-drprasad/delete-older-releases@v0.3.2
         with:
           keep_latest: 0
           delete_tags: true
-          delete_tag_pattern: pr-${{ steps.get-pr-number.outputs.number }}-test-package
+          delete_tag_pattern: pr-${{ steps.get-pr-number.outputs.number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,4 +1,5 @@
-name: Dependabot auto-merge
+name: Dependabot Auto Merge
+
 on: pull_request
 
 permissions:
@@ -6,24 +7,19 @@ permissions:
   pull-requests: write
 
 jobs:
-  dependabot:
-    runs-on: ubuntu-latest
+  dependabot-auto-merge:
     if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
     steps:
-      - name: Dependabot metadata
+      - name: Dependabot Metadata
         id: metadata
         uses: dependabot/fetch-metadata@v1
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Enable auto-merge for Dependabot PRs
+      - name: Enable Auto Merge for Dependabot PRs
         if: ${{steps.metadata.outputs.dependency-group == 'minor-and-patch-updates'}}
-        run: gh pr merge --auto --rebase "$PR_URL"
+        run: gh pr merge --auto --rebase $PR_URL
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - name: Dispatch event
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          event-type: dependabot-merge
