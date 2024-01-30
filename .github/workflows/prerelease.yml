@@ -21,7 +21,7 @@ jobs:
         uses: mgaitan/gha-get-pr-number@main
 
       - name: Build Start Dispatch
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           event-type: build-start
           client-payload: '{ "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
@@ -87,14 +87,14 @@ jobs:
           replace-with: "$1download$2/zxing-wasm-${{ steps.get-commit-id.outputs.short-commit-id }}.tgz"
 
       - name: Build Finish Dispatch
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           event-type: build-finish
           client-payload: '{ "release-url": "${{ steps.release-url.outputs.replaced }}", "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
 
       - name: Clean Up
         if: failure()
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           event-type: build-fail
           client-payload: '{ "pr-number": ${{ steps.get-pr-number.outputs.number }} }'
