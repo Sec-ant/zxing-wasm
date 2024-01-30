@@ -47,10 +47,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Get Next Package Version
-        id: package-version
-        run: echo "version=$(npx changeset status --output=release.json && jq -r '.releases[0].newVersion // '$(npm pkg get version)'' release.json && rm release.json)" >> $GITHUB_OUTPUT
-
       - name: Get Commit ID
         if: ${{ github.event_name == 'workflow_dispatch' }}
         id: get-commit-id
@@ -58,37 +54,48 @@ jobs:
           echo "short-commit-id=$(git rev-parse --short $GITHUB_SHA)" >> $GITHUB_OUTPUT
           echo "commit-id=$(git rev-parse $GITHUB_SHA)" >> $GITHUB_OUTPUT
 
-      - name: Manual Bump, Build and Pack
+      - name: Get Package Name
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        id: get-package-name
+        run: echo "package-name=$(npm pkg get name | jq -r)" >> $GITHUB_OUTPUT
+
+      - name: Get Normalized Package Name
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        id: get-normalized-package-name
+        uses: frabert/replace-string-action@v2
+        with:
+          pattern: "^.*?([^/]+)$"
+          string: ${{ steps.get-package-name.outputs.package-name }}
+          replace-with: "$1"
+
+      - name: Patch package.json
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: npm pkg set version=${{ steps.get-commit-id.outputs.short-commit-id }}
+
+      - name: Build and Pack
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          npm run bump
-          npm run build:all
+          npm run prepublishOnly
           npm pack
 
-      - name: Delete Previous Draft Releases
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        uses: sgpublic/delete-release-action@v1.1
-        with:
-          release-drop: false
-          pre-release-drop: false
-          draft-drop: true
-          draft-drop-count: -1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Manual Draft Release
+      - name: Draft Release
         if: ${{ github.event_name == 'workflow_dispatch' }}
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          artifacts: "zxing-wasm-${{ steps.package-version.outputs.version }}.tgz"
+          artifacts: "${{ steps.get-normalized-package-name.outputs.replaced }}-${{ steps.get-commit-id.outputs.short-commit-id }}.tgz"
           artifactContentType: application/gzip
-          body: "This is a draft release of zxing-wasm: ${{ steps.get-commit-id.outputs.short-commit-id }}."
+          body: "This is a draft release of ${{ steps.get-package-name.outputs.package-name }}: ${{ steps.get-commit-id.outputs.short-commit-id }}."
           commit: ${{ steps.get-commit-id.outputs.commit-id }}
-          tag: "v${{ steps.package-version.outputs.version }}-draft.${{ steps.get-commit-id.outputs.short-commit-id }}"
+          tag: "draft"
           draft: true
-          name: "zxing-wasm v${{ steps.package-version.outputs.version }}-draft.${{ steps.get-commit-id.outputs.short-commit-id }}"
+          name: "draft"
           removeArtifacts: true
+
+      - name: Get Next Package Version
+        if: ${{ github.event_name != 'workflow_dispatch' }}
+        id: package-version
+        run: echo "version=$(npx changeset status --output=release.json && jq -r '.releases[0].newVersion // '$(npm pkg get version)'' release.json && rm release.json)" >> $GITHUB_OUTPUT
 
       - name: Create Release Pull Request or Publish to NPM
         if: ${{ github.event_name != 'workflow_dispatch' }}

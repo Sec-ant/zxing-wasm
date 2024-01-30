@@ -42,13 +42,13 @@ jobs:
             The test package is successfully built. Use the link below to test the packge:
 
             ```
-            ${{ github.event.client_payload.release-url }}
+            ${{ github.event.client_payload.prerelease-url }}
             ```
 
             For example, in `npm`:
 
             ```bash
-            npm i ${{ github.event.client_payload.release-url }}
+            npm i ${{ github.event.client_payload.prerelease-url }}
             ```
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           edit-mode: replace
