@@ -11,6 +11,7 @@ permissions:
   issues: write
   pull-requests: write
   packages: write
+  id-token: write
 
 env:
   EM_VERSION: 3.1.52
