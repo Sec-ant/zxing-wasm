@@ -56,6 +56,9 @@
     "name": "Ze-Zheng Wu"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "update-hooks": "simple-git-hooks",
     "changeset": "changeset",
