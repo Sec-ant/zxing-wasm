@@ -22,3 +22,5 @@ updates:
           - "major"
     ignore:
       - dependency-name: "@biomejs/biome"
+      - dependency-name: "vite"
+        versions: ["5.x"]

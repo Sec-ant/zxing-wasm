@@ -194,7 +194,7 @@ JsReadResults readBarcodesFromPixmap(
     {reinterpret_cast<uint8_t *>(bufferPtr),
      imgWidth,
      imgHeight,
-     ZXing::ImageFormat::RGBX},
+     ZXing::ImageFormat::RGBA},
     jsReaderOptions
   );
 }
