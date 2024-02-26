@@ -7,6 +7,13 @@ cd ../emsdk
 source ./emsdk_env.sh
 cd -
 
+cd ..
+curl -L -o cmake.sh https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-linux-x86_64.sh
+chmod a+x cmake.sh
+./cmake.sh --skip-license --exclude-subdir
+export PATH="$(pwd)/bin:$PATH"
+cd -
+
 git submodule update --init
 emcmake cmake -S src/cpp -B build
 cmake --build build -j$(($(nproc) - 1))
