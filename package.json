@@ -58,6 +58,7 @@
     "access": "public"
   },
   "scripts": {
+    "install:ci": "npm ci && ./scripts/prepare.sh",
     "update-hooks": "simple-git-hooks",
     "changeset": "changeset",
     "bump": "changeset version 2>/dev/null | grep . && npm i; exit 0",
