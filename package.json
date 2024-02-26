@@ -92,7 +92,8 @@
     "prepublishOnly": "npm run build:all",
     "ncu": "ncu",
     "postncu": "npm i",
-    "bump-biome": "npm i @biomejs/biome@latest --save-exact"
+    "bump-biome:latest": "npm i -DE @biomejs/biome@latest",
+    "bump-biome:nightly": "npm i -DE @biomejs/biome@nightly"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
