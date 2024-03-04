@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "zxing-wasm": "1.2.4"
+  },
+  "changesets": []
+}
