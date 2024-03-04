@@ -4,5 +4,5 @@
   "initialVersions": {
     "zxing-wasm": "1.2.4"
   },
-  "changesets": []
+  "changesets": ["grumpy-icons-crash"]
 }

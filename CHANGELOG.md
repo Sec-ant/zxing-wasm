@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.5-rc.0
+
+### Patch Changes
+
+- 4358969: Fix WebAssembly instantiation issue in electron.
+
 ## 1.2.4
 
 ### Patch Changes
