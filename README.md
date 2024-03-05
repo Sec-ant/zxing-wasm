@@ -1,10 +1,10 @@
 # zxing-wasm
 
-[![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits (npm scoped)](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![Netlify Status](https://api.netlify.com/api/v1/badges/743dfd74-1572-49fb-a758-c1840e174366/deploy-status?branch=main)](https://app.netlify.com/sites/zxing-wasm/deploys)
+[![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits (npm scoped)](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![deploy status](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml/badge.svg)](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml)
 
 [ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES/CJS module with types. Read or write barcodes in various JS runtimes: web, node, bun and deno.
 
-Visit [this online demo](https://zxing-wasm-demo.netlify.app/) to quickly explore its basic functions. It works best on the latest chromium browsers.
+Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic functions. It works best on the latest chromium browsers.
 
 ## Build
 
@@ -29,11 +29,11 @@ npm i zxing-wasm
 
 ## Documentation
 
-https://zxing-wasm.netlify.app/
+https://zxing-wasm.deno.dev/
 
 ## Demo
 
-Demo page: https://zxing-wasm-demo.netlify.app/
+Demo page: https://zxing-wasm-demo.deno.dev/
 
 Demo source: https://github.com/Sec-ant/zxing-wasm-demo
 
@@ -97,17 +97,17 @@ Apart from ES and CJS modules, this package also ships IIFE scripts. The registe
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/iife/writer/index.js"></script>
 ```
 
-### [`readBarcodesFromImageFile`](https://zxing-wasm.netlify.app/functions/full.readBarcodesFromImageFile.html) and [`readBarcodesFromImageData`](https://zxing-wasm.netlify.app/functions/full.readBarcodesFromImageData.html)
+### [`readBarcodesFromImageFile`](https://zxing-wasm.deno.dev/functions/full.readBarcodesFromImageFile.html) and [`readBarcodesFromImageData`](https://zxing-wasm.deno.dev/functions/full.readBarcodesFromImageData.html)
 
 These 2 functions are for reading barcodes.
 
-[`readBarcodesFromImageFile`](https://zxing-wasm.netlify.app/functions/full.readBarcodesFromImageFile.html) accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob) or an image [`File`](https://developer.mozilla.org/docs/Web/API/File) as the first input. They're encoded images, e.g. `.png` `.jpg` files.
+[`readBarcodesFromImageFile`](https://zxing-wasm.deno.dev/functions/full.readBarcodesFromImageFile.html) accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob) or an image [`File`](https://developer.mozilla.org/docs/Web/API/File) as the first input. They're encoded images, e.g. `.png` `.jpg` files.
 
-[`readBarcodesFromImageData`](https://zxing-wasm.netlify.app/functions/full.readBarcodesFromImageData.html) accepts an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as the first input. They're raw pixels that usually acquired from [`<canvas>`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) or related APIs.
+[`readBarcodesFromImageData`](https://zxing-wasm.deno.dev/functions/full.readBarcodesFromImageData.html) accepts an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as the first input. They're raw pixels that usually acquired from [`<canvas>`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) or related APIs.
 
-Both of these 2 functions optionally accept the same second input: [`ReaderOptions`](https://zxing-wasm.netlify.app/interfaces/full.ReaderOptions.html).
+Both of these 2 functions optionally accept the same second input: [`ReaderOptions`](https://zxing-wasm.deno.dev/interfaces/full.ReaderOptions.html).
 
-The return result of these 2 functions is a `Promise` of an array of [`ReadResult`](https://zxing-wasm.netlify.app/interfaces/full.ReadResult.html)s.
+The return result of these 2 functions is a `Promise` of an array of [`ReadResult`](https://zxing-wasm.deno.dev/interfaces/full.ReadResult.html)s.
 
 e.g.
 
@@ -158,11 +158,11 @@ const imageDataReadResults = await readBarcodesFromImageData(
 console.log(imageDataReadResults[0].text); // Hello world!
 ```
 
-### [`writeBarcodeToImageFile`](https://zxing-wasm.netlify.app/functions/full.writeBarcodeToImageFile.html)
+### [`writeBarcodeToImageFile`](https://zxing-wasm.deno.dev/functions/full.writeBarcodeToImageFile.html)
 
-This function is used to write barcodes. The first argument of this function is a text string to be encoded and the optional second argument is an [`WriterOptions`](https://zxing-wasm.netlify.app/interfaces/full.WriterOptions.html).
+This function is used to write barcodes. The first argument of this function is a text string to be encoded and the optional second argument is an [`WriterOptions`](https://zxing-wasm.deno.dev/interfaces/full.WriterOptions.html).
 
-The return result of this function is a `Promise` of a [`WriteResult`](https://zxing-wasm.netlify.app/interfaces/full.WriteResult.html).
+The return result of this function is a `Promise` of a [`WriteResult`](https://zxing-wasm.deno.dev/interfaces/full.WriteResult.html).
 
 e.g.
 
@@ -189,7 +189,7 @@ console.log(writeOutput.image);
 
 When using this package, the `.wasm` binary needs to be served along with the JS glue code. In order to provide a smooth dev experience, the serve path is automatically assigned the [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) url upon build.
 
-If you would like to change the serve path (to one of your local network hosts, some other CDNs, or just Base64 encoded data URIs), please use [`setZXingModuleOverrides`](https://zxing-wasm.netlify.app/functions/full.setZXingModuleOverrides.html) to override the [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function in advance. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#affecting-execution) that can affect the code execution of the `Module` object during its lifecycles.
+If you would like to change the serve path (to one of your local network hosts, some other CDNs, or just Base64 encoded data URIs), please use [`setZXingModuleOverrides`](https://zxing-wasm.deno.dev/functions/full.setZXingModuleOverrides.html) to override the [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function in advance. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#affecting-execution) that can affect the code execution of the `Module` object during its lifecycles.
 
 e.g.
 
@@ -210,7 +210,7 @@ setZXingModuleOverrides({
 const writeOutput = await writeBarcodeToImageFile("Hello world!");
 ```
 
-The wasm binary won't be fetched or instantiated unless a [read](#readbarcodesfromimagefile-and-readbarcodesfromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once given the same ([`Object.is`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/is)) [ZXingModuleOverrides](https://zxing-wasm.netlify.app/types/full.ZXingModuleOverrides). If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use [`getZXingModule`](https://zxing-wasm.netlify.app/functions/full.getZXingModule). This function will also return a `Promise` that resolves to a [`ZXingModule`](https://zxing-wasm.netlify.app/types/full.ZXingModule).
+The wasm binary won't be fetched or instantiated unless a [read](#readbarcodesfromimagefile-and-readbarcodesfromimagedata) or [write](#writebarcodetoimagefile) function is firstly called, and will only be instantiated once given the same ([`Object.is`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/is)) [ZXingModuleOverrides](https://zxing-wasm.deno.dev/types/full.ZXingModuleOverrides). If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use [`getZXingModule`](https://zxing-wasm.deno.dev/functions/full.getZXingModule). This function will also return a `Promise` that resolves to a [`ZXingModule`](https://zxing-wasm.deno.dev/types/full.ZXingModule).
 
 ```ts
 import { getZXingModule } from "zxing-wasm";
@@ -226,7 +226,7 @@ const zxingModulePromise2 = getZXingModule();
 console.log(zxingModulePromise1 === zxingModulePromise2); // true
 ```
 
-[`getZXingModule`](https://zxing-wasm.netlify.app/functions/full.getZXingModule) can also optionally accept a [`ZXingModuleOverrides`](https://zxing-wasm.netlify.app/types/full.ZXingModuleOverrides.html) argument.
+[`getZXingModule`](https://zxing-wasm.deno.dev/functions/full.getZXingModule) can also optionally accept a [`ZXingModuleOverrides`](https://zxing-wasm.deno.dev/types/full.ZXingModuleOverrides.html) argument.
 
 ```ts
 import { getZXingModule } from "zxing-wasm";
