@@ -96,26 +96,31 @@
     "bump-biome:nightly": "npm i -DE @biomejs/biome@nightly"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/types": "^7.23.9",
-    "@biomejs/biome": "1.5.3-nightly.69f9031",
+    "@babel/core": "^7.24.0",
+    "@babel/types": "^7.24.0",
+    "@biomejs/biome": "1.6.0",
     "@changesets/cli": "^2.27.1",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^20.11.20",
+    "@types/node": "^20.11.25",
     "concurrently": "^8.2.2",
     "copy-files-from-to": "^3.9.1",
     "lint-staged": "^15.2.2",
     "npm-check-updates": "^16.14.15",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "simple-git-hooks": "^2.9.0",
+    "simple-git-hooks": "^2.10.0",
     "tsx": "^4.7.1",
-    "typedoc": "^0.25.8",
-    "typescript": "^5.3.3",
-    "vite": "^5.1.4",
+    "typedoc": "^0.25.11",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5",
     "vite-plugin-babel": "^1.2.0"
   },
   "dependencies": {
     "@types/emscripten": "^1.39.10"
+  },
+  "overrides": {
+    "typedoc": {
+      "typescript": "$typescript"
+    }
   }
 }

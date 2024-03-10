@@ -21,9 +21,6 @@
       },
       "style": {
         "noNonNullAssertion": "off"
-      },
-      "nursery": {
-        "useImportType": "error"
       }
     }
   },
@@ -35,10 +32,9 @@
   },
   "overrides": [
     {
-      "include": ["*.jsonc"],
+      "include": ["*.json"],
       "json": {
         "parser": {
-          "allowComments": true,
           "allowTrailingCommas": true
         }
       }

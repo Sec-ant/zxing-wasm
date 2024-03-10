@@ -4,12 +4,12 @@
     "module": "NodeNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": ["emscripten"],
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "NodeNext"
   },
   "include": ["./src"],
   "references": [
     {
-      "path": "./tsconfig.node.json",
-    },
-  ],
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
