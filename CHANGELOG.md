@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.6
+
+### Patch Changes
+
+- a2339d3: Bump zxing-cpp to [`b58682b`](https://github.com/zxing-cpp/zxing-cpp/commit/b58682b90ff082cee8d946c73f8852574478fb09).
+
 ## 1.2.5
 
 ### Patch Changes
