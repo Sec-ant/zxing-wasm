@@ -2,5 +2,5 @@
   "*.{js,ts,cjs,mjs,cts,mts,d.cts,d.mts,jsx,tsx,json,jsonc}": [
     "biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true"
   ],
-  "*.{md,yml,yaml,css,html}": ["prettier --write"]
+  "*.{md,yml,yaml,css,html}": ["pretty-quick --staged"]
 }
