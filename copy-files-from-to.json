@@ -11,6 +11,10 @@
     {
       "from": "./src/full/*.wasm",
       "to": "./dist/full/"
+    },
+    {
+      "from": "./src/stream/media-track-shims.d.ts",
+      "to": "./dist/"
     }
   ],
   "copyFilesSettings": {

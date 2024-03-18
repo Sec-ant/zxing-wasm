@@ -33,6 +33,12 @@
           "allowTrailingCommas": true
         }
       }
+    },
+    {
+      "include": ["react/components"],
+      "formatter": {
+        "lineWidth": 120
+      }
     }
   ]
 }

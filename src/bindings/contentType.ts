@@ -25,5 +25,5 @@ export function contentTypeToZXingEnum<T extends "reader" | "full">(
 }
 
 export function zxingEnumToContentType(zxingEnum: ZXingEnum): ContentType {
-  return contentTypes[zxingEnum.value];
+  return contentTypes[zxingEnum.value]!;
 }

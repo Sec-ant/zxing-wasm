@@ -1,6 +1,6 @@
 /**
- * The writer part API of this package is subject to change a lot.
- * Please track the status of [this issue](https://github.com/zxing-cpp/zxing-cpp/issues/332).
+ * The writer part API of this package is subject to change a lot. Please track the status of [this
+ * issue](https://github.com/zxing-cpp/zxing-cpp/issues/332).
  *
  * @packageDocumentation
  */
@@ -45,6 +45,6 @@ export async function writeBarcodeToImageFile(
 export * from "../bindings/exposedWriterBindings.js";
 export {
   purgeZXingModule,
-  type ZXingWriterModule,
   type ZXingModuleOverrides,
+  type ZXingWriterModule,
 } from "../core.js";
