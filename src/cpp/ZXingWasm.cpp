@@ -75,17 +75,13 @@ struct JsReadResult {
 
 using JsReadResults = std::vector<JsReadResult>;
 
-JsReadResults readBarcodes(
-  ZXing::ImageView imageView, const JsReaderOptions &jsReaderOptions
-) {
+JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &jsReaderOptions) {
   thread_local const val Uint8Array = val::global("Uint8Array");
 
   try {
 
     ZXing::ReaderOptions readerOptions;
-    readerOptions.setFormats(
-      ZXing::BarcodeFormatsFromString(jsReaderOptions.formats)
-    );
+    readerOptions.setFormats(ZXing::BarcodeFormatsFromString(jsReaderOptions.formats));
     readerOptions.setTryHarder(jsReaderOptions.tryHarder);
     readerOptions.setTryRotate(jsReaderOptions.tryRotate);
     readerOptions.setTryInvert(jsReaderOptions.tryInvert);
@@ -96,14 +92,10 @@ JsReadResults readBarcodes(
     readerOptions.setDownscaleFactor(jsReaderOptions.downscaleFactor);
     readerOptions.setMinLineCount(jsReaderOptions.minLineCount);
     readerOptions.setMaxNumberOfSymbols(jsReaderOptions.maxNumberOfSymbols);
-    readerOptions.setTryCode39ExtendedMode(jsReaderOptions.tryCode39ExtendedMode
-    );
-    readerOptions.setValidateCode39CheckSum(
-      jsReaderOptions.validateCode39CheckSum
-    );
+    readerOptions.setTryCode39ExtendedMode(jsReaderOptions.tryCode39ExtendedMode);
+    readerOptions.setValidateCode39CheckSum(jsReaderOptions.validateCode39CheckSum);
     readerOptions.setValidateITFCheckSum(jsReaderOptions.validateITFCheckSum);
-    readerOptions.setReturnCodabarStartEnd(jsReaderOptions.returnCodabarStartEnd
-    );
+    readerOptions.setReturnCodabarStartEnd(jsReaderOptions.returnCodabarStartEnd);
     readerOptions.setReturnErrors(jsReaderOptions.returnErrors);
     readerOptions.setEanAddOnSymbol(jsReaderOptions.eanAddOnSymbol);
     readerOptions.setTextMode(jsReaderOptions.textMode);
@@ -121,12 +113,8 @@ JsReadResults readBarcodes(
         {.isValid = result.isValid(),
          .error = ZXing::ToString(result.error()),
          .format = ZXing::ToString(result.format()),
-         .bytes = std::move(
-           Uint8Array.new_(typed_memory_view(bytes.size(), bytes.data()))
-         ),
-         .bytesECI = std::move(
-           Uint8Array.new_(typed_memory_view(bytesECI.size(), bytesECI.data()))
-         ),
+         .bytes = std::move(Uint8Array.new_(typed_memory_view(bytes.size(), bytes.data()))),
+         .bytesECI = std::move(Uint8Array.new_(typed_memory_view(bytesECI.size(), bytesECI.data()))),
          .text = result.text(),
          .eccLevel = result.ecLevel(),
          .contentType = result.contentType(),
@@ -146,56 +134,33 @@ JsReadResults readBarcodes(
     }
     return jsResults;
   } catch (const std::exception &e) {
-    return {
-      {.error = e.what(),
-       .bytes = std::move(Uint8Array.new_()),
-       .bytesECI = std::move(Uint8Array.new_())}
-    };
+    return {{.error = e.what(), .bytes = std::move(Uint8Array.new_()), .bytesECI = std::move(Uint8Array.new_())}};
   } catch (...) {
-    return {
-      {.error = "Unknown error",
-       .bytes = std::move(Uint8Array.new_()),
-       .bytesECI = std::move(Uint8Array.new_())}
+    return {{.error = "Unknown error", .bytes = std::move(Uint8Array.new_()), .bytesECI = std::move(Uint8Array.new_())}
     };
   }
   return {};
 }
 
-JsReadResults readBarcodesFromImage(
-  int bufferPtr, int bufferLength, const JsReaderOptions &jsReaderOptions
-) {
+JsReadResults readBarcodesFromImage(int bufferPtr, int bufferLength, const JsReaderOptions &jsReaderOptions) {
   int width, height, channels;
   std::unique_ptr<stbi_uc, void (*)(void *)> buffer(
     stbi_load_from_memory(
-      reinterpret_cast<const unsigned char *>(bufferPtr),
-      bufferLength,
-      &width,
-      &height,
-      &channels,
-      1
+      reinterpret_cast<const unsigned char *>(bufferPtr), bufferLength, &width, &height, &channels, 1
     ),
     stbi_image_free
   );
   if (buffer == nullptr) {
     return {};
   }
-  return readBarcodes(
-    {buffer.get(), width, height, ZXing::ImageFormat::Lum}, jsReaderOptions
-  );
+  return readBarcodes({buffer.get(), width, height, ZXing::ImageFormat::Lum}, jsReaderOptions);
 }
 
 JsReadResults readBarcodesFromPixmap(
-  int bufferPtr,
-  int imgWidth,
-  int imgHeight,
-  const JsReaderOptions &jsReaderOptions
+  int bufferPtr, int imgWidth, int imgHeight, const JsReaderOptions &jsReaderOptions
 ) {
   return readBarcodes(
-    {reinterpret_cast<uint8_t *>(bufferPtr),
-     imgWidth,
-     imgHeight,
-     ZXing::ImageFormat::RGBA},
-    jsReaderOptions
+    {reinterpret_cast<uint8_t *>(bufferPtr), imgWidth, imgHeight, ZXing::ImageFormat::RGBA}, jsReaderOptions
   );
 }
 
@@ -217,9 +182,7 @@ struct JsWriteResult {
   std::string error;
 };
 
-JsWriteResult writeBarcodeToImage(
-  std::wstring text, const JsWriterOptions &jsWriterOptions
-) {
+JsWriteResult writeBarcodeToImage(std::wstring text, const JsWriterOptions &jsWriterOptions) {
   try {
     auto format = ZXing::BarcodeFormatFromString(jsWriterOptions.format);
     if (format == ZXing::BarcodeFormat::None) {
@@ -243,14 +206,10 @@ JsWriteResult writeBarcodeToImage(
       writer.setEccLevel(eccLevel);
     }
 
-    auto buffer = ZXing::ToMatrix<uint8_t>(
-      writer.encode(text, jsWriterOptions.width, jsWriterOptions.height)
-    );
+    auto buffer = ZXing::ToMatrix<uint8_t>(writer.encode(text, jsWriterOptions.width, jsWriterOptions.height));
 
     int len;
-    uint8_t *bytes = stbi_write_png_to_mem(
-      buffer.data(), 0, buffer.width(), buffer.height(), 1, &len
-    );
+    uint8_t *bytes = stbi_write_png_to_mem(buffer.data(), 0, buffer.width(), buffer.height(), 1, &len);
 
     if (bytes == nullptr) {
       return {.error = "Unknown error"};
@@ -302,9 +261,7 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .value("ISO15434", ZXing::ContentType::ISO15434)
     .value("UnknownECI", ZXing::ContentType::UnknownECI);
 
-  value_object<ZXing::PointI>("Point")
-    .field("x", &ZXing::PointI::x)
-    .field("y", &ZXing::PointI::y);
+  value_object<ZXing::PointI>("Point").field("x", &ZXing::PointI::x).field("y", &ZXing::PointI::y);
 
   value_object<ZXing::Position>("Position")
     .field("topLeft", emscripten::index<0>())

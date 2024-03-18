@@ -1,4 +1,4 @@
-ColumnLimit: 80
+ColumnLimit: 120
 PenaltyReturnTypeOnItsOwnLine: 200
 ContinuationIndentWidth: 2
 IndentWidth: 2

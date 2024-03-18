@@ -10,11 +10,11 @@ zxing_add_package_stb()
 set(CMAKE_CXX_STANDARD 20)
 
 # Build options
-option(BUILD_WRITERS "Build with writer support (encoders)" ON)
-option(BUILD_READERS "Build with reader support (decoders)" ON)
+option(ZXING_WRITERS "Build with writer support (encoders)" ON)
+option(ZXING_READERS "Build with reader support (decoders)" ON)
 
 # Build environment
-set(BUILD_EMSCRIPTEN_ENVIRONMENT "web,worker" CACHE STRING "Optimize build for given emscripten runtime environment (web/node/shell/worker)")
+set(ZXING_EMSCRIPTEN_ENVIRONMENT "web,worker" CACHE STRING "Optimize build for given emscripten runtime environment (web/node/shell/worker)")
 
 # Default build type
 if(NOT CMAKE_BUILD_TYPE)
@@ -29,7 +29,7 @@ add_definitions("-s DISABLE_EXCEPTION_CATCHING=0")
 # Set linker flags
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -lembind \
-  -s ENVIRONMENT=${BUILD_EMSCRIPTEN_ENVIRONMENT} \
+  -s ENVIRONMENT=${ZXING_EMSCRIPTEN_ENVIRONMENT} \
   -s DISABLE_EXCEPTION_CATCHING=0 \
   -s FILESYSTEM=0 \
   -s EXPORT_ES6=1 \
@@ -43,7 +43,7 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
 )
 
 # Build targets
-if(BUILD_READERS AND BUILD_WRITERS)
+if(ZXING_READERS AND ZXING_WRITERS)
   add_executable(zxing_full ZXingWasm.cpp)
   target_compile_definitions(zxing_full PRIVATE READER WRITER)
   target_link_libraries(zxing_full ZXing::ZXing stb::stb)
@@ -51,7 +51,7 @@ if(BUILD_READERS AND BUILD_WRITERS)
                         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../full")
 endif()
 
-if(BUILD_READERS)
+if(ZXING_READERS)
   add_executable(zxing_reader ZXingWasm.cpp)
   target_compile_definitions(zxing_reader PRIVATE READER)
   target_link_libraries(zxing_reader ZXing::ZXing stb::stb)
@@ -59,7 +59,7 @@ if(BUILD_READERS)
                         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../reader")
 endif()
 
-if(BUILD_WRITERS)
+if(ZXING_WRITERS)
   add_executable(zxing_writer ZXingWasm.cpp)
   target_compile_definitions(zxing_writer PRIVATE WRITER)
   target_link_libraries(zxing_writer ZXing::ZXing stb::stb)

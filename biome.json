@@ -2,17 +2,12 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["zxing-cpp", "docs", "dist", "build"]
-  },
-  "organizeImports": {
-    "enabled": true
+    "ignore": ["zxing-cpp"]
   },
   "formatter": {
-    "enabled": true,
     "indentStyle": "space"
   },
   "linter": {
-    "enabled": true,
     "rules": {
       "recommended": true,
       "suspicious": {
