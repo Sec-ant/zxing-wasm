@@ -30,7 +30,35 @@
     },
     "./reader/zxing_reader.wasm": "./dist/reader/zxing_reader.wasm",
     "./writer/zxing_writer.wasm": "./dist/writer/zxing_writer.wasm",
-    "./full/zxing_full.wasm": "./dist/full/zxing_full.wasm"
+    "./full/zxing_full.wasm": "./dist/full/zxing_full.wasm",
+    "./scanner": {
+      "import": "./dist/es/scanner/index.js",
+      "require": "./dist/cjs/scanner/index.js",
+      "default": "./dist/es/scanner/index.js"
+    },
+    "./stream": {
+      "import": "./dist/es/stream/index.js",
+      "require": "./dist/cjs/stream/index.js",
+      "default": "./dist/es/stream/index.js"
+    },
+    "./media-track-shims": {
+      "types": "./dist/media-track-shims.d.ts"
+    },
+    "./react": {
+      "import": "./dist/es/react/index.js",
+      "require": "./dist/cjs/react/index.js",
+      "default": "./dist/es/react/index.js"
+    },
+    "./react/components": {
+      "import": "./dist/es/react/components/index.js",
+      "require": "./dist/cjs/react/components/index.js",
+      "default": "./dist/es/react/components/index.js"
+    },
+    "./react/hooks": {
+      "import": "./dist/es/react/hooks/index.js",
+      "require": "./dist/cjs/react/hooks/index.js",
+      "default": "./dist/es/react/hooks/index.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -66,7 +94,7 @@
     "submodule:update": "git submodule update --remote",
     "cmake": "emcmake cmake -S src/cpp -B build",
     "build:wasm": "cmake --build build -j$(($(nproc) - 1))",
-    "copy:wasm": "copy-files-from-to",
+    "copy": "copy-files-from-to",
     "docs:dev": "conc \"npm:docs:preview\" \"typedoc --watch --excludeInternal\"",
     "docs:build": "typedoc --excludeInternal",
     "docs:preview": "vite preview --outDir ./docs",
@@ -84,9 +112,9 @@
     "build:cjs": "tsx ./scripts/build-cjs.ts",
     "build:iife": "tsx ./scripts/build-iife.ts",
     "build": "conc \"npm:build:es\" \"npm:build:cjs\" \"npm:build:iife\"",
-    "postbuild:es": "tsc --declarationDir ./dist/es",
-    "postbuild:cjs": "tsc --declarationDir ./dist/cjs",
-    "postbuild": "conc \"npm:copy:wasm\" \"npm:docs:build\"",
+    "postbuild:es": "tsc --project ./tsconfig.production.json --declarationDir ./dist/es",
+    "postbuild:cjs": "tsc --project ./tsconfig.production.json --declarationDir ./dist/cjs",
+    "postbuild": "conc \"npm:copy\" \"npm:docs:build\"",
     "build:all": "npm run submodule:init && npm run cmake && npm run build:wasm && npm run build",
     "preview": "vite preview",
     "prepublishOnly": "npm run build:all",
@@ -102,12 +130,18 @@
     "@changesets/cli": "^2.27.1",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^20.11.28",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@vanilla-extract/css": "^1.14.1",
+    "@vanilla-extract/vite-plugin": "^4.0.4",
     "concurrently": "^8.2.2",
     "copy-files-from-to": "^3.9.1",
     "lint-staged": "^15.2.2",
     "npm-check-updates": "^16.14.17",
     "prettier": "^3.2.5",
     "pretty-quick": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.11.0",
     "tsx": "^4.7.1",
@@ -117,7 +151,12 @@
     "vite-plugin-babel": "^1.2.0"
   },
   "dependencies": {
-    "@types/emscripten": "^1.39.10"
+    "@types/emscripten": "^1.39.10",
+    "just-compare": "^2.3.0",
+    "sha1-uint8array": "^0.10.7",
+    "type-fest": "^4.10.2",
+    "webrtc-adapter": "^8.2.3",
+    "zustand": "^4.5.1"
   },
   "overrides": {
     "typedoc": {

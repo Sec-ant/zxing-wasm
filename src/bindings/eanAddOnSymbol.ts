@@ -20,5 +20,5 @@ export function eanAddOnSymbolToZXingEnum<T extends "reader" | "full">(
 export function zxingEnumToEanAddOnSymbol(
   zxingEnum: ZXingEnum,
 ): EanAddOnSymbol {
-  return eanAddOnSymbols[zxingEnum.value];
+  return eanAddOnSymbols[zxingEnum.value]!;
 }

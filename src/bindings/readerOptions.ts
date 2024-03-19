@@ -44,26 +44,27 @@ export interface ZXingReaderOptions {
   tryDownscale: boolean;
   binarizer: ZXingEnum;
   /**
-   * Set to `true` if the input contains nothing but a single perfectly aligned barcode (usually generated images).
+   * Set to `true` if the input contains nothing but a single perfectly aligned barcode (usually
+   * generated images).
    *
    * @defaultValue `false`
    */
   isPure: boolean;
   /**
-   * Image size ( min(width, height) ) threshold at which to start downscaled scanning
-   * **WARNING**: this API is experimental and may change / disappear
+   * Image size ( min(width, height) ) threshold at which to start downscaled scanning **WARNING**:
+   * this API is experimental and may change / disappear
    *
-   * @experimental
    * @defaultValue `500`
+   * @experimental
    * @see {@link tryDownscale | `tryDownscale`} {@link downscaleFactor | `downscaleFactor`}
    */
   downscaleThreshold: number;
   /**
-   * Scale factor to use during downscaling, meaningful values are `2`, `3` and `4`.
-   * **WARNING**: this API is experimental and may change / disappear
+   * Scale factor to use during downscaling, meaningful values are `2`, `3` and `4`. **WARNING**:
+   * this API is experimental and may change / disappear
    *
-   * @experimental
    * @defaultValue `3`
+   * @experimental
    * @see {@link tryDownscale | `tryDownscale`} {@link downscaleThreshold | `downscaleThreshold`}
    */
   downscaleFactor: number;
@@ -74,8 +75,8 @@ export interface ZXingReaderOptions {
    */
   minLineCount: number;
   /**
-   * The maximum number of symbols / barcodes to detect / look for in the image.
-   * The upper limit of this number is 255.
+   * The maximum number of symbols / barcodes to detect / look for in the image. The upper limit of
+   * this number is 255.
    *
    * @defaultValue `255`
    */
@@ -132,32 +133,27 @@ export interface ReaderOptions
    * A set of {@link ReadInputBarcodeFormat | `ReadInputBarcodeFormat`}s that should be searched for.
    * An empty list `[]` indicates all supported formats.
    *
-   * Supported values in this list are:
-   * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
-   * `"DataBar"`, `"DataBarExpanded"`, `"DataMatrix"`, `"DXFilmEdge"`,
-   * `"EAN-13"`, `"EAN-8"`, `"ITF"`, `"Linear-Codes"`, `"Matrix-Codes"`,
-   * `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
+   * Supported values in this list are: `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
+   * `"DataBar"`, `"DataBarExpanded"`, `"DataMatrix"`, `"DXFilmEdge"`, `"EAN-13"`, `"EAN-8"`,
+   * `"ITF"`, `"Linear-Codes"`, `"Matrix-Codes"`, `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`,
+   * `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
    *
    * @defaultValue `[]`
    */
   formats?: ReadInputBarcodeFormat[];
   /**
-   * Algorithm to use for the grayscale to binary transformation.
-   * The difference is how to get to a threshold value T
-   * which results in a bit value R = L <= T.
+   * Algorithm to use for the grayscale to binary transformation. The difference is how to get to a
+   * threshold value T which results in a bit value R = L <= T.
    *
    * - `"LocalAverage"`
    *
    *   T = average of neighboring pixels for matrix and GlobalHistogram for linear
-   *
    * - `"GlobalHistogram"`
    *
    *   T = valley between the 2 largest peaks in the histogram (per line in linear case)
-   *
    * - `"FixedThreshold"`
    *
    *   T = 127
-   *
    * - `"BoolCast"`
    *
    *   T = 0, fastest possible
@@ -166,16 +162,15 @@ export interface ReaderOptions
    */
   binarizer?: Binarizer;
   /**
-   * Specify whether to ignore, read or require EAN-2 / 5 add-on symbols while scanning EAN / UPC codes.
+   * Specify whether to ignore, read or require EAN-2 / 5 add-on symbols while scanning EAN / UPC
+   * codes.
    *
    * - `"Ignore"`
    *
    *   Ignore any Add-On symbol during read / scan
-   *
    * - `"Read"`
    *
    *   Read EAN-2 / EAN-5 Add-On symbol if found
-   *
    * - `"Require"`
    *
    *   Require EAN-2 / EAN-5 Add-On symbol to be present
@@ -184,41 +179,43 @@ export interface ReaderOptions
    */
   eanAddOnSymbol?: EanAddOnSymbol;
   /**
-   * Specifies the `TextMode` that controls the result of {@link ReadResult.text | `ReadResult.text`}.
+   * Specifies the `TextMode` that controls the result of
+   * {@link ReadResult.text | `ReadResult.text`}.
    *
    * - `"Plain"`
    *
-   *   {@link ReadResult.bytes | `ReadResult.bytes`} transcoded to unicode based on ECI info or guessed character set
-   *
+   *   {@link ReadResult.bytes | `ReadResult.bytes`} transcoded to unicode based on ECI info or guessed
+   *   character set
    * - `"ECI"`
    *
-   *   Standard content following the ECI protocol with every character set ECI segment transcoded to unicode
-   *
+   *   Standard content following the ECI protocol with every character set ECI segment transcoded to
+   *   unicode
    * - `"HRI"`
    *
    *   Human Readable Interpretation (dependent on the ContentType)
-   *
    * - `"Hex"`
    *
    *   {@link ReadResult.bytes | `ReadResult.bytes`} transcoded to ASCII string of HEX values
-   *
    * - `"Escaped"`
    *
-   *   Escape non-graphical characters in angle brackets (e.g. ASCII `29` will be transcoded to `"<GS>"`)
+   *   Escape non-graphical characters in angle brackets (e.g. ASCII `29` will be transcoded to
+   *   `"<GS>"`)
    *
    * @defaultValue `"Plain"`
    */
   textMode?: TextMode;
   /**
-   * Character set to use (when applicable).
-   * If this is set to `"Unknown"`, auto-detecting will be used.
+   * Character set to use (when applicable). If this is set to `"Unknown"`, auto-detecting will be
+   * used.
    *
    * @defaultValue `"Unknown"`
    */
   characterSet?: CharacterSet;
 }
 
-export const defaultReaderOptions: Required<ReaderOptions> = {
+export type ResolvedReaderOptions = Required<ReaderOptions>;
+
+export const defaultReaderOptions: ResolvedReaderOptions = {
   formats: [],
   tryHarder: true,
   tryRotate: true,
@@ -240,12 +237,55 @@ export const defaultReaderOptions: Required<ReaderOptions> = {
   characterSet: "Unknown",
 };
 
+export function resolveReaderOptions(
+  readerOptions?: ReaderOptions,
+): ResolvedReaderOptions {
+  return {
+    formats: readerOptions?.formats ?? defaultReaderOptions.formats,
+    tryHarder: readerOptions?.tryHarder ?? defaultReaderOptions.tryHarder,
+    tryRotate: readerOptions?.tryRotate ?? defaultReaderOptions.tryRotate,
+    tryInvert: readerOptions?.tryInvert ?? defaultReaderOptions.tryInvert,
+    tryDownscale:
+      readerOptions?.tryDownscale ?? defaultReaderOptions.tryDownscale,
+    binarizer: readerOptions?.binarizer ?? defaultReaderOptions.binarizer,
+    isPure: readerOptions?.isPure ?? defaultReaderOptions.isPure,
+    downscaleFactor:
+      readerOptions?.downscaleFactor ?? defaultReaderOptions.downscaleFactor,
+    downscaleThreshold:
+      readerOptions?.downscaleThreshold ??
+      defaultReaderOptions.downscaleThreshold,
+    minLineCount:
+      readerOptions?.minLineCount ?? defaultReaderOptions.minLineCount,
+    maxNumberOfSymbols:
+      readerOptions?.maxNumberOfSymbols ??
+      defaultReaderOptions.maxNumberOfSymbols,
+    tryCode39ExtendedMode:
+      readerOptions?.tryCode39ExtendedMode ??
+      defaultReaderOptions.tryCode39ExtendedMode,
+    validateCode39CheckSum:
+      readerOptions?.validateCode39CheckSum ??
+      defaultReaderOptions.validateCode39CheckSum,
+    validateITFCheckSum:
+      readerOptions?.validateITFCheckSum ??
+      defaultReaderOptions.validateITFCheckSum,
+    returnCodabarStartEnd:
+      readerOptions?.returnCodabarStartEnd ??
+      defaultReaderOptions.returnCodabarStartEnd,
+    returnErrors:
+      readerOptions?.returnErrors ?? defaultReaderOptions.returnErrors,
+    eanAddOnSymbol:
+      readerOptions?.eanAddOnSymbol ?? defaultReaderOptions.eanAddOnSymbol,
+    textMode: readerOptions?.textMode ?? defaultReaderOptions.textMode,
+    characterSet:
+      readerOptions?.characterSet ?? defaultReaderOptions.characterSet,
+  };
+}
+
 export function readerOptionsToZXingReaderOptions<T extends "reader" | "full">(
   zxingModule: ZXingModule<T>,
-  readerOptions: Required<ReaderOptions>,
+  readerOptions: ResolvedReaderOptions,
 ): ZXingReaderOptions {
-  return {
-    ...readerOptions,
+  return Object.assign(readerOptions, {
     formats: formatsToString(readerOptions.formats),
     binarizer: binarizerToZXingEnum(zxingModule, readerOptions.binarizer),
     eanAddOnSymbol: eanAddOnSymbolToZXingEnum(
@@ -257,5 +297,5 @@ export function readerOptionsToZXingReaderOptions<T extends "reader" | "full">(
       zxingModule,
       readerOptions.characterSet,
     ),
-  };
+  });
 }
