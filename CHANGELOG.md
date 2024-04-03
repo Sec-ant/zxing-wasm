@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.7
+
+### Patch Changes
+
+- 308d165: Bump zxing-cpp to 9ca0684
+
 ## 1.2.6
 
 ### Patch Changes
