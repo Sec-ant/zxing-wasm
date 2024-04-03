@@ -14,7 +14,7 @@ permissions:
   id-token: write
 
 env:
-  EM_VERSION: 3.1.54
+  EM_VERSION: 3.1.56
   EM_CACHE_FOLDER: ".emsdk-cache"
   NPM_CONFIG_PROVENANCE: true
 
