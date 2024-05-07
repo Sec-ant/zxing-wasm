@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.8
+
+### Patch Changes
+
+- 2fc9bec: Bump zxing-cpp to 4bbc1db
+
 ## 1.2.7
 
 ### Patch Changes
