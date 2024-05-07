@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.9
+
+### Patch Changes
+
+- 01e8878: Bump zxing-cpp to `441132c`
+
 ## 1.2.8
 
 ### Patch Changes
