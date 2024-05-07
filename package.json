@@ -2,7 +2,7 @@
   "name": "zxing-wasm",
   "description": "ZXing-C++ WebAssembly as an ES module with types",
   "private": false,
-  "version": "1.2.7",
+  "version": "1.2.8",
   "type": "module",
   "files": ["./dist"],
   "main": "./dist/cjs/full/index.js",
