@@ -16,11 +16,11 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
 
-      - name: Build
-        run: npm run prepublishOnly
-
       - name: Bump Version
         run: npm run bump
+
+      - name: Build
+        run: npm run prepublishOnly
 
       - name: Publish Preview Release
         run: npx pkg-pr-new publish
