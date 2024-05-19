@@ -1,7 +1,6 @@
 name: Release
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -14,92 +13,24 @@ permissions:
   id-token: write
 
 env:
-  EM_VERSION: 3.1.56
-  EM_CACHE_FOLDER: ".emsdk-cache"
   NPM_CONFIG_PROVENANCE: true
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-
-      - name: Setup System Libraries Cache
-        id: cache-system-libraries
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.EM_CACHE_FOLDER }}
-          key: ${{ env.EM_VERSION }}-${{ runner.os }}
-
-      - name: Setup EMSDK
-        uses: mymindstorm/setup-emsdk@v14
-        with:
-          version: ${{ env.EM_VERSION }}
-          actions-cache-folder: ${{ env.EM_CACHE_FOLDER }}
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Get Commit ID
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        id: get-commit-id
-        run: |
-          echo "short-commit-id=$(git rev-parse --short $GITHUB_SHA)" >> $GITHUB_OUTPUT
-          echo "commit-id=$(git rev-parse $GITHUB_SHA)" >> $GITHUB_OUTPUT
-
-      - name: Get Package Name
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        id: get-package-name
-        run: echo "package-name=$(npm pkg get name | jq -r)" >> $GITHUB_OUTPUT
-
-      - name: Get Normalized Package Name
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        id: get-normalized-package-name
-        uses: frabert/replace-string-action@v2
-        with:
-          pattern: "^.*?([^/]+)$"
-          string: ${{ steps.get-package-name.outputs.package-name }}
-          replace-with: "$1"
-
-      - name: Patch package.json
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: npm pkg set version=${{ steps.get-commit-id.outputs.short-commit-id }}
-
-      - name: Build and Pack
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: |
-          npm run prepublishOnly
-          npm pack
-
-      - name: Draft Release
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          artifacts: "${{ steps.get-normalized-package-name.outputs.replaced }}-${{ steps.get-commit-id.outputs.short-commit-id }}.tgz"
-          artifactContentType: application/gzip
-          body: "This is a draft release of ${{ steps.get-package-name.outputs.package-name }}: ${{ steps.get-commit-id.outputs.short-commit-id }}."
-          commit: ${{ steps.get-commit-id.outputs.commit-id }}
-          tag: "draft"
-          draft: true
-          name: "draft"
-          removeArtifacts: true
+      - name: Setup
+        uses: ./.github/actions/setup
 
       - name: Get Next Package Version
-        if: ${{ github.event_name != 'workflow_dispatch' }}
         id: package-version
         run: echo "version=$(npx changeset status --output=release.json && jq -r '.releases[0].newVersion // '$(npm pkg get version)'' release.json && rm release.json)" >> $GITHUB_OUTPUT
 
       - name: Create Release Pull Request or Publish to NPM
-        if: ${{ github.event_name != 'workflow_dispatch' }}
         id: changesets
         uses: changesets/action@v1
         with:
