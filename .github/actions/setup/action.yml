@@ -1,0 +1,40 @@
+name: Setup
+description: Setup the project
+
+inputs:
+  emsdk-version:
+    description: EMSDK Version
+    required: true
+    default: 3.1.56
+  emsdk-cache-dir:
+    description: EMSDK Cache Directory
+    required: true
+    default: .emsdk-cache
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: .nvmrc
+
+    - name: Setup System Libraries Cache
+      id: cache-system-libraries
+      uses: actions/cache@v4
+      with:
+        path: ${{ inputs.emsdk-cache-dir }}
+        key: ${{ inputs.emsdk-version }}-${{ runner.os }}
+
+    - name: Setup EMSDK
+      uses: mymindstorm/setup-emsdk@v14
+      with:
+        version: ${{ inputs.emsdk-version }}
+        actions-cache-folder: ${{ inputs.emsdk-cache-dir }}
+
+    - name: Install Dependencies
+      shell: bash
+      run: npm ci

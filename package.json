@@ -58,7 +58,6 @@
     "access": "public"
   },
   "scripts": {
-    "install:ci": "npm ci && ./scripts/prepare.sh",
     "update-hooks": "simple-git-hooks",
     "changeset": "changeset",
     "bump": "changeset version 2>/dev/null | grep . && npm i; exit 0",
@@ -99,25 +98,25 @@
     "@babel/core": "^7.24.5",
     "@babel/types": "^7.24.5",
     "@biomejs/biome": "1.7.3",
-    "@changesets/cli": "^2.27.1",
+    "@changesets/cli": "^2.27.2",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^20.12.10",
+    "@types/node": "^20.12.12",
     "concurrently": "^8.2.2",
     "copy-files-from-to": "^3.9.1",
     "lint-staged": "^15.2.2",
     "npm-check-updates": "^16.14.20",
     "prettier": "^3.2.5",
     "pretty-quick": "^4.0.0",
-    "rimraf": "^5.0.5",
+    "rimraf": "^5.0.7",
     "simple-git-hooks": "^2.11.1",
-    "tsx": "^4.9.3",
+    "tsx": "^4.10.5",
     "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
     "vite-plugin-babel": "^1.2.0"
   },
   "dependencies": {
-    "@types/emscripten": "^1.39.11"
+    "@types/emscripten": "^1.39.12"
   },
   "overrides": {
     "typedoc": {
