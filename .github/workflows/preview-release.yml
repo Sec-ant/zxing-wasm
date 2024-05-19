@@ -10,6 +10,9 @@ jobs:
   preview-release:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
       - name: Setup
         uses: ./.github/actions/setup
 
