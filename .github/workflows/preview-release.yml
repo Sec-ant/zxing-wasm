@@ -23,6 +23,6 @@ jobs:
         run: npm run prepublishOnly
 
       - name: Publish Preview Release
-        run: npx pkg-pr-new publish
+        run: npx pkg-pr-new publish --compact
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
