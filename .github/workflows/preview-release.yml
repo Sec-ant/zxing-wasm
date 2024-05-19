@@ -19,6 +19,9 @@ jobs:
       - name: Build
         run: npm run prepublishOnly
 
+      - name: Bump Version
+        run: npm run bump
+
       - name: Publish Preview Release
         run: npx pkg-pr-new publish
         env:
