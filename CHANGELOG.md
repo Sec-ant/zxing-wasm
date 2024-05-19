@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.10
+
+### Patch Changes
+
+- 0a43b27: Bump zxing-cpp to `d0c1f34`
+
 ## 1.2.9
 
 ### Patch Changes
