@@ -41,5 +41,5 @@ jobs:
           publish: npx changeset publish
           commit: "chore(release): v${{ steps.package-version.outputs.version }}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CHANGESET_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
