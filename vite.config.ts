@@ -18,6 +18,7 @@ export default defineConfig({
     outDir: "dist/es",
     rollupOptions: {
       output: {
+        chunkFileNames: "[name]-[hash].js",
         manualChunks: (id) => {
           if (
             /core\.ts|exposedReaderBindings\.ts|exposedWriterBindings\.ts/.test(
