@@ -1,5 +1,13 @@
 # zxing-wasm
 
+## 1.2.11
+
+### Patch Changes
+
+- d3c92ee: - Always use `.js` as the chunk filename extension.
+  - Bump zxing-cpp to `986f785`
+  - Bump dependencies
+
 ## 1.2.10
 
 ### Patch Changes
