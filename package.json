@@ -75,7 +75,7 @@
     "format:prettier": "pretty-quick",
     "format:biome": "biome format . --write",
     "format": "npm run format:prettier && npm run format:biome",
-    "check:biome": "biome check --apply .",
+    "check:biome": "biome check --write .",
     "check": "npm run format:prettier && npm run check:biome",
     "clear:dist": "rimraf dist",
     "prebuild": "npm run check && npm run type-check && npm run clear:dist",
