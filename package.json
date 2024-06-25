@@ -7,6 +7,7 @@
   "files": ["./dist"],
   "main": "./dist/cjs/full/index.js",
   "module": "./dist/es/full/index.js",
+  "miniprogram": "./dist/miniprogram",
   "exports": {
     ".": {
       "import": "./dist/es/full/index.js",
@@ -82,7 +83,8 @@
     "build:es": "vite build",
     "build:cjs": "tsx ./scripts/build-cjs.ts",
     "build:iife": "tsx ./scripts/build-iife.ts",
-    "build": "conc \"npm:build:es\" \"npm:build:cjs\" \"npm:build:iife\"",
+    "build:miniprogram": "tsx ./scripts/build-miniprogram.ts",
+    "build": "conc \"npm:build:es\" \"npm:build:cjs\" \"npm:build:iife\" \"npm:build:miniprogram\"",
     "postbuild:es": "tsc --declarationDir ./dist/es",
     "postbuild:cjs": "tsc --declarationDir ./dist/cjs",
     "postbuild": "conc \"npm:copy:wasm\" \"npm:docs:build\"",
