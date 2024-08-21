@@ -31,14 +31,14 @@ jobs:
 
       - name: Get Next Package Version
         id: package-version
-        run: echo "version=$(pnpm changeset status --output=release.json && jq -r '.releases[0].newVersion // '$(npm pkg get version)'' release.json && rm release.json)" >> $GITHUB_OUTPUT
+        run: echo "version=$(pnpm -s changeset status --output=release.json && jq -r '.releases[0].newVersion // '$(npm pkg get version)'' release.json && rm release.json)" >> $GITHUB_OUTPUT
 
       - name: Create Release Pull Request or Publish to NPM
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm bump
-          publish: pnpm changeset publish
+          version: pnpm -s bump
+          publish: pnpm -s changeset publish
           commit: "chore(release): v${{ steps.package-version.outputs.version }}"
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESET_TOKEN }}

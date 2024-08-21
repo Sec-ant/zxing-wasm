@@ -17,10 +17,10 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Bump Version
-        run: pnpm bump
+        run: pnpm -s bump
 
       - name: Build
-        run: pnpm prepublishOnly
+        run: pnpm -s prepublishOnly
 
       - name: Publish Preview Release
         run: pnpx pkg-pr-new publish --compact
