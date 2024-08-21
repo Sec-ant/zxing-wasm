@@ -5,9 +5,9 @@
   "extends": [
     "config:best-practices",
     "helpers:pinGitHubActionDigestsToSemver",
-    "customManagers:biomeVersions"
+    "customManagers:biomeVersions",
+    ":preserveSemverRanges"
   ],
-  "rangeStrategy": "bump",
   "lockFileMaintenance": {
     "enabled": false
   }
