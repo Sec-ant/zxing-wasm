@@ -27,7 +27,7 @@ jobs:
         uses: ./.github/actions/setup-node
 
       - name: Build step
-        run: "pnpm docs:build"
+        run: "pnpm -s docs:build"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
