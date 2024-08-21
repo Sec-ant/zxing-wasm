@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import babel from "vite-plugin-babel";
-import { version } from "./package-lock.json";
+import { version } from "./package.json";
 import { emscriptenPatch } from "./scripts/babel-plugin-emscripten-patch.js";
 
 export default defineConfig({

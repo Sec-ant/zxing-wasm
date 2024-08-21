@@ -1,0 +1,18 @@
+name: Setup Node
+description: Setup the node environment
+
+runs:
+  using: composite
+  steps:
+    - name: Setup PNPM
+      uses: pnpm/action-setup@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: .node-version
+        cache: pnpm
+
+    - name: Install Dependencies
+      shell: bash
+      run: pnpm i

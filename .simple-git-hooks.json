@@ -1,3 +1,3 @@
 {
-  "pre-commit": "npx lint-staged"
+  "pre-commit": "pnpm lint-staged"
 }
