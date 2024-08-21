@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.12
+
+### Patch Changes
+
+- 2228845: Bump `zxing-cpp` and switch to `pnpm`, `renovate`.
+
 ## 1.2.11
 
 ### Patch Changes
