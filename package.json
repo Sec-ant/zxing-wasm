@@ -4,7 +4,9 @@
   "private": false,
   "version": "1.2.11",
   "type": "module",
-  "files": ["./dist"],
+  "files": [
+    "./dist"
+  ],
   "main": "./dist/cjs/full/index.js",
   "module": "./dist/es/full/index.js",
   "exports": {
@@ -60,7 +62,7 @@
   "scripts": {
     "update-hooks": "simple-git-hooks",
     "changeset": "changeset",
-    "bump": "changeset version 2>/dev/null | grep . && npm i; exit 0",
+    "bump": "changeset version 2>/dev/null | grep . && pnpm i; exit 0",
     "submodule:init": "git submodule update --init",
     "submodule:update": "git submodule update --remote",
     "cmake": "emcmake cmake -S src/cpp -B build",
@@ -74,11 +76,11 @@
     "type-check": "tsc --noEmit --emitDeclarationOnly false",
     "format:prettier": "pretty-quick",
     "format:biome": "biome format . --write",
-    "format": "npm run format:prettier && npm run format:biome",
+    "format": "pnpm format:prettier && pnpm format:biome",
     "check:biome": "biome check --write .",
-    "check": "npm run format:prettier && npm run check:biome",
+    "check": "pnpm format:prettier && pnpm check:biome",
     "clear:dist": "rimraf dist",
-    "prebuild": "npm run check && npm run type-check && npm run clear:dist",
+    "prebuild": "pnpm check && pnpm type-check && pnpm clear:dist",
     "build:es": "vite build",
     "build:cjs": "tsx ./scripts/build-cjs.ts",
     "build:iife": "tsx ./scripts/build-iife.ts",
@@ -86,33 +88,32 @@
     "postbuild:es": "tsc --declarationDir ./dist/es",
     "postbuild:cjs": "tsc --declarationDir ./dist/cjs",
     "postbuild": "conc \"npm:copy:wasm\" \"npm:docs:build\"",
-    "build:all": "npm run submodule:init && npm run cmake && npm run build:wasm && npm run build",
+    "build:all": "pnpm submodule:init && pnpm cmake && pnpm build:wasm && pnpm build",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build:all",
-    "ncu": "ncu",
-    "postncu": "npm i",
-    "bump-biome:latest": "npm i -DE @biomejs/biome@latest",
-    "bump-biome:nightly": "npm i -DE @biomejs/biome@nightly"
+    "prepublishOnly": "pnpm build:all",
+    "bump-biome:latest": "pnpm add -DE @biomejs/biome@latest",
+    "bump-biome:nightly": "pnpm add -DE @biomejs/biome@nightly",
+    "sync-emsdk": "./scripts/sync-emsdk.sh"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.7",
-    "@babel/types": "^7.24.7",
-    "@biomejs/biome": "1.8.0",
-    "@changesets/cli": "^2.27.5",
+    "@babel/core": "^7.25.2",
+    "@babel/types": "^7.25.2",
+    "@biomejs/biome": "1.8.3",
+    "@changesets/cli": "^2.27.7",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.4.1",
+    "@types/node": "^22.4.2",
     "concurrently": "^8.2.2",
-    "copy-files-from-to": "^3.9.1",
-    "lint-staged": "^15.2.5",
+    "copy-files-from-to": "^3.11.0",
+    "lint-staged": "^15.2.9",
     "npm-check-updates": "^17.0.6",
-    "prettier": "^3.3.1",
+    "prettier": "^3.3.3",
     "pretty-quick": "^4.0.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
-    "tsx": "^4.12.0",
-    "typedoc": "^0.26.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.12",
+    "tsx": "^4.17.0",
+    "typedoc": "^0.26.6",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
     "vite-plugin-babel": "^1.2.0"
   },
   "dependencies": {
@@ -122,5 +123,6 @@
     "typedoc": {
       "typescript": "$typescript"
     }
-  }
+  },
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
 }

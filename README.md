@@ -11,14 +11,16 @@ Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore i
 ```bash
 git clone --recurse-submodules https://github.com/Sec-ant/zxing-wasm
 cd zxing-wasm
-npm i
+# install pnpm first:
+# https://pnpm.io/installation
+pnpm i
 # install cmake first:
 # https://cmake.org/download/
-npm run cmake
+pnpm cmake
 # install emscripten first:
 # https://emscripten.org/docs/getting_started/downloads.html
-npm run build:wasm
-npm run build
+pnpm build:wasm
+pnpm build
 ```
 
 ## Install

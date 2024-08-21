@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "Asia/Shanghai",
+  "schedule": ["before 9am on monday"],
+  "extends": [
+    "config:best-practices",
+    "helpers:pinGitHubActionDigestsToSemver",
+    "customManagers:biomeVersions"
+  ],
+  "rangeStrategy": "bump",
+  "lockFileMaintenance": {
+    "enabled": false
+  }
+}

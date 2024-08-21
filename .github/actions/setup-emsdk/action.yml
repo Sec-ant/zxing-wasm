@@ -1,0 +1,26 @@
+name: Setup EMSDK
+description: Setup the EMSDK environment
+
+inputs:
+  emsdk-version:
+    description: EMSDK Version
+    required: true
+  emsdk-cache-dir:
+    description: EMSDK Cache Directory
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Setup System Libraries Cache
+      id: cache-system-libraries
+      uses: actions/cache@v4
+      with:
+        path: ${{ inputs.emsdk-cache-dir }}
+        key: ${{ inputs.emsdk-version }}-${{ runner.os }}
+
+    - name: Setup EMSDK
+      uses: mymindstorm/setup-emsdk@v14
+      with:
+        version: ${{ inputs.emsdk-version }}
+        actions-cache-folder: ${{ inputs.emsdk-cache-dir }}

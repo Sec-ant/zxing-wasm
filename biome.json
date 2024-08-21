@@ -33,6 +33,14 @@
           "allowTrailingCommas": true
         }
       }
+    },
+    {
+      "include": ["package.json"],
+      "json": {
+        "formatter": {
+          "lineWidth": 1
+        }
+      }
     }
   ]
 }
