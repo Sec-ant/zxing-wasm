@@ -29,12 +29,14 @@ export const barcodeFormats = [
 export type BarcodeFormat = (typeof barcodeFormats)[number];
 
 /**
- * Barcode formats that can be used in {@link ReaderOptions.formats | `ReaderOptions.formats`} to read barcodes.
+ * Barcode formats that can be used in {@link ReaderOptions.formats | `ReaderOptions.formats`} to
+ * read barcodes.
  */
 export type ReadInputBarcodeFormat = Exclude<BarcodeFormat, "None">;
 
 /**
- * Barcode formats that can be used in {@link WriterOptions.format | `WriterOptions.format`} to write barcodes.
+ * Barcode formats that can be used in {@link WriterOptions.format | `WriterOptions.format`} to write
+ * barcodes.
  */
 export type WriteInputBarcodeFormat = Exclude<
   BarcodeFormat,
@@ -73,7 +75,7 @@ export function formatFromString(format: string): BarcodeFormat {
   let end = barcodeFormats.length - 1;
   while (start <= end) {
     const mid = Math.floor((start + end) / 2);
-    const midElement = barcodeFormats[mid];
+    const midElement = barcodeFormats[mid]!;
     const normalizedMidElement = normalizeFormatString(midElement);
     if (normalizedMidElement === normalizedTarget) {
       return midElement;

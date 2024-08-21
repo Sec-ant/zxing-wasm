@@ -1,12 +1,12 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "module": "NodeNext",
+    "jsx": "react-jsx",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": ["emscripten"],
-    "moduleResolution": "NodeNext"
+    "noUncheckedIndexedAccess": true
   },
-  "include": ["./src"],
+  "include": ["./src", "./main.ts", "./main.tsx"],
   "references": [
     {
       "path": "./tsconfig.node.json"

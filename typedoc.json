@@ -3,7 +3,11 @@
   "entryPoints": [
     "./src/full/index.ts",
     "./src/reader/index.ts",
-    "./src/writer/index.ts"
+    "./src/writer/index.ts",
+    "./src/scanner/index.ts",
+    "./src/stream/index.ts",
+    "./src/react/hooks/index.ts"
   ],
+  "sortEntryPoints": false,
   "out": "docs"
 }

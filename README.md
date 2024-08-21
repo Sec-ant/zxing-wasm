@@ -218,8 +218,7 @@ The wasm binary won't be fetched or instantiated unless a [read](#readbarcodesfr
 import { getZXingModule } from "zxing-wasm";
 
 /**
- * This function will trigger the download and
- * instantiation of the wasm binary immediately
+ * This function will trigger the download and instantiation of the wasm binary immediately
  */
 const zxingModulePromise1 = getZXingModule();
 

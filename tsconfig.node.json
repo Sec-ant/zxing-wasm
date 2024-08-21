@@ -2,16 +2,9 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
-    "module": "ESNext",
     "types": ["node"],
-    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "allowJs": true
   },
-  "include": [
-    "./scripts",
-    "./vite.config.ts",
-    "./package.json",
-    "./package-lock.json"
-  ]
+  "include": ["./scripts", "./vite.config.ts", "./package.json"]
 }

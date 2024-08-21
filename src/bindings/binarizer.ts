@@ -23,5 +23,5 @@ export function binarizerToZXingEnum<T extends "reader" | "full">(
 }
 
 export function zxingEnumToBinarizer(zxingEnum: ZXingEnum): Binarizer {
-  return binarizers[zxingEnum.value];
+  return binarizers[zxingEnum.value]!;
 }

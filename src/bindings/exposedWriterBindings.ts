@@ -1,36 +1,42 @@
-import { type WriterOptions, defaultWriterOptions as wo } from "./index.js";
+import {
+  type ResolvedWriterOptions,
+  type WriterOptions,
+  defaultWriterOptions as wo,
+} from "./index.js";
 
-export const defaultWriterOptions: Required<WriterOptions> = { ...wo };
+export const defaultWriterOptions: WriterOptions = {
+  ...wo,
+} satisfies ResolvedWriterOptions;
 
 export {
   barcodeFormats,
-  type BarcodeFormat,
-  type WriteInputBarcodeFormat,
   characterSets,
-  type ZXingCharacterSet,
-  type CharacterSet,
   writeInputEccLevels,
+  type BarcodeFormat,
+  type CharacterSet,
+  type WriteInputBarcodeFormat,
   type WriteInputEccLevel,
-  type ZXingWriterOptions,
+  type WriteResult,
   type WriterOptions,
+  type ZXingCharacterSet,
   type ZXingEnum,
   type ZXingWriteResult,
-  type WriteResult,
+  type ZXingWriterOptions,
 } from "./index.js";
 
 export {
   /**
-   * @deprecated renamed as `defaultWriterOptions`
+   * @deprecated Renamed as `WriterOptions`
+   */
+  type WriterOptions as EncodeHints,
+  /**
+   * @deprecated Renamed as `ZXingWriterOptions`
+   */
+  type ZXingWriterOptions as ZXingEncodeHints,
+} from "./index.js";
+export {
+  /**
+   * @deprecated Renamed as `defaultWriterOptions`
    */
   defaultWriterOptions as defaultEncodeHints,
 };
-export {
-  /**
-   * @deprecated renamed as `ZXingWriterOptions`
-   */
-  type ZXingWriterOptions as ZXingEncodeHints,
-  /**
-   * @deprecated renamed as `WriterOptions`
-   */
-  type WriterOptions as EncodeHints,
-} from "./index.js";

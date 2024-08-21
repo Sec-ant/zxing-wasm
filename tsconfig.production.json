@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["./src"],
+  "ignore": ["./src/index.css.ts"]
+}

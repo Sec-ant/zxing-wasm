@@ -41,32 +41,29 @@ export interface WriterOptions
   /**
    * The format of the barcode to write.
    *
-   * Supported values are:
-   * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
-   * `"DataMatrix"`, `"EAN-13"`, `"EAN-8"`, `"ITF"`,
-   * `"PDF417"`, `"QRCode"`, `"UPC-A"`, `"UPC-E"`
+   * Supported values are: `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
+   * `"DataMatrix"`, `"EAN-13"`, `"EAN-8"`, `"ITF"`, `"PDF417"`, `"QRCode"`, `"UPC-A"`, `"UPC-E"`
    *
    * @defaultValue `"QRCode"`
    */
   format?: WriteInputBarcodeFormat;
   /**
-   * Character set to use for encoding the text.
-   * Used for Aztec, PDF417, and QRCode only.
+   * Character set to use for encoding the text. Used for Aztec, PDF417, and QRCode only.
    *
    * @defaultValue `"UTF8"`
    */
   characterSet?: CharacterSet;
   /**
-   * Error correction level of the symbol.
-   * Used for Aztec, PDF417, and QRCode only.
-   * `-1` means auto.
+   * Error correction level of the symbol. Used for Aztec, PDF417, and QRCode only. `-1` means auto.
    *
    * @defaultValue `-1`
    */
   eccLevel?: WriteInputEccLevel;
 }
 
-export const defaultWriterOptions: Required<WriterOptions> = {
+export type ResolvedWriterOptions = Required<WriterOptions>;
+
+export const defaultWriterOptions: ResolvedWriterOptions = {
   width: 200,
   height: 200,
   format: "QRCode",
@@ -75,15 +72,28 @@ export const defaultWriterOptions: Required<WriterOptions> = {
   margin: 10,
 };
 
+export function resolveWriterOptions(
+  writerOptions?: WriterOptions,
+): ResolvedWriterOptions {
+  return {
+    width: writerOptions?.width ?? defaultWriterOptions.width,
+    height: writerOptions?.height ?? defaultWriterOptions.height,
+    format: writerOptions?.format ?? defaultWriterOptions.format,
+    characterSet:
+      writerOptions?.characterSet ?? defaultWriterOptions.characterSet,
+    eccLevel: writerOptions?.eccLevel ?? defaultWriterOptions.eccLevel,
+    margin: writerOptions?.margin ?? defaultWriterOptions.margin,
+  };
+}
+
 export function writerOptionsToZXingWriterOptions<T extends "writer" | "full">(
   zxingModule: ZXingModule<T>,
-  writerOptions: Required<WriterOptions>,
+  writerOptions: ResolvedWriterOptions,
 ): ZXingWriterOptions {
-  return {
-    ...writerOptions,
+  return Object.assign(writerOptions, {
     characterSet: characterSetToZXingEnum(
       zxingModule,
       writerOptions.characterSet,
     ),
-  };
+  });
 }

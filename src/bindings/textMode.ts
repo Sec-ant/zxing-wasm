@@ -18,5 +18,5 @@ export function textModeToZXingEnum<T extends "reader" | "full">(
 }
 
 export function zxingEnumToTextMode(zxingEnum: ZXingEnum): TextMode {
-  return textModes[zxingEnum.value];
+  return textModes[zxingEnum.value]!;
 }

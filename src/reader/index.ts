@@ -50,6 +50,6 @@ export async function readBarcodesFromImageData(
 export * from "../bindings/exposedReaderBindings.js";
 export {
   purgeZXingModule,
-  type ZXingReaderModule,
   type ZXingModuleOverrides,
+  type ZXingReaderModule,
 } from "../core.js";
