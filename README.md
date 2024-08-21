@@ -13,7 +13,7 @@ git clone --recurse-submodules https://github.com/Sec-ant/zxing-wasm
 cd zxing-wasm
 # install pnpm first:
 # https://pnpm.io/installation
-pnpm i
+pnpm i --frozen-lockfile
 # install cmake first:
 # https://cmake.org/download/
 pnpm cmake
