@@ -17,7 +17,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Bump Version
-        run: pnpm -s bump
+        run: pnpm -s changeset version
 
       - name: Build
         run: pnpm -s prepublishOnly

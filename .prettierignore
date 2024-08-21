@@ -14,3 +14,4 @@ build
 *.tsx
 *.json
 *.jsonc
+pnpm-lock.yaml
