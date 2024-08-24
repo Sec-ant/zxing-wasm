@@ -67,7 +67,7 @@
     "cmake": "emcmake cmake -S src/cpp -B build",
     "build:wasm": "cmake --build build -j$(($(nproc) - 1))",
     "copy:wasm": "copy-files-from-to",
-    "docs:dev": "conc \"npm:docs:preview\" \"typedoc --watch --excludeInternal\"",
+    "docs:dev": "conc \"pnpm:docs:preview\" \"typedoc --watch --excludeInternal\"",
     "docs:build": "typedoc --excludeInternal",
     "docs:preview": "vite preview --outDir ./docs",
     "dev": "vite",
@@ -83,10 +83,10 @@
     "build:es": "vite build",
     "build:cjs": "tsx ./scripts/build-cjs.ts",
     "build:iife": "tsx ./scripts/build-iife.ts",
-    "build": "conc \"npm:build:es\" \"npm:build:cjs\" \"npm:build:iife\"",
+    "build": "conc \"pnpm:build:es\" \"pnpm:build:cjs\" \"pnpm:build:iife\"",
     "postbuild:es": "tsc --declarationDir ./dist/es",
     "postbuild:cjs": "tsc --declarationDir ./dist/cjs",
-    "postbuild": "conc \"npm:copy:wasm\" \"npm:docs:build\"",
+    "postbuild": "conc \"pnpm:copy:wasm\" \"pnpm:docs:build\"",
     "build:all": "pnpm -s submodule:init && pnpm -s cmake && pnpm -s build:wasm && pnpm -s build",
     "preview": "vite preview",
     "prepublishOnly": "pnpm -s build:all",
@@ -96,11 +96,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/types": "^7.25.2",
+    "@babel/types": "^7.25.4",
     "@biomejs/biome": "1.8.3",
     "@changesets/cli": "^2.27.7",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.4.2",
+    "@types/node": "^22.5.0",
     "concurrently": "^8.2.2",
     "copy-files-from-to": "^3.11.0",
     "lint-staged": "^15.2.9",
@@ -122,5 +122,5 @@
       "typescript": "$typescript"
     }
   },
-  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
 }
