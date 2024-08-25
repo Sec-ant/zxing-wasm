@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import babel from "vite-plugin-babel";
 import { version } from "./package.json";
