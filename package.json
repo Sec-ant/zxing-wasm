@@ -32,7 +32,35 @@
     },
     "./reader/zxing_reader.wasm": "./dist/reader/zxing_reader.wasm",
     "./writer/zxing_writer.wasm": "./dist/writer/zxing_writer.wasm",
-    "./full/zxing_full.wasm": "./dist/full/zxing_full.wasm"
+    "./full/zxing_full.wasm": "./dist/full/zxing_full.wasm",
+    "./scanner": {
+      "import": "./dist/es/scanner/index.js",
+      "require": "./dist/cjs/scanner/index.js",
+      "default": "./dist/es/scanner/index.js"
+    },
+    "./stream": {
+      "import": "./dist/es/stream/index.js",
+      "require": "./dist/cjs/stream/index.js",
+      "default": "./dist/es/stream/index.js"
+    },
+    "./media-track-shims": {
+      "types": "./dist/media-track-shims.d.ts"
+    },
+    "./react": {
+      "import": "./dist/es/react/index.js",
+      "require": "./dist/cjs/react/index.js",
+      "default": "./dist/es/react/index.js"
+    },
+    "./react/components": {
+      "import": "./dist/es/react/components/index.js",
+      "require": "./dist/cjs/react/components/index.js",
+      "default": "./dist/es/react/components/index.js"
+    },
+    "./react/hooks": {
+      "import": "./dist/es/react/hooks/index.js",
+      "require": "./dist/cjs/react/hooks/index.js",
+      "default": "./dist/es/react/hooks/index.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -101,11 +129,17 @@
     "@changesets/cli": "^2.27.7",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^22.5.0",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "@vanilla-extract/css": "^1.15.5",
+    "@vanilla-extract/vite-plugin": "^4.0.15",
     "concurrently": "^8.2.2",
     "copy-files-from-to": "^3.11.0",
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "pretty-quick": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
     "tsx": "^4.17.0",
@@ -115,7 +149,12 @@
     "vite-plugin-babel": "^1.2.0"
   },
   "dependencies": {
-    "@types/emscripten": "^1.39.13"
+    "@types/emscripten": "^1.39.13",
+    "just-compare": "^2.3.0",
+    "sha1-uint8array": "^0.10.7",
+    "type-fest": "^4.25.0",
+    "webrtc-adapter": "^9.0.1",
+    "zustand": "^4.5.5"
   },
   "overrides": {
     "typedoc": {

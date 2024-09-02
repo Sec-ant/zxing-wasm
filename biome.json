@@ -35,6 +35,12 @@
       }
     },
     {
+      "include": ["react/components"],
+      "formatter": {
+        "lineWidth": 120
+      }
+    },
+    {
       "include": ["package.json"],
       "json": {
         "formatter": {

@@ -21,7 +21,6 @@ export interface ZXingPosition {
  *
  * @property x X coordinate.
  * @property y Y coordinate.
- *
  * @see {@link Position | `Position`}
  */
 export interface Point extends ZXingPoint {}

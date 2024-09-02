@@ -1,57 +1,61 @@
-import { type ReaderOptions, defaultReaderOptions as ro } from "./index.js";
+import {
+  type ReaderOptions,
+  type ResolvedReaderOptions,
+  defaultReaderOptions as ro,
+} from "./index.js";
 
-export const defaultReaderOptions: Required<ReaderOptions> = {
+export const defaultReaderOptions: ReaderOptions = {
   ...ro,
   formats: [...ro.formats],
-};
+} satisfies ResolvedReaderOptions;
 
 export {
   barcodeFormats,
+  binarizers,
+  characterSets,
+  contentTypes,
+  eanAddOnSymbols,
+  readOutputEccLevels,
+  textModes,
   type BarcodeFormat,
+  type Binarizer,
+  type CharacterSet,
+  type ContentType,
+  type EanAddOnSymbol,
+  type Point,
+  type Position,
   type ReadInputBarcodeFormat,
   type ReadOutputBarcodeFormat,
-  binarizers,
-  type ZXingBinarizer,
-  type Binarizer,
-  characterSets,
-  type ZXingCharacterSet,
-  type CharacterSet,
-  contentTypes,
-  type ZXingContentType,
-  type ContentType,
-  type ZXingReaderOptions,
-  type ReaderOptions,
-  eanAddOnSymbols,
-  type ZXingEanAddOnSymbol,
-  type EanAddOnSymbol,
-  readOutputEccLevels,
   type ReadOutputEccLevel,
+  type ReadResult,
+  type ReaderOptions,
+  type TextMode,
+  type ZXingBinarizer,
+  type ZXingCharacterSet,
+  type ZXingContentType,
+  type ZXingEanAddOnSymbol,
   type ZXingEnum,
   type ZXingPoint,
   type ZXingPosition,
-  type Point,
-  type Position,
   type ZXingReadResult,
-  type ReadResult,
-  textModes,
+  type ZXingReaderOptions,
   type ZXingTextMode,
-  type TextMode,
   type ZXingVector,
 } from "./index.js";
 
 export {
   /**
-   * @deprecated renamed as `defaultReaderOptions`
+   * @deprecated Renamed as `ReaderOptions`
+   */
+  type ReaderOptions as DecodeHints,
+  /**
+   * @deprecated Renamed as `ZXingReaderOptions`
+   */
+  type ZXingReaderOptions as ZXingDecodeHints,
+} from "./index.js";
+export {
+  /**
+   * @deprecated Renamed as `defaultReaderOptions`
    */
   defaultReaderOptions as defaultDecodeHints,
 };
-export {
-  /**
-   * @deprecated renamed as `ZXingReaderOptions`
-   */
-  type ZXingReaderOptions as ZXingDecodeHints,
-  /**
-   * @deprecated renamed as `ReaderOptions`
-   */
-  type ReaderOptions as DecodeHints,
-} from "./index.js";

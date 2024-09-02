@@ -63,9 +63,9 @@ export interface ZXingReadResult {
   /**
    * Number of symbols in a structured append sequence.
    *
-   * If this is not part of a structured append sequence, the returned value is `-1`.
-   * If it is a structured append symbol but the total number of symbols is unknown, the
-   * returned value is `0` (see PDF417 if optional "Segment Count" not given).
+   * If this is not part of a structured append sequence, the returned value is `-1`. If it is a
+   * structured append symbol but the total number of symbols is unknown, the returned value is `0`
+   * (see PDF417 if optional "Segment Count" not given).
    */
   sequenceSize: number;
   /**
@@ -75,9 +75,9 @@ export interface ZXingReadResult {
   /**
    * ID to check if a set of symbols belongs to the same structured append sequence.
    *
-   * If the symbology does not support this feature, the returned value is empty (see MaxiCode).
-   * For QR Code, this is the parity integer converted to a string.
-   * For PDF417 and DataMatrix, this is the `"fileId"`.
+   * If the symbology does not support this feature, the returned value is empty (see MaxiCode). For
+   * QR Code, this is the parity integer converted to a string. For PDF417 and DataMatrix, this is
+   * the `"fileId"`.
    */
   sequenceId: string;
   /**
@@ -104,14 +104,13 @@ export interface ReadResult
     "format" | "eccLevel" | "contentType" | "position"
   > {
   /**
-   * Format of the barcode, should be one of {@link ReadOutputBarcodeFormat | `ReadOutputBarcodeFormat`}.
+   * Format of the barcode, should be one of
+   * {@link ReadOutputBarcodeFormat | `ReadOutputBarcodeFormat`}.
    *
-   * Possible values are:
-   * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
-   * `"DataBar"`, `"DataBarExpanded"`, `"DataMatrix"`, `"DXFilmEdge"`,
-   * `"EAN-13"`, `"EAN-8"`, `"ITF"`,
-   * `"MaxiCode"`, `"MicroQRCode"`, `"None"`,
-   * `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
+   * Possible values are: `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`, `"DataBar"`,
+   * `"DataBarExpanded"`, `"DataMatrix"`, `"DXFilmEdge"`, `"EAN-13"`, `"EAN-8"`, `"ITF"`,
+   * `"MaxiCode"`, `"MicroQRCode"`, `"None"`, `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`,
+   * `"UPC-E"`
    */
   format: ReadOutputBarcodeFormat;
   /**

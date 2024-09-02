@@ -53,5 +53,5 @@ export function characterSetToZXingEnum<T extends ZXingModuleType>(
 }
 
 export function zxingEnumToCharacterSet(zxingEnum: ZXingEnum): CharacterSet {
-  return characterSets[zxingEnum.value];
+  return characterSets[zxingEnum.value]!;
 }
