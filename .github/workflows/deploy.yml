@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: Install Deno
-        uses: denoland/setup-deno@ba9dcf3bc3696623d1add6a2f5181ee1b5143de5 # v1.3.0
+        uses: denoland/setup-deno@fa660b328d065f7683e7303976bd81e2d58e98ae # v1.4.1
         with:
           deno-version: vx.x.x
 
