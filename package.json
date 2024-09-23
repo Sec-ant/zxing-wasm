@@ -97,7 +97,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/types": "^7.25.4",
-    "@biomejs/biome": "1.9.1",
+    "@biomejs/biome": "1.9.2",
     "@changesets/cli": "^2.27.7",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^22.5.0",
