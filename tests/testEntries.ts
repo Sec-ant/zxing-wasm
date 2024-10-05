@@ -12,22 +12,27 @@ interface TestEntry {
 interface TestCase {
   type: "fast" | "slow" | "pure";
   minPassCount: number;
+  maxPassCount: number;
   maxMisreads: number;
   rotation: number;
 }
 
 interface DefineFastAndSlowTestCaseProps {
   fastMinPassCount: number;
+  fastMaxPassCount?: number;
   fastMaxMisreads?: number;
   slowMinPassCount: number;
+  slowMaxPassCount?: number;
   slowMaxMisreads?: number;
   rotations?: number[];
 }
 
 function defineFastAndSlowTestCases({
   fastMinPassCount,
+  fastMaxPassCount = Number.POSITIVE_INFINITY,
   fastMaxMisreads = 0,
   slowMinPassCount,
+  slowMaxPassCount = Number.POSITIVE_INFINITY,
   slowMaxMisreads = 0,
   rotations = [0, 90, 180, 270],
 }: DefineFastAndSlowTestCaseProps): TestCase[] {
@@ -35,12 +40,14 @@ function defineFastAndSlowTestCases({
     {
       type: "fast",
       minPassCount: fastMinPassCount,
+      maxPassCount: fastMaxPassCount,
       maxMisreads: fastMaxMisreads,
       rotation,
     },
     {
       type: "slow",
       minPassCount: slowMinPassCount,
+      maxPassCount: slowMaxPassCount,
       maxMisreads: slowMaxMisreads,
       rotation,
     },
@@ -49,21 +56,25 @@ function defineFastAndSlowTestCases({
 
 interface DefinePureTestCaseProps {
   minPassCount: number;
+  maxPassCount?: number;
   maxMisreads?: number;
 }
 
 function definePureTestCase({
   minPassCount,
+  maxPassCount = Number.POSITIVE_INFINITY,
   maxMisreads = 0,
 }: DefinePureTestCaseProps): TestCase {
   return {
     type: "pure",
     minPassCount: minPassCount,
+    maxPassCount: maxPassCount,
     maxMisreads: maxMisreads,
     rotation: 0,
   };
 }
 
+// Source: https://github.com/zxing-cpp/zxing-cpp/blob/535710a44a3f03f1fd51a908218a93640f496948/test/blackbox/BlackboxTestRunner.cpp#L338-L674
 export const testEntries: TestEntry[] = [
   {
     directory: "aztec-1",
@@ -852,10 +863,13 @@ export const testEntries: TestEntry[] = [
     testCases: [
       ...defineFastAndSlowTestCases({
         fastMinPassCount: 0,
+        fastMaxPassCount: 0,
         slowMinPassCount: 0,
+        slowMaxPassCount: 0,
       }),
       definePureTestCase({
         minPassCount: 0,
+        maxPassCount: 0,
       }),
     ],
   },
@@ -866,10 +880,13 @@ export const testEntries: TestEntry[] = [
     testCases: [
       ...defineFastAndSlowTestCases({
         fastMinPassCount: 0,
+        fastMaxPassCount: 0,
         slowMinPassCount: 0,
+        slowMaxPassCount: 0,
       }),
       definePureTestCase({
         minPassCount: 0,
+        maxPassCount: 0,
       }),
     ],
   },
