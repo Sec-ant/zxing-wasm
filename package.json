@@ -95,23 +95,23 @@
     "sync-emsdk": "./scripts/sync-emsdk.sh"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/types": "^7.25.4",
-    "@biomejs/biome": "1.9.2",
-    "@changesets/cli": "^2.27.7",
+    "@babel/core": "^7.25.7",
+    "@babel/types": "^7.25.7",
+    "@biomejs/biome": "1.9.3",
+    "@changesets/cli": "^2.27.9",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.5.0",
-    "concurrently": "^9.0.0",
+    "@types/node": "^22.7.4",
+    "concurrently": "^9.0.1",
     "copy-files-from-to": "^3.11.0",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "pretty-quick": "^4.0.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
-    "tsx": "^4.17.0",
-    "typedoc": "^0.26.6",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.2",
+    "tsx": "^4.19.1",
+    "typedoc": "^0.26.8",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
     "vite-plugin-babel": "^1.2.0"
   },
   "dependencies": {
@@ -122,5 +122,5 @@
       "typescript": "$typescript"
     }
   },
-  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
+  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }
