@@ -8,10 +8,11 @@ zxing_add_package_stb()
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 20)
-
+# Disable examples
+option(ZXING_EXAMPLES "Build the example barcode reader/writer applications" OFF)
 # Build options
-option(ZXING_WRITERS "Build with writer support (encoders)" ON)
 option(ZXING_READERS "Build with reader support (decoders)" ON)
+set(ZXING_WRITERS "OLD" CACHE STRING "Build with old and/or new writer (encoder) backend (OFF/ON/OLD/NEW/BOTH)")
 
 # Build environment
 set(ZXING_EMSCRIPTEN_ENVIRONMENT "web,worker" CACHE STRING "Optimize build for given emscripten runtime environment (web/node/shell/worker)")
