@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.13
+
+### Patch Changes
+
+- 650c295: DOM Clobbering security patch.
+
 ## 1.2.12
 
 ### Patch Changes
