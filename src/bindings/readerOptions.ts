@@ -50,8 +50,9 @@ export interface ZXingReaderOptions {
    */
   isPure: boolean;
   /**
-   * Image size ( min(width, height) ) threshold at which to start downscaled scanning
-   * **WARNING**: this API is experimental and may change / disappear
+   * Image size ( min(width, height) ) threshold at which to start downscaled scanning.
+   *
+   * **WARNING**: this API is experimental and may change / disappear.
    *
    * @experimental
    * @defaultValue `500`
@@ -60,7 +61,8 @@ export interface ZXingReaderOptions {
   downscaleThreshold: number;
   /**
    * Scale factor to use during downscaling, meaningful values are `2`, `3` and `4`.
-   * **WARNING**: this API is experimental and may change / disappear
+   *
+   * **WARNING**: this API is experimental and may change / disappear.
    *
    * @experimental
    * @defaultValue `3`
@@ -81,30 +83,30 @@ export interface ZXingReaderOptions {
    */
   maxNumberOfSymbols: number;
   /**
-   * If `true`, the Code-39 reader will try to read extended mode.
+   * Enable the heuristic to detect and decode "full ASCII"/extended Code39 symbols.
    *
-   * @defaultValue `false`
+   * @defaultValue `true`
    */
   tryCode39ExtendedMode: boolean;
   /**
-   * Assume Code-39 codes employ a check digit and validate it.
+   * The Code39 symbol has a valid checksum iff symbologyIdentifier[2] is an odd digit.
    *
    * @defaultValue `false`
-   * @deprecated upstream
+   * @deprecated [upstream](https://github.com/zxing-cpp/zxing-cpp/discussions/704)
    */
   validateCode39CheckSum: boolean;
   /**
-   * Assume ITF codes employ a GS1 check digit and validate it.
+   * The ITF symbol has a valid checksum iff symbologyIdentifier()[2] == '1'.
    *
    * @defaultValue `false`
-   * @deprecated upstream
+   * @deprecated [upstream](https://github.com/zxing-cpp/zxing-cpp/discussions/704)
    */
   validateITFCheckSum: boolean;
   /**
    * If `true`, return the start and end chars in a Codabar barcode instead of stripping them.
    *
-   * @defaultValue `false`
-   * @deprecated upstream
+   * @defaultValue `true`
+   * @deprecated [upstream](https://github.com/zxing-cpp/zxing-cpp/discussions/704)
    */
   returnCodabarStartEnd: boolean;
   /**
@@ -180,7 +182,7 @@ export interface ReaderOptions
    *
    *   Require EAN-2 / EAN-5 Add-On symbol to be present
    *
-   * @defaultValue `"Read"`
+   * @defaultValue `"Ignore"`
    */
   eanAddOnSymbol?: EanAddOnSymbol;
   /**
@@ -206,7 +208,7 @@ export interface ReaderOptions
    *
    *   Escape non-graphical characters in angle brackets (e.g. ASCII `29` will be transcoded to `"<GS>"`)
    *
-   * @defaultValue `"Plain"`
+   * @defaultValue `"HRI"`
    */
   textMode?: TextMode;
   /**
@@ -230,13 +232,13 @@ export const defaultReaderOptions: Required<ReaderOptions> = {
   downscaleThreshold: 500,
   minLineCount: 2,
   maxNumberOfSymbols: 255,
-  tryCode39ExtendedMode: false,
+  tryCode39ExtendedMode: true,
   validateCode39CheckSum: false,
   validateITFCheckSum: false,
-  returnCodabarStartEnd: false,
+  returnCodabarStartEnd: true,
   returnErrors: false,
-  eanAddOnSymbol: "Read",
-  textMode: "Plain",
+  eanAddOnSymbol: "Ignore",
+  textMode: "HRI",
   characterSet: "Unknown",
 };
 
