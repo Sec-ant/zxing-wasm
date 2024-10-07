@@ -29,5 +29,18 @@ runs:
       shell: bash
       # You need to checkout the zxing-wasm repo first!
       run: |
-        git apply ./emscripten.patch --unsafe-paths --directory="$(dirname $(which emcc))" --check --stat -v
-        git apply ./emscripten.patch --unsafe-paths --directory="$(dirname $(which emcc))"
+        PATCH_FILE="./emscripten.patch"
+        EMSCRIPTEN_DIR="$(dirname $(which emcc))"
+
+        # First, check if the patch is already applied
+        if git apply --reverse --check --unsafe-paths --directory="$EMSCRIPTEN_DIR" "$PATCH_FILE"; then
+          echo "Patch already applied, skipping..."
+        else
+          # Try to apply the patch
+          if git apply --unsafe-paths --directory="$EMSCRIPTEN_DIR" "$PATCH_FILE"; then
+            echo "Patch applied successfully."
+          else
+            echo "Failed to apply patch." >&2
+            exit 1
+          fi
+        fi
