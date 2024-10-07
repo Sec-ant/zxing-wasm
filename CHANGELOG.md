@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.2.14
+
+### Patch Changes
+
+- aad8899: Patch emscripten to mitigate DOM Clobbering vulnerability.
+
 ## 1.2.13
 
 ### Patch Changes
