@@ -101,6 +101,8 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
     readerOptions.setTextMode(jsReaderOptions.textMode);
     readerOptions.setCharacterSet(jsReaderOptions.characterSet);
 
+    printf("%d\n", jsReaderOptions.textMode);
+
     auto results = ZXing::ReadBarcodes(imageView, readerOptions);
 
     JsReadResults jsResults;

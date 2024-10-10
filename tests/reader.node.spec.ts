@@ -46,7 +46,15 @@ for (const {
         const misReadFiles = new Map<string, string>();
         const undetectedFiles = [];
 
-        readerOptions.tryDownscale = false;
+        // TODO: revisit here when defaults are changed
+        readerOptions.tryCode39ExtendedMode = true;
+        readerOptions.returnCodabarStartEnd = true;
+        readerOptions.eanAddOnSymbol = "Ignore";
+
+        readerOptions.textMode = "Escaped";
+        readerOptions.tryDownscale = false; // type === "slow";
+        readerOptions.downscaleFactor = 2;
+        readerOptions.downscaleThreshold = 180;
         readerOptions.tryHarder = type === "slow";
         readerOptions.tryRotate = type === "slow";
         readerOptions.tryInvert = type === "slow";
@@ -134,14 +142,16 @@ for (const {
               { encoding: "utf-8" },
             );
 
+            const escapedExpected = escapeNonGraphical(expected);
+
             const actual = barcode.text;
 
-            if (actual !== expected) {
+            if (actual !== escapedExpected) {
               misReadFiles.set(
                 imagePath,
                 `${
                   misReadFiles.get(imagePath) ?? ""
-                }Content mismatch: expected '${expected}' but got '${actual}'\n`,
+                }Content mismatch: expected '${escapedExpected}' but got '${actual}'\n`,
               );
             }
           } catch {}
@@ -202,4 +212,123 @@ function indent(str: string, indent = "  "): string {
     .split(/\r?\n/)
     .map((line) => `${indent}${line}`)
     .join("\n");
+}
+
+function escapeNonGraphical(str: string): string {
+  const asciiNongraphs = [
+    "NUL",
+    "SOH",
+    "STX",
+    "ETX",
+    "EOT",
+    "ENQ",
+    "ACK",
+    "BEL",
+    "BS",
+    "HT",
+    "LF",
+    "VT",
+    "FF",
+    "CR",
+    "SO",
+    "SI",
+    "DLE",
+    "DC1",
+    "DC2",
+    "DC3",
+    "DC4",
+    "NAK",
+    "SYN",
+    "ETB",
+    "CAN",
+    "EM",
+    "SUB",
+    "ESC",
+    "FS",
+    "GS",
+    "RS",
+    "US",
+    "DEL",
+  ];
+
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    const codePoint = str.codePointAt(i)!;
+
+    // Non-graphical ASCII characters (0-31 and 127)
+    if (codePoint < 32 || codePoint === 127) {
+      result += `<${asciiNongraphs[codePoint === 127 ? 32 : codePoint]}>`;
+    }
+    // Printable ASCII characters (32-126)
+    else if (codePoint < 128) {
+      result += String.fromCodePoint(codePoint);
+    }
+    // Handle UTF-16 surrogate pairs
+    else if (codePoint >= 0xd800 && codePoint <= 0xdbff && i + 1 < str.length) {
+      const nextCodePoint = str.codePointAt(i + 1)!;
+      if (nextCodePoint >= 0xdc00 && nextCodePoint <= 0xdfff) {
+        result += String.fromCodePoint(codePoint, nextCodePoint);
+        i++; // Skip the next character as it's part of the surrogate pair
+      }
+    }
+    // Exclude unpaired surrogates, NO-BREAK SPACE, NUMERICAL SPACE, etc.
+    else if (
+      (codePoint < 0xd800 || codePoint >= 0xe000) &&
+      isGraphicalUnicode(codePoint) &&
+      codePoint !== 0xa0 &&
+      codePoint !== 0x2007 &&
+      codePoint !== 0x202f &&
+      codePoint !== 0xfffd
+    ) {
+      result += String.fromCodePoint(codePoint);
+    }
+    // Non-graphical Unicode characters
+    else {
+      result += `<U+${codePoint
+        .toString(16)
+        .toUpperCase()
+        .padStart(codePoint < 256 ? 2 : 4, "0")}>`;
+    }
+  }
+
+  return result;
+}
+
+function isGraphicalUnicode(codePoint: number): boolean {
+  // Check for spaces and whitespace characters (tab, newline, etc.)
+  if (codePoint === 0x20 || (codePoint >= 0x09 && codePoint <= 0x0d)) {
+    return false;
+  }
+
+  // Check for ASCII graphical characters (0x21 to 0x7E)
+  if (codePoint < 0xff) {
+    return ((codePoint + 1) & 0x7f) >= 0x21;
+  }
+
+  // Exclude U+2028 and U+2029 (line/paragraph separators)
+  if (codePoint === 0x2028 || codePoint === 0x2029) {
+    return false;
+  }
+
+  // Exclude interlinear annotation controls (U+FFF9 through U+FFFB)
+  if (codePoint >= 0xfff9 && codePoint <= 0xfffb) {
+    return false;
+  }
+
+  // Exclude surrogate pairs and illegal Unicode ranges
+  if (codePoint >= 0xd800 && codePoint <= 0xdfff) {
+    return false;
+  }
+
+  // Exclude code points that are non-character (U+FFFE, U+FFFF, and others in those ranges)
+  if (
+    codePoint >= 0xfffc &&
+    codePoint <= 0x10ffff &&
+    (codePoint & 0xfffe) === 0xfffe
+  ) {
+    return false;
+  }
+
+  // For all other valid Unicode graphical characters
+  return true;
 }

@@ -22,5 +22,17 @@
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+    "*.ejs": "html",
+    "*.aedt": "apdl",
+    "*.m": "matlab",
+    "*.mdx": "markdown",
+    "*.opf": "xml",
+    "*.svg": "xml",
+    "*.yaml": "yaml",
+    ".config": "makefile",
+    ".wrxrc": "json",
+    "*.tcc": "cpp"
+  }
 }
