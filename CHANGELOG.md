@@ -1,5 +1,12 @@
 # zxing-wasm
 
+## 1.2.15
+
+### Patch Changes
+
+- fa87128: Fix webassembly exception handling. Increase success rate.
+- f1eef5c: Bump zxing-cpp to `81407a0` to fix reader options not being passed to the internal reader if `isPure` is set.
+
 ## 1.2.14
 
 ### Patch Changes
