@@ -108,7 +108,7 @@ export interface ReadResult
    *
    * Possible values are:
    * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
-   * `"DataBar"`, `"DataBarExpanded"`, `"DataMatrix"`, `"DXFilmEdge"`,
+   * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`, `"DXFilmEdge"`,
    * `"EAN-13"`, `"EAN-8"`, `"ITF"`,
    * `"MaxiCode"`, `"MicroQRCode"`, `"None"`,
    * `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
