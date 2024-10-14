@@ -1,0 +1,148 @@
+{
+  "total": 17,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "pdf417-1/03-rot90.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 16,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 16,
+        "images": [
+          "pdf417-1/01.png",
+          "pdf417-1/02.png",
+          "pdf417-1/03-aliased.png",
+          "pdf417-1/03-cut-bot.png",
+          "pdf417-1/03-cut-top.png",
+          "pdf417-1/03-flipped.png",
+          "pdf417-1/03.png",
+          "pdf417-1/04.png",
+          "pdf417-1/05.png",
+          "pdf417-1/06.png",
+          "pdf417-1/07.png",
+          "pdf417-1/09.png",
+          "pdf417-1/10.png",
+          "pdf417-1/11.png",
+          "pdf417-1/12-mixed-ecis.png",
+          "pdf417-1/13-readerinit.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "pdf417-1/03-rot90.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 16,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 16,
+        "images": [
+          "pdf417-1/01.png",
+          "pdf417-1/02.png",
+          "pdf417-1/03-aliased.png",
+          "pdf417-1/03-cut-bot.png",
+          "pdf417-1/03-cut-top.png",
+          "pdf417-1/03-flipped.png",
+          "pdf417-1/03.png",
+          "pdf417-1/04.png",
+          "pdf417-1/05.png",
+          "pdf417-1/06.png",
+          "pdf417-1/07.png",
+          "pdf417-1/09.png",
+          "pdf417-1/10.png",
+          "pdf417-1/11.png",
+          "pdf417-1/12-mixed-ecis.png",
+          "pdf417-1/13-readerinit.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "270": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "pdf417-1/10.png"
+        ]
+      }
+    }
+  }
+}

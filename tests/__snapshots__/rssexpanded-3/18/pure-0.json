@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataBarExpanded",
+  "bytes": "a73ca05",
+  "bytesECI": "ba1a8ab",
+  "text": "011234567890123110TREELOGIC",
+  "eccLevel": "",
+  "contentType": "GS1",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 4,
+      "y": 59
+    },
+    "topRight": {
+      "x": 557,
+      "y": 59
+    },
+    "bottomRight": {
+      "x": 557,
+      "y": 59
+    },
+    "bottomLeft": {
+      "x": 4,
+      "y": 59
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]e0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 1,
+  "version": ""
+}

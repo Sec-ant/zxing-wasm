@@ -1,0 +1,64 @@
+{
+  "total": 118,
+  "fast": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  }
+}

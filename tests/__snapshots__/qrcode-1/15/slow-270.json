@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "ad7126e",
+  "bytesECI": "4d1c4e1",
+  "text": "http://google.com/gwt/n?u=bluenile.com",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 323,
+      "y": 224
+    },
+    "topRight": {
+      "x": 319,
+      "y": 390
+    },
+    "bottomRight": {
+      "x": 164,
+      "y": 391
+    },
+    "bottomLeft": {
+      "x": 164,
+      "y": 218
+    }
+  },
+  "orientation": 91,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

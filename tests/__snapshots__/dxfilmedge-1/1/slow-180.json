@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DXFilmEdge",
+  "bytes": "78374e6",
+  "bytesECI": "78374e6",
+  "text": "36-2/21",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 483,
+      "y": 40
+    },
+    "topRight": {
+      "x": 280,
+      "y": 40
+    },
+    "bottomRight": {
+      "x": 280,
+      "y": 41
+    },
+    "bottomLeft": {
+      "x": 483,
+      "y": 41
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

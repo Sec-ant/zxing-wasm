@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "UPC-A",
+  "bytes": "3040afd",
+  "bytesECI": "4ca5a86",
+  "text": "060410049235",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 231,
+      "y": 210
+    },
+    "topRight": {
+      "x": 492,
+      "y": 210
+    },
+    "bottomRight": {
+      "x": 492,
+      "y": 212
+    },
+    "bottomLeft": {
+      "x": 231,
+      "y": 212
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]E0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

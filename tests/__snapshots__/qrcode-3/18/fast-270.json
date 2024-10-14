@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "65a30ce",
+  "bytesECI": "f4ac7b3",
+  "text": "UI office hours signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>",
+  "eccLevel": "Q",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 192,
+      "y": 32
+    },
+    "topRight": {
+      "x": 187,
+      "y": 192
+    },
+    "bottomRight": {
+      "x": 45,
+      "y": 176
+    },
+    "bottomLeft": {
+      "x": 43,
+      "y": 31
+    }
+  },
+  "orientation": 91,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "7"
+}

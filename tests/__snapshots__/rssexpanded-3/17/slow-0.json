@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataBarExpanded",
+  "bytes": "d3e34e0",
+  "bytesECI": "99e7317",
+  "text": "011234567890123110PIRAMIDE-PROJECT",
+  "eccLevel": "",
+  "contentType": "GS1",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 4,
+      "y": 58
+    },
+    "topRight": {
+      "x": 689,
+      "y": 58
+    },
+    "bottomRight": {
+      "x": 689,
+      "y": 59
+    },
+    "bottomLeft": {
+      "x": 4,
+      "y": 59
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]e0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

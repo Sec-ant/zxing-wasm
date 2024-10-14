@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "aaf472b",
+  "bytesECI": "78d107c",
+  "text": "http://aniful.jp/pr/  ",
+  "eccLevel": "H",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 61,
+      "y": 11
+    },
+    "topRight": {
+      "x": 179,
+      "y": 11
+    },
+    "bottomRight": {
+      "x": 179,
+      "y": 130
+    },
+    "bottomLeft": {
+      "x": 61,
+      "y": 129
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "6"
+}

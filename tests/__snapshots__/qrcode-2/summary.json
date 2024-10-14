@@ -1,0 +1,186 @@
+{
+  "total": 51,
+  "fast": {
+    "0": {
+      "failures": 6,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 6,
+        "images": [
+          "qrcode-2/#709.jpg",
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png",
+          "qrcode-2/qr-inv-1.jpg",
+          "qrcode-2/qr-inv-2.jpg"
+        ]
+      }
+    },
+    "90": {
+      "failures": 6,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 6,
+        "images": [
+          "qrcode-2/#709.jpg",
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png",
+          "qrcode-2/qr-inv-1.jpg",
+          "qrcode-2/qr-inv-2.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 6,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 6,
+        "images": [
+          "qrcode-2/#709.jpg",
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png",
+          "qrcode-2/qr-inv-1.jpg",
+          "qrcode-2/qr-inv-2.jpg"
+        ]
+      }
+    },
+    "270": {
+      "failures": 6,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 6,
+        "images": [
+          "qrcode-2/#709.jpg",
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png",
+          "qrcode-2/qr-inv-1.jpg",
+          "qrcode-2/qr-inv-2.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 3,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 3,
+        "images": [
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 3,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 3,
+        "images": [
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 3,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 3,
+        "images": [
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 3,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 3,
+        "images": [
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/28.png"
+        ]
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 29,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "qrcode-2/16.png",
+            "description": "[Text content mismatch]: expected '[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/', but got '[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 28,
+        "images": [
+          "qrcode-2/#142.jpg",
+          "qrcode-2/#199b.jpg",
+          "qrcode-2/#253.jpg",
+          "qrcode-2/#258.jpg",
+          "qrcode-2/#709.jpg",
+          "qrcode-2/#1314.jpg",
+          "qrcode-2/4.png",
+          "qrcode-2/5.png",
+          "qrcode-2/6.png",
+          "qrcode-2/7.png",
+          "qrcode-2/8.png",
+          "qrcode-2/12.png",
+          "qrcode-2/13.png",
+          "qrcode-2/15.png",
+          "qrcode-2/22.png",
+          "qrcode-2/23.png",
+          "qrcode-2/24.png",
+          "qrcode-2/25.png",
+          "qrcode-2/28.png",
+          "qrcode-2/30a.png",
+          "qrcode-2/31.png",
+          "qrcode-2/33.png",
+          "qrcode-2/estimate-tilt.jpg",
+          "qrcode-2/fix-finderpattern-order.jpg",
+          "qrcode-2/fix-traceline.jpg",
+          "qrcode-2/high-res-1.jpg",
+          "qrcode-2/qr-inv-1.jpg",
+          "qrcode-2/qr-inv-2.jpg"
+        ]
+      }
+    }
+  }
+}

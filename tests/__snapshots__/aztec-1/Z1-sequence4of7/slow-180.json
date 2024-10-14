@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "ceaa28b",
+  "bytesECI": "999a12a",
+  "text": "3456",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 152,
+      "y": 152
+    },
+    "topRight": {
+      "x": 0,
+      "y": 152
+    },
+    "bottomRight": {
+      "x": 0,
+      "y": 0
+    },
+    "bottomLeft": {
+      "x": 152,
+      "y": 0
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z6",
+  "sequenceSize": 7,
+  "sequenceIndex": 3,
+  "sequenceId": "Z1.txt",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "1"
+}

@@ -1,0 +1,57 @@
+{
+  "total": 5,
+  "fast": {
+    "0": {
+      "failures": 2,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 2,
+        "images": [
+          "ean13-extension-1/2.png",
+          "ean13-extension-1/38.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 2,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 2,
+        "images": [
+          "ean13-extension-1/2.png",
+          "ean13-extension-1/38.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  }
+}

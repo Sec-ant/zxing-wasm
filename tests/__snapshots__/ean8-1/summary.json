@@ -1,0 +1,66 @@
+{
+  "total": 9,
+  "fast": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "ean8-1/8.png"
+        ]
+      }
+    }
+  }
+}

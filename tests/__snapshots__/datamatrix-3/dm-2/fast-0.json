@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "bytes": "99d19ed",
+  "bytesECI": "4ff539d",
+  "text": "http://datamatrixcode.net",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 80,
+      "y": 53
+    },
+    "topRight": {
+      "x": 140,
+      "y": 39
+    },
+    "bottomRight": {
+      "x": 183,
+      "y": 72
+    },
+    "bottomLeft": {
+      "x": 119,
+      "y": 93
+    }
+  },
+  "orientation": -16,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "7"
+}

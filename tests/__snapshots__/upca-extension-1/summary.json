@@ -1,0 +1,62 @@
+{
+  "total": 6,
+  "fast": {
+    "0": {
+      "failures": 2,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 2,
+        "images": [
+          "upca-extension-1/8.png",
+          "upca-extension-1/19.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 3,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 3,
+        "images": [
+          "upca-extension-1/10.png",
+          "upca-extension-1/11.png",
+          "upca-extension-1/19.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "upca-extension-1/19.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "upca-extension-1/19.png"
+        ]
+      }
+    }
+  }
+}

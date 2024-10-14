@@ -1,0 +1,163 @@
+{
+  "total": 21,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "datamatrix-3/OldDetectorFallback.jpg"
+        ]
+      }
+    },
+    "90": {
+      "failures": 21,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 21,
+        "images": [
+          "datamatrix-3/#749.png",
+          "datamatrix-3/dm-0.jpg",
+          "datamatrix-3/dm-1.jpg",
+          "datamatrix-3/dm-2.jpg",
+          "datamatrix-3/dm-3.png",
+          "datamatrix-3/dm-4.jpg",
+          "datamatrix-3/dm-5.png",
+          "datamatrix-3/dm-6.jpg",
+          "datamatrix-3/dm-7.jpg",
+          "datamatrix-3/dm-8.jpg",
+          "datamatrix-3/dm-9.jpg",
+          "datamatrix-3/dm-a.jpg",
+          "datamatrix-3/dm-c.jpg",
+          "datamatrix-3/dm-d.jpg",
+          "datamatrix-3/dm-e.jpg",
+          "datamatrix-3/dm-f.jpg",
+          "datamatrix-3/dm-h.jpg",
+          "datamatrix-3/dm-i.jpg",
+          "datamatrix-3/dm-j.jpg",
+          "datamatrix-3/dm-k.jpg",
+          "datamatrix-3/OldDetectorFallback.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 21,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 21,
+        "images": [
+          "datamatrix-3/#749.png",
+          "datamatrix-3/dm-0.jpg",
+          "datamatrix-3/dm-1.jpg",
+          "datamatrix-3/dm-2.jpg",
+          "datamatrix-3/dm-3.png",
+          "datamatrix-3/dm-4.jpg",
+          "datamatrix-3/dm-5.png",
+          "datamatrix-3/dm-6.jpg",
+          "datamatrix-3/dm-7.jpg",
+          "datamatrix-3/dm-8.jpg",
+          "datamatrix-3/dm-9.jpg",
+          "datamatrix-3/dm-a.jpg",
+          "datamatrix-3/dm-c.jpg",
+          "datamatrix-3/dm-d.jpg",
+          "datamatrix-3/dm-e.jpg",
+          "datamatrix-3/dm-f.jpg",
+          "datamatrix-3/dm-h.jpg",
+          "datamatrix-3/dm-i.jpg",
+          "datamatrix-3/dm-j.jpg",
+          "datamatrix-3/dm-k.jpg",
+          "datamatrix-3/OldDetectorFallback.jpg"
+        ]
+      }
+    },
+    "270": {
+      "failures": 21,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 21,
+        "images": [
+          "datamatrix-3/#749.png",
+          "datamatrix-3/dm-0.jpg",
+          "datamatrix-3/dm-1.jpg",
+          "datamatrix-3/dm-2.jpg",
+          "datamatrix-3/dm-3.png",
+          "datamatrix-3/dm-4.jpg",
+          "datamatrix-3/dm-5.png",
+          "datamatrix-3/dm-6.jpg",
+          "datamatrix-3/dm-7.jpg",
+          "datamatrix-3/dm-8.jpg",
+          "datamatrix-3/dm-9.jpg",
+          "datamatrix-3/dm-a.jpg",
+          "datamatrix-3/dm-c.jpg",
+          "datamatrix-3/dm-d.jpg",
+          "datamatrix-3/dm-e.jpg",
+          "datamatrix-3/dm-f.jpg",
+          "datamatrix-3/dm-h.jpg",
+          "datamatrix-3/dm-i.jpg",
+          "datamatrix-3/dm-j.jpg",
+          "datamatrix-3/dm-k.jpg",
+          "datamatrix-3/OldDetectorFallback.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "270": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  }
+}

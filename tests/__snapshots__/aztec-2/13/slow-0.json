@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "150bd79",
+  "bytesECI": "5e4ff84",
+  "text": "mailto:zxing@googlegroups.com",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 105,
+      "y": 113
+    },
+    "topRight": {
+      "x": 280,
+      "y": 105
+    },
+    "bottomRight": {
+      "x": 268,
+      "y": 313
+    },
+    "bottomLeft": {
+      "x": 89,
+      "y": 300
+    }
+  },
+  "orientation": 1,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "2"
+}

@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "8ef929f",
+  "bytesECI": "0f39ee8",
+  "text": "http://staticrooster.com",
+  "eccLevel": "Q",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 230,
+      "y": 266
+    },
+    "topRight": {
+      "x": 93,
+      "y": 266
+    },
+    "bottomRight": {
+      "x": 93,
+      "y": 130
+    },
+    "bottomLeft": {
+      "x": 230,
+      "y": 130
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

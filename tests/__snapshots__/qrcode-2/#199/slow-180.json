@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "2b74991",
+  "bytesECI": "c562370",
+  "text": "ABCDEF1234567890",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 175,
+      "y": 177
+    },
+    "topRight": {
+      "x": 26,
+      "y": 177
+    },
+    "bottomRight": {
+      "x": 26,
+      "y": 27
+    },
+    "bottomLeft": {
+      "x": 175,
+      "y": 27
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "1"
+}

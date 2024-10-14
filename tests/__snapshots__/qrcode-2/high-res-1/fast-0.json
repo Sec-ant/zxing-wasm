@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "dcc9bdf",
+  "bytesECI": "460a34b",
+  "text": "QR code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan.[1] A barcode is a machine-readable optical label that contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.[2]<LF>sdfgksjdflkgjsdkfgiotmbx,cmvbofghjoaasdfaERYYKLLDFGSDFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDSVFB094856JLKSJFGS0DBIUZKL;KSFDF09846JLKSDNFGBLDKSFBHJ0SP98ASDFKthat contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or trac<LF>QR code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan.[1] A barcode is a machine-readable optical label that contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.[2]<LF>sdfgksjdflkgjsdkfgiotmbx,cmvbofghjoaasdfaERYYKLLDFGSDFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDSVFB094856JLKSJFGS0DBIUZKL;KSFDF09846JLKSDNFGBLDKSFBHJ0SP98ASDFKthat contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or trac",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 10,
+      "y": 27
+    },
+    "topRight": {
+      "x": 327,
+      "y": 6
+    },
+    "bottomRight": {
+      "x": 343,
+      "y": 367
+    },
+    "bottomLeft": {
+      "x": 3,
+      "y": 360
+    }
+  },
+  "orientation": -1,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "34"
+}

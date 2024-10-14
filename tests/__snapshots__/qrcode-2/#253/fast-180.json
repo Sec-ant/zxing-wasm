@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "10672cd",
+  "bytesECI": "88614f5",
+  "text": "http://cli.im",
+  "eccLevel": "H",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 166,
+      "y": 165
+    },
+    "topRight": {
+      "x": 35,
+      "y": 163
+    },
+    "bottomRight": {
+      "x": 36,
+      "y": 33
+    },
+    "bottomLeft": {
+      "x": 165,
+      "y": 32
+    }
+  },
+  "orientation": -180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "2"
+}

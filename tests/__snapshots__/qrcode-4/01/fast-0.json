@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "43e2286",
+  "bytesECI": "08faedc",
+  "text": "Google Print Ads - T.G.I.A.F. - January 31, 2008",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 37,
+      "y": 40
+    },
+    "topRight": {
+      "x": 208,
+      "y": 36
+    },
+    "bottomRight": {
+      "x": 200,
+      "y": 206
+    },
+    "bottomLeft": {
+      "x": 38,
+      "y": 204
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

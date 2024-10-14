@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "97d8ce7",
+  "bytesECI": "eaeec64",
+  "text": "In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 368,
+      "y": 343
+    },
+    "topRight": {
+      "x": 63,
+      "y": 343
+    },
+    "bottomRight": {
+      "x": 63,
+      "y": 38
+    },
+    "bottomLeft": {
+      "x": 368,
+      "y": 39
+    }
+  },
+  "orientation": -180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "6"
+}

@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "abc48e3",
+  "bytesECI": "24d25e1",
+  "text": "http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 162,
+      "y": 56
+    },
+    "topRight": {
+      "x": 209,
+      "y": 177
+    },
+    "bottomRight": {
+      "x": 49,
+      "y": 220
+    },
+    "bottomLeft": {
+      "x": 26,
+      "y": 93
+    }
+  },
+  "orientation": 74,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "6"
+}

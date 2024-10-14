@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "b06bb6b",
+  "bytesECI": "1f97010",
+  "text": "今度のバージョンでは文章の暗号化ができます。",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 374,
+      "y": 479
+    },
+    "topRight": {
+      "x": 161,
+      "y": 479
+    },
+    "bottomRight": {
+      "x": 161,
+      "y": 266
+    },
+    "bottomLeft": {
+      "x": 374,
+      "y": 266
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

@@ -1,0 +1,118 @@
+{
+  "total": 3,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "rmqrcode-1/R7x43-H_inverted.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "rmqrcode-1/R7x43-H_inverted.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "rmqrcode-1/R7x43-H_inverted.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "rmqrcode-1/R7x43-H_inverted.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "270": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "rmqrcode-1/R7x43-H_inverted.png"
+        ]
+      }
+    }
+  }
+}

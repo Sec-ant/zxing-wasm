@@ -1,0 +1,177 @@
+{
+  "total": 21,
+  "fast": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 21,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 21,
+        "images": [
+          "datamatrix-4/abcd-36x20.png",
+          "datamatrix-4/abcd-40x26.png",
+          "datamatrix-4/abcd-44x20.png",
+          "datamatrix-4/abcd-48x8.png",
+          "datamatrix-4/abcd-48x22.png",
+          "datamatrix-4/abcd-48x24.png",
+          "datamatrix-4/abcd-48x26.png",
+          "datamatrix-4/abcd-64x8.png",
+          "datamatrix-4/abcd-64x12.png",
+          "datamatrix-4/abcd-64x16.png",
+          "datamatrix-4/abcd-64x20.png",
+          "datamatrix-4/abcd-64x24.png",
+          "datamatrix-4/abcd-64x26.png",
+          "datamatrix-4/abcd-80x8.png",
+          "datamatrix-4/abcd-88x12.png",
+          "datamatrix-4/abcd-96x8.png",
+          "datamatrix-4/abcd-120x8.png",
+          "datamatrix-4/abcd-144x8.png",
+          "datamatrix-4/dm-e-d-c-edifice.jpg",
+          "datamatrix-4/dm-e-d-c-ultrakain.jpg",
+          "datamatrix-4/gs1-figure-4.15.1-2-44x20.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 21,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 21,
+        "images": [
+          "datamatrix-4/abcd-36x20.png",
+          "datamatrix-4/abcd-40x26.png",
+          "datamatrix-4/abcd-44x20.png",
+          "datamatrix-4/abcd-48x8.png",
+          "datamatrix-4/abcd-48x22.png",
+          "datamatrix-4/abcd-48x24.png",
+          "datamatrix-4/abcd-48x26.png",
+          "datamatrix-4/abcd-64x8.png",
+          "datamatrix-4/abcd-64x12.png",
+          "datamatrix-4/abcd-64x16.png",
+          "datamatrix-4/abcd-64x20.png",
+          "datamatrix-4/abcd-64x24.png",
+          "datamatrix-4/abcd-64x26.png",
+          "datamatrix-4/abcd-80x8.png",
+          "datamatrix-4/abcd-88x12.png",
+          "datamatrix-4/abcd-96x8.png",
+          "datamatrix-4/abcd-120x8.png",
+          "datamatrix-4/abcd-144x8.png",
+          "datamatrix-4/dm-e-d-c-edifice.jpg",
+          "datamatrix-4/dm-e-d-c-ultrakain.jpg",
+          "datamatrix-4/gs1-figure-4.15.1-2-44x20.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 21,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 21,
+        "images": [
+          "datamatrix-4/abcd-36x20.png",
+          "datamatrix-4/abcd-40x26.png",
+          "datamatrix-4/abcd-44x20.png",
+          "datamatrix-4/abcd-48x8.png",
+          "datamatrix-4/abcd-48x22.png",
+          "datamatrix-4/abcd-48x24.png",
+          "datamatrix-4/abcd-48x26.png",
+          "datamatrix-4/abcd-64x8.png",
+          "datamatrix-4/abcd-64x12.png",
+          "datamatrix-4/abcd-64x16.png",
+          "datamatrix-4/abcd-64x20.png",
+          "datamatrix-4/abcd-64x24.png",
+          "datamatrix-4/abcd-64x26.png",
+          "datamatrix-4/abcd-80x8.png",
+          "datamatrix-4/abcd-88x12.png",
+          "datamatrix-4/abcd-96x8.png",
+          "datamatrix-4/abcd-120x8.png",
+          "datamatrix-4/abcd-144x8.png",
+          "datamatrix-4/dm-e-d-c-edifice.jpg",
+          "datamatrix-4/dm-e-d-c-ultrakain.jpg",
+          "datamatrix-4/gs1-figure-4.15.1-2-44x20.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "270": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 2,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 2,
+        "images": [
+          "datamatrix-4/dm-e-d-c-edifice.jpg",
+          "datamatrix-4/dm-e-d-c-ultrakain.jpg"
+        ]
+      }
+    }
+  }
+}

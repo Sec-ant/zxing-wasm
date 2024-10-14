@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "bytes": "378ba61",
+  "bytesECI": "445a2e5",
+  "text": "DEA<ETX><SYN>-<STX><RS>íý<NUL>ª<EOT>Va© <SOH><NUL><NUL><SI>½G<EM><ETX><U+98>á+,<ENQ><U+84>ê<SI><U+99><U+9C>~õ<U+9E>ëEMþÝ ÌäÕòrÈnhH<U+9E><NUL><NUL><NUL><SI>½<NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL>Ó¾<U+86>°",
+  "eccLevel": "",
+  "contentType": "Binary",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 11,
+      "y": 13
+    },
+    "topRight": {
+      "x": 131,
+      "y": 13
+    },
+    "bottomRight": {
+      "x": 131,
+      "y": 130
+    },
+    "bottomLeft": {
+      "x": 11,
+      "y": 130
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "11"
+}

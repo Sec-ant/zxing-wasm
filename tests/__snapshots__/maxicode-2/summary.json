@@ -1,0 +1,39 @@
+{
+  "total": 4,
+  "fast": {
+    "0": {
+      "failures": 4,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 4,
+        "images": [
+          "maxicode-2/01.png",
+          "maxicode-2/03.png",
+          "maxicode-2/04.png",
+          "maxicode-2/05.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 4,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 4,
+        "images": [
+          "maxicode-2/01.png",
+          "maxicode-2/03.png",
+          "maxicode-2/04.png",
+          "maxicode-2/05.png"
+        ]
+      }
+    }
+  }
+}

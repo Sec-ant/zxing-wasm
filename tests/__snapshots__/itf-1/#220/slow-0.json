@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "ITF",
+  "bytes": "8c82a99",
+  "bytesECI": "850eefe",
+  "text": "0000091897",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 4,
+      "y": 337
+    },
+    "topRight": {
+      "x": 4,
+      "y": 44
+    },
+    "bottomRight": {
+      "x": 3,
+      "y": 44
+    },
+    "bottomLeft": {
+      "x": 3,
+      "y": 337
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]I0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

@@ -1,0 +1,98 @@
+{
+  "total": 28,
+  "fast": {
+    "0": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "upce-2/02.png",
+          "upce-2/14.png",
+          "upce-2/20.png",
+          "upce-2/24.png",
+          "upce-2/26.png",
+          "upce-2/33.png",
+          "upce-2/35.png",
+          "upce-2/38.png",
+          "upce-2/39.png",
+          "upce-2/41.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 9,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "upce-2/14.png",
+            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 8,
+        "images": [
+          "upce-2/02.png",
+          "upce-2/20.png",
+          "upce-2/26.png",
+          "upce-2/33.png",
+          "upce-2/35.png",
+          "upce-2/38.png",
+          "upce-2/39.png",
+          "upce-2/41.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 6,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "upce-2/14.png",
+            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 5,
+        "images": [
+          "upce-2/02.png",
+          "upce-2/20.png",
+          "upce-2/35.png",
+          "upce-2/38.png",
+          "upce-2/41.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 6,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "upce-2/14.png",
+            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 5,
+        "images": [
+          "upce-2/02.png",
+          "upce-2/20.png",
+          "upce-2/35.png",
+          "upce-2/38.png",
+          "upce-2/41.png"
+        ]
+      }
+    }
+  }
+}

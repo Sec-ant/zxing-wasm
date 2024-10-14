@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "b569ba8",
+  "bytesECI": "39c77ff",
+  "text": "01095040000591012112345678p901<GS>101234567p<GS>171411208200http://www.gs1.org/demo/",
+  "eccLevel": "M",
+  "contentType": "GS1",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "topRight": {
+      "x": 65,
+      "y": 0
+    },
+    "bottomRight": {
+      "x": 65,
+      "y": 65
+    },
+    "bottomLeft": {
+      "x": 0,
+      "y": 65
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q3",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

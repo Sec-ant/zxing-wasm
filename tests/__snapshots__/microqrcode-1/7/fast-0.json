@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MicroQRCode",
+  "bytes": "1c5f468",
+  "bytesECI": "2b250a9",
+  "text": "Victus",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 389,
+      "y": 232
+    },
+    "topRight": {
+      "x": 548,
+      "y": 227
+    },
+    "bottomRight": {
+      "x": 537,
+      "y": 371
+    },
+    "bottomLeft": {
+      "x": 398,
+      "y": 371
+    }
+  },
+  "orientation": -1,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

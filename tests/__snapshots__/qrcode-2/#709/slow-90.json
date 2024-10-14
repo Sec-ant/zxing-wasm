@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "1650469",
+  "bytesECI": "98eca15",
+  "text": "https://u.wechat.com/ELaSWShWyTFQvXJkp9vCgFA",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 97,
+      "y": 197
+    },
+    "topRight": {
+      "x": 97,
+      "y": 37
+    },
+    "bottomRight": {
+      "x": 258,
+      "y": 37
+    },
+    "bottomLeft": {
+      "x": 258,
+      "y": 197
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": true,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "5"
+}

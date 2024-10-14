@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "89a2b52",
+  "bytesECI": "f9cbabe",
+  "text": "MEBKM:URL:http\\://en.wikipedia.org/wiki/Main_Page;;",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 137,
+      "y": 462
+    },
+    "topRight": {
+      "x": 142,
+      "y": 192
+    },
+    "bottomRight": {
+      "x": 398,
+      "y": 173
+    },
+    "bottomLeft": {
+      "x": 398,
+      "y": 486
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

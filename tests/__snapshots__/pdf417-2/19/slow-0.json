@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "PDF417",
+  "bytes": "8e37a35",
+  "bytesECI": "5a779f6",
+  "text": "A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.",
+  "eccLevel": "9%",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 93,
+      "y": 54
+    },
+    "topRight": {
+      "x": 374,
+      "y": 54
+    },
+    "bottomRight": {
+      "x": 388,
+      "y": 173
+    },
+    "bottomLeft": {
+      "x": 100,
+      "y": 193
+    }
+  },
+  "orientation": -2,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]L2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": ""
+}

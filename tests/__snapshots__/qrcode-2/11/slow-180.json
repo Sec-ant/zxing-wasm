@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "aa77d77",
+  "bytesECI": "3e2eaf7",
+  "text": "BEGIN:VCARD<CR><LF>N:Kennedy;Steve<CR><LF>TEL:+44 (0)7775 755503<CR><LF>ADR;HOME:;;Flat 2, 43 Howitt Road, Belsize Park;London;;NW34LU;UK<CR><LF>ORG:NetTek Ltd;<CR><LF>TITLE:Consultant<CR><LF>EMAIL:steve@nettek.co.uk<CR><LF>URL:www.nettek.co.uk<CR><LF>EMAIL;IM:MSN:steve@gbnet.net<CR><LF>NOTE:Testing 1 2 3<CR><LF>BDAY:19611105<CR><LF>END:VCARD",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 130,
+      "y": 130
+    },
+    "topRight": {
+      "x": 0,
+      "y": 130
+    },
+    "bottomRight": {
+      "x": 0,
+      "y": 0
+    },
+    "bottomLeft": {
+      "x": 130,
+      "y": 0
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "12"
+}

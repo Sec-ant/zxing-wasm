@@ -1,0 +1,92 @@
+{
+  "total": 65,
+  "fast": {
+    "0": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "rssexpandedstacked-1/13.png",
+          "rssexpandedstacked-1/17.png",
+          "rssexpandedstacked-1/19.png",
+          "rssexpandedstacked-1/20.png",
+          "rssexpandedstacked-1/21.png",
+          "rssexpandedstacked-1/22.png",
+          "rssexpandedstacked-1/23.png",
+          "rssexpandedstacked-1/56.png",
+          "rssexpandedstacked-1/57.png",
+          "rssexpandedstacked-1/58.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "rssexpandedstacked-1/13.png",
+          "rssexpandedstacked-1/17.png",
+          "rssexpandedstacked-1/19.png",
+          "rssexpandedstacked-1/20.png",
+          "rssexpandedstacked-1/21.png",
+          "rssexpandedstacked-1/22.png",
+          "rssexpandedstacked-1/23.png",
+          "rssexpandedstacked-1/56.png",
+          "rssexpandedstacked-1/57.png",
+          "rssexpandedstacked-1/58.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 5,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 5,
+        "images": [
+          "rssexpandedstacked-1/13.png",
+          "rssexpandedstacked-1/19.png",
+          "rssexpandedstacked-1/20.png",
+          "rssexpandedstacked-1/22.png",
+          "rssexpandedstacked-1/23.png"
+        ]
+      }
+    }
+  }
+}

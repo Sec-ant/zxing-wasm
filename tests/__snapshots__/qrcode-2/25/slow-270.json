@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "6664752",
+  "bytesECI": "566f517",
+  "text": "MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;",
+  "eccLevel": "H",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 101,
+      "y": 8
+    },
+    "topRight": {
+      "x": 101,
+      "y": 103
+    },
+    "bottomRight": {
+      "x": 8,
+      "y": 102
+    },
+    "bottomLeft": {
+      "x": 7,
+      "y": 8
+    }
+  },
+  "orientation": 90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "8"
+}

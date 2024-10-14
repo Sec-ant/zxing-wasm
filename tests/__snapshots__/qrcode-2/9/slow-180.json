@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "2bbfde0",
+  "bytesECI": "585b23a",
+  "text": "Morden",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 175,
+      "y": 175
+    },
+    "topRight": {
+      "x": 28,
+      "y": 175
+    },
+    "bottomRight": {
+      "x": 28,
+      "y": 28
+    },
+    "bottomLeft": {
+      "x": 175,
+      "y": 28
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "1"
+}

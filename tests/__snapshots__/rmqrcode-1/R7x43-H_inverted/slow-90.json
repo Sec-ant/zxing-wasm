@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "rMQRCode",
+  "bytes": "228c125",
+  "bytesECI": "9122243",
+  "text": ",,",
+  "eccLevel": "H",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 0,
+      "y": 86
+    },
+    "topRight": {
+      "x": 0,
+      "y": 0
+    },
+    "bottomRight": {
+      "x": 14,
+      "y": 0
+    },
+    "bottomLeft": {
+      "x": 14,
+      "y": 86
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": true,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "1"
+}

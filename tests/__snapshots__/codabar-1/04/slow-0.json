@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Codabar",
+  "bytes": "a0fd6c7",
+  "bytesECI": "dc72789",
+  "text": "A123455C",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 7,
+      "y": 48
+    },
+    "topRight": {
+      "x": 187,
+      "y": 48
+    },
+    "bottomRight": {
+      "x": 187,
+      "y": 49
+    },
+    "bottomLeft": {
+      "x": 7,
+      "y": 49
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]F0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

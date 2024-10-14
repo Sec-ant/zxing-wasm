@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "d403e96",
+  "bytesECI": "e0e93aa",
+  "text": "http://wwws.keihin.ktr.mlit.go.jp/keitai/",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 336,
+      "y": 309
+    },
+    "topRight": {
+      "x": 348,
+      "y": 510
+    },
+    "bottomRight": {
+      "x": 153,
+      "y": 514
+    },
+    "bottomLeft": {
+      "x": 145,
+      "y": 308
+    }
+  },
+  "orientation": 87,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

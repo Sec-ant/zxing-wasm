@@ -1,0 +1,183 @@
+{
+  "total": 41,
+  "fast": {
+    "0": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 10,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 10,
+        "images": [
+          "qrcode-4/05.png",
+          "qrcode-4/06.png",
+          "qrcode-4/08.png",
+          "qrcode-4/09.png",
+          "qrcode-4/13.png",
+          "qrcode-4/30.png",
+          "qrcode-4/31.png",
+          "qrcode-4/32.png",
+          "qrcode-4/33.png",
+          "qrcode-4/34.png"
+        ]
+      }
+    }
+  }
+}

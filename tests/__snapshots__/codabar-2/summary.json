@@ -1,0 +1,61 @@
+{
+  "total": 4,
+  "fast": {
+    "0": {
+      "failures": 2,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 2,
+        "images": [
+          "codabar-2/03.jpg",
+          "codabar-2/04.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 2,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 2,
+        "images": [
+          "codabar-2/03.jpg",
+          "codabar-2/04.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "codabar-2/04.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 1,
+        "images": [
+          "codabar-2/04.jpg"
+        ]
+      }
+    }
+  }
+}

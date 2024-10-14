@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Code39",
+  "bytes": "369ed64",
+  "bytesECI": "3ac509e",
+  "text": " WWW.CITRONSOFT.COM ",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 357,
+      "y": 39
+    },
+    "topRight": {
+      "x": 7,
+      "y": 39
+    },
+    "bottomRight": {
+      "x": 7,
+      "y": 40
+    },
+    "bottomLeft": {
+      "x": 357,
+      "y": 40
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]A0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

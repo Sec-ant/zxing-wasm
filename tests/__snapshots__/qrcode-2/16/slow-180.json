@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "80d04fb",
+  "bytesECI": "a11337d",
+  "text": "[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 143,
+      "y": 143
+    },
+    "topRight": {
+      "x": 80,
+      "y": 143
+    },
+    "bottomRight": {
+      "x": 80,
+      "y": 80
+    },
+    "bottomLeft": {
+      "x": 143,
+      "y": 79
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

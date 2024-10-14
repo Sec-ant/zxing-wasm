@@ -1,0 +1,137 @@
+{
+  "total": 13,
+  "fast": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 13,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 13,
+        "images": [
+          "datamatrix-2/01.png",
+          "datamatrix-2/02.png",
+          "datamatrix-2/03.png",
+          "datamatrix-2/04.png",
+          "datamatrix-2/09.png",
+          "datamatrix-2/10.png",
+          "datamatrix-2/11.png",
+          "datamatrix-2/12.png",
+          "datamatrix-2/13.png",
+          "datamatrix-2/14.png",
+          "datamatrix-2/16.png",
+          "datamatrix-2/17.png",
+          "datamatrix-2/18.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 13,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 13,
+        "images": [
+          "datamatrix-2/01.png",
+          "datamatrix-2/02.png",
+          "datamatrix-2/03.png",
+          "datamatrix-2/04.png",
+          "datamatrix-2/09.png",
+          "datamatrix-2/10.png",
+          "datamatrix-2/11.png",
+          "datamatrix-2/12.png",
+          "datamatrix-2/13.png",
+          "datamatrix-2/14.png",
+          "datamatrix-2/16.png",
+          "datamatrix-2/17.png",
+          "datamatrix-2/18.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 13,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 13,
+        "images": [
+          "datamatrix-2/01.png",
+          "datamatrix-2/02.png",
+          "datamatrix-2/03.png",
+          "datamatrix-2/04.png",
+          "datamatrix-2/09.png",
+          "datamatrix-2/10.png",
+          "datamatrix-2/11.png",
+          "datamatrix-2/12.png",
+          "datamatrix-2/13.png",
+          "datamatrix-2/14.png",
+          "datamatrix-2/16.png",
+          "datamatrix-2/17.png",
+          "datamatrix-2/18.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "270": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  }
+}

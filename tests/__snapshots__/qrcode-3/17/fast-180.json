@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "a4f962e",
+  "bytesECI": "2aefaa7",
+  "text": "MECARD:N:Google 411,;TEL:18665881077;;",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 214,
+      "y": 143
+    },
+    "topRight": {
+      "x": 90,
+      "y": 220
+    },
+    "bottomRight": {
+      "x": 12,
+      "y": 66
+    },
+    "bottomLeft": {
+      "x": 151,
+      "y": 4
+    }
+  },
+  "orientation": 152,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

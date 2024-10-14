@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MicroQRCode",
+  "bytes": "d38b38a",
+  "bytesECI": "571c384",
+  "text": "Wikipedia",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 228,
+      "y": 45
+    },
+    "topRight": {
+      "x": 405,
+      "y": 45
+    },
+    "bottomRight": {
+      "x": 405,
+      "y": 223
+    },
+    "bottomLeft": {
+      "x": 228,
+      "y": 223
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

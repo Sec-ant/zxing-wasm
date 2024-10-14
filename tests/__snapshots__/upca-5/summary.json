@@ -1,0 +1,107 @@
+{
+  "total": 32,
+  "fast": {
+    "0": {
+      "failures": 14,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 14,
+        "images": [
+          "upca-5/01.png",
+          "upca-5/02.png",
+          "upca-5/06.png",
+          "upca-5/07.png",
+          "upca-5/09.png",
+          "upca-5/16.png",
+          "upca-5/19.png",
+          "upca-5/23.png",
+          "upca-5/25.png",
+          "upca-5/26.png",
+          "upca-5/27.png",
+          "upca-5/29.png",
+          "upca-5/31.png",
+          "upca-5/32.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 14,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 14,
+        "images": [
+          "upca-5/01.png",
+          "upca-5/02.png",
+          "upca-5/06.png",
+          "upca-5/07.png",
+          "upca-5/16.png",
+          "upca-5/19.png",
+          "upca-5/23.png",
+          "upca-5/25.png",
+          "upca-5/26.png",
+          "upca-5/27.png",
+          "upca-5/29.png",
+          "upca-5/30.png",
+          "upca-5/31.png",
+          "upca-5/32.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 12,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 12,
+        "images": [
+          "upca-5/01.png",
+          "upca-5/02.png",
+          "upca-5/06.png",
+          "upca-5/07.png",
+          "upca-5/16.png",
+          "upca-5/19.png",
+          "upca-5/23.png",
+          "upca-5/25.png",
+          "upca-5/26.png",
+          "upca-5/27.png",
+          "upca-5/29.png",
+          "upca-5/32.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 12,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 12,
+        "images": [
+          "upca-5/01.png",
+          "upca-5/02.png",
+          "upca-5/06.png",
+          "upca-5/07.png",
+          "upca-5/16.png",
+          "upca-5/19.png",
+          "upca-5/23.png",
+          "upca-5/25.png",
+          "upca-5/26.png",
+          "upca-5/27.png",
+          "upca-5/29.png",
+          "upca-5/32.png"
+        ]
+      }
+    }
+  }
+}

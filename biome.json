@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["zxing-cpp"]
+    "ignore": ["zxing-cpp", "__snapshots__"]
   },
   "formatter": {
     "indentStyle": "space"

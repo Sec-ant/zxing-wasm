@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "bytes": "7bd3421",
+  "bytesECI": "313b12e",
+  "text": "[)><RS>DD<GS>CAG 34JR1<GS>PNO 2SJL00506-0001<GS>SEQ 0001<RS><EOT>",
+  "eccLevel": "",
+  "contentType": "Binary",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 33,
+      "y": 182
+    },
+    "topRight": {
+      "x": 28,
+      "y": 44
+    },
+    "bottomRight": {
+      "x": 167,
+      "y": 39
+    },
+    "bottomLeft": {
+      "x": 171,
+      "y": 177
+    }
+  },
+  "orientation": -92,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "10"
+}

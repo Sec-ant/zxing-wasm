@@ -1,10 +1,8 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "module": "NodeNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["emscripten"],
-    "moduleResolution": "NodeNext"
+    "types": ["emscripten", "vitest/importMeta"]
   },
   "include": ["./src"],
   "references": [

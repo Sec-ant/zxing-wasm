@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MicroQRCode",
+  "bytes": "04798bc",
+  "bytesECI": "74915e9",
+  "text": "ezik",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 434,
+      "y": 109
+    },
+    "topRight": {
+      "x": 501,
+      "y": 115
+    },
+    "bottomRight": {
+      "x": 495,
+      "y": 181
+    },
+    "bottomLeft": {
+      "x": 429,
+      "y": 175
+    }
+  },
+  "orientation": 5,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

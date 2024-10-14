@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "55ed3ad",
+  "bytesECI": "d5af4fa",
+  "text": "This is a real world Aztec barcode test.",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 318,
+      "y": 305
+    },
+    "topRight": {
+      "x": 126,
+      "y": 338
+    },
+    "bottomRight": {
+      "x": 100,
+      "y": 105
+    },
+    "bottomLeft": {
+      "x": 301,
+      "y": 95
+    }
+  },
+  "orientation": 174,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "2"
+}

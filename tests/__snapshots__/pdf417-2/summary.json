@@ -1,0 +1,147 @@
+{
+  "total": 25,
+  "fast": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "pdf417-2/01.png",
+          "pdf417-2/02.png",
+          "pdf417-2/03.png",
+          "pdf417-2/04.png",
+          "pdf417-2/05.png",
+          "pdf417-2/06.png",
+          "pdf417-2/07.png",
+          "pdf417-2/08.png",
+          "pdf417-2/09.png",
+          "pdf417-2/10.png",
+          "pdf417-2/11.png",
+          "pdf417-2/12.png",
+          "pdf417-2/13.png",
+          "pdf417-2/14.png",
+          "pdf417-2/15.png",
+          "pdf417-2/16.png",
+          "pdf417-2/17.png",
+          "pdf417-2/18.png",
+          "pdf417-2/19.png",
+          "pdf417-2/20.png",
+          "pdf417-2/21.png",
+          "pdf417-2/22.png",
+          "pdf417-2/23.png",
+          "pdf417-2/24.png",
+          "pdf417-2/25.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "270": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "pdf417-2/01.png",
+          "pdf417-2/02.png",
+          "pdf417-2/03.png",
+          "pdf417-2/04.png",
+          "pdf417-2/05.png",
+          "pdf417-2/06.png",
+          "pdf417-2/07.png",
+          "pdf417-2/08.png",
+          "pdf417-2/09.png",
+          "pdf417-2/10.png",
+          "pdf417-2/11.png",
+          "pdf417-2/12.png",
+          "pdf417-2/13.png",
+          "pdf417-2/14.png",
+          "pdf417-2/15.png",
+          "pdf417-2/16.png",
+          "pdf417-2/17.png",
+          "pdf417-2/18.png",
+          "pdf417-2/19.png",
+          "pdf417-2/20.png",
+          "pdf417-2/21.png",
+          "pdf417-2/22.png",
+          "pdf417-2/23.png",
+          "pdf417-2/24.png",
+          "pdf417-2/25.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "90": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "180": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    },
+    "270": {
+      "failures": 0,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 0,
+        "images": []
+      }
+    }
+  }
+}

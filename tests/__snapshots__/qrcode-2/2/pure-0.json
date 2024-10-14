@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "f00163a",
+  "bytesECI": "31fc589",
+  "text": "LANDBYASCARC   PERCEPTIBLEC EEK,OOZI GITSWAYTHROU  AWILDERNESSOFBESUPPOSED,I  CANT,ORATL ASTDWARFISH.NO REESOFANYM  NITUDEARETOBESOMEMISERA  EFRAMEBUIL I GS,TENANTED, U INGSUMMER   THEFUGITIVE;BUTTHEWHO  ISLAND,WI H   EXCEPTIONOFT   W STERNPOI  ,ANDALINEOFLLIAMLEGR   .HEWASOF N    ENTHUGUENOTF    Y ANDHADON  BEENWEALTHTIONCONSE  ENTUPONH SD   STERS,HELEFTNE   LE NS,THEC   OFHISFOREOUTHCARO   A.THISISLA    AVERYSINGULARO    TCONSISTSO  ITTLEELSEDSAQUART   FAMILE. TI   PARATEDFROMTHEMA   AN BYASCAR   YPERCEPTERESORT     MARSH EN   EVEGETATION,ASMIGH   SU POSED,   CANT,ORATREMITY,      ORT OULTRIESTANDS,ANDWHEREARESOM MIS      FRAMEBUIFEVER,MAYBE      INDEED,                TO;BUTT      EISLAND,WITNYYEARSAGO,IC    ACTED                    LLIAM    AND.HEWASOFANNESHADREDUCEDHIM OWA                       IONC NSEQUENTUPONHISDSIDENCEATSULLIVA \\'S                          HC ROLINA.THISISLANOUTTHR    LESLON .        THATN  OINTE        U RTEROF    E.ITISTHROU       ERNE       DSANDSLI  ,AFAVOR        TOFT       HEN.T",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 16,
+      "y": 16
+    },
+    "topRight": {
+      "x": 499,
+      "y": 16
+    },
+    "bottomRight": {
+      "x": 499,
+      "y": 499
+    },
+    "bottomLeft": {
+      "x": 16,
+      "y": 499
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "26"
+}

@@ -1,0 +1,121 @@
+{
+  "total": 36,
+  "fast": {
+    "0": {
+      "failures": 19,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 19,
+        "images": [
+          "upca-2/01.png",
+          "upca-2/02.png",
+          "upca-2/04.png",
+          "upca-2/06.png",
+          "upca-2/08.png",
+          "upca-2/10.png",
+          "upca-2/11.png",
+          "upca-2/15.png",
+          "upca-2/28.png",
+          "upca-2/31.png",
+          "upca-2/32.png",
+          "upca-2/34.png",
+          "upca-2/35.png",
+          "upca-2/37.png",
+          "upca-2/38.png",
+          "upca-2/41.png",
+          "upca-2/48.png",
+          "upca-2/49.png",
+          "upca-2/50.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 19,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 19,
+        "images": [
+          "upca-2/01.png",
+          "upca-2/02.png",
+          "upca-2/04.png",
+          "upca-2/06.png",
+          "upca-2/08.png",
+          "upca-2/10.png",
+          "upca-2/11.png",
+          "upca-2/15.png",
+          "upca-2/25.png",
+          "upca-2/28.png",
+          "upca-2/31.png",
+          "upca-2/32.png",
+          "upca-2/34.png",
+          "upca-2/35.png",
+          "upca-2/38.png",
+          "upca-2/41.png",
+          "upca-2/48.png",
+          "upca-2/49.png",
+          "upca-2/50.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 14,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 14,
+        "images": [
+          "upca-2/01.png",
+          "upca-2/04.png",
+          "upca-2/06.png",
+          "upca-2/08.png",
+          "upca-2/10.png",
+          "upca-2/11.png",
+          "upca-2/15.png",
+          "upca-2/28.png",
+          "upca-2/31.png",
+          "upca-2/34.png",
+          "upca-2/38.png",
+          "upca-2/41.png",
+          "upca-2/48.png",
+          "upca-2/50.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 14,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 14,
+        "images": [
+          "upca-2/01.png",
+          "upca-2/04.png",
+          "upca-2/06.png",
+          "upca-2/08.png",
+          "upca-2/10.png",
+          "upca-2/11.png",
+          "upca-2/15.png",
+          "upca-2/28.png",
+          "upca-2/31.png",
+          "upca-2/34.png",
+          "upca-2/38.png",
+          "upca-2/41.png",
+          "upca-2/48.png",
+          "upca-2/50.png"
+        ]
+      }
+    }
+  }
+}

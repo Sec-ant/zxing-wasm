@@ -1,0 +1,342 @@
+{
+  "total": 25,
+  "fast": {
+    "0": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 25,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 25,
+        "images": [
+          "falsepositives-2/01.png",
+          "falsepositives-2/02.png",
+          "falsepositives-2/03.png",
+          "falsepositives-2/04.png",
+          "falsepositives-2/05.png",
+          "falsepositives-2/06.png",
+          "falsepositives-2/07.png",
+          "falsepositives-2/08.png",
+          "falsepositives-2/09.png",
+          "falsepositives-2/10.png",
+          "falsepositives-2/11.png",
+          "falsepositives-2/12.png",
+          "falsepositives-2/13.png",
+          "falsepositives-2/14.png",
+          "falsepositives-2/15.png",
+          "falsepositives-2/16.png",
+          "falsepositives-2/17.png",
+          "falsepositives-2/18.png",
+          "falsepositives-2/19.png",
+          "falsepositives-2/20.png",
+          "falsepositives-2/21.png",
+          "falsepositives-2/22.png",
+          "falsepositives-2/23.png",
+          "falsepositives-2/24.png",
+          "falsepositives-2/25.png"
+        ]
+      }
+    }
+  }
+}

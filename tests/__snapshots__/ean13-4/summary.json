@@ -1,0 +1,104 @@
+{
+  "total": 22,
+  "fast": {
+    "0": {
+      "failures": 16,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 16,
+        "images": [
+          "ean13-4/03.png",
+          "ean13-4/04.png",
+          "ean13-4/05.png",
+          "ean13-4/07.png",
+          "ean13-4/08.png",
+          "ean13-4/09.png",
+          "ean13-4/10.png",
+          "ean13-4/11.png",
+          "ean13-4/12.png",
+          "ean13-4/14.png",
+          "ean13-4/16.png",
+          "ean13-4/17.png",
+          "ean13-4/18.png",
+          "ean13-4/19.png",
+          "ean13-4/21.png",
+          "ean13-4/22.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 15,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 15,
+        "images": [
+          "ean13-4/03.png",
+          "ean13-4/04.png",
+          "ean13-4/05.png",
+          "ean13-4/07.png",
+          "ean13-4/08.png",
+          "ean13-4/09.png",
+          "ean13-4/10.png",
+          "ean13-4/12.png",
+          "ean13-4/14.png",
+          "ean13-4/16.png",
+          "ean13-4/17.png",
+          "ean13-4/18.png",
+          "ean13-4/19.png",
+          "ean13-4/21.png",
+          "ean13-4/22.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 9,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 9,
+        "images": [
+          "ean13-4/03.png",
+          "ean13-4/08.png",
+          "ean13-4/10.png",
+          "ean13-4/12.png",
+          "ean13-4/16.png",
+          "ean13-4/17.png",
+          "ean13-4/19.png",
+          "ean13-4/21.png",
+          "ean13-4/22.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 9,
+      "misreads": {
+        "total": 0,
+        "images": []
+      },
+      "undetected": {
+        "total": 9,
+        "images": [
+          "ean13-4/03.png",
+          "ean13-4/08.png",
+          "ean13-4/10.png",
+          "ean13-4/12.png",
+          "ean13-4/16.png",
+          "ean13-4/17.png",
+          "ean13-4/19.png",
+          "ean13-4/21.png",
+          "ean13-4/22.png"
+        ]
+      }
+    }
+  }
+}
