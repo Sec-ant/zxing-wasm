@@ -1,23 +1,10 @@
 {
   "total": 16,
+  "passAll": 0,
+  "passSome": 16,
   "fast": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
     "90": {
       "failures": 16,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 16,
         "images": [
@@ -40,23 +27,8 @@
         ]
       }
     },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
     "270": {
       "failures": 16,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 16,
         "images": [
@@ -77,62 +49,12 @@
           "pdf417-3/18.png",
           "pdf417-3/19.png"
         ]
-      }
-    }
-  },
-  "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "90": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "270": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
       }
     }
   },
   "pure": {
     "0": {
       "failures": 9,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 9,
         "images": [

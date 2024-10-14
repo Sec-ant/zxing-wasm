@@ -1,23 +1,10 @@
 {
   "total": 21,
+  "passAll": 0,
+  "passSome": 21,
   "fast": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
     "90": {
       "failures": 21,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 21,
         "images": [
@@ -47,10 +34,6 @@
     },
     "180": {
       "failures": 21,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 21,
         "images": [
@@ -80,10 +63,6 @@
     },
     "270": {
       "failures": 21,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 21,
         "images": [
@@ -109,62 +88,12 @@
           "datamatrix-4/dm-e-d-c-ultrakain.jpg",
           "datamatrix-4/gs1-figure-4.15.1-2-44x20.png"
         ]
-      }
-    }
-  },
-  "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "90": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "270": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
       }
     }
   },
   "pure": {
     "0": {
       "failures": 2,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 2,
         "images": [

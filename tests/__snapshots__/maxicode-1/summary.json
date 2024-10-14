@@ -1,29 +1,5 @@
 {
   "total": 9,
-  "fast": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    }
-  },
-  "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    }
-  }
+  "passAll": 9,
+  "passSome": 9
 }

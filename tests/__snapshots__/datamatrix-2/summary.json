@@ -1,23 +1,10 @@
 {
   "total": 13,
+  "passAll": 0,
+  "passSome": 13,
   "fast": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
     "90": {
       "failures": 13,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 13,
         "images": [
@@ -39,10 +26,6 @@
     },
     "180": {
       "failures": 13,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 13,
         "images": [
@@ -64,10 +47,6 @@
     },
     "270": {
       "failures": 13,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 13,
         "images": [
@@ -85,52 +64,6 @@
           "datamatrix-2/17.png",
           "datamatrix-2/18.png"
         ]
-      }
-    }
-  },
-  "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "90": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "270": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
       }
     }
   }

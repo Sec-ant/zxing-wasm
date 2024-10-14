@@ -1,104 +1,10 @@
 {
   "total": 16,
-  "fast": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "90": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "270": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    }
-  },
-  "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "90": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "270": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    }
-  },
+  "passAll": 4,
+  "passSome": 16,
   "pure": {
     "0": {
       "failures": 12,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 12,
         "images": [

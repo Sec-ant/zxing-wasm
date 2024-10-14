@@ -1,12 +1,10 @@
 {
   "total": 65,
+  "passAll": 55,
+  "passSome": 65,
   "fast": {
     "0": {
       "failures": 10,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 10,
         "images": [
@@ -25,10 +23,6 @@
     },
     "180": {
       "failures": 10,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 10,
         "images": [
@@ -43,40 +37,12 @@
           "rssexpandedstacked-1/57.png",
           "rssexpandedstacked-1/58.png"
         ]
-      }
-    }
-  },
-  "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
       }
     }
   },
   "pure": {
     "0": {
       "failures": 5,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 5,
         "images": [

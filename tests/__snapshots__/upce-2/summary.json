@@ -1,12 +1,10 @@
 {
   "total": 28,
+  "passAll": 18,
+  "passSome": 22,
   "fast": {
     "0": {
       "failures": 10,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 10,
         "images": [

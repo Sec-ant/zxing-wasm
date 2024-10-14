@@ -1,23 +1,10 @@
 {
   "total": 29,
+  "passAll": 0,
+  "passSome": 29,
   "fast": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
     "90": {
       "failures": 29,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 29,
         "images": [
@@ -55,10 +42,6 @@
     },
     "180": {
       "failures": 29,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 29,
         "images": [
@@ -96,10 +79,6 @@
     },
     "270": {
       "failures": 29,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 29,
         "images": [
@@ -137,23 +116,8 @@
     }
   },
   "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
     "90": {
       "failures": 2,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 2,
         "images": [
@@ -164,10 +128,6 @@
     },
     "180": {
       "failures": 2,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 2,
         "images": [
@@ -178,10 +138,6 @@
     },
     "270": {
       "failures": 2,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 2,
         "images": [
@@ -194,10 +150,6 @@
   "pure": {
     "0": {
       "failures": 1,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 1,
         "images": [

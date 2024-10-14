@@ -1,12 +1,10 @@
 {
   "total": 17,
+  "passAll": 0,
+  "passSome": 17,
   "fast": {
     "0": {
       "failures": 1,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 1,
         "images": [
@@ -16,10 +14,6 @@
     },
     "90": {
       "failures": 16,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 16,
         "images": [
@@ -44,10 +38,6 @@
     },
     "180": {
       "failures": 1,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 1,
         "images": [
@@ -57,10 +47,6 @@
     },
     "270": {
       "failures": 16,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 16,
         "images": [
@@ -81,62 +67,12 @@
           "pdf417-1/12-mixed-ecis.png",
           "pdf417-1/13-readerinit.png"
         ]
-      }
-    }
-  },
-  "slow": {
-    "0": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "90": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "180": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
-      }
-    },
-    "270": {
-      "failures": 0,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
-      "undetected": {
-        "total": 0,
-        "images": []
       }
     }
   },
   "pure": {
     "0": {
       "failures": 1,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 1,
         "images": [

@@ -1,12 +1,10 @@
 {
   "total": 4,
+  "passAll": 2,
+  "passSome": 3,
   "fast": {
     "0": {
       "failures": 2,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 2,
         "images": [
@@ -17,10 +15,6 @@
     },
     "180": {
       "failures": 2,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 2,
         "images": [
@@ -33,10 +27,6 @@
   "slow": {
     "0": {
       "failures": 1,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 1,
         "images": [
@@ -46,10 +36,6 @@
     },
     "180": {
       "failures": 1,
-      "misreads": {
-        "total": 0,
-        "images": []
-      },
       "undetected": {
         "total": 1,
         "images": [
