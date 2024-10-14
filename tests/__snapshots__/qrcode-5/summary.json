@@ -2,24 +2,36 @@
   "total": 16,
   "passAll": 4,
   "passSome": 16,
+  "fast": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
+  },
   "pure": {
     "0": {
       "failures": 12,
       "undetected": {
         "total": 12,
         "images": [
-          "qrcode-5/01.png",
-          "qrcode-5/02.png",
-          "qrcode-5/03.png",
-          "qrcode-5/04.png",
-          "qrcode-5/05.png",
-          "qrcode-5/08.png",
-          "qrcode-5/09.png",
-          "qrcode-5/11.png",
-          "qrcode-5/12.png",
-          "qrcode-5/13.png",
-          "qrcode-5/14.png",
-          "qrcode-5/15.png"
+          "01.png",
+          "02.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "08.png",
+          "09.png",
+          "11.png",
+          "12.png",
+          "13.png",
+          "14.png",
+          "15.png"
         ]
       }
     }

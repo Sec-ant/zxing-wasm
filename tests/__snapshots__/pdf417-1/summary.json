@@ -8,7 +8,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "pdf417-1/03-rot90.png"
+          "03-rot90.png"
         ]
       }
     },
@@ -17,22 +17,22 @@
       "undetected": {
         "total": 16,
         "images": [
-          "pdf417-1/01.png",
-          "pdf417-1/02.png",
-          "pdf417-1/03-aliased.png",
-          "pdf417-1/03-cut-bot.png",
-          "pdf417-1/03-cut-top.png",
-          "pdf417-1/03-flipped.png",
-          "pdf417-1/03.png",
-          "pdf417-1/04.png",
-          "pdf417-1/05.png",
-          "pdf417-1/06.png",
-          "pdf417-1/07.png",
-          "pdf417-1/09.png",
-          "pdf417-1/10.png",
-          "pdf417-1/11.png",
-          "pdf417-1/12-mixed-ecis.png",
-          "pdf417-1/13-readerinit.png"
+          "01.png",
+          "02.png",
+          "03-aliased.png",
+          "03-cut-bot.png",
+          "03-cut-top.png",
+          "03-flipped.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "06.png",
+          "07.png",
+          "09.png",
+          "10.png",
+          "11.png",
+          "12-mixed-ecis.png",
+          "13-readerinit.png"
         ]
       }
     },
@@ -41,7 +41,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "pdf417-1/03-rot90.png"
+          "03-rot90.png"
         ]
       }
     },
@@ -50,25 +50,31 @@
       "undetected": {
         "total": 16,
         "images": [
-          "pdf417-1/01.png",
-          "pdf417-1/02.png",
-          "pdf417-1/03-aliased.png",
-          "pdf417-1/03-cut-bot.png",
-          "pdf417-1/03-cut-top.png",
-          "pdf417-1/03-flipped.png",
-          "pdf417-1/03.png",
-          "pdf417-1/04.png",
-          "pdf417-1/05.png",
-          "pdf417-1/06.png",
-          "pdf417-1/07.png",
-          "pdf417-1/09.png",
-          "pdf417-1/10.png",
-          "pdf417-1/11.png",
-          "pdf417-1/12-mixed-ecis.png",
-          "pdf417-1/13-readerinit.png"
+          "01.png",
+          "02.png",
+          "03-aliased.png",
+          "03-cut-bot.png",
+          "03-cut-top.png",
+          "03-flipped.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "06.png",
+          "07.png",
+          "09.png",
+          "10.png",
+          "11.png",
+          "12-mixed-ecis.png",
+          "13-readerinit.png"
         ]
       }
     }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
   },
   "pure": {
     "0": {
@@ -76,7 +82,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "pdf417-1/10.png"
+          "10.png"
         ]
       }
     }

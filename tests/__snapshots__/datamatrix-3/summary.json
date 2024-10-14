@@ -8,7 +8,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "datamatrix-3/OldDetectorFallback.jpg"
+          "OldDetectorFallback.jpg"
         ]
       }
     },
@@ -17,27 +17,27 @@
       "undetected": {
         "total": 21,
         "images": [
-          "datamatrix-3/#749.png",
-          "datamatrix-3/dm-0.jpg",
-          "datamatrix-3/dm-1.jpg",
-          "datamatrix-3/dm-2.jpg",
-          "datamatrix-3/dm-3.png",
-          "datamatrix-3/dm-4.jpg",
-          "datamatrix-3/dm-5.png",
-          "datamatrix-3/dm-6.jpg",
-          "datamatrix-3/dm-7.jpg",
-          "datamatrix-3/dm-8.jpg",
-          "datamatrix-3/dm-9.jpg",
-          "datamatrix-3/dm-a.jpg",
-          "datamatrix-3/dm-c.jpg",
-          "datamatrix-3/dm-d.jpg",
-          "datamatrix-3/dm-e.jpg",
-          "datamatrix-3/dm-f.jpg",
-          "datamatrix-3/dm-h.jpg",
-          "datamatrix-3/dm-i.jpg",
-          "datamatrix-3/dm-j.jpg",
-          "datamatrix-3/dm-k.jpg",
-          "datamatrix-3/OldDetectorFallback.jpg"
+          "#749.png",
+          "dm-0.jpg",
+          "dm-1.jpg",
+          "dm-2.jpg",
+          "dm-3.png",
+          "dm-4.jpg",
+          "dm-5.png",
+          "dm-6.jpg",
+          "dm-7.jpg",
+          "dm-8.jpg",
+          "dm-9.jpg",
+          "dm-a.jpg",
+          "dm-c.jpg",
+          "dm-d.jpg",
+          "dm-e.jpg",
+          "dm-f.jpg",
+          "dm-h.jpg",
+          "dm-i.jpg",
+          "dm-j.jpg",
+          "dm-k.jpg",
+          "OldDetectorFallback.jpg"
         ]
       }
     },
@@ -46,27 +46,27 @@
       "undetected": {
         "total": 21,
         "images": [
-          "datamatrix-3/#749.png",
-          "datamatrix-3/dm-0.jpg",
-          "datamatrix-3/dm-1.jpg",
-          "datamatrix-3/dm-2.jpg",
-          "datamatrix-3/dm-3.png",
-          "datamatrix-3/dm-4.jpg",
-          "datamatrix-3/dm-5.png",
-          "datamatrix-3/dm-6.jpg",
-          "datamatrix-3/dm-7.jpg",
-          "datamatrix-3/dm-8.jpg",
-          "datamatrix-3/dm-9.jpg",
-          "datamatrix-3/dm-a.jpg",
-          "datamatrix-3/dm-c.jpg",
-          "datamatrix-3/dm-d.jpg",
-          "datamatrix-3/dm-e.jpg",
-          "datamatrix-3/dm-f.jpg",
-          "datamatrix-3/dm-h.jpg",
-          "datamatrix-3/dm-i.jpg",
-          "datamatrix-3/dm-j.jpg",
-          "datamatrix-3/dm-k.jpg",
-          "datamatrix-3/OldDetectorFallback.jpg"
+          "#749.png",
+          "dm-0.jpg",
+          "dm-1.jpg",
+          "dm-2.jpg",
+          "dm-3.png",
+          "dm-4.jpg",
+          "dm-5.png",
+          "dm-6.jpg",
+          "dm-7.jpg",
+          "dm-8.jpg",
+          "dm-9.jpg",
+          "dm-a.jpg",
+          "dm-c.jpg",
+          "dm-d.jpg",
+          "dm-e.jpg",
+          "dm-f.jpg",
+          "dm-h.jpg",
+          "dm-i.jpg",
+          "dm-j.jpg",
+          "dm-k.jpg",
+          "OldDetectorFallback.jpg"
         ]
       }
     },
@@ -75,29 +75,35 @@
       "undetected": {
         "total": 21,
         "images": [
-          "datamatrix-3/#749.png",
-          "datamatrix-3/dm-0.jpg",
-          "datamatrix-3/dm-1.jpg",
-          "datamatrix-3/dm-2.jpg",
-          "datamatrix-3/dm-3.png",
-          "datamatrix-3/dm-4.jpg",
-          "datamatrix-3/dm-5.png",
-          "datamatrix-3/dm-6.jpg",
-          "datamatrix-3/dm-7.jpg",
-          "datamatrix-3/dm-8.jpg",
-          "datamatrix-3/dm-9.jpg",
-          "datamatrix-3/dm-a.jpg",
-          "datamatrix-3/dm-c.jpg",
-          "datamatrix-3/dm-d.jpg",
-          "datamatrix-3/dm-e.jpg",
-          "datamatrix-3/dm-f.jpg",
-          "datamatrix-3/dm-h.jpg",
-          "datamatrix-3/dm-i.jpg",
-          "datamatrix-3/dm-j.jpg",
-          "datamatrix-3/dm-k.jpg",
-          "datamatrix-3/OldDetectorFallback.jpg"
+          "#749.png",
+          "dm-0.jpg",
+          "dm-1.jpg",
+          "dm-2.jpg",
+          "dm-3.png",
+          "dm-4.jpg",
+          "dm-5.png",
+          "dm-6.jpg",
+          "dm-7.jpg",
+          "dm-8.jpg",
+          "dm-9.jpg",
+          "dm-a.jpg",
+          "dm-c.jpg",
+          "dm-d.jpg",
+          "dm-e.jpg",
+          "dm-f.jpg",
+          "dm-h.jpg",
+          "dm-i.jpg",
+          "dm-j.jpg",
+          "dm-k.jpg",
+          "OldDetectorFallback.jpg"
         ]
       }
     }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
   }
 }

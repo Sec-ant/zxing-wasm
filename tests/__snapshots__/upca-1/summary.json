@@ -8,8 +8,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "upca-1/4.png",
-          "upca-1/12.png"
+          "4.png",
+          "12.png"
         ]
       }
     },
@@ -18,9 +18,13 @@
       "undetected": {
         "total": 1,
         "images": [
-          "upca-1/12.png"
+          "12.png"
         ]
       }
     }
+  },
+  "slow": {
+    "0": {},
+    "180": {}
   }
 }

@@ -8,8 +8,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "ean13-extension-1/2.png",
-          "ean13-extension-1/38.png"
+          "2.png",
+          "38.png"
         ]
       }
     },
@@ -18,10 +18,14 @@
       "undetected": {
         "total": 2,
         "images": [
-          "ean13-extension-1/2.png",
-          "ean13-extension-1/38.png"
+          "2.png",
+          "38.png"
         ]
       }
     }
+  },
+  "slow": {
+    "0": {},
+    "180": {}
   }
 }

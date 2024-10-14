@@ -8,7 +8,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "itf-1/#220.png"
+          "#220.png"
         ]
       }
     },
@@ -17,9 +17,13 @@
       "undetected": {
         "total": 1,
         "images": [
-          "itf-1/#220.png"
+          "#220.png"
         ]
       }
     }
+  },
+  "slow": {
+    "0": {},
+    "180": {}
   }
 }

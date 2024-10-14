@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import { basename, extname, relative, resolve } from "node:path";
+import { basename, extname, resolve } from "node:path";
 import { glob } from "tinyglobby";
 import {
   afterAll,
@@ -28,8 +28,8 @@ type Type = "fast" | "slow" | "pure";
 
 type _Summary = {
   [type in Type]?: {
-    [rotation in number]?: {
-      failures: number;
+    [rotation in number]: {
+      failures?: number;
       misreads?: {
         total: number;
         images: {
@@ -92,7 +92,7 @@ for (const {
       let passAll = true;
       let passSome = false;
       const imageName = basename(imagePath, extname(imagePath));
-      const shortImagePath = relative(PATH_PREFIX, imagePath);
+      const imageNameWithExt = basename(imagePath);
       const [expectedResult, expectedText, expectedBinary] = await Promise.all([
         parseExpectedResult(imagePath),
         parseExpectedText(imagePath),
@@ -149,21 +149,21 @@ for (const {
 
               // Undetected
               if (barcode === undefined || !barcode.isValid) {
-                summary[type]![rotation]!.undetected!.images.push(
-                  shortImagePath,
+                summary[type]![rotation].undetected!.images.push(
+                  imageNameWithExt,
                 );
-                summary[type]![rotation]!.undetected!.total += 1;
+                summary[type]![rotation].undetected!.total += 1;
                 passCurrent = false;
                 return;
               }
 
               // Format mismatch
               if (barcode.format !== barcodeFormat) {
-                summary[type]![rotation]!.misreads!.images.push({
-                  path: shortImagePath,
+                summary[type]![rotation].misreads!.images.push({
+                  path: imageNameWithExt,
                   description: `[Format mismatch]: expected '${barcodeFormat}', but got '${barcode.format}'`,
                 });
-                summary[type]![rotation]!.misreads!.total += 1;
+                summary[type]![rotation].misreads!.total += 1;
                 passCurrent = false;
               }
 
@@ -184,11 +184,11 @@ for (const {
                   }
                 }
                 if (misread) {
-                  summary[type]![rotation]!.misreads!.images.push({
-                    path: shortImagePath,
+                  summary[type]![rotation].misreads!.images.push({
+                    path: imageNameWithExt,
                     description,
                   });
-                  summary[type]![rotation]!.misreads!.total += 1;
+                  summary[type]![rotation].misreads!.total += 1;
                   passCurrent = false;
                 }
               }
@@ -196,11 +196,11 @@ for (const {
               // .txt
               if (expectedText) {
                 if (barcode.text !== expectedText) {
-                  summary[type]![rotation]!.misreads!.images.push({
-                    path: shortImagePath,
+                  summary[type]![rotation].misreads!.images.push({
+                    path: imageNameWithExt,
                     description: `[Text content mismatch]: expected '${expectedText}', but got '${barcode.text}'`,
                   });
-                  summary[type]![rotation]!.misreads!.total += 1;
+                  summary[type]![rotation].misreads!.total += 1;
                   passCurrent = false;
                 }
               }
@@ -208,11 +208,11 @@ for (const {
               // .bin
               if (expectedBinary) {
                 if (!expectedBinary.equals(Buffer.from(barcode.bytes))) {
-                  summary[type]![rotation]!.misreads!.images.push({
-                    path: shortImagePath,
+                  summary[type]![rotation].misreads!.images.push({
+                    path: imageNameWithExt,
                     description: "[Binary content mismatch]",
                   });
-                  summary[type]![rotation]!.misreads!.total += 1;
+                  summary[type]![rotation].misreads!.total += 1;
                   passCurrent = false;
                 }
               }
@@ -223,7 +223,7 @@ for (const {
     }
     test.sequential(`${directory} summary`, () => {
       for (const type of types) {
-        for (const [rotation, _summary] of Object.entries(summary[type]!)) {
+        for (const _summary of Object.values(summary[type]!)) {
           _summary!.failures = new Set([
             ..._summary!.misreads!.images,
             ..._summary!.undetected!.images,
@@ -237,11 +237,9 @@ for (const {
             delete _summary!.undetected;
           }
           if (_summary!.failures === 0) {
-            delete summary[type]![rotation as unknown as number];
+            // biome-ignore lint/performance/noDelete: remove failures if there is no failure
+            delete _summary!.failures;
           }
-        }
-        if (Object.keys(summary[type]!).length === 0) {
-          delete summary[type];
         }
       }
       expect(`${JSON.stringify(summary, null, 2)}\n`).toMatchFileSnapshot(

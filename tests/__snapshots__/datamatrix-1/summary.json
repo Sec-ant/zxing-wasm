@@ -3,40 +3,41 @@
   "passAll": 0,
   "passSome": 29,
   "fast": {
+    "0": {},
     "90": {
       "failures": 29,
       "undetected": {
         "total": 29,
         "images": [
-          "datamatrix-1/#378.png",
-          "datamatrix-1/144x144_wrong.png",
-          "datamatrix-1/0123456789.png",
-          "datamatrix-1/abcd-18x8.png",
-          "datamatrix-1/abcd-26x12.png",
-          "datamatrix-1/abcd-32x8.png",
-          "datamatrix-1/abcd-36x12-mirrored.png",
-          "datamatrix-1/abcd-36x12.png",
-          "datamatrix-1/abcd-36x16.png",
-          "datamatrix-1/abcd-48x16.png",
-          "datamatrix-1/abcd-52x52-IDAutomation.png",
-          "datamatrix-1/abcd-52x52.png",
-          "datamatrix-1/abcdefg-64x64.png",
-          "datamatrix-1/abcdefg.png",
-          "datamatrix-1/C40.png",
-          "datamatrix-1/eci-mixed.png",
-          "datamatrix-1/eci.png",
-          "datamatrix-1/EDIFACT.png",
-          "datamatrix-1/gs1-figure-4.15.1-2-32x32.png",
-          "datamatrix-1/GUID.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_1_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_2_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_3_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_4_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa.png",
-          "datamatrix-1/mod-size-1.png",
-          "datamatrix-1/readerinit.png",
-          "datamatrix-1/X12.png",
-          "datamatrix-1/zxing_URL_L_Kayway.png"
+          "#378.png",
+          "144x144_wrong.png",
+          "0123456789.png",
+          "abcd-18x8.png",
+          "abcd-26x12.png",
+          "abcd-32x8.png",
+          "abcd-36x12-mirrored.png",
+          "abcd-36x12.png",
+          "abcd-36x16.png",
+          "abcd-48x16.png",
+          "abcd-52x52-IDAutomation.png",
+          "abcd-52x52.png",
+          "abcdefg-64x64.png",
+          "abcdefg.png",
+          "C40.png",
+          "eci-mixed.png",
+          "eci.png",
+          "EDIFACT.png",
+          "gs1-figure-4.15.1-2-32x32.png",
+          "GUID.png",
+          "HelloWorld_Text_L_Kaywa_1_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_2_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_3_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_4_error_byte.png",
+          "HelloWorld_Text_L_Kaywa.png",
+          "mod-size-1.png",
+          "readerinit.png",
+          "X12.png",
+          "zxing_URL_L_Kayway.png"
         ]
       }
     },
@@ -45,35 +46,35 @@
       "undetected": {
         "total": 29,
         "images": [
-          "datamatrix-1/#378.png",
-          "datamatrix-1/144x144_wrong.png",
-          "datamatrix-1/0123456789.png",
-          "datamatrix-1/abcd-18x8.png",
-          "datamatrix-1/abcd-26x12.png",
-          "datamatrix-1/abcd-32x8.png",
-          "datamatrix-1/abcd-36x12-mirrored.png",
-          "datamatrix-1/abcd-36x12.png",
-          "datamatrix-1/abcd-36x16.png",
-          "datamatrix-1/abcd-48x16.png",
-          "datamatrix-1/abcd-52x52-IDAutomation.png",
-          "datamatrix-1/abcd-52x52.png",
-          "datamatrix-1/abcdefg-64x64.png",
-          "datamatrix-1/abcdefg.png",
-          "datamatrix-1/C40.png",
-          "datamatrix-1/eci-mixed.png",
-          "datamatrix-1/eci.png",
-          "datamatrix-1/EDIFACT.png",
-          "datamatrix-1/gs1-figure-4.15.1-2-32x32.png",
-          "datamatrix-1/GUID.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_1_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_2_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_3_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_4_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa.png",
-          "datamatrix-1/mod-size-1.png",
-          "datamatrix-1/readerinit.png",
-          "datamatrix-1/X12.png",
-          "datamatrix-1/zxing_URL_L_Kayway.png"
+          "#378.png",
+          "144x144_wrong.png",
+          "0123456789.png",
+          "abcd-18x8.png",
+          "abcd-26x12.png",
+          "abcd-32x8.png",
+          "abcd-36x12-mirrored.png",
+          "abcd-36x12.png",
+          "abcd-36x16.png",
+          "abcd-48x16.png",
+          "abcd-52x52-IDAutomation.png",
+          "abcd-52x52.png",
+          "abcdefg-64x64.png",
+          "abcdefg.png",
+          "C40.png",
+          "eci-mixed.png",
+          "eci.png",
+          "EDIFACT.png",
+          "gs1-figure-4.15.1-2-32x32.png",
+          "GUID.png",
+          "HelloWorld_Text_L_Kaywa_1_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_2_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_3_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_4_error_byte.png",
+          "HelloWorld_Text_L_Kaywa.png",
+          "mod-size-1.png",
+          "readerinit.png",
+          "X12.png",
+          "zxing_URL_L_Kayway.png"
         ]
       }
     },
@@ -82,47 +83,48 @@
       "undetected": {
         "total": 29,
         "images": [
-          "datamatrix-1/#378.png",
-          "datamatrix-1/144x144_wrong.png",
-          "datamatrix-1/0123456789.png",
-          "datamatrix-1/abcd-18x8.png",
-          "datamatrix-1/abcd-26x12.png",
-          "datamatrix-1/abcd-32x8.png",
-          "datamatrix-1/abcd-36x12-mirrored.png",
-          "datamatrix-1/abcd-36x12.png",
-          "datamatrix-1/abcd-36x16.png",
-          "datamatrix-1/abcd-48x16.png",
-          "datamatrix-1/abcd-52x52-IDAutomation.png",
-          "datamatrix-1/abcd-52x52.png",
-          "datamatrix-1/abcdefg-64x64.png",
-          "datamatrix-1/abcdefg.png",
-          "datamatrix-1/C40.png",
-          "datamatrix-1/eci-mixed.png",
-          "datamatrix-1/eci.png",
-          "datamatrix-1/EDIFACT.png",
-          "datamatrix-1/gs1-figure-4.15.1-2-32x32.png",
-          "datamatrix-1/GUID.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_1_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_2_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_3_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa_4_error_byte.png",
-          "datamatrix-1/HelloWorld_Text_L_Kaywa.png",
-          "datamatrix-1/mod-size-1.png",
-          "datamatrix-1/readerinit.png",
-          "datamatrix-1/X12.png",
-          "datamatrix-1/zxing_URL_L_Kayway.png"
+          "#378.png",
+          "144x144_wrong.png",
+          "0123456789.png",
+          "abcd-18x8.png",
+          "abcd-26x12.png",
+          "abcd-32x8.png",
+          "abcd-36x12-mirrored.png",
+          "abcd-36x12.png",
+          "abcd-36x16.png",
+          "abcd-48x16.png",
+          "abcd-52x52-IDAutomation.png",
+          "abcd-52x52.png",
+          "abcdefg-64x64.png",
+          "abcdefg.png",
+          "C40.png",
+          "eci-mixed.png",
+          "eci.png",
+          "EDIFACT.png",
+          "gs1-figure-4.15.1-2-32x32.png",
+          "GUID.png",
+          "HelloWorld_Text_L_Kaywa_1_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_2_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_3_error_byte.png",
+          "HelloWorld_Text_L_Kaywa_4_error_byte.png",
+          "HelloWorld_Text_L_Kaywa.png",
+          "mod-size-1.png",
+          "readerinit.png",
+          "X12.png",
+          "zxing_URL_L_Kayway.png"
         ]
       }
     }
   },
   "slow": {
+    "0": {},
     "90": {
       "failures": 2,
       "undetected": {
         "total": 2,
         "images": [
-          "datamatrix-1/#378.png",
-          "datamatrix-1/mod-size-1.png"
+          "#378.png",
+          "mod-size-1.png"
         ]
       }
     },
@@ -131,8 +133,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "datamatrix-1/#378.png",
-          "datamatrix-1/mod-size-1.png"
+          "#378.png",
+          "mod-size-1.png"
         ]
       }
     },
@@ -141,8 +143,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "datamatrix-1/#378.png",
-          "datamatrix-1/mod-size-1.png"
+          "#378.png",
+          "mod-size-1.png"
         ]
       }
     }
@@ -153,7 +155,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "datamatrix-1/0123456789.png"
+          "0123456789.png"
         ]
       }
     }

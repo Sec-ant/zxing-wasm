@@ -8,8 +8,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "codabar-2/03.jpg",
-          "codabar-2/04.jpg"
+          "03.jpg",
+          "04.jpg"
         ]
       }
     },
@@ -18,8 +18,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "codabar-2/03.jpg",
-          "codabar-2/04.jpg"
+          "03.jpg",
+          "04.jpg"
         ]
       }
     }
@@ -30,7 +30,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "codabar-2/04.jpg"
+          "04.jpg"
         ]
       }
     },
@@ -39,7 +39,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "codabar-2/04.jpg"
+          "04.jpg"
         ]
       }
     }

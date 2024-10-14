@@ -8,8 +8,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "upca-extension-1/8.png",
-          "upca-extension-1/19.png"
+          "8.png",
+          "19.png"
         ]
       }
     },
@@ -18,9 +18,9 @@
       "undetected": {
         "total": 3,
         "images": [
-          "upca-extension-1/10.png",
-          "upca-extension-1/11.png",
-          "upca-extension-1/19.png"
+          "10.png",
+          "11.png",
+          "19.png"
         ]
       }
     }
@@ -31,7 +31,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "upca-extension-1/19.png"
+          "19.png"
         ]
       }
     },
@@ -40,7 +40,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "upca-extension-1/19.png"
+          "19.png"
         ]
       }
     }

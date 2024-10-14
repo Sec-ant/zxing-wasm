@@ -8,7 +8,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "aztec-1/abc-inverted.png"
+          "abc-inverted.png"
         ]
       }
     },
@@ -17,7 +17,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "aztec-1/abc-inverted.png"
+          "abc-inverted.png"
         ]
       }
     },
@@ -26,7 +26,7 @@
       "undetected": {
         "total": 1,
         "images": [
-          "aztec-1/abc-inverted.png"
+          "abc-inverted.png"
         ]
       }
     },
@@ -35,10 +35,16 @@
       "undetected": {
         "total": 1,
         "images": [
-          "aztec-1/abc-inverted.png"
+          "abc-inverted.png"
         ]
       }
     }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
   },
   "pure": {
     "0": {
@@ -46,8 +52,8 @@
       "undetected": {
         "total": 2,
         "images": [
-          "aztec-1/abc-inverted.png",
-          "aztec-1/az-thick.png"
+          "abc-inverted.png",
+          "az-thick.png"
         ]
       }
     }

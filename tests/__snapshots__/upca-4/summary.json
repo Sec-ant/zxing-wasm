@@ -8,17 +8,17 @@
       "undetected": {
         "total": 11,
         "images": [
-          "upca-4/1.png",
-          "upca-4/2.png",
-          "upca-4/3.png",
-          "upca-4/4.png",
-          "upca-4/5.png",
-          "upca-4/6.png",
-          "upca-4/7.png",
-          "upca-4/9.png",
-          "upca-4/12.png",
-          "upca-4/15.png",
-          "upca-4/16.png"
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png",
+          "9.png",
+          "12.png",
+          "15.png",
+          "16.png"
         ]
       }
     },
@@ -27,17 +27,17 @@
       "undetected": {
         "total": 11,
         "images": [
-          "upca-4/1.png",
-          "upca-4/2.png",
-          "upca-4/3.png",
-          "upca-4/4.png",
-          "upca-4/5.png",
-          "upca-4/6.png",
-          "upca-4/7.png",
-          "upca-4/9.png",
-          "upca-4/12.png",
-          "upca-4/15.png",
-          "upca-4/16.png"
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png",
+          "9.png",
+          "12.png",
+          "15.png",
+          "16.png"
         ]
       }
     }
@@ -49,19 +49,19 @@
         "total": 4,
         "images": [
           {
-            "path": "upca-4/1.png",
+            "path": "1.png",
             "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
           },
           {
-            "path": "upca-4/1.png",
+            "path": "1.png",
             "description": "[Text content mismatch]: expected '023942431015', but got '9074932437075'"
           },
           {
-            "path": "upca-4/10.png",
+            "path": "10.png",
             "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
           },
           {
-            "path": "upca-4/10.png",
+            "path": "10.png",
             "description": "[Text content mismatch]: expected '066721010995', but got '9000771010995'"
           }
         ]
@@ -69,12 +69,12 @@
       "undetected": {
         "total": 6,
         "images": [
-          "upca-4/2.png",
-          "upca-4/3.png",
-          "upca-4/4.png",
-          "upca-4/5.png",
-          "upca-4/6.png",
-          "upca-4/9.png"
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "9.png"
         ]
       }
     },
@@ -84,19 +84,19 @@
         "total": 4,
         "images": [
           {
-            "path": "upca-4/1.png",
+            "path": "1.png",
             "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
           },
           {
-            "path": "upca-4/1.png",
+            "path": "1.png",
             "description": "[Text content mismatch]: expected '023942431015', but got '9074932437075'"
           },
           {
-            "path": "upca-4/10.png",
+            "path": "10.png",
             "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
           },
           {
-            "path": "upca-4/10.png",
+            "path": "10.png",
             "description": "[Text content mismatch]: expected '066721010995', but got '9000771010995'"
           }
         ]
@@ -104,12 +104,12 @@
       "undetected": {
         "total": 6,
         "images": [
-          "upca-4/2.png",
-          "upca-4/3.png",
-          "upca-4/4.png",
-          "upca-4/5.png",
-          "upca-4/6.png",
-          "upca-4/9.png"
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "9.png"
         ]
       }
     }
