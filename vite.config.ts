@@ -48,9 +48,5 @@ export default defineConfig({
   test: {
     testTimeout: 10000,
     includeSource: ["src/bindings/barcodeFormat.ts"],
-    exclude: [".*/**/*"],
-    coverage: {
-      exclude: [".*/**/*"],
-    },
   },
 });
