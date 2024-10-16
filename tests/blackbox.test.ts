@@ -81,13 +81,11 @@ for (const {
 } of testEntries) {
   describe(directory, async () => {
     beforeAll(async () => {
-      async () => {
-        await getZXingModule({
-          wasmBinary: await readFile(
-            resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
-          ),
-        });
-      };
+      await getZXingModule({
+        wasmBinary: await readFile(
+          resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
+        ),
+      });
     });
     const types = [
       ...(testFast ? ["fast"] : []),

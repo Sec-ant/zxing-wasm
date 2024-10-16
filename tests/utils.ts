@@ -163,6 +163,9 @@ function isGraphicalUnicode(codePoint: number): boolean {
   return true;
 }
 
+/**
+ * TODO: handle this more gracefully
+ */
 export function fourOrientations(barcodeFormat: BarcodeFormat): boolean {
   return (
     barcodeFormat === "Aztec" ||

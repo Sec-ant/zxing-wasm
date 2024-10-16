@@ -71,7 +71,7 @@
     "docs:preview": "vite preview --outDir ./docs",
     "dev": "vite",
     "lint": "biome lint .",
-    "type-check": "tsc --noEmit --emitDeclarationOnly false",
+    "type-check": "tsc -p ./tsconfig.pkg.json --noEmit --emitDeclarationOnly false",
     "format:prettier": "pretty-quick",
     "format:biome": "biome format . --write",
     "format": "pnpm -s format:prettier && pnpm -s format:biome",
@@ -83,8 +83,8 @@
     "build:cjs": "tsx ./scripts/build-cjs.ts",
     "build:iife": "tsx ./scripts/build-iife.ts",
     "build": "conc \"pnpm:build:es\" \"pnpm:build:cjs\" \"pnpm:build:iife\"",
-    "postbuild:es": "tsc --declarationDir ./dist/es",
-    "postbuild:cjs": "tsc --declarationDir ./dist/cjs",
+    "postbuild:es": "tsc -p ./tsconfig.pkg.json --declarationDir ./dist/es",
+    "postbuild:cjs": "tsc -p ./tsconfig.pkg.json --declarationDir ./dist/cjs",
     "postbuild": "conc \"pnpm:copy:wasm\" \"pnpm:docs:build\"",
     "build:all": "pnpm -s submodule:init && pnpm -s cmake && pnpm -s build:wasm && pnpm -s build",
     "preview": "vite preview",
@@ -102,7 +102,7 @@
     "@changesets/cli": "^2.27.9",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^22.7.5",
-    "@vitest/ui": "^2.1.2",
+    "@vitest/ui": "^2.1.3",
     "concurrently": "^9.0.1",
     "copy-files-from-to": "^3.11.0",
     "jimp": "^1.6.0",
@@ -114,11 +114,11 @@
     "simple-git-hooks": "^2.11.1",
     "tinyglobby": "^0.2.9",
     "tsx": "^4.19.1",
-    "typedoc": "^0.26.9",
+    "typedoc": "^0.26.10",
     "typescript": "^5.6.3",
-    "vite": "^5.4.8",
+    "vite": "^5.4.9",
     "vite-plugin-babel": "^1.2.0",
-    "vitest": "^2.1.2"
+    "vitest": "^2.1.3"
   },
   "dependencies": {
     "@types/emscripten": "^1.39.13"

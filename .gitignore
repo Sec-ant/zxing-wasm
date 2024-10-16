@@ -34,3 +34,4 @@ src/**/zxing_*.js
 .emsdk-cache
 *.tgz
 *.tar.gz
+*.tsbuildinfo

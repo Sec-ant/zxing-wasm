@@ -1,13 +1,14 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["emscripten", "vitest/importMeta"]
+    "types": ["emscripten", "node"],
+    "allowJs": true,
+    "noEmit": true
   },
-  "include": ["./src"],
+  "include": ["./scripts", "./vite.config.ts", "./package.json", "./tests"],
   "references": [
     {
-      "path": "./tsconfig.node.json"
+      "path": "./tsconfig.pkg.json"
     }
   ]
 }
