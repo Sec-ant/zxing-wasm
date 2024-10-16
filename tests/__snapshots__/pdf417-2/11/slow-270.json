@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "PDF417",
+  "bytes": "35a6729",
+  "bytesECI": "568f1b1",
+  "text": "A PDF 417 barcode with ASCII text",
+  "eccLevel": "14%",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 193,
+      "y": 95
+    },
+    "topRight": {
+      "x": 189,
+      "y": 409
+    },
+    "bottomRight": {
+      "x": 68,
+      "y": 409
+    },
+    "bottomLeft": {
+      "x": 52,
+      "y": 99
+    }
+  },
+  "orientation": 89,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]L2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": ""
+}

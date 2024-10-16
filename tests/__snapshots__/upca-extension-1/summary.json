@@ -1,0 +1,48 @@
+{
+  "total": 6,
+  "passAll": 2,
+  "passSome": 5,
+  "fast": {
+    "0": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "8.png",
+          "19.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 3,
+      "undetected": {
+        "total": 3,
+        "images": [
+          "10.png",
+          "11.png",
+          "19.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "19.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "19.png"
+        ]
+      }
+    }
+  }
+}

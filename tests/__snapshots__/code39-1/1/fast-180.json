@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Code39",
+  "bytes": "7209865",
+  "bytesECI": "2a660b7",
+  "text": "TEST-SHEET",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 1469,
+      "y": 173
+    },
+    "topRight": {
+      "x": 0,
+      "y": 173
+    },
+    "bottomRight": {
+      "x": 0,
+      "y": 175
+    },
+    "bottomLeft": {
+      "x": 1469,
+      "y": 175
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]A0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

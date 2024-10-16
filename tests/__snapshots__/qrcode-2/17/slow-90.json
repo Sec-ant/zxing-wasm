@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "60fbfbf",
+  "bytesECI": "25c8fa9",
+  "text": "ﾃﾞｻﾞｲﾝQR<CR><LF>http://d-qr.net/ex/",
+  "eccLevel": "H",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 18,
+      "y": 202
+    },
+    "topRight": {
+      "x": 18,
+      "y": 20
+    },
+    "bottomRight": {
+      "x": 200,
+      "y": 20
+    },
+    "bottomLeft": {
+      "x": 200,
+      "y": 202
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "6"
+}

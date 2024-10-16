@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "76525a3",
+  "bytesECI": "14f652e",
+  "text": "Históóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóórico",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 24,
+      "y": 24
+    },
+    "topRight": {
+      "x": 229,
+      "y": 24
+    },
+    "bottomRight": {
+      "x": 229,
+      "y": 229
+    },
+    "bottomLeft": {
+      "x": 24,
+      "y": 229
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "6"
+}

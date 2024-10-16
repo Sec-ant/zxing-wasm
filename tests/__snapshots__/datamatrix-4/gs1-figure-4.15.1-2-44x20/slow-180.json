@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "bytes": "b569ba8",
+  "bytesECI": "8119090",
+  "text": "01095040000591012112345678p901<GS>101234567p<GS>171411208200http://www.gs1.org/demo/",
+  "eccLevel": "",
+  "contentType": "GS1",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 89,
+      "y": 41
+    },
+    "topRight": {
+      "x": 1,
+      "y": 41
+    },
+    "bottomRight": {
+      "x": 1,
+      "y": 1
+    },
+    "bottomLeft": {
+      "x": 89,
+      "y": 1
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d8",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "41"
+}

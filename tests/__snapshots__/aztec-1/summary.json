@@ -1,0 +1,61 @@
+{
+  "total": 31,
+  "passAll": 29,
+  "passSome": 31,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "abc-inverted.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "abc-inverted.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "abc-inverted.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "abc-inverted.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
+  },
+  "pure": {
+    "0": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "abc-inverted.png",
+          "az-thick.png"
+        ]
+      }
+    }
+  }
+}

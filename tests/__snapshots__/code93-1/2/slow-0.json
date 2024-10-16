@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Code93",
+  "bytes": "68bcf7c",
+  "bytesECI": "7e50a44",
+  "text": "CODE 93",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 88,
+      "y": 149
+    },
+    "topRight": {
+      "x": 318,
+      "y": 149
+    },
+    "bottomRight": {
+      "x": 318,
+      "y": 150
+    },
+    "bottomLeft": {
+      "x": 88,
+      "y": 150
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]G0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

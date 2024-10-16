@@ -1,0 +1,96 @@
+{
+  "total": 28,
+  "passAll": 18,
+  "passSome": 22,
+  "fast": {
+    "0": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "02.png",
+          "14.png",
+          "20.png",
+          "24.png",
+          "26.png",
+          "33.png",
+          "35.png",
+          "38.png",
+          "39.png",
+          "41.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 9,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "14.png",
+            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 8,
+        "images": [
+          "02.png",
+          "20.png",
+          "26.png",
+          "33.png",
+          "35.png",
+          "38.png",
+          "39.png",
+          "41.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 6,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "14.png",
+            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 5,
+        "images": [
+          "02.png",
+          "20.png",
+          "35.png",
+          "38.png",
+          "41.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 6,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "14.png",
+            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 5,
+        "images": [
+          "02.png",
+          "20.png",
+          "35.png",
+          "38.png",
+          "41.png"
+        ]
+      }
+    }
+  }
+}

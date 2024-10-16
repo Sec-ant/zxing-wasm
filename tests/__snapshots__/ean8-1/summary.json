@@ -1,0 +1,24 @@
+{
+  "total": 9,
+  "passAll": 8,
+  "passSome": 9,
+  "fast": {
+    "0": {},
+    "180": {}
+  },
+  "slow": {
+    "0": {},
+    "180": {}
+  },
+  "pure": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "8.png"
+        ]
+      }
+    }
+  }
+}

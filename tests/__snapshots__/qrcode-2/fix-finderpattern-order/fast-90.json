@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "0ffee3c",
+  "bytesECI": "139d550",
+  "text": "VERSION 2 8CM",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 128,
+      "y": 274
+    },
+    "topRight": {
+      "x": 17,
+      "y": 164
+    },
+    "bottomRight": {
+      "x": 48,
+      "y": 10
+    },
+    "bottomLeft": {
+      "x": 217,
+      "y": 62
+    }
+  },
+  "orientation": -150,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "2"
+}

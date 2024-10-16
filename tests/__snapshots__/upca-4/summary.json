@@ -1,0 +1,117 @@
+{
+  "total": 19,
+  "passAll": 7,
+  "passSome": 12,
+  "fast": {
+    "0": {
+      "failures": 11,
+      "undetected": {
+        "total": 11,
+        "images": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png",
+          "9.png",
+          "12.png",
+          "15.png",
+          "16.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 11,
+      "undetected": {
+        "total": 11,
+        "images": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png",
+          "9.png",
+          "12.png",
+          "15.png",
+          "16.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 10,
+      "misreads": {
+        "total": 4,
+        "images": [
+          {
+            "path": "1.png",
+            "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
+          },
+          {
+            "path": "1.png",
+            "description": "[Text content mismatch]: expected '023942431015', but got '9074932437075'"
+          },
+          {
+            "path": "10.png",
+            "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
+          },
+          {
+            "path": "10.png",
+            "description": "[Text content mismatch]: expected '066721010995', but got '9000771010995'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 6,
+        "images": [
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "9.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 10,
+      "misreads": {
+        "total": 4,
+        "images": [
+          {
+            "path": "1.png",
+            "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
+          },
+          {
+            "path": "1.png",
+            "description": "[Text content mismatch]: expected '023942431015', but got '9074932437075'"
+          },
+          {
+            "path": "10.png",
+            "description": "[Format mismatch]: expected 'UPC-A', but got 'EAN-13'"
+          },
+          {
+            "path": "10.png",
+            "description": "[Text content mismatch]: expected '066721010995', but got '9000771010995'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 6,
+        "images": [
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "9.png"
+        ]
+      }
+    }
+  }
+}

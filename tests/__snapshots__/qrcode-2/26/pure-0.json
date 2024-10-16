@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "a57e971",
+  "bytesECI": "1c3ebda",
+  "text": "<ﾃﾞｻﾞｲﾝQR> <CR><LF>ｲﾗｽﾄ入りｶﾗｰQRｺｰﾄﾞ<CR><LF>http://d-qr.net/ex/ ",
+  "eccLevel": "Q",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 10,
+      "y": 9
+    },
+    "topRight": {
+      "x": 100,
+      "y": 9
+    },
+    "bottomRight": {
+      "x": 100,
+      "y": 99
+    },
+    "bottomLeft": {
+      "x": 10,
+      "y": 99
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "5"
+}

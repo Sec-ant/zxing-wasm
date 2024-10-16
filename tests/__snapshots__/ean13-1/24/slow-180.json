@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "EAN-13",
+  "bytes": "6ec5bbf",
+  "bytesECI": "ef5de6c",
+  "text": "5709262942503",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 464,
+      "y": 239
+    },
+    "topRight": {
+      "x": 207,
+      "y": 239
+    },
+    "bottomRight": {
+      "x": 207,
+      "y": 242
+    },
+    "bottomLeft": {
+      "x": 464,
+      "y": 242
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]E0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

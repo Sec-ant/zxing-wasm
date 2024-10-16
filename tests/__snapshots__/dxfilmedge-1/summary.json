@@ -1,0 +1,32 @@
+{
+  "total": 3,
+  "passAll": 0,
+  "passSome": 3,
+  "fast": {
+    "0": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "1.jpg",
+          "2.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 3,
+      "undetected": {
+        "total": 3,
+        "images": [
+          "1.jpg",
+          "2.png",
+          "3.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {},
+    "180": {}
+  }
+}

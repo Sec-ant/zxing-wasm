@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "194fb8a",
+  "bytesECI": "a6271c0",
+  "text": "VERSION 1 6CM",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 10,
+      "y": 77
+    },
+    "topRight": {
+      "x": 7,
+      "y": 22
+    },
+    "bottomRight": {
+      "x": 65,
+      "y": 5
+    },
+    "bottomLeft": {
+      "x": 70,
+      "y": 89
+    }
+  },
+  "orientation": -93,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "1"
+}

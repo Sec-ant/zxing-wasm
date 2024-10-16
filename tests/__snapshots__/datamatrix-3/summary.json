@@ -1,0 +1,109 @@
+{
+  "total": 21,
+  "passAll": 0,
+  "passSome": 21,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "OldDetectorFallback.jpg"
+        ]
+      }
+    },
+    "90": {
+      "failures": 21,
+      "undetected": {
+        "total": 21,
+        "images": [
+          "#749.png",
+          "dm-0.jpg",
+          "dm-1.jpg",
+          "dm-2.jpg",
+          "dm-3.png",
+          "dm-4.jpg",
+          "dm-5.png",
+          "dm-6.jpg",
+          "dm-7.jpg",
+          "dm-8.jpg",
+          "dm-9.jpg",
+          "dm-a.jpg",
+          "dm-c.jpg",
+          "dm-d.jpg",
+          "dm-e.jpg",
+          "dm-f.jpg",
+          "dm-h.jpg",
+          "dm-i.jpg",
+          "dm-j.jpg",
+          "dm-k.jpg",
+          "OldDetectorFallback.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 21,
+      "undetected": {
+        "total": 21,
+        "images": [
+          "#749.png",
+          "dm-0.jpg",
+          "dm-1.jpg",
+          "dm-2.jpg",
+          "dm-3.png",
+          "dm-4.jpg",
+          "dm-5.png",
+          "dm-6.jpg",
+          "dm-7.jpg",
+          "dm-8.jpg",
+          "dm-9.jpg",
+          "dm-a.jpg",
+          "dm-c.jpg",
+          "dm-d.jpg",
+          "dm-e.jpg",
+          "dm-f.jpg",
+          "dm-h.jpg",
+          "dm-i.jpg",
+          "dm-j.jpg",
+          "dm-k.jpg",
+          "OldDetectorFallback.jpg"
+        ]
+      }
+    },
+    "270": {
+      "failures": 21,
+      "undetected": {
+        "total": 21,
+        "images": [
+          "#749.png",
+          "dm-0.jpg",
+          "dm-1.jpg",
+          "dm-2.jpg",
+          "dm-3.png",
+          "dm-4.jpg",
+          "dm-5.png",
+          "dm-6.jpg",
+          "dm-7.jpg",
+          "dm-8.jpg",
+          "dm-9.jpg",
+          "dm-a.jpg",
+          "dm-c.jpg",
+          "dm-d.jpg",
+          "dm-e.jpg",
+          "dm-f.jpg",
+          "dm-h.jpg",
+          "dm-i.jpg",
+          "dm-j.jpg",
+          "dm-k.jpg",
+          "OldDetectorFallback.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
+  }
+}

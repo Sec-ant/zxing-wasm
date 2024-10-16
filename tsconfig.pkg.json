@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["ESNext", "DOM"],
+    "types": ["emscripten", "vitest/importMeta"],
+    "rootDir": "./src",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "./dist/es"
+  },
+  "include": ["./src"]
+}

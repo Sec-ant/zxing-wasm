@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "8e7bb60",
+  "bytesECI": "c694d75",
+  "text": "http://live.fdgm.jp/u/event/hype/hype_top.html <CR><LF><CR><LF>MEBKM:TITLE:hypeモバイル;URL:http\\://live.fdgm.jp/u/event/hype/hype_top.html;;",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 9,
+      "y": 9
+    },
+    "topRight": {
+      "x": 106,
+      "y": 9
+    },
+    "bottomRight": {
+      "x": 107,
+      "y": 107
+    },
+    "bottomLeft": {
+      "x": 9,
+      "y": 107
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "6"
+}

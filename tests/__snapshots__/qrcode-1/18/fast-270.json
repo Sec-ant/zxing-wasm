@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "ab95fb8",
+  "bytesECI": "af0d3f7",
+  "text": "Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 345,
+      "y": 429
+    },
+    "topRight": {
+      "x": 113,
+      "y": 415
+    },
+    "bottomRight": {
+      "x": 131,
+      "y": 161
+    },
+    "bottomLeft": {
+      "x": 361,
+      "y": 187
+    }
+  },
+  "orientation": -175,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "10"
+}

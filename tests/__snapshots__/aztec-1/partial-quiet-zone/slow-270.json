@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "bddb16b",
+  "bytesECI": "60bb97b",
+  "text": "KF5::Prison - The KDE barcode generation framework.",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 128,
+      "y": 0
+    },
+    "topRight": {
+      "x": 128,
+      "y": 108
+    },
+    "bottomRight": {
+      "x": 20,
+      "y": 108
+    },
+    "bottomLeft": {
+      "x": 20,
+      "y": 0
+    }
+  },
+  "orientation": 90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

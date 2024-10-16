@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "EAN-13",
+  "bytes": "9659022",
+  "bytesECI": "4404517",
+  "text": "9780735619937",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 171,
+      "y": 127
+    },
+    "topRight": {
+      "x": 29,
+      "y": 127
+    },
+    "bottomRight": {
+      "x": 29,
+      "y": 129
+    },
+    "bottomLeft": {
+      "x": 172,
+      "y": 129
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]E0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

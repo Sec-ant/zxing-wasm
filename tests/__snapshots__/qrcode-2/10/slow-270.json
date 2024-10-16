@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "fde83ab",
+  "bytesECI": "5bb9993",
+  "text": "Google モバイル<CR><LF>http://google.jp",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 77,
+      "y": 0
+    },
+    "topRight": {
+      "x": 77,
+      "y": 77
+    },
+    "bottomRight": {
+      "x": 0,
+      "y": 77
+    },
+    "bottomLeft": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "orientation": 90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

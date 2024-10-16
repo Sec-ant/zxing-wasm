@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Code128",
+  "bytes": "89145c9",
+  "bytesECI": "22c4ab8",
+  "text": "FW727",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 476,
+      "y": 240
+    },
+    "topRight": {
+      "x": 223,
+      "y": 240
+    },
+    "bottomRight": {
+      "x": 223,
+      "y": 242
+    },
+    "bottomLeft": {
+      "x": 476,
+      "y": 242
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]C0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": true,
+  "lineCount": 2,
+  "version": ""
+}

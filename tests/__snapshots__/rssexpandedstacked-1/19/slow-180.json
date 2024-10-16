@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataBarExpanded",
+  "bytes": "1e8f809",
+  "bytesECI": "1b74f40",
+  "text": "011234567890123110UNIVERSITY-OF-DEUSTO",
+  "eccLevel": "",
+  "contentType": "GS1",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 4,
+      "y": 222
+    },
+    "topRight": {
+      "x": 101,
+      "y": 222
+    },
+    "bottomRight": {
+      "x": 199,
+      "y": 67
+    },
+    "bottomLeft": {
+      "x": 102,
+      "y": 67
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]e0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

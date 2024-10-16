@@ -1,0 +1,156 @@
+{
+  "total": 51,
+  "passAll": 22,
+  "passSome": 48,
+  "fast": {
+    "0": {
+      "failures": 6,
+      "undetected": {
+        "total": 6,
+        "images": [
+          "#709.jpg",
+          "12.png",
+          "13.png",
+          "28.png",
+          "qr-inv-1.jpg",
+          "qr-inv-2.jpg"
+        ]
+      }
+    },
+    "90": {
+      "failures": 6,
+      "undetected": {
+        "total": 6,
+        "images": [
+          "#709.jpg",
+          "12.png",
+          "13.png",
+          "28.png",
+          "qr-inv-1.jpg",
+          "qr-inv-2.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 6,
+      "undetected": {
+        "total": 6,
+        "images": [
+          "#709.jpg",
+          "12.png",
+          "13.png",
+          "28.png",
+          "qr-inv-1.jpg",
+          "qr-inv-2.jpg"
+        ]
+      }
+    },
+    "270": {
+      "failures": 6,
+      "undetected": {
+        "total": 6,
+        "images": [
+          "#709.jpg",
+          "12.png",
+          "13.png",
+          "28.png",
+          "qr-inv-1.jpg",
+          "qr-inv-2.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 3,
+      "undetected": {
+        "total": 3,
+        "images": [
+          "12.png",
+          "13.png",
+          "28.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 3,
+      "undetected": {
+        "total": 3,
+        "images": [
+          "12.png",
+          "13.png",
+          "28.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 3,
+      "undetected": {
+        "total": 3,
+        "images": [
+          "12.png",
+          "13.png",
+          "28.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 3,
+      "undetected": {
+        "total": 3,
+        "images": [
+          "12.png",
+          "13.png",
+          "28.png"
+        ]
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 29,
+      "misreads": {
+        "total": 1,
+        "images": [
+          {
+            "path": "16.png",
+            "description": "[Text content mismatch]: expected '[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/', but got '[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/'"
+          }
+        ]
+      },
+      "undetected": {
+        "total": 28,
+        "images": [
+          "#142.jpg",
+          "#199b.jpg",
+          "#253.jpg",
+          "#258.jpg",
+          "#709.jpg",
+          "#1314.jpg",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png",
+          "8.png",
+          "12.png",
+          "13.png",
+          "15.png",
+          "22.png",
+          "23.png",
+          "24.png",
+          "25.png",
+          "28.png",
+          "30a.png",
+          "31.png",
+          "33.png",
+          "estimate-tilt.jpg",
+          "fix-finderpattern-order.jpg",
+          "fix-traceline.jpg",
+          "high-res-1.jpg",
+          "qr-inv-1.jpg",
+          "qr-inv-2.jpg"
+        ]
+      }
+    }
+  }
+}

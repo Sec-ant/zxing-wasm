@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "1bf6bb1",
+  "bytesECI": "4d8e40e",
+  "text": "http://code.google.com/p/zxing/",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 47,
+      "y": 158
+    },
+    "topRight": {
+      "x": 61,
+      "y": 55
+    },
+    "bottomRight": {
+      "x": 169,
+      "y": 70
+    },
+    "bottomLeft": {
+      "x": 149,
+      "y": 176
+    }
+  },
+  "orientation": -81,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "2"
+}

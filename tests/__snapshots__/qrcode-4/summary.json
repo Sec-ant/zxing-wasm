@@ -1,0 +1,153 @@
+{
+  "total": 41,
+  "passAll": 31,
+  "passSome": 31,
+  "fast": {
+    "0": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 10,
+      "undetected": {
+        "total": 10,
+        "images": [
+          "05.png",
+          "06.png",
+          "08.png",
+          "09.png",
+          "13.png",
+          "30.png",
+          "31.png",
+          "32.png",
+          "33.png",
+          "34.png"
+        ]
+      }
+    }
+  }
+}

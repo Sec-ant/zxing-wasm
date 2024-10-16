@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import babel from "vite-plugin-babel";
 import { version } from "./package.json";
@@ -42,5 +43,10 @@ export default defineConfig({
   ],
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(version),
+    "import.meta.vitest": "undefined",
+  },
+  test: {
+    testTimeout: 10000,
+    includeSource: ["src/bindings/barcodeFormat.ts"],
   },
 });

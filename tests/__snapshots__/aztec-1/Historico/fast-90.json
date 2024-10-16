@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "d1ee605",
+  "bytesECI": "af49480",
+  "text": "Histórico",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 24,
+      "y": 99
+    },
+    "topRight": {
+      "x": 24,
+      "y": 24
+    },
+    "bottomRight": {
+      "x": 99,
+      "y": 24
+    },
+    "bottomLeft": {
+      "x": 99,
+      "y": 99
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "1"
+}

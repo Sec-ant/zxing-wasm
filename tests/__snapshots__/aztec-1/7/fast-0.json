@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "fb891ef",
+  "bytesECI": "6bbbf03",
+  "text": "Code 2D!",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 25,
+      "y": 29
+    },
+    "topRight": {
+      "x": 63,
+      "y": 29
+    },
+    "bottomRight": {
+      "x": 63,
+      "y": 67
+    },
+    "bottomLeft": {
+      "x": 25,
+      "y": 67
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "1"
+}

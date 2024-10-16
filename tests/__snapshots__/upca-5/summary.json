@@ -1,0 +1,93 @@
+{
+  "total": 32,
+  "passAll": 17,
+  "passSome": 20,
+  "fast": {
+    "0": {
+      "failures": 14,
+      "undetected": {
+        "total": 14,
+        "images": [
+          "01.png",
+          "02.png",
+          "06.png",
+          "07.png",
+          "09.png",
+          "16.png",
+          "19.png",
+          "23.png",
+          "25.png",
+          "26.png",
+          "27.png",
+          "29.png",
+          "31.png",
+          "32.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 14,
+      "undetected": {
+        "total": 14,
+        "images": [
+          "01.png",
+          "02.png",
+          "06.png",
+          "07.png",
+          "16.png",
+          "19.png",
+          "23.png",
+          "25.png",
+          "26.png",
+          "27.png",
+          "29.png",
+          "30.png",
+          "31.png",
+          "32.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 12,
+      "undetected": {
+        "total": 12,
+        "images": [
+          "01.png",
+          "02.png",
+          "06.png",
+          "07.png",
+          "16.png",
+          "19.png",
+          "23.png",
+          "25.png",
+          "26.png",
+          "27.png",
+          "29.png",
+          "32.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 12,
+      "undetected": {
+        "total": 12,
+        "images": [
+          "01.png",
+          "02.png",
+          "06.png",
+          "07.png",
+          "16.png",
+          "19.png",
+          "23.png",
+          "25.png",
+          "26.png",
+          "27.png",
+          "29.png",
+          "32.png"
+        ]
+      }
+    }
+  }
+}

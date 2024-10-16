@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "8517347",
+  "bytesECI": "e1c8aa8",
+  "text": "http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 404,
+      "y": 275
+    },
+    "topRight": {
+      "x": 148,
+      "y": 301
+    },
+    "bottomRight": {
+      "x": 118,
+      "y": 53
+    },
+    "bottomLeft": {
+      "x": 424,
+      "y": 32
+    }
+  },
+  "orientation": 175,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "5"
+}

@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MaxiCode",
+  "bytes": "4f07a38",
+  "bytesECI": "94657b4",
+  "text": "ABCDE12abcde1ÀÁÂÃ¢£¤¥1àáâãabcde123A123456789àáâã¢£¤¥abcdÚÛÜÝ123456789¾",
+  "eccLevel": "4",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 0,
+      "y": 0
+    },
+    "topRight": {
+      "x": 0,
+      "y": 0
+    },
+    "bottomRight": {
+      "x": 0,
+      "y": 0
+    },
+    "bottomLeft": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]U0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": ""
+}

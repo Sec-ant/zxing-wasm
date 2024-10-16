@@ -1,0 +1,90 @@
+{
+  "total": 17,
+  "passAll": 0,
+  "passSome": 17,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "03-rot90.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 16,
+      "undetected": {
+        "total": 16,
+        "images": [
+          "01.png",
+          "02.png",
+          "03-aliased.png",
+          "03-cut-bot.png",
+          "03-cut-top.png",
+          "03-flipped.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "06.png",
+          "07.png",
+          "09.png",
+          "10.png",
+          "11.png",
+          "12-mixed-ecis.png",
+          "13-readerinit.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "03-rot90.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 16,
+      "undetected": {
+        "total": 16,
+        "images": [
+          "01.png",
+          "02.png",
+          "03-aliased.png",
+          "03-cut-bot.png",
+          "03-cut-top.png",
+          "03-flipped.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "06.png",
+          "07.png",
+          "09.png",
+          "10.png",
+          "11.png",
+          "12-mixed-ecis.png",
+          "13-readerinit.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
+  },
+  "pure": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "10.png"
+        ]
+      }
+    }
+  }
+}

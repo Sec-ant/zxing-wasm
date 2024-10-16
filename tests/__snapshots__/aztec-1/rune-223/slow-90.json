@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "56f4da2",
+  "bytesECI": "3f865ef",
+  "text": "223",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 23,
+      "y": 187
+    },
+    "topRight": {
+      "x": 23,
+      "y": 77
+    },
+    "bottomRight": {
+      "x": 133,
+      "y": 77
+    },
+    "bottomLeft": {
+      "x": 133,
+      "y": 187
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]zC",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": ""
+}

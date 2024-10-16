@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Code39",
+  "bytes": "eb4cefd",
+  "bytesECI": "34fd111",
+  "text": "MOROVIA",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 270,
+      "y": 141
+    },
+    "topRight": {
+      "x": 54,
+      "y": 141
+    },
+    "bottomRight": {
+      "x": 54,
+      "y": 143
+    },
+    "bottomLeft": {
+      "x": 270,
+      "y": 143
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]A0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

@@ -92,3 +92,15 @@ export function formatFromString(format: string): BarcodeFormat {
 export function normalizeFormatString(format: string): string {
   return format.toLowerCase().replace(/_-\[\]/g, "");
 }
+
+if (import.meta.vitest) {
+  const { test, expect } = import.meta.vitest;
+  test("barcode formats are ordered", () => {
+    for (let i = 0; i < barcodeFormats.length - 1; ++i) {
+      expect(
+        normalizeFormatString(barcodeFormats[i]) <
+          normalizeFormatString(barcodeFormats[i + 1]),
+      ).toBe(true);
+    }
+  });
+}

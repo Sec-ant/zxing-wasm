@@ -1,5 +1,6 @@
 {
   "$schema": "https://typedoc.org/schema.json",
+  "tsconfig": "./tsconfig.pkg.json",
   "entryPoints": [
     "./src/full/index.ts",
     "./src/reader/index.ts",

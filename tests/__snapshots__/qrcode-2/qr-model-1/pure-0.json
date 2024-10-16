@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "61c45c1",
+  "bytesECI": "26cea35",
+  "text": "QR Code Model 1 ",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 8,
+      "y": 8
+    },
+    "topRight": {
+      "x": 57,
+      "y": 8
+    },
+    "bottomRight": {
+      "x": 57,
+      "y": 57
+    },
+    "bottomLeft": {
+      "x": 8,
+      "y": 57
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "2"
+}

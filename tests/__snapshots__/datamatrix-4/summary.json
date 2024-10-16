@@ -1,0 +1,113 @@
+{
+  "total": 21,
+  "passAll": 0,
+  "passSome": 21,
+  "fast": {
+    "0": {},
+    "90": {
+      "failures": 21,
+      "undetected": {
+        "total": 21,
+        "images": [
+          "abcd-36x20.png",
+          "abcd-40x26.png",
+          "abcd-44x20.png",
+          "abcd-48x8.png",
+          "abcd-48x22.png",
+          "abcd-48x24.png",
+          "abcd-48x26.png",
+          "abcd-64x8.png",
+          "abcd-64x12.png",
+          "abcd-64x16.png",
+          "abcd-64x20.png",
+          "abcd-64x24.png",
+          "abcd-64x26.png",
+          "abcd-80x8.png",
+          "abcd-88x12.png",
+          "abcd-96x8.png",
+          "abcd-120x8.png",
+          "abcd-144x8.png",
+          "dm-e-d-c-edifice.jpg",
+          "dm-e-d-c-ultrakain.jpg",
+          "gs1-figure-4.15.1-2-44x20.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 21,
+      "undetected": {
+        "total": 21,
+        "images": [
+          "abcd-36x20.png",
+          "abcd-40x26.png",
+          "abcd-44x20.png",
+          "abcd-48x8.png",
+          "abcd-48x22.png",
+          "abcd-48x24.png",
+          "abcd-48x26.png",
+          "abcd-64x8.png",
+          "abcd-64x12.png",
+          "abcd-64x16.png",
+          "abcd-64x20.png",
+          "abcd-64x24.png",
+          "abcd-64x26.png",
+          "abcd-80x8.png",
+          "abcd-88x12.png",
+          "abcd-96x8.png",
+          "abcd-120x8.png",
+          "abcd-144x8.png",
+          "dm-e-d-c-edifice.jpg",
+          "dm-e-d-c-ultrakain.jpg",
+          "gs1-figure-4.15.1-2-44x20.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 21,
+      "undetected": {
+        "total": 21,
+        "images": [
+          "abcd-36x20.png",
+          "abcd-40x26.png",
+          "abcd-44x20.png",
+          "abcd-48x8.png",
+          "abcd-48x22.png",
+          "abcd-48x24.png",
+          "abcd-48x26.png",
+          "abcd-64x8.png",
+          "abcd-64x12.png",
+          "abcd-64x16.png",
+          "abcd-64x20.png",
+          "abcd-64x24.png",
+          "abcd-64x26.png",
+          "abcd-80x8.png",
+          "abcd-88x12.png",
+          "abcd-96x8.png",
+          "abcd-120x8.png",
+          "abcd-144x8.png",
+          "dm-e-d-c-edifice.jpg",
+          "dm-e-d-c-ultrakain.jpg",
+          "gs1-figure-4.15.1-2-44x20.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
+  },
+  "pure": {
+    "0": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "dm-e-d-c-edifice.jpg",
+          "dm-e-d-c-ultrakain.jpg"
+        ]
+      }
+    }
+  }
+}

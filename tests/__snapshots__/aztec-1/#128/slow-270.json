@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "bytes": "f9a6acb",
+  "bytesECI": "b554ded",
+  "text": "This is an example Aztec symbol for Wikipedia.",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 184,
+      "y": 0
+    },
+    "topRight": {
+      "x": 184,
+      "y": 184
+    },
+    "bottomRight": {
+      "x": 0,
+      "y": 184
+    },
+    "bottomLeft": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "orientation": 90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

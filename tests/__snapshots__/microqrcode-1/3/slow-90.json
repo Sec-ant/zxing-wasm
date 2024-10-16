@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MicroQRCode",
+  "bytes": "9532f83",
+  "bytesECI": "70a6cd3",
+  "text": "malgajninto",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 679,
+      "y": 61
+    },
+    "topRight": {
+      "x": 679,
+      "y": 27
+    },
+    "bottomRight": {
+      "x": 713,
+      "y": 27
+    },
+    "bottomLeft": {
+      "x": 713,
+      "y": 61
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "EAN-13",
+  "bytes": "3bc85e2",
+  "bytesECI": "dec3e35",
+  "text": "9780345348036",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 155,
+      "y": 155
+    },
+    "topRight": {
+      "x": 376,
+      "y": 155
+    },
+    "bottomRight": {
+      "x": 373,
+      "y": 196
+    },
+    "bottomLeft": {
+      "x": 149,
+      "y": 196
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]E0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": ""
+}

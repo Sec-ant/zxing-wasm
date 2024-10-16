@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "bytes": "616b5a1",
+  "bytesECI": "fc908a0",
+  "text": "[)><RS>06<GS>9N111234567842S3300045321T89209876D151217<RS><EOT>",
+  "eccLevel": "",
+  "contentType": "ISO15434",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 104,
+      "y": 145
+    },
+    "topRight": {
+      "x": 83,
+      "y": 68
+    },
+    "bottomRight": {
+      "x": 157,
+      "y": 92
+    },
+    "bottomLeft": {
+      "x": 182,
+      "y": 171
+    }
+  },
+  "orientation": -106,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "9"
+}

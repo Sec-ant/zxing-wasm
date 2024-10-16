@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "4c1a41c",
+  "bytesECI": "cccdaf2",
+  "text": "MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 188,
+      "y": 181
+    },
+    "topRight": {
+      "x": 46,
+      "y": 179
+    },
+    "bottomRight": {
+      "x": 38,
+      "y": 41
+    },
+    "bottomLeft": {
+      "x": 196,
+      "y": 40
+    }
+  },
+  "orientation": -180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

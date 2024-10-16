@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MicroQRCode",
+  "bytes": "97a0730",
+  "bytesECI": "0dc9136",
+  "text": "Loser",
+  "eccLevel": "Q",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 292,
+      "y": 389
+    },
+    "topRight": {
+      "x": 296,
+      "y": 479
+    },
+    "bottomRight": {
+      "x": 205,
+      "y": 483
+    },
+    "bottomLeft": {
+      "x": 200,
+      "y": 392
+    }
+  },
+  "orientation": 87,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

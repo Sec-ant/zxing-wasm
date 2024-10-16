@@ -1,0 +1,102 @@
+{
+  "total": 16,
+  "passAll": 9,
+  "passSome": 15,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "12.jpg"
+        ]
+      }
+    },
+    "90": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "12.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "12.jpg",
+          "MQR-needs-br-update.jpg"
+        ]
+      }
+    },
+    "270": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "12.jpg",
+          "MQR-needs-br-update.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "12.jpg"
+        ]
+      }
+    },
+    "90": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "12.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "12.jpg",
+          "MQR-needs-br-update.jpg"
+        ]
+      }
+    },
+    "270": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "12.jpg",
+          "MQR-needs-br-update.jpg"
+        ]
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 7,
+      "undetected": {
+        "total": 7,
+        "images": [
+          "1.png",
+          "3.jpg",
+          "7.jpg",
+          "9.jpg",
+          "11.jpg",
+          "12.jpg",
+          "MQR-needs-br-update.jpg"
+        ]
+      }
+    }
+  }
+}

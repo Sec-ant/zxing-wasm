@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "PDF417",
+  "bytes": "7342734",
+  "bytesECI": "3d44969",
+  "text": "ActiveBarcode",
+  "eccLevel": "47%",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 16,
+      "y": 13
+    },
+    "topRight": {
+      "x": 117,
+      "y": 13
+    },
+    "bottomRight": {
+      "x": 117,
+      "y": 184
+    },
+    "bottomLeft": {
+      "x": 16,
+      "y": 184
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]L2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": ""
+}

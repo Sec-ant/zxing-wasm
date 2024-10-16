@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "bytes": "d42d407",
+  "bytesECI": "b893506",
+  "text": "This is a test of our DataMatrix support using a longer piece of text, and therefore a more dense barcode.",
+  "eccLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 50,
+      "y": 60
+    },
+    "topRight": {
+      "x": 187,
+      "y": 51
+    },
+    "bottomRight": {
+      "x": 198,
+      "y": 189
+    },
+    "bottomLeft": {
+      "x": 56,
+      "y": 199
+    }
+  },
+  "orientation": -4,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "12"
+}

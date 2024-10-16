@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "49cc0cc",
+  "bytesECI": "f9eb980",
+  "text": "MECARD:N:測試;;",
+  "eccLevel": "L",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 222,
+      "y": 241
+    },
+    "topRight": {
+      "x": 49,
+      "y": 302
+    },
+    "bottomRight": {
+      "x": 150,
+      "y": 152
+    },
+    "bottomLeft": {
+      "x": 299,
+      "y": 52
+    }
+  },
+  "orientation": 153,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "2"
+}

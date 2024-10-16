@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "0f32a05",
+  "bytesECI": "f6e219d",
+  "text": "https://beeline.co/pages/app",
+  "eccLevel": "M",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 302,
+      "y": 305
+    },
+    "topRight": {
+      "x": 183,
+      "y": 331
+    },
+    "bottomRight": {
+      "x": 154,
+      "y": 217
+    },
+    "bottomLeft": {
+      "x": 274,
+      "y": 190
+    }
+  },
+  "orientation": 167,
+  "isMirrored": false,
+  "isInverted": true,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3"
+}

@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "PDF417",
+  "bytes": "27a33e8",
+  "bytesECI": "c1b6587",
+  "text": "AB点茗テ齄膀赧αђŹ",
+  "eccLevel": "16%",
+  "contentType": "Text",
+  "hasECI": true,
+  "position": {
+    "topLeft": {
+      "x": 1,
+      "y": 0
+    },
+    "topRight": {
+      "x": 137,
+      "y": 0
+    },
+    "bottomRight": {
+      "x": 137,
+      "y": 35
+    },
+    "bottomLeft": {
+      "x": 1,
+      "y": 35
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]L2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": ""
+}

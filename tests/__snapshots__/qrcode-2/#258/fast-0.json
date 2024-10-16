@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "372be9d",
+  "bytesECI": "9394fbf",
+  "text": "https://vt.tiktok.com/ZGJUXpy5e/",
+  "eccLevel": "H",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 34,
+      "y": 39
+    },
+    "topRight": {
+      "x": 269,
+      "y": 39
+    },
+    "bottomRight": {
+      "x": 269,
+      "y": 274
+    },
+    "bottomLeft": {
+      "x": 34,
+      "y": 274
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "4"
+}

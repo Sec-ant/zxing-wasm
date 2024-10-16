@@ -1,0 +1,82 @@
+{
+  "total": 16,
+  "passAll": 0,
+  "passSome": 16,
+  "fast": {
+    "0": {},
+    "90": {
+      "failures": 16,
+      "undetected": {
+        "total": 16,
+        "images": [
+          "01.png",
+          "02.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "06.png",
+          "07.png",
+          "08.png",
+          "09.png",
+          "10.png",
+          "11.png",
+          "12.png",
+          "16.png",
+          "17.png",
+          "18.png",
+          "19.png"
+        ]
+      }
+    },
+    "180": {},
+    "270": {
+      "failures": 16,
+      "undetected": {
+        "total": 16,
+        "images": [
+          "01.png",
+          "02.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "06.png",
+          "07.png",
+          "08.png",
+          "09.png",
+          "10.png",
+          "11.png",
+          "12.png",
+          "16.png",
+          "17.png",
+          "18.png",
+          "19.png"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {},
+    "90": {},
+    "180": {},
+    "270": {}
+  },
+  "pure": {
+    "0": {
+      "failures": 9,
+      "undetected": {
+        "total": 9,
+        "images": [
+          "02.png",
+          "03.png",
+          "04.png",
+          "05.png",
+          "08.png",
+          "09.png",
+          "10.png",
+          "11.png",
+          "12.png"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "PDF417",
+  "bytes": "1f804ad",
+  "bytesECI": "8945dd4",
+  "text": "A larger PDF417 barcode with text and error correction level 8.",
+  "eccLevel": "93%",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 41,
+      "y": 27
+    },
+    "topRight": {
+      "x": 652,
+      "y": 29
+    },
+    "bottomRight": {
+      "x": 661,
+      "y": 306
+    },
+    "bottomLeft": {
+      "x": 39,
+      "y": 316
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]L2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": ""
+}
