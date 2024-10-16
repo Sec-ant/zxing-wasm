@@ -29,6 +29,9 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
 
+      - name: Test
+        uses: ./.github/actions/test
+
       - name: Get Next Package Version
         id: package-version
         run: echo "version=$(pnpm -s changeset status --output=release.json && jq -r '.releases[0].newVersion // '$(npm pkg get version)'' release.json && rm release.json)" >> $GITHUB_OUTPUT

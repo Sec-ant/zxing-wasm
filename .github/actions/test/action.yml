@@ -1,0 +1,13 @@
+name: Test
+description: Run tests
+
+runs:
+  using: composite
+  steps:
+    - name: Build WASM
+      shell: bash
+      run: pnpm -s cmake && pnpm -s build:wasm
+
+    - name: Run Tests
+      shell: bash
+      run: pnpm -s test
