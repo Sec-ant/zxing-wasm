@@ -55,15 +55,20 @@ type Entries<T> = {
   [K in keyof T]: [K, T[K]];
 }[keyof T][];
 
-beforeAll(async () => {
-  await getZXingModule({
-    wasmBinary: await readFile(
-      resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
-    ),
-  });
-});
+const TEST_RUNNER_PATH = resolve(
+  import.meta.dirname,
+  "../zxing-cpp/test/blackbox/BlackboxTestRunner.cpp",
+);
+const SAMPLES_PATH_PREFIX = "zxing-cpp/test/samples";
 
-const PATH_PREFIX = "zxing-cpp/test/samples";
+test("consistent test entries", async () => {
+  const zxingCppBlackBoxTestRunner = await readFile(TEST_RUNNER_PATH, "utf-8");
+  const testDirs = zxingCppBlackBoxTestRunner.match(
+    /(?<=runTests\(")[^"]+?(?=",)/g,
+  );
+  expect(testDirs).toBeDefined();
+  expect(testDirs).toEqual(testEntries.map(({ directory }) => directory));
+});
 
 for (const {
   directory,
@@ -75,13 +80,22 @@ for (const {
   readerOptions = DEFAULT_READER_OPTIONS_FOR_TESTS,
 } of testEntries) {
   describe(directory, async () => {
+    beforeAll(async () => {
+      async () => {
+        await getZXingModule({
+          wasmBinary: await readFile(
+            resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
+          ),
+        });
+      };
+    });
     const types = [
       ...(testFast ? ["fast"] : []),
       ...(testSlow ? ["slow"] : []),
       ...(testPure ? ["pure"] : []),
     ] as Type[];
     const imagePaths = (
-      await glob([`${PATH_PREFIX}/${directory}/*.(png|jpg|pgm|gif)`])
+      await glob([`${SAMPLES_PATH_PREFIX}/${directory}/*.(png|jpg|pgm|gif)`])
     ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
     const summary: Summary = {
       total: imagePaths.length,
