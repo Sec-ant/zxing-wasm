@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.3.0
+
+### Minor Changes
+
+- 925e12f: Add reader support for `DataBarLimited`.
+
 ## 1.2.15
 
 ### Patch Changes
