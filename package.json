@@ -64,7 +64,7 @@
     "submodule:init": "git submodule update --init",
     "submodule:update": "git submodule update --remote",
     "cmake": "emcmake cmake -S src/cpp -B build",
-    "build:wasm": "cmake --build build -j$(($(nproc) - 1))",
+    "build:wasm": "cmake --build build -j$(($(nproc 2>/dev/null || sysctl -n hw.logicalcpu) - 1))",
     "copy:wasm": "copy-files-from-to",
     "docs:dev": "conc \"pnpm:docs:preview\" \"typedoc --watch --excludeInternal\"",
     "docs:build": "typedoc --excludeInternal",
