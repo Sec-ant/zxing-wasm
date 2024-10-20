@@ -45,13 +45,13 @@ export {
    */
   defaultReaderOptions as defaultDecodeHints,
 };
-export {
+export type {
   /**
    * @deprecated renamed as `ZXingReaderOptions`
    */
-  type ZXingReaderOptions as ZXingDecodeHints,
+  ZXingReaderOptions as ZXingDecodeHints,
   /**
    * @deprecated renamed as `ReaderOptions`
    */
-  type ReaderOptions as DecodeHints,
+  ReaderOptions as DecodeHints,
 } from "./index.js";

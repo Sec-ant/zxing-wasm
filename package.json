@@ -98,10 +98,10 @@
   "devDependencies": {
     "@babel/core": "^7.25.8",
     "@babel/types": "^7.25.8",
-    "@biomejs/biome": "1.9.3",
+    "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.27.9",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.7.5",
+    "@types/node": "^22.7.7",
     "@vitest/ui": "^2.1.3",
     "concurrently": "^9.0.1",
     "copy-files-from-to": "^3.11.0",
@@ -128,5 +128,5 @@
       "typescript": "$typescript"
     }
   },
-  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4"
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
 }

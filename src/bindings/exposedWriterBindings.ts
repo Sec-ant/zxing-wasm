@@ -24,13 +24,13 @@ export {
    */
   defaultWriterOptions as defaultEncodeHints,
 };
-export {
+export type {
   /**
    * @deprecated renamed as `ZXingWriterOptions`
    */
-  type ZXingWriterOptions as ZXingEncodeHints,
+  ZXingWriterOptions as ZXingEncodeHints,
   /**
    * @deprecated renamed as `WriterOptions`
    */
-  type WriterOptions as EncodeHints,
+  WriterOptions as EncodeHints,
 } from "./index.js";
