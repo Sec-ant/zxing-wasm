@@ -5,7 +5,7 @@
   "bytes": "f9a6acb",
   "bytesECI": "b554ded",
   "text": "This is an example Aztec symbol for Wikipedia.",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": ""
 }

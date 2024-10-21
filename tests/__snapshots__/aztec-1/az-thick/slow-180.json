@@ -5,7 +5,7 @@
   "bytes": "29767a7",
   "bytesECI": "ea087f0",
   "text": "Aztec Code is a public domain 2D matrix barcode symbology of nominally square symbols built on a square grid with a distinctive square bullseye pattern at their center.",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "6"
+  "version": "6",
+  "eccLevel": ""
 }

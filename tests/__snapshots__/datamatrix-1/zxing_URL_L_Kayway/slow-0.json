@@ -5,7 +5,7 @@
   "bytes": "1bf6bb1",
   "bytesECI": "bacff23",
   "text": "http://code.google.com/p/zxing/",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "8"
+  "version": "8",
+  "eccLevel": ""
 }

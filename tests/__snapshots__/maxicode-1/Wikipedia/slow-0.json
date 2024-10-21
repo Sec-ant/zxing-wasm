@@ -5,7 +5,7 @@
   "bytes": "0252866",
   "bytesECI": "1a84d39",
   "text": "Wikipedia, the free encyclopedia",
-  "eccLevel": "4",
+  "ecLevel": "4",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": ""
+  "version": "",
+  "eccLevel": "4"
 }

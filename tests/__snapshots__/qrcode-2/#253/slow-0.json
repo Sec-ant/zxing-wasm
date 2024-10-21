@@ -5,7 +5,7 @@
   "bytes": "10672cd",
   "bytesECI": "88614f5",
   "text": "http://cli.im",
-  "eccLevel": "H",
+  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": "H"
 }

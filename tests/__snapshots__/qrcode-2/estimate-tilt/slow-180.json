@@ -5,7 +5,7 @@
   "bytes": "194fb8a",
   "bytesECI": "a6271c0",
   "text": "VERSION 1 6CM",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "1"
+  "version": "1",
+  "eccLevel": "M"
 }

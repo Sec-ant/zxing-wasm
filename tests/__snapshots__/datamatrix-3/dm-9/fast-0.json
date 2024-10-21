@@ -5,7 +5,7 @@
   "bytes": "99d19ed",
   "bytesECI": "4ff539d",
   "text": "http://datamatrixcode.net",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "7"
+  "version": "7",
+  "eccLevel": ""
 }

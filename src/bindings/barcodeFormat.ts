@@ -1,28 +1,53 @@
-export const barcodeFormats = [
-  "Aztec",
-  "Codabar",
-  "Code128",
-  "Code39",
-  "Code93",
-  "DataBar",
-  "DataBarExpanded",
-  "DataBarLimited",
-  "DataMatrix",
-  "DXFilmEdge",
-  "EAN-13",
-  "EAN-8",
-  "ITF",
-  "Linear-Codes",
-  "Matrix-Codes",
-  "MaxiCode",
-  "MicroQRCode",
-  "None",
-  "PDF417",
-  "QRCode",
-  "rMQRCode",
-  "UPC-A",
-  "UPC-E",
+const barcodeFormatsWithMeta = [
+  ["Aztec", "M"],
+  ["Codabar", "L"],
+  ["Code39", "L"],
+  ["Code93", "L"],
+  ["Code128", "L"],
+  ["DataBar", "L"],
+  ["DataBarExpanded", "L"],
+  ["DataMatrix", "M"],
+  ["EAN-8", "L"],
+  ["EAN-13", "L"],
+  ["ITF", "L"],
+  ["MaxiCode", "M"],
+  ["PDF417", "M"],
+  ["QRCode", "M"],
+  ["UPC-A", "L"],
+  ["UPC-E", "L"],
+  ["MicroQRCode", "M"],
+  ["rMQRCode", "M"],
+  ["DXFilmEdge", "L", "W-"],
+  ["DataBarLimited", "L"],
 ] as const;
+
+export const barcodeFormats = barcodeFormatsWithMeta.map(([format]) => format);
+
+type TakeFirst<T> = T extends readonly [infer U, ...unknown[]] ? U : never;
+
+export type LinearBarcodeFormat = TakeFirst<
+  Extract<
+    (typeof barcodeFormatsWithMeta)[number],
+    readonly [string, "L", ...unknown[]]
+  >
+>;
+
+export const linearBarcodeFormats = barcodeFormats.filter(
+  (_, index): _ is LinearBarcodeFormat =>
+    barcodeFormatsWithMeta[index][1] === "L",
+);
+
+export type MatrixBarcodeFormat = TakeFirst<
+  Extract<
+    (typeof barcodeFormatsWithMeta)[number],
+    readonly [string, "M", ...unknown[]]
+  >
+>;
+
+export const matrixBarcodeFormats = barcodeFormats.filter(
+  (_, index): _ is MatrixBarcodeFormat =>
+    barcodeFormatsWithMeta[index][1] === "M",
+);
 
 /**
  * @internal
@@ -32,75 +57,71 @@ export type BarcodeFormat = (typeof barcodeFormats)[number];
 /**
  * Barcode formats that can be used in {@link ReaderOptions.formats | `ReaderOptions.formats`} to read barcodes.
  */
-export type ReadInputBarcodeFormat = Exclude<BarcodeFormat, "None">;
+export type ReadInputBarcodeFormat =
+  | BarcodeFormat
+  | "Linear-Codes"
+  | "Matrix-Codes"
+  | "Any";
 
 /**
  * Barcode formats that can be used in {@link WriterOptions.format | `WriterOptions.format`} to write barcodes.
  */
-export type WriteInputBarcodeFormat = Exclude<
-  BarcodeFormat,
-  | "DataBar"
-  | "DataBarExpanded"
-  | "DataBarLimited"
-  | "DXFilmEdge"
-  | "MaxiCode"
-  | "MicroQRCode"
-  | "rMQRCode"
-  | "None"
-  | "Linear-Codes"
-  | "Matrix-Codes"
+export type WriteInputBarcodeFormat = TakeFirst<
+  Exclude<
+    (typeof barcodeFormatsWithMeta)[number],
+    readonly [string, string, "W-"]
+  >
 >;
 
 /**
- * Barcode formats that may be returned in {@link ReadResult.format} in read functions.
+ * Barcode formats that may be returned in {@link ReadResult.format | `ReadResult.format`} in read functions.
  */
-export type ReadOutputBarcodeFormat = Exclude<
-  BarcodeFormat,
-  "Linear-Codes" | "Matrix-Codes"
->;
+export type ReadOutputBarcodeFormat = BarcodeFormat | "None";
 
-export function formatsToString(formats: BarcodeFormat[]): string {
-  return formats.join("|");
-}
+export type LooseBarcodeFormat =
+  | ReadInputBarcodeFormat
+  | WriteInputBarcodeFormat
+  | ReadOutputBarcodeFormat;
 
-export function formatsFromString(formatString: string): BarcodeFormat[] {
-  return formatString
-    .split(/ |,|\|]/)
-    .map((format) => formatFromString(format));
-}
-
-export function formatFromString(format: string): BarcodeFormat {
-  const normalizedTarget = normalizeFormatString(format);
-  let start = 0;
-  let end = barcodeFormats.length - 1;
-  while (start <= end) {
-    const mid = Math.floor((start + end) / 2);
-    const midElement = barcodeFormats[mid];
-    const normalizedMidElement = normalizeFormatString(midElement);
-    if (normalizedMidElement === normalizedTarget) {
-      return midElement;
-    }
-    if (normalizedMidElement < normalizedTarget) {
-      start = mid + 1;
-    } else {
-      end = mid - 1;
+export function encodeFormat(format: LooseBarcodeFormat): number {
+  switch (format) {
+    case "Linear-Codes":
+      return linearBarcodeFormats.reduce((acc, f) => acc | encodeFormat(f), 0);
+    case "Matrix-Codes":
+      return matrixBarcodeFormats.reduce((acc, f) => acc | encodeFormat(f), 0);
+    case "Any":
+      return (1 << barcodeFormatsWithMeta.length) - 1;
+    case "None":
+      return 0;
+    default: {
+      return 1 << barcodeFormats.indexOf(format);
     }
   }
-  return "None";
 }
 
-export function normalizeFormatString(format: string): string {
-  return format.toLowerCase().replace(/_-\[\]/g, "");
+export function decodeFormat(number: number): ReadOutputBarcodeFormat {
+  if (number === 0) {
+    return "None";
+  }
+  const index = 31 - Math.clz32(number);
+  return barcodeFormats[index];
 }
 
-if (import.meta.vitest) {
-  const { test, expect } = import.meta.vitest;
-  test("barcode formats are ordered", () => {
-    for (let i = 0; i < barcodeFormats.length - 1; ++i) {
-      expect(
-        normalizeFormatString(barcodeFormats[i]) <
-          normalizeFormatString(barcodeFormats[i + 1]),
-      ).toBe(true);
+export function encodeFormats(formats: LooseBarcodeFormat[]): number {
+  return formats.reduce((acc, format) => acc | encodeFormat(format), 0);
+}
+
+export function decodeFormats(number: number): BarcodeFormat[] {
+  const formats: BarcodeFormat[] = [];
+  if (number === 0) {
+    return formats;
+  }
+  let code = 1;
+  while (code <= number) {
+    if (number & code) {
+      formats.push(decodeFormat(code) as BarcodeFormat);
     }
-  });
+    code <<= 1;
+  }
+  return formats;
 }

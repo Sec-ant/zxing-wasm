@@ -11,6 +11,9 @@ importers:
       '@types/emscripten':
         specifier: ^1.39.13
         version: 1.39.13
+      type-fest:
+        specifier: ^4.30.1
+        version: 4.30.1
     devDependencies:
       '@babel/core':
         specifier: ^7.26.0
@@ -2126,6 +2129,10 @@ packages:
     resolution: {integrity: sha512-pOUl6Vo2LUq/bSa8S5q7b91cgNSjctn9ugq/+Mvow99qW6x/UZYwzxy/3NmqoT66eHYfCVvFvACC58UBPFf28g==}
     engines: {node: '>=18.0.0'}
     hasBin: true
+
+  type-fest@4.30.1:
+    resolution: {integrity: sha512-ojFL7eDMX2NF0xMbDwPZJ8sb7ckqtlAi1GsmgsFXvErT9kFTk1r0DuQKvrCh73M6D4nngeHJmvogF9OluXs7Hw==}
+    engines: {node: '>=16'}
 
   typedoc@0.27.5:
     resolution: {integrity: sha512-x+fhKJtTg4ozXwKayh/ek4wxZQI/+2hmZUdO2i2NGDBRUflDble70z+ewHod3d4gRpXSO6fnlnjbDTnJk7HlkQ==}
@@ -4326,6 +4333,8 @@ snapshots:
       get-tsconfig: 4.7.6
     optionalDependencies:
       fsevents: 2.3.3
+
+  type-fest@4.30.1: {}
 
   typedoc@0.27.5(typescript@5.7.2):
     dependencies:

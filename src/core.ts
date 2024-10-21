@@ -1,14 +1,10 @@
+import type { Merge } from "type-fest";
 import {
   type ReadResult,
   type ReaderOptions,
   type WriterOptions,
-  type ZXingBinarizer,
-  type ZXingCharacterSet,
-  type ZXingContentType,
-  type ZXingEanAddOnSymbol,
   type ZXingReadResult,
   type ZXingReaderOptions,
-  type ZXingTextMode,
   type ZXingVector,
   type ZXingWriteResult,
   type ZXingWriterOptions,
@@ -22,19 +18,10 @@ import {
 
 export type ZXingModuleType = "reader" | "writer" | "full";
 
-interface ZXingBaseModule extends EmscriptenModule {
-  CharacterSet: ZXingCharacterSet;
-}
-
 /**
  * @internal
  */
-export interface ZXingReaderModule extends ZXingBaseModule {
-  Binarizer: ZXingBinarizer;
-  ContentType: ZXingContentType;
-  EanAddOnSymbol: ZXingEanAddOnSymbol;
-  TextMode: ZXingTextMode;
-
+export interface ZXingReaderModule extends EmscriptenModule {
   readBarcodesFromImage(
     bufferPtr: number,
     bufferLength: number,
@@ -52,9 +39,15 @@ export interface ZXingReaderModule extends ZXingBaseModule {
 /**
  * @internal
  */
-export interface ZXingWriterModule extends ZXingBaseModule {
-  writeBarcodeToImage(
+export interface ZXingWriterModule extends EmscriptenModule {
+  writeBarcodeFromText(
     text: string,
+    zxingWriterOptions: ZXingWriterOptions,
+  ): ZXingWriteResult;
+
+  writeBarcodeFromBytes(
+    bufferPtr: number,
+    bufferLength: number,
     zxingWriterOptions: ZXingWriterOptions,
   ): ZXingWriteResult;
 }
@@ -64,36 +57,31 @@ export interface ZXingWriterModule extends ZXingBaseModule {
  */
 export interface ZXingFullModule extends ZXingReaderModule, ZXingWriterModule {}
 
-export type ZXingModule<T extends ZXingModuleType = ZXingModuleType> =
-  T extends "reader"
-    ? ZXingReaderModule
-    : T extends "writer"
-      ? ZXingWriterModule
-      : T extends "full"
-        ? ZXingFullModule
-        : ZXingReaderModule | ZXingWriterModule | ZXingFullModule;
-
 export type ZXingReaderModuleFactory =
   EmscriptenModuleFactory<ZXingReaderModule>;
+
 export type ZXingWriterModuleFactory =
   EmscriptenModuleFactory<ZXingWriterModule>;
+
 export type ZXingFullModuleFactory = EmscriptenModuleFactory<ZXingFullModule>;
 
+interface TypeModuleMap {
+  reader: [ZXingReaderModule, ZXingReaderModuleFactory];
+  writer: [ZXingWriterModule, ZXingWriterModuleFactory];
+  full: [ZXingFullModule, ZXingFullModuleFactory];
+}
+
+export type ZXingModule<T extends ZXingModuleType = ZXingModuleType> =
+  TypeModuleMap[T][0];
+
 export type ZXingModuleFactory<T extends ZXingModuleType = ZXingModuleType> =
-  T extends "reader"
-    ? ZXingReaderModuleFactory
-    : T extends "writer"
-      ? ZXingWriterModuleFactory
-      : T extends "full"
-        ? ZXingFullModuleFactory
-        :
-            | ZXingReaderModuleFactory
-            | ZXingWriterModuleFactory
-            | ZXingFullModuleFactory;
+  TypeModuleMap[T][1];
 
 export type ZXingModuleOverrides = Partial<EmscriptenModule>;
 
-const defaultModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
+export const ZXING_WASM_VERSION = NPM_PACKAGE_VERSION;
+
+const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides = import.meta.env.PROD
   ? {
       locateFile: (path, prefix) => {
         const match = path.match(/_(.+?)\.wasm$/);
@@ -113,82 +101,123 @@ const defaultModuleOverrides: ZXingModuleOverrides = import.meta.env.PROD
       },
     };
 
-interface ZXingWeakMapValue<T extends ZXingModuleType = ZXingModuleType> {
-  moduleOverrides: ZXingModuleOverrides;
-  modulePromise?: Promise<ZXingModule<T>>;
+type CachedValue<T extends ZXingModuleType = ZXingModuleType> =
+  | [ZXingModuleOverrides]
+  | [ZXingModuleOverrides, Promise<ZXingModule<T>>];
+
+const __CACHE__ = new WeakMap<ZXingModuleFactory, CachedValue>();
+
+export interface PrepareZXingModuleOptions {
+  overrides?: ZXingModuleOverrides;
+  equalityFn?: (
+    cachedOverrides: ZXingModuleOverrides,
+    overrides: ZXingModuleOverrides,
+  ) => boolean;
+  fireImmediately?: boolean;
 }
 
-type ZXingWeakMap = WeakMap<ZXingModuleFactory, ZXingWeakMapValue>;
-
-let zxingWeakMap: ZXingWeakMap = new WeakMap();
-
-export function getZXingModuleWithFactory<T extends ZXingModuleType>(
+export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides?: ZXingModuleOverrides,
-): Promise<ZXingModule<T>> {
-  const zxingWeakMapValue = zxingWeakMap.get(zxingModuleFactory) as
-    | ZXingWeakMapValue<T>
-    | undefined;
+  options?: Merge<PrepareZXingModuleOptions, { fireImmediately?: false }>,
+): void;
 
-  if (
-    zxingWeakMapValue?.modulePromise &&
-    (zxingModuleOverrides === undefined ||
-      Object.is(zxingModuleOverrides, zxingWeakMapValue.moduleOverrides))
-  ) {
-    return zxingWeakMapValue.modulePromise;
+export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
+  zxingModuleFactory: ZXingModuleFactory<T>,
+  options: Merge<PrepareZXingModuleOptions, { fireImmediately: true }>,
+): Promise<ZXingModule<T>>;
+
+export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
+  zxingModuleFactory: ZXingModuleFactory<T>,
+  options?: PrepareZXingModuleOptions,
+): void | Promise<ZXingModule<T>>;
+
+export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
+  zxingModuleFactory: ZXingModuleFactory<T>,
+  {
+    overrides,
+    equalityFn = Object.is,
+    fireImmediately = false,
+  }: PrepareZXingModuleOptions = {},
+) {
+  // look up the cached overrides and module promise
+  const [cachedOverrides, cachedPromise] = (__CACHE__.get(zxingModuleFactory) as
+    | CachedValue<T>
+    | undefined) ?? [DEFAULT_MODULE_OVERRIDES];
+
+  // resolve the input overrides
+  const resolvedOverrides = overrides ?? cachedOverrides;
+
+  let cacheHit: boolean | undefined;
+
+  // if the module is to be instantiated immediately
+  if (fireImmediately) {
+    // if cache is hit and a cached promise is available,
+    // return the cached promise directly
+    if (
+      cachedPromise &&
+      (cacheHit = equalityFn(cachedOverrides, resolvedOverrides))
+    ) {
+      return cachedPromise;
+    }
+    // otherwise, instantiate the module
+    const modulePromise = zxingModuleFactory({
+      ...resolvedOverrides,
+    }) as Promise<ZXingModule<T>>;
+    // cache the overrides and the promise
+    __CACHE__.set(zxingModuleFactory, [resolvedOverrides, modulePromise]);
+    // and return the promise
+    return modulePromise;
   }
 
-  const resolvedModuleOverrides =
-    zxingModuleOverrides ??
-    zxingWeakMapValue?.moduleOverrides ??
-    defaultModuleOverrides;
-
-  const modulePromise = zxingModuleFactory({
-    ...resolvedModuleOverrides,
-  }) as Promise<ZXingModule<T>>;
-
-  zxingWeakMap.set(zxingModuleFactory, {
-    moduleOverrides: resolvedModuleOverrides,
-    modulePromise,
-  });
-
-  return modulePromise;
+  // otherwise only update the cache if the overrides have changed
+  if (!(cacheHit ?? equalityFn(cachedOverrides, resolvedOverrides))) {
+    __CACHE__.set(zxingModuleFactory, [resolvedOverrides]);
+  }
 }
 
-export function purgeZXingModule() {
-  zxingWeakMap = new WeakMap();
-}
-
-export function setZXingModuleOverridesWithFactory<T extends ZXingModuleType>(
+export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  zxingModuleOverrides: ZXingModuleOverrides,
 ) {
-  zxingWeakMap.set(zxingModuleFactory, {
-    moduleOverrides: zxingModuleOverrides,
-  });
+  __CACHE__.delete(zxingModuleFactory);
 }
 
-export async function readBarcodesFromImageFileWithFactory<
-  T extends "reader" | "full",
->(
+export async function readBarcodesWithFactory<T extends "reader" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  imageFile: Blob,
+  input: Blob | ImageData,
   readerOptions: ReaderOptions = defaultReaderOptions,
 ) {
   const requiredReaderOptions: Required<ReaderOptions> = {
     ...defaultReaderOptions,
     ...readerOptions,
   };
-  const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
-  const { size } = imageFile;
-  const buffer = new Uint8Array(await imageFile.arrayBuffer());
-  const bufferPtr = zxingModule._malloc(size);
-  zxingModule.HEAPU8.set(buffer, bufferPtr);
-  const zxingReadResultVector = zxingModule.readBarcodesFromImage(
-    bufferPtr,
-    size,
-    readerOptionsToZXingReaderOptions(zxingModule, requiredReaderOptions),
-  );
+  const zxingModule = await prepareZXingModuleWithFactory(zxingModuleFactory, {
+    fireImmediately: true,
+  });
+  let zxingReadResultVector: ZXingVector<ZXingReadResult>;
+  let bufferPtr: number;
+  if ("size" in input) {
+    /* Blob */
+    const { size } = input;
+    const buffer = new Uint8Array(await input.arrayBuffer());
+    bufferPtr = zxingModule._malloc(size);
+    zxingModule.HEAPU8.set(buffer, bufferPtr);
+    zxingReadResultVector = zxingModule.readBarcodesFromImage(
+      bufferPtr,
+      size,
+      readerOptionsToZXingReaderOptions(requiredReaderOptions),
+    );
+  } else {
+    /* ImageData */
+    const { data: buffer, width, height } = input;
+    bufferPtr = zxingModule._malloc(buffer.byteLength);
+    zxingModule.HEAPU8.set(buffer, bufferPtr);
+    zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
+      bufferPtr,
+      width,
+      height,
+      readerOptionsToZXingReaderOptions(requiredReaderOptions),
+    );
+  }
   zxingModule._free(bufferPtr);
   const readResults: ReadResult[] = [];
   for (let i = 0; i < zxingReadResultVector.size(); ++i) {
@@ -199,57 +228,34 @@ export async function readBarcodesFromImageFileWithFactory<
   return readResults;
 }
 
-export async function readBarcodesFromImageDataWithFactory<
-  T extends "reader" | "full",
->(
+export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  imageData: ImageData,
-  readerOptions: ReaderOptions = defaultReaderOptions,
-) {
-  const requiredReaderOptions: Required<ReaderOptions> = {
-    ...defaultReaderOptions,
-    ...readerOptions,
-  };
-  const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
-  const {
-    data: buffer,
-    width,
-    height,
-    data: { byteLength: size },
-  } = imageData;
-  const bufferPtr = zxingModule._malloc(size);
-  zxingModule.HEAPU8.set(buffer, bufferPtr);
-  const zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
-    bufferPtr,
-    width,
-    height,
-    readerOptionsToZXingReaderOptions(zxingModule, requiredReaderOptions),
-  );
-  zxingModule._free(bufferPtr);
-  const readResults: ReadResult[] = [];
-  for (let i = 0; i < zxingReadResultVector.size(); ++i) {
-    readResults.push(
-      zxingReadResultToReadResult(zxingReadResultVector.get(i)!),
-    );
-  }
-  return readResults;
-}
-
-export async function writeBarcodeToImageFileWithFactory<
-  T extends "writer" | "full",
->(
-  zxingModuleFactory: ZXingModuleFactory<T>,
-  text: string,
+  input: string | Uint8Array,
   writerOptions: WriterOptions = defaultWriterOptions,
 ) {
   const requiredWriterOptions: Required<WriterOptions> = {
     ...defaultWriterOptions,
     ...writerOptions,
   };
-  const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
-  const zxingWriteResult = zxingModule.writeBarcodeToImage(
-    text,
-    writerOptionsToZXingWriterOptions(zxingModule, requiredWriterOptions),
+  const zxingWriterOptions = writerOptionsToZXingWriterOptions(
+    requiredWriterOptions,
   );
+  const zxingModule = await prepareZXingModuleWithFactory(zxingModuleFactory, {
+    fireImmediately: true,
+  });
+  if (typeof input === "string") {
+    return zxingWriteResultToWriteResult(
+      zxingModule.writeBarcodeFromText(input, zxingWriterOptions),
+    );
+  }
+  const { byteLength } = input;
+  const bufferPtr = zxingModule._malloc(byteLength);
+  zxingModule.HEAPU8.set(input, bufferPtr);
+  const zxingWriteResult = zxingModule.writeBarcodeFromBytes(
+    bufferPtr,
+    byteLength,
+    zxingWriterOptions,
+  );
+  zxingModule._free(bufferPtr);
   return zxingWriteResultToWriteResult(zxingWriteResult);
 }

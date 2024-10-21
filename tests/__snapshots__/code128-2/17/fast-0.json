@@ -5,7 +5,7 @@
   "bytes": "89145c9",
   "bytesECI": "22c4ab8",
   "text": "FW727",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": true,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }
