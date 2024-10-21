@@ -5,7 +5,7 @@
   "bytes": "c09675d",
   "bytesECI": "9b0c7b2",
   "text": "http://d.kaywa.com/20207100",
-  "eccLevel": "Q",
+  "ecLevel": "Q",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": "Q"
 }

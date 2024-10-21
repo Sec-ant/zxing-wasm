@@ -5,7 +5,7 @@
   "bytes": "ab95fb8",
   "bytesECI": "af0d3f7",
   "text": "Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "10"
+  "version": "10",
+  "eccLevel": "M"
 }

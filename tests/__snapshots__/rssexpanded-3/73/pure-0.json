@@ -5,7 +5,7 @@
   "bytes": "d3e34e0",
   "bytesECI": "99e7317",
   "text": "011234567890123110PIRAMIDE-PROJECT",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "GS1",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 1,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

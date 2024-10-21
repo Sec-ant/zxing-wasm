@@ -5,7 +5,7 @@
   "bytes": "1650469",
   "bytesECI": "98eca15",
   "text": "https://u.wechat.com/ELaSWShWyTFQvXJkp9vCgFA",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "5"
+  "version": "5",
+  "eccLevel": "M"
 }

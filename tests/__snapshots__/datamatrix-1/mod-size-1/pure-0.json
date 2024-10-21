@@ -5,7 +5,7 @@
   "bytes": "cedb1ba",
   "bytesECI": "f6bba50",
   "text": "c++",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "1"
+  "version": "1",
+  "eccLevel": ""
 }

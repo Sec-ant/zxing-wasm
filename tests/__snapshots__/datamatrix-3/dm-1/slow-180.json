@@ -5,7 +5,7 @@
   "bytes": "52063ab",
   "bytesECI": "a2243f5",
   "text": "WUPV001DS81KA123",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "5"
+  "version": "5",
+  "eccLevel": ""
 }

@@ -5,7 +5,7 @@
   "bytes": "1e8f809",
   "bytesECI": "1b74f40",
   "text": "011234567890123110UNIVERSITY-OF-DEUSTO",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "GS1",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

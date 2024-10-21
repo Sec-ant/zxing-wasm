@@ -3,17 +3,16 @@ import { readFile } from "node:fs/promises";
 import { format, parse } from "node:path";
 import { Jimp } from "jimp";
 import {
-  type BarcodeFormat,
+  type LinearBarcodeFormat,
+  type ReadOutputBarcodeFormat,
   type ReadResult,
   type ReaderOptions,
   defaultReaderOptions,
+  linearBarcodeFormats,
 } from "../src/reader/index.js";
 
 export const DEFAULT_READER_OPTIONS_FOR_TESTS: ReaderOptions = {
   ...defaultReaderOptions,
-  tryCode39ExtendedMode: true,
-  returnCodabarStartEnd: true,
-  eanAddOnSymbol: "Ignore",
   textMode: "Escaped",
   tryDownscale: false,
   maxNumberOfSymbols: 1,
@@ -179,23 +178,15 @@ function isGraphicalUnicode(codePoint: number): boolean {
   return true;
 }
 
-/**
- * TODO: handle this more gracefully
- */
-export function fourOrientations(barcodeFormat: BarcodeFormat): boolean {
+export function isLinearBarcodeFormat(
+  barcodeFormat: ReadOutputBarcodeFormat,
+): boolean {
   return (
-    barcodeFormat === "Aztec" ||
-    barcodeFormat === "DataMatrix" ||
-    barcodeFormat === "MaxiCode" ||
-    barcodeFormat === "PDF417" ||
-    barcodeFormat === "QRCode" ||
-    barcodeFormat === "MicroQRCode" ||
-    barcodeFormat === "rMQRCode" ||
-    barcodeFormat === "None"
+    linearBarcodeFormats.indexOf(barcodeFormat as LinearBarcodeFormat) !== -1
   );
 }
 
-export function snapshotResult(readResult?: ReadResult): string {
+export function takeSnapshot(readResult?: ReadResult): string {
   if (!readResult) {
     return "null\n";
   }

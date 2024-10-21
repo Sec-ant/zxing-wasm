@@ -10,18 +10,19 @@ import {
   test,
 } from "vitest";
 import {
+  type ReaderOptions,
   getZXingModule,
-  readBarcodesFromImageFile,
+  readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";
 import {
   DEFAULT_READER_OPTIONS_FOR_TESTS,
-  fourOrientations,
   getRotatedImage,
+  isLinearBarcodeFormat,
   parseExpectedBinary,
   parseExpectedResult,
   parseExpectedText,
-  snapshotResult,
+  takeSnapshot,
   warmUpCache,
 } from "./utils.js";
 
@@ -85,7 +86,9 @@ for (const {
   testFast = true,
   testSlow = true,
   testPure = false,
-  rotations = fourOrientations(barcodeFormat) ? [0, 90, 180, 270] : [0, 180],
+  rotations = isLinearBarcodeFormat(barcodeFormat)
+    ? [0, 180]
+    : [0, 90, 180, 270],
   readerOptions = DEFAULT_READER_OPTIONS_FOR_TESTS,
 } of testEntries) {
   describe(directory, async () => {
@@ -140,24 +143,32 @@ for (const {
             };
             test(`${directory} ${imageName} ${type} ${rotation}`, async () => {
               let passCurrent = true;
+
               onTestFinished(() => {
                 passAll &&= passCurrent;
                 passSome ||= passCurrent;
               });
+
               const imageBlob = new Blob([
                 await getRotatedImage(imagePath, rotation),
               ]);
-              const [barcode] = await readBarcodesFromImageFile(imageBlob, {
+
+              const appliedReaderOptions: ReaderOptions = {
                 ...readerOptions,
                 tryHarder: type === "slow",
                 tryRotate: type === "slow",
                 tryInvert: type === "slow",
                 isPure: type === "pure",
                 binarizer: type === "pure" ? "FixedThreshold" : "LocalAverage",
-              });
+              };
+
+              const [barcode] = await readBarcodes(
+                imageBlob,
+                appliedReaderOptions,
+              );
 
               // Snapshot
-              await expect(snapshotResult(barcode)).toMatchFileSnapshot(
+              await expect(takeSnapshot(barcode)).toMatchFileSnapshot(
                 resolve(
                   import.meta.dirname,
                   `./__snapshots__/${directory}/${imageName}/${type}-${rotation}.json`,
@@ -191,11 +202,7 @@ for (const {
                 for (const [key, value] of Object.entries(
                   expectedResult,
                 ) as Entries<typeof expectedResult>) {
-                  if (
-                    barcode[
-                      (key as string) === "ecLevel" ? "eccLevel" : key
-                    ].toString() !== value
-                  ) {
+                  if (barcode[key].toString() !== value) {
                     misread = true;
                     description += `\n  ${key}: expected '${value}', but got '${barcode[key]}'`;
                   }
@@ -246,15 +253,12 @@ for (const {
             ..._summary!.undetected!.images,
           ]).size;
           if (_summary!.misreads!.total === 0) {
-            // biome-ignore lint/performance/noDelete: remove misreads if there is no misread
             delete _summary!.misreads;
           }
           if (_summary!.undetected!.total === 0) {
-            // biome-ignore lint/performance/noDelete: remove undetected if there is no undetected
             delete _summary!.undetected;
           }
           if (_summary!.failures === 0) {
-            // biome-ignore lint/performance/noDelete: remove failures if there is no failure
             delete _summary!.failures;
           }
         }
