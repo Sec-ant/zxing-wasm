@@ -5,7 +5,7 @@
   "bytes": "aaf472b",
   "bytesECI": "78d107c",
   "text": "http://aniful.jp/pr/  ",
-  "eccLevel": "H",
+  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "6"
+  "version": "6",
+  "eccLevel": "H"
 }

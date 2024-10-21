@@ -5,7 +5,7 @@
   "bytes": "dd014af",
   "bytesECI": "f909ca5",
   "text": "http://www.google.com/",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": "M"
 }

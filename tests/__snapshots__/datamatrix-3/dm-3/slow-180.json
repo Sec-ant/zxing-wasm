@@ -5,7 +5,7 @@
   "bytes": "ebad988",
   "bytesECI": "39914bf",
   "text": "Data Matrix",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "27"
+  "version": "27",
+  "eccLevel": ""
 }

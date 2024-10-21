@@ -5,7 +5,7 @@
   "bytes": "d42d407",
   "bytesECI": "b893506",
   "text": "This is a test of our DataMatrix support using a longer piece of text, and therefore a more dense barcode.",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "12"
+  "version": "12",
+  "eccLevel": ""
 }

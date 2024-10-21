@@ -1,24 +1,23 @@
-import type { ZXingModule } from "../core.js";
-import type { ZXingEnum } from "./enum.js";
-
 export const eanAddOnSymbols = ["Ignore", "Read", "Require"] as const;
 
 export type EanAddOnSymbol = (typeof eanAddOnSymbols)[number];
 
 /**
- * @internal
+ * Encodes an EAN add-on symbol to its numeric representation.
+ *
+ * @param eanAddOnSymbol - The EAN add-on symbol to encode
+ * @returns The number representing the encoded EAN add-on symbol
  */
-export type ZXingEanAddOnSymbol = Record<EanAddOnSymbol, ZXingEnum>;
-
-export function eanAddOnSymbolToZXingEnum<T extends "reader" | "full">(
-  zxingModule: ZXingModule<T>,
-  eanAddOnSymbol: EanAddOnSymbol,
-): ZXingEnum {
-  return zxingModule.EanAddOnSymbol[eanAddOnSymbol];
+export function encodeEanAddOnSymbol(eanAddOnSymbol: EanAddOnSymbol): number {
+  return eanAddOnSymbols.indexOf(eanAddOnSymbol);
 }
 
-export function zxingEnumToEanAddOnSymbol(
-  zxingEnum: ZXingEnum,
-): EanAddOnSymbol {
-  return eanAddOnSymbols[zxingEnum.value];
+/**
+ * Decodes the EAN add-on symbol corresponding to the given number.
+ *
+ * @param number - The numeric identifier of the EAN add-on symbol to decode
+ * @returns The decoded EAN add-on symbol
+ */
+export function decodeEanAddOnSymbol(number: number): EanAddOnSymbol {
+  return eanAddOnSymbols[number];
 }

@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "zxing-wasm": "1.3.4"
+  },
+  "changesets": []
+}

@@ -1,10 +1,12 @@
-ColumnLimit: 120
-PenaltyReturnTypeOnItsOwnLine: 200
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+ColumnLimit: 150
 ContinuationIndentWidth: 2
 IndentWidth: 2
 TabWidth: 2
 ConstructorInitializerIndentWidth: 2
 IndentCaseLabels: true
+PenaltyReturnTypeOnItsOwnLine: 200
 UseTab: Never
 SortIncludes: true
 SortUsingDeclarations: false

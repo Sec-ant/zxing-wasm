@@ -5,7 +5,7 @@
   "bytes": "aec1d26",
   "bytesECI": "db02e57",
   "text": "http://bbc.co.uk/programmes",
-  "eccLevel": "H",
+  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "5"
+  "version": "5",
+  "eccLevel": "H"
 }

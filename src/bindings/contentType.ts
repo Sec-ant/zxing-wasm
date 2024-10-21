@@ -1,6 +1,3 @@
-import type { ZXingModule } from "../core.js";
-import type { ZXingEnum } from "./enum.js";
-
 export const contentTypes = [
   "Text",
   "Binary",
@@ -13,17 +10,21 @@ export const contentTypes = [
 export type ContentType = (typeof contentTypes)[number];
 
 /**
- * @internal
+ * Encodes a content type into its numeric representation.
+ *
+ * @param contentType - The content type to encode
+ * @returns A number representing the encoded content type
  */
-export type ZXingContentType = Record<ContentType, ZXingEnum>;
-
-export function contentTypeToZXingEnum<T extends "reader" | "full">(
-  zxingModule: ZXingModule<T>,
-  contentType: ContentType,
-): ZXingEnum {
-  return zxingModule.ContentType[contentType];
+export function encodeContentType(contentType: ContentType): number {
+  return contentTypes.indexOf(contentType);
 }
 
-export function zxingEnumToContentType(zxingEnum: ZXingEnum): ContentType {
-  return contentTypes[zxingEnum.value];
+/**
+ * Decodes a content type from its numeric representation.
+ *
+ * @param number - The numeric identifier representing a content type
+ * @returns The decoded content type
+ */
+export function decodeContentType(number: number): ContentType {
+  return contentTypes[number];
 }

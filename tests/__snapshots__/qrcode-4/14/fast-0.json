@@ -5,7 +5,7 @@
   "bytes": "43e2286",
   "bytesECI": "08faedc",
   "text": "Google Print Ads - T.G.I.A.F. - January 31, 2008",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": "L"
 }

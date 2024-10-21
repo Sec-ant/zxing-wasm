@@ -5,7 +5,7 @@
   "bytes": "68bcf7c",
   "bytesECI": "7e50a44",
   "text": "CODE 93",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

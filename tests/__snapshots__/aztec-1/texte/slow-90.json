@@ -5,7 +5,7 @@
   "bytes": "114f00d",
   "bytesECI": "67d5f42",
   "text": "Ceci est un texte!",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": ""
 }

@@ -5,7 +5,7 @@
   "bytes": "1c5f468",
   "bytesECI": "2b250a9",
   "text": "Victus",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": "M"
 }

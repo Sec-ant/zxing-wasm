@@ -5,7 +5,7 @@
   "bytes": "84ecb2e",
   "bytesECI": "d6ebbe2",
   "text": "04904144",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

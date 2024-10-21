@@ -5,7 +5,7 @@
   "bytes": "fdc9029",
   "bytesECI": "6cc280f",
   "text": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*(),./\\",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "11"
+  "version": "11",
+  "eccLevel": ""
 }

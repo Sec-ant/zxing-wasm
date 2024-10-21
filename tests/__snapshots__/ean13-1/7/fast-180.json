@@ -5,7 +5,7 @@
   "bytes": "8086d9a",
   "bytesECI": "d725e3a",
   "text": "9788430532674",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

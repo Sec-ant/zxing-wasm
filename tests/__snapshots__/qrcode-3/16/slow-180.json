@@ -5,7 +5,7 @@
   "bytes": "a4f962e",
   "bytesECI": "2aefaa7",
   "text": "MECARD:N:Google 411,;TEL:18665881077;;",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": "M"
 }
