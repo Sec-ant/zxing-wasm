@@ -11,19 +11,19 @@
   "position": {
     "topLeft": {
       "x": 1145,
-      "y": 401
+      "y": 398
     },
     "topRight": {
       "x": 0,
-      "y": 401
+      "y": 398
     },
     "bottomRight": {
       "x": 0,
-      "y": 401
+      "y": 398
     },
     "bottomLeft": {
       "x": 1145,
-      "y": 401
+      "y": 398
     }
   },
   "orientation": 180,
@@ -34,6 +34,6 @@
   "sequenceIndex": -1,
   "sequenceId": "",
   "readerInit": false,
-  "lineCount": 3,
+  "lineCount": 4,
   "version": ""
 }

@@ -11,19 +11,19 @@
   "position": {
     "topLeft": {
       "x": 57,
-      "y": 575
+      "y": 576
     },
     "topRight": {
       "x": 721,
-      "y": 575
+      "y": 576
     },
     "bottomRight": {
-      "x": 721,
-      "y": 576
+      "x": 722,
+      "y": 578
     },
     "bottomLeft": {
       "x": 57,
-      "y": 576
+      "y": 578
     }
   },
   "orientation": 0,

@@ -19,11 +19,11 @@
     },
     "bottomRight": {
       "x": 32,
-      "y": 119
+      "y": 120
     },
     "bottomLeft": {
       "x": 312,
-      "y": 119
+      "y": 120
     }
   },
   "orientation": 180,
