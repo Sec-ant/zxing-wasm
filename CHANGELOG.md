@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.3.2
+
+### Patch Changes
+
+- 4b0ca08: Bump zxing-cpp to [`308f820`](https://github.com/zxing-cpp/zxing-cpp/commit/308f82077dd82979c9df1f82a8ff264dcf0d6371) and improve DataBar detection rate.
+
 ## 1.3.1
 
 ### Patch Changes
