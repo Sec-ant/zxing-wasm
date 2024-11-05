@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.3.3
+
+### Patch Changes
+
+- 0709489: Bump `zxing-cpp` to `cd9bba3` to fix an ITF detection regression.
+
 ## 1.3.2
 
 ### Patch Changes
