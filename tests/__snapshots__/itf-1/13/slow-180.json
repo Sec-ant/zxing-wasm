@@ -18,12 +18,12 @@
       "y": 56
     },
     "bottomRight": {
-      "x": 43,
-      "y": 63
+      "x": 42,
+      "y": 64
     },
     "bottomLeft": {
       "x": 202,
-      "y": 63
+      "y": 64
     }
   },
   "orientation": 180,

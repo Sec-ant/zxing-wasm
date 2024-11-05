@@ -2,28 +2,28 @@
   "isValid": true,
   "error": "",
   "format": "ITF",
-  "bytes": "97558b4",
-  "bytesECI": "1bbbd22",
-  "text": "0829220875",
+  "bytes": "70d5240",
+  "bytesECI": "527ce69",
+  "text": "00123456",
   "eccLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 34,
-      "y": 63
+      "x": 10,
+      "y": 1
     },
     "topRight": {
-      "x": 194,
-      "y": 63
+      "x": 158,
+      "y": 1
     },
     "bottomRight": {
-      "x": 194,
-      "y": 64
+      "x": 158,
+      "y": 2
     },
     "bottomLeft": {
-      "x": 34,
-      "y": 64
+      "x": 10,
+      "y": 2
     }
   },
   "orientation": 0,

@@ -2,34 +2,34 @@
   "isValid": true,
   "error": "",
   "format": "ITF",
-  "bytes": "97558b4",
-  "bytesECI": "1bbbd22",
-  "text": "0829220875",
+  "bytes": "4f50564",
+  "bytesECI": "d464871",
+  "text": "30712345000010",
   "eccLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 34,
-      "y": 63
+      "x": 14,
+      "y": 5
     },
     "topRight": {
-      "x": 194,
-      "y": 63
+      "x": 315,
+      "y": 5
     },
     "bottomRight": {
-      "x": 194,
-      "y": 64
+      "x": 315,
+      "y": 6
     },
     "bottomLeft": {
-      "x": 34,
-      "y": 64
+      "x": 14,
+      "y": 6
     }
   },
   "orientation": 0,
   "isMirrored": false,
   "isInverted": false,
-  "symbologyIdentifier": "]I0",
+  "symbologyIdentifier": "]I1",
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
