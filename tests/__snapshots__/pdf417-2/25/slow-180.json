@@ -14,19 +14,19 @@
       "y": 53
     },
     "topRight": {
-      "x": 219,
-      "y": 79
+      "x": 76,
+      "y": 53
     },
     "bottomRight": {
-      "x": 219,
-      "y": 79
+      "x": 76,
+      "y": 24
     },
     "bottomLeft": {
       "x": 212,
       "y": 24
     }
   },
-  "orientation": 80,
+  "orientation": 180,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]L2",
