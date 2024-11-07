@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 1.3.4
+
+### Patch Changes
+
+- 1a9a372: Bump `zxing-cpp` to `579650a` to fix incorrect PDF417 position info.
+
 ## 1.3.3
 
 ### Patch Changes
