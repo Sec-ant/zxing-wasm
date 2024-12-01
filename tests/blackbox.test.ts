@@ -22,6 +22,7 @@ import {
   parseExpectedResult,
   parseExpectedText,
   snapshotResult,
+  warmUpCache,
 } from "./utils.js";
 
 type Type = "fast" | "slow" | "pure";
@@ -70,6 +71,14 @@ test("consistent test entries", async () => {
   expect(testDirs).toEqual(testEntries.map(({ directory }) => directory));
 });
 
+await getZXingModule({
+  wasmBinary: (
+    await readFile(
+      resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
+    )
+  ).buffer as ArrayBuffer,
+});
+
 for (const {
   directory,
   barcodeFormat,
@@ -80,13 +89,6 @@ for (const {
   readerOptions = DEFAULT_READER_OPTIONS_FOR_TESTS,
 } of testEntries) {
   describe(directory, async () => {
-    beforeAll(async () => {
-      await getZXingModule({
-        wasmBinary: await readFile(
-          resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
-        ),
-      });
-    });
     const types = [
       ...(testFast ? ["fast"] : []),
       ...(testSlow ? ["slow"] : []),
@@ -111,6 +113,9 @@ for (const {
         parseExpectedBinary(imagePath),
       ]);
       describe(`${directory} ${imageName}`, async () => {
+        beforeAll(async () => {
+          await warmUpCache(imagePath, rotations);
+        });
         afterAll(() => {
           if (passAll) {
             ++summary.passAll;

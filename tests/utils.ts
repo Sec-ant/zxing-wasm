@@ -2,7 +2,6 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { format, parse } from "node:path";
 import { Jimp } from "jimp";
-import memoize from "nano-memoize";
 import {
   type BarcodeFormat,
   type ReadResult,
@@ -20,29 +19,46 @@ export const DEFAULT_READER_OPTIONS_FOR_TESTS: ReaderOptions = {
   maxNumberOfSymbols: 1,
 };
 
-const getJimpImage = memoize(async (imagePath: string) => {
-  return Jimp.read(imagePath);
-});
+type ProvidedMimeType = Parameters<
+  Awaited<ReturnType<typeof Jimp.read>>["getBuffer"]
+>[0];
 
-export const getRotatedImage = memoize(
-  async (imagePath: string, rotation: number) => {
-    if (rotation === 0) {
-      return readFile(imagePath);
-    }
-    const jimpImage = (await getJimpImage(imagePath)).clone();
-    return jimpImage
-      .rotate(rotation)
-      .getBuffer(
-        (jimpImage.mime ?? "image/png") as
-          | "image/bmp"
-          | "image/tiff"
-          | "image/x-ms-bmp"
-          | "image/gif"
-          | "image/jpeg"
-          | "image/png",
+const [warmUpCache, getRotatedImage] = (() => {
+  const cache = new Map<string, Map<number, Buffer>>();
+  return [
+    async (imagePath: string, rotations: number[]) => {
+      if (cache.has(imagePath)) {
+        return;
+      }
+      const imageCache = new Map<number, Buffer>();
+      imageCache.set(0, await readFile(imagePath));
+      cache.set(imagePath, imageCache);
+      await Promise.all(
+        rotations.map(async (rotation) => {
+          if (rotation === 0) {
+            return;
+          }
+          const jimpImage = (await Jimp.read(imageCache.get(0)!)).clone();
+          imageCache.set(
+            rotation,
+            await jimpImage
+              .rotate(rotation)
+              .getBuffer((jimpImage.mime ?? "image/png") as ProvidedMimeType),
+          );
+        }),
       );
-  },
-);
+    },
+    async (imagePath: string, rotation: number) => {
+      const imageCache = cache.get(imagePath)?.get(rotation);
+      if (!imageCache) {
+        throw new Error("Cache not warmed up");
+      }
+      return imageCache;
+    },
+  ];
+})();
+
+export { warmUpCache, getRotatedImage };
 
 export function escapeNonGraphical(str: string): string {
   const asciiNongraphs = [
