@@ -152,7 +152,7 @@ for (const {
               });
 
               // Snapshot
-              expect(snapshotResult(barcode)).toMatchFileSnapshot(
+              await expect(snapshotResult(barcode)).toMatchFileSnapshot(
                 resolve(
                   import.meta.dirname,
                   `./__snapshots__/${directory}/${imageName}/${type}-${rotation}.json`,
@@ -233,7 +233,7 @@ for (const {
         }
       });
     }
-    test.sequential(`${directory} summary`, () => {
+    test.sequential(`${directory} summary`, async () => {
       for (const type of types) {
         for (const _summary of Object.values(summary[type]!)) {
           _summary!.failures = new Set([
@@ -254,7 +254,7 @@ for (const {
           }
         }
       }
-      expect(`${JSON.stringify(summary, null, 2)}\n`).toMatchFileSnapshot(
+      await expect(`${JSON.stringify(summary, null, 2)}\n`).toMatchFileSnapshot(
         resolve(
           import.meta.dirname,
           `./__snapshots__/${directory}/summary.json`,
