@@ -1,6 +1,3 @@
-import type { ZXingModule, ZXingModuleType } from "../core.js";
-import type { ZXingEnum } from "./enum.js";
-
 export const characterSets = [
   "Unknown",
   "ASCII",
@@ -40,18 +37,10 @@ export const characterSets = [
 
 export type CharacterSet = (typeof characterSets)[number];
 
-/**
- * @internal
- */
-export type ZXingCharacterSet = Record<CharacterSet, ZXingEnum>;
-
-export function characterSetToZXingEnum<T extends ZXingModuleType>(
-  zxingModule: ZXingModule<T>,
-  characterSet: CharacterSet,
-): ZXingEnum {
-  return zxingModule.CharacterSet[characterSet];
+export function encodeCharacterSet(characterSet: CharacterSet): number {
+  return characterSets.indexOf(characterSet);
 }
 
-export function zxingEnumToCharacterSet(zxingEnum: ZXingEnum): CharacterSet {
-  return characterSets[zxingEnum.value];
+export function decodeCharacterSet(number: number): CharacterSet {
+  return characterSets[number];
 }

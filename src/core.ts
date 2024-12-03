@@ -2,15 +2,9 @@ import {
   type ReadResult,
   type ReaderOptions,
   type WriterOptions,
-  type ZXingBinarizer,
-  type ZXingCharacterSet,
-  type ZXingContentType,
-  type ZXingEanAddOnSymbol,
   type ZXingReadResult,
   type ZXingReaderOptions,
-  type ZXingTextMode,
   type ZXingVector,
-  type ZXingWriteResult,
   type ZXingWriterOptions,
   defaultReaderOptions,
   defaultWriterOptions,
@@ -22,19 +16,10 @@ import {
 
 export type ZXingModuleType = "reader" | "writer" | "full";
 
-interface ZXingBaseModule extends EmscriptenModule {
-  CharacterSet: ZXingCharacterSet;
-}
-
 /**
  * @internal
  */
-export interface ZXingReaderModule extends ZXingBaseModule {
-  Binarizer: ZXingBinarizer;
-  ContentType: ZXingContentType;
-  EanAddOnSymbol: ZXingEanAddOnSymbol;
-  TextMode: ZXingTextMode;
-
+export interface ZXingReaderModule extends EmscriptenModule {
   readBarcodesFromImage(
     bufferPtr: number,
     bufferLength: number,
@@ -52,11 +37,39 @@ export interface ZXingReaderModule extends ZXingBaseModule {
 /**
  * @internal
  */
-export interface ZXingWriterModule extends ZXingBaseModule {
-  writeBarcodeToImage(
+export interface ZXingWriterModule extends EmscriptenModule {
+  writeBarcodeFromTextToSVG(
     text: string,
     zxingWriterOptions: ZXingWriterOptions,
-  ): ZXingWriteResult;
+  ): string;
+
+  writeBarcodeFromBytesToSVG(
+    bufferPtr: number,
+    bufferLength: number,
+    zxingWriterOptions: ZXingWriterOptions,
+  ): string;
+
+  writeBarcodeFromTextToUtf8(
+    text: string,
+    zxingWriterOptions: ZXingWriterOptions,
+  ): string;
+
+  writeBarcodeFromBytesToUtf8(
+    bufferPtr: number,
+    bufferLength: number,
+    zxingWriterOptions: ZXingWriterOptions,
+  ): string;
+
+  writeBarcodeFromTextToImage(
+    text: string,
+    zxingWriterOptions: ZXingWriterOptions,
+  ): Uint8Array;
+
+  writeBarcodeFromBytesToImage(
+    bufferPtr: number,
+    bufferLength: number,
+    zxingWriterOptions: ZXingWriterOptions,
+  ): Uint8Array;
 }
 
 /**

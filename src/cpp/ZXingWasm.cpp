@@ -159,7 +159,7 @@ JsBarcodes readBarcodesFromPixmap(int bufferPtr, int width, int height, const Js
 
 struct JsWriterOptions {
   // ZXing::CreatorOptions
-  std::string format;
+  int format;
   bool readerInit;
   bool forceSquareDataMatrix;
   std::string ecLevel;
@@ -174,7 +174,7 @@ struct JsWriterOptions {
 namespace {
 
   ZXing::CreatorOptions createCreatorOptions(const JsWriterOptions &jsWriterOptions) {
-    return ZXing::CreatorOptions(ZXing::BarcodeFormatFromString(jsWriterOptions.format))
+    return ZXing::CreatorOptions(static_cast<ZXing::BarcodeFormat>(jsWriterOptions.format))
       .readerInit(jsWriterOptions.readerInit)
       .forceSquareDataMatrix(jsWriterOptions.forceSquareDataMatrix)
       .ecLevel(jsWriterOptions.ecLevel);
@@ -202,11 +202,11 @@ std::string writeBarcodeFromBytesToSVG(int bufferPtr, int bufferLength, const Js
   );
 }
 
-std::string writeBarcodesFromTextToUtf8(std::string text, const JsWriterOptions &jsWriterOptions) {
+std::string writeBarcodeFromTextToUtf8(std::string text, const JsWriterOptions &jsWriterOptions) {
   return ZXing::WriteBarcodeToUtf8(ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions)), createWriterOptions(jsWriterOptions));
 }
 
-std::string writeBarcodesFromBytesToUtf8(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
+std::string writeBarcodeFromBytesToUtf8(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
   return ZXing::WriteBarcodeToUtf8(
     ZXing::CreateBarcodeFromBytes(reinterpret_cast<const void *>(bufferPtr), bufferLength, createCreatorOptions(jsWriterOptions)),
     createWriterOptions(jsWriterOptions)
@@ -316,8 +316,8 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
 
   function("writeBarcodeFromTextToSVG", &writeBarcodeFromTextToSVG);
   function("writeBarcodeFromBytesToSVG", &writeBarcodeFromBytesToSVG);
-  function("writeBarcodesFromTextToUtf8", &writeBarcodesFromTextToUtf8);
-  function("writeBarcodesFromBytesToUtf8", &writeBarcodesFromBytesToUtf8);
+  function("writeBarcodeFromTextToUtf8", &writeBarcodeFromTextToUtf8);
+  function("writeBarcodeFromBytesToUtf8", &writeBarcodeFromBytesToUtf8);
   function("writeBarcodeFromTextToImage", &writeBarcodeFromTextToImage);
   function("writeBarcodeFromBytesToImage", &writeBarcodeFromBytesToImage);
 
