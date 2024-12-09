@@ -1,7 +1,4 @@
-import {
-  type ReadInputBarcodeFormat,
-  formatsToString,
-} from "./barcodeFormat.js";
+import { type ReadInputBarcodeFormat, encodeFormats } from "./barcodeFormat.js";
 import { type Binarizer, encodeBinarizer } from "./binarizer.js";
 import { type CharacterSet, encodeCharacterSet } from "./characterSet.js";
 import { type EanAddOnSymbol, encodeEanAddOnSymbol } from "./eanAddOnSymbol.js";
@@ -14,7 +11,7 @@ export interface ZXingReaderOptions {
   /**
    * @internal
    */
-  formats: string;
+  formats: number;
   /**
    * Spend more time to try to find a barcode. Optimize for accuracy, not speed.
    *
@@ -239,7 +236,7 @@ export function readerOptionsToZXingReaderOptions(
 ): ZXingReaderOptions {
   return {
     ...readerOptions,
-    formats: formatsToString(readerOptions.formats),
+    formats: encodeFormats(readerOptions.formats),
     binarizer: encodeBinarizer(readerOptions.binarizer),
     eanAddOnSymbol: encodeEanAddOnSymbol(readerOptions.eanAddOnSymbol),
     textMode: encodeTextMode(readerOptions.textMode),

@@ -5,7 +5,7 @@
   "bytes": "616b5a1",
   "bytesECI": "fc908a0",
   "text": "[)><RS>06<GS>9N111234567842S3300045321T89209876D151217<RS><EOT>",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "ISO15434",
   "hasECI": false,
   "position": {
@@ -33,6 +33,8 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
+  "isLastInSequence": false,
+  "isPartOfSequence": false,
   "readerInit": false,
   "lineCount": 0,
   "version": "9"

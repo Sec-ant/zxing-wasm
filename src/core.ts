@@ -5,6 +5,7 @@ import {
   type ZXingReadResult,
   type ZXingReaderOptions,
   type ZXingVector,
+  type ZXingWriteResult,
   type ZXingWriterOptions,
   defaultReaderOptions,
   defaultWriterOptions,
@@ -38,38 +39,16 @@ export interface ZXingReaderModule extends EmscriptenModule {
  * @internal
  */
 export interface ZXingWriterModule extends EmscriptenModule {
-  writeBarcodeFromTextToSVG(
+  writeBarcodeFromText(
     text: string,
     zxingWriterOptions: ZXingWriterOptions,
-  ): string;
+  ): ZXingWriteResult;
 
-  writeBarcodeFromBytesToSVG(
+  writeBarcodeFromBytes(
     bufferPtr: number,
     bufferLength: number,
     zxingWriterOptions: ZXingWriterOptions,
-  ): string;
-
-  writeBarcodeFromTextToUtf8(
-    text: string,
-    zxingWriterOptions: ZXingWriterOptions,
-  ): string;
-
-  writeBarcodeFromBytesToUtf8(
-    bufferPtr: number,
-    bufferLength: number,
-    zxingWriterOptions: ZXingWriterOptions,
-  ): string;
-
-  writeBarcodeFromTextToImage(
-    text: string,
-    zxingWriterOptions: ZXingWriterOptions,
-  ): Uint8Array;
-
-  writeBarcodeFromBytesToImage(
-    bufferPtr: number,
-    bufferLength: number,
-    zxingWriterOptions: ZXingWriterOptions,
-  ): Uint8Array;
+  ): ZXingWriteResult;
 }
 
 /**
@@ -181,11 +160,9 @@ export function setZXingModuleOverridesWithFactory<T extends ZXingModuleType>(
   });
 }
 
-export async function readBarcodesFromImageFileWithFactory<
-  T extends "reader" | "full",
->(
+export async function readBarcodesWithFactory<T extends "reader" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  imageFile: Blob,
+  input: Blob | ImageData,
   readerOptions: ReaderOptions = defaultReaderOptions,
 ) {
   const requiredReaderOptions: Required<ReaderOptions> = {
@@ -193,15 +170,31 @@ export async function readBarcodesFromImageFileWithFactory<
     ...readerOptions,
   };
   const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
-  const { size } = imageFile;
-  const buffer = new Uint8Array(await imageFile.arrayBuffer());
-  const bufferPtr = zxingModule._malloc(size);
-  zxingModule.HEAPU8.set(buffer, bufferPtr);
-  const zxingReadResultVector = zxingModule.readBarcodesFromImage(
-    bufferPtr,
-    size,
-    readerOptionsToZXingReaderOptions(zxingModule, requiredReaderOptions),
-  );
+  let zxingReadResultVector: ZXingVector<ZXingReadResult>;
+  let bufferPtr: number;
+  if ("size" in input) {
+    /* Blob */
+    const { size } = input;
+    const buffer = new Uint8Array(await input.arrayBuffer());
+    bufferPtr = zxingModule._malloc(size);
+    zxingModule.HEAPU8.set(buffer, bufferPtr);
+    zxingReadResultVector = zxingModule.readBarcodesFromImage(
+      bufferPtr,
+      size,
+      readerOptionsToZXingReaderOptions(requiredReaderOptions),
+    );
+  } else {
+    /* ImageData */
+    const { data: buffer, width, height } = input;
+    bufferPtr = zxingModule._malloc(buffer.byteLength);
+    zxingModule.HEAPU8.set(buffer, bufferPtr);
+    zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
+      bufferPtr,
+      width,
+      height,
+      readerOptionsToZXingReaderOptions(requiredReaderOptions),
+    );
+  }
   zxingModule._free(bufferPtr);
   const readResults: ReadResult[] = [];
   for (let i = 0; i < zxingReadResultVector.size(); ++i) {
@@ -212,57 +205,32 @@ export async function readBarcodesFromImageFileWithFactory<
   return readResults;
 }
 
-export async function readBarcodesFromImageDataWithFactory<
-  T extends "reader" | "full",
->(
+export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  imageData: ImageData,
-  readerOptions: ReaderOptions = defaultReaderOptions,
-) {
-  const requiredReaderOptions: Required<ReaderOptions> = {
-    ...defaultReaderOptions,
-    ...readerOptions,
-  };
-  const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
-  const {
-    data: buffer,
-    width,
-    height,
-    data: { byteLength: size },
-  } = imageData;
-  const bufferPtr = zxingModule._malloc(size);
-  zxingModule.HEAPU8.set(buffer, bufferPtr);
-  const zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
-    bufferPtr,
-    width,
-    height,
-    readerOptionsToZXingReaderOptions(zxingModule, requiredReaderOptions),
-  );
-  zxingModule._free(bufferPtr);
-  const readResults: ReadResult[] = [];
-  for (let i = 0; i < zxingReadResultVector.size(); ++i) {
-    readResults.push(
-      zxingReadResultToReadResult(zxingReadResultVector.get(i)!),
-    );
-  }
-  return readResults;
-}
-
-export async function writeBarcodeToImageFileWithFactory<
-  T extends "writer" | "full",
->(
-  zxingModuleFactory: ZXingModuleFactory<T>,
-  text: string,
+  input: string | Uint8Array,
   writerOptions: WriterOptions = defaultWriterOptions,
 ) {
   const requiredWriterOptions: Required<WriterOptions> = {
     ...defaultWriterOptions,
     ...writerOptions,
   };
-  const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
-  const zxingWriteResult = zxingModule.writeBarcodeToImage(
-    text,
-    writerOptionsToZXingWriterOptions(zxingModule, requiredWriterOptions),
+  const zxingWriterOptions = writerOptionsToZXingWriterOptions(
+    requiredWriterOptions,
   );
+  const zxingModule = await getZXingModuleWithFactory(zxingModuleFactory);
+  if (typeof input === "string") {
+    return zxingWriteResultToWriteResult(
+      zxingModule.writeBarcodeFromText(input, zxingWriterOptions),
+    );
+  }
+  const { byteLength } = input;
+  const bufferPtr = zxingModule._malloc(byteLength);
+  zxingModule.HEAPU8.set(input, bufferPtr);
+  const zxingWriteResult = zxingModule.writeBarcodeFromBytes(
+    bufferPtr,
+    byteLength,
+    zxingWriterOptions,
+  );
+  zxingModule._free(bufferPtr);
   return zxingWriteResultToWriteResult(zxingWriteResult);
 }

@@ -26,7 +26,29 @@ using namespace emscripten;
 
 #if defined(READER)
 
-struct JsBarcode {
+struct JsReaderOptions {
+  int formats;
+  bool tryHarder;
+  bool tryRotate;
+  bool tryInvert;
+  bool tryDownscale;
+  #ifdef ZXING_EXPERIMENTAL_API
+  bool tryDenoise;
+  #endif
+  uint8_t binarizer;
+  bool isPure;
+  uint16_t downscaleThreshold;
+  uint8_t downscaleFactor;
+  uint8_t minLineCount;
+  uint8_t maxNumberOfSymbols;
+  bool tryCode39ExtendedMode;
+  bool returnErrors;
+  uint8_t eanAddOnSymbol;
+  uint8_t textMode;
+  uint8_t characterSet;
+};
+
+struct JsReadResult {
   bool isValid;
   std::string error;
   int format;
@@ -51,36 +73,14 @@ struct JsBarcode {
   std::string version;
 };
 
-using JsBarcodes = std::vector<JsBarcode>;
+using JsReadResults = std::vector<JsReadResult>;
 
-struct JsReaderOptions {
-  std::string formats;
-  bool tryHarder;
-  bool tryRotate;
-  bool tryInvert;
-  bool tryDownscale;
-  #ifdef ZXING_EXPERIMENTAL_API
-  bool tryDenoise;
-  #endif
-  uint8_t binarizer;
-  bool isPure;
-  uint16_t downscaleThreshold;
-  uint8_t downscaleFactor;
-  uint8_t minLineCount;
-  uint8_t maxNumberOfSymbols;
-  bool tryCode39ExtendedMode;
-  bool returnErrors;
-  uint8_t eanAddOnSymbol;
-  uint8_t textMode;
-  uint8_t characterSet;
-};
-
-JsBarcodes readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &jsReaderOptions) {
+JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &jsReaderOptions) {
   try {
     auto barcodes = ZXing::ReadBarcodes(
       imageView,
       ZXing::ReaderOptions()
-        .setFormats(ZXing::BarcodeFormatsFromString(jsReaderOptions.formats))
+        .setFormats(static_cast<ZXing::BarcodeFormat>(jsReaderOptions.formats))
         .setTryHarder(jsReaderOptions.tryHarder)
         .setTryRotate(jsReaderOptions.tryRotate)
         .setTryInvert(jsReaderOptions.tryInvert)
@@ -101,16 +101,18 @@ JsBarcodes readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &jsRea
         .setCharacterSet(static_cast<ZXing::CharacterSet>(jsReaderOptions.characterSet))
     );
 
-    JsBarcodes jsBarcodes;
-    jsBarcodes.reserve(barcodes.size());
+    thread_local const val Uint8Array = val::global("Uint8Array");
+
+    JsReadResults jsReadResults;
+    jsReadResults.reserve(barcodes.size());
 
     for (auto &barcode : barcodes) {
-      jsBarcodes.push_back(
+      jsReadResults.push_back(
         {.isValid = barcode.isValid(),
          .error = ZXing::ToString(barcode.error()),
          .format = static_cast<int>(barcode.format()),
-         .bytes = std::move(val(typed_memory_view(barcode.bytes().size(), barcode.bytes().data()))),
-         .bytesECI = std::move(val(typed_memory_view(barcode.bytesECI().size(), barcode.bytesECI().data()))),
+         .bytes = std::move(Uint8Array.new_(val(typed_memory_view(barcode.bytes().size(), barcode.bytes().data())))),
+         .bytesECI = std::move(Uint8Array.new_(val(typed_memory_view(barcode.bytesECI().size(), barcode.bytesECI().data())))),
          .text = barcode.text(),
          .ecLevel = barcode.ecLevel(),
          .contentType = static_cast<int>(barcode.contentType()),
@@ -130,7 +132,7 @@ JsBarcodes readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &jsRea
          .version = barcode.version()}
       );
     }
-    return jsBarcodes;
+    return jsReadResults;
   } catch (const std::exception &e) {
     return {{.error = e.what()}};
   } catch (...) {
@@ -138,7 +140,7 @@ JsBarcodes readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &jsRea
   }
 }
 
-JsBarcodes readBarcodesFromImage(int bufferPtr, int bufferLength, const JsReaderOptions &jsReaderOptions) {
+JsReadResults readBarcodesFromImage(int bufferPtr, int bufferLength, const JsReaderOptions &jsReaderOptions) {
   int width, height, channels;
   std::unique_ptr<stbi_uc, void (*)(void *)> buffer(
     stbi_load_from_memory(reinterpret_cast<const stbi_uc *>(bufferPtr), bufferLength, &width, &height, &channels, 1), stbi_image_free
@@ -149,7 +151,7 @@ JsBarcodes readBarcodesFromImage(int bufferPtr, int bufferLength, const JsReader
   return readBarcodes({buffer.get(), width, height, ZXing::ImageFormat::Lum}, jsReaderOptions);
 }
 
-JsBarcodes readBarcodesFromPixmap(int bufferPtr, int width, int height, const JsReaderOptions &jsReaderOptions) {
+JsReadResults readBarcodesFromPixmap(int bufferPtr, int width, int height, const JsReaderOptions &jsReaderOptions) {
   return readBarcodes({reinterpret_cast<const uint8_t *>(bufferPtr), width, height, ZXing::ImageFormat::RGBA}, jsReaderOptions);
 }
 
@@ -191,48 +193,59 @@ namespace {
 
 } // anonymous namespace
 
-std::string writeBarcodeFromTextToSVG(std::string text, const JsWriterOptions &jsWriterOptions) {
-  return ZXing::WriteBarcodeToSVG(ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions)), createWriterOptions(jsWriterOptions));
+struct JsWriteResult {
+  std::string error;
+  std::string svg;
+  std::string utf8;
+  val image;
+};
+
+JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWriterOptions) {
+  try {
+    auto barcode = ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions));
+    auto writerOptions = createWriterOptions(jsWriterOptions);
+
+    auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
+
+    thread_local const val Uint8Array = val::global("Uint8Array");
+
+    int len;
+    uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
+
+    return {
+      .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
+      .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
+      .image = std::move(Uint8Array.new_(val(typed_memory_view(len, bytes))))
+    };
+  } catch (const std::exception &e) {
+    return {.error = e.what()};
+  } catch (...) {
+    return {.error = "Unknown error"};
+  }
 }
 
-std::string writeBarcodeFromBytesToSVG(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
-  return ZXing::WriteBarcodeToSVG(
-    ZXing::CreateBarcodeFromBytes(reinterpret_cast<const void *>(bufferPtr), bufferLength, createCreatorOptions(jsWriterOptions)),
-    createWriterOptions(jsWriterOptions)
-  );
-}
+JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
+  try {
+    auto barcode = ZXing::CreateBarcodeFromBytes(reinterpret_cast<const void *>(bufferPtr), bufferLength, createCreatorOptions(jsWriterOptions));
+    auto writerOptions = createWriterOptions(jsWriterOptions);
 
-std::string writeBarcodeFromTextToUtf8(std::string text, const JsWriterOptions &jsWriterOptions) {
-  return ZXing::WriteBarcodeToUtf8(ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions)), createWriterOptions(jsWriterOptions));
-}
+    auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
 
-std::string writeBarcodeFromBytesToUtf8(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
-  return ZXing::WriteBarcodeToUtf8(
-    ZXing::CreateBarcodeFromBytes(reinterpret_cast<const void *>(bufferPtr), bufferLength, createCreatorOptions(jsWriterOptions)),
-    createWriterOptions(jsWriterOptions)
-  );
-}
+    thread_local const val Uint8Array = val::global("Uint8Array");
 
-val writeBarcodeFromTextToImage(std::string text, const JsWriterOptions &jsWriterOptions) {
-  auto image =
-    ZXing::WriteBarcodeToImage(ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions)), createWriterOptions(jsWriterOptions));
+    int len;
+    uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
 
-  int len;
-  uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
-
-  return val(typed_memory_view(len, bytes));
-}
-
-val writeBarcodeFromBytesToImage(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
-  auto image = ZXing::WriteBarcodeToImage(
-    ZXing::CreateBarcodeFromBytes(reinterpret_cast<const void *>(bufferPtr), bufferLength, createCreatorOptions(jsWriterOptions)),
-    createWriterOptions(jsWriterOptions)
-  );
-
-  int len;
-  uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
-
-  return val(typed_memory_view(len, bytes));
+    return {
+      .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
+      .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
+      .image = std::move(Uint8Array.new_(val(typed_memory_view(len, bytes))))
+    };
+  } catch (const std::exception &e) {
+    return {.error = e.what()};
+  } catch (...) {
+    return {.error = "Unknown error"};
+  }
 }
 
 #endif
@@ -240,40 +253,6 @@ val writeBarcodeFromBytesToImage(int bufferPtr, int bufferLength, const JsWriter
 EMSCRIPTEN_BINDINGS(ZXingWasm) {
 
 #if defined(READER)
-
-  value_object<ZXing::PointI>("Point").field("x", &ZXing::PointI::x).field("y", &ZXing::PointI::y);
-
-  value_object<ZXing::Position>("Position")
-    .field("topLeft", emscripten::index<0>())
-    .field("topRight", emscripten::index<1>())
-    .field("bottomRight", emscripten::index<2>())
-    .field("bottomLeft", emscripten::index<3>());
-
-  value_object<JsBarcode>("Barcode")
-    .field("isValid", &JsBarcode::isValid)
-    .field("error", &JsBarcode::error)
-    .field("format", &JsBarcode::format)
-    .field("bytes", &JsBarcode::bytes)
-    .field("bytesECI", &JsBarcode::bytesECI)
-    .field("text", &JsBarcode::text)
-    .field("ecLevel", &JsBarcode::ecLevel)
-    .field("contentType", &JsBarcode::contentType)
-    .field("hasECI", &JsBarcode::hasECI)
-    .field("position", &JsBarcode::position)
-    .field("orientation", &JsBarcode::orientation)
-    .field("isMirrored", &JsBarcode::isMirrored)
-    .field("isInverted", &JsBarcode::isInverted)
-    .field("symbologyIdentifier", &JsBarcode::symbologyIdentifier)
-    .field("sequenceSize", &JsBarcode::sequenceSize)
-    .field("sequenceIndex", &JsBarcode::sequenceIndex)
-    .field("sequenceId", &JsBarcode::sequenceId)
-    .field("isLastInSequence", &JsBarcode::isLastInSequence)
-    .field("isPartOfSequence", &JsBarcode::isPartOfSequence)
-    .field("readerInit", &JsBarcode::readerInit)
-    .field("lineCount", &JsBarcode::lineCount)
-    .field("version", &JsBarcode::version);
-
-  register_vector<JsBarcode>("Barcodes");
 
   value_object<JsReaderOptions>("ReaderOptions")
     .field("formats", &JsReaderOptions::formats)
@@ -296,6 +275,40 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("textMode", &JsReaderOptions::textMode)
     .field("characterSet", &JsReaderOptions::characterSet);
 
+  value_object<ZXing::PointI>("Point").field("x", &ZXing::PointI::x).field("y", &ZXing::PointI::y);
+
+  value_object<ZXing::Position>("Position")
+    .field("topLeft", emscripten::index<0>())
+    .field("topRight", emscripten::index<1>())
+    .field("bottomRight", emscripten::index<2>())
+    .field("bottomLeft", emscripten::index<3>());
+
+  value_object<JsReadResult>("ReadResult")
+    .field("isValid", &JsReadResult::isValid)
+    .field("error", &JsReadResult::error)
+    .field("format", &JsReadResult::format)
+    .field("bytes", &JsReadResult::bytes)
+    .field("bytesECI", &JsReadResult::bytesECI)
+    .field("text", &JsReadResult::text)
+    .field("ecLevel", &JsReadResult::ecLevel)
+    .field("contentType", &JsReadResult::contentType)
+    .field("hasECI", &JsReadResult::hasECI)
+    .field("position", &JsReadResult::position)
+    .field("orientation", &JsReadResult::orientation)
+    .field("isMirrored", &JsReadResult::isMirrored)
+    .field("isInverted", &JsReadResult::isInverted)
+    .field("symbologyIdentifier", &JsReadResult::symbologyIdentifier)
+    .field("sequenceSize", &JsReadResult::sequenceSize)
+    .field("sequenceIndex", &JsReadResult::sequenceIndex)
+    .field("sequenceId", &JsReadResult::sequenceId)
+    .field("isLastInSequence", &JsReadResult::isLastInSequence)
+    .field("isPartOfSequence", &JsReadResult::isPartOfSequence)
+    .field("readerInit", &JsReadResult::readerInit)
+    .field("lineCount", &JsReadResult::lineCount)
+    .field("version", &JsReadResult::version);
+
+  register_vector<JsReadResult>("ReadResults");
+
   function("readBarcodesFromImage", &readBarcodesFromImage);
   function("readBarcodesFromPixmap", &readBarcodesFromPixmap);
 
@@ -314,12 +327,14 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("withHRT", &JsWriterOptions::withHRT)
     .field("withQuietZones", &JsWriterOptions::withQuietZones);
 
-  function("writeBarcodeFromTextToSVG", &writeBarcodeFromTextToSVG);
-  function("writeBarcodeFromBytesToSVG", &writeBarcodeFromBytesToSVG);
-  function("writeBarcodeFromTextToUtf8", &writeBarcodeFromTextToUtf8);
-  function("writeBarcodeFromBytesToUtf8", &writeBarcodeFromBytesToUtf8);
-  function("writeBarcodeFromTextToImage", &writeBarcodeFromTextToImage);
-  function("writeBarcodeFromBytesToImage", &writeBarcodeFromBytesToImage);
+  value_object<JsWriteResult>("WriteResult")
+    .field("error", &JsWriteResult::error)
+    .field("svg", &JsWriteResult::svg)
+    .field("utf8", &JsWriteResult::utf8)
+    .field("image", &JsWriteResult::image);
+
+  function("writeBarcodeFromText", &writeBarcodeFromText);
+  function("writeBarcodeFromBytes", &writeBarcodeFromBytes);
 
 #endif
 };

@@ -1,4 +1,5 @@
-import type { WriteInputBarcodeFormat } from "./barcodeFormat.js";
+import { type WriteInputBarcodeFormat, encodeFormat } from "./barcodeFormat.js";
+import type { EcLevel } from "./ecLevel.js";
 
 /**
  * @internal
@@ -27,7 +28,7 @@ export interface ZXingWriterOptions {
    * @see {@link ReadResult.ecLevel | `ReadResult.ecLevel`}
    * @defaultValue `""`
    */
-  ecLevel: string;
+  ecLevel: EcLevel;
   /**
    * TODO: TBD
    *
@@ -51,7 +52,7 @@ export interface ZXingWriterOptions {
    *
    * @defaultValue `false`
    */
-  widthHRT: boolean;
+  withHRT: boolean;
   /**
    * TODO: TBD
    *
@@ -66,13 +67,12 @@ export interface ZXingWriterOptions {
 export interface WriterOptions
   extends Partial<Omit<ZXingWriterOptions, "format">> {
   /**
-   * TODO: TBD
    * The format of the barcode to write.
    *
    * Supported values are:
-   * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
-   * `"DataMatrix"`, `"EAN-13"`, `"EAN-8"`, `"ITF"`,
-   * `"PDF417"`, `"QRCode"`, `"UPC-A"`, `"UPC-E"`
+   * `"Aztec"`, `"Codabar"`, `"Code39"`, `"Code93"`, `"Code128"`,
+   * `"DataBarExpanded"`, `"DataMatrix"`, `"EAN8"`, `"EAN13"`, `"ITF"`,
+   * `"PDF417"`, `"QRCode"`, `"UPCA"`, `"UPCE"`, `"DataBarLimited"`
    *
    * @defaultValue `"QRCode"`
    */
@@ -87,7 +87,7 @@ export const defaultWriterOptions: Required<WriterOptions> = {
   scale: 0,
   sizeHint: 0,
   rotate: 0,
-  widthHRT: false,
+  withHRT: false,
   withQuietZones: true,
 };
 

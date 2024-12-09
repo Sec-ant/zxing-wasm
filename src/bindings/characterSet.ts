@@ -28,6 +28,10 @@ export const characterSets = [
   "EUC_JP",
   "EUC_KR",
   "UTF16BE",
+  /**
+   * UnicodeBig [[deprecated]]
+   */
+  "UTF16BE",
   "UTF8",
   "UTF16LE",
   "UTF32BE",
@@ -35,9 +39,19 @@ export const characterSets = [
   "BINARY",
 ] as const;
 
+/**
+ * @deprecated Use `"UTF16BE"` instead.
+ */
+type DeprecatedUnicodeBig = "UnicodeBig";
+
 export type CharacterSet = (typeof characterSets)[number];
 
-export function encodeCharacterSet(characterSet: CharacterSet): number {
+export function encodeCharacterSet(
+  characterSet: CharacterSet | DeprecatedUnicodeBig,
+): number {
+  if (characterSet === "UnicodeBig") {
+    return characterSets.indexOf("UTF16BE");
+  }
   return characterSets.indexOf(characterSet);
 }
 

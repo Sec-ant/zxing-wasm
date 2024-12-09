@@ -3,8 +3,7 @@ import {
   type ZXingModuleOverrides,
   type ZXingReaderModule,
   getZXingModuleWithFactory,
-  readBarcodesFromImageDataWithFactory,
-  readBarcodesFromImageFileWithFactory,
+  readBarcodesWithFactory,
   setZXingModuleOverridesWithFactory,
 } from "../core.js";
 import zxingModuleFactory from "./zxing_reader.js";
@@ -25,26 +24,11 @@ export function setZXingModuleOverrides(
   );
 }
 
-export async function readBarcodesFromImageFile(
-  imageFile: Blob,
+export async function readBarcodes(
+  input: Blob | ImageData,
   readerOptions?: ReaderOptions,
 ) {
-  return readBarcodesFromImageFileWithFactory(
-    zxingModuleFactory,
-    imageFile,
-    readerOptions,
-  );
-}
-
-export async function readBarcodesFromImageData(
-  imageData: ImageData,
-  readerOptions?: ReaderOptions,
-) {
-  return readBarcodesFromImageDataWithFactory(
-    zxingModuleFactory,
-    imageData,
-    readerOptions,
-  );
+  return readBarcodesWithFactory(zxingModuleFactory, input, readerOptions);
 }
 
 export * from "../bindings/exposedReaderBindings.js";

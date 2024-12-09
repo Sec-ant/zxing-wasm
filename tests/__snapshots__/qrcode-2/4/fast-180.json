@@ -5,7 +5,7 @@
   "bytes": "d403e96",
   "bytesECI": "e0e93aa",
   "text": "http://wwws.keihin.ktr.mlit.go.jp/keitai/",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,6 +33,8 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
+  "isLastInSequence": false,
+  "isPartOfSequence": false,
   "readerInit": false,
   "lineCount": 0,
   "version": "3"

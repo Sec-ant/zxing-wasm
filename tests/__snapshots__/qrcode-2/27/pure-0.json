@@ -5,7 +5,7 @@
   "bytes": "a62c278",
   "bytesECI": "7d14bb7",
   "text": "*ﾃﾞｻﾞｲﾝQR*   <CR><LF>http://d-qr.net/ex/ ",
-  "eccLevel": "H",
+  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,6 +33,8 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
+  "isLastInSequence": false,
+  "isPartOfSequence": false,
   "readerInit": false,
   "lineCount": 0,
   "version": "5"

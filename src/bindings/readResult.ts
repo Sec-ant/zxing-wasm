@@ -1,10 +1,6 @@
-import {
-  type ReadOutputBarcodeFormat,
-  formatFromString,
-} from "./barcodeFormat.js";
-import { type ContentType, zxingEnumToContentType } from "./contentType.js";
-import type { ReadOutputEccLevel } from "./eccLevel.js";
-import type { ZXingEnum } from "./enum.js";
+import { type ReadOutputBarcodeFormat, decodeFormat } from "./barcodeFormat.js";
+import { type ContentType, decodeContentType } from "./contentType.js";
+import type { EcLevel } from "./ecLevel.js";
 import type { Position, ZXingPosition } from "./position.js";
 
 /**
@@ -21,7 +17,10 @@ export interface ZXingReadResult {
    * @see {@link ReaderOptions.returnErrors | `ReaderOptions.returnErrors`}
    */
   error: string;
-  format: string;
+  /**
+   * @internal
+   */
+  format: number;
   /**
    * Raw / Standard content without any modifications like character set conversions.
    */
@@ -35,12 +34,21 @@ export interface ZXingReadResult {
    * accoring to specified {@link ReaderOptions.textMode | `ReaderOptions.textMode`}.
    */
   text: string;
-  eccLevel: string;
-  contentType: ZXingEnum;
+  /**
+   * Error correction level of the symbol (empty string if not applicable).
+   */
+  ecLevel: EcLevel;
+  /**
+   * @internal
+   */
+  contentType: number;
   /**
    * Whether or not an ECI tag was found.
    */
   hasECI: boolean;
+  /**
+   * @internal
+   */
   position: ZXingPosition;
   /**
    * Orientation of the barcode in degree.
@@ -81,6 +89,14 @@ export interface ZXingReadResult {
    */
   sequenceId: string;
   /**
+   * Whether this is the last symbol in a structured append sequence.
+   */
+  isLastInSequence: boolean;
+  /**
+   * Whether this is part of a structured append sequence.
+   */
+  isPartOfSequence: boolean;
+  /**
    * Set if this is the reader initialisation / programming symbol.
    */
   readerInit: boolean;
@@ -99,10 +115,7 @@ export interface ZXingReadResult {
 }
 
 export interface ReadResult
-  extends Omit<
-    ZXingReadResult,
-    "format" | "eccLevel" | "contentType" | "position"
-  > {
+  extends Omit<ZXingReadResult, "format" | "contentType" | "position"> {
   /**
    * Format of the barcode, should be one of {@link ReadOutputBarcodeFormat | `ReadOutputBarcodeFormat`}.
    *
@@ -114,12 +127,6 @@ export interface ReadResult
    * `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
    */
   format: ReadOutputBarcodeFormat;
-  /**
-   * Error correction level of the symbol (empty string if not applicable).
-   *
-   * This property may be renamed to `ecLevel` in the future.
-   */
-  eccLevel: ReadOutputEccLevel;
   /**
    * A hint to the type of the content found.
    */
@@ -135,8 +142,7 @@ export function zxingReadResultToReadResult(
 ): ReadResult {
   return {
     ...zxingReadResult,
-    format: formatFromString(zxingReadResult.format) as ReadOutputBarcodeFormat,
-    eccLevel: zxingReadResult.eccLevel as ReadOutputEccLevel,
-    contentType: zxingEnumToContentType(zxingReadResult.contentType),
+    format: decodeFormat(zxingReadResult.format),
+    contentType: decodeContentType(zxingReadResult.contentType),
   };
 }
