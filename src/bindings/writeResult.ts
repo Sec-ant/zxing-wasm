@@ -2,7 +2,9 @@
  * @internal
  */
 export interface ZXingWriteResult {
-  image: Uint8Array;
+  svg: string;
+  utf8: string;
+  image?: Uint8Array;
   /**
    * Encoding error.
    * If there's no error, this will be an empty string `""`.
@@ -10,11 +12,9 @@ export interface ZXingWriteResult {
    * @see {@link WriteResult.error | `WriteResult.error`}
    */
   error: string;
-  delete: () => void;
 }
 
-export interface WriteResult
-  extends Omit<ZXingWriteResult, "image" | "delete"> {
+export interface WriteResult extends Omit<ZXingWriteResult, "image"> {
   /**
    * The encoded barcode as an image blob.
    * If some error happens, this will be `null`.
@@ -26,18 +26,14 @@ export interface WriteResult
 
 export function zxingWriteResultToWriteResult(
   zxingWriteResult: ZXingWriteResult,
-): WriteResult {
-  const { image, error } = zxingWriteResult;
-  if (image) {
-    return {
-      image: new Blob([new Uint8Array(image)], {
-        type: "image/png",
-      }),
-      error: "",
-    };
-  }
+) {
   return {
-    image: null,
-    error: error,
+    ...zxingWriteResult,
+    image:
+      (zxingWriteResult.image &&
+        new Blob([new Uint8Array(zxingWriteResult.image)], {
+          type: "image/png",
+        })) ??
+      null,
   };
 }

@@ -11,7 +11,7 @@ import {
   type ZXingWriterModule,
   getZXingModuleWithFactory,
   setZXingModuleOverridesWithFactory,
-  writeBarcodeToImageFileWithFactory,
+  writeBarcodeWithFactory,
 } from "../core.js";
 import zxingModuleFactory from "./zxing_writer.js";
 
@@ -31,15 +31,11 @@ export function setZXingModuleOverrides(
   );
 }
 
-export async function writeBarcodeToImageFile(
-  text: string,
+export async function writeBarcode(
+  input: string | Uint8Array,
   writerOptions?: WriterOptions,
 ) {
-  return writeBarcodeToImageFileWithFactory(
-    zxingModuleFactory,
-    text,
-    writerOptions,
-  );
+  return writeBarcodeWithFactory(zxingModuleFactory, input, writerOptions);
 }
 
 export * from "../bindings/exposedWriterBindings.js";

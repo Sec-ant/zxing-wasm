@@ -1,22 +1,17 @@
-import type { ZXingModule } from "../core.js";
-import {
-  type ReadInputBarcodeFormat,
-  formatsToString,
-} from "./barcodeFormat.js";
-import { type Binarizer, binarizerToZXingEnum } from "./binarizer.js";
-import { type CharacterSet, characterSetToZXingEnum } from "./characterSet.js";
-import {
-  type EanAddOnSymbol,
-  eanAddOnSymbolToZXingEnum,
-} from "./eanAddOnSymbol.js";
-import type { ZXingEnum } from "./enum.js";
-import { type TextMode, textModeToZXingEnum } from "./textMode.js";
+import { type ReadInputBarcodeFormat, encodeFormats } from "./barcodeFormat.js";
+import { type Binarizer, encodeBinarizer } from "./binarizer.js";
+import { type CharacterSet, encodeCharacterSet } from "./characterSet.js";
+import { type EanAddOnSymbol, encodeEanAddOnSymbol } from "./eanAddOnSymbol.js";
+import { type TextMode, encodeTextMode } from "./textMode.js";
 
 /**
  * @internal
  */
 export interface ZXingReaderOptions {
-  formats: string;
+  /**
+   * @internal
+   */
+  formats: number;
   /**
    * Spend more time to try to find a barcode. Optimize for accuracy, not speed.
    *
@@ -42,7 +37,17 @@ export interface ZXingReaderOptions {
    * @see {@link downscaleFactor | `downscaleFactor`} {@link downscaleThreshold | `downscaleThreshold`}
    */
   tryDownscale: boolean;
-  binarizer: ZXingEnum;
+  /**
+   * Try detecting code after denoising (currently morphological closing filter for 2D symbologies only)
+   *
+   * @experimental
+   * @defaultValue `false`
+   */
+  tryDenoise: boolean;
+  /**
+   * @internal
+   */
+  binarizer: number;
   /**
    * Set to `true` if the input contains nothing but a single perfectly aligned barcode (usually generated images).
    *
@@ -83,39 +88,27 @@ export interface ZXingReaderOptions {
   /**
    * If `true`, the Code-39 reader will try to read extended mode.
    *
-   * @defaultValue `false`
+   * @defaultValue `true`
    */
   tryCode39ExtendedMode: boolean;
-  /**
-   * Assume Code-39 codes employ a check digit and validate it.
-   *
-   * @defaultValue `false`
-   * @deprecated upstream
-   */
-  validateCode39CheckSum: boolean;
-  /**
-   * Assume ITF codes employ a GS1 check digit and validate it.
-   *
-   * @defaultValue `false`
-   * @deprecated upstream
-   */
-  validateITFCheckSum: boolean;
-  /**
-   * If `true`, return the start and end chars in a Codabar barcode instead of stripping them.
-   *
-   * @defaultValue `false`
-   * @deprecated upstream
-   */
-  returnCodabarStartEnd: boolean;
   /**
    * If `true`, return the barcodes with errors as well (e.g. checksum errors).
    *
    * @defaultValue `false`
    */
   returnErrors: boolean;
-  eanAddOnSymbol: ZXingEnum;
-  textMode: ZXingEnum;
-  characterSet: ZXingEnum;
+  /**
+   * @internal
+   */
+  eanAddOnSymbol: number;
+  /**
+   * @internal
+   */
+  textMode: number;
+  /**
+   * @internal
+   */
+  characterSet: number;
 }
 
 /**
@@ -148,7 +141,7 @@ export interface ReaderOptions
    *
    * - `"LocalAverage"`
    *
-   *   T = average of neighboring pixels for matrix and GlobalHistogram for linear
+   *   T = average of neighboring pixels for matrix and GlobalHistogram for linear (HybridBinarizer)
    *
    * - `"GlobalHistogram"`
    *
@@ -180,7 +173,7 @@ export interface ReaderOptions
    *
    *   Require EAN-2 / EAN-5 Add-On symbol to be present
    *
-   * @defaultValue `"Read"`
+   * @defaultValue `"Ignore"`
    */
   eanAddOnSymbol?: EanAddOnSymbol;
   /**
@@ -206,7 +199,7 @@ export interface ReaderOptions
    *
    *   Escape non-graphical characters in angle brackets (e.g. ASCII `29` will be transcoded to `"<GS>"`)
    *
-   * @defaultValue `"Plain"`
+   * @defaultValue `"HRI"`
    */
   textMode?: TextMode;
   /**
@@ -224,38 +217,29 @@ export const defaultReaderOptions: Required<ReaderOptions> = {
   tryRotate: true,
   tryInvert: true,
   tryDownscale: true,
+  tryDenoise: false,
   binarizer: "LocalAverage",
   isPure: false,
   downscaleFactor: 3,
   downscaleThreshold: 500,
   minLineCount: 2,
   maxNumberOfSymbols: 255,
-  tryCode39ExtendedMode: false,
-  validateCode39CheckSum: false,
-  validateITFCheckSum: false,
-  returnCodabarStartEnd: false,
+  tryCode39ExtendedMode: true,
   returnErrors: false,
-  eanAddOnSymbol: "Read",
-  textMode: "Plain",
+  eanAddOnSymbol: "Ignore",
+  textMode: "HRI",
   characterSet: "Unknown",
 };
 
-export function readerOptionsToZXingReaderOptions<T extends "reader" | "full">(
-  zxingModule: ZXingModule<T>,
+export function readerOptionsToZXingReaderOptions(
   readerOptions: Required<ReaderOptions>,
 ): ZXingReaderOptions {
   return {
     ...readerOptions,
-    formats: formatsToString(readerOptions.formats),
-    binarizer: binarizerToZXingEnum(zxingModule, readerOptions.binarizer),
-    eanAddOnSymbol: eanAddOnSymbolToZXingEnum(
-      zxingModule,
-      readerOptions.eanAddOnSymbol,
-    ),
-    textMode: textModeToZXingEnum(zxingModule, readerOptions.textMode),
-    characterSet: characterSetToZXingEnum(
-      zxingModule,
-      readerOptions.characterSet,
-    ),
+    formats: encodeFormats(readerOptions.formats),
+    binarizer: encodeBinarizer(readerOptions.binarizer),
+    eanAddOnSymbol: encodeEanAddOnSymbol(readerOptions.eanAddOnSymbol),
+    textMode: encodeTextMode(readerOptions.textMode),
+    characterSet: encodeCharacterSet(readerOptions.characterSet),
   };
 }

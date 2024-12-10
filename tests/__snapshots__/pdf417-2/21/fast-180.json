@@ -5,7 +5,7 @@
   "bytes": "8e37a35",
   "bytesECI": "5a779f6",
   "text": "A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.",
-  "eccLevel": "9%",
+  "ecLevel": "9%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,6 +33,8 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
+  "isLastInSequence": false,
+  "isPartOfSequence": false,
   "readerInit": false,
   "lineCount": 0,
   "version": ""

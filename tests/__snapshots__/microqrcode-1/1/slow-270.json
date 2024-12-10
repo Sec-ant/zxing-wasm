@@ -5,7 +5,7 @@
   "bytes": "d38b38a",
   "bytesECI": "571c384",
   "text": "Wikipedia",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,6 +33,8 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
+  "isLastInSequence": false,
+  "isPartOfSequence": false,
   "readerInit": false,
   "lineCount": 0,
   "version": "3"

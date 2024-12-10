@@ -5,7 +5,7 @@
   "bytes": "35a6729",
   "bytesECI": "568f1b1",
   "text": "A PDF 417 barcode with ASCII text",
-  "eccLevel": "14%",
+  "ecLevel": "14%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,6 +33,8 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
+  "isLastInSequence": false,
+  "isPartOfSequence": false,
   "readerInit": false,
   "lineCount": 0,
   "version": ""

@@ -1,18 +1,28 @@
 import {
-  readBarcodesFromImageFile,
-  writeBarcodeToImageFile,
+  type ReaderOptions,
+  type WriterOptions,
+  readBarcodes,
+  writeBarcode,
 } from "./src/full/index";
 
-// import { readBarcodesFromImageFile } from "./src/reader/index";
+const imageFile = await fetch(
+  "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hello%20world!",
+).then((resp) => resp.blob());
 
-// import { writeBarcodeToImageFile } from "./src/writer/index";
+const readerOptions: ReaderOptions = {
+  tryHarder: true,
+  formats: ["QRCode"],
+  maxNumberOfSymbols: 1,
+};
 
-const text = "Hello World!";
-const barcodeImage = (await writeBarcodeToImageFile(text)).image;
-if (barcodeImage) {
-  const readResults = await readBarcodesFromImageFile(barcodeImage, {
-    formats: ["QRCode"],
-  });
-  console.log(readResults);
-  console.log(readResults[0].text === text);
-}
+const imageFileReadResults = await readBarcodes(imageFile, readerOptions);
+
+console.log(imageFileReadResults); // Hello world!
+
+const writerOptions: WriterOptions = {
+  format: "Aztec",
+  scale: 3,
+  withQuietZones: true,
+};
+
+console.log(await writeBarcode("Hello world!", writerOptions));
