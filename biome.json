@@ -27,6 +27,16 @@
   },
   "overrides": [
     {
+      "include": ["imageData.d.ts"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noBannedTypes": "off"
+          }
+        }
+      }
+    },
+    {
       "include": ["*.json"],
       "json": {
         "parser": {

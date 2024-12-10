@@ -5,7 +5,7 @@
   "bytes": "94ee059",
   "bytesECI": "cf1f592",
   "text": "TEST",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {

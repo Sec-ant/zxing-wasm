@@ -1,6 +1,3 @@
-import type { ZXingModule } from "../core.js";
-import type { ZXingEnum } from "./enum.js";
-
 export const binarizers = [
   "LocalAverage",
   "GlobalHistogram",
@@ -10,18 +7,10 @@ export const binarizers = [
 
 export type Binarizer = (typeof binarizers)[number];
 
-/**
- * @internal
- */
-export type ZXingBinarizer = Record<Binarizer, ZXingEnum>;
-
-export function binarizerToZXingEnum<T extends "reader" | "full">(
-  zxingModule: ZXingModule<T>,
-  binarizer: Binarizer,
-): ZXingEnum {
-  return zxingModule.Binarizer[binarizer];
+export function encodeBinarizer(binarizer: Binarizer): number {
+  return binarizers.indexOf(binarizer);
 }
 
-export function zxingEnumToBinarizer(zxingEnum: ZXingEnum): Binarizer {
-  return binarizers[zxingEnum.value];
+export function decodeBinaraizer(number: number): Binarizer {
+  return binarizers[number];
 }

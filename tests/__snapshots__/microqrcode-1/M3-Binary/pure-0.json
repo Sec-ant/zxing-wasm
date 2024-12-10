@@ -5,7 +5,7 @@
   "bytes": "03b680e",
   "bytesECI": "6d45656",
   "text": "E=mc²",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {

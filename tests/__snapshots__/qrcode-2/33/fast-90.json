@@ -5,7 +5,7 @@
   "bytes": "80d9a1c",
   "bytesECI": "9f79998",
   "text": "<SOH><DLE>AD:SUB:阿;;",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Mixed",
   "hasECI": false,
   "position": {

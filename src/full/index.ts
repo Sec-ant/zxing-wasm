@@ -3,10 +3,9 @@ import {
   type ZXingFullModule,
   type ZXingModuleOverrides,
   getZXingModuleWithFactory,
-  readBarcodesFromImageDataWithFactory,
-  readBarcodesFromImageFileWithFactory,
+  readBarcodesWithFactory,
   setZXingModuleOverridesWithFactory,
-  writeBarcodeToImageFileWithFactory,
+  writeBarcodeWithFactory,
 } from "../core.js";
 import zxingModuleFactory from "./zxing_full.js";
 
@@ -26,37 +25,38 @@ export function setZXingModuleOverrides(
   );
 }
 
+export async function readBarcodes(
+  input: Blob | ImageData,
+  readerOptions?: ReaderOptions,
+) {
+  return readBarcodesWithFactory(zxingModuleFactory, input, readerOptions);
+}
+
+/**
+ * @deprecated Use {@link readBarcodes} instead.
+ */
 export async function readBarcodesFromImageFile(
   imageFile: Blob,
   readerOptions?: ReaderOptions,
 ) {
-  return readBarcodesFromImageFileWithFactory(
-    zxingModuleFactory,
-    imageFile,
-    readerOptions,
-  );
+  return readBarcodes(imageFile, readerOptions);
 }
 
+/**
+ * @deprecated Use {@link readBarcodes} instead.
+ */
 export async function readBarcodesFromImageData(
   imageData: ImageData,
   readerOptions?: ReaderOptions,
 ) {
-  return readBarcodesFromImageDataWithFactory(
-    zxingModuleFactory,
-    imageData,
-    readerOptions,
-  );
+  return readBarcodes(imageData, readerOptions);
 }
 
-export async function writeBarcodeToImageFile(
-  text: string,
+export async function writeBarcode(
+  input: string | Uint8Array,
   writerOptions?: WriterOptions,
 ) {
-  return writeBarcodeToImageFileWithFactory(
-    zxingModuleFactory,
-    text,
-    writerOptions,
-  );
+  return writeBarcodeWithFactory(zxingModuleFactory, input, writerOptions);
 }
 
 export * from "../bindings/exposedReaderBindings.js";

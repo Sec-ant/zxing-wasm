@@ -5,7 +5,7 @@
   "bytes": "19280d8",
   "bytesECI": "c022dec",
   "text": "Micro QR Code",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
