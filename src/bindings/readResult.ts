@@ -77,7 +77,7 @@ export interface ZXingReadResult {
    */
   sequenceSize: number;
   /**
-   * The 0-based index of this symbol in a structured append sequence.
+   * The `0`-based index of this symbol in a structured append sequence.
    */
   sequenceIndex: number;
   /**
@@ -93,7 +93,7 @@ export interface ZXingReadResult {
    */
   readerInit: boolean;
   /**
-   * Number of lines have been detected with this code (applies only to linear symbologies).
+   * Number of lines that have been detected with this code (applies only to linear symbologies).
    */
   lineCount: number;
   /**
@@ -106,17 +106,20 @@ export interface ZXingReadResult {
   version: string;
 }
 
+/**
+ * Result of reading a barcode.
+ */
 export interface ReadResult
   extends Omit<ZXingReadResult, "format" | "contentType" | "position"> {
   /**
    * Format of the barcode, should be one of {@link ReadOutputBarcodeFormat | `ReadOutputBarcodeFormat`}.
    *
    * Possible values are:
-   * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
+   * `"Aztec"`, `"Codabar"`, `"Code39"`, `"Code93"`, `"Code128"`,
    * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`, `"DXFilmEdge"`,
-   * `"EAN-13"`, `"EAN-8"`, `"ITF"`,
-   * `"MaxiCode"`, `"MicroQRCode"`, `"None"`,
-   * `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
+   * `"EAN-8"`, `"EAN-13"`, `"ITF"`, `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`,
+   * `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`,
+   * `"None"`
    */
   format: ReadOutputBarcodeFormat;
   /**

@@ -38,7 +38,7 @@ export interface ZXingReaderOptions {
    */
   tryDownscale: boolean;
   /**
-   * Try detecting code after denoising (currently morphological closing filter for 2D symbologies only)
+   * Try detecting code after denoising (currently morphological closing filter for 2D symbologies only).
    *
    * @experimental
    * @defaultValue `false`
@@ -55,7 +55,8 @@ export interface ZXingReaderOptions {
    */
   isPure: boolean;
   /**
-   * Image size ( min(width, height) ) threshold at which to start downscaled scanning
+   * Image size `min(width, height)` threshold at which to start downscaled scanning.
+   *
    * **WARNING**: this API is experimental and may change / disappear
    *
    * @experimental
@@ -65,6 +66,7 @@ export interface ZXingReaderOptions {
   downscaleThreshold: number;
   /**
    * Scale factor to use during downscaling, meaningful values are `2`, `3` and `4`.
+   *
    * **WARNING**: this API is experimental and may change / disappear
    *
    * @experimental
@@ -86,7 +88,7 @@ export interface ZXingReaderOptions {
    */
   maxNumberOfSymbols: number;
   /**
-   * If `true`, the Code-39 reader will try to read extended mode.
+   * Enable the heuristic to detect and decode "full ASCII" / extended Code39 symbols.
    *
    * @defaultValue `true`
    */
@@ -95,6 +97,7 @@ export interface ZXingReaderOptions {
    * If `true`, return the barcodes with errors as well (e.g. checksum errors).
    *
    * @defaultValue `false`
+   * @see {@link ReadResult.error | `ReadResult.error`}
    */
   returnErrors: boolean;
   /**
@@ -126,10 +129,11 @@ export interface ReaderOptions
    * An empty list `[]` indicates all supported formats.
    *
    * Supported values in this list are:
-   * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
+   * `"Aztec"`, `"Codabar"`, `"Code39"`, `"Code93"`, `"Code128"`,
    * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`, `"DXFilmEdge"`,
-   * `"EAN-13"`, `"EAN-8"`, `"ITF"`, `"Linear-Codes"`, `"Matrix-Codes"`,
-   * `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
+   * `"EAN-8"`, `"EAN-13"`, `"ITF"`, `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`,
+   * `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`,
+   * `"Linear-Codes"`, `"Matrix-Codes"`, `Any`
    *
    * @defaultValue `[]`
    */

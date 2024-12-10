@@ -31,6 +31,26 @@ export async function readBarcodes(
   return readBarcodesWithFactory(zxingModuleFactory, input, readerOptions);
 }
 
+/**
+ * @deprecated Use {@link readBarcodes} instead.
+ */
+export async function readBarcodesFromImageFile(
+  imageFile: Blob,
+  readerOptions?: ReaderOptions,
+) {
+  return readBarcodes(imageFile, readerOptions);
+}
+
+/**
+ * @deprecated Use {@link readBarcodes} instead.
+ */
+export async function readBarcodesFromImageData(
+  imageData: ImageData,
+  readerOptions?: ReaderOptions,
+) {
+  return readBarcodes(imageData, readerOptions);
+}
+
 export * from "../bindings/exposedReaderBindings.js";
 export {
   purgeZXingModule,
