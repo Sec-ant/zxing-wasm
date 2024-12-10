@@ -66,8 +66,6 @@ struct JsReadResult {
   int sequenceSize;
   int sequenceIndex;
   std::string sequenceId;
-  bool isLastInSequence;
-  bool isPartOfSequence;
   bool readerInit;
   int lineCount;
   std::string version;
@@ -125,8 +123,6 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
          .sequenceSize = barcode.sequenceSize(),
          .sequenceIndex = barcode.sequenceIndex(),
          .sequenceId = barcode.sequenceId(),
-         .isLastInSequence = barcode.isLastInSequence(),
-         .isPartOfSequence = barcode.isPartOfSequence(),
          .readerInit = barcode.readerInit(),
          .lineCount = barcode.lineCount(),
          .version = barcode.version()}
@@ -301,8 +297,6 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("sequenceSize", &JsReadResult::sequenceSize)
     .field("sequenceIndex", &JsReadResult::sequenceIndex)
     .field("sequenceId", &JsReadResult::sequenceId)
-    .field("isLastInSequence", &JsReadResult::isLastInSequence)
-    .field("isPartOfSequence", &JsReadResult::isPartOfSequence)
     .field("readerInit", &JsReadResult::readerInit)
     .field("lineCount", &JsReadResult::lineCount)
     .field("version", &JsReadResult::version);

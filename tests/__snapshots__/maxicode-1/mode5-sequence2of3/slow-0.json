@@ -33,8 +33,6 @@
   "sequenceSize": 3,
   "sequenceIndex": 1,
   "sequenceId": "",
-  "isLastInSequence": false,
-  "isPartOfSequence": true,
   "readerInit": false,
   "lineCount": 0,
   "version": ""

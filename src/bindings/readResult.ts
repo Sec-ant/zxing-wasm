@@ -89,14 +89,6 @@ export interface ZXingReadResult {
    */
   sequenceId: string;
   /**
-   * Whether this is the last symbol in a structured append sequence.
-   */
-  isLastInSequence: boolean;
-  /**
-   * Whether this is part of a structured append sequence.
-   */
-  isPartOfSequence: boolean;
-  /**
    * Set if this is the reader initialisation / programming symbol.
    */
   readerInit: boolean;
