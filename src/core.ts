@@ -116,6 +116,19 @@ export interface PrepareZXingModuleOptions {
   fireImmediately?: boolean;
 }
 
+export function shallow(a: ZXingModuleOverrides, b: ZXingModuleOverrides) {
+  return (
+    Object.is(a, b) ||
+    (Object.keys(a).length === Object.keys(b).length &&
+      Object.keys(a).every(
+        (key) =>
+          Object.prototype.hasOwnProperty.call(b, key) &&
+          a[key as keyof ZXingModuleOverrides] ===
+            b[key as keyof ZXingModuleOverrides],
+      ))
+  );
+}
+
 export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
   options?: Merge<PrepareZXingModuleOptions, { fireImmediately?: false }>,
@@ -135,7 +148,7 @@ export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
   {
     overrides,
-    equalityFn = Object.is,
+    equalityFn = shallow,
     fireImmediately = false,
   }: PrepareZXingModuleOptions = {},
 ) {

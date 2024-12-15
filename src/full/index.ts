@@ -114,3 +114,4 @@ export {
   type ZXingFullModule,
   type ZXingModuleOverrides,
 } from "../core.js";
+export const ZXING_WASM_SHA256 = FULL_HASH;

@@ -92,3 +92,4 @@ export {
   type ZXingWriterModule,
   type ZXingModuleOverrides,
 } from "../core.js";
+export const ZXING_WASM_SHA256 = WRITER_HASH;
