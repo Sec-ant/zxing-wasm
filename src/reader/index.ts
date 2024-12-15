@@ -105,3 +105,4 @@ export {
   type ZXingReaderModule,
   type ZXingModuleOverrides,
 } from "../core.js";
+export const ZXING_WASM_SHA256 = READER_HASH;
