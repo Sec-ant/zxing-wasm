@@ -33,7 +33,7 @@ runs:
         EMSCRIPTEN_DIR="$(dirname $(which emcc))"
 
         # First, check if the patch is already applied
-        if patch -R -p1 -s -f --dry-run -d "$EMSCRIPTEN_DIR" < "$PATCH_FILE"; then
+        if patch -R -p1 -s -f --dry-run -d "$EMSCRIPTEN_DIR" < "$PATCH_FILE" > /dev/null 2>&1; then
           echo "Patch already applied, skipping..."
         else
           # Try to apply the patch
