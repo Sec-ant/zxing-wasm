@@ -34,7 +34,7 @@ index 9e8b30392..2a4ea8178 100644
  
  #if ENVIRONMENT_MAY_BE_NODE
 diff --git a/tools/link.py b/tools/link.py
-index 4444f4e06..25b4a4917 100644
+index 76b6e521b..367c36de5 100644
 --- a/tools/link.py
 +++ b/tools/link.py
 @@ -2445,7 +2445,7 @@ export default async function init(moduleArg = {}) {
@@ -43,6 +43,6 @@ index 4444f4e06..25b4a4917 100644
      else:
 -      script_url = "typeof document != 'undefined' ? document.currentScript?.src : undefined"
 +      script_url = "(typeof document != 'undefined' && document.currentScript?.tagName.toUpperCase() === 'SCRIPT') ? document.currentScript.src : undefined"
-       if settings.ENVIRONMENT_MAY_BE_NODE:
+       if shared.target_environment_may_be('node'):
          script_url_node = "if (typeof __filename != 'undefined') _scriptName = _scriptName || __filename;"
      if settings.MODULARIZE == 'instance':
