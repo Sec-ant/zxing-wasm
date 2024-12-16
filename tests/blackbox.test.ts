@@ -11,7 +11,7 @@ import {
 } from "vitest";
 import {
   type ReaderOptions,
-  getZXingModule,
+  prepareZXingModule,
   readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";
@@ -72,12 +72,15 @@ test("consistent test entries", async () => {
   expect(testDirs).toEqual(testEntries.map(({ directory }) => directory));
 });
 
-await getZXingModule({
-  wasmBinary: (
-    await readFile(
-      resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
-    )
-  ).buffer as ArrayBuffer,
+await prepareZXingModule({
+  overrides: {
+    wasmBinary: (
+      await readFile(
+        resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
+      )
+    ).buffer as ArrayBuffer,
+  },
+  fireImmediately: true,
 });
 
 for (const {
