@@ -108,14 +108,34 @@ type CachedValue<T extends ZXingModuleType = ZXingModuleType> =
 const __CACHE__ = new WeakMap<ZXingModuleFactory, CachedValue>();
 
 export interface PrepareZXingModuleOptions {
+  /**
+   * The Emscripten module overrides to be passed to the factory function.
+   * The `locateFile` function is overridden by default to load the WASM file from the jsDelivr CDN.
+   */
   overrides?: ZXingModuleOverrides;
+  /**
+   * A function to compare the cached overrides with the input overrides.
+   * So that the module promise can be reused if the overrides are the same.
+   * Defaults to a shallow equality function.
+   */
   equalityFn?: (
     cachedOverrides: ZXingModuleOverrides,
     overrides: ZXingModuleOverrides,
   ) => boolean;
+  /**
+   * Whether to instantiate the module immediately.
+   * If `true`, the module is eagerly instantiated and a promise of the module is returned.
+   * If `false`, only the overrides are updated and module instantiation is deferred
+   * to the first read/write operation.
+   *
+   * @default false
+   */
   fireImmediately?: boolean;
 }
 
+/**
+ * A shallow equality function to compare two objects.
+ */
 export function shallow(a: ZXingModuleOverrides, b: ZXingModuleOverrides) {
   return (
     Object.is(a, b) ||

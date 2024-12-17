@@ -11,15 +11,19 @@
 ```bash
 git clone --recurse-submodules https://github.com/Sec-ant/zxing-wasm
 cd zxing-wasm
-# Install pnpm first:
+
+# Install pnpm before executing the next command:
 # https://pnpm.io/installation
 pnpm i --frozen-lockfile
-# Install CMake first:
+
+# Install CMake before executing the next command:
 # https://cmake.org/download/
 pnpm cmake
-# Install Emscripten first:
+
+# Install Emscripten before executing the next command:
 # https://emscripten.org/docs/getting_started/downloads.html
 pnpm build:wasm
+
 pnpm build
 ```
 
@@ -75,7 +79,10 @@ import { writeBarcode } from "zxing-wasm/writer";
 
 ### IIFE Scripts
 
-Apart from ES and CJS modules, this package also ships IIFE scripts. The registered global variable is named `ZXingWASM`.
+Apart from ES and CJS modules, this package also ships IIFE scripts. The registered global variable is named `ZXingWASM`, where you can access all the exported functions and variables under it.
+
+> [!NOTE]
+> Replace the `<version>` with the desired version number.
 
 ```html
 <!-- full -->
@@ -90,7 +97,7 @@ Apart from ES and CJS modules, this package also ships IIFE scripts. The registe
 
 ### [`readBarcodes`](https://zxing-wasm.deno.dev/functions/full.readBarcodes.html)
 
-[`readBarcodes`](https://zxing-wasm.deno.dev/functions/full.readBarcodes.html) accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob), image [`File`](https://developer.mozilla.org/docs/Web/API/File), or an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as its first argument, and various [`ReaderOptions`](https://zxing-wasm.deno.dev/interfaces/full.ReaderOptions.html) can be set in its optional second argument.
+[`readBarcodes`](https://zxing-wasm.deno.dev/functions/full.readBarcodes.html) accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob), image [`File`](https://developer.mozilla.org/docs/Web/API/File), or an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as its first argument, and various options are supported in [`ReaderOptions`](https://zxing-wasm.deno.dev/interfaces/full.ReaderOptions.html) as an optional second argument.
 
 The return result of this function is a `Promise` of an array of [`ReadResult`](https://zxing-wasm.deno.dev/interfaces/full.ReadResult.html)s.
 
@@ -135,7 +142,7 @@ console.log(imageDataReadResults[0].text); // Hello world!
 
 ### [`writeBarcode`](https://zxing-wasm.deno.dev/functions/full.writeBarcode.html)
 
-The first argument of [`writeBarcode`](https://zxing-wasm.deno.dev/functions/full.writeBarcode.html) is a text string or a [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes to be encoded, and the optional second argument accepts various [`WriterOptions`](https://zxing-wasm.deno.dev/interfaces/full.WriterOptions.html).
+The first argument of [`writeBarcode`](https://zxing-wasm.deno.dev/functions/full.writeBarcode.html) is a text string or an [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes to be encoded, and the optional second argument [`WriterOptions`](https://zxing-wasm.deno.dev/interfaces/full.WriterOptions.html) accepts several writer options.
 
 The return result of this function is a `Promise` of a [`WriteResult`](https://zxing-wasm.deno.dev/interfaces/full.WriteResult.html).
 
@@ -152,28 +159,30 @@ const writerOptions: WriterOptions = {
 const writeOutput = await writeBarcode("Hello world!", writerOptions);
 
 console.log(writeOutput.svg); // An SVG string.
-console.log(writeOutput.utf8); // A string made up of " ", "▀", "▄", "█" characters.
+console.log(writeOutput.utf8); // A multi-line string made up of " ", "▀", "▄", "█" characters.
 console.log(writeOutput.image); // A PNG image blob.
 ```
 
-## Notes
+## About `.wasm` serving
 
-When using this package, the `.wasm` binary needs to be served along with the JS glue code. In order to provide a smooth development experience, the serve path is automatically assigned the [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) URL upon build.
+When using this package, a `.wasm` binary file needs to be served somewhere so the runtime can fetch, compile and instantiate the WASM module. In order to provide a smooth development experience, the serve path is automatically assigned a [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) url upon build.
 
-If you would like to change the serve path (to one of your local network hosts, other CDNs, or just Base64-encoded data URIs), please use [`setZXingModuleOverrides`](https://zxing-wasm.deno.dev/functions/full.setZXingModuleOverrides.html) to override the [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function in advance. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
+If you want to change the serve path to your own server, other CDNs, or just inlined base64-encoded data URIs, please use [`prepareZXingModule`](https://zxing-wasm.deno.dev/functions/full.prepareZXingModule.html) and pass an `overrides` object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
 
 e.g.
 
 ```ts
-import { setZXingModuleOverrides, writeBarcode } from "zxing-wasm";
+import { prepareZXingModule, writeBarcode } from "zxing-wasm";
 
 // Override the locateFile function
-setZXingModuleOverrides({
-  locateFile: (path, prefix) => {
-    if (path.endsWith(".wasm")) {
-      return `https://unpkg.com/zxing-wasm@2/dist/full/${path}`;
-    }
-    return prefix + path;
+prepareZXingModule({
+  overrides: {
+    locateFile: (path, prefix) => {
+      if (path.endsWith(".wasm")) {
+        return `https://unpkg.com/zxing-wasm@2/dist/full/${path}`;
+      }
+      return prefix + path;
+    },
   },
 });
 
@@ -182,19 +191,68 @@ const writeOutput = await writeBarcode("Hello world!");
 ```
 
 > [!NOTE]
-> Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using.
 >
-> For convenience, this library provides an exported `VERSION` variable to easily determine the version of `zxing-wasm` you are using:
->
-> ```ts
-> import { VERSION } from "zxing-wasm";
-> ```
->
-> In addition to finding the `.wasm` files by searching in your `node_modules` folder, the `.wasm` files can also be downloaded from CDNs like [jsDelivr](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/dist/):
->
-> - **`zxing_full.wasm`**: `https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/full/zxing_full.wasm`
-> - **`zxing_reader.wasm`**: `https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/reader/zxing_reader.wasm`
-> - **`zxing_writer.wasm`**: `https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/writer/zxing_writer.wasm`
+> Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, please ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using.
+
+For convenience, this library provides an exported `ZXING_WASM_VERSION` variable to easily determine the resolved version of the `zxing-wasm` you are using:
+
+```ts
+import { ZXING_WASM_VERSION } from "zxing-wasm";
+```
+
+The SHA-256 hash of the `.wasm` file (in hex format) is also exported as `ZXING_WASM_SHA256`, in case you want to make sure you are serving the exactly same file:
+
+```ts
+import { ZXING_WASM_SHA256 } from "zxing-wasm";
+```
+
+To acquire the `.wasm` files for customized serving, in addition to finding them by searching in your `node_modules` folder, they can also be downloaded from CDNs like [jsDelivr](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/dist/):
+
+- **`zxing_full.wasm`**:
+
+  ```
+  https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/full/zxing_full.wasm
+  ```
+
+- **`zxing_reader.wasm`**:
+
+  ```
+  https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/reader/zxing_reader.wasm
+  ```
+
+- **`zxing_writer.wasm`**:
+
+  ```
+  https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/writer/zxing_writer.wasm
+  ```
+
+If you want to use this library in a local runtime (node, bun, deno, etc., instead of web) without servers, there're several different ways depending on the runtime APIs and the build tools you may be using, for example:
+
+```ts
+import { readFile } from "node:fs/promises";
+
+await prepareZXingModule({
+  overrides: {
+    wasmBinary: (await readFile("/path/to/the/zxing_reader.wasm"))
+      .buffer as ArrayBuffer,
+  },
+});
+```
+
+```ts
+import wasmUrl from "./path/to/the/zxing_reader.wasm?url";
+
+await prepareZXingModule({
+  locateFile: (path, prefix) => {
+    if (path.endsWith(".wasm")) {
+      return wasmUrl;
+    }
+    return prefix + path;
+  },
+});
+```
+
+## About `.wasm` instantiating
 
 The wasm binary won't be fetched or instantiated unless a [read](#readbarcodes) or [write](#writebarcode) function is first called, and will only be instantiated once given the same ([`Object.is`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/is)) [ZXingModuleOverrides](https://zxing-wasm.deno.dev/types/full.ZXingModuleOverrides.html). If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use [`getZXingModule`](https://zxing-wasm.deno.dev/functions/full.getZXingModule). This function will also return a `Promise` that resolves to a [`ZXingModule`](https://zxing-wasm.deno.dev/types/full.ZXingModule).
 
