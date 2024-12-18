@@ -5,7 +5,7 @@
   "bytes": "49cc0cc",
   "bytesECI": "f9eb980",
   "text": "MECARD:N:測試;;",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": "L"
 }

@@ -5,7 +5,7 @@
   "bytes": "e967788",
   "bytesECI": "ca6e3d9",
   "text": "Data Matrix Code",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "27"
+  "version": "27",
+  "eccLevel": ""
 }

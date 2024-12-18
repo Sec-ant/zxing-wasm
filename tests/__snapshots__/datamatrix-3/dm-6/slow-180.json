@@ -5,7 +5,7 @@
   "bytes": "7bd3421",
   "bytesECI": "313b12e",
   "text": "[)><RS>DD<GS>CAG 34JR1<GS>PNO 2SJL00506-0001<GS>SEQ 0001<RS><EOT>",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Binary",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "10"
+  "version": "10",
+  "eccLevel": ""
 }

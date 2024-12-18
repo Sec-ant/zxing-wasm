@@ -5,7 +5,7 @@
   "bytes": "a33ea4d",
   "bytesECI": "85d6c6e",
   "text": "01900123456789083922795888888888888888888888888888888888888888888888888888",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "GS1",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 1,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

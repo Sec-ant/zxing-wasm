@@ -5,7 +5,7 @@
   "bytes": "3fd035d",
   "bytesECI": "23d0585",
   "text": "-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  "eccLevel": "23%",
+  "ecLevel": "23%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": ""
+  "version": "",
+  "eccLevel": "23%"
 }

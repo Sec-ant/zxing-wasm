@@ -5,7 +5,7 @@
   "bytes": "849592e",
   "bytesECI": "d1a3f29",
   "text": "Ceci est un tag.",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": ""
 }
