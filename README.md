@@ -194,7 +194,7 @@ const writeOutput = await writeBarcode("Hello world!");
 >
 > Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, please ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using.
 
-For convenience, this library provides an exported `ZXING_WASM_VERSION` variable to easily determine the resolved version of the `zxing-wasm` you are using:
+For convenience, this library provides an exported `ZXING_WASM_VERSION` variable to indicate the resolved version of the `zxing-wasm` you are using:
 
 ```ts
 import { ZXING_WASM_VERSION } from "zxing-wasm";
@@ -230,24 +230,12 @@ If you want to use this library in a local runtime (node, bun, deno, etc., inste
 
 ```ts
 import { readFile } from "node:fs/promises";
+import { prepareZXingModule } from "zxing-wasm/reader";
 
-await prepareZXingModule({
+prepareZXingModule({
   overrides: {
     wasmBinary: (await readFile("/path/to/the/zxing_reader.wasm"))
       .buffer as ArrayBuffer,
-  },
-});
-```
-
-```ts
-import wasmUrl from "./path/to/the/zxing_reader.wasm?url";
-
-await prepareZXingModule({
-  locateFile: (path, prefix) => {
-    if (path.endsWith(".wasm")) {
-      return wasmUrl;
-    }
-    return prefix + path;
   },
 });
 ```
