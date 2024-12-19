@@ -5,7 +5,7 @@
   "bytes": "057ada5",
   "bytesECI": "5c4c6da",
   "text": "[)><RS>01<GS>96123450000<GS>222<GS>111<GS>MODE5",
-  "eccLevel": "2",
+  "ecLevel": "2",
   "contentType": "ISO15434",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": ""
+  "version": "",
+  "eccLevel": "2"
 }

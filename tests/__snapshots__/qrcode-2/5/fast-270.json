@@ -5,7 +5,7 @@
   "bytes": "bafb41c",
   "bytesECI": "da1c081",
   "text": "2021200000",
-  "eccLevel": "Q",
+  "ecLevel": "Q",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "1"
+  "version": "1",
+  "eccLevel": "Q"
 }

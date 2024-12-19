@@ -27,10 +27,37 @@
   },
   "overrides": [
     {
-      "include": ["*.json"],
-      "json": {
-        "parser": {
-          "allowTrailingCommas": true
+      "include": [
+        "core.ts",
+        "full/index.ts",
+        "reader/index.ts",
+        "writer/index.ts"
+      ],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConfusingVoidType": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["tests/**/*.ts"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noDelete": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["imageData.d.ts"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noBannedTypes": "off"
+          }
         }
       }
     },

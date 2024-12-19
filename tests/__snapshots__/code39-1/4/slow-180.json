@@ -5,7 +5,7 @@
   "bytes": "e0bebd2",
   "bytesECI": "db76ab2",
   "text": "ABC123",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

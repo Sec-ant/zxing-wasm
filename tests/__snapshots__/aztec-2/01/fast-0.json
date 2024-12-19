@@ -5,7 +5,7 @@
   "bytes": "55ed3ad",
   "bytesECI": "d5af4fa",
   "text": "This is a real world Aztec barcode test.",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": ""
 }

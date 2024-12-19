@@ -5,7 +5,7 @@
   "bytes": "279d99e",
   "bytesECI": "1743e6c",
   "text": "JGBA025999L9X9                      00000000511791018010019F087B23E32DB887",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "10"
+  "version": "10",
+  "eccLevel": ""
 }

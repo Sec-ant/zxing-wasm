@@ -5,46 +5,91 @@
  * @packageDocumentation
  */
 
+import type { Merge } from "type-fest";
 import type { WriterOptions } from "../bindings/index.js";
 import {
+  type PrepareZXingModuleOptions,
   type ZXingModuleOverrides,
   type ZXingWriterModule,
-  getZXingModuleWithFactory,
-  setZXingModuleOverridesWithFactory,
-  writeBarcodeToImageFileWithFactory,
+  prepareZXingModuleWithFactory,
+  purgeZXingModuleWithFactory,
+  writeBarcodeWithFactory,
 } from "../core.js";
 import zxingModuleFactory from "./zxing_writer.js";
 
-export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
-  return getZXingModuleWithFactory(
-    zxingModuleFactory,
-    zxingModuleOverrides,
-  ) as Promise<ZXingWriterModule>;
+export function prepareZXingModule(
+  options?: Merge<PrepareZXingModuleOptions, { fireImmediately?: false }>,
+): void;
+
+export function prepareZXingModule(
+  options: Merge<PrepareZXingModuleOptions, { fireImmediately: true }>,
+): Promise<ZXingWriterModule>;
+
+export function prepareZXingModule(
+  options?: PrepareZXingModuleOptions,
+): void | Promise<ZXingWriterModule>;
+
+export function prepareZXingModule(options?: PrepareZXingModuleOptions) {
+  return prepareZXingModuleWithFactory(zxingModuleFactory, options);
 }
 
+export function purgeZXingModule() {
+  return purgeZXingModuleWithFactory(zxingModuleFactory);
+}
+
+/**
+ * @deprecated Use {@link prepareZXingModule | `prepareZXingModule`} instead.
+ * This function is equivalent to the following:
+ *
+ * ```ts
+ * prepareZXingModule({
+ *   overrides: zxingModuleOverrides,
+ *   equalityFn: Object.is,
+ *   fireImmediately: true,
+ * });
+ */
+export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
+  return prepareZXingModule({
+    overrides: zxingModuleOverrides,
+    equalityFn: Object.is,
+    fireImmediately: true,
+  });
+}
+
+/**
+ * @deprecated Use {@link prepareZXingModule | `prepareZXingModule`} instead.
+ * This function is equivalent to the following:
+ *
+ * ```ts
+ * prepareZXingModule({
+ *   overrides: zxingModuleOverrides,
+ *   equalityFn: Object.is,
+ *   fireImmediately: false,
+ * });
+ * ```
+ */
 export function setZXingModuleOverrides(
   zxingModuleOverrides: ZXingModuleOverrides,
 ) {
-  return setZXingModuleOverridesWithFactory(
-    zxingModuleFactory,
-    zxingModuleOverrides,
-  );
+  prepareZXingModule({
+    overrides: zxingModuleOverrides,
+    equalityFn: Object.is,
+    fireImmediately: false,
+  });
 }
 
-export async function writeBarcodeToImageFile(
-  text: string,
+export async function writeBarcode(
+  input: string | Uint8Array,
   writerOptions?: WriterOptions,
 ) {
-  return writeBarcodeToImageFileWithFactory(
-    zxingModuleFactory,
-    text,
-    writerOptions,
-  );
+  return writeBarcodeWithFactory(zxingModuleFactory, input, writerOptions);
 }
 
 export * from "../bindings/exposedWriterBindings.js";
 export {
-  purgeZXingModule,
+  ZXING_WASM_VERSION,
+  type PrepareZXingModuleOptions,
   type ZXingWriterModule,
   type ZXingModuleOverrides,
 } from "../core.js";
+export const ZXING_WASM_SHA256 = WRITER_HASH;

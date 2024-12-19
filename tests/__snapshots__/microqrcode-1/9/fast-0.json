@@ -5,7 +5,7 @@
   "bytes": "04798bc",
   "bytesECI": "74915e9",
   "text": "ezik",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": "M"
 }

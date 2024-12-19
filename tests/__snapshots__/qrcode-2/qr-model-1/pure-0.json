@@ -5,7 +5,7 @@
   "bytes": "61c45c1",
   "bytesECI": "26cea35",
   "text": "QR Code Model 1 ",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": "M"
 }

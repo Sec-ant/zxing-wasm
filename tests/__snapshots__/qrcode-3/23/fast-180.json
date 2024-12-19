@@ -5,7 +5,7 @@
   "bytes": "65a30ce",
   "bytesECI": "f4ac7b3",
   "text": "UI office hours signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>",
-  "eccLevel": "Q",
+  "ecLevel": "Q",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "7"
+  "version": "7",
+  "eccLevel": "Q"
 }

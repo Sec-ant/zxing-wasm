@@ -5,7 +5,7 @@
   "bytes": "8e7bb60",
   "bytesECI": "c694d75",
   "text": "http://live.fdgm.jp/u/event/hype/hype_top.html <CR><LF><CR><LF>MEBKM:TITLE:hypeモバイル;URL:http\\://live.fdgm.jp/u/event/hype/hype_top.html;;",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "6"
+  "version": "6",
+  "eccLevel": "L"
 }

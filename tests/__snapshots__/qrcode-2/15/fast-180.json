@@ -5,7 +5,7 @@
   "bytes": "97d8ce7",
   "bytesECI": "eaeec64",
   "text": "In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "6"
+  "version": "6",
+  "eccLevel": "M"
 }
