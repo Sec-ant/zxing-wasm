@@ -163,11 +163,13 @@ console.log(writeOutput.utf8); // A multi-line string made up of " ", "▀", "�
 console.log(writeOutput.image); // A PNG image blob.
 ```
 
-## About `.wasm` serving
+## Configuring `.wasm` File Serving
+
+### Serving via Web or CDN
 
 When using this package, a `.wasm` binary file needs to be served somewhere so the runtime can fetch, compile and instantiate the WASM module. In order to provide a smooth development experience, the serve path is automatically assigned a [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) url upon build.
 
-If you want to change the serve path to your own server, other CDNs, or just inlined base64-encoded data URIs, please use [`prepareZXingModule`](https://zxing-wasm.deno.dev/functions/full.prepareZXingModule.html) and pass an `overrides` object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
+If you want to change the serve path to your own server or other CDNs, please use [`prepareZXingModule`](https://zxing-wasm.deno.dev/functions/full.prepareZXingModule.html) and pass an `overrides` object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
 
 e.g.
 
@@ -189,6 +191,101 @@ prepareZXingModule({
 // Call read or write functions afterward
 const writeOutput = await writeBarcode("Hello world!");
 ```
+
+### Integrating in Non-Web Runtimes
+
+If you want to use this library in non-web runtimes (such as Node.js, Bun, Deno, etc.) without setting up a server, there are several possible approaches. Because API support can differ between runtime environments and versions, you may need to adapt these examples or choose alternative methods depending on your specific runtime’s capabilities. Below are some example configurations for Node.js.
+
+- **Use the [`Module.instantiateWasm`](https://emscripten.org/docs/api_reference/module.html#Module.instantiateWasm) API**
+
+  ```ts
+  import { readFileSync } from "node:fs";
+  import { prepareZXingModule } from "zxing-wasm/reader";
+
+  const wasmFileBuffer = readFileSync("/path/to/the/zxing_reader.wasm");
+
+  prepareZXingModule({
+    overrides: {
+      instantiateWasm(imports, successCallback) {
+        WebAssembly.instantiate(wasmFileBuffer, imports).then(({ instance }) =>
+          successCallback(instance),
+        );
+        return {};
+      },
+    },
+  });
+  ```
+
+- **Use the [`Module.wasmBinary`](https://emscripten.org/docs/compiling/WebAssembly.html?highlight=wasmBinary#wasm-files-and-compilation) API**
+
+  ```ts
+  import { readFileSync } from "node:fs";
+  import { prepareZXingModule } from "zxing-wasm/reader";
+
+  prepareZXingModule({
+    overrides: {
+      wasmBinary: readFileSync("/path/to/the/zxing_reader.wasm")
+        .buffer as ArrayBuffer,
+    },
+  });
+  ```
+
+- **Use the [`Module.locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) API with an Object URL**
+
+  ```ts
+  import { readFileSync } from "node:fs";
+  import { prepareZXingModule } from "zxing-wasm/reader";
+
+  // Create an Object URL for the .wasm file.
+  const wasmFileUrl = URL.createObjectURL(
+    new Blob([readFileSync("/path/to/the/zxing_reader.wasm")], {
+      type: "application/wasm",
+    }),
+  );
+
+  prepareZXingModule({
+    overrides: {
+      locateFile: (path, prefix) => {
+        if (path.endsWith(".wasm")) {
+          return wasmFileUrl;
+        }
+        return prefix + path;
+      },
+      // Call `URL.revokeObjectURL(wasmFileUrl)` after the ZXing module
+      // is fully instantiated to free up memory.
+      postRun: [
+        () => {
+          URL.revokeObjectURL(wasmFileUrl);
+        },
+      ],
+    },
+  });
+  ```
+
+- **Use the [`Module.locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) API with a Base64-encoded Data URL** _(Not recommended)_
+
+  ```ts
+  import { readFileSync } from "node:fs";
+  import { prepareZXingModule } from "zxing-wasm/reader";
+
+  const wasmBase64 = readFileSync("/path/to/the/zxing_reader.wasm").toString(
+    "base64",
+  );
+  const wasmUrl = `data:application/wasm;base64,${wasmBase64}`;
+
+  prepareZXingModule({
+    overrides: {
+      locateFile: (path, prefix) => {
+        if (path.endsWith(".wasm")) {
+          return `data:application/wasm;base64,${readFileSync(
+            "/path/to/the/zxing_reader.wasm",
+          ).toString("base64")}`;
+        }
+        return prefix + path;
+      },
+    },
+  });
+  ```
 
 > [!NOTE]
 >
@@ -226,23 +323,9 @@ To acquire the `.wasm` files for customized serving, in addition to finding them
   https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/writer/zxing_writer.wasm
   ```
 
-If you want to use this library in a local runtime (node, bun, deno, etc., instead of web) without servers, there're several different ways depending on the runtime APIs and the build tools you may be using, for example:
+<!-- ## About `.wasm` instantiating
 
-```ts
-import { readFile } from "node:fs/promises";
-import { prepareZXingModule } from "zxing-wasm/reader";
-
-prepareZXingModule({
-  overrides: {
-    wasmBinary: (await readFile("/path/to/the/zxing_reader.wasm"))
-      .buffer as ArrayBuffer,
-  },
-});
-```
-
-## About `.wasm` instantiating
-
-The wasm binary won't be fetched or instantiated unless a [read](#readbarcodes) or [write](#writebarcode) function is first called, and will only be instantiated once given the same ([`Object.is`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/is)) [ZXingModuleOverrides](https://zxing-wasm.deno.dev/types/full.ZXingModuleOverrides.html). If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can use [`getZXingModule`](https://zxing-wasm.deno.dev/functions/full.getZXingModule). This function will also return a `Promise` that resolves to a [`ZXingModule`](https://zxing-wasm.deno.dev/types/full.ZXingModule).
+The wasm binary won't be fetched or instantiated unless a [read](#readbarcodes) or [write](#writebarcode) function is first called, and will only be instantiated once given the same [ZXingModuleOverrides](https://zxing-wasm.deno.dev/types/full.ZXingModuleOverrides.html) determined by a shallow comparison. If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can set [`fireImmediately`](https://zxing-wasm.deno.dev/functions/full.) to `true` in . This will also make `prepareZXingWasm` to return a `Promise` that resolves to a [`ZXingModule`](https://zxing-wasm.deno.dev/types/full.ZXingModule).
 
 ```ts
 import { getZXingModule } from "zxing-wasm";
@@ -271,7 +354,7 @@ getZXingModule({
     return prefix + path;
   },
 });
-```
+``` -->
 
 ## License
 
