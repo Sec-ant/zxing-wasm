@@ -5,7 +5,7 @@
   "bytes": "0d23f65",
   "bytesECI": "d814ee2",
   "text": "This is PDF417",
-  "eccLevel": "36%",
+  "ecLevel": "36%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": ""
+  "version": "",
+  "eccLevel": "36%"
 }

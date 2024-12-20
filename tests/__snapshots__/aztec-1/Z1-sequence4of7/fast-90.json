@@ -5,7 +5,7 @@
   "bytes": "ceaa28b",
   "bytesECI": "999a12a",
   "text": "3456",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "Z1.txt",
   "readerInit": false,
   "lineCount": 0,
-  "version": "1"
+  "version": "1",
+  "eccLevel": ""
 }

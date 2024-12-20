@@ -5,7 +5,7 @@
   "bytes": "974af0b",
   "bytesECI": "c6bd63b",
   "text": "A larger PDF417 barcode with text and error correction level 4.",
-  "eccLevel": "46%",
+  "ecLevel": "46%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": ""
+  "version": "",
+  "eccLevel": "46%"
 }

@@ -8,19 +8,21 @@ zxing_add_package_stb()
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 20)
+
 # Disable examples
-option(ZXING_EXAMPLES "Build the example barcode reader/writer applications" OFF)
+set(ZXING_EXAMPLES OFF)
+
 # Build options
-option(ZXING_READERS "Build with reader support (decoders)" ON)
-set(ZXING_WRITERS "OLD" CACHE STRING "Build with old and/or new writer (encoder) backend (OFF/ON/OLD/NEW/BOTH)")
+set(ZXING_READERS ON)
+set(ZXING_WRITERS "NEW")
+set(ZXING_EXPERIMENTAL_API ON)
+set(ZXING_USE_BUNDLED_ZINT ON)
 
 # Build environment
-set(ZXING_EMSCRIPTEN_ENVIRONMENT "web,worker" CACHE STRING "Optimize build for given emscripten runtime environment (web/node/shell/worker)")
+set(ZXING_EMSCRIPTEN_ENVIRONMENT "web,worker")
 
 # Default build type
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
-endif()
+set(CMAKE_BUILD_TYPE "Release")
 
 # Set compiler flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
@@ -48,7 +50,7 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../zxing-cpp/core ${CMAKE_BINARY_DIR}/ZXing)
 
 # Build targets
-if(ZXING_READERS AND ZXING_WRITERS)
+if(ZXING_READERS AND (ZXING_WRITERS MATCHES "NEW"))
   add_executable(zxing_full ZXingWasm.cpp)
   target_compile_definitions(zxing_full PRIVATE READER WRITER)
   target_link_libraries(zxing_full ZXing::ZXing stb::stb)
@@ -64,7 +66,7 @@ if(ZXING_READERS)
                         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../reader")
 endif()
 
-if(ZXING_WRITERS)
+if(ZXING_WRITERS MATCHES "NEW")
   add_executable(zxing_writer ZXingWasm.cpp)
   target_compile_definitions(zxing_writer PRIVATE WRITER)
   target_link_libraries(zxing_writer ZXing::ZXing stb::stb)

@@ -5,7 +5,7 @@
   "bytes": "49f8f95",
   "bytesECI": "42b9de5",
   "text": "[)><RS>06<GS>25PLEIBMAQ7BBC448559AC<GS>S44AACC<RS><EOT>",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "ISO15434",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "32"
+  "version": "32",
+  "eccLevel": ""
 }

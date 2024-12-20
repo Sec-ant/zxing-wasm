@@ -5,7 +5,7 @@
   "bytes": "f68c5d5",
   "bytesECI": "646f52f",
   "text": "x<U+9C>Å<U+99>[<U+8F><U+9A>@<DC4><U+80>ß7ñ?LyÙ§<NAK><CAN>.j<U+82>lRu<U+8D>i·ÝTÛdû6<U+81>QI<DC1>Ì<U+80><U+8D>ûÇö<SI>ô<U+8F>u<U+80>Aí<ENQ><U+8A>g°ú\"ç<FF>3ß¹Ìå<U+8C>:÷ûM<U+88>¾S<U+96><EOT>q4Tô®¦ <SUB>y±<US>D«¡òyñp×WîÝÎMçÆy3þ8Z<?MÐ<U+98>z!a$å=Ðüy¾<U+98><¢Û<DC3>]×OýÛ¢Ë<U+89>ÖE<U+9D><ESC><U+84><U+9C>Y<U+94>R¶$<RS>-d®Y<U+90>ý$J<U+83>ôÅ<U+9D>O<GS>õ(<U+9D>´?Q<SYN>Ä¾<U+8B>5<GS>ço<BS>¹|ã!<BS>©ðÀå<SO>8ê©¢Àª¿q³Q·ä<U+85>2÷H<U+99>ùnÏèÛºnç<DLE>.<U+8A>¶<SI>dCÝ)#»<U+84>2GÍ¥<ETX><U+99>%i<U+94>)<RS><HT>û¶K2t©<DC1>¯<U+8C>IJ]«kwõ<U+81>ÝwÔ\\<DC4>M_<U+83>í(ö©;05ÃQKI4<U+8E>²<CAN>LãÐ'ÞÚQs©ðä`yá<BS><US><U+90><FS>Í¡¡ÿ<U+85><U+84>;<U+8A><CAN>]òlj<U+9A>6PÐ2S<BEL><U+91>O÷C<U+85>§w<EM>³<CR><DEL>ÐÅã¡A<U+8C>ÂÇ<U+99>§<U+8C>§¿t<EM><U+95>¾<HT>µ<U+80>©GZ<GS>_<U+87>ó<SI>Ù<NUL><U+81>±<U+84>ãeØ!`Ã¼nÄ<U+8D><RS><U+9C><U+9F>ÍD$å}Î8<U+97>^³F<SUB>R%<U+92>ýéÇë&H¼õÝ;<U+92>®ã0{<EOT>º.1ÕßS?X<SOH>±&$äoã8¤$Bâ;<US>r¨,I<U+98>P<ENQ>©çZ<NUL>ñ¼]<VT> <DC3>àï<SYN>¤lw¾<SOH><CAN>4ïÛ<FF><SOH><ACK>M¿v-h/<HT>0<VT>L<ESC>¾<STX>5<FF>[~<NUL>bV<U+8B>¬ø<SOH>niÙ§¨MVÇR¤<HT>×î_<U+85><U+8B><CR><EM><DEL>Í><U+94><LF>9R<SI>Ô<U+81><U+85><U+81>\\S&Ê<DC2>\\©ìÂ¹<U+86>Tv{<SYN>pR<EM><U+86><U+8C>»°õ£i<SYN>d¯hñÄ°ÛÛ®a|Èf]F<SUB><ETX><U+83>nKÔ¦Re)hEåu(Öº:î<SYN>WÏ3<VT>S\\sý)N<U+8E><VT>9<U+8C>k®?<CR>ÀÙ=<FS>Ä¬Ú¦/ÈÔ«<DC2>{é<NUL>ëU<ETB>ë:p<VT>3ª²Ì«ã¶Vdá<U+9A>»Ö<DEL>3À¸¶<SOH><U+90>yÞª<SOH>Ö5<CR>0õª£S×ì<DEL><US><GS>&¬J0+«<U+84>KRíº-Ü6<SUB><U+95>ÚPne<U+92>/Ë­¼É^<U+9A>[¹¬<ESC>p%ò[½<U+98><SUB>p¡P,<DC3>d<HT>gej>8<NAK>Ë,¡FÜü$%â'ñùn»<U+8D>YÊ<U+8F>ôqì%e<U+97>_´h6<SYN>»¥*úÿÑ<U+89><SI>yòïEöwÆOZ<NAK>+<U+88>",
-  "eccLevel": "4%",
+  "ecLevel": "4%",
   "contentType": "Binary",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "099046122105112",
   "readerInit": false,
   "lineCount": 0,
-  "version": ""
+  "version": "",
+  "eccLevel": "4%"
 }

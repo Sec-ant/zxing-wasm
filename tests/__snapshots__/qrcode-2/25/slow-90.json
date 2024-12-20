@@ -5,7 +5,7 @@
   "bytes": "6664752",
   "bytesECI": "566f517",
   "text": "MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;",
-  "eccLevel": "H",
+  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "8"
+  "version": "8",
+  "eccLevel": "H"
 }

@@ -5,7 +5,7 @@
   "bytes": "b06bb6b",
   "bytesECI": "1f97010",
   "text": "今度のバージョンでは文章の暗号化ができます。",
-  "eccLevel": "M",
+  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": "M"
 }

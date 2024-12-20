@@ -1,4 +1,9 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
+/// <reference types="vite/client" />
+
+import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import babel from "vite-plugin-babel";
 import { version } from "./package.json";
@@ -19,7 +24,7 @@ export default defineConfig({
     outDir: "dist/es",
     rollupOptions: {
       output: {
-        chunkFileNames: "[name]-[hash].js",
+        chunkFileNames: "[name].js",
         manualChunks: (id) => {
           if (
             /core\.ts|exposedReaderBindings\.ts|exposedWriterBindings\.ts/.test(
@@ -44,6 +49,39 @@ export default defineConfig({
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(version),
     "import.meta.vitest": "undefined",
+    READER_HASH: JSON.stringify(
+      createHash("sha256")
+        .update(
+          await readFile(
+            fileURLToPath(
+              new URL("./src/reader/zxing_reader.wasm", import.meta.url),
+            ),
+          ),
+        )
+        .digest("hex"),
+    ),
+    WRITER_HASH: JSON.stringify(
+      createHash("sha256")
+        .update(
+          await readFile(
+            fileURLToPath(
+              new URL("./src/writer/zxing_writer.wasm", import.meta.url),
+            ),
+          ),
+        )
+        .digest("hex"),
+    ),
+    FULL_HASH: JSON.stringify(
+      createHash("sha256")
+        .update(
+          await readFile(
+            fileURLToPath(
+              new URL("./src/full/zxing_full.wasm", import.meta.url),
+            ),
+          ),
+        )
+        .digest("hex"),
+    ),
   },
   test: {
     testTimeout: 10000,

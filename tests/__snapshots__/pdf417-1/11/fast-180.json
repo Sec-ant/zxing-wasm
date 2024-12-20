@@ -5,7 +5,7 @@
   "bytes": "11dfc1e",
   "bytesECI": "f0c7621",
   "text": "This is just a test.",
-  "eccLevel": "33%",
+  "ecLevel": "33%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": ""
+  "version": "",
+  "eccLevel": "33%"
 }

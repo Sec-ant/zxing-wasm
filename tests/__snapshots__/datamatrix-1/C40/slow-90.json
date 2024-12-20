@@ -5,7 +5,7 @@
   "bytes": "0cd79be",
   "bytesECI": "d78d2bc",
   "text": "Testing C40",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "5"
+  "version": "5",
+  "eccLevel": ""
 }
