@@ -6,5 +6,18 @@
     "./src/reader/index.ts",
     "./src/writer/index.ts"
   ],
-  "out": "docs"
+  "out": "docs",
+  "plugin": ["typedoc-plugin-replace-text"],
+  "replaceText": {
+    "replacements": [
+      {
+        "pattern": "^# zxing-wasm[\\s\\n]+",
+        "replace": ""
+      },
+      {
+        "pattern": "]\\(https:\\/\\/zxing-wasm\\.deno\\.dev\\/",
+        "replace": "](/"
+      }
+    ]
+  }
 }

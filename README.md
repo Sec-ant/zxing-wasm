@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![deploy status](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml/badge.svg)](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml)
 
-[ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES/CJS module with types. Read or write barcodes in various JS runtimes: Web, Node, Bun, and Deno.
+[ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES/CJS module with types. Read or write barcodes in various JS runtimes: Web, Node.js, Bun, and Deno.
 
 <!-- Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic functions. It works best on the latest Chromium browsers. -->
 
@@ -163,13 +163,13 @@ console.log(writeOutput.utf8); // A multi-line string made up of " ", "▀", "�
 console.log(writeOutput.image); // A PNG image blob.
 ```
 
-## Configuring `.wasm` File Serving
+## Configuring `.wasm` Serving
 
 ### Serving via Web or CDN
 
 When using this package, a `.wasm` binary file needs to be served somewhere so the runtime can fetch, compile and instantiate the WASM module. In order to provide a smooth development experience, the serve path is automatically assigned a [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) url upon build.
 
-If you want to change the serve path to your own server or other CDNs, please use [`prepareZXingModule`](https://zxing-wasm.deno.dev/functions/full.prepareZXingModule.html) and pass an `overrides` object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
+If you want to change the serve path to your own server or other CDNs, please use [`prepareZXingModule`](https://zxing-wasm.deno.dev/functions/full.prepareZXingModule.html) and pass an [`overrides`](http://localhost:4173/interfaces/full.PrepareZXingModuleOptions.html#overrides) object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
 
 e.g.
 
@@ -196,100 +196,100 @@ const writeOutput = await writeBarcode("Hello world!");
 
 If you want to use this library in non-web runtimes (such as Node.js, Bun, Deno, etc.) without setting up a server, there are several possible approaches. Because API support can differ between runtime environments and versions, you may need to adapt these examples or choose alternative methods depending on your specific runtime’s capabilities. Below are some example configurations for Node.js.
 
-- **Use the [`Module.instantiateWasm`](https://emscripten.org/docs/api_reference/module.html#Module.instantiateWasm) API**
+1. **Use the [`Module.instantiateWasm`](https://emscripten.org/docs/api_reference/module.html#Module.instantiateWasm) API**
 
-  ```ts
-  import { readFileSync } from "node:fs";
-  import { prepareZXingModule } from "zxing-wasm/reader";
+   ```ts
+   import { readFileSync } from "node:fs";
+   import { prepareZXingModule } from "zxing-wasm/reader";
 
-  const wasmFileBuffer = readFileSync("/path/to/the/zxing_reader.wasm");
+   const wasmFileBuffer = readFileSync("/path/to/the/zxing_reader.wasm");
 
-  prepareZXingModule({
-    overrides: {
-      instantiateWasm(imports, successCallback) {
-        WebAssembly.instantiate(wasmFileBuffer, imports).then(({ instance }) =>
-          successCallback(instance),
-        );
-        return {};
-      },
-    },
-  });
-  ```
+   prepareZXingModule({
+     overrides: {
+       instantiateWasm(imports, successCallback) {
+         WebAssembly.instantiate(wasmFileBuffer, imports).then(({ instance }) =>
+           successCallback(instance),
+         );
+         return {};
+       },
+     },
+   });
+   ```
 
-- **Use the [`Module.wasmBinary`](https://emscripten.org/docs/compiling/WebAssembly.html?highlight=wasmBinary#wasm-files-and-compilation) API**
+2. **Use the [`Module.wasmBinary`](https://emscripten.org/docs/compiling/WebAssembly.html?highlight=wasmBinary#wasm-files-and-compilation) API**
 
-  ```ts
-  import { readFileSync } from "node:fs";
-  import { prepareZXingModule } from "zxing-wasm/reader";
+   ```ts
+   import { readFileSync } from "node:fs";
+   import { prepareZXingModule } from "zxing-wasm/reader";
 
-  prepareZXingModule({
-    overrides: {
-      wasmBinary: readFileSync("/path/to/the/zxing_reader.wasm")
-        .buffer as ArrayBuffer,
-    },
-  });
-  ```
+   prepareZXingModule({
+     overrides: {
+       wasmBinary: readFileSync("/path/to/the/zxing_reader.wasm")
+         .buffer as ArrayBuffer,
+     },
+   });
+   ```
 
-- **Use the [`Module.locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) API with an Object URL**
+3. **Use the [`Module.locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) API with an Object URL**
 
-  ```ts
-  import { readFileSync } from "node:fs";
-  import { prepareZXingModule } from "zxing-wasm/reader";
+   ```ts
+   import { readFileSync } from "node:fs";
+   import { prepareZXingModule } from "zxing-wasm/reader";
 
-  // Create an Object URL for the .wasm file.
-  const wasmFileUrl = URL.createObjectURL(
-    new Blob([readFileSync("/path/to/the/zxing_reader.wasm")], {
-      type: "application/wasm",
-    }),
-  );
+   // Create an Object URL for the .wasm file.
+   const wasmFileUrl = URL.createObjectURL(
+     new Blob([readFileSync("/path/to/the/zxing_reader.wasm")], {
+       type: "application/wasm",
+     }),
+   );
 
-  prepareZXingModule({
-    overrides: {
-      locateFile: (path, prefix) => {
-        if (path.endsWith(".wasm")) {
-          return wasmFileUrl;
-        }
-        return prefix + path;
-      },
-      // Call `URL.revokeObjectURL(wasmFileUrl)` after the ZXing module
-      // is fully instantiated to free up memory.
-      postRun: [
-        () => {
-          URL.revokeObjectURL(wasmFileUrl);
-        },
-      ],
-    },
-  });
-  ```
+   prepareZXingModule({
+     overrides: {
+       locateFile: (path, prefix) => {
+         if (path.endsWith(".wasm")) {
+           return wasmFileUrl;
+         }
+         return prefix + path;
+       },
+       // Call `URL.revokeObjectURL(wasmFileUrl)` after the ZXing module
+       // is fully instantiated to free up memory.
+       postRun: [
+         () => {
+           URL.revokeObjectURL(wasmFileUrl);
+         },
+       ],
+     },
+   });
+   ```
 
-- **Use the [`Module.locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) API with a Base64-encoded Data URL** _(Not recommended)_
+4. **Use the [`Module.locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) API with a Base64-encoded Data URL** _(Not recommended)_
 
-  ```ts
-  import { readFileSync } from "node:fs";
-  import { prepareZXingModule } from "zxing-wasm/reader";
+   ```ts
+   import { readFileSync } from "node:fs";
+   import { prepareZXingModule } from "zxing-wasm/reader";
 
-  const wasmBase64 = readFileSync("/path/to/the/zxing_reader.wasm").toString(
-    "base64",
-  );
-  const wasmUrl = `data:application/wasm;base64,${wasmBase64}`;
+   const wasmBase64 = readFileSync("/path/to/the/zxing_reader.wasm").toString(
+     "base64",
+   );
+   const wasmUrl = `data:application/wasm;base64,${wasmBase64}`;
 
-  prepareZXingModule({
-    overrides: {
-      locateFile: (path, prefix) => {
-        if (path.endsWith(".wasm")) {
-          return `data:application/wasm;base64,${readFileSync(
-            "/path/to/the/zxing_reader.wasm",
-          ).toString("base64")}`;
-        }
-        return prefix + path;
-      },
-    },
-  });
-  ```
+   prepareZXingModule({
+     overrides: {
+       locateFile: (path, prefix) => {
+         if (path.endsWith(".wasm")) {
+           return `data:application/wasm;base64,${readFileSync(
+             "/path/to/the/zxing_reader.wasm",
+           ).toString("base64")}`;
+         }
+         return prefix + path;
+       },
+     },
+   });
+   ```
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, please ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using.
+> Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, please ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using. Otherwise you may encounter unexpected errors.
 
 For convenience, this library provides an exported `ZXING_WASM_VERSION` variable to indicate the resolved version of the `zxing-wasm` you are using:
 
@@ -323,38 +323,40 @@ To acquire the `.wasm` files for customized serving, in addition to finding them
   https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/writer/zxing_writer.wasm
   ```
 
-<!-- ## About `.wasm` instantiating
+## Controlling `.wasm` Instantiation Timing and Caching
 
-The wasm binary won't be fetched or instantiated unless a [read](#readbarcodes) or [write](#writebarcode) function is first called, and will only be instantiated once given the same [ZXingModuleOverrides](https://zxing-wasm.deno.dev/types/full.ZXingModuleOverrides.html) determined by a shallow comparison. If you want to manually trigger the download and instantiation of the wasm binary prior to any read or write functions, you can set [`fireImmediately`](https://zxing-wasm.deno.dev/functions/full.) to `true` in . This will also make `prepareZXingWasm` to return a `Promise` that resolves to a [`ZXingModule`](https://zxing-wasm.deno.dev/types/full.ZXingModule).
+By default, the `.wasm` binary will not be fetched and instantiated until a `readBarcodes` or `writeBarcode` function is called. This behavior avoids unnecessary network requests and instantiation overhead if you decide to override the default `.wasm` serving path or other settings before using the library. Calling `prepareZXingModule` with `overrides` alone does not change this default behavior:
 
 ```ts
-import { getZXingModule } from "zxing-wasm";
-
-/**
- * This function will trigger the download and
- * instantiation of the wasm binary immediately
- */
-const zxingModulePromise1 = getZXingModule();
-
-const zxingModulePromise2 = getZXingModule();
-
-console.log(zxingModulePromise1 === zxingModulePromise2); // true
+prepareZXingModule({
+  overrides: {
+    /* ... your desired overrides ... */
+  },
+}); // <-- returns void
 ```
 
-[`getZXingModule`](https://zxing-wasm.deno.dev/functions/full.getZXingModule) can also optionally accept a [`ZXingModuleOverrides`](https://zxing-wasm.deno.dev/types/full.ZXingModuleOverrides.html) argument.
+However, if you want to explicitly trigger the download and instantiation of the `.wasm` binary, you can set the [`fireImmediately`](https://zxing-wasm.deno.dev/interfaces/full.PrepareZXingModuleOptions.html#fireimmediately) option to `true`. Doing so also causes `prepareZXingModule` to return a `Promise` that resolves to the underlying Emscripten module. This allows you to `await` the instantiation process:
 
 ```ts
-import { getZXingModule } from "zxing-wasm";
-
-getZXingModule({
-  locateFile: (path, prefix) => {
-    if (path.endsWith(".wasm")) {
-      return `https://unpkg.com/zxing-wasm@2/dist/full/${path}`;
-    }
-    return prefix + path;
+prepareZXingModule({
+  overrides: {
+    /* ... your desired overrides ... */
   },
+  fireImmediately: true,
+}); // <-- returns Promise<ZXingModule>
+```
+
+Because different `overrides` settings can influence how this library locates and instantiates the `.wasm` binary, the library performs an equality check on `overrides` to determine if the `.wasm` binary should be re-fetched and re-instantiated. By default, it is determined by a shallow comparison of the `overrides` object. If you prefer a different method of comparison, you can supply a custom [`equalityFn`](https://zxing-wasm.deno.dev/interfaces/full.PrepareZXingModuleOptions.html#equalityfn):
+
+```ts
+prepareZXingModule({
+  overrides: {
+    /* ... your desired overrides ... */
+  },
+  fireImmediately: true,
+  equalityFn: () => false, // <-- force re-fetch and re-instantiate
 });
-``` -->
+```
 
 ## License
 
