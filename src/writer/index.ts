@@ -29,10 +29,29 @@ export function prepareZXingModule(
   options?: PrepareZXingModuleOptions,
 ): void | Promise<ZXingWriterModule>;
 
+/**
+ * Prepares and initializes the ZXing barcode scanning module with optional configuration.
+ *
+ * @param options - Optional configuration settings for the ZXing module initialization
+ * @returns A promise that resolves with the initialized ZXing module instance
+ *
+ * @remarks
+ * This is a wrapper function that uses the default ZXing module factory.
+ * For custom factory implementations, use `prepareZXingModuleWithFactory` directly.
+ */
 export function prepareZXingModule(options?: PrepareZXingModuleOptions) {
   return prepareZXingModuleWithFactory(zxingModuleFactory, options);
 }
 
+/**
+ * Purges the ZXing module from memory using the default module factory.
+ *
+ * @remarks
+ * This is a wrapper function that calls purgeZXingModuleWithFactory with the default zxingModuleFactory.
+ * Use this function to clean up resources when the ZXing module is no longer needed.
+ *
+ * @returns A promise that resolves when the module has been successfully purged
+ */
 export function purgeZXingModule() {
   return purgeZXingModuleWithFactory(zxingModuleFactory);
 }
@@ -78,6 +97,15 @@ export function setZXingModuleOverrides(
   });
 }
 
+/**
+ * Generates a barcode image from the provided input data.
+ *
+ * @param input - The data to encode in the barcode. Can be either a string or a Uint8Array
+ * @param writerOptions - Optional configuration options for barcode generation
+ * @returns A Promise that resolves with the generated barcode
+ *
+ * @throws Will throw an error if the input data cannot be encoded or if barcode generation fails
+ */
 export async function writeBarcode(
   input: string | Uint8Array,
   writerOptions?: WriterOptions,

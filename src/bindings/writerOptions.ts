@@ -96,6 +96,12 @@ export const defaultWriterOptions: Required<WriterOptions> = {
   withQuietZones: true,
 };
 
+/**
+ * Converts WriterOptions to ZXingWriterOptions format.
+ *
+ * @param writerOptions - The required writer options to be converted
+ * @returns A ZXingWriterOptions object with the same properties as the input, but with encoded format
+ */
 export function writerOptionsToZXingWriterOptions(
   writerOptions: Required<WriterOptions>,
 ): ZXingWriterOptions {

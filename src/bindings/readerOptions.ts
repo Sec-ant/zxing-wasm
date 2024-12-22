@@ -235,6 +235,13 @@ export const defaultReaderOptions: Required<ReaderOptions> = {
   characterSet: "Unknown",
 };
 
+/**
+ * Converts ReaderOptions to ZXingReaderOptions format.
+ *
+ * @param readerOptions - The complete set of reader options to be converted
+ * @returns A ZXingReaderOptions object with encoded values for formats, binarizer,
+ *          EAN add-on symbol, text mode, and character set
+ */
 export function readerOptionsToZXingReaderOptions(
   readerOptions: Required<ReaderOptions>,
 ): ZXingReaderOptions {

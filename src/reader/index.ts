@@ -22,10 +22,29 @@ export function prepareZXingModule(
   options?: PrepareZXingModuleOptions,
 ): void | Promise<ZXingReaderModule>;
 
+/**
+ * Prepares and initializes the ZXing barcode scanning module with optional configuration.
+ *
+ * @param options - Optional configuration settings for the ZXing module initialization
+ * @returns A promise that resolves with the initialized ZXing module instance
+ *
+ * @remarks
+ * This is a wrapper function that uses the default ZXing module factory.
+ * For custom factory implementations, use `prepareZXingModuleWithFactory` directly.
+ */
 export function prepareZXingModule(options?: PrepareZXingModuleOptions) {
   return prepareZXingModuleWithFactory(zxingModuleFactory, options);
 }
 
+/**
+ * Purges the ZXing module from memory using the default module factory.
+ *
+ * @remarks
+ * This is a wrapper function that calls purgeZXingModuleWithFactory with the default zxingModuleFactory.
+ * Use this function to clean up resources when the ZXing module is no longer needed.
+ *
+ * @returns A promise that resolves when the module has been successfully purged
+ */
 export function purgeZXingModule() {
   return purgeZXingModuleWithFactory(zxingModuleFactory);
 }
@@ -71,6 +90,15 @@ export function setZXingModuleOverrides(
   });
 }
 
+/**
+ * Reads and decodes barcodes from an image source using ZXing library.
+ *
+ * @param input - The image source to scan for barcodes, either as a Blob or ImageData
+ * @param readerOptions - Optional configuration options for the barcode reader
+ * @returns A promise that resolves with the decoded barcode results
+ *
+ * @throws Will throw an error if the image cannot be processed or if the barcode detection fails
+ */
 export async function readBarcodes(
   input: Blob | ImageData,
   readerOptions?: ReaderOptions,

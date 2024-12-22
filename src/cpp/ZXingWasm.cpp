@@ -73,6 +73,43 @@ struct JsReadResult {
 
 using JsReadResults = std::vector<JsReadResult>;
 
+/**
+ * Reads and decodes barcodes from an image using ZXing library.
+ *
+ * @param imageView The image to scan for barcodes
+ * @param jsReaderOptions Configuration options for barcode reading including:
+ *        - formats: Barcode formats to search for
+ *        - tryHarder: Enable thorough but slower detection
+ *        - tryRotate: Try different image rotations
+ *        - tryInvert: Try inverted images
+ *        - tryDownscale: Enable image downscaling
+ *        - binarizer: Binarization method
+ *        - isPure: Optimize for pure barcodes
+ *        - downscaleThreshold: Threshold for downscaling
+ *        - downscaleFactor: Factor for downscaling
+ *        - minLineCount: Minimum number of lines
+ *        - maxNumberOfSymbols: Maximum symbols to detect
+ *        - tryCode39ExtendedMode: Enable Code 39 extended mode
+ *        - returnErrors: Include error information
+ *        - eanAddOnSymbol: EAN add-on symbol handling
+ *        - textMode: Text interpretation mode
+ *        - characterSet: Character encoding
+ *
+ * @return JsReadResults containing array of decoded barcodes with properties:
+ *         - isValid: Validity of detection
+ *         - error: Error message if any
+ *         - format: Detected barcode format
+ *         - bytes: Raw barcode data
+ *         - bytesECI: ECI encoded data
+ *         - text: Decoded text
+ *         - ecLevel: Error correction level
+ *         - contentType: Type of content
+ *         - position: Barcode position
+ *         - orientation: Barcode orientation
+ *         - other metadata (mirroring, inversion, symbology, etc.)
+ *
+ * @throws Returns error result if exception occurs during processing
+ */
 JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &jsReaderOptions) {
   try {
     auto barcodes = ZXing::ReadBarcodes(
@@ -136,6 +173,15 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
   }
 }
 
+/**
+ * Reads and decodes barcodes from an image buffer in memory.
+ * @param bufferPtr Pointer to the image buffer in memory
+ * @param bufferLength Length of the image buffer in bytes
+ * @param jsReaderOptions Configuration options for the barcode reader
+ * @return JsReadResults containing either decoded barcodes or an error message
+ * @throws None directly, but returns error in result structure if image loading fails
+ * @note Image is automatically converted to grayscale (single channel) during processing
+ */
 JsReadResults readBarcodesFromImage(int bufferPtr, int bufferLength, const JsReaderOptions &jsReaderOptions) {
   int width, height, channels;
   std::unique_ptr<stbi_uc, void (*)(void *)> buffer(
@@ -147,6 +193,14 @@ JsReadResults readBarcodesFromImage(int bufferPtr, int bufferLength, const JsRea
   return readBarcodes({buffer.get(), width, height, ZXing::ImageFormat::Lum}, jsReaderOptions);
 }
 
+/**
+ * Reads barcodes from a pixmap buffer using the specified reader options.
+ * @param bufferPtr Pointer to the RGBA pixel buffer containing the image data
+ * @param width Width of the image in pixels
+ * @param height Height of the image in pixels
+ * @param jsReaderOptions Configuration options for the barcode reader
+ * @return JsReadResults containing the detected barcodes and their metadata
+ */
 JsReadResults readBarcodesFromPixmap(int bufferPtr, int width, int height, const JsReaderOptions &jsReaderOptions) {
   return readBarcodes({reinterpret_cast<const uint8_t *>(bufferPtr), width, height, ZXing::ImageFormat::RGBA}, jsReaderOptions);
 }
@@ -171,6 +225,12 @@ struct JsWriterOptions {
 
 namespace {
 
+  /**
+   * Creates ZXing::CreatorOptions from JsWriterOptions.
+   * @param jsWriterOptions The JavaScript writer options to convert from
+   * @return ZXing::CreatorOptions configured with the provided format, reader initialization,
+   *         square data matrix settings, and error correction level
+   */
   ZXing::CreatorOptions createCreatorOptions(const JsWriterOptions &jsWriterOptions) {
     return ZXing::CreatorOptions(static_cast<ZXing::BarcodeFormat>(jsWriterOptions.format))
       .readerInit(jsWriterOptions.readerInit)
@@ -178,6 +238,11 @@ namespace {
       .ecLevel(jsWriterOptions.ecLevel);
   }
 
+  /**
+   * Creates ZXing writer options from JavaScript writer options.
+   * @param jsWriterOptions JavaScript writer options containing scale, size hint, rotation, HRT, and quiet zone settings
+   * @return ZXing::WriterOptions Configured writer options object with properties copied from JavaScript options
+   */
   ZXing::WriterOptions createWriterOptions(const JsWriterOptions &jsWriterOptions) {
     return ZXing::WriterOptions()
       .scale(jsWriterOptions.scale)
@@ -196,6 +261,18 @@ struct JsWriteResult {
   val image;
 };
 
+/**
+ * Generates barcode representations from input text in multiple formats.
+ * @param text The text to encode in the barcode
+ * @param jsWriterOptions Configuration options for barcode generation
+ * @return JsWriteResult containing:
+ *         - svg: SVG representation of the barcode
+ *         - utf8: UTF-8 text representation of the barcode
+ *         - image: PNG image as Uint8Array
+ *         - error: Error message if generation fails, empty otherwise
+ * @throws Exceptions are caught and returned as error messages in the result
+ * @note Thread-safe except for first call which initializes thread_local storage
+ */
 JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWriterOptions) {
   try {
     auto barcode = ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions));
@@ -220,6 +297,23 @@ JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWr
   }
 }
 
+/**
+ * Creates barcode representations from raw bytes in multiple formats.
+ * 
+ * @param bufferPtr Pointer to the buffer containing barcode data
+ * @param bufferLength Length of the buffer in bytes
+ * @param jsWriterOptions Configuration options for barcode generation
+ * 
+ * @return JsWriteResult containing:
+ *         - svg: SVG representation of the barcode
+ *         - utf8: UTF-8 text representation of the barcode
+ *         - image: PNG image as Uint8Array
+ *         - error: Error message if generation fails, empty otherwise
+ * 
+ * @throws Exceptions are caught and converted to error messages in the result
+ * 
+ * @note Thread-safe: Uses thread_local storage for Uint8Array reference
+ */
 JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
   try {
     auto barcode = ZXing::CreateBarcodeFromBytes(reinterpret_cast<const void *>(bufferPtr), bufferLength, createCreatorOptions(jsWriterOptions));
