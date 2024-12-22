@@ -136,15 +136,14 @@ export interface PrepareZXingModuleOptions {
 /**
  * A shallow equality function to compare two objects.
  */
-export function shallow(a: ZXingModuleOverrides, b: ZXingModuleOverrides) {
+export function shallow<T extends Record<string, unknown>>(a: T, b: T) {
   return (
     Object.is(a, b) ||
     (Object.keys(a).length === Object.keys(b).length &&
       Object.keys(a).every(
         (key) =>
           Object.prototype.hasOwnProperty.call(b, key) &&
-          a[key as keyof ZXingModuleOverrides] ===
-            b[key as keyof ZXingModuleOverrides],
+          a[key as keyof T] === b[key as keyof T],
       ))
   );
 }

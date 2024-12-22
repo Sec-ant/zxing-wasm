@@ -192,6 +192,24 @@ prepareZXingModule({
 const writeOutput = await writeBarcode("Hello world!");
 ```
 
+> [!NOTE]
+>
+> The default jsDelivr CDN serve path is also achieved by overriding the custom `locateFile` function:
+>
+> ```ts
+> const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides = {
+>   locateFile: (path, prefix) => {
+>     const match = path.match(/_(.+?)\.wasm$/);
+>     if (match) {
+>       return `https://fastly.jsdelivr.net/npm/zxing-wasm@${ZXING_WASM_VERSION}/dist/${match[1]}/${path}`;
+>     }
+>     return prefix + path;
+>   },
+> };
+> ```
+>
+> However, `overrides` is atomic. If you override other `Module` attributes, you _probably_ should also provide a `locateFile` function to ensure the `.wasm` file is fetched correctly.
+
 ### Integrating in Non-Web Runtimes
 
 If you want to use this library in non-web runtimes (such as Node.js, Bun, Deno, etc.) without setting up a server, there are several possible approaches. Because API support can differ between runtime environments and versions, you may need to adapt these examples or choose alternative methods depending on your specific runtime’s capabilities. Below are some example configurations for Node.js.
@@ -343,7 +361,7 @@ prepareZXingModule({
     /* ... your desired overrides ... */
   },
   fireImmediately: true,
-}); // <-- returns Promise<ZXingModule>
+}); // <-- returns a promise
 ```
 
 Because different `overrides` settings can influence how this library locates and instantiates the `.wasm` binary, the library performs an equality check on `overrides` to determine if the `.wasm` binary should be re-fetched and re-instantiated. By default, it is determined by a shallow comparison of the `overrides` object. If you prefer a different method of comparison, you can supply a custom [`equalityFn`](https://zxing-wasm.deno.dev/interfaces/full.PrepareZXingModuleOptions.html#equalityfn):
