@@ -11,6 +11,6 @@ export function encodeBinarizer(binarizer: Binarizer): number {
   return binarizers.indexOf(binarizer);
 }
 
-export function decodeBinaraizer(number: number): Binarizer {
+export function decodeBinarizer(number: number): Binarizer {
   return binarizers[number];
 }
