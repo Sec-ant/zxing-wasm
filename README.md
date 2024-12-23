@@ -167,7 +167,7 @@ console.log(writeOutput.image); // A PNG image blob.
 
 ### Serving via Web or CDN
 
-When using this package, a `.wasm` binary file needs to be served somewhere so the runtime can fetch, compile and instantiate the WASM module. In order to provide a smooth development experience, the serve path is automatically assigned a [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) url upon build.
+When using this package, a `.wasm` binary file needs to be served somewhere, so the runtime can fetch, compile and instantiate the WASM module. To provide a smooth development experience, the serve path is automatically assigned a [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) URL upon build.
 
 If you want to change the serve path to your own server or other CDNs, please use [`prepareZXingModule`](https://zxing-wasm.deno.dev/functions/full.prepareZXingModule.html) and pass an [`overrides`](http://localhost:4173/interfaces/full.PrepareZXingModuleOptions.html#overrides) object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
 
@@ -307,7 +307,7 @@ If you want to use this library in non-web runtimes (such as Node.js, Bun, Deno,
 
 > [!IMPORTANT]
 >
-> Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, please ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using. Otherwise you may encounter unexpected errors.
+> Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, please ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using. Otherwise, you may encounter unexpected errors.
 
 For convenience, this library provides an exported `ZXING_WASM_VERSION` variable to indicate the resolved version of the `zxing-wasm` you are using:
 
@@ -413,8 +413,9 @@ prepareZXingModule({
 
 ## Licenses
 
-zxing-cpp: Apache License
+This project contains code from multiple sources, each with its own license:
 
-zint: BSD (3-clause) License
-
-rest of the code: MIT
+- [zxing-cpp](https://github.com/zxing-cpp/zxing-cpp): [Apache License 2.0](https://github.com/zxing-cpp/zxing-cpp/blob/master/LICENSE)
+- [src/cpp/ZXingWasm.cpp](https://github.com/Sec-ant/zxing-wasm/blob/main/src/cpp/ZXingWasm.cpp): [Apache License 2.0](https://github.com/Sec-ant/zxing-wasm/blob/main/src/cpp/LICENSE)
+- [zint](https://sourceforge.net/projects/zint/): [BSD 3-Clause License](https://sourceforge.net/p/zint/code/ci/master/tree/LICENSE)
+- zxing-wasm specific code: [MIT License](https://github.com/Sec-ant/zxing-wasm/blob/main/LICENSE)
