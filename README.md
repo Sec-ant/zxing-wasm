@@ -29,13 +29,13 @@ pnpm build
 
 ## Install
 
-```
+```bash
 npm i zxing-wasm
 ```
 
 ## Documentation
 
-https://zxing-wasm.deno.dev/
+<https://zxing-wasm.deno.dev/>
 
 <!-- ## Demo
 
@@ -325,19 +325,19 @@ To acquire the `.wasm` files for customized serving, in addition to finding them
 
 - **`zxing_full.wasm`**:
 
-  ```
+  ```text
   https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/full/zxing_full.wasm
   ```
 
 - **`zxing_reader.wasm`**:
 
-  ```
+  ```text
   https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/reader/zxing_reader.wasm
   ```
 
 - **`zxing_writer.wasm`**:
 
-  ```
+  ```text
   https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/writer/zxing_writer.wasm
   ```
 
@@ -376,6 +376,45 @@ prepareZXingModule({
 });
 ```
 
-## License
+## FAQ
 
-MIT
+1. **Why are submodules required?**
+
+   The core function of reading / writing barcodes of this library is provided by [zxing-cpp](https://github.com/zxing-cpp/zxing-cpp). It is pinned to a specific commit ID as a submodule, and can be built as `.wasm` files. Additionally, the barcode generation ability is provided by [`zint`](https://sourceforge.net/projects/zint/), which is a submodule inside [zxing-cpp](https://github.com/zxing-cpp/zxing-cpp), so it is necessary to clone the repository with `--recurse-submodules` to ensure that all required submodules are also cloned.
+
+2. **I forgot to clone the repository with `--recurse-submodules`, how should I install the submodules without deleting this repo and cloning it again?**
+
+   In the root of the repo, run:
+
+   ```bash
+   git submodule update --init --recursive
+   ```
+
+3. **Are there any higher level libraries that can be used to simplify the usage of this library?**
+
+   - [barcode-detector](https://github.com/Sec-ant/barcode-detector): A [Barcode Detection API](https://wicg.github.io/shape-detection-api/#barcode-detection-api) polyfill / ponyfill that uses this library under the hood.
+   - [vue-qrcode-reader](https://github.com/gruhn/vue-qrcode-reader): A set of Vue.js components for detecting QR codes and various other barcode formats right in the browser which uses [barcode-detector](https://github.com/Sec-ant/barcode-detector) under the hood.
+   - [@yudiel/react-qr-scanner](https://github.com/yudielcurbelo/react-qr-scanner): A library to scan QR Codes in react which uses [barcode-detector](https://github.com/Sec-ant/barcode-detector) under the hood.
+   - [svelte-qrcode-reader](https://github.com/ollema/svelte-qrcode-reader): A set of Svelte 5 components for detecting and decoding QR-codes which uses [barcode-detector](https://github.com/Sec-ant/barcode-detector) under the hood.
+
+   A React toolkit for scanning barcodes directly based on this library is planned, which aims to provide easy-to-use capabilities for interacting with web cameras.
+
+4. **One of the input types of `readBarcodes` is `ImageData`, which is a `DOM` type. How can I use it in Node.js or other runtimes?**
+
+   The types are duck-typed, so you can use it in Node.js or other runtimes by providing a `DOM`-compatible `ImageData` object in the following shape, where the image data should be in [RGBA format](https://developer.mozilla.org/en-US/docs/Web/API/ImageData/data):
+
+   ```ts
+   interface ImageData {
+     data: Uint8ClampedArray;
+     width: number;
+     height: number;
+   }
+   ```
+
+## Licenses
+
+zxing-cpp: Apache License
+
+zint: BSD (3-clause) License
+
+rest of the code: MIT
