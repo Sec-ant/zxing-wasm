@@ -83,6 +83,18 @@ export type LooseBarcodeFormat =
   | WriteInputBarcodeFormat
   | ReadOutputBarcodeFormat;
 
+/**
+ * Encodes a barcode format into its numeric representation.
+ *
+ * @param format - The barcode format to encode. Can be a specific format, "Linear-Codes",
+ *                "Matrix-Codes", "Any", or "None"
+ * @returns A number representing the encoded format where:
+ *          - For specific formats: returns a power of 2 based on format's index
+ *          - For "Linear-Codes": returns bitwise OR of all linear format codes
+ *          - For "Matrix-Codes": returns bitwise OR of all matrix format codes
+ *          - For "Any": returns a number with all format bits set
+ *          - For "None": returns 0
+ */
 export function encodeFormat(format: LooseBarcodeFormat): number {
   switch (format) {
     case "Linear-Codes":
@@ -99,6 +111,16 @@ export function encodeFormat(format: LooseBarcodeFormat): number {
   }
 }
 
+/**
+ * Decodes a numeric format value into a barcode format string.
+ *
+ * @param number - A numeric value representing the encoded barcode format
+ * @returns The decoded barcode format string
+ *
+ * @remarks
+ * Uses bit position to determine the format, where the position of the highest set bit
+ * corresponds to an index in the barcode formats array. Returns "None" for zero value.
+ */
 export function decodeFormat(number: number): ReadOutputBarcodeFormat {
   if (number === 0) {
     return "None";
@@ -107,10 +129,27 @@ export function decodeFormat(number: number): ReadOutputBarcodeFormat {
   return barcodeFormats[index];
 }
 
+/**
+ * Encodes an array of barcode formats into a single numeric value using bitwise operations.
+ *
+ * @param formats - Array of barcode formats to be encoded
+ * @returns A number representing the combined encoded formats using bitwise OR operations
+ */
 export function encodeFormats(formats: LooseBarcodeFormat[]): number {
   return formats.reduce((acc, format) => acc | encodeFormat(format), 0);
 }
 
+/**
+ * Decodes a numeric value into an array of barcode formats based on bit flags.
+ *
+ * @param number - A numeric value where each bit represents a different barcode format
+ * @returns An array of decoded BarcodeFormat values. Returns empty array if input is 0
+ *
+ * @remarks
+ * This function uses bitwise operations to decode a number into individual barcode formats.
+ * Each bit position in the input number corresponds to a specific barcode format.
+ * The function iterates through each bit, and if set, adds the corresponding format to the result array.
+ */
 export function decodeFormats(number: number): BarcodeFormat[] {
   const formats: BarcodeFormat[] = [];
   if (number === 0) {

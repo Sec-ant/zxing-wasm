@@ -38,6 +38,17 @@ export interface WriteResult extends Omit<ZXingWriteResult, "image"> {
   image: Blob | null;
 }
 
+/**
+ * Converts a ZXing write result to a standard write result format, handling image data conversion.
+ *
+ * @param zxingWriteResult - The ZXing write result object to convert
+ * @returns A new write result object with the image converted to a Blob if present
+ *
+ * @remarks
+ * The function creates a new object that spreads all properties from the input result,
+ * but converts the image data from a Uint8Array to a PNG Blob when present.
+ * If no image data exists, the image property will be null.
+ */
 export function zxingWriteResultToWriteResult(
   zxingWriteResult: ZXingWriteResult,
 ) {

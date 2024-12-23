@@ -136,6 +136,12 @@ export interface ReadResult
   eccLevel: EcLevel;
 }
 
+/**
+ * Converts a ZXing read result to a standardized read result format.
+ *
+ * @param zxingReadResult - The raw result from ZXing barcode reader
+ * @returns A normalized read result with decoded format and content type
+ */
 export function zxingReadResultToReadResult(
   zxingReadResult: ZXingReadResult,
 ): ReadResult {

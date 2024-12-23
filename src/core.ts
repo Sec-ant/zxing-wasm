@@ -134,7 +134,27 @@ export interface PrepareZXingModuleOptions {
 }
 
 /**
- * A shallow equality function to compare two objects.
+ * Performs a shallow equality comparison between two objects.
+ *
+ * @param a - First object to compare
+ * @param b - Second object to compare
+ * @returns `true` if objects are shallowly equal, `false` otherwise
+ *
+ * @remarks
+ * Objects are considered shallowly equal if:
+ * - They are the same reference (using Object.is)
+ * - They have the same number of keys
+ * - All keys in `a` exist in `b` with strictly equal values (===)
+ *
+ * Note: This comparison only checks the first level of properties.
+ * Nested objects or arrays are compared by reference, not by value.
+ *
+ * @example
+ * ```ts
+ * shallow({ a: 1, b: 2 }, { a: 1, b: 2 }) // returns true
+ * shallow({ a: 1 }, { a: 1, b: 2 }) // returns false
+ * shallow({ a: {x: 1} }, { a: {x: 1} }) // returns false (different object references)
+ * ```
  */
 export function shallow<T extends Record<string, unknown>>(a: T, b: T) {
   return (
@@ -163,6 +183,20 @@ export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   options?: PrepareZXingModuleOptions,
 ): void | Promise<ZXingModule<T>>;
 
+/**
+ * Prepares and caches a ZXing module instance with the specified factory and options.
+ *
+ * @param zxingModuleFactory - Factory function to create the ZXing module
+ * @param options - Configuration options for module preparation
+ * @param options.overrides - Custom overrides for module initialization
+ * @param options.equalityFn - Function to compare override equality (defaults to shallow comparison)
+ * @param options.fireImmediately - Whether to instantiate the module immediately (defaults to false)
+ * @returns Promise of the ZXing module instance if fireImmediately is true, otherwise void
+ *
+ * @remarks
+ * This function implements a caching mechanism for ZXing module instances. It stores
+ * both the module overrides and the instantiated module promise in a global cache.
+ */
 export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
   {
@@ -207,12 +241,32 @@ export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   }
 }
 
+/**
+ * Removes a ZXing module instance from the internal cache.
+ *
+ * @param zxingModuleFactory - The factory function used to create the ZXing module instance
+ *
+ * @remarks
+ * This function is used to clean up cached ZXing module instances when they are no longer needed.
+ */
 export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
 ) {
   __CACHE__.delete(zxingModuleFactory);
 }
 
+/**
+ * Reads barcodes from an image using a ZXing module factory.
+ *
+ * @param zxingModuleFactory - Factory function to create a ZXing module instance
+ * @param input - Source image data as either a Blob or ImageData object
+ * @param readerOptions - Optional configuration options for barcode reading (defaults to defaultReaderOptions)
+ * @returns An array of ReadResult objects containing decoded barcode information
+ *
+ * @remarks
+ * The function manages memory allocation and deallocation for the ZXing module
+ * and properly cleans up resources after processing.
+ */
 export async function readBarcodesWithFactory<T extends "reader" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
   input: Blob | ImageData,
@@ -260,6 +314,18 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
   return readResults;
 }
 
+/**
+ * Generates a barcode image using a ZXing module factory with support for text and binary input.
+ *
+ * @param zxingModuleFactory - The factory function that creates a ZXing module instance
+ * @param input - The data to encode in the barcode, either as a string or Uint8Array
+ * @param writerOptions - Optional configuration options for barcode generation
+ * @returns A promise that resolves to the barcode write result
+ *
+ * @remarks
+ * The function handles memory management automatically when processing binary input,
+ * ensuring proper allocation and deallocation of memory in the ZXing module.
+ */
 export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
   input: string | Uint8Array,

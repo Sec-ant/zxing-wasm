@@ -46,6 +46,15 @@ type DeprecatedUnicodeBig = "UnicodeBig";
 
 export type CharacterSet = (typeof characterSets)[number];
 
+/**
+ * Encodes a character set identifier into its numeric representation.
+ *
+ * @param characterSet - The character set to encode, either a standard CharacterSet or legacy 'UnicodeBig'
+ * @returns A number representing the encoded character set
+ *
+ * @remarks
+ * Special handling is provided for the deprecated 'UnicodeBig' value, which is mapped to 'UTF16BE'
+ */
 export function encodeCharacterSet(
   characterSet: CharacterSet | DeprecatedUnicodeBig,
 ): number {
@@ -55,6 +64,12 @@ export function encodeCharacterSet(
   return characterSets.indexOf(characterSet);
 }
 
+/**
+ * Decodes a character set based on its numeric identifier.
+ *
+ * @param number - The numeric identifier of the character set to decode
+ * @returns The decoded character set
+ */
 export function decodeCharacterSet(number: number): CharacterSet {
   return characterSets[number];
 }
