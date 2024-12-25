@@ -41,6 +41,7 @@ export function purgeZXingModule() {
  *   equalityFn: Object.is,
  *   fireImmediately: true,
  * });
+ * ```
  */
 export function getZXingModule(zxingModuleOverrides?: ZXingModuleOverrides) {
   return prepareZXingModule({
