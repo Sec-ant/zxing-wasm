@@ -4,5 +4,7 @@
   "initialVersions": {
     "zxing-wasm": "1.3.4"
   },
-  "changesets": []
+  "changesets": [
+    "nice-needles-guess"
+  ]
 }
