@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.0.0-beta.1
+
+### Patch Changes
+
+- a10ffcc: Bump \`zxing-cpp\` to \`0dfa36b\` to fix DataBarExpanded decoder error and ITF quiet zone detection heuristic
+
 ## 2.0.0-beta.0
 
 ### Major Changes
