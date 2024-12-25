@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- 2bcfd4b: Bump \`zxing-cpp\` to \`0dfa36b\` to fix DataBarExpanded decoder error and ITF quiet zone detection heuristic
+- 2bcfd4b: Bump `zxing-cpp` to `0dfa36b` to fix DataBarExpanded decoder error and ITF quiet zone detection heuristic
 
 ## 1.3.4
 
