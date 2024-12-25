@@ -1,3 +1,9 @@
+<!-- markdownlint-disable MD041 MD033 -->
+
+> [!NOTE]
+>
+> For the v1 release, please visit the [`channel/v1`](https://www.github.com/Sec-ant/zxing-wasm/tree/channel/v1) branch.
+
 # zxing-wasm
 
 [![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![deploy status](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml/badge.svg)](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml)
