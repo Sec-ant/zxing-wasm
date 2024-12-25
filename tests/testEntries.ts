@@ -1,9 +1,12 @@
-import type { BarcodeFormat, ReaderOptions } from "../src/reader/index.js";
+import type {
+  ReadOutputBarcodeFormat,
+  ReaderOptions,
+} from "../src/reader/index.js";
 import { DEFAULT_READER_OPTIONS_FOR_TESTS } from "./utils.js";
 
 interface TestEntry {
   directory: string;
-  barcodeFormat: BarcodeFormat;
+  barcodeFormat: ReadOutputBarcodeFormat;
   /**
    * default: true
    */

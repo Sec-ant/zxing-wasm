@@ -5,7 +5,7 @@
   "bytes": "bf2544d",
   "bytesECI": "efb05d1",
   "text": "vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "11"
+  "version": "11",
+  "eccLevel": "L"
 }

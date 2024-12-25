@@ -5,7 +5,7 @@
   "bytes": "ad7126e",
   "bytesECI": "4d1c4e1",
   "text": "http://google.com/gwt/n?u=bluenile.com",
-  "eccLevel": "L",
+  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "3"
+  "version": "3",
+  "eccLevel": "L"
 }

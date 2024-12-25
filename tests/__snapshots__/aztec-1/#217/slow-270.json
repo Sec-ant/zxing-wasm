@@ -5,7 +5,7 @@
   "bytes": "577a6f6",
   "bytesECI": "17f8f0b",
   "text": "I have the best words.",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2"
+  "version": "2",
+  "eccLevel": ""
 }

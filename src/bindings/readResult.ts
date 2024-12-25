@@ -1,10 +1,6 @@
-import {
-  type ReadOutputBarcodeFormat,
-  formatFromString,
-} from "./barcodeFormat.js";
-import { type ContentType, zxingEnumToContentType } from "./contentType.js";
-import type { ReadOutputEccLevel } from "./eccLevel.js";
-import type { ZXingEnum } from "./enum.js";
+import { type ReadOutputBarcodeFormat, decodeFormat } from "./barcodeFormat.js";
+import { type ContentType, decodeContentType } from "./contentType.js";
+import type { EcLevel } from "./ecLevel.js";
 import type { Position, ZXingPosition } from "./position.js";
 
 /**
@@ -21,7 +17,10 @@ export interface ZXingReadResult {
    * @see {@link ReaderOptions.returnErrors | `ReaderOptions.returnErrors`}
    */
   error: string;
-  format: string;
+  /**
+   * @internal
+   */
+  format: number;
   /**
    * Raw / Standard content without any modifications like character set conversions.
    */
@@ -35,12 +34,21 @@ export interface ZXingReadResult {
    * accoring to specified {@link ReaderOptions.textMode | `ReaderOptions.textMode`}.
    */
   text: string;
-  eccLevel: string;
-  contentType: ZXingEnum;
+  /**
+   * Error correction level of the symbol (empty string if not applicable).
+   */
+  ecLevel: EcLevel;
+  /**
+   * @internal
+   */
+  contentType: number;
   /**
    * Whether or not an ECI tag was found.
    */
   hasECI: boolean;
+  /**
+   * @internal
+   */
   position: ZXingPosition;
   /**
    * Orientation of the barcode in degree.
@@ -69,7 +77,7 @@ export interface ZXingReadResult {
    */
   sequenceSize: number;
   /**
-   * The 0-based index of this symbol in a structured append sequence.
+   * The `0`-based index of this symbol in a structured append sequence.
    */
   sequenceIndex: number;
   /**
@@ -85,7 +93,7 @@ export interface ZXingReadResult {
    */
   readerInit: boolean;
   /**
-   * Number of lines have been detected with this code (applies only to linear symbologies).
+   * Number of lines that have been detected with this code (applies only to linear symbologies).
    */
   lineCount: number;
   /**
@@ -98,28 +106,22 @@ export interface ZXingReadResult {
   version: string;
 }
 
+/**
+ * Result of reading a barcode.
+ */
 export interface ReadResult
-  extends Omit<
-    ZXingReadResult,
-    "format" | "eccLevel" | "contentType" | "position"
-  > {
+  extends Omit<ZXingReadResult, "format" | "contentType" | "position"> {
   /**
    * Format of the barcode, should be one of {@link ReadOutputBarcodeFormat | `ReadOutputBarcodeFormat`}.
    *
    * Possible values are:
-   * `"Aztec"`, `"Codabar"`, `"Code128"`, `"Code39"`, `"Code93"`,
+   * `"Aztec"`, `"Codabar"`, `"Code39"`, `"Code93"`, `"Code128"`,
    * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`, `"DXFilmEdge"`,
-   * `"EAN-13"`, `"EAN-8"`, `"ITF"`,
-   * `"MaxiCode"`, `"MicroQRCode"`, `"None"`,
-   * `"PDF417"`, `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
+   * `"EAN-8"`, `"EAN-13"`, `"ITF"`, `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`,
+   * `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`,
+   * `"None"`
    */
   format: ReadOutputBarcodeFormat;
-  /**
-   * Error correction level of the symbol (empty string if not applicable).
-   *
-   * This property may be renamed to `ecLevel` in the future.
-   */
-  eccLevel: ReadOutputEccLevel;
   /**
    * A hint to the type of the content found.
    */
@@ -128,15 +130,25 @@ export interface ReadResult
    * Position of the detected barcode.
    */
   position: Position;
+  /**
+   * @deprecated Use {@link ReadResult.ecLevel | `ReadResult.ecLevel`} instead.
+   */
+  eccLevel: EcLevel;
 }
 
+/**
+ * Converts a ZXing read result to a standardized read result format.
+ *
+ * @param zxingReadResult - The raw result from ZXing barcode reader
+ * @returns A normalized read result with decoded format and content type
+ */
 export function zxingReadResultToReadResult(
   zxingReadResult: ZXingReadResult,
 ): ReadResult {
   return {
     ...zxingReadResult,
-    format: formatFromString(zxingReadResult.format) as ReadOutputBarcodeFormat,
-    eccLevel: zxingReadResult.eccLevel as ReadOutputEccLevel,
-    contentType: zxingEnumToContentType(zxingReadResult.contentType),
+    format: decodeFormat(zxingReadResult.format),
+    contentType: decodeContentType(zxingReadResult.contentType),
+    eccLevel: zxingReadResult.ecLevel,
   };
 }

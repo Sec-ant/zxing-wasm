@@ -5,7 +5,7 @@
   "bytes": "eb4cefd",
   "bytesECI": "34fd111",
   "text": "MOROVIA",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

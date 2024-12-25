@@ -1,6 +1,3 @@
-import type { ZXingModule, ZXingModuleType } from "../core.js";
-import type { ZXingEnum } from "./enum.js";
-
 export const characterSets = [
   "Unknown",
   "ASCII",
@@ -31,6 +28,10 @@ export const characterSets = [
   "EUC_JP",
   "EUC_KR",
   "UTF16BE",
+  /**
+   * UnicodeBig [[deprecated]]
+   */
+  "UTF16BE",
   "UTF8",
   "UTF16LE",
   "UTF32BE",
@@ -38,20 +39,37 @@ export const characterSets = [
   "BINARY",
 ] as const;
 
+/**
+ * @deprecated Use `"UTF16BE"` instead.
+ */
+type DeprecatedUnicodeBig = "UnicodeBig";
+
 export type CharacterSet = (typeof characterSets)[number];
 
 /**
- * @internal
+ * Encodes a character set identifier into its numeric representation.
+ *
+ * @param characterSet - The character set to encode, either a standard CharacterSet or legacy 'UnicodeBig'
+ * @returns A number representing the encoded character set
+ *
+ * @remarks
+ * Special handling is provided for the deprecated 'UnicodeBig' value, which is mapped to 'UTF16BE'
  */
-export type ZXingCharacterSet = Record<CharacterSet, ZXingEnum>;
-
-export function characterSetToZXingEnum<T extends ZXingModuleType>(
-  zxingModule: ZXingModule<T>,
-  characterSet: CharacterSet,
-): ZXingEnum {
-  return zxingModule.CharacterSet[characterSet];
+export function encodeCharacterSet(
+  characterSet: CharacterSet | DeprecatedUnicodeBig,
+): number {
+  if (characterSet === "UnicodeBig") {
+    return characterSets.indexOf("UTF16BE");
+  }
+  return characterSets.indexOf(characterSet);
 }
 
-export function zxingEnumToCharacterSet(zxingEnum: ZXingEnum): CharacterSet {
-  return characterSets[zxingEnum.value];
+/**
+ * Decodes a character set based on its numeric identifier.
+ *
+ * @param number - The numeric identifier of the character set to decode
+ * @returns The decoded character set
+ */
+export function decodeCharacterSet(number: number): CharacterSet {
+  return characterSets[number];
 }

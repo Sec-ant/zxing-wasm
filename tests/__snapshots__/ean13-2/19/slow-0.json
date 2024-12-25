@@ -5,7 +5,7 @@
   "bytes": "43c5938",
   "bytesECI": "edd3e0c",
   "text": "9784872348880",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

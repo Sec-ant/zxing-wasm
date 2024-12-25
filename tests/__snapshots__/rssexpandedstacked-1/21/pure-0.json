@@ -5,7 +5,7 @@
   "bytes": "a73ca05",
   "bytesECI": "ba1a8ab",
   "text": "011234567890123110TREELOGIC",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "GS1",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 1,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

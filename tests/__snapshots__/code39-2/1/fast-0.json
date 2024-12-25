@@ -5,7 +5,7 @@
   "bytes": "c5feedb",
   "bytesECI": "e447392",
   "text": "Extended !?*#",
-  "eccLevel": "",
+  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 2,
-  "version": ""
+  "version": "",
+  "eccLevel": ""
 }

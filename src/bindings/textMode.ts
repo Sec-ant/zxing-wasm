@@ -1,22 +1,23 @@
-import type { ZXingModule } from "../core.js";
-import type { ZXingEnum } from "./enum.js";
-
 export const textModes = ["Plain", "ECI", "HRI", "Hex", "Escaped"] as const;
 
 export type TextMode = (typeof textModes)[number];
 
 /**
- * @internal
+ * Encodes a text mode into its corresponding numeric value.
+ *
+ * @param textMode - The text mode to encode
+ * @returns A number representing the encoded text mode.
  */
-export type ZXingTextMode = Record<TextMode, ZXingEnum>;
-
-export function textModeToZXingEnum<T extends "reader" | "full">(
-  zxingModule: ZXingModule<T>,
-  textMode: TextMode,
-): ZXingEnum {
-  return zxingModule.TextMode[textMode];
+export function encodeTextMode(textMode: TextMode): number {
+  return textModes.indexOf(textMode);
 }
 
-export function zxingEnumToTextMode(zxingEnum: ZXingEnum): TextMode {
-  return textModes[zxingEnum.value];
+/**
+ * Decodes a numeric value into its corresponding text mode.
+ *
+ * @param number - The numeric value to decode into a text mode
+ * @returns The decoded text mode.
+ */
+export function decodeTextMode(number: number): TextMode {
+  return textModes[number];
 }

@@ -5,7 +5,7 @@
   "bytes": "fa7197c",
   "bytesECI": "1e56537",
   "text": "THROUGH THE LOOKING-GLASS<LF><LF>By Lewis Carroll<LF><LF><LF>CHAPTER I. Looking-Glass house<LF><LF>One thing was certain, that the WHITE kitten had had nothing to do with<LF>it:--it was the black kitten's fault entirely. For the white kitten had<LF>been having its face washed by the old cat for the last quarter of<LF>an hour (and bearing it pretty well, considering); so you see that it<LF>COULDN'T have had any hand in the mischief.<LF><LF>The way Dinah washed her children's faces was this: first she held the<LF>poor thing down by its ear with one paw, and then with the other paw she<LF>rubbed its face all over, the wrong way, beginning at the nose: and<LF>just now, as I said, she was hard at work on the white kitten, which was<LF>lying quite still and trying to purr--no doubt feeling that it was all<LF>meant for its good.<LF><LF>But the black kitten had been finished with earlier in the afternoon,<LF>and so, while Alice was sitting curled up in a corner of the great<LF>arm-chair, half talking to herself and half asleep, the kitten had been<LF>having a grand game of romps with the ball of worsted Alice had been<LF>trying to wind up, and had been rolling it up and down till it had all<LF>come undone again; and there it was, spread over the hearth-rug, all<LF>knots and tangles, with the kitten running after its own tail in the<LF>midd<LF>",
-  "eccLevel": "H",
+  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -35,5 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "40"
+  "version": "40",
+  "eccLevel": "H"
 }
