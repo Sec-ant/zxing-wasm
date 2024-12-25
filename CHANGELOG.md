@@ -4,7 +4,7 @@
 
 ### Major Changes
 
-- 1a77296: # V2: Breaking Release - Next Major Version
+- 1a77296: V2: Breaking Release - Next Major Version
 
   This release introduces a major refactoring of the underlying Embind APIs and read / write functions. Key changes include transitioning away from [Embind Enums](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html#enums) toward numeric encoding and decoding, a new set of default reader options, enhanced writer capabilities backed by [`zint`](https://sourceforge.net/projects/zint/), and updated APIs for reading and writing barcodes. These changes break backward compatibility, so we are upgrading to the next major version.
 
