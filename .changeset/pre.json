@@ -5,6 +5,7 @@
     "zxing-wasm": "1.3.4"
   },
   "changesets": [
-    "nice-needles-guess"
+    "nice-needles-guess",
+    "wise-planes-reply"
   ]
 }
