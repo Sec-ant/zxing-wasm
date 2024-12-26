@@ -328,9 +328,7 @@ If you want to use this library in non-web runtimes (such as Node.js, Bun, Deno,
      overrides: {
        locateFile: (path, prefix) => {
          if (path.endsWith(".wasm")) {
-           return `data:application/wasm;base64,${readFileSync(
-             "/path/to/the/zxing_reader.wasm",
-           ).toString("base64")}`;
+           return wasmUrl;
          }
          return prefix + path;
        },
