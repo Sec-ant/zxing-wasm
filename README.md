@@ -70,11 +70,11 @@ npm i zxing-wasm
 
 <https://zxing-wasm.deno.dev/>
 
-<!-- ## Demo
+## Demo
 
 Demo page: https://zxing-wasm-demo.deno.dev/
 
-Demo source: https://github.com/Sec-ant/zxing-wasm-demo -->
+Demo source: https://github.com/Sec-ant/zxing-wasm-demo
 
 ## Usage
 
