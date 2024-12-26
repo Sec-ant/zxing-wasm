@@ -11,7 +11,7 @@
   "replaceText": {
     "replacements": [
       {
-        "pattern": "^# zxing-wasm[\\s\\n]+",
+        "pattern": "# zxing-wasm[\\s\\n]+",
         "replace": ""
       },
       {
