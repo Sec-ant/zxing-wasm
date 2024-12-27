@@ -1,172 +1,180 @@
-import { expect, test } from "vitest";
+import { afterAll, describe, expect, test, vi } from "vitest";
 import {
   prepareZXingModule as prepareZXingFullModule,
   purgeZXingModule as purgeZXingFullModule,
 } from "../src/full/index.js";
 import { prepareZXingModule as prepareZXingReaderModule } from "../src/reader/index.js";
 
-test("no module promise should be created without fireImmediately", () => {
-  const modulePromise = prepareZXingFullModule();
+describe("prepare zxing module", () => {
+  const consoleMock = vi.spyOn(console, "error").mockImplementation(() => {});
 
-  expect(modulePromise).toBe(undefined);
-});
-
-test("module promise should be created with fireImmediately", () => {
-  const modulePromise = prepareZXingFullModule({
-    fireImmediately: true,
+  afterAll(() => {
+    consoleMock.mockReset();
   });
 
-  modulePromise.catch(() => {});
+  test("no module promise should be created without fireImmediately", () => {
+    const modulePromise = prepareZXingFullModule();
 
-  expect(modulePromise).toBeInstanceOf(Promise);
-});
-
-test("module promise should be reused with no overrides", () => {
-  const modulePromise1 = prepareZXingFullModule({
-    fireImmediately: true,
+    expect(modulePromise).toBe(undefined);
   });
 
-  modulePromise1.catch(() => {});
+  test("module promise should be created with fireImmediately", () => {
+    const modulePromise = prepareZXingFullModule({
+      fireImmediately: true,
+    });
 
-  const modulePromise2 = prepareZXingFullModule({
-    fireImmediately: true,
+    modulePromise.catch(() => {});
+
+    expect(modulePromise).toBeInstanceOf(Promise);
   });
 
-  modulePromise2.catch(() => {});
+  test("module promise should be reused with no overrides", () => {
+    const modulePromise1 = prepareZXingFullModule({
+      fireImmediately: true,
+    });
 
-  expect(modulePromise1).toBe(modulePromise2);
-});
+    modulePromise1.catch(() => {});
 
-test("module promise should be reused with same overrides (Object.is)", () => {
-  const overrides = {};
+    const modulePromise2 = prepareZXingFullModule({
+      fireImmediately: true,
+    });
 
-  const modulePromise1 = prepareZXingFullModule({
-    overrides,
-    fireImmediately: true,
+    modulePromise2.catch(() => {});
+
+    expect(modulePromise1).toBe(modulePromise2);
   });
 
-  modulePromise1.catch(() => {});
+  test("module promise should be reused with same overrides (Object.is)", () => {
+    const overrides = {};
 
-  const modulePromise2 = prepareZXingFullModule({
-    overrides,
-    fireImmediately: true,
+    const modulePromise1 = prepareZXingFullModule({
+      overrides,
+      fireImmediately: true,
+    });
+
+    modulePromise1.catch(() => {});
+
+    const modulePromise2 = prepareZXingFullModule({
+      overrides,
+      fireImmediately: true,
+    });
+
+    modulePromise2.catch(() => {});
+
+    expect(modulePromise1).toBe(modulePromise2);
   });
 
-  modulePromise2.catch(() => {});
+  test("module promise should be reused with same overrides (shallow)", () => {
+    const modulePromise1 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+    });
 
-  expect(modulePromise1).toBe(modulePromise2);
-});
+    modulePromise1.catch(() => {});
 
-test("module promise should be reused with same overrides (shallow)", () => {
-  const modulePromise1 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
+    const modulePromise2 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+    });
+
+    modulePromise2.catch(() => {});
+
+    expect(modulePromise1).toBe(modulePromise2);
   });
 
-  modulePromise1.catch(() => {});
+  test("module promise shouldn't be reused with different overrides", () => {
+    const modulePromise1 = prepareZXingFullModule({
+      overrides: {
+        locateFile: (url) => url,
+      },
+      fireImmediately: true,
+    });
 
-  const modulePromise2 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
+    modulePromise1.catch(() => {});
+
+    const modulePromise2 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+    });
+
+    modulePromise2.catch(() => {});
+
+    const modulePromise3 = prepareZXingFullModule({
+      overrides: {
+        locateFile: (url) => url,
+      },
+      fireImmediately: true,
+    });
+
+    modulePromise3.catch(() => {});
+
+    expect(modulePromise1).not.toBe(modulePromise2);
+    expect(modulePromise1).not.toBe(modulePromise3);
   });
 
-  modulePromise2.catch(() => {});
+  test("equalityFn should work", () => {
+    const modulePromise1 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+    });
 
-  expect(modulePromise1).toBe(modulePromise2);
-});
+    modulePromise1.catch(() => {});
 
-test("module promise shouldn't be reused with different overrides", () => {
-  const modulePromise1 = prepareZXingFullModule({
-    overrides: {
-      locateFile: (url) => url,
-    },
-    fireImmediately: true,
+    const modulePromise2 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+      equalityFn: Object.is,
+    });
+
+    modulePromise2.catch(() => {});
+
+    expect(modulePromise1).not.toBe(modulePromise2);
   });
 
-  modulePromise1.catch(() => {});
+  test("purgeZXingModule should work", () => {
+    const modulePromise1 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+    });
 
-  const modulePromise2 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
+    modulePromise1.catch(() => {});
+
+    purgeZXingFullModule();
+
+    const modulePromise2 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+    });
+
+    modulePromise2.catch(() => {});
+
+    expect(modulePromise1).not.toBe(modulePromise2);
   });
 
-  modulePromise2.catch(() => {});
+  test("purgeZXingModule shouldn't affect each other", () => {
+    const modulePromise1 = prepareZXingFullModule({
+      overrides: {},
+      fireImmediately: true,
+    });
 
-  const modulePromise3 = prepareZXingFullModule({
-    overrides: {
-      locateFile: (url) => url,
-    },
-    fireImmediately: true,
+    modulePromise1.catch(() => {});
+
+    const modulePromise2 = prepareZXingReaderModule({
+      overrides: {},
+      fireImmediately: true,
+    });
+
+    modulePromise2.catch(() => {});
+
+    purgeZXingFullModule();
+
+    const modulePromise3 = prepareZXingReaderModule({
+      overrides: {},
+      fireImmediately: true,
+    });
+
+    modulePromise3.catch(() => {});
+
+    expect(modulePromise2).toBe(modulePromise3);
   });
-
-  modulePromise3.catch(() => {});
-
-  expect(modulePromise1).not.toBe(modulePromise2);
-  expect(modulePromise1).not.toBe(modulePromise3);
-});
-
-test("equalityFn should work", () => {
-  const modulePromise1 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
-  });
-
-  modulePromise1.catch(() => {});
-
-  const modulePromise2 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
-    equalityFn: Object.is,
-  });
-
-  modulePromise2.catch(() => {});
-
-  expect(modulePromise1).not.toBe(modulePromise2);
-});
-
-test("purgeZXingModule should work", () => {
-  const modulePromise1 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
-  });
-
-  modulePromise1.catch(() => {});
-
-  purgeZXingFullModule();
-
-  const modulePromise2 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
-  });
-
-  modulePromise2.catch(() => {});
-
-  expect(modulePromise1).not.toBe(modulePromise2);
-});
-
-test("purgeZXingModule shouldn't affect each other", () => {
-  const modulePromise1 = prepareZXingFullModule({
-    overrides: {},
-    fireImmediately: true,
-  });
-
-  modulePromise1.catch(() => {});
-
-  const modulePromise2 = prepareZXingReaderModule({
-    overrides: {},
-    fireImmediately: true,
-  });
-
-  modulePromise2.catch(() => {});
-
-  purgeZXingFullModule();
-
-  const modulePromise3 = prepareZXingReaderModule({
-    overrides: {},
-    fireImmediately: true,
-  });
-
-  modulePromise3.catch(() => {});
-
-  expect(modulePromise2).toBe(modulePromise3);
 });
