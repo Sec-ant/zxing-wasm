@@ -13,6 +13,10 @@ import {
 
 export function emscriptenPatch(): PluginItem {
   return {
+    pre() {
+      this.declared = false;
+      this.checked = false;
+    },
     visitor: {
       VariableDeclaration(path) {
         if (
@@ -53,6 +57,7 @@ export function emscriptenPatch(): PluginItem {
               ),
             ]),
           ]);
+          this.declared = true;
         }
       },
       LogicalExpression(path) {
@@ -82,8 +87,26 @@ export function emscriptenPatch(): PluginItem {
             path.replaceWith(newNode);
           }
           path.skip();
+          this.checked = true;
         }
       },
+    },
+    post() {
+      if (!this.declared) {
+        console.error(
+          "\x1b[33m! Emscripten JS Patch\x1b[0m: patch variables not declared",
+        );
+      }
+      if (!this.checked) {
+        console.error(
+          "\x1b[33m! Emscripten JS Patch\x1b[0m: patch variables not checked",
+        );
+      }
+      if (this.declared && this.checked) {
+        console.log(
+          "\x1b[32m✓ Emscripten JS Patch\x1b[0m: patch variables declared and checked",
+        );
+      }
     },
   };
 }
