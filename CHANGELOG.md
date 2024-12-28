@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.0.0-beta.2
+
+### Patch Changes
+
+- b856d58: Add `typesVersions` field for `moduleResolution: node`
+
 ## 2.0.0-beta.1
 
 ### Patch Changes
