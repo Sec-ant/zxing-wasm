@@ -34,6 +34,22 @@
     "./writer/zxing_writer.wasm": "./dist/writer/zxing_writer.wasm",
     "./full/zxing_full.wasm": "./dist/full/zxing_full.wasm"
   },
+  "typesVersions": {
+    "*": {
+      "full": [
+        "./dist/es/full/index.d.ts",
+        "./dist/cjs/full/index.d.ts"
+      ],
+      "reader": [
+        "./dist/es/reader/index.d.ts",
+        "./dist/cjs/reader/index.d.ts"
+      ],
+      "writer": [
+        "./dist/es/writer/index.d.ts",
+        "./dist/cjs/writer/index.d.ts"
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sec-ant/zxing-wasm.git"
@@ -123,6 +139,9 @@
   "dependencies": {
     "@types/emscripten": "^1.39.13",
     "type-fest": "^4.31.0"
+  },
+  "peerDependencies": {
+    "@types/emscripten": ">=1.39.6"
   },
   "pnpm": {
     "overrides": {
