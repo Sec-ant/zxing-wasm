@@ -28,7 +28,7 @@
   "overrides": [
     {
       "include": [
-        "core.ts",
+        "share.ts",
         "full/index.ts",
         "reader/index.ts",
         "writer/index.ts"

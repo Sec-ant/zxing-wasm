@@ -7,7 +7,7 @@ import {
   prepareZXingModuleWithFactory,
   purgeZXingModuleWithFactory,
   readBarcodesWithFactory,
-} from "../core.js";
+} from "../share.js";
 import zxingModuleFactory from "./zxing_reader.js";
 
 export function prepareZXingModule(
@@ -105,5 +105,5 @@ export {
   type PrepareZXingModuleOptions,
   type ZXingReaderModule,
   type ZXingModuleOverrides,
-} from "../core.js";
+} from "../share.js";
 export const ZXING_WASM_SHA256 = READER_HASH;

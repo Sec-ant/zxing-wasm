@@ -1,4 +1,4 @@
-import type { ZXingFullModuleFactory } from "../core.ts";
+import type { ZXingFullModuleFactory } from "../share.js";
 
 declare const ZXing: ZXingFullModuleFactory;
 export default ZXing;

@@ -14,7 +14,7 @@ import {
   prepareZXingModuleWithFactory,
   purgeZXingModuleWithFactory,
   writeBarcodeWithFactory,
-} from "../core.js";
+} from "../share.js";
 import zxingModuleFactory from "./zxing_writer.js";
 
 export function prepareZXingModule(
@@ -92,5 +92,5 @@ export {
   type PrepareZXingModuleOptions,
   type ZXingWriterModule,
   type ZXingModuleOverrides,
-} from "../core.js";
+} from "../share.js";
 export const ZXING_WASM_SHA256 = WRITER_HASH;

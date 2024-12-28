@@ -1,11 +1,8 @@
-/// <reference types="vitest/config" />
-/// <reference types="vite/client" />
-
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { defineConfig } from "vite";
 import babel from "vite-plugin-babel";
+import { defineConfig } from "vitest/config";
 import { version } from "./package.json";
 import { emscriptenPatch } from "./scripts/babel-plugin-emscripten-patch.js";
 
@@ -27,11 +24,11 @@ export default defineConfig({
         chunkFileNames: "[name].js",
         manualChunks: (id) => {
           if (
-            /core\.ts|exposedReaderBindings\.ts|exposedWriterBindings\.ts/.test(
+            /share\.ts|exposedReaderBindings\.ts|exposedWriterBindings\.ts/.test(
               id,
             )
           ) {
-            return "core";
+            return "share";
           }
         },
       },
