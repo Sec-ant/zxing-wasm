@@ -35,7 +35,7 @@
 |      `UPC-A`      |       ✅       |                |       ✅        |       ✅        |
 |      `UPC-E`      |       ✅       |                |       ✅        |       ✅        |
 
-[^1]: Reading support for `MaxiCode` requires a pure monochrome image that contains an unrotated and unskewed code image, along with a sufficient white border surrounding it.
+[^1]: Reading support for `MaxiCode` requires a pure monochrome image that contains an unrotated and unskewed symbol, along with a sufficient white border surrounding it.
 
 </div>
 
