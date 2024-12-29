@@ -11,6 +11,22 @@
     {
       "from": "./src/full/*.wasm",
       "to": "./dist/full/"
+    },
+    {
+      "from": "./src/imageData.d.ts",
+      "to": "./dist/es/types/"
+    },
+    {
+      "from": "./src/imageData.d.ts",
+      "to": "./dist/cjs/types/"
+    },
+    {
+      "from": "./src/wasm.d.ts",
+      "to": "./dist/es/types/"
+    },
+    {
+      "from": "./src/wasm.d.ts",
+      "to": "./dist/cjs/types/"
     }
   ],
   "copyFilesSettings": {

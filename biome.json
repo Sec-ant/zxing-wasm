@@ -25,6 +25,14 @@
     "useIgnoreFile": true,
     "defaultBranch": "main"
   },
+  "json": {
+    "parser": {
+      "allowTrailingCommas": true
+    },
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
   "overrides": [
     {
       "include": [

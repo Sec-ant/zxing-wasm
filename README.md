@@ -23,17 +23,19 @@
 | `DataBarLimited`  |       ✅       |                |       ✅        |       ✅        |
 | `DataBarExpanded` |       ✅       |                |       ✅        |       ✅        |
 |   `DataMatrix`    |                |       ✅       |       ✅        |       ✅        |
-|   `DXFilmEdge`    |       ✅       |                |       ✅        |                 |
+|   `DXFilmEdge`    |       ✅       |                |       ✅        |       ✅        |
 |      `EAN-8`      |       ✅       |                |       ✅        |       ✅        |
 |     `EAN-13`      |       ✅       |                |       ✅        |       ✅        |
 |       `ITF`       |       ✅       |                |       ✅        |       ✅        |
-|    `MaxiCode`     |                |       ✅       |       ✅        |       ✅        |
+|    `MaxiCode`     |                |       ✅       |   　　✅[^1]    |       ✅        |
 |     `PDF417`      |                |       ✅       |       ✅        |       ✅        |
 |     `QRCode`      |                |       ✅       |       ✅        |       ✅        |
 |   `MicroQRCode`   |                |       ✅       |       ✅        |       ✅        |
 |    `rMQRCode`     |                |       ✅       |       ✅        |       ✅        |
 |      `UPC-A`      |       ✅       |                |       ✅        |       ✅        |
 |      `UPC-E`      |       ✅       |                |       ✅        |       ✅        |
+
+[^1]: Reading support for `MaxiCode` requires a pure monochrome image that contains an unrotated and unskewed code image, along with a sufficient white border surrounding it.
 
 </div>
 
@@ -78,7 +80,7 @@ Demo source: https://github.com/Sec-ant/zxing-wasm-demo
 
 ## Usage
 
-This package exports three subpaths: `full`, `reader`, and `writer`. You can choose the one that fits your needs. If you use TypeScript, you should set [`moduleResolution`](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution) to [`bundler`](https://www.typescriptlang.org/docs/handbook/modules/reference.html#bundler), [`node16`, or `nodenext`](https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext-1) in your `tsconfig.json` file to properly resolve the exported module.
+This package exports three subpaths: `full`, `reader`, and `writer`.
 
 ### `zxing-wasm` or `zxing-wasm/full`
 

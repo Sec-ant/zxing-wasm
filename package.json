@@ -30,23 +30,89 @@
       "require": "./dist/cjs/writer/index.js",
       "default": "./dist/es/writer/index.js"
     },
-    "./reader/zxing_reader.wasm": "./dist/reader/zxing_reader.wasm",
-    "./writer/zxing_writer.wasm": "./dist/writer/zxing_writer.wasm",
-    "./full/zxing_full.wasm": "./dist/full/zxing_full.wasm"
+    "./full/zxing_full.wasm": {
+      "import": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/full/zxing_full.wasm"
+      },
+      "require": {
+        "types": "./dist/cjs/types/wasm.d.ts",
+        "default": "./dist/full/zxing_full.wasm"
+      },
+      "default": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/full/zxing_full.wasm"
+      }
+    },
+    "./reader/zxing_reader.wasm": {
+      "import": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/reader/zxing_reader.wasm"
+      },
+      "require": {
+        "types": "./dist/cjs/types/wasm.d.ts",
+        "default": "./dist/reader/zxing_reader.wasm"
+      },
+      "default": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/reader/zxing_reader.wasm"
+      }
+    },
+    "./writer/zxing_writer.wasm": {
+      "import": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/writer/zxing_writer.wasm"
+      },
+      "require": {
+        "types": "./dist/cjs/types/wasm.d.ts",
+        "default": "./dist/writer/zxing_writer.wasm"
+      },
+      "default": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/writer/zxing_writer.wasm"
+      }
+    },
+    "./imageData": {
+      "import": {
+        "types": "./dist/es/types/imageData.d.ts"
+      },
+      "require": {
+        "types": "./dist/cjs/types/imageData.d.ts"
+      },
+      "default": {
+        "types": "./dist/es/types/imageData.d.ts"
+      }
+    }
   },
   "typesVersions": {
     "*": {
+      "full/zxing_full.wasm": [
+        "./dist/es/types/wasm.d.ts",
+        "./dist/cjs/types/wasm.d.ts"
+      ],
       "full": [
         "./dist/es/full/index.d.ts",
         "./dist/cjs/full/index.d.ts"
+      ],
+      "reader/zxing_reader.wasm": [
+        "./dist/es/types/wasm.d.ts",
+        "./dist/cjs/types/wasm.d.ts"
       ],
       "reader": [
         "./dist/es/reader/index.d.ts",
         "./dist/cjs/reader/index.d.ts"
       ],
+      "writer/zxing_writer.wasm": [
+        "./dist/es/types/wasm.d.ts",
+        "./dist/cjs/types/wasm.d.ts"
+      ],
       "writer": [
         "./dist/es/writer/index.d.ts",
         "./dist/cjs/writer/index.d.ts"
+      ],
+      "imageData": [
+        "./dist/es/types/imageData.d.ts",
+        "./dist/cjs/types/imageData.d.ts"
       ]
     }
   },
@@ -153,5 +219,5 @@
       }
     }
   },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
 }

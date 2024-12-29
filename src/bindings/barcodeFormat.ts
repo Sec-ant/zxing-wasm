@@ -17,7 +17,7 @@ const barcodeFormatsWithMeta = [
   ["UPC-E", "L"],
   ["MicroQRCode", "M"],
   ["rMQRCode", "M"],
-  ["DXFilmEdge", "L", "W-"],
+  ["DXFilmEdge", "L"],
   ["DataBarLimited", "L"],
 ] as const;
 

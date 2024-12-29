@@ -75,7 +75,7 @@ export interface WriterOptions
    *
    * Supported values are:
    * `"Aztec"`, `"Codabar"`, `"Code39"`, `"Code93"`, `"Code128"`,
-   * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`,
+   * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`, `"DXFilmEdge"`,
    * `"EAN-8"`, `"EAN-13"`, `"ITF"`, `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`,
    * `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`
    *
