@@ -39,7 +39,7 @@
 
 </div>
 
-<!-- Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic functions. It works best on the latest Chromium browsers. -->
+Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic reading functions. It works best on the latest Chromium browsers.
 
 ## Build
 
@@ -249,7 +249,7 @@ const writeOutput = await writeBarcode("Hello world!");
 
 If you want to use this library in non-web runtimes (such as Node.js, Bun, Deno, etc.) without setting up a server, there are several possible approaches. Because API support can differ between runtime environments and versions, you may need to adapt these examples or choose alternative methods depending on your specific runtime’s capabilities. Below are some example configurations for Node.js.
 
-1. **Use the [`Module.instantiateWasm`](https://emscripten.org/docs/api_reference/module.html#Module.instantiateWasm) API**
+1. **Use the [`Module.instantiateWasm`](https://emscripten.org/docs/api_reference/module.html?highligh=instantiateWasm#Module.instantiateWasm) API**
 
    ```ts
    import { readFileSync } from "node:fs";
