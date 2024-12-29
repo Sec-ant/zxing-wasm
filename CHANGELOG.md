@@ -1,5 +1,14 @@
 # zxing-wasm
 
+## 2.0.0-beta.3
+
+### Minor Changes
+
+- 615a321: - Add `DXFilmEdge` writing support.
+  - Fix subpath exports TS compatibility with types-versions-wildcards strategy. Check [this](https://github.com/andrewbranch/example-subpath-exports-ts-compat/tree/main/examples/node_modules/types-versions-wildcards) for more information.
+  - Add types to `.wasm` subpath exports.
+  - Add `ImageData` ambient type export.
+
 ## 2.0.0-beta.2
 
 ### Patch Changes
