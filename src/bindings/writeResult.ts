@@ -1,3 +1,5 @@
+import type { BarcodeSymbol } from "./barcodeSymbol.js";
+
 /**
  * @internal
  */
@@ -21,6 +23,10 @@ export interface ZXingWriteResult {
    * @see {@link WriteResult.error | `WriteResult.error`}
    */
   error: string;
+  /**
+   * Barcode symbol in the shape of a one-channel image.
+   */
+  symbol: BarcodeSymbol;
 }
 
 /**
