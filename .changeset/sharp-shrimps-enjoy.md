@@ -2,4 +2,4 @@
 "zxing-wasm": minor
 ---
 
-feat: add `symbol` to `ReadResult` and `WriteResult`
+feat: add `symbol` field to `ReadResult` and `WriteResult`
