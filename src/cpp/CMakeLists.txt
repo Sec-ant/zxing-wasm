@@ -13,8 +13,16 @@ set(CMAKE_CXX_STANDARD 20)
 set(ZXING_EXAMPLES OFF)
 
 # Build options
-set(ZXING_READERS ON)
-set(ZXING_WRITERS "NEW")
+if (${TARGET} MATCHES "READER")
+  set(ZXING_READERS ON)
+  set(ZXING_WRITERS OFF)
+elseif (${TARGET} MATCHES "WRITER")
+  set(ZXING_READERS OFF)
+  set(ZXING_WRITERS "NEW")
+else()
+  set(ZXING_READERS ON)
+  set(ZXING_WRITERS "NEW")
+endif()
 set(ZXING_EXPERIMENTAL_API ON)
 set(ZXING_USE_BUNDLED_ZINT ON)
 
@@ -50,26 +58,22 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../../zxing-cpp/core ${CMAKE_BINARY_DIR}/ZXing)
 
 # Build targets
-if(ZXING_READERS AND (ZXING_WRITERS MATCHES "NEW"))
-  add_executable(zxing_full ZXingWasm.cpp)
-  target_compile_definitions(zxing_full PRIVATE READER WRITER)
-  target_link_libraries(zxing_full ZXing::ZXing stb::stb)
-  set_target_properties(zxing_full PROPERTIES 
-                        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../full")
-endif()
-
-if(ZXING_READERS)
+if(${TARGET} MATCHES "READER")
   add_executable(zxing_reader ZXingWasm.cpp)
   target_compile_definitions(zxing_reader PRIVATE READER)
   target_link_libraries(zxing_reader ZXing::ZXing stb::stb)
   set_target_properties(zxing_reader PROPERTIES 
                         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../reader")
-endif()
-
-if(ZXING_WRITERS MATCHES "NEW")
+elseif(${TARGET} MATCHES "WRITER")
   add_executable(zxing_writer ZXingWasm.cpp)
   target_compile_definitions(zxing_writer PRIVATE WRITER)
   target_link_libraries(zxing_writer ZXing::ZXing stb::stb)
   set_target_properties(zxing_writer PROPERTIES 
                         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../writer")
+else()
+  add_executable(zxing_full ZXingWasm.cpp)
+  target_compile_definitions(zxing_full PRIVATE READER WRITER)
+  target_link_libraries(zxing_full ZXing::ZXing stb::stb)
+  set_target_properties(zxing_full PROPERTIES 
+                        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../full")
 endif()

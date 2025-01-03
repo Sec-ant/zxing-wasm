@@ -53,8 +53,6 @@ pnpm i --frozen-lockfile
 
 # Install CMake before executing the next command:
 # https://cmake.org/download/
-pnpm cmake
-
 # Install Emscripten before executing the next command:
 # https://emscripten.org/docs/getting_started/downloads.html
 pnpm build:wasm
@@ -98,7 +96,7 @@ import { readBarcodes, writeBarcode } from "zxing-wasm/full";
 
 ### `zxing-wasm/reader`
 
-This subpath only provides a function to read barcodes. The wasm binary size is ~906 KB.
+This subpath only provides a function to read barcodes. The wasm binary size is ~907 KB.
 
 ```ts
 import { readBarcodes } from "zxing-wasm/reader";
@@ -106,7 +104,7 @@ import { readBarcodes } from "zxing-wasm/reader";
 
 ### `zxing-wasm/writer`
 
-This subpath only provides a function to write barcodes. The wasm binary size is ~1.17 MB.
+This subpath only provides a function to write barcodes. The wasm binary size is ~594 KB.
 
 ```ts
 import { writeBarcode } from "zxing-wasm/writer";

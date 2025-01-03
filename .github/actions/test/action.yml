@@ -6,7 +6,7 @@ runs:
   steps:
     - name: Build WASM
       shell: bash
-      run: pnpm -s cmake && pnpm -s build:wasm
+      run: pnpm -s build:wasm
 
     - name: Run Tests
       shell: bash
