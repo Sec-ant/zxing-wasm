@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.0.0-beta.4
+
+### Patch Changes
+
+- f8c33b2: Fix the `zxing_writer.wasm` size issue. See [#190](https://github.com/Sec-ant/zxing-wasm/discussions/190).
+
 ## 2.0.0-beta.3
 
 ### Minor Changes
