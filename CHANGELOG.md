@@ -38,13 +38,13 @@ In `ReadResult`, the `eccLevel` field has been renamed to `ecLevel`. It now hold
 
 #### Renamed & Enhanced Writer Function
 
-`writeBarcode(...)` replaces `writeBarcodeToImageFile(...)`. This function is now powered by the new [`zint`](https://sourceforge.net/projects/zint/) backend which supports all available formats that are currently supported by the reader. It accepts either a `string` text or an `Uint8Array` binary data as its input for barcode generation, and provides new output formats (e.g. SVG, UTF-8) in addition to the an image file blob.
+`writeBarcode(...)` replaces `writeBarcodeToImageFile(...)`. This function is now powered by the new [`zint`](https://sourceforge.net/projects/zint/) backend which supports all available formats that are currently supported by the reader. It accepts either a `string` text or an `Uint8Array` binary data as its input for barcode generation, and provides new output formats (e.g. SVG, UTF-8) in addition to an image file blob.
 
 The `WriterOptions` object has also been updated completely.
 
 > [!NOTE]
 >
-> The final shape of the `writeBarcode` function is still under discussion. The current implementation is subject to change.
+> The final shape of the `writeBarcode` function is still in review. The current implementation is subject to change.
 
 #### `.wasm` Module Initialization / Caching Overhaul
 
