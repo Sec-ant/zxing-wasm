@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "7",
+  "symbol": {
+    "data": "a5881e0",
+    "width": 45,
+    "height": 45
+  },
   "eccLevel": "Q"
 }
