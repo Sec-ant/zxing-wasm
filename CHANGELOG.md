@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.0.1
+
+### Patch Changes
+
+- 6321b02: Add `ZXING_CPP_COMMIT` export.
+
 ## 2.0.0
 
 This release introduces a major refactoring of the underlying Embind APIs and read / write functions. Key changes include a new set of default reader options, enhanced writer capabilities backed by [`zint`](https://sourceforge.net/projects/zint/), and updated APIs for reading and writing barcodes. These changes break backward compatibility, so we are upgrading to the next major version.
