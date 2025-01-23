@@ -102,6 +102,7 @@ export async function readBarcodesFromImageData(
 export * from "../bindings/exposedReaderBindings.js";
 export {
   ZXING_WASM_VERSION,
+  ZXING_CPP_COMMIT,
   type PrepareZXingModuleOptions,
   type ZXingReaderModule,
   type ZXingModuleOverrides,

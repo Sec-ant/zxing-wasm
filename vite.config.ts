@@ -1,3 +1,4 @@
+import { execSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -78,6 +79,11 @@ export default defineConfig({
           ),
         )
         .digest("hex"),
+    ),
+    SUBMODULE_COMMIT: JSON.stringify(
+      execSync("git submodule status | cut -c-41", {
+        encoding: "utf-8",
+      }).trim(),
     ),
   },
   test: {

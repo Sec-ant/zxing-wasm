@@ -111,6 +111,7 @@ export * from "../bindings/exposedReaderBindings.js";
 export * from "../bindings/exposedWriterBindings.js";
 export {
   ZXING_WASM_VERSION,
+  ZXING_CPP_COMMIT,
   type PrepareZXingModuleOptions,
   type ZXingFullModule,
   type ZXingModuleOverrides,

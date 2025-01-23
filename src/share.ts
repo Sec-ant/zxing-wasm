@@ -81,6 +81,8 @@ export type ZXingModuleOverrides = Partial<EmscriptenModule>;
 
 export const ZXING_WASM_VERSION = NPM_PACKAGE_VERSION;
 
+export const ZXING_CPP_COMMIT = SUBMODULE_COMMIT;
+
 const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides = import.meta.env.PROD
   ? {
       locateFile: (path, prefix) => {

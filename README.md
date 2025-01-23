@@ -346,6 +346,12 @@ For convenience, this library provides an exported `ZXING_WASM_VERSION` variable
 import { ZXING_WASM_VERSION } from "zxing-wasm";
 ```
 
+The commit hash of the `zxing-cpp` submodule is exported as `ZXING_CPP_COMMIT`:
+
+```ts
+import { ZXING_CPP_COMMIT } from "zxing-wasm";
+```
+
 The SHA-256 hash of the `.wasm` file (in hex format) is also exported as `ZXING_WASM_SHA256`, in case you want to make sure you are serving the exactly same file:
 
 ```ts

@@ -89,6 +89,7 @@ export async function writeBarcode(
 export * from "../bindings/exposedWriterBindings.js";
 export {
   ZXING_WASM_VERSION,
+  ZXING_CPP_COMMIT,
   type PrepareZXingModuleOptions,
   type ZXingWriterModule,
   type ZXingModuleOverrides,
