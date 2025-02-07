@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "1",
+  "symbol": {
+    "data": "bd3511d",
+    "width": 21,
+    "height": 21
+  },
   "eccLevel": "H"
 }
