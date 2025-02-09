@@ -1,8 +1,8 @@
 diff --git a/src/shell.js b/src/shell.js
-index 0010048cf..6304b367b 100644
+index d7432a26e..becae9350 100644
 --- a/src/shell.js
 +++ b/src/shell.js
-@@ -154,7 +154,7 @@ var quit_ = (status, toThrow) => {
+@@ -145,7 +145,7 @@ var quit_ = (status, toThrow) => {
  #if SHARED_MEMORY && !MODULARIZE
  // In MODULARIZE mode _scriptName needs to be captured already at the very top of the page immediately when the page is parsed, so it is generated there
  // before the page load. In non-MODULARIZE modes generate it here.
@@ -11,7 +11,7 @@ index 0010048cf..6304b367b 100644
  
  #if ENVIRONMENT_MAY_BE_NODE
  if (ENVIRONMENT_IS_NODE) {
-@@ -350,7 +350,7 @@ if (ENVIRONMENT_IS_SHELL) {
+@@ -341,7 +341,7 @@ if (ENVIRONMENT_IS_SHELL) {
  if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
    if (ENVIRONMENT_IS_WORKER) { // Check worker, not web, since window could be polyfilled
      scriptDirectory = self.location.href;
@@ -21,10 +21,10 @@ index 0010048cf..6304b367b 100644
    }
  #if MODULARIZE
 diff --git a/src/shell_minimal.js b/src/shell_minimal.js
-index 9e8b30392..2a4ea8178 100644
+index 60c708960..54c9b8821 100644
 --- a/src/shell_minimal.js
 +++ b/src/shell_minimal.js
-@@ -137,7 +137,7 @@ var ENVIRONMENT_IS_PTHREAD = ENVIRONMENT_IS_WORKER && self.name?.startsWith('em-
+@@ -134,7 +134,7 @@ var ENVIRONMENT_IS_PTHREAD = ENVIRONMENT_IS_WORKER && self.name?.startsWith('em-
  #if !MODULARIZE
  // In MODULARIZE mode _scriptName needs to be captured already at the very top of the page immediately when the page is parsed, so it is generated there
  // before the page load. In non-MODULARIZE modes generate it here.
@@ -34,15 +34,15 @@ index 9e8b30392..2a4ea8178 100644
  
  #if ENVIRONMENT_MAY_BE_NODE
 diff --git a/tools/link.py b/tools/link.py
-index 76b6e521b..367c36de5 100644
+index 6c8e64fc3..7f5142672 100644
 --- a/tools/link.py
 +++ b/tools/link.py
-@@ -2445,7 +2445,7 @@ export default async function init(moduleArg = {}) {
+@@ -2419,7 +2419,7 @@ export default %(maybe_async)s function init(moduleArg = {}) {
      if settings.EXPORT_ES6 and settings.USE_ES6_IMPORT_META:
        script_url = 'import.meta.url'
      else:
 -      script_url = "typeof document != 'undefined' ? document.currentScript?.src : undefined"
 +      script_url = "(typeof document != 'undefined' && document.currentScript?.tagName.toUpperCase() === 'SCRIPT') ? document.currentScript.src : undefined"
-       if shared.target_environment_may_be('node'):
+       if settings.ENVIRONMENT_MAY_BE_NODE:
          script_url_node = "if (typeof __filename != 'undefined') _scriptName = _scriptName || __filename;"
      if settings.MODULARIZE == 'instance':
