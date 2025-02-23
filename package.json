@@ -191,6 +191,7 @@
     "@babel/types": "^7.26.9",
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.28.1",
+    "@napi-rs/canvas": "^0.1.67",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^22.13.5",
     "@vitest/ui": "^3.0.6",
