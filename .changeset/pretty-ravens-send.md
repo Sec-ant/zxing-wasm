@@ -2,4 +2,4 @@
 "zxing-wasm": minor
 ---
 
-Accept `ArrayBuffer` and `TypedArray` as `input` in `readBarcodes`
+Accept `ArrayBuffer` and `Uint8Array` as input types in `readBarcodes`.
