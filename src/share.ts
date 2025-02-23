@@ -410,7 +410,7 @@ if (import.meta.env.MODE === "miniprogram") {
     #options;
     #zeroUint8Array = new Uint8Array();
     constructor(blobParts?: BlobPart[], options?: BlobPropertyBag) {
-      console.warn(
+      console.error(
         "For the sake of robustness, a properly implemented Blob polyfill is required.",
       );
       this.#blobParts = blobParts as Uint8Array[];
