@@ -2,7 +2,7 @@ import { writeFile } from "node:fs/promises";
 import { type LibraryOptions, build } from "vite";
 import viteConfig from "../vite.config.js";
 
-async function buildCjs() {
+async function buildMiniprogram() {
   await build({
     ...viteConfig,
     mode: "miniprogram",
@@ -37,4 +37,4 @@ async function buildCjs() {
   );
 }
 
-buildCjs();
+buildMiniprogram();
