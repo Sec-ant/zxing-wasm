@@ -117,3 +117,17 @@ export {
   type ZXingModuleOverrides,
 } from "../share.js";
 export const ZXING_WASM_SHA256 = FULL_HASH;
+
+if (import.meta.env.MODE === "miniprogram") {
+  exports.getOverridesForMiniprogram = (
+    wasmFilePath: string,
+  ): ZXingModuleOverrides => ({
+    instantiateWasm(imports, successCallback) {
+      WebAssembly.instantiate(
+        wasmFilePath as unknown as BufferSource,
+        imports,
+      ).then(({ instance }) => successCallback(instance));
+      return {};
+    },
+  });
+}
