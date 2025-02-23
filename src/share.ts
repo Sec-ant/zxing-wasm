@@ -401,3 +401,46 @@ export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   zxingModule._free(bufferPtr);
   return zxingWriteResultToWriteResult(zxingWriteResult);
 }
+
+if (import.meta.env.MODE === "miniprogram") {
+  /* A bare minimum Blob polyfill */
+  globalThis.Blob ??= class {
+    #blobParts;
+    #options;
+    #zeroUint8Array = new Uint8Array();
+    constructor(blobParts?: BlobPart[], options?: BlobPropertyBag) {
+      console.warn(
+        "For the sake of robustness, a properly implemented Blob polyfill is required.",
+      );
+      this.#blobParts = blobParts as Uint8Array[];
+      this.#options = options;
+    }
+    get size() {
+      return this.#blobParts?.[0]?.byteLength ?? 0;
+    }
+    get type() {
+      return this.#options?.type ?? "";
+    }
+    async arrayBuffer() {
+      return (
+        (this.#blobParts?.[0]?.buffer as ArrayBuffer) ??
+        this.#zeroUint8Array.buffer
+      );
+    }
+    async bytes() {
+      return this.#blobParts?.[0] ?? this.#zeroUint8Array;
+    }
+    slice(): ReturnType<Blob["slice"]> {
+      throw new Error("Not implemented");
+    }
+    stream(): ReturnType<Blob["stream"]> {
+      throw new Error("Not implemented");
+    }
+    text(): ReturnType<Blob["text"]> {
+      throw new Error("Not implemented");
+    }
+    get [Symbol.toStringTag]() {
+      return "Blob";
+    }
+  };
+}
