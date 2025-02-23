@@ -74,7 +74,7 @@ export function setZXingModuleOverrides(
 }
 
 export async function readBarcodes(
-  input: Blob | ImageData,
+  input: Blob | ArrayBuffer | Uint8Array | ImageData,
   readerOptions?: ReaderOptions,
 ) {
   return readBarcodesWithFactory(zxingModuleFactory, input, readerOptions);

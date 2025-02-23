@@ -261,7 +261,7 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
  * Reads barcodes from an image using a ZXing module factory.
  *
  * @param zxingModuleFactory - Factory function to create a ZXing module instance
- * @param input - Source image data as either a Blob or ImageData object
+ * @param input - Source image data as a Blob, ArrayBuffer, Uint8Array, or ImageData
  * @param readerOptions - Optional configuration options for barcode reading (defaults to defaultReaderOptions)
  * @returns An array of ReadResult objects containing decoded barcode information
  *
@@ -271,7 +271,7 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
  */
 export async function readBarcodesWithFactory<T extends "reader" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  input: Blob | ImageData,
+  input: Blob | ArrayBuffer | Uint8Array | ImageData,
   readerOptions: ReaderOptions = defaultReaderOptions,
 ) {
   const requiredReaderOptions: Required<ReaderOptions> = {
@@ -283,18 +283,8 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
   });
   let zxingReadResultVector: ZXingVector<ZXingReadResult>;
   let bufferPtr: number;
-  if ("size" in input) {
-    /* Blob */
-    const { size } = input;
-    const buffer = new Uint8Array(await input.arrayBuffer());
-    bufferPtr = zxingModule._malloc(size);
-    zxingModule.HEAPU8.set(buffer, bufferPtr);
-    zxingReadResultVector = zxingModule.readBarcodesFromImage(
-      bufferPtr,
-      size,
-      readerOptionsToZXingReaderOptions(requiredReaderOptions),
-    );
-  } else {
+
+  if ("width" in input && "height" in input && "data" in input) {
     /* ImageData */
     const {
       data: buffer,
@@ -308,6 +298,28 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
       bufferPtr,
       width,
       height,
+      readerOptionsToZXingReaderOptions(requiredReaderOptions),
+    );
+  } else {
+    let size: number;
+    let buffer: Uint8Array;
+    if ("buffer" in input) {
+      /* Uint8Array */
+      [size, buffer] = [input.byteLength, input];
+    } else if ("byteLength" in input) {
+      /* ArrayBuffer */
+      [size, buffer] = [input.byteLength, new Uint8Array(input)];
+    } else if ("size" in input) {
+      /* Blob */
+      [size, buffer] = [input.size, new Uint8Array(await input.arrayBuffer())];
+    } else {
+      throw new TypeError("Invalid input type");
+    }
+    bufferPtr = zxingModule._malloc(size);
+    zxingModule.HEAPU8.set(buffer, bufferPtr);
+    zxingReadResultVector = zxingModule.readBarcodesFromImage(
+      bufferPtr,
+      size,
       readerOptionsToZXingReaderOptions(requiredReaderOptions),
     );
   }
