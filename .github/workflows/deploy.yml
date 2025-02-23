@@ -30,7 +30,7 @@ jobs:
         run: "pnpm -s docs:build"
 
       - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
+        uses: denoland/deployctl@7bded90d0d09cd99bbfb513966146315db97618b # 1.13.1
         with:
           project: "zxing-wasm"
           entrypoint: "https://deno.land/std/http/file_server.ts"
