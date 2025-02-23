@@ -88,7 +88,7 @@ const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides =
     ? {
         instantiateWasm() {
           throw Error(
-            `To use this library in a WeChat Mini Program, you must provide a custom "instantiateWasm" function, e.g.:
+            `To use zxing-wasm in a WeChat Mini Program, you must provide a custom "instantiateWasm" function, e.g.:
 
 prepareZXingModule({
   overrides: {
@@ -104,7 +104,8 @@ prepareZXingModule({
 Learn more:
 - https://developers.weixin.qq.com/miniprogram/dev/framework/performance/wasm.html
 - https://emscripten.org/docs/api_reference/module.html#Module.instantiateWasm
-- https://github.com/Sec-ant/zxing-wasm#integrating-in-non-web-runtimes`,
+- https://github.com/Sec-ant/zxing-wasm#integrating-in-non-web-runtimes
+`,
           );
         },
       }
