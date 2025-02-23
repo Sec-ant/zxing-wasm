@@ -1,8 +1,10 @@
 import { writeFile } from "node:fs/promises";
+import { rimraf } from "rimraf";
 import { type LibraryOptions, build } from "vite";
 import viteConfig from "../vite.config.js";
 
 async function buildMiniprogram() {
+  await rimraf("dist/miniprogram");
   await build({
     ...viteConfig,
     mode: "miniprogram",

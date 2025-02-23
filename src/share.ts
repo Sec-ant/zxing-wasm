@@ -83,25 +83,50 @@ export const ZXING_WASM_VERSION = NPM_PACKAGE_VERSION;
 
 export const ZXING_CPP_COMMIT = SUBMODULE_COMMIT;
 
-const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides = import.meta.env.PROD
-  ? {
-      locateFile: (path, prefix) => {
-        const match = path.match(/_(.+?)\.wasm$/);
-        if (match) {
-          return `https://fastly.jsdelivr.net/npm/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${match[1]}/${path}`;
+const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides =
+  import.meta.env.MODE === "miniprogram"
+    ? {
+        instantiateWasm() {
+          throw Error(
+            `To use this library in a WeChat Mini Program, you must provide a custom "instantiateWasm" function, e.g.:
+
+prepareZXingModule({
+  overrides: {
+    instantiateWasm(imports, successCallback) {
+      WXWebAssembly.instantiate("path/to/zxing_full.wasm", imports).then(({ instance }) =>
+        successCallback(instance),
+      );
+      return {};
+    },
+  }
+});
+
+Learn more:
+- https://developers.weixin.qq.com/miniprogram/dev/framework/performance/wasm.html
+- https://emscripten.org/docs/api_reference/module.html#Module.instantiateWasm
+- https://github.com/Sec-ant/zxing-wasm#integrating-in-non-web-runtimes`,
+          );
+        },
+      }
+    : import.meta.env.PROD
+      ? {
+          locateFile: (path, prefix) => {
+            const match = path.match(/_(.+?)\.wasm$/);
+            if (match) {
+              return `https://fastly.jsdelivr.net/npm/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${match[1]}/${path}`;
+            }
+            return prefix + path;
+          },
         }
-        return prefix + path;
-      },
-    }
-  : {
-      locateFile: (path, prefix) => {
-        const match = path.match(/_(.+?)\.wasm$/);
-        if (match) {
-          return `/src/${match[1]}/${path}`;
-        }
-        return prefix + path;
-      },
-    };
+      : {
+          locateFile: (path, prefix) => {
+            const match = path.match(/_(.+?)\.wasm$/);
+            if (match) {
+              return `/src/${match[1]}/${path}`;
+            }
+            return prefix + path;
+          },
+        };
 
 type CachedValue<T extends ZXingModuleType = ZXingModuleType> =
   | [ZXingModuleOverrides]
