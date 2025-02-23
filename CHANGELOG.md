@@ -1,5 +1,12 @@
 # zxing-wasm
 
+## 2.1.0
+
+### Minor Changes
+
+- 98bcdb6: Support WeChat Mini Program.
+- 98bcdb6: Accept `ArrayBuffer` and `Uint8Array` as input types in `readBarcodes`.
+
 ## 2.0.2
 
 ### Patch Changes
