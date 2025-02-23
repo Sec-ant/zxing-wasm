@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.0.2
+
+### Patch Changes
+
+- 3d12c62: Bump zxing-cpp to `37b8477` and other deps.
+
 ## 2.0.1
 
 ### Patch Changes
