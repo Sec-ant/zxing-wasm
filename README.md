@@ -336,6 +336,30 @@ If you want to use this library in non-web runtimes (such as Node.js, Bun, Deno,
    });
    ```
 
+> [!NOTE]
+> To use this library in a WeChat mini program <img src="https://github.com/user-attachments/assets/7d8f3337-dd9c-43ec-aab4-8d4e72d32867" width="16" height="16">, there are several things to keep in mind:
+>
+> 1. Only the `zxing-wasm` import path is supported; `zxing-wasm/reader` or `zxing-wasm/writer` is not supported.
+> 2. Before using the library, you need to copy/move the `node_modules/zxing-wasm/dist/full/zxing_full.wasm` file into your project directory.
+> 3. You must use `prepareZXingModule` to configure how the `.wasm` file will be fetched, loaded, and compiled before calling `readBarcodes` or `writeBarcode`. This is mandatory, and you can do so with the following code:
+>
+>    ```typescript
+>    prepareZXingModule({
+>      overrides: {
+>        instantiateWasm(imports, successCallback) {
+>          WXWebAssembly.instantiate("path/to/zxing_full.wasm", imports).then(
+>            ({ instance }) => successCallback(instance),
+>          );
+>          return {};
+>        },
+>      },
+>    });
+>    ```
+>
+>    Note that WeChat mini programs use `WXWebAssembly` instead of the standard `WebAssembly`, and the first argument in `WXWebAssembly.instantiate` should point to the location where the `zxing_full.wasm` file was moved earlier.
+>
+> 4. This library uses a bare minimum `Blob` polyfill in the mini program environment so that no errors will be thrown if you call `writeBarcode`. However, it's recommended to use a full-fledged `Blob` polyfill for not breaking other parts of your program.
+
 > [!IMPORTANT]
 >
 > Each version of this library has a unique corresponding `.wasm` file. If you choose to serve it yourself, please ensure that the `.wasm` file matches the version of the `zxing-wasm` library you are using. Otherwise, you may encounter unexpected errors.
