@@ -83,25 +83,51 @@ export const ZXING_WASM_VERSION = NPM_PACKAGE_VERSION;
 
 export const ZXING_CPP_COMMIT = SUBMODULE_COMMIT;
 
-const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides = import.meta.env.PROD
-  ? {
-      locateFile: (path, prefix) => {
-        const match = path.match(/_(.+?)\.wasm$/);
-        if (match) {
-          return `https://fastly.jsdelivr.net/npm/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${match[1]}/${path}`;
+const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides =
+  import.meta.env.MODE === "miniprogram"
+    ? {
+        instantiateWasm() {
+          throw Error(
+            `To use zxing-wasm in a WeChat Mini Program, you must provide a custom "instantiateWasm" function, e.g.:
+
+prepareZXingModule({
+  overrides: {
+    instantiateWasm(imports, successCallback) {
+      WXWebAssembly.instantiate("path/to/zxing_full.wasm", imports).then(({ instance }) =>
+        successCallback(instance),
+      );
+      return {};
+    },
+  }
+});
+
+Learn more:
+- https://developers.weixin.qq.com/miniprogram/dev/framework/performance/wasm.html
+- https://emscripten.org/docs/api_reference/module.html#Module.instantiateWasm
+- https://github.com/Sec-ant/zxing-wasm#integrating-in-non-web-runtimes
+`,
+          );
+        },
+      }
+    : import.meta.env.PROD
+      ? {
+          locateFile: (path, prefix) => {
+            const match = path.match(/_(.+?)\.wasm$/);
+            if (match) {
+              return `https://fastly.jsdelivr.net/npm/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${match[1]}/${path}`;
+            }
+            return prefix + path;
+          },
         }
-        return prefix + path;
-      },
-    }
-  : {
-      locateFile: (path, prefix) => {
-        const match = path.match(/_(.+?)\.wasm$/);
-        if (match) {
-          return `/src/${match[1]}/${path}`;
-        }
-        return prefix + path;
-      },
-    };
+      : {
+          locateFile: (path, prefix) => {
+            const match = path.match(/_(.+?)\.wasm$/);
+            if (match) {
+              return `/src/${match[1]}/${path}`;
+            }
+            return prefix + path;
+          },
+        };
 
 type CachedValue<T extends ZXingModuleType = ZXingModuleType> =
   | [ZXingModuleOverrides]
@@ -261,7 +287,7 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
  * Reads barcodes from an image using a ZXing module factory.
  *
  * @param zxingModuleFactory - Factory function to create a ZXing module instance
- * @param input - Source image data as either a Blob or ImageData object
+ * @param input - Source image data as a Blob, ArrayBuffer, Uint8Array, or ImageData
  * @param readerOptions - Optional configuration options for barcode reading (defaults to defaultReaderOptions)
  * @returns An array of ReadResult objects containing decoded barcode information
  *
@@ -271,7 +297,7 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
  */
 export async function readBarcodesWithFactory<T extends "reader" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  input: Blob | ImageData,
+  input: Blob | ArrayBuffer | Uint8Array | ImageData,
   readerOptions: ReaderOptions = defaultReaderOptions,
 ) {
   const requiredReaderOptions: Required<ReaderOptions> = {
@@ -283,18 +309,8 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
   });
   let zxingReadResultVector: ZXingVector<ZXingReadResult>;
   let bufferPtr: number;
-  if ("size" in input) {
-    /* Blob */
-    const { size } = input;
-    const buffer = new Uint8Array(await input.arrayBuffer());
-    bufferPtr = zxingModule._malloc(size);
-    zxingModule.HEAPU8.set(buffer, bufferPtr);
-    zxingReadResultVector = zxingModule.readBarcodesFromImage(
-      bufferPtr,
-      size,
-      readerOptionsToZXingReaderOptions(requiredReaderOptions),
-    );
-  } else {
+
+  if ("width" in input && "height" in input && "data" in input) {
     /* ImageData */
     const {
       data: buffer,
@@ -308,6 +324,28 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
       bufferPtr,
       width,
       height,
+      readerOptionsToZXingReaderOptions(requiredReaderOptions),
+    );
+  } else {
+    let size: number;
+    let buffer: Uint8Array;
+    if ("buffer" in input) {
+      /* Uint8Array */
+      [size, buffer] = [input.byteLength, input];
+    } else if ("byteLength" in input) {
+      /* ArrayBuffer */
+      [size, buffer] = [input.byteLength, new Uint8Array(input)];
+    } else if ("size" in input) {
+      /* Blob */
+      [size, buffer] = [input.size, new Uint8Array(await input.arrayBuffer())];
+    } else {
+      throw new TypeError("Invalid input type");
+    }
+    bufferPtr = zxingModule._malloc(size);
+    zxingModule.HEAPU8.set(buffer, bufferPtr);
+    zxingReadResultVector = zxingModule.readBarcodesFromImage(
+      bufferPtr,
+      size,
       readerOptionsToZXingReaderOptions(requiredReaderOptions),
     );
   }
@@ -363,4 +401,47 @@ export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   );
   zxingModule._free(bufferPtr);
   return zxingWriteResultToWriteResult(zxingWriteResult);
+}
+
+if (import.meta.env.MODE === "miniprogram") {
+  /* A bare minimum Blob polyfill */
+  globalThis.Blob ??= class {
+    #blobParts;
+    #options;
+    #zeroUint8Array = new Uint8Array();
+    constructor(blobParts?: BlobPart[], options?: BlobPropertyBag) {
+      console.error(
+        "For the sake of robustness, a properly implemented Blob polyfill is required.",
+      );
+      this.#blobParts = blobParts as Uint8Array[];
+      this.#options = options;
+    }
+    get size() {
+      return this.#blobParts?.[0]?.byteLength ?? 0;
+    }
+    get type() {
+      return this.#options?.type ?? "";
+    }
+    async arrayBuffer() {
+      return (
+        (this.#blobParts?.[0]?.buffer as ArrayBuffer) ??
+        this.#zeroUint8Array.buffer
+      );
+    }
+    async bytes() {
+      return this.#blobParts?.[0] ?? this.#zeroUint8Array;
+    }
+    slice(): ReturnType<Blob["slice"]> {
+      throw new Error("Not implemented");
+    }
+    stream(): ReturnType<Blob["stream"]> {
+      throw new Error("Not implemented");
+    }
+    text(): ReturnType<Blob["text"]> {
+      throw new Error("Not implemented");
+    }
+    get [Symbol.toStringTag]() {
+      return "Blob";
+    }
+  };
 }

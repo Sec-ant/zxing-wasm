@@ -9,6 +9,7 @@
   ],
   "main": "./dist/cjs/full/index.js",
   "module": "./dist/es/full/index.js",
+  "miniprogram": "./dist/miniprogram",
   "exports": {
     ".": {
       "import": "./dist/es/full/index.js",
@@ -171,7 +172,8 @@
     "build:es": "vite build",
     "build:cjs": "tsx ./scripts/build-cjs.ts",
     "build:iife": "tsx ./scripts/build-iife.ts",
-    "build": "conc \"pnpm:build:es\" \"pnpm:build:cjs\" \"pnpm:build:iife\"",
+    "build:miniprogram": "tsx ./scripts/build-miniprogram.ts",
+    "build": "conc \"pnpm:build:es\" \"pnpm:build:cjs\" \"pnpm:build:iife\" \"pnpm:build:miniprogram\"",
     "postbuild:es": "tsc -p ./tsconfig.pkg.json --declarationDir ./dist/es",
     "postbuild:cjs": "tsc -p ./tsconfig.pkg.json --declarationDir ./dist/cjs",
     "postbuild": "conc \"pnpm:copy:wasm\" \"pnpm:docs:build\"",
@@ -189,6 +191,7 @@
     "@babel/types": "^7.26.9",
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.28.1",
+    "@napi-rs/canvas": "^0.1.67",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^22.13.5",
     "@vitest/ui": "^3.0.6",
