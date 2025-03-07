@@ -219,7 +219,7 @@
   "peerDependencies": {
     "@types/emscripten": ">=1.39.6"
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
