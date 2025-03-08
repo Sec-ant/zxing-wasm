@@ -36,5 +36,10 @@
   "readerInit": true,
   "lineCount": 0,
   "version": "1",
+  "symbol": {
+    "data": "ad5078d",
+    "width": 10,
+    "height": 10
+  },
   "eccLevel": ""
 }
