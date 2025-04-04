@@ -205,7 +205,7 @@
     "simple-git-hooks": "^2.11.1",
     "tinyglobby": "^0.2.12",
     "tsx": "^4.19.3",
-    "typedoc": "^0.27.8",
+    "typedoc": "^0.28.0",
     "typedoc-plugin-replace-text": "^4.1.0",
     "typescript": "^5.7.3",
     "vite": "^6.1.1",
