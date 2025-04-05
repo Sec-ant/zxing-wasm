@@ -2,11 +2,11 @@
   "isValid": true,
   "error": "",
   "format": "DataBar",
-  "bytes": "f562a41",
-  "bytesECI": "7753e81",
-  "text": "20358468019312",
+  "bytes": "4d0d6be",
+  "bytesECI": "9e93b63",
+  "text": "0120358468019312",
   "ecLevel": "",
-  "contentType": "Text",
+  "contentType": "GS1",
   "hasECI": false,
   "position": {
     "topLeft": {
