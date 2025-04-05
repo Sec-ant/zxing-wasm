@@ -2,31 +2,31 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
-  "bytes": "6664752",
-  "bytesECI": "566f517",
-  "text": "MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;",
+  "bytes": "ac6bb66",
+  "bytesECI": "59347cc",
+  "text": "https://www.google.com",
   "ecLevel": "H",
   "contentType": "Text",
-  "hasECI": false,
+  "hasECI": true,
   "position": {
     "topLeft": {
-      "x": 8,
-      "y": 105
+      "x": 13,
+      "y": 13
     },
     "topRight": {
-      "x": 8,
-      "y": 10
+      "x": 245,
+      "y": 13
     },
     "bottomRight": {
-      "x": 101,
-      "y": 11
+      "x": 245,
+      "y": 245
     },
     "bottomLeft": {
-      "x": 102,
-      "y": 105
+      "x": 13,
+      "y": 245
     }
   },
-  "orientation": -90,
+  "orientation": 0,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]Q1",
@@ -35,6 +35,6 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "8",
+  "version": "3",
   "eccLevel": "H"
 }
