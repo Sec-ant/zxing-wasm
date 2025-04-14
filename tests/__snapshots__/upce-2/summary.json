@@ -28,7 +28,7 @@
         "images": [
           {
             "path": "14.png",
-            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+            "description": "[Text content mismatch]: expected '0049000006346', but got '0049040000014'"
           }
         ]
       },
@@ -55,7 +55,7 @@
         "images": [
           {
             "path": "14.png",
-            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+            "description": "[Text content mismatch]: expected '0049000006346', but got '0049040000014'"
           }
         ]
       },
@@ -77,7 +77,7 @@
         "images": [
           {
             "path": "14.png",
-            "description": "[Text content mismatch]: expected '04963406', but got '04904144'"
+            "description": "[Text content mismatch]: expected '0049000006346', but got '0049040000014'"
           }
         ]
       },

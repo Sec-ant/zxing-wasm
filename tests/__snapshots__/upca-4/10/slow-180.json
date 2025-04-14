@@ -1,29 +1,29 @@
 {
   "isValid": true,
   "error": "",
-  "format": "EAN-13",
-  "bytes": "0130940",
-  "bytesECI": "0f6b49f",
-  "text": "9000771010995",
+  "format": "UPC-A",
+  "bytes": "d19f915",
+  "bytesECI": "c648ae4",
+  "text": "0066721010995",
   "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
     "topLeft": {
       "x": 301,
-      "y": 229
+      "y": 225
     },
     "topRight": {
       "x": 123,
-      "y": 229
+      "y": 225
     },
     "bottomRight": {
-      "x": 123,
-      "y": 230
+      "x": 125,
+      "y": 270
     },
     "bottomLeft": {
-      "x": 301,
-      "y": 230
+      "x": 302,
+      "y": 270
     }
   },
   "orientation": 180,
