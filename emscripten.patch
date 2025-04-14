@@ -21,7 +21,7 @@ index c1e0998c5..a36e268b4 100644
    }
  #if MODULARIZE
 diff --git a/src/shell_minimal.js b/src/shell_minimal.js
-index 60c708960..54c9b8821 100644
+index 60c708960..bb0d70dd2 100644
 --- a/src/shell_minimal.js
 +++ b/src/shell_minimal.js
 @@ -134,7 +134,7 @@ var ENVIRONMENT_IS_PTHREAD = ENVIRONMENT_IS_WORKER && self.name?.startsWith('em-
@@ -29,7 +29,7 @@ index 60c708960..54c9b8821 100644
  // In MODULARIZE mode _scriptName needs to be captured already at the very top of the page immediately when the page is parsed, so it is generated there
  // before the page load. In non-MODULARIZE modes generate it here.
 -var _scriptName = (typeof document != 'undefined') ? document.currentScript?.src : undefined;
-+var _scriptName = (typeof document != 'undefined' && document.currentScript?.tagName.toUpperCase() === 'SCRIPT') ? document.currentScript?.src : undefined;
++var _scriptName = (typeof document != 'undefined' && document.currentScript?.tagName.toUpperCase() === 'SCRIPT') ? document.currentScript.src : undefined;
  #endif
  
  #if ENVIRONMENT_MAY_BE_NODE
