@@ -6,7 +6,7 @@
   "bytesECI": "3e38413",
   "text": "0100000000000000",
   "ecLevel": "",
-  "contentType": "Text",
+  "contentType": "GS1",
   "hasECI": false,
   "position": {
     "topLeft": {

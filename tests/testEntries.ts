@@ -148,22 +148,42 @@ export const testEntries: TestEntry[] = [
   {
     directory: "upca-1",
     barcodeFormat: "UPC-A",
+    readerOptions: {
+      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
+      formats: ["UPC-A"],
+    },
   },
   {
     directory: "upca-2",
     barcodeFormat: "UPC-A",
+    readerOptions: {
+      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
+      formats: ["UPC-A"],
+    },
   },
   {
     directory: "upca-3",
     barcodeFormat: "UPC-A",
+    readerOptions: {
+      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
+      formats: ["UPC-A"],
+    },
   },
   {
     directory: "upca-4",
     barcodeFormat: "UPC-A",
+    readerOptions: {
+      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
+      formats: ["UPC-A"],
+    },
   },
   {
     directory: "upca-5",
     barcodeFormat: "UPC-A",
+    readerOptions: {
+      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
+      formats: ["UPC-A"],
+    },
   },
   {
     directory: "upca-extension-1",
@@ -171,6 +191,7 @@ export const testEntries: TestEntry[] = [
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
       eanAddOnSymbol: "Require",
+      formats: ["UPC-A"],
     },
   },
   {

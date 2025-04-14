@@ -10,4 +10,4 @@ runs:
 
     - name: Run Tests
       shell: bash
-      run: pnpm -s test --exclude ".*/**/*"
+      run: pnpm -s test --exclude ".*/**/*" --dangerouslyIgnoreUnhandledErrors

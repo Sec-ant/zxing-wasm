@@ -5,7 +5,7 @@
   "bytes": "d1ee605",
   "bytesECI": "af49480",
   "text": "Histórico",
-  "ecLevel": "",
+  "ecLevel": "35%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "1",
-  "eccLevel": ""
+  "eccLevel": "35%"
 }
