@@ -1,3 +1,21 @@
+diff --git a/src/preamble.js b/src/preamble.js
+index 271cb6c59..e69596aea 100644
+--- a/src/preamble.js
++++ b/src/preamble.js
+@@ -584,11 +584,11 @@ function findWasmBinary() {
+ #if SINGLE_FILE && WASM == 1 && !WASM2JS
+   return base64Decode('<<< WASM_BINARY_DATA >>>');
+ #else
+-#if EXPORT_ES6 && !AUDIO_WORKLET
++#if EXPORT_ES6 && false && !AUDIO_WORKLET
+   if (Module['locateFile']) {
+ #endif
+     return locateFile('{{{ WASM_BINARY_FILE }}}');
+-#if EXPORT_ES6 && !AUDIO_WORKLET // For an Audio Worklet, we cannot use `new URL()`.
++#if EXPORT_ES6 && false && !AUDIO_WORKLET // For an Audio Worklet, we cannot use `new URL()`.
+   }
+ #if ENVIRONMENT_MAY_BE_SHELL
+   if (ENVIRONMENT_IS_SHELL) {
 diff --git a/src/shell.js b/src/shell.js
 index c1e0998c5..a36e268b4 100644
 --- a/src/shell.js
