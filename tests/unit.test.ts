@@ -239,7 +239,13 @@ describe("readBarcodes input", async () => {
     const context = canvas.getContext("2d");
     context.drawImage(image, 0, 0, image.width, image.height);
     const imageData = context.getImageData(0, 0, image.width, image.height);
-    const readResult = await readBarcodes(imageData);
+
+    Object.defineProperty(imageData, "colorSpace", {
+      value: "srgb",
+      writable: false,
+    });
+
+    const readResult = await readBarcodes(imageData as ImageData);
     expect(readResult).length(1);
     expect(readResult[0].text).toBe("http://en.m.wikipedia.org");
   });
