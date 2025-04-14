@@ -5,7 +5,7 @@
   "bytes": "b569ba8",
   "bytesECI": "b61e457",
   "text": "01095040000591012112345678p901<GS>101234567p<GS>171411208200http://www.gs1.org/demo/",
-  "ecLevel": "",
+  "ecLevel": "34%",
   "contentType": "GS1",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "4",
-  "eccLevel": ""
+  "eccLevel": "34%"
 }
