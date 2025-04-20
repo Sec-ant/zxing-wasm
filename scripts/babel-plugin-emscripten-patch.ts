@@ -109,7 +109,7 @@ function logPatchResults(
  * 1. Declares `ENVIRONMENT_IS_BUN` based on `typeof Bun`.
  * 2. Adds `ENVIRONMENT_IS_BUN` to the environment check logic.
  * 3. Modifies the `new URL(...)` expression for the WASM file to work correctly with Vite
- *    and adds a `?no-inline` query and `@vite-ignore` comment.
+ *    and adds a `@vite-ignore` comment.
  */
 export function emscriptenPatch(): PluginItem {
   return {
@@ -198,8 +198,7 @@ export function emscriptenPatch(): PluginItem {
             const type = match[2]; // 'reader', 'writer', or 'full'
             const baseFilename = match[1]; // e.g., 'zxing_reader.wasm'
             // Construct the new relative URL path expected by the Vite setup.
-            // Adds `?no-inline` to hint that the asset should not be inlined.
-            const newUrl = `../../${type}/${baseFilename}.wasm`; /* ?no-inline`; */
+            const newUrl = `../../${type}/${baseFilename}.wasm`;
 
             // Create a new string literal node for the modified URL.
             const newArgNode = t.stringLiteral(newUrl);
