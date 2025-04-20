@@ -11,6 +11,7 @@ const URL_CONSTRUCTOR = "URL";
 const IMPORT_META = "import";
 const META_PROPERTY = "meta";
 const URL_PROPERTY = "url";
+const SCRIPT_NAME_VAR = "_scriptName"; // Added constant
 const WASM_FILE_REGEX = /^(zxing_(reader|writer|full))\.wasm$/;
 const VITE_IGNORE_COMMENT: t.CommentBlock = {
   type: "CommentBlock",
@@ -50,7 +51,12 @@ function isNewWasmUrlExpression(node: t.Node): node is t.NewExpression {
  */
 function logPatchResults(
   this: PluginPass,
-  state: { declared: boolean; checked: boolean; urlPatched: boolean },
+  state: {
+    declared: boolean;
+    checked: boolean;
+    urlPatched: boolean;
+    scriptNamePatched: boolean;
+  },
 ) {
   const filename = this.file.opts.filename ?? "unknown file";
   const relativeFilename = filename.replace(`${process.cwd()}/`, "");
@@ -86,6 +92,10 @@ function logPatchResults(
     addLog("error", "❗️", "\x1b[33m", "WASM URL not patched for Vite");
     allPatchesSuccessful = false;
   }
+  if (!state.scriptNamePatched) {
+    addLog("error", "❗️", "\x1b[33m", "_scriptName variable not patched");
+    allPatchesSuccessful = false;
+  }
 
   // Log overall success or failure for the file
   if (allPatchesSuccessful) {
@@ -110,6 +120,7 @@ function logPatchResults(
  * 2. Adds `ENVIRONMENT_IS_BUN` to the environment check logic.
  * 3. Modifies the `new URL(...)` expression for the WASM file to work correctly with Vite
  *    and adds a `@vite-ignore` comment.
+ * 4. Removes the initializer from `var _scriptName = import.meta.url;`.
  */
 export function emscriptenPatch(): PluginItem {
   return {
@@ -121,34 +132,63 @@ export function emscriptenPatch(): PluginItem {
       this.set("declared", false); // Tracks if ENVIRONMENT_IS_BUN was declared
       this.set("checked", false); // Tracks if the environment check was modified
       this.set("urlPatched", false); // Tracks if the WASM URL was patched
+      this.set("scriptNamePatched", false); // Tracks if _scriptName was patched
     },
     visitor: {
       // Visitor for VariableDeclaration nodes in the AST.
       VariableDeclaration(path) {
         // Check if we already declared the Bun environment variable in this file.
-        if (this.get("declared")) return;
+        // Use separate checks for different variable declarations.
 
-        const declaration = path.node.declarations[0];
-        // Target the specific Emscripten variable declaration: `var ENVIRONMENT_IS_WEB = ...;`
-        if (
-          path.node.kind === "var" &&
-          t.isIdentifier(declaration?.id, { name: ENV_WEB })
-        ) {
-          // Create the AST node for: `var ENVIRONMENT_IS_BUN = typeof Bun !== 'undefined';`
-          const bunEnvDeclaration = t.variableDeclaration("var", [
-            t.variableDeclarator(
-              t.identifier(ENV_BUN),
-              t.binaryExpression(
-                "!==", // Not strictly equal
-                t.unaryExpression("typeof", t.identifier(BUN_IDENTIFIER)), // typeof Bun
-                t.stringLiteral(UNDEFINED_STRING), // "undefined"
+        // --- Patch 1: Declare ENVIRONMENT_IS_BUN ---
+        if (!this.get("declared")) {
+          const declaration = path.node.declarations[0];
+          // Target the specific Emscripten variable declaration: `var ENVIRONMENT_IS_WEB = ...;`
+          if (
+            path.node.kind === "var" &&
+            t.isIdentifier(declaration?.id, { name: ENV_WEB })
+          ) {
+            // Create the AST node for: `var ENVIRONMENT_IS_BUN = typeof Bun !== 'undefined';`
+            const bunEnvDeclaration = t.variableDeclaration("var", [
+              t.variableDeclarator(
+                t.identifier(ENV_BUN),
+                t.binaryExpression(
+                  "!==", // Not strictly equal
+                  t.unaryExpression("typeof", t.identifier(BUN_IDENTIFIER)), // typeof Bun
+                  t.stringLiteral(UNDEFINED_STRING), // "undefined"
+                ),
               ),
-            ),
-          ]);
-          // Insert the new declaration immediately after the ENVIRONMENT_IS_WEB declaration.
-          path.insertAfter(bunEnvDeclaration);
-          // Mark this patch as completed for the current file.
-          this.set("declared", true);
+            ]);
+            // Insert the new declaration immediately after the ENVIRONMENT_IS_WEB declaration.
+            path.insertAfter(bunEnvDeclaration);
+            // Mark this patch as completed for the current file.
+            this.set("declared", true);
+          }
+        }
+
+        // --- Patch 4: Modify _scriptName declaration ---
+        if (!this.get("scriptNamePatched")) {
+          const declaration = path.node.declarations[0];
+          // Target `var _scriptName = import.meta.url;`
+          if (
+            path.node.kind === "var" &&
+            path.node.declarations.length === 1 && // Ensure only one declarator
+            t.isIdentifier(declaration.id, { name: SCRIPT_NAME_VAR }) &&
+            t.isMemberExpression(declaration.init) && // Check if init is MemberExpression
+            t.isMetaProperty(declaration.init.object) && // Check if object is MetaProperty (import.meta)
+            t.isIdentifier(declaration.init.object.meta, {
+              name: IMPORT_META,
+            }) &&
+            t.isIdentifier(declaration.init.object.property, {
+              name: META_PROPERTY,
+            }) &&
+            t.isIdentifier(declaration.init.property, { name: URL_PROPERTY }) // Check if property is 'url'
+          ) {
+            // Remove the initializer (import.meta.url)
+            declaration.init = null;
+            // Mark this patch as completed for the current file.
+            this.set("scriptNamePatched", true);
+          }
         }
       },
       // Visitor for LogicalExpression nodes (like || and &&).
@@ -221,6 +261,7 @@ export function emscriptenPatch(): PluginItem {
         declared: this.get("declared"),
         checked: this.get("checked"),
         urlPatched: this.get("urlPatched"),
+        scriptNamePatched: this.get("scriptNamePatched"),
       };
       // Log the results of the patching process for this file using the collected state.
       logPatchResults.call(this, finalState);
