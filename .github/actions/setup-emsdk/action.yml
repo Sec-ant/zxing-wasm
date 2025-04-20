@@ -24,8 +24,3 @@ runs:
       with:
         version: ${{ inputs.emsdk-version }}
         actions-cache-folder: ${{ inputs.emsdk-cache-dir }}
-
-    - name: Patch emscripten
-      shell: bash
-      # You need to checkout the zxing-wasm repo first!
-      run: ./scripts/patch-emscripten.sh
