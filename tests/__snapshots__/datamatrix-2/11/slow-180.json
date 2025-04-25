@@ -3,7 +3,7 @@
   "error": "",
   "format": "DataMatrix",
   "bytes": "d42d407",
-  "bytesECI": "b893506",
+  "bytesECI": "c013fd4",
   "text": "This is a test of our DataMatrix support using a longer piece of text, and therefore a more dense barcode.",
   "ecLevel": "",
   "contentType": "Text",

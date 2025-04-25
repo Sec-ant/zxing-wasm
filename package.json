@@ -193,8 +193,8 @@
     "@changesets/cli": "^2.29.2",
     "@napi-rs/canvas": "^0.1.69",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.14.1",
-    "@vitest/ui": "^3.1.1",
+    "@types/node": "^22.15.2",
+    "@vitest/ui": "^3.1.2",
     "concurrently": "^9.1.2",
     "copy-files-from-to": "^3.12.1",
     "jimp": "^1.6.0",
@@ -202,15 +202,15 @@
     "prettier": "^3.5.3",
     "pretty-quick": "^4.1.1",
     "rimraf": "^6.0.1",
-    "simple-git-hooks": "^2.12.1",
+    "simple-git-hooks": "^2.13.0",
     "tinyglobby": "^0.2.13",
     "tsx": "^4.19.3",
     "typedoc": "^0.28.3",
     "typedoc-plugin-replace-text": "^4.2.0",
     "typescript": "^5.8.3",
-    "vite": "^6.3.2",
+    "vite": "^6.3.3",
     "vite-plugin-babel": "^1.3.0",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.2"
   },
   "dependencies": {
     "@types/emscripten": "^1.40.1",
@@ -219,7 +219,7 @@
   "peerDependencies": {
     "@types/emscripten": ">=1.39.6"
   },
-  "packageManager": "pnpm@10.8.1+sha512.c50088ba998c67b8ca8c99df8a5e02fd2ae2e2b29aaf238feaa9e124248d3f48f9fb6db2424949ff901cffbb5e0f0cc1ad6aedb602cd29450751d11c35023677",
+  "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",

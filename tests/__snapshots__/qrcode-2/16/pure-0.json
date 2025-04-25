@@ -3,7 +3,7 @@
   "error": "",
   "format": "QRCode",
   "bytes": "2a04fa8",
-  "bytesECI": "d17923a",
+  "bytesECI": "ae0d6b2",
   "text": "[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/",
   "ecLevel": "H",
   "contentType": "Text",

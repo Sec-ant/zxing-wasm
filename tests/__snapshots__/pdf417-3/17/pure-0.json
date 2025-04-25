@@ -3,7 +3,7 @@
   "error": "",
   "format": "PDF417",
   "bytes": "1f804ad",
-  "bytesECI": "8945dd4",
+  "bytesECI": "f281d47",
   "text": "A larger PDF417 barcode with text and error correction level 8.",
   "ecLevel": "93%",
   "contentType": "Text",
