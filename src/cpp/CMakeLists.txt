@@ -51,7 +51,8 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -s DYNAMIC_EXECUTION=0 \
   -s EXPORT_NAME=ZXing \
   -s EXPORTED_FUNCTIONS=\"['_malloc', '_free']\" \
-  -s ALLOW_MEMORY_GROWTH=1"
+  -s ALLOW_MEMORY_GROWTH=1 \
+  -s STACK_SIZE=5242880"
 )
 
 # Add subdirectories
