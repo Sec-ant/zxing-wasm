@@ -3,9 +3,9 @@
   "error": "",
   "format": "Aztec",
   "bytes": "fb891ef",
-  "bytesECI": "6bbbf03",
+  "bytesECI": "97f322c",
   "text": "Code 2D!",
-  "ecLevel": "",
+  "ecLevel": "52%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "1",
-  "eccLevel": ""
+  "eccLevel": "52%"
 }

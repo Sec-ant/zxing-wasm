@@ -83,7 +83,9 @@ export default defineConfig({
     SUBMODULE_COMMIT: JSON.stringify(
       execSync("git submodule status | cut -c-41", {
         encoding: "utf-8",
-      }).trim(),
+      })
+        .trim()
+        .replace(/[^0-9a-f]/g, ""),
     ),
   },
   test: {

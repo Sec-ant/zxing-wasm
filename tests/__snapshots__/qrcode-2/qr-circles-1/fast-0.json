@@ -1,0 +1,40 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "QRCode",
+  "bytes": "ac6bb66",
+  "bytesECI": "59347cc",
+  "text": "https://www.google.com",
+  "ecLevel": "H",
+  "contentType": "Text",
+  "hasECI": true,
+  "position": {
+    "topLeft": {
+      "x": 13,
+      "y": 13
+    },
+    "topRight": {
+      "x": 245,
+      "y": 13
+    },
+    "bottomRight": {
+      "x": 245,
+      "y": 245
+    },
+    "bottomLeft": {
+      "x": 13,
+      "y": 245
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]Q1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 0,
+  "version": "3",
+  "eccLevel": "H"
+}

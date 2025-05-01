@@ -1,7 +1,7 @@
 {
-  "total": 51,
-  "passAll": 22,
-  "passSome": 48,
+  "total": 53,
+  "passAll": 23,
+  "passSome": 50,
   "fast": {
     "0": {
       "failures": 6,
@@ -108,7 +108,7 @@
   },
   "pure": {
     "0": {
-      "failures": 29,
+      "failures": 30,
       "misreads": {
         "total": 1,
         "images": [
@@ -119,7 +119,7 @@
         ]
       },
       "undetected": {
-        "total": 28,
+        "total": 29,
         "images": [
           "#142.jpg",
           "#199b.jpg",
@@ -147,6 +147,7 @@
           "fix-finderpattern-order.jpg",
           "fix-traceline.jpg",
           "high-res-1.jpg",
+          "qr-circles-1.png",
           "qr-inv-1.jpg",
           "qr-inv-2.jpg"
         ]

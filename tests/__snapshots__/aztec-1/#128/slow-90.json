@@ -3,9 +3,9 @@
   "error": "",
   "format": "Aztec",
   "bytes": "f9a6acb",
-  "bytesECI": "b554ded",
+  "bytesECI": "2b8098c",
   "text": "This is an example Aztec symbol for Wikipedia.",
-  "ecLevel": "",
+  "ecLevel": "37%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "3",
-  "eccLevel": ""
+  "eccLevel": "37%"
 }

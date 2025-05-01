@@ -3,9 +3,9 @@
   "error": "",
   "format": "Aztec",
   "bytes": "76525a3",
-  "bytesECI": "14f652e",
+  "bytesECI": "8733a86",
   "text": "Históóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóórico",
-  "ecLevel": "",
+  "ecLevel": "12%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "6",
-  "eccLevel": ""
+  "eccLevel": "12%"
 }

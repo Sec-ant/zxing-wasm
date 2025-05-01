@@ -187,42 +187,43 @@
     "test:ui": "vitest --hideSkippedTests --ui"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/types": "^7.26.9",
+    "@babel/core": "^7.27.1",
+    "@babel/types": "^7.27.1",
     "@biomejs/biome": "1.9.4",
-    "@changesets/cli": "^2.28.1",
-    "@napi-rs/canvas": "^0.1.67",
+    "@changesets/cli": "^2.29.2",
+    "@napi-rs/canvas": "^0.1.69",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.13.5",
-    "@vitest/ui": "^3.0.6",
+    "@types/node": "^22.15.3",
+    "@vitest/ui": "^3.1.2",
     "concurrently": "^9.1.2",
     "copy-files-from-to": "^3.12.1",
     "jimp": "^1.6.0",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.5.2",
-    "pretty-quick": "^4.0.0",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
+    "pretty-quick": "^4.1.1",
     "rimraf": "^6.0.1",
-    "simple-git-hooks": "^2.11.1",
-    "tinyglobby": "^0.2.12",
-    "tsx": "^4.19.3",
-    "typedoc": "^0.28.0",
-    "typedoc-plugin-replace-text": "^4.1.0",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.1",
-    "vite-plugin-babel": "^1.3.0",
-    "vitest": "^3.0.6"
+    "simple-git-hooks": "^2.13.0",
+    "tinyglobby": "^0.2.13",
+    "tsx": "^4.19.4",
+    "typedoc": "^0.28.3",
+    "typedoc-plugin-replace-text": "^4.2.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4",
+    "vite-plugin-babel": "^1.3.1",
+    "vitest": "^3.1.2"
   },
   "dependencies": {
-    "@types/emscripten": "^1.40.0",
-    "type-fest": "^4.35.0"
+    "@types/emscripten": "^1.40.1",
+    "type-fest": "^4.40.1"
   },
   "peerDependencies": {
     "@types/emscripten": ">=1.39.6"
   },
-  "packageManager": "pnpm@10.8.1+sha512.c50088ba998c67b8ca8c99df8a5e02fd2ae2e2b29aaf238feaa9e124248d3f48f9fb6db2424949ff901cffbb5e0f0cc1ad6aedb602cd29450751d11c35023677",
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild"
+      "esbuild",
+      "simple-git-hooks"
     ]
   }
 }

@@ -3,9 +3,9 @@
   "error": "",
   "format": "Aztec",
   "bytes": "ceaa28b",
-  "bytesECI": "999a12a",
+  "bytesECI": "2f3b0ad",
   "text": "3456",
-  "ecLevel": "",
+  "ecLevel": "14%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "1",
-  "eccLevel": ""
+  "eccLevel": "14%"
 }

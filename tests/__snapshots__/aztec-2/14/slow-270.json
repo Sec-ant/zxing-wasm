@@ -3,9 +3,9 @@
   "error": "",
   "format": "Aztec",
   "bytes": "150bd79",
-  "bytesECI": "5e4ff84",
+  "bytesECI": "5adb247",
   "text": "mailto:zxing@googlegroups.com",
-  "ecLevel": "",
+  "ecLevel": "25%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "2",
-  "eccLevel": ""
+  "eccLevel": "25%"
 }

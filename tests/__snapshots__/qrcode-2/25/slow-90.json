@@ -3,15 +3,15 @@
   "error": "",
   "format": "QRCode",
   "bytes": "6664752",
-  "bytesECI": "566f517",
+  "bytesECI": "a10bca2",
   "text": "MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;",
   "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 7,
-      "y": 104
+      "x": 8,
+      "y": 105
     },
     "topRight": {
       "x": 8,

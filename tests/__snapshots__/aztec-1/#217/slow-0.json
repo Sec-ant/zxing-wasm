@@ -3,9 +3,9 @@
   "error": "",
   "format": "Aztec",
   "bytes": "577a6f6",
-  "bytesECI": "17f8f0b",
+  "bytesECI": "c00ca42",
   "text": "I have the best words.",
-  "ecLevel": "",
+  "ecLevel": "50%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -36,5 +36,5 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "2",
-  "eccLevel": ""
+  "eccLevel": "50%"
 }

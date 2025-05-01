@@ -3,7 +3,7 @@
   "error": "",
   "format": "PDF417",
   "bytes": "8e37a35",
-  "bytesECI": "5a779f6",
+  "bytesECI": "ecb97e8",
   "text": "A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.",
   "ecLevel": "9%",
   "contentType": "Text",

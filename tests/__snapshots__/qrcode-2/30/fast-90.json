@@ -3,7 +3,7 @@
   "error": "",
   "format": "QRCode",
   "bytes": "49cc0cc",
-  "bytesECI": "f9eb980",
+  "bytesECI": "91278e2",
   "text": "MECARD:N:測試;;",
   "ecLevel": "L",
   "contentType": "Text",
