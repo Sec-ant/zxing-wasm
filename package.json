@@ -187,8 +187,8 @@
     "test:ui": "vitest --hideSkippedTests --ui"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/types": "^7.27.0",
+    "@babel/core": "^7.27.1",
+    "@babel/types": "^7.27.1",
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.29.2",
     "@napi-rs/canvas": "^0.1.69",
