@@ -1,5 +1,12 @@
 # zxing-wasm
 
+## 2.1.2
+
+### Patch Changes
+
+- 0be5882: Fix unexpected `new URL(..., import.meta.url)` expansion when bundling this package on the consumer side.
+- 0be5882: Bump `zxing-cpp` to `a1516b3` and bump other deps.
+
 ## 2.1.1
 
 ### Patch Changes
