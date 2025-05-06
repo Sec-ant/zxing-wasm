@@ -7,41 +7,12 @@ const ENV_WORKER = "ENVIRONMENT_IS_WORKER";
 const ENV_BUN = "ENVIRONMENT_IS_BUN";
 const BUN_IDENTIFIER = "Bun";
 const UNDEFINED_STRING = "undefined";
-const URL_CONSTRUCTOR = "URL";
 const IMPORT_META = "import";
 const META_PROPERTY = "meta";
 const URL_PROPERTY = "url";
 const SCRIPT_NAME_VAR = "_scriptName"; // Added constant
-const WASM_FILE_REGEX = /^(zxing_(reader|writer|full))\.wasm$/;
-const VITE_IGNORE_COMMENT: t.CommentBlock = {
-  type: "CommentBlock",
-  value: " @vite-ignore ", // Instructs Vite to not inline the WASM asset
-};
 
 // --- Helper Functions ---
-
-/**
- * Checks if a Babel AST node represents the specific pattern:
- * `new URL("<some-wasm-file>.wasm", import.meta.url)`
- * used by Emscripten to locate the WASM file.
- * @param node The Babel AST node to check.
- * @returns True if the node matches the pattern, false otherwise.
- */
-function isNewWasmUrlExpression(node: t.Node): node is t.NewExpression {
-  return (
-    t.isNewExpression(node) &&
-    t.isIdentifier(node.callee, { name: URL_CONSTRUCTOR }) &&
-    node.arguments.length >= 2 &&
-    t.isStringLiteral(node.arguments[0]) && // First argument is a string literal (the filename)
-    t.isMemberExpression(node.arguments[1]) && // Second argument is import.meta.url
-    t.isMetaProperty(node.arguments[1].object) &&
-    t.isIdentifier(node.arguments[1].object.meta, { name: IMPORT_META }) &&
-    t.isIdentifier(node.arguments[1].object.property, {
-      name: META_PROPERTY,
-    }) &&
-    t.isIdentifier(node.arguments[1].property, { name: URL_PROPERTY })
-  );
-}
 
 /**
  * Logs the results of the patching process for the current file being processed by Babel.
@@ -54,7 +25,7 @@ function logPatchResults(
   state: {
     declared: boolean;
     checked: boolean;
-    urlPatched: boolean;
+    findWasmBinaryPatched: boolean; // Renamed from wasmUrlPatched
     scriptNamePatched: boolean;
   },
 ) {
@@ -88,8 +59,8 @@ function logPatchResults(
     addLog("error", "❗️", "\x1b[33m", "Bun environment check not added");
     allPatchesSuccessful = false;
   }
-  if (!state.urlPatched) {
-    addLog("error", "❗️", "\x1b[33m", "WASM URL not patched for Vite");
+  if (!state.findWasmBinaryPatched) {
+    addLog("error", "❗️", "\x1b[33m", "findWasmBinary function not patched");
     allPatchesSuccessful = false;
   }
   if (!state.scriptNamePatched) {
@@ -121,6 +92,7 @@ function logPatchResults(
  * 3. Modifies the `new URL(...)` expression for the WASM file to work correctly with Vite
  *    and adds a `@vite-ignore` comment.
  * 4. Removes the initializer from `var _scriptName = import.meta.url;`.
+ * 5. Patches the `findWasmBinary` function to replace its body with a call to `locateFile`.
  */
 export function emscriptenPatch(): PluginItem {
   return {
@@ -131,7 +103,7 @@ export function emscriptenPatch(): PluginItem {
       // Using `this.set()` stores state specific to the processing of this file.
       this.set("declared", false); // Tracks if ENVIRONMENT_IS_BUN was declared
       this.set("checked", false); // Tracks if the environment check was modified
-      this.set("urlPatched", false); // Tracks if the WASM URL was patched
+      this.set("findWasmBinaryPatched", false); // Tracks if the findWasmBinary function was patched
       this.set("scriptNamePatched", false); // Tracks if _scriptName was patched
     },
     visitor: {
@@ -222,34 +194,42 @@ export function emscriptenPatch(): PluginItem {
           this.set("checked", true);
         }
       },
-      // Visitor for NewExpression nodes (like `new URL(...)`).
-      NewExpression(path) {
-        // Check if we already patched the WASM URL in this file.
-        if (this.get("urlPatched")) return;
+      // Visitor for FunctionDeclaration nodes to patch findWasmBinary
+      FunctionDeclaration(path) {
+        if (this.get("findWasmBinaryPatched")) return;
 
-        // Check if this node matches the specific `new URL("*.wasm", import.meta.url)` pattern.
-        if (isNewWasmUrlExpression(path.node)) {
-          const urlArg = path.node.arguments[0] as t.StringLiteral; // The first argument (filename)
-          const originalUrl = urlArg.value;
+        if (path.node.id && path.node.id.name === "findWasmBinary") {
+          const functionBodyPath = path.get("body");
+          if (!functionBodyPath.isBlockStatement()) return;
 
-          // Check if the filename matches the expected WASM file pattern.
-          const match = originalUrl.match(WASM_FILE_REGEX);
-          if (match) {
-            const type = match[2]; // 'reader', 'writer', or 'full'
-            const baseFilename = match[1]; // e.g., 'zxing_reader.wasm'
-            // Construct the new relative URL path expected by the Vite setup.
-            const newUrl = `../../${type}/${baseFilename}.wasm`;
+          const bodyStatements = (functionBodyPath.node as t.BlockStatement)
+            .body;
 
-            // Create a new string literal node for the modified URL.
-            const newArgNode = t.stringLiteral(newUrl);
-            // Add the `/* @vite-ignore */` comment before the new URL argument.
-            // This prevents Vite from trying to statically analyze this `new URL` call.
-            newArgNode.leadingComments = [VITE_IGNORE_COMMENT];
+          // Find the 'if (Module["locateFile"])' statement
+          const ifStatementNode = bodyStatements.find(
+            (stmt) =>
+              t.isIfStatement(stmt) &&
+              t.isMemberExpression(stmt.test) &&
+              t.isIdentifier(stmt.test.object, { name: "Module" }) &&
+              t.isStringLiteral(stmt.test.property) &&
+              stmt.test.property.value === "locateFile" &&
+              stmt.test.computed === true,
+          ) as t.IfStatement | undefined;
 
-            // Replace the original URL argument with the modified one.
-            path.node.arguments[0] = newArgNode;
-            // Mark this patch as completed for the current file.
-            this.set("urlPatched", true);
+          if (ifStatementNode?.consequent) {
+            let newBodyStatements: t.Statement[];
+
+            if (t.isBlockStatement(ifStatementNode.consequent)) {
+              newBodyStatements = ifStatementNode.consequent.body;
+            } else {
+              // If the consequent is not a block, wrap it in an array
+              newBodyStatements = [ifStatementNode.consequent];
+            }
+
+            // Replace the entire function body with the statements from the if-block
+            functionBodyPath.replaceWith(t.blockStatement(newBodyStatements));
+            this.set("findWasmBinaryPatched", true);
+            path.skip(); // Important after replacement
           }
         }
       },
@@ -260,7 +240,7 @@ export function emscriptenPatch(): PluginItem {
       const finalState = {
         declared: this.get("declared"),
         checked: this.get("checked"),
-        urlPatched: this.get("urlPatched"),
+        findWasmBinaryPatched: this.get("findWasmBinaryPatched"),
         scriptNamePatched: this.get("scriptNamePatched"),
       };
       // Log the results of the patching process for this file using the collected state.
