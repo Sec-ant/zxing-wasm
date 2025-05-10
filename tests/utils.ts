@@ -192,6 +192,7 @@ export function takeSnapshot(readResult?: ReadResult): string {
   }
   const hashBytes = createHash("sha256");
   const hashBytesECI = createHash("sha256");
+  const hashSymbolData = createHash("sha256");
   return `${JSON.stringify(
     {
       ...readResult,
@@ -200,6 +201,13 @@ export function takeSnapshot(readResult?: ReadResult): string {
         .update(readResult.bytesECI)
         .digest("hex")
         .slice(0, 7),
+      symbol: {
+        ...readResult.symbol,
+        data: hashSymbolData
+          .update(readResult.symbol.data)
+          .digest("hex")
+          .slice(0, 7),
+      },
     },
     null,
     2,
