@@ -36,5 +36,10 @@
   "readerInit": true,
   "lineCount": 0,
   "version": "1",
+  "symbol": {
+    "data": "e240051",
+    "width": 19,
+    "height": 19
+  },
   "eccLevel": "85%"
 }

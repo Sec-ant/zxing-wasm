@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "6",
+  "symbol": {
+    "data": "e28001c",
+    "width": 41,
+    "height": 41
+  },
   "eccLevel": "H"
 }

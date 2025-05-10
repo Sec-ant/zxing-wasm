@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "14",
+  "symbol": {
+    "data": "190b1ef",
+    "width": 75,
+    "height": 75
+  },
   "eccLevel": "29%"
 }

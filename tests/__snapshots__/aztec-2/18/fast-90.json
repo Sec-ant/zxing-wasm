@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "5",
+  "symbol": {
+    "data": "cdfb121",
+    "width": 37,
+    "height": 37
+  },
   "eccLevel": "19%"
 }

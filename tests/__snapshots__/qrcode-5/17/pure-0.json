@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "40",
+  "symbol": {
+    "data": "cc88954",
+    "width": 177,
+    "height": 177
+  },
   "eccLevel": "M"
 }

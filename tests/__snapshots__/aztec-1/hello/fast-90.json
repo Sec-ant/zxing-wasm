@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "19",
+  "symbol": {
+    "data": "d171071",
+    "width": 95,
+    "height": 95
+  },
   "eccLevel": "99%"
 }
