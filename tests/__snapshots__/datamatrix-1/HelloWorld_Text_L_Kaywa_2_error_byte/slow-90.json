@@ -36,5 +36,10 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "4",
+  "symbol": {
+    "data": "8310df4",
+    "width": 16,
+    "height": 16
+  },
   "eccLevel": ""
 }
