@@ -88,6 +88,7 @@ struct JsReadResult {
   int lineCount;
   std::string version;
   Symbol symbol;
+  std::string extra;
 };
 
 using JsReadResults = std::vector<JsReadResult>;
@@ -144,7 +145,8 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
          .readerInit = barcode.readerInit(),
          .lineCount = barcode.lineCount(),
          .version = barcode.version(),
-         .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)}
+         .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol),
+         .extra = barcode.extra()}
       );
     }
     return jsReadResults;
@@ -180,6 +182,7 @@ struct JsWriterOptions {
   bool readerInit;
   bool forceSquareDataMatrix;
   std::string ecLevel;
+  std::string options;
   // ZXing::WriterOptions
   int scale;
   int sizeHint;
@@ -194,7 +197,8 @@ namespace {
     return ZXing::CreatorOptions(static_cast<ZXing::BarcodeFormat>(jsWriterOptions.format))
       .readerInit(jsWriterOptions.readerInit)
       .forceSquareDataMatrix(jsWriterOptions.forceSquareDataMatrix)
-      .ecLevel(jsWriterOptions.ecLevel);
+      .ecLevel(jsWriterOptions.ecLevel)
+      .options(jsWriterOptions.options);
   }
 
   ZXing::WriterOptions createWriterOptions(const JsWriterOptions &jsWriterOptions) {
@@ -332,7 +336,8 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("readerInit", &JsReadResult::readerInit)
     .field("lineCount", &JsReadResult::lineCount)
     .field("version", &JsReadResult::version)
-    .field("symbol", &JsReadResult::symbol);
+    .field("symbol", &JsReadResult::symbol)
+    .field("extra", &JsReadResult::extra);
 
   register_vector<JsReadResult>("ReadResults");
 
@@ -352,7 +357,8 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("sizeHint", &JsWriterOptions::sizeHint)
     .field("rotate", &JsWriterOptions::rotate)
     .field("withHRT", &JsWriterOptions::withHRT)
-    .field("withQuietZones", &JsWriterOptions::withQuietZones);
+    .field("withQuietZones", &JsWriterOptions::withQuietZones)
+    .field("options", &JsWriterOptions::options);
 
   value_object<JsWriteResult>("WriteResult")
     .field("error", &JsWriteResult::error)
