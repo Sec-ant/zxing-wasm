@@ -24,6 +24,9 @@
 
 using namespace emscripten;
 
+thread_local const val Uint8Array = val::global("Uint8Array");
+thread_local const val Uint8ClampedArray = val::global("Uint8ClampedArray");
+
 struct Symbol {
   val data;
   int width;
@@ -102,9 +105,6 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
         .setCharacterSet(static_cast<ZXing::CharacterSet>(jsReaderOptions.characterSet))
     );
 
-    thread_local const val Uint8Array = val::global("Uint8Array");
-    thread_local const val Uint8ClampedArray = val::global("Uint8ClampedArray");
-
     JsReadResults jsReadResults;
     jsReadResults.reserve(barcodes.size());
 
@@ -135,8 +135,9 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
          .version = barcode.version(),
          .symbol = std::move(
            Symbol{
-             .data =
-               std::move(Uint8ClampedArray.new_(val(typed_memory_view(barcodeSymbol.rowStride() * barcodeSymbol.height(), barcodeSymbol.data())))),
+             .data = std::move(Uint8ClampedArray.new_(
+               val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
+             )),
              .width = barcodeSymbol.width(),
              .height = barcodeSymbol.height()
            }
@@ -219,21 +220,25 @@ JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWr
 
     auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
 
-    thread_local const val Uint8Array = val::global("Uint8Array");
-    thread_local const val Uint8ClampedArray = val::global("Uint8ClampedArray");
-
     int len;
     uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
+
+    // Wrap into JS typed array *before* freeing.
+    val jsImage = Uint8Array.new_(val(typed_memory_view(len, bytes)));
+
+    free(bytes); // Prevent leak – STBI allocates with malloc
 
     auto barcodeSymbol = barcode.symbol();
 
     return {
       .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
       .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
-      .image = std::move(Uint8Array.new_(val(typed_memory_view(len, bytes)))),
+      .image = std::move(jsImage),
       .symbol = std::move(
         Symbol{
-          .data = std::move(Uint8ClampedArray.new_(val(typed_memory_view(barcodeSymbol.rowStride() * barcodeSymbol.height(), barcodeSymbol.data())))),
+          .data = std::move(Uint8ClampedArray.new_(
+            val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
+          )),
           .width = barcodeSymbol.width(),
           .height = barcodeSymbol.height()
         }
@@ -253,21 +258,25 @@ JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWri
 
     auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
 
-    thread_local const val Uint8Array = val::global("Uint8Array");
-    thread_local const val Uint8ClampedArray = val::global("Uint8ClampedArray");
-
     int len;
     uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
+
+    // Wrap into JS typed array *before* freeing.
+    val jsImage = Uint8Array.new_(val(typed_memory_view(len, bytes)));
+
+    free(bytes); // Prevent leak – STBI allocates with malloc
 
     auto barcodeSymbol = barcode.symbol();
 
     return {
       .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
       .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
-      .image = std::move(Uint8Array.new_(val(typed_memory_view(len, bytes)))),
+      .image = std::move(jsImage),
       .symbol = std::move(
         Symbol{
-          .data = std::move(Uint8ClampedArray.new_(val(typed_memory_view(barcodeSymbol.rowStride() * barcodeSymbol.height(), barcodeSymbol.data())))),
+          .data = std::move(Uint8ClampedArray.new_(
+            val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
+          )),
           .width = barcodeSymbol.width(),
           .height = barcodeSymbol.height()
         }
