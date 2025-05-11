@@ -63,6 +63,24 @@ export interface ZXingWriterOptions {
    * @defaultValue `true`
    */
   withQuietZones: boolean;
+  /**
+   * Comma separated list of symbology specific options and flags.
+   *
+   * This string is parsed by the underlying C++ library to extract named parameters.
+   * For boolean flags, include the name (e.g., `"gs1"`).
+   * For options with values, use a `key=value` format (e.g., `"version=5"`).
+   * Multiple options can be combined, separated by commas (e.g., `"gs1,version=2"`).
+   *
+   * Known keys used by `CreatorOptions` in the C++ backend:
+   * - `gs1`: (boolean) Enables GS1 encoding.
+   * - `stacked`: (boolean) Specifies if the barcode is a stacked type.
+   * - `version`: (integer) Sets the symbol version (e.g., for QR Code).
+   * - `dataMask`: (integer) Sets the data mask pattern (e.g., for QR Code).
+   *
+   * @experimental The final form of this property is not yet settled and may change without a major version bump.
+   * @defaultValue `""`
+   */
+  options: string;
 }
 
 /**
@@ -94,6 +112,7 @@ export const defaultWriterOptions: Required<WriterOptions> = {
   rotate: 0,
   withHRT: false,
   withQuietZones: true,
+  options: "",
 };
 
 /**

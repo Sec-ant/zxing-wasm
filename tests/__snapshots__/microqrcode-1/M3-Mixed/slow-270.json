@@ -41,5 +41,6 @@
     "width": 15,
     "height": 15
   },
+  "extra": "{\"DataMask\":0,\"Version\":\"M3\"}",
   "eccLevel": "M"
 }
