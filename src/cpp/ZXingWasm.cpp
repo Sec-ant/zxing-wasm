@@ -33,6 +33,17 @@ struct Symbol {
   int height;
 };
 
+// Helper function to create a Symbol object
+Symbol createSymbolFromBarcodeSymbol(const ZXing::ImageView &barcodeSymbol) {
+  return Symbol{
+    .data = std::move(Uint8ClampedArray.new_(
+      val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
+    )),
+    .width = barcodeSymbol.width(),
+    .height = barcodeSymbol.height()
+  };
+}
+
 #if defined(READER)
 
 struct JsReaderOptions {
@@ -133,15 +144,7 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
          .readerInit = barcode.readerInit(),
          .lineCount = barcode.lineCount(),
          .version = barcode.version(),
-         .symbol = std::move(
-           Symbol{
-             .data = std::move(Uint8ClampedArray.new_(
-               val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
-             )),
-             .width = barcodeSymbol.width(),
-             .height = barcodeSymbol.height()
-           }
-         )}
+         .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)}
       );
     }
     return jsReadResults;
@@ -234,15 +237,7 @@ JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWr
       .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
       .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
       .image = std::move(jsImage),
-      .symbol = std::move(
-        Symbol{
-          .data = std::move(Uint8ClampedArray.new_(
-            val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
-          )),
-          .width = barcodeSymbol.width(),
-          .height = barcodeSymbol.height()
-        }
-      )
+      .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)
     };
   } catch (const std::exception &e) {
     return {.error = e.what()};
@@ -272,15 +267,7 @@ JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWri
       .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
       .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
       .image = std::move(jsImage),
-      .symbol = std::move(
-        Symbol{
-          .data = std::move(Uint8ClampedArray.new_(
-            val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
-          )),
-          .width = barcodeSymbol.width(),
-          .height = barcodeSymbol.height()
-        }
-      )
+      .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)
     };
   } catch (const std::exception &e) {
     return {.error = e.what()};
