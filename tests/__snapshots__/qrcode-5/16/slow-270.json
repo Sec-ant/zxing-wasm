@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "40",
+  "symbol": {
+    "data": "cd433c3",
+    "width": 177,
+    "height": 177
+  },
+  "extra": "{\"DataMask\":2,\"Version\":\"40\"}",
   "eccLevel": "L"
 }

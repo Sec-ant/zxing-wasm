@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "9",
+  "symbol": {
+    "data": "b346514",
+    "width": 53,
+    "height": 53
+  },
+  "extra": "{\"DataMask\":2,\"Version\":\"9\"}",
   "eccLevel": "H"
 }
