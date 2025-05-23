@@ -10,20 +10,20 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 0,
-      "y": 0
+      "x": 12,
+      "y": 14
     },
     "topRight": {
-      "x": 0,
-      "y": 0
+      "x": 249,
+      "y": 14
     },
     "bottomRight": {
-      "x": 0,
-      "y": 0
+      "x": 249,
+      "y": 244
     },
     "bottomLeft": {
-      "x": 0,
-      "y": 0
+      "x": 12,
+      "y": 244
     }
   },
   "orientation": 0,

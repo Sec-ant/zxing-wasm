@@ -14,16 +14,16 @@
       "y": 0
     },
     "topRight": {
-      "x": 0,
+      "x": 199,
       "y": 0
     },
     "bottomRight": {
-      "x": 0,
-      "y": 0
+      "x": 199,
+      "y": 191
     },
     "bottomLeft": {
       "x": 0,
-      "y": 0
+      "y": 191
     }
   },
   "orientation": 0,
