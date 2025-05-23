@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.1.3
+
+### Patch Changes
+
+- 91663f3: Bump zxing-cpp to `aab9ccc` to return position info from pure MaxiCodes.
+
 ## 2.1.2
 
 ### Patch Changes
