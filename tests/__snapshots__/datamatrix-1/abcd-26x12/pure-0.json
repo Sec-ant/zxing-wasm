@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "27",
+  "symbol": {
+    "data": "51e1384",
+    "width": 26,
+    "height": 12
+  },
+  "extra": "{\"Version\":\"12x26\"}",
   "eccLevel": ""
 }

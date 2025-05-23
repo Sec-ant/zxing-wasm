@@ -24,6 +24,26 @@
 
 using namespace emscripten;
 
+thread_local const val Uint8Array = val::global("Uint8Array");
+thread_local const val Uint8ClampedArray = val::global("Uint8ClampedArray");
+
+struct Symbol {
+  val data;
+  int width;
+  int height;
+};
+
+// Helper function to create a Symbol object
+Symbol createSymbolFromBarcodeSymbol(const ZXing::ImageView &barcodeSymbol) {
+  return Symbol{
+    .data = std::move(Uint8ClampedArray.new_(
+      val(typed_memory_view(static_cast<std::size_t>(barcodeSymbol.rowStride()) * barcodeSymbol.height(), barcodeSymbol.data()))
+    )),
+    .width = barcodeSymbol.width(),
+    .height = barcodeSymbol.height()
+  };
+}
+
 #if defined(READER)
 
 struct JsReaderOptions {
@@ -32,9 +52,7 @@ struct JsReaderOptions {
   bool tryRotate;
   bool tryInvert;
   bool tryDownscale;
-  #ifdef ZXING_EXPERIMENTAL_API
   bool tryDenoise;
-  #endif
   uint8_t binarizer;
   bool isPure;
   uint16_t downscaleThreshold;
@@ -69,6 +87,8 @@ struct JsReadResult {
   bool readerInit;
   int lineCount;
   std::string version;
+  Symbol symbol;
+  std::string extra;
 };
 
 using JsReadResults = std::vector<JsReadResult>;
@@ -83,9 +103,7 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
         .setTryRotate(jsReaderOptions.tryRotate)
         .setTryInvert(jsReaderOptions.tryInvert)
         .setTryDownscale(jsReaderOptions.tryDownscale)
-  #ifdef ZXING_EXPERIMENTAL_API
         .setTryDenoise(jsReaderOptions.tryDenoise)
-  #endif
         .setBinarizer(static_cast<ZXing::Binarizer>(jsReaderOptions.binarizer))
         .setIsPure(jsReaderOptions.isPure)
         .setDownscaleThreshold(jsReaderOptions.downscaleThreshold)
@@ -99,12 +117,13 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
         .setCharacterSet(static_cast<ZXing::CharacterSet>(jsReaderOptions.characterSet))
     );
 
-    thread_local const val Uint8Array = val::global("Uint8Array");
-
     JsReadResults jsReadResults;
     jsReadResults.reserve(barcodes.size());
 
     for (auto &barcode : barcodes) {
+
+      auto barcodeSymbol = barcode.symbol();
+
       jsReadResults.push_back(
         {.isValid = barcode.isValid(),
          .error = ZXing::ToString(barcode.error()),
@@ -125,7 +144,9 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
          .sequenceId = barcode.sequenceId(),
          .readerInit = barcode.readerInit(),
          .lineCount = barcode.lineCount(),
-         .version = barcode.version()}
+         .version = barcode.version(),
+         .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol),
+         .extra = barcode.extra()}
       );
     }
     return jsReadResults;
@@ -161,6 +182,7 @@ struct JsWriterOptions {
   bool readerInit;
   bool forceSquareDataMatrix;
   std::string ecLevel;
+  std::string options;
   // ZXing::WriterOptions
   int scale;
   int sizeHint;
@@ -175,7 +197,8 @@ namespace {
     return ZXing::CreatorOptions(static_cast<ZXing::BarcodeFormat>(jsWriterOptions.format))
       .readerInit(jsWriterOptions.readerInit)
       .forceSquareDataMatrix(jsWriterOptions.forceSquareDataMatrix)
-      .ecLevel(jsWriterOptions.ecLevel);
+      .ecLevel(jsWriterOptions.ecLevel)
+      .options(jsWriterOptions.options);
   }
 
   ZXing::WriterOptions createWriterOptions(const JsWriterOptions &jsWriterOptions) {
@@ -194,6 +217,7 @@ struct JsWriteResult {
   std::string svg;
   std::string utf8;
   val image;
+  Symbol symbol;
 };
 
 JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWriterOptions) {
@@ -203,15 +227,21 @@ JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWr
 
     auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
 
-    thread_local const val Uint8Array = val::global("Uint8Array");
-
     int len;
     uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
+
+    // Wrap into JS typed array *before* freeing.
+    val jsImage = Uint8Array.new_(val(typed_memory_view(len, bytes)));
+
+    free(bytes); // Prevent leak – STBI allocates with malloc
+
+    auto barcodeSymbol = barcode.symbol();
 
     return {
       .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
       .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
-      .image = std::move(Uint8Array.new_(val(typed_memory_view(len, bytes))))
+      .image = std::move(jsImage),
+      .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)
     };
   } catch (const std::exception &e) {
     return {.error = e.what()};
@@ -227,15 +257,21 @@ JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWri
 
     auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
 
-    thread_local const val Uint8Array = val::global("Uint8Array");
-
     int len;
     uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
+
+    // Wrap into JS typed array *before* freeing.
+    val jsImage = Uint8Array.new_(val(typed_memory_view(len, bytes)));
+
+    free(bytes); // Prevent leak – STBI allocates with malloc
+
+    auto barcodeSymbol = barcode.symbol();
 
     return {
       .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
       .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
-      .image = std::move(Uint8Array.new_(val(typed_memory_view(len, bytes))))
+      .image = std::move(jsImage),
+      .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)
     };
   } catch (const std::exception &e) {
     return {.error = e.what()};
@@ -248,6 +284,8 @@ JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWri
 
 EMSCRIPTEN_BINDINGS(ZXingWasm) {
 
+  value_object<Symbol>("Symbol").field("data", &Symbol::data).field("width", &Symbol::width).field("height", &Symbol::height);
+
 #if defined(READER)
 
   value_object<JsReaderOptions>("ReaderOptions")
@@ -256,9 +294,7 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("tryRotate", &JsReaderOptions::tryRotate)
     .field("tryInvert", &JsReaderOptions::tryInvert)
     .field("tryDownscale", &JsReaderOptions::tryDownscale)
-  #ifdef ZXING_EXPERIMENTAL_API
     .field("tryDenoise", &JsReaderOptions::tryDenoise)
-  #endif
     .field("binarizer", &JsReaderOptions::binarizer)
     .field("isPure", &JsReaderOptions::isPure)
     .field("downscaleThreshold", &JsReaderOptions::downscaleThreshold)
@@ -299,7 +335,9 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("sequenceId", &JsReadResult::sequenceId)
     .field("readerInit", &JsReadResult::readerInit)
     .field("lineCount", &JsReadResult::lineCount)
-    .field("version", &JsReadResult::version);
+    .field("version", &JsReadResult::version)
+    .field("symbol", &JsReadResult::symbol)
+    .field("extra", &JsReadResult::extra);
 
   register_vector<JsReadResult>("ReadResults");
 
@@ -319,13 +357,15 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("sizeHint", &JsWriterOptions::sizeHint)
     .field("rotate", &JsWriterOptions::rotate)
     .field("withHRT", &JsWriterOptions::withHRT)
-    .field("withQuietZones", &JsWriterOptions::withQuietZones);
+    .field("withQuietZones", &JsWriterOptions::withQuietZones)
+    .field("options", &JsWriterOptions::options);
 
   value_object<JsWriteResult>("WriteResult")
     .field("error", &JsWriteResult::error)
     .field("svg", &JsWriteResult::svg)
     .field("utf8", &JsWriteResult::utf8)
-    .field("image", &JsWriteResult::image);
+    .field("image", &JsWriteResult::image)
+    .field("symbol", &JsWriteResult::symbol);
 
   function("writeBarcodeFromText", &writeBarcodeFromText);
   function("writeBarcodeFromBytes", &writeBarcodeFromBytes);

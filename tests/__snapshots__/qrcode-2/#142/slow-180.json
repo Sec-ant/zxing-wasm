@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "11",
+  "symbol": {
+    "data": "d970511",
+    "width": 61,
+    "height": 61
+  },
+  "extra": "{\"DataMask\":2,\"Version\":\"11\"}",
   "eccLevel": "L"
 }

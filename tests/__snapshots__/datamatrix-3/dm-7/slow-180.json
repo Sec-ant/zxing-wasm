@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "1",
+  "symbol": {
+    "data": "e260307",
+    "width": 10,
+    "height": 10
+  },
+  "extra": "{\"Version\":\"10x10\"}",
   "eccLevel": ""
 }

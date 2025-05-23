@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "19",
+  "symbol": {
+    "data": "493f8ae",
+    "width": 93,
+    "height": 93
+  },
+  "extra": "{\"DataMask\":3,\"Version\":\"19\"}",
   "eccLevel": "M"
 }

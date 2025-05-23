@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "39",
+  "symbol": {
+    "data": "c6db9c5",
+    "width": 64,
+    "height": 16
+  },
+  "extra": "{\"Version\":\"16x64\"}",
   "eccLevel": ""
 }

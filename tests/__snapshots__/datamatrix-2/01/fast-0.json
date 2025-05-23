@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "6",
+  "symbol": {
+    "data": "072321e",
+    "width": 20,
+    "height": 20
+  },
+  "extra": "{\"Version\":\"20x20\"}",
   "eccLevel": ""
 }

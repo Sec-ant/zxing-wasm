@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "30",
+  "symbol": {
+    "data": "ee09471",
+    "width": 48,
+    "height": 16
+  },
+  "extra": "{\"Version\":\"16x48\"}",
   "eccLevel": ""
 }

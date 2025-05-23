@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "10",
+  "symbol": {
+    "data": "e83b577",
+    "width": 32,
+    "height": 32
+  },
+  "extra": "{\"Version\":\"32x32\"}",
   "eccLevel": ""
 }

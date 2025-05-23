@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "21",
+  "symbol": {
+    "data": "d846dab",
+    "width": 105,
+    "height": 105
+  },
+  "extra": "",
   "eccLevel": "29%"
 }

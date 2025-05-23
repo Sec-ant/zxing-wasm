@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "1",
+  "symbol": {
+    "data": "a8582d7",
+    "width": 21,
+    "height": 21
+  },
+  "extra": "{\"DataMask\":4,\"Version\":\"1\"}",
   "eccLevel": "M"
 }
