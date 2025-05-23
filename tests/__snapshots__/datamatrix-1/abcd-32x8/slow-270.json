@@ -41,6 +41,6 @@
     "width": 32,
     "height": 8
   },
-  "extra": "",
+  "extra": "{\"Version\":\"8x32\"}",
   "eccLevel": ""
 }
