@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Extract the current emcc version number
-EMCC_VERSION=$(emcc --version | grep -oP '(\d+\.\d+\.\d+)')
+EMCC_VERSION=$(emcc --version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)
 
 # Define the path to the action.yml file
 ACTIONS_FILE=".github/actions/setup/action.yml"
