@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "12",
+  "symbol": {
+    "data": "c995c2d",
+    "width": 65,
+    "height": 65
+  },
+  "extra": "{\"DataMask\":2,\"Version\":\"12\"}",
   "eccLevel": "M"
 }

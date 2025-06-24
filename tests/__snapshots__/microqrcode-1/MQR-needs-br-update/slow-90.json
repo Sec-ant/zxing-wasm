@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "4",
+  "symbol": {
+    "data": "de29244",
+    "width": 17,
+    "height": 17
+  },
+  "extra": "{\"DataMask\":0,\"Version\":\"M4\"}",
   "eccLevel": "L"
 }

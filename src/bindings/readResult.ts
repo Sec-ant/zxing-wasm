@@ -1,4 +1,5 @@
-import { type ReadOutputBarcodeFormat, decodeFormat } from "./barcodeFormat.js";
+import { decodeFormat, type ReadOutputBarcodeFormat } from "./barcodeFormat.js";
+import type { BarcodeSymbol } from "./barcodeSymbol.js";
 import { type ContentType, decodeContentType } from "./contentType.js";
 import type { EcLevel } from "./ecLevel.js";
 import type { Position, ZXingPosition } from "./position.js";
@@ -104,6 +105,18 @@ export interface ZXingReadResult {
    * @deprecated
    */
   version: string;
+  /**
+   * Barcode symbol in the shape of a one-channel image.
+   *
+   * @experimental The final form of this property is not yet settled and may change without a major version bump.
+   */
+  symbol: BarcodeSymbol;
+  /**
+   * A stringified JSON object containing additional information about the barcode.
+   *
+   * @experimental The final form of this property is not yet settled and may change without a major version bump.
+   */
+  extra: string;
 }
 
 /**

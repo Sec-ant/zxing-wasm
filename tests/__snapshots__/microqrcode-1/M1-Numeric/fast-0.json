@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "1",
+  "symbol": {
+    "data": "01b1349",
+    "width": 11,
+    "height": 11
+  },
+  "extra": "{\"DataMask\":2,\"Version\":\"M1\"}",
   "eccLevel": "L"
 }

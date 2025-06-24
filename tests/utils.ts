@@ -3,12 +3,12 @@ import { readFile } from "node:fs/promises";
 import { format, parse } from "node:path";
 import { Jimp } from "jimp";
 import {
+  defaultReaderOptions,
   type LinearBarcodeFormat,
+  linearBarcodeFormats,
+  type ReaderOptions,
   type ReadOutputBarcodeFormat,
   type ReadResult,
-  type ReaderOptions,
-  defaultReaderOptions,
-  linearBarcodeFormats,
 } from "../src/reader/index.js";
 
 export const DEFAULT_READER_OPTIONS_FOR_TESTS: ReaderOptions = {
@@ -192,6 +192,7 @@ export function takeSnapshot(readResult?: ReadResult): string {
   }
   const hashBytes = createHash("sha256");
   const hashBytesECI = createHash("sha256");
+  const hashSymbolData = createHash("sha256");
   return `${JSON.stringify(
     {
       ...readResult,
@@ -200,6 +201,13 @@ export function takeSnapshot(readResult?: ReadResult): string {
         .update(readResult.bytesECI)
         .digest("hex")
         .slice(0, 7),
+      symbol: {
+        ...readResult.symbol,
+        data: hashSymbolData
+          .update(readResult.symbol.data)
+          .digest("hex")
+          .slice(0, 7),
+      },
     },
     null,
     2,

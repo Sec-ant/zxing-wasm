@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "24",
+  "symbol": {
+    "data": "ea19622",
+    "width": 144,
+    "height": 144
+  },
+  "extra": "{\"Version\":\"144x144\"}",
   "eccLevel": ""
 }

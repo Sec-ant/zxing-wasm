@@ -10,8 +10,8 @@ import {
   test,
 } from "vitest";
 import {
-  type ReaderOptions,
   prepareZXingModule,
+  type ReaderOptions,
   readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";

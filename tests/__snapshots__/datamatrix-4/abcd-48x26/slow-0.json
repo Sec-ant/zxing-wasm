@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "47",
+  "symbol": {
+    "data": "895915b",
+    "width": 48,
+    "height": 26
+  },
+  "extra": "{\"Version\":\"26x48\"}",
   "eccLevel": ""
 }

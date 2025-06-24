@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "2",
+  "symbol": {
+    "data": "20f67fd",
+    "width": 25,
+    "height": 25
+  },
+  "extra": "{\"DataMask\":4,\"Version\":\"2\"}",
   "eccLevel": "M"
 }

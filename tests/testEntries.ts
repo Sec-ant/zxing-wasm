@@ -1,6 +1,6 @@
 import type {
-  ReadOutputBarcodeFormat,
   ReaderOptions,
+  ReadOutputBarcodeFormat,
 } from "../src/reader/index.js";
 import { DEFAULT_READER_OPTIONS_FOR_TESTS } from "./utils.js";
 

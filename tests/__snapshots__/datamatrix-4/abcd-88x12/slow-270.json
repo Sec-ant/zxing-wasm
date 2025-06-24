@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "38",
+  "symbol": {
+    "data": "057c09b",
+    "width": 88,
+    "height": 12
+  },
+  "extra": "{\"Version\":\"12x88\"}",
   "eccLevel": ""
 }

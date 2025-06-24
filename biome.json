@@ -2,7 +2,12 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["zxing-cpp", "__snapshots__", ".changeset/pre.json"]
+    "includes": [
+      "**",
+      "!**/zxing-cpp",
+      "!**/__snapshots__",
+      "!**/.changeset/pre.json"
+    ]
   },
   "formatter": {
     "indentStyle": "space"
@@ -15,7 +20,17 @@
         "noEmptyInterface": "off"
       },
       "style": {
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
       }
     }
   },
@@ -35,11 +50,11 @@
   },
   "overrides": [
     {
-      "include": [
-        "share.ts",
-        "full/index.ts",
-        "reader/index.ts",
-        "writer/index.ts"
+      "includes": [
+        "**/share.ts",
+        "**/full/index.ts",
+        "**/reader/index.ts",
+        "**/writer/index.ts"
       ],
       "linter": {
         "rules": {
@@ -50,7 +65,7 @@
       }
     },
     {
-      "include": ["tests/**/*.ts"],
+      "includes": ["**/tests/**/*.ts"],
       "linter": {
         "rules": {
           "performance": {
@@ -60,7 +75,7 @@
       }
     },
     {
-      "include": ["imageData.d.ts"],
+      "includes": ["**/imageData.d.ts"],
       "linter": {
         "rules": {
           "complexity": {
@@ -70,7 +85,7 @@
       }
     },
     {
-      "include": ["package.json"],
+      "includes": ["**/package.json"],
       "json": {
         "formatter": {
           "lineWidth": 1

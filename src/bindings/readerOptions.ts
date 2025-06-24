@@ -1,8 +1,8 @@
-import { type ReadInputBarcodeFormat, encodeFormats } from "./barcodeFormat.js";
+import { encodeFormats, type ReadInputBarcodeFormat } from "./barcodeFormat.js";
 import { type Binarizer, encodeBinarizer } from "./binarizer.js";
 import { type CharacterSet, encodeCharacterSet } from "./characterSet.js";
 import { type EanAddOnSymbol, encodeEanAddOnSymbol } from "./eanAddOnSymbol.js";
-import { type TextMode, encodeTextMode } from "./textMode.js";
+import { encodeTextMode, type TextMode } from "./textMode.js";
 
 /**
  * @internal

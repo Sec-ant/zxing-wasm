@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "5",
+  "symbol": {
+    "data": "d00facc",
+    "width": 18,
+    "height": 18
+  },
+  "extra": "{\"Version\":\"18x18\"}",
   "eccLevel": ""
 }

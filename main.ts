@@ -1,9 +1,9 @@
 import {
   type ReaderOptions,
-  type WriterOptions,
   readBarcodes,
+  type WriterOptions,
   writeBarcode,
-} from "./src/full/index";
+} from "./src/full/index.js";
 
 const imageFile = await fetch(
   "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Hello%20world!",

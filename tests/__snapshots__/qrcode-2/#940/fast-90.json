@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "5",
+  "symbol": {
+    "data": "baf2422",
+    "width": 37,
+    "height": 37
+  },
+  "extra": "{\"DataMask\":7,\"Version\":\"5\"}",
   "eccLevel": "H"
 }

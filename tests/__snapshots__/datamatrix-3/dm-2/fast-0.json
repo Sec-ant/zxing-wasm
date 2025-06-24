@@ -36,5 +36,11 @@
   "readerInit": false,
   "lineCount": 0,
   "version": "7",
+  "symbol": {
+    "data": "bae5acf",
+    "width": 22,
+    "height": 22
+  },
+  "extra": "{\"Version\":\"22x22\"}",
   "eccLevel": ""
 }
