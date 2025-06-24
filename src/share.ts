@@ -1,17 +1,17 @@
 import type { Merge } from "type-fest";
 import {
-  type ReadResult,
+  defaultReaderOptions,
+  defaultWriterOptions,
   type ReaderOptions,
+  type ReadResult,
+  readerOptionsToZXingReaderOptions,
   type WriterOptions,
-  type ZXingReadResult,
+  writerOptionsToZXingWriterOptions,
   type ZXingReaderOptions,
+  type ZXingReadResult,
   type ZXingVector,
   type ZXingWriteResult,
   type ZXingWriterOptions,
-  defaultReaderOptions,
-  defaultWriterOptions,
-  readerOptionsToZXingReaderOptions,
-  writerOptionsToZXingWriterOptions,
   zxingReadResultToReadResult,
   zxingWriteResultToWriteResult,
 } from "./bindings/index.js";
@@ -190,8 +190,7 @@ export function shallow<T extends Record<string, unknown>>(a: T, b: T) {
     (Object.keys(a).length === Object.keys(b).length &&
       Object.keys(a).every(
         (key) =>
-          Object.prototype.hasOwnProperty.call(b, key) &&
-          a[key as keyof T] === b[key as keyof T],
+          Object.hasOwn(b, key) && a[key as keyof T] === b[key as keyof T],
       ))
   );
 }

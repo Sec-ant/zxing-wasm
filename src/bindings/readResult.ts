@@ -1,4 +1,4 @@
-import { type ReadOutputBarcodeFormat, decodeFormat } from "./barcodeFormat.js";
+import { decodeFormat, type ReadOutputBarcodeFormat } from "./barcodeFormat.js";
 import type { BarcodeSymbol } from "./barcodeSymbol.js";
 import { type ContentType, decodeContentType } from "./contentType.js";
 import type { EcLevel } from "./ecLevel.js";

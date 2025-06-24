@@ -1,4 +1,4 @@
-import { type WriteInputBarcodeFormat, encodeFormat } from "./barcodeFormat.js";
+import { encodeFormat, type WriteInputBarcodeFormat } from "./barcodeFormat.js";
 import type { EcLevel } from "./ecLevel.js";
 
 /**

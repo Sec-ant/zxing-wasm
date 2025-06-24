@@ -3,12 +3,12 @@ import { readFile } from "node:fs/promises";
 import { format, parse } from "node:path";
 import { Jimp } from "jimp";
 import {
+  defaultReaderOptions,
   type LinearBarcodeFormat,
+  linearBarcodeFormats,
+  type ReaderOptions,
   type ReadOutputBarcodeFormat,
   type ReadResult,
-  type ReaderOptions,
-  defaultReaderOptions,
-  linearBarcodeFormats,
 } from "../src/reader/index.js";
 
 export const DEFAULT_READER_OPTIONS_FOR_TESTS: ReaderOptions = {

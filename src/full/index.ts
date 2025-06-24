@@ -2,12 +2,12 @@ import type { Merge } from "type-fest";
 import type { ReaderOptions, WriterOptions } from "../bindings/index.js";
 import {
   type PrepareZXingModuleOptions,
-  type ZXingFullModule,
-  type ZXingModuleOverrides,
   prepareZXingModuleWithFactory,
   purgeZXingModuleWithFactory,
   readBarcodesWithFactory,
   writeBarcodeWithFactory,
+  type ZXingFullModule,
+  type ZXingModuleOverrides,
 } from "../share.js";
 import zxingModuleFactory from "./zxing_full.js";
 
@@ -110,9 +110,9 @@ export async function writeBarcode(
 export * from "../bindings/exposedReaderBindings.js";
 export * from "../bindings/exposedWriterBindings.js";
 export {
-  ZXING_WASM_VERSION,
-  ZXING_CPP_COMMIT,
   type PrepareZXingModuleOptions,
+  ZXING_CPP_COMMIT,
+  ZXING_WASM_VERSION,
   type ZXingFullModule,
   type ZXingModuleOverrides,
 } from "../share.js";

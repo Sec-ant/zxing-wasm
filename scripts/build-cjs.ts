@@ -1,6 +1,6 @@
 import { writeFile } from "node:fs/promises";
 import { rimraf } from "rimraf";
-import { type LibraryOptions, build } from "vite";
+import { build, type LibraryOptions } from "vite";
 import viteConfig from "../vite.config.js";
 
 async function buildCjs() {

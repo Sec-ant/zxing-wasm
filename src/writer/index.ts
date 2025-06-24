@@ -9,11 +9,11 @@ import type { Merge } from "type-fest";
 import type { WriterOptions } from "../bindings/index.js";
 import {
   type PrepareZXingModuleOptions,
-  type ZXingModuleOverrides,
-  type ZXingWriterModule,
   prepareZXingModuleWithFactory,
   purgeZXingModuleWithFactory,
   writeBarcodeWithFactory,
+  type ZXingModuleOverrides,
+  type ZXingWriterModule,
 } from "../share.js";
 import zxingModuleFactory from "./zxing_writer.js";
 
@@ -88,10 +88,10 @@ export async function writeBarcode(
 
 export * from "../bindings/exposedWriterBindings.js";
 export {
-  ZXING_WASM_VERSION,
-  ZXING_CPP_COMMIT,
   type PrepareZXingModuleOptions,
-  type ZXingWriterModule,
+  ZXING_CPP_COMMIT,
+  ZXING_WASM_VERSION,
   type ZXingModuleOverrides,
+  type ZXingWriterModule,
 } from "../share.js";
 export const ZXING_WASM_SHA256 = WRITER_HASH;

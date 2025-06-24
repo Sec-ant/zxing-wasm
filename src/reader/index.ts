@@ -2,11 +2,11 @@ import type { Merge } from "type-fest";
 import type { ReaderOptions } from "../bindings/index.js";
 import {
   type PrepareZXingModuleOptions,
-  type ZXingModuleOverrides,
-  type ZXingReaderModule,
   prepareZXingModuleWithFactory,
   purgeZXingModuleWithFactory,
   readBarcodesWithFactory,
+  type ZXingModuleOverrides,
+  type ZXingReaderModule,
 } from "../share.js";
 import zxingModuleFactory from "./zxing_reader.js";
 
@@ -101,10 +101,10 @@ export async function readBarcodesFromImageData(
 
 export * from "../bindings/exposedReaderBindings.js";
 export {
-  ZXING_WASM_VERSION,
-  ZXING_CPP_COMMIT,
   type PrepareZXingModuleOptions,
-  type ZXingReaderModule,
+  ZXING_CPP_COMMIT,
+  ZXING_WASM_VERSION,
   type ZXingModuleOverrides,
+  type ZXingReaderModule,
 } from "../share.js";
 export const ZXING_WASM_SHA256 = READER_HASH;

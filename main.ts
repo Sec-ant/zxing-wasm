@@ -1,7 +1,7 @@
 import {
   type ReaderOptions,
-  type WriterOptions,
   readBarcodes,
+  type WriterOptions,
   writeBarcode,
 } from "./src/full/index.js";
 
