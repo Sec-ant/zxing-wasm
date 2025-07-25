@@ -180,7 +180,6 @@ struct JsWriterOptions {
   // ZXing::CreatorOptions
   int format;
   bool readerInit;
-  bool forceSquareDataMatrix;
   std::string ecLevel;
   std::string options;
   // ZXing::WriterOptions
@@ -196,7 +195,6 @@ namespace {
   ZXing::CreatorOptions createCreatorOptions(const JsWriterOptions &jsWriterOptions) {
     return ZXing::CreatorOptions(static_cast<ZXing::BarcodeFormat>(jsWriterOptions.format))
       .readerInit(jsWriterOptions.readerInit)
-      .forceSquareDataMatrix(jsWriterOptions.forceSquareDataMatrix)
       .ecLevel(jsWriterOptions.ecLevel)
       .options(jsWriterOptions.options);
   }
@@ -351,7 +349,6 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
   value_object<JsWriterOptions>("WriterOptions")
     .field("format", &JsWriterOptions::format)
     .field("readerInit", &JsWriterOptions::readerInit)
-    .field("forceSquareDataMatrix", &JsWriterOptions::forceSquareDataMatrix)
     .field("ecLevel", &JsWriterOptions::ecLevel)
     .field("scale", &JsWriterOptions::scale)
     .field("sizeHint", &JsWriterOptions::sizeHint)

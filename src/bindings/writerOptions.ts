@@ -19,6 +19,7 @@ export interface ZXingWriterOptions {
   /**
    * Force the Data Matrix to be square.
    * @defaultValue `false`
+   * @deprecated This option does nothing and will be removed in the next major version, use `options` instead
    */
   forceSquareDataMatrix: boolean;
   /**
@@ -73,9 +74,10 @@ export interface ZXingWriterOptions {
    *
    * Known keys used by `CreatorOptions` in the C++ backend:
    * - `gs1`: (boolean) Enables GS1 encoding.
-   * - `stacked`: (boolean) Specifies if the barcode is a stacked type.
-   * - `version`: (integer) Sets the symbol version (e.g., for QR Code).
-   * - `dataMask`: (integer) Sets the data mask pattern (e.g., for QR Code).
+   * - `stacked`: (boolean) Generates a stacked version for DataBar / DataBarExpanded.
+   * - `forceSquare`: (boolean) Only consider square symbol versions.
+   * - `version`: (integer) Specifies the version / size of most 2D symbols.
+   * - `dataMask`: (integer) Specifies the data mask pattern for QRCode / MicroQRCode.
    *
    * @experimental The final form of this property is not yet settled and may change without a major version bump.
    * @defaultValue `""`
