@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.2.1
+
+### Patch Changes
+
+- 2423b8b: Bump deps and zxing-cpp, deprecate `forceSquareDataMatrix` and add `forceSquare` support for options.
+
 ## 2.2.0
 
 ### Minor Changes
