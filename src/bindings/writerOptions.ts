@@ -75,7 +75,8 @@ export interface ZXingWriterOptions {
    * Known keys used by `CreatorOptions` in the C++ backend:
    * - `gs1`: (boolean) Enables GS1 encoding.
    * - `stacked`: (boolean) Generates a stacked version for DataBar / DataBarExpanded.
-   * - `forceSquare`: (boolean) Only consider square symbol versions.
+   * - `forceSquare`: (boolean) Only consider square symbol versions. 
+   *   Supported only for the `DataMatrix` format.
    * - `version`: (integer) Specifies the version / size of most 2D symbols.
    * - `dataMask`: (integer) Specifies the data mask pattern for QRCode / MicroQRCode.
    *
