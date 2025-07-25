@@ -26,4 +26,4 @@ const writerOptions: WriterOptions = {
   options: "forceSquare",
 };
 
-console.log("AB12-CD3-E4", await writeBarcode("AB12-CD3-E4", writerOptions));
+console.log(await writeBarcode("AB12-CD3-E4", writerOptions));
