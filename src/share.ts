@@ -442,5 +442,5 @@ if (import.meta.env.MODE === "miniprogram") {
     get [Symbol.toStringTag]() {
       return "Blob";
     }
-  };
+  } as typeof Blob;
 }
