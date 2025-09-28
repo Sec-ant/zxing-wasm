@@ -12,6 +12,11 @@ runs:
       with:
         node-version-file: .node-version
         cache: pnpm
+        registry-url: https://registry.npmjs.org
+
+    - name: Upgrade npm for trusted publishing
+      shell: bash
+      run: npm install -g npm@latest
 
     - name: Install Dependencies
       shell: bash
