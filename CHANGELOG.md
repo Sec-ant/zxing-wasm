@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.2.2
+
+### Patch Changes
+
+- c12d2fe: Bump deps and switch to OIDC trusted publishing
+
 ## 2.2.1
 
 ### Patch Changes
