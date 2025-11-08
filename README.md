@@ -82,7 +82,7 @@ This package exports three subpaths: `full`, `reader`, and `writer`.
 
 ### `zxing-wasm` or `zxing-wasm/full`
 
-These two subpaths provide functions to read and write barcodes. The wasm binary size is ~1.31 MB.
+These two subpaths provide functions to read and write barcodes. The wasm binary size is ~1.32 MiB.
 
 ```ts
 import { readBarcodes, writeBarcode } from "zxing-wasm";
@@ -96,7 +96,7 @@ import { readBarcodes, writeBarcode } from "zxing-wasm/full";
 
 ### `zxing-wasm/reader`
 
-This subpath only provides a function to read barcodes. The wasm binary size is ~911 KB.
+This subpath only provides a function to read barcodes. The wasm binary size is ~919 KiB.
 
 ```ts
 import { readBarcodes } from "zxing-wasm/reader";
@@ -104,7 +104,7 @@ import { readBarcodes } from "zxing-wasm/reader";
 
 ### `zxing-wasm/writer`
 
-This subpath only provides a function to write barcodes. The wasm binary size is ~600 KB.
+This subpath only provides a function to write barcodes. The wasm binary size is ~608 KiB.
 
 ```ts
 import { writeBarcode } from "zxing-wasm/writer";
@@ -452,7 +452,6 @@ prepareZXingModule({
    ```
 
 3. **Are there any higher level libraries that can be used to simplify the usage of this library?**
-
    - [barcode-detector](https://github.com/Sec-ant/barcode-detector): A [Barcode Detection API](https://wicg.github.io/shape-detection-api/#barcode-detection-api) polyfill / ponyfill that uses this library under the hood.
    - [vue-qrcode-reader](https://github.com/gruhn/vue-qrcode-reader): A set of Vue.js components for detecting QR codes and various other barcode formats right in the browser which uses [barcode-detector](https://github.com/Sec-ant/barcode-detector) under the hood.
    - [@yudiel/react-qr-scanner](https://github.com/yudielcurbelo/react-qr-scanner): A library to scan QR Codes in react which uses [barcode-detector](https://github.com/Sec-ant/barcode-detector) under the hood.

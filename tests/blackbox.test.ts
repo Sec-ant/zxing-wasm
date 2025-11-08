@@ -152,9 +152,8 @@ for (const {
                 passSome ||= passCurrent;
               });
 
-              const imageBlob = new Blob([
-                await getRotatedImage(imagePath, rotation),
-              ]);
+              const rotated = await getRotatedImage(imagePath, rotation);
+              const imageBlob = new Blob([Uint8Array.from(rotated)]);
 
               const appliedReaderOptions: ReaderOptions = {
                 ...readerOptions,
