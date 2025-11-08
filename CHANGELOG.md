@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.2.3
+
+### Patch Changes
+
+- f325c8c: Bump zxing-cpp to `fba4e95` with a newly pinned zint version and some internal tweaks. Updated dependencies. Bump emscripten to v4.0.19, which fixes the uncatchable error on WASM initialization in this lib.
+
 ## 2.2.2
 
 ### Patch Changes
