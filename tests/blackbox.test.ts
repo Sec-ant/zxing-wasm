@@ -153,7 +153,7 @@ for (const {
               });
 
               const imageBlob = new Blob([
-                await getRotatedImage(imagePath, rotation),
+                (await getRotatedImage(imagePath, rotation)) as BlobPart,
               ]);
 
               const appliedReaderOptions: ReaderOptions = {

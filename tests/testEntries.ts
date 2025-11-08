@@ -136,16 +136,6 @@ export const testEntries: TestEntry[] = [
     barcodeFormat: "ITF",
   },
   {
-    directory: "maxicode-1",
-    barcodeFormat: "MaxiCode",
-    rotations: [0],
-  },
-  {
-    directory: "maxicode-2",
-    barcodeFormat: "MaxiCode",
-    rotations: [0],
-  },
-  {
     directory: "upca-1",
     barcodeFormat: "UPC-A",
     readerOptions: {
@@ -242,6 +232,16 @@ export const testEntries: TestEntry[] = [
     directory: "databarltd-1",
     barcodeFormat: "DataBarLimited",
     testPure: true,
+  },
+  {
+    directory: "maxicode-1",
+    barcodeFormat: "MaxiCode",
+    rotations: [0],
+  },
+  {
+    directory: "maxicode-2",
+    barcodeFormat: "MaxiCode",
+    rotations: [0],
   },
   {
     directory: "qrcode-1",
