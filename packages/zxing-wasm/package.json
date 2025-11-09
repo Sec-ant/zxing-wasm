@@ -190,7 +190,6 @@
     "@babel/core": "^7.28.5",
     "@babel/types": "^7.28.5",
     "@biomejs/biome": "catalog:",
-    "@changesets/cli": "catalog:",
     "@napi-rs/canvas": "^0.1.81",
     "@types/babel__core": "^7.20.5",
     "@types/node": "catalog:",

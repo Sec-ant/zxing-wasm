@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
+    "@changesets/cli": "catalog:",
     "lint-staged": "catalog:",
     "prettier": "catalog:",
     "pretty-quick": "catalog:",

@@ -56,6 +56,9 @@ importers:
       '@biomejs/biome':
         specifier: 'catalog:'
         version: 2.3.4
+      '@changesets/cli':
+        specifier: 'catalog:'
+        version: 2.29.7(@types/node@24.10.0)
       lint-staged:
         specifier: 'catalog:'
         version: 16.2.6
@@ -87,9 +90,6 @@ importers:
       '@biomejs/biome':
         specifier: 'catalog:'
         version: 2.3.4
-      '@changesets/cli':
-        specifier: 'catalog:'
-        version: 2.29.7(@types/node@24.10.0)
       '@napi-rs/canvas':
         specifier: ^0.1.81
         version: 0.1.81
