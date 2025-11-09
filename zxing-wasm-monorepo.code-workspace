@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "root",
+    },
+    {
+      "path": "packages/zxing-wasm",
+    },
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "C_Cpp.errorSquiggles": "disabled",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[json]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[cpp]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
+    "git.ignoreLimitWarning": true,
+  },
+}
