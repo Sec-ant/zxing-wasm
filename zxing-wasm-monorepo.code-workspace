@@ -1,0 +1,62 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "root",
+    },
+    {
+      "path": "packages/zxing-wasm",
+    },
+    {
+      "path": "packages/react",
+    },
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "C_Cpp.errorSquiggles": "disabled",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[json]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[snippets]": {
+      "editor.defaultFormatter": "biomejs.biome",
+    },
+    "[cpp]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+      "*.css": "tailwindcss",
+      ".npmrc": "ini",
+    },
+    "editor.quickSuggestions": {
+      "strings": "on",
+    },
+    "tailwindCSS.classFunctions": ["clsx", "twMerge", "cn"],
+    "tailwindCSS.experimental.classRegex": [
+      "[a-zA-Z]*(?:c|C)lass(?:n|N)ame(?:s)?\\s*=\\s*{?(?:\"|'|`)([^(?:\"|'|`})]*)}?",
+      ["classList={{([^;]*)}}", "\\s*?[\"'`]([^\"'`]*).*?:"],
+      "[Cc]lassNames?\\s*:\\s*['\"]([^'\"]*)['\"]",
+    ],
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
+    "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+    // "biome.lsp.trace.server": "verbose",
+    "cmake.ignoreCMakeListsMissing": true,
+  },
+}

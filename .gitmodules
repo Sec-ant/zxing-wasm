@@ -1,3 +1,4 @@
 [submodule "zxing-cpp"]
-	path = zxing-cpp
+	path = packages/zxing-wasm/zxing-cpp
 	url = https://github.com/zxing-cpp/zxing-cpp
+	branch = master

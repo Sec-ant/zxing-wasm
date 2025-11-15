@@ -1,0 +1,20 @@
+{
+  "New React Component": {
+    "scope": "typescriptreact",
+    "prefix": "nrc",
+    "body": [
+      "import { type FC, memo } from \"react\";",
+      "",
+      "export interface ${1:ComponentName}Props {",
+      "\t$0",
+      "}",
+      "",
+      "const ${1:ComponentName}: FC<${1:ComponentName}Props> = () => {",
+      "\treturn <></>;",
+      "};",
+      "",
+      "export default memo(${1:ComponentName}) as typeof ${1:ComponentName};",
+    ],
+    "description": "Generates a new React component structure.",
+  },
+}

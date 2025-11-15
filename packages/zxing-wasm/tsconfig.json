@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["emscripten", "node"],
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true,
+    "noEmit": true
+  },
+  "include": ["./scripts", "./vite.config.ts", "./package.json", "./tests"],
+  "references": [
+    {
+      "path": "./tsconfig.pkg.json"
+    }
+  ]
+}
