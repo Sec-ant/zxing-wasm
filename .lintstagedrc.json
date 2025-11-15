@@ -1,6 +1,6 @@
 {
-  "*.{js,ts,cjs,mjs,cts,mts,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+  "*.{js,ts,cjs,mjs,cts,mts,d.cts,d.mts,json,jsonc}": [
     "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
   ],
-  "*.{md,yml,yaml,css,html}": ["pretty-quick --staged"]
+  "*.{md,yml,yaml,css,html,jsx,tsx}": ["pretty-quick --staged"]
 }

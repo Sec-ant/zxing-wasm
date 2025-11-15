@@ -13,6 +13,8 @@ dist-ssr
 *.local
 
 # Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -21,13 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-docs
-build
-coverage
-**/src/**/zxing_*.wasm
-**/src/**/zxing_*.js
-
-.emsdk-cache
-*.tgz
-*.tar.gz
-*.tsbuildinfo
+*storybook.log
+storybook-static

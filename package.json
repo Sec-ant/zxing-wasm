@@ -36,6 +36,8 @@
     "@changesets/cli": "catalog:",
     "lint-staged": "catalog:",
     "prettier": "catalog:",
+    "prettier-plugin-jsdoc": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
     "pretty-quick": "catalog:",
     "simple-git-hooks": "catalog:"
   },

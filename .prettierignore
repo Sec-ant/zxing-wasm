@@ -10,8 +10,6 @@ build
 *.mts
 *.d.cts
 *.d.mts
-*.jsx
-*.tsx
 *.json
 *.jsonc
 pnpm-lock.yaml
