@@ -12,6 +12,54 @@ const META_PROPERTY = "meta";
 const URL_PROPERTY = "url";
 const SCRIPT_NAME_VAR = "_scriptName"; // Added constant
 
+// --- Polyfill Transformation Helper ---
+
+/**
+ * Checks if a ForOfStatement matches the pattern:
+ * for (let [i, x] of arr.entries()) { ... }
+ */
+function isEntriesPattern(node: t.ForOfStatement): {
+  match: boolean;
+  indexVar?: string;
+  valueVar?: string;
+  arrayNode?: t.Expression;
+} {
+  // Check if left is ArrayPattern: [i, x]
+  if (
+    !t.isVariableDeclaration(node.left) ||
+    node.left.declarations.length !== 1
+  ) {
+    return { match: false };
+  }
+
+  const declarator = node.left.declarations[0];
+  if (!t.isArrayPattern(declarator.id) || declarator.id.elements.length !== 2) {
+    return { match: false };
+  }
+
+  const [indexPat, valuePat] = declarator.id.elements;
+  if (!t.isIdentifier(indexPat) || !t.isIdentifier(valuePat)) {
+    return { match: false };
+  }
+
+  // Check if right is arr.entries()
+  if (
+    !t.isCallExpression(node.right) ||
+    !t.isMemberExpression(node.right.callee) ||
+    !t.isIdentifier(node.right.callee.property, { name: "entries" }) ||
+    node.right.arguments.length !== 0
+  ) {
+    return { match: false };
+  }
+
+  return {
+    match: true,
+    indexVar: indexPat.name,
+    valueVar: valuePat.name,
+    arrayNode: node.right.callee.object,
+  };
+}
+
 // --- Helper Functions ---
 
 /**
@@ -27,6 +75,7 @@ function logPatchResults(
     checked: boolean;
     findWasmBinaryPatched: boolean; // Renamed from wasmUrlPatched
     scriptNamePatched: boolean;
+    entriesTransformed: number; // New: count of .entries() transformations
   },
 ) {
   const filename = this.file.opts.filename ?? "unknown file";
@@ -68,6 +117,16 @@ function logPatchResults(
     allPatchesSuccessful = false;
   }
 
+  // Log .entries() transformations (info only, not a failure)
+  if (state.entriesTransformed > 0) {
+    addLog(
+      "log",
+      "🔄",
+      "\x1b[36m",
+      `Transformed ${state.entriesTransformed} .entries() loop(s) to for-loops`,
+    );
+  }
+
   // Log overall success or failure for the file
   if (allPatchesSuccessful) {
     addLog("log", "✅", "\x1b[32m", "All patches applied successfully");
@@ -105,6 +164,7 @@ export function emscriptenPatch(): PluginItem {
       this.set("checked", false); // Tracks if the environment check was modified
       this.set("findWasmBinaryPatched", false); // Tracks if the findWasmBinary function was patched
       this.set("scriptNamePatched", false); // Tracks if _scriptName was patched
+      this.set("entriesTransformed", 0); // Tracks count of .entries() transformations
     },
     visitor: {
       // Visitor for VariableDeclaration nodes in the AST.
@@ -233,6 +293,54 @@ export function emscriptenPatch(): PluginItem {
           }
         }
       },
+
+      // --- Patch 6: Transform for-of + .entries() to traditional for-loop ---
+      ForOfStatement(path) {
+        const pattern = isEntriesPattern(path.node);
+        if (
+          !pattern.match ||
+          !pattern.indexVar ||
+          !pattern.valueVar ||
+          !pattern.arrayNode
+        ) {
+          return;
+        }
+
+        const { indexVar, valueVar, arrayNode } = pattern;
+        const body = path.node.body;
+
+        // Generate: for (let i = 0; i < arr.length; ++i) { const x = arr[i]; ... }
+        const forLoop = t.forStatement(
+          // Init: let i = 0
+          t.variableDeclaration("let", [
+            t.variableDeclarator(t.identifier(indexVar), t.numericLiteral(0)),
+          ]),
+          // Test: i < arr.length
+          t.binaryExpression(
+            "<",
+            t.identifier(indexVar),
+            t.memberExpression(arrayNode, t.identifier("length")),
+          ),
+          // Update: ++i
+          t.updateExpression("++", t.identifier(indexVar), true),
+          // Body: { const x = arr[i]; ...originalBody }
+          t.blockStatement([
+            t.variableDeclaration("const", [
+              t.variableDeclarator(
+                t.identifier(valueVar),
+                t.memberExpression(arrayNode, t.identifier(indexVar), true),
+              ),
+            ]),
+            ...(t.isBlockStatement(body) ? body.body : [body]),
+          ]),
+        );
+
+        path.replaceWith(forLoop);
+
+        // Increment counter
+        const count = this.get("entriesTransformed") || 0;
+        this.set("entriesTransformed", count + 1);
+      },
     },
     // `post` runs after traversing the AST for a file.
     post(this: PluginPass) {
@@ -242,6 +350,7 @@ export function emscriptenPatch(): PluginItem {
         checked: this.get("checked"),
         findWasmBinaryPatched: this.get("findWasmBinaryPatched"),
         scriptNamePatched: this.get("scriptNamePatched"),
+        entriesTransformed: this.get("entriesTransformed"),
       };
       // Log the results of the patching process for this file using the collected state.
       logPatchResults.call(this, finalState);
