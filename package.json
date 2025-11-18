@@ -189,12 +189,12 @@
   "devDependencies": {
     "@babel/core": "^7.28.5",
     "@babel/types": "^7.28.5",
-    "@biomejs/biome": "2.3.4",
+    "@biomejs/biome": "2.3.6",
     "@changesets/cli": "^2.29.7",
-    "@napi-rs/canvas": "^0.1.81",
+    "@napi-rs/canvas": "^0.1.82",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^24.10.0",
-    "@vitest/ui": "^4.0.8",
+    "@types/node": "^24.10.1",
+    "@vitest/ui": "^4.0.10",
     "concurrently": "^9.2.1",
     "copy-files-from-to": "^3.13.0",
     "jimp": "^1.6.0",
@@ -210,7 +210,7 @@
     "typescript": "^5.9.3",
     "vite": "^7.2.2",
     "vite-plugin-babel": "^1.3.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.10"
   },
   "dependencies": {
     "@types/emscripten": "^1.41.5",
@@ -219,7 +219,7 @@
   "peerDependencies": {
     "@types/emscripten": ">=1.39.6"
   },
-  "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd",
+  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@biomejs/biome",
