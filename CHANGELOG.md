@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 2.2.4
+
+### Patch Changes
+
+- 1cf308c: Replace `Array.prototype.entries` with the good old index-based for loops.
+
 ## 2.2.3
 
 ### Patch Changes
