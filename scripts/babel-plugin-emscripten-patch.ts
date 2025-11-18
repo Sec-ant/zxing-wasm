@@ -309,6 +309,12 @@ export function emscriptenPatch(): PluginItem {
         const { indexVar, valueVar, arrayNode } = pattern;
         const body = path.node.body;
 
+        // Cache array expression to avoid multiple evaluations
+        const tempArrayVar = path.scope.generateUidIdentifier("arr");
+        const arrayVarDeclaration = t.variableDeclaration("const", [
+          t.variableDeclarator(tempArrayVar, arrayNode),
+        ]);
+
         // Generate: for (let i = 0; i < arr.length; ++i) { const x = arr[i]; ... }
         const forLoop = t.forStatement(
           // Init: let i = 0
@@ -319,7 +325,7 @@ export function emscriptenPatch(): PluginItem {
           t.binaryExpression(
             "<",
             t.identifier(indexVar),
-            t.memberExpression(arrayNode, t.identifier("length")),
+            t.memberExpression(tempArrayVar, t.identifier("length")),
           ),
           // Update: ++i
           t.updateExpression("++", t.identifier(indexVar), true),
@@ -328,14 +334,15 @@ export function emscriptenPatch(): PluginItem {
             t.variableDeclaration("const", [
               t.variableDeclarator(
                 t.identifier(valueVar),
-                t.memberExpression(arrayNode, t.identifier(indexVar), true),
+                t.memberExpression(tempArrayVar, t.identifier(indexVar), true),
               ),
             ]),
             ...(t.isBlockStatement(body) ? body.body : [body]),
           ]),
         );
 
-        path.replaceWith(forLoop);
+        // Replace with block containing array cache + for loop
+        path.replaceWith(t.blockStatement([arrayVarDeclaration, forLoop]));
 
         // Increment counter
         const count = this.get("entriesTransformed") || 0;
