@@ -1,0 +1,221 @@
+{
+  "name": "zxing-wasm",
+  "description": "ZXing-C++ WebAssembly as an ES/CJS module with types",
+  "private": false,
+  "version": "2.2.4",
+  "type": "module",
+  "files": [
+    "./dist"
+  ],
+  "main": "./dist/cjs/full/index.js",
+  "module": "./dist/es/full/index.js",
+  "miniprogram": "./dist/miniprogram",
+  "exports": {
+    ".": {
+      "import": "./dist/es/full/index.js",
+      "require": "./dist/cjs/full/index.js",
+      "default": "./dist/es/full/index.js"
+    },
+    "./full": {
+      "import": "./dist/es/full/index.js",
+      "require": "./dist/cjs/full/index.js",
+      "default": "./dist/es/full/index.js"
+    },
+    "./reader": {
+      "import": "./dist/es/reader/index.js",
+      "require": "./dist/cjs/reader/index.js",
+      "default": "./dist/es/reader/index.js"
+    },
+    "./writer": {
+      "import": "./dist/es/writer/index.js",
+      "require": "./dist/cjs/writer/index.js",
+      "default": "./dist/es/writer/index.js"
+    },
+    "./full/zxing_full.wasm": {
+      "import": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/full/zxing_full.wasm"
+      },
+      "require": {
+        "types": "./dist/cjs/types/wasm.d.ts",
+        "default": "./dist/full/zxing_full.wasm"
+      },
+      "default": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/full/zxing_full.wasm"
+      }
+    },
+    "./reader/zxing_reader.wasm": {
+      "import": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/reader/zxing_reader.wasm"
+      },
+      "require": {
+        "types": "./dist/cjs/types/wasm.d.ts",
+        "default": "./dist/reader/zxing_reader.wasm"
+      },
+      "default": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/reader/zxing_reader.wasm"
+      }
+    },
+    "./writer/zxing_writer.wasm": {
+      "import": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/writer/zxing_writer.wasm"
+      },
+      "require": {
+        "types": "./dist/cjs/types/wasm.d.ts",
+        "default": "./dist/writer/zxing_writer.wasm"
+      },
+      "default": {
+        "types": "./dist/es/types/wasm.d.ts",
+        "default": "./dist/writer/zxing_writer.wasm"
+      }
+    },
+    "./imageData": {
+      "import": {
+        "types": "./dist/es/types/imageData.d.ts"
+      },
+      "require": {
+        "types": "./dist/cjs/types/imageData.d.ts"
+      },
+      "default": {
+        "types": "./dist/es/types/imageData.d.ts"
+      }
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "full/zxing_full.wasm": [
+        "./dist/es/types/wasm.d.ts",
+        "./dist/cjs/types/wasm.d.ts"
+      ],
+      "full": [
+        "./dist/es/full/index.d.ts",
+        "./dist/cjs/full/index.d.ts"
+      ],
+      "reader/zxing_reader.wasm": [
+        "./dist/es/types/wasm.d.ts",
+        "./dist/cjs/types/wasm.d.ts"
+      ],
+      "reader": [
+        "./dist/es/reader/index.d.ts",
+        "./dist/cjs/reader/index.d.ts"
+      ],
+      "writer/zxing_writer.wasm": [
+        "./dist/es/types/wasm.d.ts",
+        "./dist/cjs/types/wasm.d.ts"
+      ],
+      "writer": [
+        "./dist/es/writer/index.d.ts",
+        "./dist/cjs/writer/index.d.ts"
+      ],
+      "imageData": [
+        "./dist/es/types/imageData.d.ts",
+        "./dist/cjs/types/imageData.d.ts"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sec-ant/zxing-wasm.git"
+  },
+  "homepage": "https://github.com/Sec-ant/zxing-wasm",
+  "bugs": {
+    "url": "https://github.com/Sec-ant/zxing-wasm/issues",
+    "email": "zezhengwu@proton.me"
+  },
+  "keywords": [
+    "qrcode",
+    "barcode",
+    "wasm",
+    "zxing",
+    "zxing-cpp",
+    "esmodule",
+    "webassembly"
+  ],
+  "author": {
+    "name": "Ze-Zheng Wu"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "update-hooks": "simple-git-hooks",
+    "submodule:init": "git submodule update --init",
+    "submodule:update": "git submodule update --remote",
+    "cmake:base": "emcmake cmake -S src/cpp -B build",
+    "cmake:reader": "pnpm -s cmake:base -DTARGET=READER",
+    "cmake:writer": "pnpm -s cmake:base -DTARGET=WRITER",
+    "cmake:full": "pnpm -s cmake:base -DTARGET=FULL",
+    "build:wasm:base": "cmake --build build -j$(($(nproc 2>/dev/null || sysctl -n hw.logicalcpu) - 1))",
+    "build:wasm:reader": "pnpm -s cmake:reader && pnpm -s build:wasm:base",
+    "build:wasm:writer": "pnpm -s cmake:writer && pnpm -s build:wasm:base",
+    "build:wasm:full": "pnpm -s cmake:full && pnpm -s build:wasm:base",
+    "build:wasm": "pnpm -s build:wasm:reader && pnpm -s build:wasm:writer && pnpm -s build:wasm:full",
+    "copy:wasm": "copy-files-from-to",
+    "docs:dev": "conc \"pnpm:docs:preview\" \"typedoc --watch --excludeInternal\"",
+    "docs:build": "typedoc --excludeInternal",
+    "docs:preview": "vite preview --outDir ./docs",
+    "dev": "vite",
+    "lint": "biome lint .",
+    "type-check": "tsc -p ./tsconfig.pkg.json --noEmit --emitDeclarationOnly false",
+    "format:prettier": "pretty-quick",
+    "format:biome": "biome format . --write",
+    "format": "pnpm -s format:prettier && pnpm -s format:biome",
+    "check:biome": "biome check --write .",
+    "check": "pnpm -s format:prettier && pnpm -s check:biome",
+    "clear:dist": "rimraf dist",
+    "prebuild": "pnpm -s check && pnpm -s type-check && pnpm -s clear:dist",
+    "build:es": "vite build",
+    "build:cjs": "tsx ./scripts/build-cjs.ts",
+    "build:iife": "tsx ./scripts/build-iife.ts",
+    "build:miniprogram": "tsx ./scripts/build-miniprogram.ts",
+    "build": "conc \"pnpm:build:es\" \"pnpm:build:cjs\" \"pnpm:build:iife\" \"pnpm:build:miniprogram\"",
+    "postbuild:es": "tsc -p ./tsconfig.pkg.json --declarationDir ./dist/es",
+    "postbuild:cjs": "tsc -p ./tsconfig.pkg.json --declarationDir ./dist/cjs",
+    "postbuild": "conc \"pnpm:copy:wasm\"",
+    "build:all": "pnpm -s submodule:init && pnpm -s build:wasm && pnpm -s build",
+    "preview": "vite preview",
+    "prepublishOnly": "pnpm -s build:all",
+    "bump-biome:latest": "pnpm add -DE @biomejs/biome@latest",
+    "bump-biome:nightly": "pnpm add -DE @biomejs/biome@nightly",
+    "sync-emsdk": "./scripts/sync-emsdk.sh",
+    "test": "vitest --hideSkippedTests",
+    "test:ui": "vitest --hideSkippedTests --ui"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/types": "^7.28.5",
+    "@biomejs/biome": "catalog:",
+    "@napi-rs/canvas": "^0.1.82",
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "catalog:",
+    "@vitest/ui": "catalog:",
+    "concurrently": "^9.2.1",
+    "copy-files-from-to": "^3.13.0",
+    "jimp": "^1.6.0",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "pretty-quick": "catalog:",
+    "rimraf": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "tinyglobby": "^0.2.15",
+    "tsx": "catalog:",
+    "typedoc": "^0.28.14",
+    "typedoc-plugin-replace-text": "^4.2.0",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-babel": "^1.3.2",
+    "vitest": "catalog:"
+  },
+  "dependencies": {
+    "@types/emscripten": "^1.41.5",
+    "type-fest": "catalog:"
+  },
+  "peerDependencies": {
+    "@types/emscripten": ">=1.39.6"
+  }
+}

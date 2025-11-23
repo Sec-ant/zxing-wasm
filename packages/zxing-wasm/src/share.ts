@@ -123,7 +123,7 @@ Learn more:
           locateFile: (path, prefix) => {
             const match = path.match(/_(.+?)\.wasm$/);
             if (match) {
-              return `/src/${match[1]}/${path}`;
+              return import.meta.resolve(`./${match[1]}/${path}`);
             }
             return prefix + path;
           },
