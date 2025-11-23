@@ -4,6 +4,8 @@
     "ignoreUnknown": true,
     "includes": [
       "**",
+      "!**/*.tsx",
+      "!**/*.jsx",
       "!**/zxing-cpp",
       "!**/__snapshots__",
       "!**/.changeset/pre.json"

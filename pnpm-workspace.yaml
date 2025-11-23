@@ -1,0 +1,33 @@
+packages:
+  - packages/*
+  - apps/*
+
+catalog:
+  "@biomejs/biome": 2.3.6
+  "@changesets/cli": ^2.29.7
+  "@types/node": ^24.10.1
+  "@vitest/ui": ^4.0.10
+  lint-staged: ^16.2.6
+  prettier: ^3.6.2
+  prettier-plugin-jsdoc: ^1.5.0
+  prettier-plugin-tailwindcss: ^0.7.1
+  pretty-quick: ^4.2.2
+  rimraf: ^6.1.0
+  simple-git-hooks: ^2.13.1
+  tsx: ^4.20.6
+  type-fest: 5.2.0
+  typescript: ^5.9.3
+  vite: ^7.2.2
+  vitest: ^4.0.10
+
+catalogs:
+  react19:
+    "@types/react": ^19.2.2
+    "@types/react-dom": ^19.2.2
+    react: ^19.2.0
+    react-dom: ^19.2.0
+
+onlyBuiltDependencies:
+  - "@biomejs/biome"
+  - esbuild
+  - simple-git-hooks
