@@ -43,8 +43,8 @@ importers:
         specifier: ^9.2.1
         version: 9.2.1
       copy-files-from-to:
-        specifier: ^3.13.0
-        version: 3.13.0
+        specifier: ^4.0.0
+        version: 4.0.0
       jimp:
         specifier: ^1.6.0
         version: 1.6.0
@@ -1202,9 +1202,9 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
-  copy-files-from-to@3.13.0:
-    resolution: {integrity: sha512-DRj1W8NRZAOt6+k9O0hcQ4R7pDX7wJMjs2b3EGgD/70qyM4ZZuIn0Kd8LLoOIuzR6Fvj/yIlA+3D4ZbVLIlG7A==}
-    engines: {node: '>=18'}
+  copy-files-from-to@4.0.0:
+    resolution: {integrity: sha512-dR7P9Horr5saSmqMiAfzKw9YZ8Akk5J2sw2eApvz/MWCbs933SAjeqzFQpIgKHZnpLy2kYaLceujKYSNFXpD0Q==}
+    engines: {node: '>=22.12.0'}
     hasBin: true
 
   cross-spawn@7.0.6:
@@ -3344,7 +3344,7 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  copy-files-from-to@3.13.0:
+  copy-files-from-to@4.0.0:
     dependencies:
       async: 3.2.6
       axios: 1.13.2

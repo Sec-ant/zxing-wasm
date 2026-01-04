@@ -196,7 +196,7 @@
     "@types/node": "^24.10.1",
     "@vitest/ui": "^4.0.10",
     "concurrently": "^9.2.1",
-    "copy-files-from-to": "^3.13.0",
+    "copy-files-from-to": "^4.0.0",
     "jimp": "^1.6.0",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
