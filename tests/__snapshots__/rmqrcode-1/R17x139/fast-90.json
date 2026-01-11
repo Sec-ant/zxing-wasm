@@ -35,12 +35,12 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "32",
+  "version": "R17x139",
   "symbol": {
     "data": "02c3952",
     "width": 139,
     "height": 17
   },
-  "extra": "{\"DataMask\":4,\"Version\":\"R17x139\"}",
+  "extra": "{\"DataMask\":4,\"Version\":\"R17x139\",\"ECLevel\":\"M\"}",
   "eccLevel": "M"
 }

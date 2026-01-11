@@ -10,23 +10,23 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 485,
-      "y": 485
+      "x": 470,
+      "y": 470
     },
     "topRight": {
-      "x": 14,
-      "y": 484
+      "x": 29,
+      "y": 470
     },
     "bottomRight": {
-      "x": 14,
-      "y": 14
+      "x": 29,
+      "y": 29
     },
     "bottomLeft": {
-      "x": 485,
-      "y": 14
+      "x": 470,
+      "y": 29
     }
   },
-  "orientation": -180,
+  "orientation": 180,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",
@@ -35,9 +35,9 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "4",
+  "version": "16x16",
   "symbol": {
-    "data": "09e6255",
+    "data": "973d11a",
     "width": 16,
     "height": 16
   },

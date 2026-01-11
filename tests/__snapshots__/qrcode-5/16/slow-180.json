@@ -41,6 +41,6 @@
     "width": 177,
     "height": 177
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"40\"}",
+  "extra": "{\"DataMask\":2,\"Version\":\"40\",\"ECLevel\":\"L\"}",
   "eccLevel": "L"
 }

@@ -1,6 +1,9 @@
 import { type WriterOptions, defaultWriterOptions as wo } from "./index.js";
 
-export const defaultWriterOptions: Required<WriterOptions> = { ...wo };
+export const defaultWriterOptions: Omit<
+  Required<WriterOptions>,
+  "addHRT" | "addQuietZones"
+> = { ...wo };
 
 export {
   type BarcodeFormat,

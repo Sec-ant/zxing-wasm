@@ -1,5 +1,5 @@
 import { decodeFormat, type ReadOutputBarcodeFormat } from "./barcodeFormat.js";
-import type { BarcodeSymbol } from "./barcodeSymbol.js";
+import { type BarcodeSymbol, flipSymbolBits } from "./barcodeSymbol.js";
 import { type ContentType, decodeContentType } from "./contentType.js";
 import type { EcLevel } from "./ecLevel.js";
 import type { Position, ZXingPosition } from "./position.js";
@@ -163,5 +163,6 @@ export function zxingReadResultToReadResult(
     format: decodeFormat(zxingReadResult.format),
     contentType: decodeContentType(zxingReadResult.contentType),
     eccLevel: zxingReadResult.ecLevel,
+    symbol: flipSymbolBits(zxingReadResult.symbol),
   };
 }

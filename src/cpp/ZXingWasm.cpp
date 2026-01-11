@@ -17,6 +17,7 @@
 #endif
 
 #if defined(WRITER)
+  #include "CreateBarcode.h"
   #include "WriteBarcode.h"
   #define STB_IMAGE_WRITE_IMPLEMENTATION
   #include <stb_image_write.h>
@@ -52,7 +53,9 @@ struct JsReaderOptions {
   bool tryRotate;
   bool tryInvert;
   bool tryDownscale;
+#ifdef ZXING_EXPERIMENTAL_API
   bool tryDenoise;
+#endif
   uint8_t binarizer;
   bool isPure;
   uint16_t downscaleThreshold;
@@ -98,23 +101,25 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
     auto barcodes = ZXing::ReadBarcodes(
       imageView,
       ZXing::ReaderOptions()
-        .setFormats(static_cast<ZXing::BarcodeFormat>(jsReaderOptions.formats))
-        .setTryHarder(jsReaderOptions.tryHarder)
-        .setTryRotate(jsReaderOptions.tryRotate)
-        .setTryInvert(jsReaderOptions.tryInvert)
-        .setTryDownscale(jsReaderOptions.tryDownscale)
-        .setTryDenoise(jsReaderOptions.tryDenoise)
-        .setBinarizer(static_cast<ZXing::Binarizer>(jsReaderOptions.binarizer))
-        .setIsPure(jsReaderOptions.isPure)
-        .setDownscaleThreshold(jsReaderOptions.downscaleThreshold)
-        .setDownscaleFactor(jsReaderOptions.downscaleFactor)
-        .setMinLineCount(jsReaderOptions.minLineCount)
-        .setMaxNumberOfSymbols(jsReaderOptions.maxNumberOfSymbols)
-        .setTryCode39ExtendedMode(jsReaderOptions.tryCode39ExtendedMode)
-        .setReturnErrors(jsReaderOptions.returnErrors)
-        .setEanAddOnSymbol(static_cast<ZXing::EanAddOnSymbol>(jsReaderOptions.eanAddOnSymbol))
-        .setTextMode(static_cast<ZXing::TextMode>(jsReaderOptions.textMode))
-        .setCharacterSet(static_cast<ZXing::CharacterSet>(jsReaderOptions.characterSet))
+        .formats(static_cast<ZXing::BarcodeFormat>(jsReaderOptions.formats))
+        .tryHarder(jsReaderOptions.tryHarder)
+        .tryRotate(jsReaderOptions.tryRotate)
+        .tryInvert(jsReaderOptions.tryInvert)
+        .tryDownscale(jsReaderOptions.tryDownscale)
+#ifdef ZXING_EXPERIMENTAL_API
+        .tryDenoise(jsReaderOptions.tryDenoise)
+#endif
+        .binarizer(static_cast<ZXing::Binarizer>(jsReaderOptions.binarizer))
+        .isPure(jsReaderOptions.isPure)
+        .downscaleThreshold(jsReaderOptions.downscaleThreshold)
+        .downscaleFactor(jsReaderOptions.downscaleFactor)
+        .minLineCount(jsReaderOptions.minLineCount)
+        .maxNumberOfSymbols(jsReaderOptions.maxNumberOfSymbols)
+        .tryCode39ExtendedMode(jsReaderOptions.tryCode39ExtendedMode)
+        .returnErrors(jsReaderOptions.returnErrors)
+        .eanAddOnSymbol(static_cast<ZXing::EanAddOnSymbol>(jsReaderOptions.eanAddOnSymbol))
+        .textMode(static_cast<ZXing::TextMode>(jsReaderOptions.textMode))
+        .characterSet(static_cast<ZXing::CharacterSet>(jsReaderOptions.characterSet))
     );
 
     JsReadResults jsReadResults;
@@ -179,33 +184,29 @@ JsReadResults readBarcodesFromPixmap(int bufferPtr, int width, int height, const
 struct JsWriterOptions {
   // ZXing::CreatorOptions
   int format;
-  bool readerInit;
-  std::string ecLevel;
   std::string options;
   // ZXing::WriterOptions
   int scale;
-  int sizeHint;
   int rotate;
-  bool withHRT;
-  bool withQuietZones;
+  bool addHRT;
+  bool addQuietZones;
+  bool invert;
 };
 
 namespace {
 
   ZXing::CreatorOptions createCreatorOptions(const JsWriterOptions &jsWriterOptions) {
     return ZXing::CreatorOptions(static_cast<ZXing::BarcodeFormat>(jsWriterOptions.format))
-      .readerInit(jsWriterOptions.readerInit)
-      .ecLevel(jsWriterOptions.ecLevel)
       .options(jsWriterOptions.options);
   }
 
   ZXing::WriterOptions createWriterOptions(const JsWriterOptions &jsWriterOptions) {
     return ZXing::WriterOptions()
       .scale(jsWriterOptions.scale)
-      .sizeHint(jsWriterOptions.sizeHint)
       .rotate(jsWriterOptions.rotate)
-      .withHRT(jsWriterOptions.withHRT)
-      .withQuietZones(jsWriterOptions.withQuietZones);
+      .addHRT(jsWriterOptions.addHRT)
+      .addQuietZones(jsWriterOptions.addQuietZones)
+      .invert(jsWriterOptions.invert);
   }
 
 } // anonymous namespace
@@ -292,7 +293,9 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("tryRotate", &JsReaderOptions::tryRotate)
     .field("tryInvert", &JsReaderOptions::tryInvert)
     .field("tryDownscale", &JsReaderOptions::tryDownscale)
+#ifdef ZXING_EXPERIMENTAL_API
     .field("tryDenoise", &JsReaderOptions::tryDenoise)
+#endif
     .field("binarizer", &JsReaderOptions::binarizer)
     .field("isPure", &JsReaderOptions::isPure)
     .field("downscaleThreshold", &JsReaderOptions::downscaleThreshold)
@@ -348,14 +351,12 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
 
   value_object<JsWriterOptions>("WriterOptions")
     .field("format", &JsWriterOptions::format)
-    .field("readerInit", &JsWriterOptions::readerInit)
-    .field("ecLevel", &JsWriterOptions::ecLevel)
+    .field("options", &JsWriterOptions::options)
     .field("scale", &JsWriterOptions::scale)
-    .field("sizeHint", &JsWriterOptions::sizeHint)
     .field("rotate", &JsWriterOptions::rotate)
-    .field("withHRT", &JsWriterOptions::withHRT)
-    .field("withQuietZones", &JsWriterOptions::withQuietZones)
-    .field("options", &JsWriterOptions::options);
+    .field("addHRT", &JsWriterOptions::addHRT)
+    .field("addQuietZones", &JsWriterOptions::addQuietZones)
+    .field("invert", &JsWriterOptions::invert);
 
   value_object<JsWriteResult>("WriteResult")
     .field("error", &JsWriteResult::error)

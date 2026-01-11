@@ -35,12 +35,12 @@
   "sequenceId": "",
   "readerInit": false,
   "lineCount": 0,
-  "version": "2",
+  "version": "M2",
   "symbol": {
     "data": "18cbaa2",
     "width": 13,
     "height": 13
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"M2\"}",
+  "extra": "{\"DataMask\":3,\"Version\":\"M2\",\"ECLevel\":\"L\"}",
   "eccLevel": "L"
 }
