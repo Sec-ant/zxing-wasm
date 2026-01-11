@@ -375,7 +375,7 @@ export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   input: string | Uint8Array,
   writerOptions: WriterOptions = defaultWriterOptions,
 ) {
-  const requiredWriterOptions: Required<WriterOptions> = {
+  const requiredWriterOptions = {
     ...defaultWriterOptions,
     ...writerOptions,
   };

@@ -29,8 +29,8 @@ describe("zxing/writer", async () => {
       writeBarcode(new Uint8Array(48).fill(0), {
         format: "Aztec",
         scale: 0,
-        withQuietZones: true,
-        withHRT: false,
+        addQuietZones: true,
+        addHRT: false,
       }),
     ).resolves.not.toThrowError();
   });

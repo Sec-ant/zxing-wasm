@@ -41,6 +41,6 @@
     "width": 15,
     "height": 15
   },
-  "extra": "",
+  "extra": "{\"Version\":\"1\",\"ECLevel\":\"82%\",\"ReaderInit\":true}",
   "eccLevel": "82%"
 }

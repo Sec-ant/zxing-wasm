@@ -1,4 +1,4 @@
-import type { BarcodeSymbol } from "./barcodeSymbol.js";
+import { type BarcodeSymbol, flipSymbolBits } from "./barcodeSymbol.js";
 
 /**
  * @internal
@@ -66,5 +66,6 @@ export function zxingWriteResultToWriteResult(
           type: "image/png",
         })) ??
       null,
+    symbol: flipSymbolBits(zxingWriteResult.symbol),
   };
 }
