@@ -3,6 +3,7 @@
 > [!NOTE]
 >
 > For the v1 release, please visit the [`channel/v1`](https://www.github.com/Sec-ant/zxing-wasm/tree/channel/v1) branch.
+>
 > For the v2 release, please visit the [`channel/v2`](https://www.github.com/Sec-ant/zxing-wasm/tree/channel/v2) branch.
 
 # zxing-wasm
@@ -70,6 +71,8 @@ This library supports a comprehensive set of barcode formats organized into **sy
 |                |   `RMQRCode`    |    rMQR Code    |   ✅   |  ✅   | ✅  |
 | **DataMatrix** |  `DataMatrix`   |   Data Matrix   |   ✅   |  ✅   | ✅  |
 |  **MaxiCode**  |   `MaxiCode`    |    MaxiCode     | ✅[^1] |  ✅   |     |
+
+[^1]: Reading support for `MaxiCode` requires a pure monochrome image that contains an unrotated and unskewed symbol, along with a sufficient white border surrounding it.
 
 </div>
 
