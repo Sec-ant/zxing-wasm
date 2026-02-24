@@ -80,6 +80,8 @@ This library supports a comprehensive set of barcode formats organized into **sy
 
 Meta-formats are logical groupings that can be passed to `ReaderOptions.formats` to match multiple formats at once:
 
+<div align="center">
+
 |   Meta-Format   |           Description           |
 | :-------------: | :-----------------------------: |
 |      `All`      |       All barcode formats       |
@@ -90,6 +92,8 @@ Meta-formats are logical groupings that can be passed to `ReaderOptions.formats`
 |    `AllGS1`     |   All GS1-compatible formats    |
 |   `AllRetail`   |   All retail-oriented formats   |
 | `AllIndustrial` | All industrial-oriented formats |
+
+</div>
 
 ### Format Names and Labels
 
