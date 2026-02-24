@@ -252,6 +252,7 @@ JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWr
     uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
 
     if (bytes == nullptr || len <= 0) {
+      free(bytes);
       return {.error = "Failed to encode PNG"};
     }
 
@@ -286,6 +287,7 @@ JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWri
     uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
 
     if (bytes == nullptr || len <= 0) {
+      free(bytes);
       return {.error = "Failed to encode PNG"};
     }
 
