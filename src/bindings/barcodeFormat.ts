@@ -292,7 +292,7 @@ export type RetailBarcodeFormat = (typeof RETAIL_BARCODE_FORMATS)[number];
 // ----
 
 const INDUSTRIAL_BARCODE_FORMAT_ENTRIES = BCF.filter(
-  (e): e is (typeof BCF)[number] & { 3: `${string}I` } => e[3][5] === "I",
+  (e): e is (typeof BCF)[number] & { 3: `${string}I` } => e[3][4] === "I",
 );
 
 /**
@@ -453,6 +453,10 @@ if (import.meta.vitest) {
       ]);
       expect(formatToSymbology("UPCA")).toBe("EANUPC");
       expect(formatToSymbology("RMQRCode")).toBe("QRCode");
+    });
+
+    it("includes industrial barcode formats", () => {
+      expect(INDUSTRIAL_BARCODE_FORMATS).toContain("Code39");
     });
   });
 }
