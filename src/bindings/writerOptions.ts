@@ -201,7 +201,8 @@ export function writerOptionsToZXingWriterOptions(
     .filter(Boolean);
 
   const addOptionToken = (token: string) => {
-    if (!optionTokens.includes(token)) {
+    const key = token.split("=")[0];
+    if (!optionTokens.some((t) => t.split("=")[0] === key)) {
       optionTokens.push(token);
     }
   };
