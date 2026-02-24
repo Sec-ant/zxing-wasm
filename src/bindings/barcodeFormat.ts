@@ -367,8 +367,9 @@ export function formatToSymbology(
  * Returns `undefined` if the format is not found.
  */
 export function formatToLabel(format: string): BarcodeHriLabel | undefined {
+  const normalized = ALIASES[format as keyof typeof ALIASES] ?? format;
   for (const entry of BCF) {
-    if (entry[0] === format) {
+    if (entry[0] === normalized || entry[5] === normalized) {
       return entry[5];
     }
   }
