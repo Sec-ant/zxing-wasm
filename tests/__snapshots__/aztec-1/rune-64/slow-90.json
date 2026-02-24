@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "5e18d34",
   "bytesECI": "bdcca42",
   "text": "064",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "",
   "symbol": {
-    "data": "d9cf198",
+    "data": "c056a2a",
     "width": 11,
     "height": 11
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

@@ -1,7 +1,7 @@
 {
-  "total": 65,
-  "passAll": 55,
-  "passSome": 65,
+  "total": 62,
+  "passAll": 52,
+  "passSome": 62,
   "fast": {
     "0": {
       "failures": 10,

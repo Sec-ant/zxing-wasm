@@ -1,11 +1,14 @@
-export const binarizers = [
+export const BINARIZERS = [
   "LocalAverage",
   "GlobalHistogram",
   "FixedThreshold",
   "BoolCast",
 ] as const;
 
-export type Binarizer = (typeof binarizers)[number];
+/** @deprecated Use {@link BINARIZERS} instead. */
+export const binarizers = BINARIZERS;
+
+export type Binarizer = (typeof BINARIZERS)[number];
 
 /**
  * Encodes a binarizer to its numeric representation.
@@ -14,7 +17,7 @@ export type Binarizer = (typeof binarizers)[number];
  * @returns A number representing the encoded binarizer
  */
 export function encodeBinarizer(binarizer: Binarizer): number {
-  return binarizers.indexOf(binarizer);
+  return BINARIZERS.indexOf(binarizer);
 }
 
 /**
@@ -24,5 +27,5 @@ export function encodeBinarizer(binarizer: Binarizer): number {
  * @returns The decoded binarizer
  */
 export function decodeBinarizer(number: number): Binarizer {
-  return binarizers[number];
+  return BINARIZERS[number];
 }

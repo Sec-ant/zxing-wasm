@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "890d554",
   "bytesECI": "fa3a6b5",
   "text": "[)><RS>06<GS>9N111234568408<GS>1TF17L715034<GS>D180800<GS>SXVTR75973491946876<RS><EOT>",
-  "ecLevel": "",
   "contentType": "ISO15434",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "8",
   "symbol": {
-    "data": "8c3ffd4",
+    "data": "9fef9d6",
     "width": 24,
     "height": 24
   },
   "extra": "{\"Version\":\"24x24\"}",
-  "eccLevel": ""
+  "version": "24x24",
+  "readerInit": false,
+  "ecLevel": ""
 }

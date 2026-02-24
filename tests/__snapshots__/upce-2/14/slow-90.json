@@ -1,0 +1,47 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "UPCE",
+  "symbology": "EAN/UPC",
+  "bytes": "27b3411",
+  "bytesECI": "33e2626",
+  "text": "0049040000014",
+  "ecLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 114,
+      "y": 181
+    },
+    "topRight": {
+      "x": 114,
+      "y": 119
+    },
+    "bottomRight": {
+      "x": 107,
+      "y": 119
+    },
+    "bottomLeft": {
+      "x": 107,
+      "y": 182
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]E0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": "",
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "{\"UPCE\":\"04904144\"}",
+  "eccLevel": ""
+}

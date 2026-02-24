@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "94ee059",
   "bytesECI": "f31a8c1",
   "text": "TEST",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "4",
   "symbol": {
-    "data": "87ab8a6",
+    "data": "36d5b9d",
     "width": 33,
     "height": 33
   },
-  "extra": "{\"DataMask\":4,\"Version\":\"4\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":4,\"Version\":\"4\",\"ECLevel\":\"L\"}",
+  "version": "4",
+  "readerInit": false,
+  "ecLevel": "L"
 }

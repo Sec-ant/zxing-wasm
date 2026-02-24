@@ -1,4 +1,7 @@
-import { decodeFormat, type ReadOutputBarcodeFormat } from "./barcodeFormat.js";
+import type {
+  BarcodeSymbology,
+  ReadOutputBarcodeFormat,
+} from "./barcodeFormat.js";
 import type { BarcodeSymbol } from "./barcodeSymbol.js";
 import { type ContentType, decodeContentType } from "./contentType.js";
 import type { EcLevel } from "./ecLevel.js";
@@ -21,7 +24,11 @@ export interface ZXingReadResult {
   /**
    * @internal
    */
-  format: number;
+  format: string;
+  /**
+   * @internal
+   */
+  symbology: string;
   /**
    * Raw / Standard content without any modifications like character set conversions.
    */
@@ -32,13 +39,9 @@ export interface ZXingReadResult {
   bytesECI: Uint8Array;
   /**
    * The {@link ReadResult.bytes | `ReadResult.bytes`} content rendered to unicode / utf8 text
-   * accoring to specified {@link ReaderOptions.textMode | `ReaderOptions.textMode`}.
+   * according to specified {@link ReaderOptions.textMode | `ReaderOptions.textMode`}.
    */
   text: string;
-  /**
-   * Error correction level of the symbol (empty string if not applicable).
-   */
-  ecLevel: EcLevel;
   /**
    * @internal
    */
@@ -60,7 +63,7 @@ export interface ZXingReadResult {
    */
   isMirrored: boolean;
   /**
-   * Whether the symbol is inverted / has reveresed reflectance.
+   * Whether the symbol is inverted / has reversed reflectance.
    *
    * @see {@link ReaderOptions.tryInvert | `ReaderOptions.tryInvert`}
    */
@@ -90,21 +93,9 @@ export interface ZXingReadResult {
    */
   sequenceId: string;
   /**
-   * Set if this is the reader initialisation / programming symbol.
-   */
-  readerInit: boolean;
-  /**
    * Number of lines that have been detected with this code (applies only to linear symbologies).
    */
   lineCount: number;
-  /**
-   * QRCode / DataMatrix / Aztec version or size.
-   *
-   * This property will be removed in the future.
-   *
-   * @deprecated
-   */
-  version: string;
   /**
    * Barcode symbol in the shape of a one-channel image.
    *
@@ -117,24 +108,51 @@ export interface ZXingReadResult {
    * @experimental The final form of this property is not yet settled and may change without a major version bump.
    */
   extra: string;
+
+  // ---- deprecated fields ----
+
+  /**
+   * QRCode / DataMatrix / Aztec version or size.
+   *
+   * @deprecated Parse the result from {@link ReadResult.extra | `ReadResult.extra`} instead.
+   */
+  version: string;
+  /**
+   * Set if this is the reader initialisation / programming symbol.
+   *
+   * @deprecated Parse the result from {@link ReadResult.extra | `ReadResult.extra`} instead.
+   */
+  readerInit: boolean;
+  /**
+   * Error correction level of the symbol (empty string if not applicable).
+   *
+   * @deprecated Parse the result from {@link ReadResult.extra | `ReadResult.extra`} instead.
+   */
+  ecLevel: EcLevel;
 }
 
 /**
  * Result of reading a barcode.
  */
 export interface ReadResult
-  extends Omit<ZXingReadResult, "format" | "contentType" | "position"> {
+  extends Omit<
+    ZXingReadResult,
+    "format" | "symbology" | "contentType" | "position"
+  > {
   /**
-   * Format of the barcode, should be one of {@link ReadOutputBarcodeFormat | `ReadOutputBarcodeFormat`}.
+   * Canonical format name of the barcode.
    *
-   * Possible values are:
-   * `"Aztec"`, `"Codabar"`, `"Code39"`, `"Code93"`, `"Code128"`,
-   * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`, `"DXFilmEdge"`,
-   * `"EAN-8"`, `"EAN-13"`, `"ITF"`, `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`,
-   * `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`,
-   * `"None"`
+   * Values are constrained by {@link ReadOutputBarcodeFormat | `ReadOutputBarcodeFormat`}
+   * (plus `"None"` for empty/invalid results) and come from the C++ wrapper in canonical enum-name form
+   * (not alias or HRI label form).
    */
   format: ReadOutputBarcodeFormat;
+  /**
+   * Symbology group / base barcode family of {@link ReadResult.format | `ReadResult.format`}.
+   *
+   * Example: `EAN13` -> `EANUPC`, `MicroQRCode` -> `QRCode`, `Code39Ext` -> `Code39`.
+   */
+  symbology: BarcodeSymbology;
   /**
    * A hint to the type of the content found.
    */
@@ -143,10 +161,6 @@ export interface ReadResult
    * Position of the detected barcode.
    */
   position: Position;
-  /**
-   * @deprecated Use {@link ReadResult.ecLevel | `ReadResult.ecLevel`} instead.
-   */
-  eccLevel: EcLevel;
 }
 
 /**
@@ -160,8 +174,8 @@ export function zxingReadResultToReadResult(
 ): ReadResult {
   return {
     ...zxingReadResult,
-    format: decodeFormat(zxingReadResult.format),
+    format: zxingReadResult.format as ReadOutputBarcodeFormat,
+    symbology: zxingReadResult.symbology as BarcodeSymbology,
     contentType: decodeContentType(zxingReadResult.contentType),
-    eccLevel: zxingReadResult.ecLevel,
   };
 }

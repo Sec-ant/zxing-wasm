@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "f9a6acb",
   "bytesECI": "2b8098c",
   "text": "This is an example Aztec symbol for Wikipedia.",
-  "ecLevel": "37%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "3",
   "symbol": {
-    "data": "29b4ea0",
+    "data": "8d12dac",
     "width": 23,
     "height": 23
   },
-  "extra": "",
-  "eccLevel": "37%"
+  "extra": "{\"Version\":\"3\",\"ECLevel\":\"37%\"}",
+  "version": "3",
+  "readerInit": false,
+  "ecLevel": "37%"
 }

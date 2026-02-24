@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "f51a2a5",
   "bytesECI": "67ef3c1",
   "text": "",
-  "ecLevel": "",
   "contentType": "UnknownECI",
   "hasECI": true,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "9",
   "symbol": {
-    "data": "016bcfb",
+    "data": "42a66c7",
     "width": 26,
     "height": 26
   },
   "extra": "{\"Version\":\"26x26\"}",
-  "eccLevel": ""
+  "version": "26x26",
+  "readerInit": false,
+  "ecLevel": ""
 }

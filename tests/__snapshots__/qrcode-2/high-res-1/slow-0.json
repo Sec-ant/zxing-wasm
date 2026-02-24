@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "dcc9bdf",
   "bytesECI": "78ecd41",
   "text": "QR code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan.[1] A barcode is a machine-readable optical label that contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.[2]<LF>sdfgksjdflkgjsdkfgiotmbx,cmvbofghjoaasdfaERYYKLLDFGSDFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDSVFB094856JLKSJFGS0DBIUZKL;KSFDF09846JLKSDNFGBLDKSFBHJ0SP98ASDFKthat contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or trac<LF>QR code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan.[1] A barcode is a machine-readable optical label that contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.[2]<LF>sdfgksjdflkgjsdkfgiotmbx,cmvbofghjoaasdfaERYYKLLDFGSDFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDSVFB094856JLKSJFGS0DBIUZKL;KSFDF09846JLKSDNFGBLDKSFBHJ0SP98ASDFKthat contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or trac",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "34",
   "symbol": {
-    "data": "8ac25b3",
+    "data": "f2294b8",
     "width": 153,
     "height": 153
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"34\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":3,\"Version\":\"34\",\"ECLevel\":\"M\"}",
+  "version": "34",
+  "readerInit": false,
+  "ecLevel": "M"
 }

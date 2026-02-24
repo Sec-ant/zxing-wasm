@@ -1,11 +1,11 @@
 {
   "isValid": true,
   "error": "",
-  "format": "EAN-13",
+  "format": "EAN13",
+  "symbology": "EANUPC",
   "bytes": "66ad483",
   "bytesECI": "571ee1d",
   "text": "8480010092271",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

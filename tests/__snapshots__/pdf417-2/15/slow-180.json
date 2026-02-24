@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "PDF417",
+  "symbology": "PDF417",
   "bytes": "35a6729",
   "bytesECI": "89d43d5",
   "text": "A PDF 417 barcode with ASCII text",
-  "ecLevel": "14%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
-  "extra": "",
-  "eccLevel": "14%"
+  "extra": "{\"ECLevel\":\"14%\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "14%"
 }

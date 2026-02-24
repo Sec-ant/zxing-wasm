@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "535f159",
   "bytesECI": "c5cead8",
   "text": "http://www.hotpepper.jp/mobile/cgi-bin/MBLC80100.cgi?SA=00&Z=AG&vos=hpp064&uid=NULLGWDOCOMO",
-  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "9",
   "symbol": {
-    "data": "69f9989",
+    "data": "06efd7f",
     "width": 53,
     "height": 53
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"9\"}",
-  "eccLevel": "H"
+  "extra": "{\"DataMask\":2,\"Version\":\"9\",\"ECLevel\":\"H\"}",
+  "version": "9",
+  "readerInit": false,
+  "ecLevel": "H"
 }

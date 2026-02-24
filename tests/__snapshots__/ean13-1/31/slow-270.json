@@ -1,0 +1,47 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "EAN13",
+  "symbology": "EAN/UPC",
+  "bytes": "de46fd5",
+  "bytesECI": "a529175",
+  "text": "9780393058673",
+  "ecLevel": "",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 192,
+      "y": 150
+    },
+    "topRight": {
+      "x": 192,
+      "y": 302
+    },
+    "bottomRight": {
+      "x": 191,
+      "y": 302
+    },
+    "bottomLeft": {
+      "x": 191,
+      "y": 150
+    }
+  },
+  "orientation": 90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]E0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": "",
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "",
+  "eccLevel": ""
+}

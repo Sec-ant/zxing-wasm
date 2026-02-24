@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "PDF417",
+  "symbology": "PDF417",
   "bytes": "f590405",
   "bytesECI": "0c34e89",
   "text": "$I",
-  "ecLevel": "57%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": true,
   "lineCount": 0,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
-  "extra": "",
-  "eccLevel": "57%"
+  "extra": "{\"ECLevel\":\"57%\",\"ReaderInit\":true}",
+  "version": "",
+  "readerInit": true,
+  "ecLevel": "57%"
 }

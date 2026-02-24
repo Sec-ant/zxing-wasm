@@ -1,4 +1,5 @@
 export * from "./barcodeFormat.js";
+export * from "./barcodeSymbol.js";
 export * from "./binarizer.js";
 export * from "./characterSet.js";
 export * from "./contentType.js";

@@ -17,7 +17,8 @@
       "recommended": true,
       "suspicious": {
         "noAssignInExpressions": "off",
-        "noEmptyInterface": "off"
+        "noEmptyInterface": "off",
+        "noSparseArray": "off"
       },
       "style": {
         "noNonNullAssertion": "off",

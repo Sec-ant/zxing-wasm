@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "8ef929f",
   "bytesECI": "51560a6",
   "text": "http://staticrooster.com",
-  "ecLevel": "Q",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "3",
   "symbol": {
-    "data": "a07a306",
+    "data": "5c71ac7",
     "width": 29,
     "height": 29
   },
-  "extra": "{\"DataMask\":6,\"Version\":\"3\"}",
-  "eccLevel": "Q"
+  "extra": "{\"DataMask\":6,\"Version\":\"3\",\"ECLevel\":\"Q\"}",
+  "version": "3",
+  "readerInit": false,
+  "ecLevel": "Q"
 }

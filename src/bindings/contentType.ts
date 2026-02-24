@@ -1,4 +1,4 @@
-export const contentTypes = [
+export const CONTENT_TYPES = [
   "Text",
   "Binary",
   "Mixed",
@@ -7,7 +7,10 @@ export const contentTypes = [
   "UnknownECI",
 ] as const;
 
-export type ContentType = (typeof contentTypes)[number];
+/** @deprecated Use {@link CONTENT_TYPES} instead. */
+export const contentTypes = CONTENT_TYPES;
+
+export type ContentType = (typeof CONTENT_TYPES)[number];
 
 /**
  * Encodes a content type into its numeric representation.
@@ -16,7 +19,7 @@ export type ContentType = (typeof contentTypes)[number];
  * @returns A number representing the encoded content type
  */
 export function encodeContentType(contentType: ContentType): number {
-  return contentTypes.indexOf(contentType);
+  return CONTENT_TYPES.indexOf(contentType);
 }
 
 /**
@@ -26,5 +29,5 @@ export function encodeContentType(contentType: ContentType): number {
  * @returns The decoded content type
  */
 export function decodeContentType(number: number): ContentType {
-  return contentTypes[number];
+  return CONTENT_TYPES[number];
 }

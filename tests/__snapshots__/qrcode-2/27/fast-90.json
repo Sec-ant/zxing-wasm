@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "a62c278",
   "bytesECI": "fdebe6c",
   "text": "*ﾃﾞｻﾞｲﾝQR*   <CR><LF>http://d-qr.net/ex/ ",
-  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "5",
   "symbol": {
-    "data": "f474ca4",
+    "data": "5bbe9fd",
     "width": 37,
     "height": 37
   },
-  "extra": "{\"DataMask\":7,\"Version\":\"5\"}",
-  "eccLevel": "H"
+  "extra": "{\"DataMask\":7,\"Version\":\"5\",\"ECLevel\":\"H\"}",
+  "version": "5",
+  "readerInit": false,
+  "ecLevel": "H"
 }

@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "ceaa28b",
   "bytesECI": "2f3b0ad",
   "text": "3456",
-  "ecLevel": "14%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": 7,
   "sequenceIndex": 3,
   "sequenceId": "Z1.txt",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "1",
   "symbol": {
-    "data": "85a4e0e",
+    "data": "6c93e7e",
     "width": 19,
     "height": 19
   },
-  "extra": "",
-  "eccLevel": "14%"
+  "extra": "{\"Version\":\"1\",\"ECLevel\":\"14%\"}",
+  "version": "1",
+  "readerInit": false,
+  "ecLevel": "14%"
 }

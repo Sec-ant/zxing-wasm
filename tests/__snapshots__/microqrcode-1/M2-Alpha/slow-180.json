@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "MicroQRCode",
+  "symbology": "QRCode",
   "bytes": "b5d4045",
   "bytesECI": "e21a0fc",
   "text": "ABC",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "4f11b83",
+    "data": "35abc87",
     "width": 13,
     "height": 13
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"M2\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":3,\"Version\":\"M2\",\"ECLevel\":\"M\"}",
+  "version": "M2",
+  "readerInit": false,
+  "ecLevel": "M"
 }

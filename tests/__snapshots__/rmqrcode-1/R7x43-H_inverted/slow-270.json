@@ -1,11 +1,11 @@
 {
   "isValid": true,
   "error": "",
-  "format": "rMQRCode",
+  "format": "RMQRCode",
+  "symbology": "QRCode",
   "bytes": "228c125",
   "bytesECI": "6926dcc",
   "text": ",,",
-  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "1",
   "symbol": {
-    "data": "cb53c49",
+    "data": "f136c99",
     "width": 43,
     "height": 7
   },
-  "extra": "{\"DataMask\":4,\"Version\":\"R7x43\"}",
-  "eccLevel": "H"
+  "extra": "{\"DataMask\":4,\"Version\":\"R7x43\",\"ECLevel\":\"H\"}",
+  "version": "R7x43",
+  "readerInit": false,
+  "ecLevel": "H"
 }

@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "PDF417",
+  "symbology": "PDF417",
   "bytes": "3fd035d",
   "bytesECI": "2c661c5",
   "text": "-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  "ecLevel": "23%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
-  "extra": "",
-  "eccLevel": "23%"
+  "extra": "{\"ECLevel\":\"23%\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "23%"
 }

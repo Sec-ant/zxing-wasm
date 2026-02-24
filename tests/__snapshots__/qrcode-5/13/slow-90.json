@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "4c1a41c",
   "bytesECI": "899e5b2",
   "text": "MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "4",
   "symbol": {
-    "data": "82e2510",
+    "data": "93b671c",
     "width": 33,
     "height": 33
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"4\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":2,\"Version\":\"4\",\"ECLevel\":\"L\"}",
+  "version": "4",
+  "readerInit": false,
+  "ecLevel": "L"
 }

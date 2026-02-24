@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Code128",
+  "symbology": "Code128",
   "bytes": "ad6e4d0",
   "bytesECI": "8b5dee3",
   "text": "31001171800000017989625355702636",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

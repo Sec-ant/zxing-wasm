@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "10672cd",
   "bytesECI": "c6ce406",
   "text": "http://cli.im",
-  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "47c8041",
+    "data": "f5b32d8",
     "width": 25,
     "height": 25
   },
-  "extra": "{\"DataMask\":5,\"Version\":\"2\"}",
-  "eccLevel": "H"
+  "extra": "{\"DataMask\":5,\"Version\":\"2\",\"ECLevel\":\"H\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "H"
 }

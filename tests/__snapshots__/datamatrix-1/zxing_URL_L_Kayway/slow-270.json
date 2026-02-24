@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "1bf6bb1",
   "bytesECI": "f7f89cf",
   "text": "http://code.google.com/p/zxing/",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "8",
   "symbol": {
-    "data": "f12d5ca",
+    "data": "e90b4d8",
     "width": 24,
     "height": 24
   },
   "extra": "{\"Version\":\"24x24\"}",
-  "eccLevel": ""
+  "version": "24x24",
+  "readerInit": false,
+  "ecLevel": ""
 }

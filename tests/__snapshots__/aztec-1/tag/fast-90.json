@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "849592e",
   "bytesECI": "36fe5a1",
   "text": "Ceci est un tag.",
-  "ecLevel": "60%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "a1bf535",
+    "data": "37d7593",
     "width": 19,
     "height": 19
   },
-  "extra": "",
-  "eccLevel": "60%"
+  "extra": "{\"Version\":\"2\",\"ECLevel\":\"60%\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "60%"
 }

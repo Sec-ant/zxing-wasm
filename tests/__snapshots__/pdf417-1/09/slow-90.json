@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "PDF417",
+  "symbology": "PDF417",
   "bytes": "506529b",
   "bytesECI": "2f2bec6",
   "text": "!<U+82><U+9F><HT>!<SUB>Eô<HT>5/D?<HT>?<U+9A>FZ<HT>c'<U+82>ÿ<HT>m<NAK>AÉ<HT><U+A0>#F",
-  "ecLevel": "57%",
   "contentType": "Binary",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
-  "extra": "",
-  "eccLevel": "57%"
+  "extra": "{\"ECLevel\":\"57%\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "57%"
 }

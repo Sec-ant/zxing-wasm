@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "MicroQRCode",
+  "symbology": "QRCode",
   "bytes": "d38b38a",
   "bytesECI": "9354b86",
   "text": "Wikipedia",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "3",
   "symbol": {
-    "data": "56f1d50",
+    "data": "cd1043d",
     "width": 15,
     "height": 15
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"M3\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":2,\"Version\":\"M3\",\"ECLevel\":\"L\"}",
+  "version": "M3",
+  "readerInit": false,
+  "ecLevel": "L"
 }

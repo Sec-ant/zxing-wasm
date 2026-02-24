@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "aec1d26",
   "bytesECI": "9929e5a",
   "text": "http://bbc.co.uk/programmes",
-  "ecLevel": "H",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "5",
   "symbol": {
-    "data": "cc7c0a6",
+    "data": "bd10da3",
     "width": 37,
     "height": 37
   },
-  "extra": "{\"DataMask\":7,\"Version\":\"5\"}",
-  "eccLevel": "H"
+  "extra": "{\"DataMask\":7,\"Version\":\"5\",\"ECLevel\":\"H\"}",
+  "version": "5",
+  "readerInit": false,
+  "ecLevel": "H"
 }

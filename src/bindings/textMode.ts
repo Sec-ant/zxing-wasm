@@ -1,6 +1,16 @@
-export const textModes = ["Plain", "ECI", "HRI", "Hex", "Escaped"] as const;
+export const TEXT_MODES = [
+  "Plain",
+  "ECI",
+  "HRI",
+  "Escaped",
+  "Hex",
+  "HexECI",
+] as const;
 
-export type TextMode = (typeof textModes)[number];
+/** @deprecated Use {@link TEXT_MODES} instead. */
+export const textModes = TEXT_MODES;
+
+export type TextMode = (typeof TEXT_MODES)[number];
 
 /**
  * Encodes a text mode into its corresponding numeric value.
@@ -9,7 +19,7 @@ export type TextMode = (typeof textModes)[number];
  * @returns A number representing the encoded text mode.
  */
 export function encodeTextMode(textMode: TextMode): number {
-  return textModes.indexOf(textMode);
+  return TEXT_MODES.indexOf(textMode);
 }
 
 /**
@@ -19,5 +29,5 @@ export function encodeTextMode(textMode: TextMode): number {
  * @returns The decoded text mode.
  */
 export function decodeTextMode(number: number): TextMode {
-  return textModes[number];
+  return TEXT_MODES[number];
 }
