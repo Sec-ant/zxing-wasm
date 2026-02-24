@@ -149,7 +149,7 @@ This package exports three subpaths: `full`, `reader`, and `writer`.
 
 ### `zxing-wasm` or `zxing-wasm/full`
 
-These two subpaths provide functions to read and write barcodes. The wasm binary size is ~1.32 MiB.
+These two subpaths provide functions to read and write barcodes. The wasm binary size is ~1.36 MiB.
 
 ```ts
 import { readBarcodes, writeBarcode } from "zxing-wasm";
@@ -163,7 +163,7 @@ import { readBarcodes, writeBarcode } from "zxing-wasm/full";
 
 ### `zxing-wasm/reader`
 
-This subpath only provides a function to read barcodes. The wasm binary size is ~919 KiB.
+This subpath only provides a function to read barcodes. The wasm binary size is ~963 KiB.
 
 ```ts
 import { readBarcodes } from "zxing-wasm/reader";
@@ -171,7 +171,7 @@ import { readBarcodes } from "zxing-wasm/reader";
 
 ### `zxing-wasm/writer`
 
-This subpath only provides a function to write barcodes. The wasm binary size is ~608 KiB.
+This subpath only provides a function to write barcodes. The wasm binary size is ~637 KiB.
 
 ```ts
 import { writeBarcode } from "zxing-wasm/writer";
