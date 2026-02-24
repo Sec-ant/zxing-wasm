@@ -14,7 +14,7 @@
 
 ## Supported Barcode Formats
 
-This library supports a comprehensive set of barcode formats organized into **symbology families**. Each symbology is a base format that may have one or more **variants** (sub-formats). The reader can detect specific variants (e.g. `"EAN13"`, `"MicroQRCode"`) while also reporting which symbology family they belong to via `ReadResult.symbology`.
+This library supports a comprehensive set of barcode formats organized into **symbology families**. Each symbology is a base format that may have one or more **variants** (sub-formats). The reader detects specific variants (e.g. `"EAN13"`, `"MicroQRCode"`, `"Code39Ext"`) and returns the detected format via `ReadResult.format`. The `ReadResult.symbology` field reports which symbology family the detected format belongs to (e.g. `"EANUPC"` if the format was `EAN13`, `EAN8`, `UPCA`, or `UPCE`).
 
 ### Linear (1D) Barcodes
 
@@ -104,7 +104,7 @@ When specifying formats in `ReaderOptions.formats` or `WriterOptions.format`, yo
 - **Meta-format names** (e.g. `"All"`, `"AllLinear"`)
 - **Deprecated aliases** for backward compatibility: `"DataBarExpanded"` &rarr; `"DataBarExp"`, `"DataBarLimited"` &rarr; `"DataBarLtd"`, `"Linear-Codes"` &rarr; `"AllLinear"`, `"Matrix-Codes"` &rarr; `"AllMatrix"`, `"Any"` &rarr; `"All"`, `"rMQRCode"` &rarr; `"RMQRCode"`
 
-`ReadResult.format` returns the detected barcode format in canonical name form, which can be either a format variant (e.g. `"EAN13"`, `"MicroQRCode"`) or a symbology name (e.g. `"EANUPC"`). Format names never use hyphens (e.g. `"EAN13"` not `"EAN-13"`). The `ReadResult.symbology` field always returns the symbology family name (e.g. `"EANUPC"` for any EAN/UPC variant, `"QRCode"` for any QR Code variant).
+`ReadResult.format` returns the canonical name of the barcode format actually detected by the reader (e.g. `"EAN13"`, `"MicroQRCode"`, `"Code39Ext"`). Format names never use hyphens (e.g. `"EAN13"` not `"EAN-13"`) and can be either a format variant or a symbology name. The `ReadResult.symbology` field returns the symbology family name (e.g. `"EANUPC"` for detected EAN/UPC variants like `EAN13`, `EAN8`, `UPCA`, or `UPCE`; `"QRCode"` for detected QR Code variants like `QRCode`, `MicroQRCode`, or `RMQRCode`).
 
 Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic reading functions. It works best on the latest Chromium browsers.
 
