@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "fb891ef",
   "bytesECI": "97f322c",
   "text": "Code 2D!",
-  "ecLevel": "52%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "1",
   "symbol": {
-    "data": "30b3797",
+    "data": "3fa619b",
     "width": 19,
     "height": 19
   },
-  "extra": "",
-  "eccLevel": "52%"
+  "extra": "{\"Version\":\"1\",\"ECLevel\":\"52%\"}",
+  "version": "1",
+  "readerInit": false,
+  "ecLevel": "52%"
 }

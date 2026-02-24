@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "b569ba8",
   "bytesECI": "afa69f5",
   "text": "01095040000591012112345678p901<GS>101234567p<GS>171411208200http://www.gs1.org/demo/",
-  "ecLevel": "",
   "contentType": "GS1",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "41",
   "symbol": {
-    "data": "d7fd401",
+    "data": "cda785a",
     "width": 44,
     "height": 20
   },
   "extra": "{\"Version\":\"20x44\"}",
-  "eccLevel": ""
+  "version": "20x44",
+  "readerInit": false,
+  "ecLevel": ""
 }

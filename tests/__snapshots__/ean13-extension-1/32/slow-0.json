@@ -1,11 +1,11 @@
 {
   "isValid": true,
   "error": "",
-  "format": "EAN-13",
+  "format": "EAN13",
+  "symbology": "EANUPC",
   "bytes": "2801edf",
   "bytesECI": "807b189",
   "text": "978039305867352595",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "{\"EanAddOn\":\"52595\"}",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

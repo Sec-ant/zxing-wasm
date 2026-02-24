@@ -1,0 +1,47 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataBarExpStk",
+  "symbology": "DataBar",
+  "bytes": "41085f8",
+  "bytesECI": "45d4365",
+  "text": "10123456A1234",
+  "ecLevel": "",
+  "contentType": "GS1",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 67,
+      "y": 199
+    },
+    "topRight": {
+      "x": 67,
+      "y": 102
+    },
+    "bottomRight": {
+      "x": 74,
+      "y": 100
+    },
+    "bottomLeft": {
+      "x": 74,
+      "y": 197
+    }
+  },
+  "orientation": -90,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]e0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "readerInit": false,
+  "lineCount": 2,
+  "version": "",
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "",
+  "eccLevel": ""
+}

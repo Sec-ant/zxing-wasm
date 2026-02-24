@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Code32",
+  "symbology": "Code39",
+  "bytes": "ab182af",
+  "bytesECI": "7b6087e",
+  "text": "A123456788",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 20,
+      "y": 58
+    },
+    "topRight": {
+      "x": 225,
+      "y": 58
+    },
+    "bottomRight": {
+      "x": 225,
+      "y": 60
+    },
+    "bottomLeft": {
+      "x": 20,
+      "y": 60
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]A0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 2,
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
+}

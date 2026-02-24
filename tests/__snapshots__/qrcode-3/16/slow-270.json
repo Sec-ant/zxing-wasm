@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "a4f962e",
   "bytesECI": "17b2f54",
   "text": "MECARD:N:Google 411,;TEL:18665881077;;",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "3",
   "symbol": {
-    "data": "98c127b",
+    "data": "c452012",
     "width": 29,
     "height": 29
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"3\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":2,\"Version\":\"3\",\"ECLevel\":\"M\"}",
+  "version": "3",
+  "readerInit": false,
+  "ecLevel": "M"
 }

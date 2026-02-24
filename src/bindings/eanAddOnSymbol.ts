@@ -1,6 +1,9 @@
-export const eanAddOnSymbols = ["Ignore", "Read", "Require"] as const;
+export const EAN_ADD_ON_SYMBOLS = ["Ignore", "Read", "Require"] as const;
 
-export type EanAddOnSymbol = (typeof eanAddOnSymbols)[number];
+/** @deprecated Use {@link EAN_ADD_ON_SYMBOLS} instead. */
+export const eanAddOnSymbols = EAN_ADD_ON_SYMBOLS;
+
+export type EanAddOnSymbol = (typeof EAN_ADD_ON_SYMBOLS)[number];
 
 /**
  * Encodes an EAN add-on symbol to its numeric representation.
@@ -9,7 +12,7 @@ export type EanAddOnSymbol = (typeof eanAddOnSymbols)[number];
  * @returns The number representing the encoded EAN add-on symbol
  */
 export function encodeEanAddOnSymbol(eanAddOnSymbol: EanAddOnSymbol): number {
-  return eanAddOnSymbols.indexOf(eanAddOnSymbol);
+  return EAN_ADD_ON_SYMBOLS.indexOf(eanAddOnSymbol);
 }
 
 /**
@@ -19,5 +22,5 @@ export function encodeEanAddOnSymbol(eanAddOnSymbol: EanAddOnSymbol): number {
  * @returns The decoded EAN add-on symbol
  */
 export function decodeEanAddOnSymbol(number: number): EanAddOnSymbol {
-  return eanAddOnSymbols[number];
+  return EAN_ADD_ON_SYMBOLS[number];
 }

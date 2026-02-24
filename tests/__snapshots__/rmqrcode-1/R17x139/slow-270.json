@@ -1,11 +1,11 @@
 {
   "isValid": true,
   "error": "",
-  "format": "rMQRCode",
+  "format": "RMQRCode",
+  "symbology": "QRCode",
   "bytes": "8dfcfff",
   "bytesECI": "75b51b7",
   "text": "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "32",
   "symbol": {
-    "data": "02c3952",
+    "data": "821a5ea",
     "width": 139,
     "height": 17
   },
-  "extra": "{\"DataMask\":4,\"Version\":\"R17x139\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":4,\"Version\":\"R17x139\",\"ECLevel\":\"M\"}",
+  "version": "R17x139",
+  "readerInit": false,
+  "ecLevel": "M"
 }

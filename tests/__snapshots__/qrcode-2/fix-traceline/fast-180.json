@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "0ffee3c",
   "bytesECI": "0751b55",
   "text": "VERSION 2 8CM",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "a813d0b",
+    "data": "2dc1ec3",
     "width": 25,
     "height": 25
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"2\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":3,\"Version\":\"2\",\"ECLevel\":\"M\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "M"
 }

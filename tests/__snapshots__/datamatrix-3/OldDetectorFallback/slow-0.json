@@ -2,28 +2,28 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "a591a6d",
   "bytesECI": "ec2509d",
   "text": "Hello World",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 14,
-      "y": 14
+      "x": 29,
+      "y": 29
     },
     "topRight": {
-      "x": 485,
-      "y": 15
+      "x": 470,
+      "y": 29
     },
     "bottomRight": {
-      "x": 485,
-      "y": 485
+      "x": 470,
+      "y": 470
     },
     "bottomLeft": {
-      "x": 14,
-      "y": 485
+      "x": 29,
+      "y": 470
     }
   },
   "orientation": 0,
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "4",
   "symbol": {
-    "data": "09e6255",
+    "data": "f41b5c4",
     "width": 16,
     "height": 16
   },
   "extra": "{\"Version\":\"16x16\"}",
-  "eccLevel": ""
+  "version": "16x16",
+  "readerInit": false,
+  "ecLevel": ""
 }

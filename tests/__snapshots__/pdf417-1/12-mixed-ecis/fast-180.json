@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "PDF417",
+  "symbology": "PDF417",
   "bytes": "27a33e8",
   "bytesECI": "c1b6587",
   "text": "AB点茗テ齄膀赧αђŹ",
-  "ecLevel": "16%",
   "contentType": "Text",
   "hasECI": true,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
-  "extra": "",
-  "eccLevel": "16%"
+  "extra": "{\"ECLevel\":\"16%\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "16%"
 }

@@ -1,11 +1,11 @@
 {
   "isValid": true,
   "error": "",
-  "format": "DataBarExpanded",
+  "format": "DataBarExpStk",
+  "symbology": "DataBar",
   "bytes": "3af8342",
   "bytesECI": "9780376",
   "text": "101;:/0123",
-  "ecLevel": "",
   "contentType": "GS1",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

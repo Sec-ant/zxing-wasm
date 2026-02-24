@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "04f0689",
   "bytesECI": "7eb3969",
   "text": "BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown USA;E:editor@mobileviews.com;;",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "6",
   "symbol": {
-    "data": "7f187e0",
+    "data": "3a371e8",
     "width": 41,
     "height": 41
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"6\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":3,\"Version\":\"6\",\"ECLevel\":\"M\"}",
+  "version": "6",
+  "readerInit": false,
+  "ecLevel": "M"
 }

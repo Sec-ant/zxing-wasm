@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "dd014af",
   "bytesECI": "4677aa4",
   "text": "http://www.google.com/",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "20f67fd",
+    "data": "4fdba8f",
     "width": 25,
     "height": 25
   },
-  "extra": "{\"DataMask\":4,\"Version\":\"2\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":4,\"Version\":\"2\",\"ECLevel\":\"M\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "M"
 }

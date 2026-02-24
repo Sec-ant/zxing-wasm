@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DXFilmEdge",
+  "symbology": "OtherBarcode",
   "bytes": "78374e6",
-  "bytesECI": "78374e6",
+  "bytesECI": "3e1997b",
   "text": "36-2/21",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -29,18 +29,18 @@
   "orientation": 180,
   "isMirrored": false,
   "isInverted": false,
-  "symbologyIdentifier": "",
+  "symbologyIdentifier": "]XF",
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "76525a3",
   "bytesECI": "8733a86",
   "text": "Históóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóórico",
-  "ecLevel": "12%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "6",
   "symbol": {
-    "data": "347b9b9",
+    "data": "6b0eaf4",
     "width": 41,
     "height": 41
   },
-  "extra": "",
-  "eccLevel": "12%"
+  "extra": "{\"Version\":\"6\",\"ECLevel\":\"12%\"}",
+  "version": "6",
+  "readerInit": false,
+  "ecLevel": "12%"
 }

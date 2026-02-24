@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "MicroQRCode",
+  "symbology": "QRCode",
   "bytes": "d828beb",
   "bytesECI": "5723ce5",
   "text": "誠",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "3",
   "symbol": {
-    "data": "ad7be03",
+    "data": "f58eb06",
     "width": 15,
     "height": 15
   },
-  "extra": "{\"DataMask\":1,\"Version\":\"M3\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":1,\"Version\":\"M3\",\"ECLevel\":\"M\"}",
+  "version": "M3",
+  "readerInit": false,
+  "ecLevel": "M"
 }

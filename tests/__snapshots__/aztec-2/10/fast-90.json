@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "150bd79",
   "bytesECI": "5adb247",
   "text": "mailto:zxing@googlegroups.com",
-  "ecLevel": "25%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "1c1f6a0",
+    "data": "2948504",
     "width": 19,
     "height": 19
   },
-  "extra": "",
-  "eccLevel": "25%"
+  "extra": "{\"Version\":\"2\",\"ECLevel\":\"25%\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "25%"
 }

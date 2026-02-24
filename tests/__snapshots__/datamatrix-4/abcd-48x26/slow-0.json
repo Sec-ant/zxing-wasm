@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "df2a873",
   "bytesECI": "c372e2f",
   "text": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabc",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "47",
   "symbol": {
-    "data": "895915b",
+    "data": "d24037b",
     "width": 48,
     "height": 26
   },
   "extra": "{\"Version\":\"26x48\"}",
-  "eccLevel": ""
+  "version": "26x48",
+  "readerInit": false,
+  "ecLevel": ""
 }

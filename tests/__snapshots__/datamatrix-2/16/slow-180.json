@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "d42d407",
   "bytesECI": "c013fd4",
   "text": "This is a test of our DataMatrix support using a longer piece of text, and therefore a more dense barcode.",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "12",
   "symbol": {
-    "data": "1bbd3a1",
+    "data": "8b49dc3",
     "width": 40,
     "height": 40
   },
   "extra": "{\"Version\":\"40x40\"}",
-  "eccLevel": ""
+  "version": "40x40",
+  "readerInit": false,
+  "ecLevel": ""
 }

@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "MicroQRCode",
+  "symbology": "QRCode",
   "bytes": "19280d8",
   "bytesECI": "97896a0",
   "text": "Micro QR Code",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "4",
   "symbol": {
-    "data": "de29244",
+    "data": "5e6773a",
     "width": 17,
     "height": 17
   },
-  "extra": "{\"DataMask\":0,\"Version\":\"M4\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":0,\"Version\":\"M4\",\"ECLevel\":\"L\"}",
+  "version": "M4",
+  "readerInit": false,
+  "ecLevel": "L"
 }

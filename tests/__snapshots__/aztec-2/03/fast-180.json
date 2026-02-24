@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Aztec",
+  "symbology": "Aztec",
   "bytes": "55ed3ad",
   "bytesECI": "2560c9a",
   "text": "This is a real world Aztec barcode test.",
-  "ecLevel": "22%",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "b3a515d",
+    "data": "67bddbb",
     "width": 23,
     "height": 23
   },
-  "extra": "",
-  "eccLevel": "22%"
+  "extra": "{\"Version\":\"2\",\"ECLevel\":\"22%\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "22%"
 }

@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "ITF",
+  "symbology": "ITF",
   "bytes": "6670e14",
   "bytesECI": "72f8d3c",
   "text": "0053611912",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

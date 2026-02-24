@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "7bd3421",
   "bytesECI": "0e37ffb",
   "text": "[)><RS>DD<GS>CAG 34JR1<GS>PNO 2SJL00506-0001<GS>SEQ 0001<RS><EOT>",
-  "ecLevel": "",
   "contentType": "Binary",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "10",
   "symbol": {
-    "data": "e83b577",
+    "data": "c8d8e31",
     "width": 32,
     "height": 32
   },
   "extra": "{\"Version\":\"32x32\"}",
-  "eccLevel": ""
+  "version": "32x32",
+  "readerInit": false,
+  "ecLevel": ""
 }

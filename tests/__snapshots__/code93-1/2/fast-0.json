@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Code93",
+  "symbology": "Code93",
   "bytes": "68bcf7c",
   "bytesECI": "7e50a44",
   "text": "CODE 93",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

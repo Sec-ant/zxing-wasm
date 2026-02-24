@@ -1,28 +1,23 @@
 {
-  "total": 14,
-  "passAll": 9,
-  "passSome": 11,
+  "total": 7,
+  "passAll": 5,
+  "passSome": 6,
   "fast": {
     "0": {
-      "failures": 4,
+      "failures": 2,
       "undetected": {
-        "total": 4,
+        "total": 2,
         "images": [
-          "11.png",
-          "15.png",
           "21.png",
           "22.png"
         ]
       }
     },
     "180": {
-      "failures": 4,
+      "failures": 1,
       "undetected": {
-        "total": 4,
+        "total": 1,
         "images": [
-          "8.png",
-          "11.png",
-          "15.png",
           "22.png"
         ]
       }
@@ -30,23 +25,19 @@
   },
   "slow": {
     "0": {
-      "failures": 3,
+      "failures": 1,
       "undetected": {
-        "total": 3,
+        "total": 1,
         "images": [
-          "11.png",
-          "15.png",
           "22.png"
         ]
       }
     },
     "180": {
-      "failures": 3,
+      "failures": 1,
       "undetected": {
-        "total": 3,
+        "total": 1,
         "images": [
-          "11.png",
-          "15.png",
           "22.png"
         ]
       }

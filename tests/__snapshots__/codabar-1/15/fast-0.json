@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "Codabar",
+  "symbology": "Codabar",
   "bytes": "2f74e46",
   "bytesECI": "1e50e6c",
   "text": "A123456789012A",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

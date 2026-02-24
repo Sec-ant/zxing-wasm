@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "1650469",
   "bytesECI": "91c67ae",
   "text": "https://u.wechat.com/ELaSWShWyTFQvXJkp9vCgFA",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "5",
   "symbol": {
-    "data": "dcf6ee1",
+    "data": "e300977",
     "width": 37,
     "height": 37
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"5\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":3,\"Version\":\"5\",\"ECLevel\":\"M\"}",
+  "version": "5",
+  "readerInit": false,
+  "ecLevel": "M"
 }

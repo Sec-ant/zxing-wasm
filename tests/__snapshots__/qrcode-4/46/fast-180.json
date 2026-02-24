@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "1bf6bb1",
   "bytesECI": "2873576",
   "text": "http://code.google.com/p/zxing/",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "15c81c8",
+    "data": "ecf2b6c",
     "width": 25,
     "height": 25
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"2\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":2,\"Version\":\"2\",\"ECLevel\":\"L\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "L"
 }

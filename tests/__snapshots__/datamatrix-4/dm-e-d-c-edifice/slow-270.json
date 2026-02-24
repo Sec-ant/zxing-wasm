@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "49f8f95",
   "bytesECI": "9bfdf21",
   "text": "[)><RS>06<GS>25PLEIBMAQ7BBC448559AC<GS>S44AACC<RS><EOT>",
-  "ecLevel": "",
   "contentType": "ISO15434",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "32",
   "symbol": {
-    "data": "646ae50",
+    "data": "a875ba5",
     "width": 64,
     "height": 8
   },
   "extra": "{\"Version\":\"8x64\"}",
-  "eccLevel": ""
+  "version": "8x64",
+  "readerInit": false,
+  "ecLevel": ""
 }

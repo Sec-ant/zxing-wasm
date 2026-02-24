@@ -1,11 +1,11 @@
 {
   "isValid": true,
   "error": "",
-  "format": "UPC-A",
+  "format": "UPCA",
+  "symbology": "EANUPC",
   "bytes": "8579da5",
   "bytesECI": "c3b04e9",
   "text": "0456314319671",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

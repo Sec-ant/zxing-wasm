@@ -375,13 +375,7 @@ export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   input: string | Uint8Array,
   writerOptions: WriterOptions = defaultWriterOptions,
 ) {
-  const requiredWriterOptions: Required<WriterOptions> = {
-    ...defaultWriterOptions,
-    ...writerOptions,
-  };
-  const zxingWriterOptions = writerOptionsToZXingWriterOptions(
-    requiredWriterOptions,
-  );
+  const zxingWriterOptions = writerOptionsToZXingWriterOptions(writerOptions);
   const zxingModule = await prepareZXingModuleWithFactory(zxingModuleFactory, {
     fireImmediately: true,
   });

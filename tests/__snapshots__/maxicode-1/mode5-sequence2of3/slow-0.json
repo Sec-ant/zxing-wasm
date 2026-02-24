@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "MaxiCode",
+  "symbology": "MaxiCode",
   "bytes": "c37d691",
   "bytesECI": "3c2c7b0",
   "text": "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901",
-  "ecLevel": "5",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": 3,
   "sequenceIndex": 1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "",
   "symbol": {
-    "data": "12ec5bf",
+    "data": "7b1bc71",
     "width": 30,
     "height": 33
   },
-  "extra": "",
-  "eccLevel": "5"
+  "extra": "{\"ECLevel\":\"5\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "5"
 }

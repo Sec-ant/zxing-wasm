@@ -11,7 +11,7 @@ export interface ZXingReaderOptions {
   /**
    * @internal
    */
-  formats: number;
+  formats: string;
   /**
    * Spend more time to try to find a barcode. Optimize for accuracy, not speed.
    *
@@ -57,20 +57,16 @@ export interface ZXingReaderOptions {
   /**
    * Image size `min(width, height)` threshold at which to start downscaled scanning.
    *
-   * **WARNING**: this API is experimental and may change / disappear
-   *
-   * @experimental
    * @defaultValue `500`
+   * @remarks Internally represented as an unsigned 16-bit integer (`0..65535`).
    * @see {@link tryDownscale | `tryDownscale`} {@link downscaleFactor | `downscaleFactor`}
    */
   downscaleThreshold: number;
   /**
    * Scale factor to use during downscaling, meaningful values are `2`, `3` and `4`.
    *
-   * **WARNING**: this API is experimental and may change / disappear
-   *
-   * @experimental
    * @defaultValue `3`
+   * @remarks Internally represented as an unsigned 8-bit integer (`0..255`).
    * @see {@link tryDownscale | `tryDownscale`} {@link downscaleThreshold | `downscaleThreshold`}
    */
   downscaleFactor: number;
@@ -78,21 +74,24 @@ export interface ZXingReaderOptions {
    * The number of scan lines in a linear barcode that have to be equal to accept the result.
    *
    * @defaultValue `2`
+   * @remarks Internally represented as an unsigned 8-bit integer (`0..255`).
    */
   minLineCount: number;
   /**
    * The maximum number of symbols / barcodes to detect / look for in the image.
-   * The upper limit of this number is 255.
+   *
+   * Use `0` to remove the limit. Otherwise the effective range is `1..255`.
    *
    * @defaultValue `255`
+   * @remarks Internally represented as an unsigned 8-bit integer (`0..255`).
    */
   maxNumberOfSymbols: number;
   /**
-   * Enable the heuristic to detect and decode "full ASCII" / extended Code39 symbols.
+   * Validate optional checksums where applicable (e.g. Code39, ITF).
    *
-   * @defaultValue `true`
+   * @defaultValue `false`
    */
-  tryCode39ExtendedMode: boolean;
+  validateOptionalChecksum: boolean;
   /**
    * If `true`, return the barcodes with errors as well (e.g. checksum errors).
    *
@@ -112,6 +111,18 @@ export interface ZXingReaderOptions {
    * @internal
    */
   characterSet: number;
+
+  // ---- deprecated fields ----
+
+  /**
+   * Enable the heuristic to detect and decode "full ASCII" / extended Code39 symbols.
+   *
+   * @defaultValue `true`
+   *
+   * @deprecated This option no longer has any effect and is kept only for backward compatibility.
+   * Use `Code39Ext` or `Code39Std` to select full ASCII or standard Code39 mode.
+   */
+  tryCode39ExtendedMode: boolean;
 }
 
 /**
@@ -128,12 +139,13 @@ export interface ReaderOptions
    * A set of {@link ReadInputBarcodeFormat | `ReadInputBarcodeFormat`}s that should be searched for.
    * An empty list `[]` indicates all supported formats.
    *
-   * Supported values in this list are:
-   * `"Aztec"`, `"Codabar"`, `"Code39"`, `"Code93"`, `"Code128"`,
-   * `"DataBar"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"DataMatrix"`, `"DXFilmEdge"`,
-   * `"EAN-8"`, `"EAN-13"`, `"ITF"`, `"MaxiCode"`, `"MicroQRCode"`, `"PDF417"`,
-   * `"QRCode"`, `"rMQRCode"`, `"UPC-A"`, `"UPC-E"`,
-   * `"Linear-Codes"`, `"Matrix-Codes"`, `Any`
+   * Accepted values are derived from `barcodeFormat.ts` (`BCF`) and include:
+   * - canonical format names (e.g. `"QRCode"`, `"Code128"`),
+   * - meta format names (e.g. `"All"`, `"AllLinear"`),
+   * - human-readable labels from the table (e.g. `"QR Code"`, `"Code 128"`),
+   * - backward-compatible aliases (e.g. `"Linear-Codes"`, `"Matrix-Codes"`, `"Any"`, `"DataBarExpanded"`, `"DataBarLimited"`, `"rMQRCode"`).
+   *
+   * @remarks Values are normalized by {@link encodeFormats | `encodeFormats`} before being sent to C++.
    *
    * @defaultValue `[]`
    */
@@ -199,6 +211,10 @@ export interface ReaderOptions
    *
    *   {@link ReadResult.bytes | `ReadResult.bytes`} transcoded to ASCII string of HEX values
    *
+   * - `"HexECI"`
+   *
+   *   {@link ReadResult.bytesECI | `ReadResult.bytesECI`} transcoded to ASCII string of HEX values
+   *
    * - `"Escaped"`
    *
    *   Escape non-graphical characters in angle brackets (e.g. ASCII `29` will be transcoded to `"<GS>"`)
@@ -215,7 +231,7 @@ export interface ReaderOptions
   characterSet?: CharacterSet;
 }
 
-export const defaultReaderOptions: Required<ReaderOptions> = {
+export const defaultReaderOptions: Required<ReaderOptions> & ReaderOptions = {
   formats: [],
   tryHarder: true,
   tryRotate: true,
@@ -228,11 +244,12 @@ export const defaultReaderOptions: Required<ReaderOptions> = {
   downscaleThreshold: 500,
   minLineCount: 2,
   maxNumberOfSymbols: 255,
-  tryCode39ExtendedMode: true,
+  validateOptionalChecksum: false,
   returnErrors: false,
   eanAddOnSymbol: "Ignore",
   textMode: "HRI",
   characterSet: "Unknown",
+  tryCode39ExtendedMode: true,
 };
 
 /**
@@ -243,7 +260,8 @@ export const defaultReaderOptions: Required<ReaderOptions> = {
  *          EAN add-on symbol, text mode, and character set
  */
 export function readerOptionsToZXingReaderOptions(
-  readerOptions: Required<ReaderOptions>,
+  readerOptions: Required<Omit<ReaderOptions, "tryCode39ExtendedMode">> &
+    ReaderOptions,
 ): ZXingReaderOptions {
   return {
     ...readerOptions,
@@ -252,5 +270,6 @@ export function readerOptionsToZXingReaderOptions(
     eanAddOnSymbol: encodeEanAddOnSymbol(readerOptions.eanAddOnSymbol),
     textMode: encodeTextMode(readerOptions.textMode),
     characterSet: encodeCharacterSet(readerOptions.characterSet),
+    tryCode39ExtendedMode: readerOptions.tryCode39ExtendedMode ?? true,
   };
 }

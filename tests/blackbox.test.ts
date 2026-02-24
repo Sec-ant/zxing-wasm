@@ -9,6 +9,7 @@ import {
   onTestFinished,
   test,
 } from "vitest";
+import { formatToLabel } from "../src/bindings/barcodeFormat.js";
 import {
   prepareZXingModule,
   type ReaderOptions,
@@ -188,8 +189,12 @@ for (const {
                 return;
               }
 
-              // Format mismatch
-              if (barcode.format !== barcodeFormat) {
+              // Format mismatch (allow matching either format or symbology,
+              // mirroring zxing-cpp BlackboxTestRunner.cpp)
+              if (
+                barcode.format !== barcodeFormat &&
+                barcode.symbology !== barcodeFormat
+              ) {
                 summary[type]![rotation].misreads!.images.push({
                   path: imageNameWithExt,
                   description: `[Format mismatch]: expected '${barcodeFormat}', but got '${barcode.format}'`,
@@ -205,9 +210,16 @@ for (const {
                 for (const [key, value] of Object.entries(
                   expectedResult,
                 ) as Entries<typeof expectedResult>) {
-                  if (barcode[key].toString() !== value) {
+                  // Mirror C++ getBarcodeValue: for "format" key, compare
+                  // against the HRI label (e.g. "Code 32") rather than
+                  // the canonical name (e.g. "Code32").
+                  const actual =
+                    key === "format"
+                      ? (formatToLabel(barcode[key]) ?? barcode[key].toString())
+                      : barcode[key].toString();
+                  if (actual !== value) {
                     misread = true;
-                    description += `\n  ${key}: expected '${value}', but got '${barcode[key]}'`;
+                    description += `\n  ${key}: expected '${value}', but got '${actual}'`;
                   }
                 }
                 if (misread) {

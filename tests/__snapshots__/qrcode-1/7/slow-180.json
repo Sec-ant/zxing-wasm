@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "89a2b52",
   "bytesECI": "b2a6ba4",
   "text": "MEBKM:URL:http\\://en.wikipedia.org/wiki/Main_Page;;",
-  "ecLevel": "M",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "4",
   "symbol": {
-    "data": "333c40d",
+    "data": "d46ca5b",
     "width": 33,
     "height": 33
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"4\"}",
-  "eccLevel": "M"
+  "extra": "{\"DataMask\":2,\"Version\":\"4\",\"ECLevel\":\"M\"}",
+  "version": "4",
+  "readerInit": false,
+  "ecLevel": "M"
 }

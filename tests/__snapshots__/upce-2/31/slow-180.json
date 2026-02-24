@@ -1,11 +1,11 @@
 {
   "isValid": true,
   "error": "",
-  "format": "UPC-E",
+  "format": "UPCE",
+  "symbology": "EANUPC",
   "bytes": "166f2cd",
   "bytesECI": "492cb6c",
   "text": "0012000006494",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 2,
-  "version": "",
   "symbol": {
     "data": "e3b0c44",
     "width": 0,
     "height": 0
   },
   "extra": "{\"UPCE\":\"01264904\"}",
-  "eccLevel": ""
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
 }

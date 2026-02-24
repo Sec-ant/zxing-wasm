@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "fde83ab",
   "bytesECI": "9dc1ccb",
   "text": "Google モバイル<CR><LF>http://google.jp",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "3",
   "symbol": {
-    "data": "2f835ca",
+    "data": "d472dea",
     "width": 29,
     "height": 29
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"3\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":3,\"Version\":\"3\",\"ECLevel\":\"L\"}",
+  "version": "3",
+  "readerInit": false,
+  "ecLevel": "L"
 }

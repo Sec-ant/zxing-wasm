@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "MaxiCode",
+  "symbology": "MaxiCode",
   "bytes": "c4d868f",
   "bytesECI": "963f6a8",
   "text": "[)><RS>01<GS>96123450000<GS>222<GS>111<GS>MODE4",
-  "ecLevel": "2",
   "contentType": "ISO15434",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "",
   "symbol": {
-    "data": "73bce66",
+    "data": "479791f",
     "width": 30,
     "height": 33
   },
-  "extra": "",
-  "eccLevel": "2"
+  "extra": "{\"ECLevel\":\"2\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "2"
 }

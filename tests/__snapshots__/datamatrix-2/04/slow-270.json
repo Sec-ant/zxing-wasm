@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "DataMatrix",
+  "symbology": "DataMatrix",
   "bytes": "d317003",
   "bytesECI": "1e38090",
   "text": "http://google.com/m",
-  "ecLevel": "",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "6",
   "symbol": {
-    "data": "072321e",
+    "data": "ec52dbf",
     "width": 20,
     "height": 20
   },
   "extra": "{\"Version\":\"20x20\"}",
-  "eccLevel": ""
+  "version": "20x20",
+  "readerInit": false,
+  "ecLevel": ""
 }

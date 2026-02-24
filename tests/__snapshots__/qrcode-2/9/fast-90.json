@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "2bbfde0",
   "bytesECI": "fb13b11",
   "text": "Morden",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "1",
   "symbol": {
-    "data": "c80d24e",
+    "data": "6466d31",
     "width": 21,
     "height": 21
   },
-  "extra": "{\"DataMask\":6,\"Version\":\"1\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":6,\"Version\":\"1\",\"ECLevel\":\"L\"}",
+  "version": "1",
+  "readerInit": false,
+  "ecLevel": "L"
 }

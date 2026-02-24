@@ -76,7 +76,7 @@ export const testEntries: TestEntry[] = [
   },
   {
     directory: "code39-2",
-    barcodeFormat: "Code39",
+    barcodeFormat: "Code39Ext",
   },
   {
     directory: "code39-3",
@@ -100,28 +100,28 @@ export const testEntries: TestEntry[] = [
   },
   {
     directory: "ean8-1",
-    barcodeFormat: "EAN-8",
+    barcodeFormat: "EAN8",
     testPure: true,
   },
   {
     directory: "ean13-1",
-    barcodeFormat: "EAN-13",
+    barcodeFormat: "EAN13",
   },
   {
     directory: "ean13-2",
-    barcodeFormat: "EAN-13",
+    barcodeFormat: "EAN13",
   },
   {
     directory: "ean13-3",
-    barcodeFormat: "EAN-13",
+    barcodeFormat: "EAN13",
   },
   {
     directory: "ean13-4",
-    barcodeFormat: "EAN-13",
+    barcodeFormat: "EAN13",
   },
   {
     directory: "ean13-extension-1",
-    barcodeFormat: "EAN-13",
+    barcodeFormat: "EAN13",
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
       eanAddOnSymbol: "Require",
@@ -137,100 +137,100 @@ export const testEntries: TestEntry[] = [
   },
   {
     directory: "upca-1",
-    barcodeFormat: "UPC-A",
+    barcodeFormat: "UPCA",
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPC-A"],
+      formats: ["UPCA"],
     },
   },
   {
     directory: "upca-2",
-    barcodeFormat: "UPC-A",
+    barcodeFormat: "UPCA",
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPC-A"],
+      formats: ["UPCA"],
     },
   },
   {
     directory: "upca-3",
-    barcodeFormat: "UPC-A",
+    barcodeFormat: "UPCA",
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPC-A"],
+      formats: ["UPCA"],
     },
   },
   {
     directory: "upca-4",
-    barcodeFormat: "UPC-A",
+    barcodeFormat: "UPCA",
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPC-A"],
+      formats: ["UPCA"],
     },
   },
   {
     directory: "upca-5",
-    barcodeFormat: "UPC-A",
+    barcodeFormat: "UPCA",
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPC-A"],
+      formats: ["UPCA"],
     },
   },
   {
     directory: "upca-extension-1",
-    barcodeFormat: "UPC-A",
+    barcodeFormat: "UPCA",
     readerOptions: {
       ...DEFAULT_READER_OPTIONS_FOR_TESTS,
       eanAddOnSymbol: "Require",
-      formats: ["UPC-A"],
+      formats: ["UPCA"],
     },
   },
   {
     directory: "upce-1",
-    barcodeFormat: "UPC-E",
+    barcodeFormat: "UPCE",
     testPure: true,
   },
   {
     directory: "upce-2",
-    barcodeFormat: "UPC-E",
+    barcodeFormat: "UPCE",
   },
   {
     directory: "upce-3",
-    barcodeFormat: "UPC-E",
+    barcodeFormat: "UPCE",
   },
   {
     directory: "rss14-1",
-    barcodeFormat: "DataBar",
+    barcodeFormat: "DataBarOmni",
   },
   {
     directory: "rss14-2",
-    barcodeFormat: "DataBar",
+    barcodeFormat: "DataBarStk",
   },
   {
     directory: "rssexpanded-1",
-    barcodeFormat: "DataBarExpanded",
+    barcodeFormat: "DataBarExp",
     testPure: true,
   },
   {
     directory: "rssexpanded-2",
-    barcodeFormat: "DataBarExpanded",
+    barcodeFormat: "DataBarExp",
   },
   {
     directory: "rssexpanded-3",
-    barcodeFormat: "DataBarExpanded",
+    barcodeFormat: "DataBarExp",
     testPure: true,
   },
   {
     directory: "rssexpandedstacked-1",
-    barcodeFormat: "DataBarExpanded",
+    barcodeFormat: "DataBarExpStk",
     testPure: true,
   },
   {
     directory: "rssexpandedstacked-2",
-    barcodeFormat: "DataBarExpanded",
+    barcodeFormat: "DataBarExpStk",
   },
   {
     directory: "databarltd-1",
-    barcodeFormat: "DataBarLimited",
+    barcodeFormat: "DataBarLtd",
     testPure: true,
   },
   {
@@ -277,7 +277,7 @@ export const testEntries: TestEntry[] = [
   },
   {
     directory: "rmqrcode-1",
-    barcodeFormat: "rMQRCode",
+    barcodeFormat: "RMQRCode",
     testPure: true,
   },
   {

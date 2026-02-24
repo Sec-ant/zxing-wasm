@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "49cc0cc",
   "bytesECI": "91278e2",
   "text": "MECARD:N:測試;;",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "2",
   "symbol": {
-    "data": "323e936",
+    "data": "e16a675",
     "width": 25,
     "height": 25
   },
-  "extra": "{\"DataMask\":3,\"Version\":\"2\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":3,\"Version\":\"2\",\"ECLevel\":\"L\"}",
+  "version": "2",
+  "readerInit": false,
+  "ecLevel": "L"
 }

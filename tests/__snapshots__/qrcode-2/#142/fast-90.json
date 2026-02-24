@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "bf2544d",
   "bytesECI": "432d6f9",
   "text": "vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9",
-  "ecLevel": "L",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "11",
   "symbol": {
-    "data": "428fb50",
+    "data": "d3bce89",
     "width": 61,
     "height": 61
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"11\"}",
-  "eccLevel": "L"
+  "extra": "{\"DataMask\":2,\"Version\":\"11\",\"ECLevel\":\"L\"}",
+  "version": "11",
+  "readerInit": false,
+  "ecLevel": "L"
 }

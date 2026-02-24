@@ -2,10 +2,10 @@
   "isValid": true,
   "error": "",
   "format": "QRCode",
+  "symbology": "QRCode",
   "bytes": "c09675d",
   "bytesECI": "ffb4735",
   "text": "http://d.kaywa.com/20207100",
-  "ecLevel": "Q",
   "contentType": "Text",
   "hasECI": false,
   "position": {
@@ -33,14 +33,14 @@
   "sequenceSize": -1,
   "sequenceIndex": -1,
   "sequenceId": "",
-  "readerInit": false,
   "lineCount": 0,
-  "version": "3",
   "symbol": {
-    "data": "4751f49",
+    "data": "4362df0",
     "width": 29,
     "height": 29
   },
-  "extra": "{\"DataMask\":7,\"Version\":\"3\"}",
-  "eccLevel": "Q"
+  "extra": "{\"DataMask\":7,\"Version\":\"3\",\"ECLevel\":\"Q\"}",
+  "version": "3",
+  "readerInit": false,
+  "ecLevel": "Q"
 }
