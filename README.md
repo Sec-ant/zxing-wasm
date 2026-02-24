@@ -3,6 +3,7 @@
 > [!NOTE]
 >
 > For the v1 release, please visit the [`channel/v1`](https://www.github.com/Sec-ant/zxing-wasm/tree/channel/v1) branch.
+> For the v2 release, please visit the [`channel/v2`](https://www.github.com/Sec-ant/zxing-wasm/tree/channel/v2) branch.
 
 # zxing-wasm
 
