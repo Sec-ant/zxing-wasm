@@ -20,35 +20,35 @@ This library supports a comprehensive set of barcode formats organized into **sy
 
 <div align="center">
 
-|  Symbology  |     Variant      |          Label           | Read | Write | GS1 |  Category  |
-| :---------: | :--------------: | :----------------------: | :--: | :---: | :-: | :--------: |
-| **Codabar** |    `Codabar`     |         Codabar          |  ✅  |  ✅   |     |            |
-| **Code39**  |     `Code39`     |         Code 39          |  ✅  |  ✅   |     | Industrial |
-|             |   `Code39Std`    |     Code 39 Standard     |  ✅  |  ✅   |     | Industrial |
-|             |   `Code39Ext`    |     Code 39 Extended     |  ✅  |  ✅   |     | Industrial |
-|             |     `Code32`     |         Code 32          |  ✅  |  ✅   |     | Industrial |
-|             |      `PZN`       |   Pharmazentralnummer    |  ✅  |  ✅   |     | Industrial |
-| **Code93**  |     `Code93`     |         Code 93          |  ✅  |  ✅   |     | Industrial |
-| **Code128** |    `Code128`     |         Code 128         |  ✅  |  ✅   | ✅  | Industrial |
-|   **ITF**   |      `ITF`       |           ITF            |  ✅  |  ✅   |     | Industrial |
-|             |     `ITF14`      |          ITF-14          |  ✅  |  ✅   |     | Industrial |
-| **DataBar** |    `DataBar`     |         DataBar          |  ✅  |  ✅   | ✅  |   Retail   |
-|             |  `DataBarOmni`   |       DataBar Omni       |  ✅  |  ✅   | ✅  |   Retail   |
-|             |   `DataBarStk`   |     DataBar Stacked      |  ✅  |  ✅   | ✅  |   Retail   |
-|             | `DataBarStkOmni` |   DataBar Stacked Omni   |  ✅  |  ✅   | ✅  |   Retail   |
-|             |   `DataBarLtd`   |     DataBar Limited      |  ✅  |  ✅   | ✅  |   Retail   |
-|             |   `DataBarExp`   |     DataBar Expanded     |  ✅  |  ✅   | ✅  |   Retail   |
-|             | `DataBarExpStk`  | DataBar Expanded Stacked |  ✅  |  ✅   | ✅  |   Retail   |
-| **EAN/UPC** |     `EANUPC`     |         EAN/UPC          |  ✅  |  ✅   |     |   Retail   |
-|             |     `EAN13`      |          EAN-13          |  ✅  |  ✅   |     |   Retail   |
-|             |      `EAN8`      |          EAN-8           |  ✅  |  ✅   |     |   Retail   |
-|             |      `EAN5`      |          EAN-5           |      |  ✅   |     |   Retail   |
-|             |      `EAN2`      |          EAN-2           |      |  ✅   |     |   Retail   |
-|             |      `ISBN`      |           ISBN           |  ✅  |  ✅   |     |   Retail   |
-|             |      `UPCA`      |          UPC-A           |  ✅  |  ✅   |     |   Retail   |
-|             |      `UPCE`      |          UPC-E           |  ✅  |  ✅   |     |   Retail   |
-|  **Other**  |  `OtherBarcode`  |      Other barcode       |  ✅  |       |     |            |
-|             |   `DXFilmEdge`   |       DX Film Edge       |  ✅  |  ✅   |     |            |
+|    Symbology     |     Variant      |          Label           | Read | Write | GS1 |  Category  |
+| :--------------: | :--------------: | :----------------------: | :--: | :---: | :-: | :--------: |
+|   **Codabar**    |    `Codabar`     |         Codabar          |  ✅  |  ✅   |     |            |
+|    **Code39**    |     `Code39`     |         Code 39          |  ✅  |  ✅   |     | Industrial |
+|                  |   `Code39Std`    |     Code 39 Standard     |  ✅  |  ✅   |     | Industrial |
+|                  |   `Code39Ext`    |     Code 39 Extended     |  ✅  |  ✅   |     | Industrial |
+|                  |     `Code32`     |         Code 32          |  ✅  |  ✅   |     | Industrial |
+|                  |      `PZN`       |   Pharmazentralnummer    |  ✅  |  ✅   |     | Industrial |
+|    **Code93**    |     `Code93`     |         Code 93          |  ✅  |  ✅   |     | Industrial |
+|   **Code128**    |    `Code128`     |         Code 128         |  ✅  |  ✅   | ✅  | Industrial |
+|     **ITF**      |      `ITF`       |           ITF            |  ✅  |  ✅   |     | Industrial |
+|                  |     `ITF14`      |          ITF-14          |  ✅  |  ✅   |     | Industrial |
+|   **DataBar**    |    `DataBar`     |         DataBar          |  ✅  |  ✅   | ✅  |   Retail   |
+|                  |  `DataBarOmni`   |       DataBar Omni       |  ✅  |  ✅   | ✅  |   Retail   |
+|                  |   `DataBarStk`   |     DataBar Stacked      |  ✅  |  ✅   | ✅  |   Retail   |
+|                  | `DataBarStkOmni` |   DataBar Stacked Omni   |  ✅  |  ✅   | ✅  |   Retail   |
+|                  |   `DataBarLtd`   |     DataBar Limited      |  ✅  |  ✅   | ✅  |   Retail   |
+|                  |   `DataBarExp`   |     DataBar Expanded     |  ✅  |  ✅   | ✅  |   Retail   |
+|                  | `DataBarExpStk`  | DataBar Expanded Stacked |  ✅  |  ✅   | ✅  |   Retail   |
+|    **EANUPC**    |     `EANUPC`     |         EAN/UPC          |  ✅  |  ✅   |     |   Retail   |
+|                  |     `EAN13`      |          EAN-13          |  ✅  |  ✅   |     |   Retail   |
+|                  |      `EAN8`      |          EAN-8           |  ✅  |  ✅   |     |   Retail   |
+|                  |      `EAN5`      |          EAN-5           |      |  ✅   |     |   Retail   |
+|                  |      `EAN2`      |          EAN-2           |      |  ✅   |     |   Retail   |
+|                  |      `ISBN`      |           ISBN           |  ✅  |  ✅   |     |   Retail   |
+|                  |      `UPCA`      |          UPC-A           |  ✅  |  ✅   |     |   Retail   |
+|                  |      `UPCE`      |          UPC-E           |  ✅  |  ✅   |     |   Retail   |
+| **OtherBarcode** |  `OtherBarcode`  |      Other barcode       |  ✅  |       |     |            |
+|                  |   `DXFilmEdge`   |       DX Film Edge       |  ✅  |  ✅   |     |            |
 
 </div>
 
@@ -64,7 +64,7 @@ This library supports a comprehensive set of barcode formats organized into **sy
 |   **Aztec**    |     `Aztec`     |      Aztec      |   ✅   |  ✅   | ✅  |
 |                |   `AztecCode`   |   Aztec Code    |   ✅   |  ✅   | ✅  |
 |                |   `AztecRune`   |   Aztec Rune    |   ✅   |  ✅   |     |
-|  **QR Code**   |    `QRCode`     |     QR Code     |   ✅   |  ✅   | ✅  |
+|   **QRCode**   |    `QRCode`     |     QR Code     |   ✅   |  ✅   | ✅  |
 |                | `QRCodeModel1`  | QR Code Model 1 |   ✅   |       |     |
 |                | `QRCodeModel2`  | QR Code Model 2 |   ✅   |  ✅   |     |
 |                |  `MicroQRCode`  |  Micro QR Code  |   ✅   |  ✅   |     |
