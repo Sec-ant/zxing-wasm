@@ -283,14 +283,18 @@ If you want to change the serve path to your own server or other CDNs, please us
 e.g.
 
 ```ts
-import { prepareZXingModule, writeBarcode } from "zxing-wasm";
+import {
+  prepareZXingModule,
+  writeBarcode,
+  ZXING_WASM_VERSION,
+} from "zxing-wasm";
 
 // Override the locateFile function
 prepareZXingModule({
   overrides: {
     locateFile: (path, prefix) => {
       if (path.endsWith(".wasm")) {
-        return `https://unpkg.com/zxing-wasm@2/dist/full/${path}`;
+        return `https://unpkg.com/zxing-wasm@${ZXING_WASM_VERSION}/dist/full/${path}`;
       }
       return prefix + path;
     },
