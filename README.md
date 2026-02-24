@@ -104,7 +104,7 @@ When specifying formats in `ReaderOptions.formats` or `WriterOptions.format`, yo
 - **Meta-format names** (e.g. `"All"`, `"AllLinear"`)
 - **Deprecated aliases** for backward compatibility: `"DataBarExpanded"` &rarr; `"DataBarExp"`, `"DataBarLimited"` &rarr; `"DataBarLtd"`, `"Linear-Codes"` &rarr; `"AllLinear"`, `"Matrix-Codes"` &rarr; `"AllMatrix"`, `"Any"` &rarr; `"All"`, `"rMQRCode"` &rarr; `"RMQRCode"`
 
-`ReadResult.format` always returns the canonical name (e.g. `"EAN13"`, never `"EAN-13"` or `"EANUPC"`), and `ReadResult.symbology` returns the symbology family name (e.g. `"EANUPC"` for any EAN/UPC variant).
+`ReadResult.format` returns the detected barcode format in canonical name form, which can be either a format variant (e.g. `"EAN13"`, `"MicroQRCode"`) or a symbology name (e.g. `"EANUPC"`). Format names never use hyphens (e.g. `"EAN13"` not `"EAN-13"`). The `ReadResult.symbology` field always returns the symbology family name (e.g. `"EANUPC"` for any EAN/UPC variant, `"QRCode"` for any QR Code variant).
 
 Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic reading functions. It works best on the latest Chromium browsers.
 
