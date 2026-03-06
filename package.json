@@ -184,7 +184,10 @@
     "bump-biome:nightly": "pnpm add -DE @biomejs/biome@nightly",
     "sync-emsdk": "./scripts/sync-emsdk.sh",
     "test": "vitest --hideSkippedTests",
-    "test:ui": "vitest --hideSkippedTests --ui"
+    "test:ui": "vitest --hideSkippedTests --ui",
+    "bench": "vitest bench --run",
+    "bench:save": "vitest bench --run --outputJson bench/bench.json",
+    "bench:compare": "vitest bench --run --compare bench/bench.json"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

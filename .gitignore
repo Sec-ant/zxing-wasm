@@ -35,3 +35,4 @@ src/**/zxing_*.js
 *.tgz
 *.tar.gz
 *.tsbuildinfo
+bench/
