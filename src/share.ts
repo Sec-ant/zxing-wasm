@@ -283,6 +283,33 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
 }
 
 /**
+ * Converts RGBA pixel data to grayscale (luminance) using the same formula
+ * as ZXing-C++ `RGBToLum`: (306*R + 601*G + 117*B + 0x200) >> 10.
+ *
+ * This avoids sending 4x the data to WASM and skips the C++ ExtractLum pass.
+ *
+ * @internal
+ */
+function rgbaToGrayscale(
+  rgba: Uint8ClampedArray,
+  width: number,
+  height: number,
+): Uint8Array {
+  const pixelCount = width * height;
+  const lum = new Uint8Array(pixelCount);
+  for (let i = 0; i < pixelCount; i++) {
+    const offset = i << 2; // i * 4
+    lum[i] =
+      (306 * rgba[offset]! +
+        601 * rgba[offset + 1]! +
+        117 * rgba[offset + 2]! +
+        0x200) >>
+      10;
+  }
+  return lum;
+}
+
+/**
  * Reads barcodes from an image using a ZXing module factory.
  *
  * @param zxingModuleFactory - Factory function to create a ZXing module instance
@@ -310,15 +337,16 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
   let bufferPtr: number;
 
   if ("width" in input && "height" in input && "data" in input) {
-    /* ImageData */
-    const {
-      data: buffer,
-      data: { byteLength: size },
-      width,
-      height,
-    } = input;
-    bufferPtr = zxingModule._malloc(size);
-    zxingModule.HEAPU8.set(buffer, bufferPtr);
+    /* ImageData — convert RGBA to grayscale on JS side to reduce
+       WASM heap copy by 4x and skip C++ ExtractLum conversion */
+    const { data: rgbaBuffer, width, height } = input;
+    const lumBuffer = rgbaToGrayscale(rgbaBuffer, width, height);
+    const lumSize = lumBuffer.byteLength;
+    bufferPtr = zxingModule._malloc(lumSize);
+    if (!bufferPtr) {
+      throw new Error(`Failed to allocate ${lumSize} bytes in WASM memory`);
+    }
+    zxingModule.HEAPU8.set(lumBuffer, bufferPtr);
     zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
       bufferPtr,
       width,
@@ -341,6 +369,9 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
       throw new TypeError("Invalid input type");
     }
     bufferPtr = zxingModule._malloc(size);
+    if (!bufferPtr) {
+      throw new Error(`Failed to allocate ${size} bytes in WASM memory`);
+    }
     zxingModule.HEAPU8.set(buffer, bufferPtr);
     zxingReadResultVector = zxingModule.readBarcodesFromImage(
       bufferPtr,
@@ -386,6 +417,9 @@ export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   }
   const { byteLength } = input;
   const bufferPtr = zxingModule._malloc(byteLength);
+  if (!bufferPtr) {
+    throw new Error(`Failed to allocate ${byteLength} bytes in WASM memory`);
+  }
   zxingModule.HEAPU8.set(input, bufferPtr);
   const zxingWriteResult = zxingModule.writeBarcodeFromBytes(
     bufferPtr,

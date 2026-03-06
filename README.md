@@ -171,7 +171,7 @@ import { readBarcodes } from "zxing-wasm/reader";
 
 ### `zxing-wasm/writer`
 
-This subpath only provides a function to write barcodes. The wasm binary size is ~637 KiB.
+This subpath only provides a function to write barcodes. The wasm binary size is ~636 KiB.
 
 ```ts
 import { writeBarcode } from "zxing-wasm/writer";
