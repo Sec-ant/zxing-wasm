@@ -296,6 +296,11 @@ function rgbaToGrayscale(
   height: number,
 ): Uint8Array {
   const pixelCount = width * height;
+  if (rgba.byteLength !== pixelCount * 4) {
+    throw new TypeError(
+      `Invalid ImageData: expected ${pixelCount * 4} RGBA bytes, got ${rgba.byteLength}`,
+    );
+  }
   const lum = new Uint8Array(pixelCount);
   for (let i = 0; i < pixelCount; i++) {
     const offset = i << 2; // i * 4
@@ -346,13 +351,17 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
     if (!bufferPtr) {
       throw new Error(`Failed to allocate ${lumSize} bytes in WASM memory`);
     }
-    zxingModule.HEAPU8.set(lumBuffer, bufferPtr);
-    zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
-      bufferPtr,
-      width,
-      height,
-      readerOptionsToZXingReaderOptions(requiredReaderOptions),
-    );
+    try {
+      zxingModule.HEAPU8.set(lumBuffer, bufferPtr);
+      zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
+        bufferPtr,
+        width,
+        height,
+        readerOptionsToZXingReaderOptions(requiredReaderOptions),
+      );
+    } finally {
+      zxingModule._free(bufferPtr);
+    }
   } else {
     let size: number;
     let buffer: Uint8Array;
@@ -372,14 +381,17 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
     if (!bufferPtr) {
       throw new Error(`Failed to allocate ${size} bytes in WASM memory`);
     }
-    zxingModule.HEAPU8.set(buffer, bufferPtr);
-    zxingReadResultVector = zxingModule.readBarcodesFromImage(
-      bufferPtr,
-      size,
-      readerOptionsToZXingReaderOptions(requiredReaderOptions),
-    );
+    try {
+      zxingModule.HEAPU8.set(buffer, bufferPtr);
+      zxingReadResultVector = zxingModule.readBarcodesFromImage(
+        bufferPtr,
+        size,
+        readerOptionsToZXingReaderOptions(requiredReaderOptions),
+      );
+    } finally {
+      zxingModule._free(bufferPtr);
+    }
   }
-  zxingModule._free(bufferPtr);
   const readResults: ReadResult[] = [];
   for (let i = 0; i < zxingReadResultVector.size(); ++i) {
     readResults.push(
@@ -420,14 +432,17 @@ export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   if (!bufferPtr) {
     throw new Error(`Failed to allocate ${byteLength} bytes in WASM memory`);
   }
-  zxingModule.HEAPU8.set(input, bufferPtr);
-  const zxingWriteResult = zxingModule.writeBarcodeFromBytes(
-    bufferPtr,
-    byteLength,
-    zxingWriterOptions,
-  );
-  zxingModule._free(bufferPtr);
-  return zxingWriteResultToWriteResult(zxingWriteResult);
+  try {
+    zxingModule.HEAPU8.set(input, bufferPtr);
+    const zxingWriteResult = zxingModule.writeBarcodeFromBytes(
+      bufferPtr,
+      byteLength,
+      zxingWriterOptions,
+    );
+    return zxingWriteResultToWriteResult(zxingWriteResult);
+  } finally {
+    zxingModule._free(bufferPtr);
+  }
 }
 
 if (import.meta.env.MODE === "miniprogram") {
