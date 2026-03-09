@@ -290,7 +290,7 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
  *
  * @internal
  */
-function rgbaToGrayscale(data: ImageDataArray) {
+function rgbaToGrayscale(data: Uint8ClampedArray) {
   // Each pixel consists of 4 bytes (RGBA), so the number of pixels is data.byteLength / 4
   const pixelCount = data.byteLength >> 2;
   const lum = new Uint8Array(pixelCount);
