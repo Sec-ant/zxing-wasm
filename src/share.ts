@@ -290,24 +290,16 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
  *
  * @internal
  */
-function rgbaToGrayscale(
-  rgba: Uint8ClampedArray,
-  width: number,
-  height: number,
-): Uint8Array {
-  const pixelCount = width * height;
-  if (rgba.byteLength !== pixelCount * 4) {
-    throw new TypeError(
-      `Invalid ImageData: expected ${pixelCount * 4} RGBA bytes, got ${rgba.byteLength}`,
-    );
-  }
+function rgbaToGrayscale(data: ImageDataArray) {
+  // Each pixel consists of 4 bytes (RGBA), so the number of pixels is data.byteLength / 4
+  const pixelCount = data.byteLength >> 2;
   const lum = new Uint8Array(pixelCount);
   for (let i = 0; i < pixelCount; i++) {
     const offset = i << 2; // i * 4
     lum[i] =
-      (306 * rgba[offset]! +
-        601 * rgba[offset + 1]! +
-        117 * rgba[offset + 2]! +
+      (306 * data[offset]! +
+        601 * data[offset + 1]! +
+        117 * data[offset + 2]! +
         0x200) >>
       10;
   }
@@ -344,8 +336,8 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
   if ("width" in input && "height" in input && "data" in input) {
     /* ImageData — convert RGBA to grayscale on JS side to reduce
        WASM heap copy by 4x and skip C++ ExtractLum conversion */
-    const { data: rgbaBuffer, width, height } = input;
-    const lumBuffer = rgbaToGrayscale(rgbaBuffer, width, height);
+    const { data, width, height } = input;
+    const lumBuffer = rgbaToGrayscale(data);
     const lumSize = lumBuffer.byteLength;
     bufferPtr = zxingModule._malloc(lumSize);
     if (!bufferPtr) {
