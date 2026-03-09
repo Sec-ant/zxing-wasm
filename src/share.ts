@@ -334,8 +334,8 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
   let bufferPtr: number;
 
   if ("width" in input && "height" in input && "data" in input) {
-    /* ImageData — convert RGBA to grayscale on JS side to reduce
-       WASM heap copy by 4x and skip C++ ExtractLum conversion */
+    // convert RGBA to grayscale on JS side to reduce
+    // WASM heap copy by 4x and skip C++ ExtractLum conversion
     const { data, width, height } = input;
     const lumBuffer = rgbaToGrayscale(data);
     const lumSize = lumBuffer.byteLength;
