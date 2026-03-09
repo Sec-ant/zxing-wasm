@@ -1,5 +1,12 @@
 # zxing-wasm
 
+## 3.0.1
+
+### Patch Changes
+
+- a327f66: Improve barcode reading performance by moving RGBA→grayscale conversion to JS; add malloc checks; dedupe writer code; avoid redundant copy.
+- a327f66: Bump zxing-cpp to `eb8c15e` with several fixes.
+
 ## 3.0.0
 
 ### Major Changes
