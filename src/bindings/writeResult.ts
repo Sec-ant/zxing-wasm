@@ -62,7 +62,7 @@ export function zxingWriteResultToWriteResult(
     ...zxingWriteResult,
     image:
       (zxingWriteResult.image &&
-        new Blob([new Uint8Array(zxingWriteResult.image)], {
+        new Blob([zxingWriteResult.image as BlobPart], {
           type: "image/png",
         })) ??
       null,

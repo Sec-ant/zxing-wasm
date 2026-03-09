@@ -283,6 +283,30 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
 }
 
 /**
+ * Converts RGBA pixel data to grayscale (luminance) using the same formula
+ * as ZXing-C++ `RGBToLum`: (306*R + 601*G + 117*B + 0x200) >> 10.
+ *
+ * This avoids sending 4x the data to WASM and skips the C++ ExtractLum pass.
+ *
+ * @internal
+ */
+function rgbaToGrayscale(data: Uint8ClampedArray) {
+  // Each pixel consists of 4 bytes (RGBA), so the number of pixels is data.byteLength / 4
+  const pixelCount = data.byteLength >> 2;
+  const lum = new Uint8Array(pixelCount);
+  for (let i = 0; i < pixelCount; i++) {
+    const offset = i << 2; // i * 4
+    lum[i] =
+      (306 * data[offset]! +
+        601 * data[offset + 1]! +
+        117 * data[offset + 2]! +
+        0x200) >>
+      10;
+  }
+  return lum;
+}
+
+/**
  * Reads barcodes from an image using a ZXing module factory.
  *
  * @param zxingModuleFactory - Factory function to create a ZXing module instance
@@ -310,21 +334,26 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
   let bufferPtr: number;
 
   if ("width" in input && "height" in input && "data" in input) {
-    /* ImageData */
-    const {
-      data: buffer,
-      data: { byteLength: size },
-      width,
-      height,
-    } = input;
-    bufferPtr = zxingModule._malloc(size);
-    zxingModule.HEAPU8.set(buffer, bufferPtr);
-    zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
-      bufferPtr,
-      width,
-      height,
-      readerOptionsToZXingReaderOptions(requiredReaderOptions),
-    );
+    // convert RGBA to grayscale on JS side to reduce
+    // WASM heap copy by 4x and skip C++ ExtractLum conversion
+    const { data, width, height } = input;
+    const lumBuffer = rgbaToGrayscale(data);
+    const lumSize = lumBuffer.byteLength;
+    bufferPtr = zxingModule._malloc(lumSize);
+    if (!bufferPtr) {
+      throw new Error(`Failed to allocate ${lumSize} bytes in WASM memory`);
+    }
+    try {
+      zxingModule.HEAPU8.set(lumBuffer, bufferPtr);
+      zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
+        bufferPtr,
+        width,
+        height,
+        readerOptionsToZXingReaderOptions(requiredReaderOptions),
+      );
+    } finally {
+      zxingModule._free(bufferPtr);
+    }
   } else {
     let size: number;
     let buffer: Uint8Array;
@@ -341,14 +370,20 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
       throw new TypeError("Invalid input type");
     }
     bufferPtr = zxingModule._malloc(size);
-    zxingModule.HEAPU8.set(buffer, bufferPtr);
-    zxingReadResultVector = zxingModule.readBarcodesFromImage(
-      bufferPtr,
-      size,
-      readerOptionsToZXingReaderOptions(requiredReaderOptions),
-    );
+    if (!bufferPtr) {
+      throw new Error(`Failed to allocate ${size} bytes in WASM memory`);
+    }
+    try {
+      zxingModule.HEAPU8.set(buffer, bufferPtr);
+      zxingReadResultVector = zxingModule.readBarcodesFromImage(
+        bufferPtr,
+        size,
+        readerOptionsToZXingReaderOptions(requiredReaderOptions),
+      );
+    } finally {
+      zxingModule._free(bufferPtr);
+    }
   }
-  zxingModule._free(bufferPtr);
   const readResults: ReadResult[] = [];
   for (let i = 0; i < zxingReadResultVector.size(); ++i) {
     readResults.push(
@@ -386,14 +421,20 @@ export async function writeBarcodeWithFactory<T extends "writer" | "full">(
   }
   const { byteLength } = input;
   const bufferPtr = zxingModule._malloc(byteLength);
-  zxingModule.HEAPU8.set(input, bufferPtr);
-  const zxingWriteResult = zxingModule.writeBarcodeFromBytes(
-    bufferPtr,
-    byteLength,
-    zxingWriterOptions,
-  );
-  zxingModule._free(bufferPtr);
-  return zxingWriteResultToWriteResult(zxingWriteResult);
+  if (!bufferPtr) {
+    throw new Error(`Failed to allocate ${byteLength} bytes in WASM memory`);
+  }
+  try {
+    zxingModule.HEAPU8.set(input, bufferPtr);
+    const zxingWriteResult = zxingModule.writeBarcodeFromBytes(
+      bufferPtr,
+      byteLength,
+      zxingWriterOptions,
+    );
+    return zxingWriteResultToWriteResult(zxingWriteResult);
+  } finally {
+    zxingModule._free(bufferPtr);
+  }
 }
 
 if (import.meta.env.MODE === "miniprogram") {

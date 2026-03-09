@@ -196,7 +196,7 @@ JsReadResults readBarcodesFromImage(int bufferPtr, int bufferLength, const JsRea
 }
 
 JsReadResults readBarcodesFromPixmap(int bufferPtr, int width, int height, const JsReaderOptions &jsReaderOptions) {
-  return readBarcodes({reinterpret_cast<const uint8_t *>(bufferPtr), width, height, ZXing::ImageFormat::RGBA}, jsReaderOptions);
+  return readBarcodes({reinterpret_cast<const uint8_t *>(bufferPtr), width, height, ZXing::ImageFormat::Lum}, jsReaderOptions);
 }
 
 #endif
@@ -241,9 +241,9 @@ struct JsWriteResult {
   Symbol symbol;
 };
 
-JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWriterOptions) {
-  try {
-    auto barcode = ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions));
+namespace {
+
+  JsWriteResult renderBarcode(ZXing::Barcode &barcode, const JsWriterOptions &jsWriterOptions) {
     auto writerOptions = createWriterOptions(jsWriterOptions);
 
     auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
@@ -269,6 +269,14 @@ JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWr
       .image = std::move(jsImage),
       .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)
     };
+  }
+
+} // anonymous namespace
+
+JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWriterOptions) {
+  try {
+    auto barcode = ZXing::CreateBarcodeFromText(text, createCreatorOptions(jsWriterOptions));
+    return renderBarcode(barcode, jsWriterOptions);
   } catch (const std::exception &e) {
     return {.error = e.what()};
   } catch (...) {
@@ -279,31 +287,7 @@ JsWriteResult writeBarcodeFromText(std::string text, const JsWriterOptions &jsWr
 JsWriteResult writeBarcodeFromBytes(int bufferPtr, int bufferLength, const JsWriterOptions &jsWriterOptions) {
   try {
     auto barcode = ZXing::CreateBarcodeFromBytes(reinterpret_cast<const void *>(bufferPtr), bufferLength, createCreatorOptions(jsWriterOptions));
-    auto writerOptions = createWriterOptions(jsWriterOptions);
-
-    auto image = ZXing::WriteBarcodeToImage(barcode, writerOptions);
-
-    int len;
-    uint8_t *bytes = stbi_write_png_to_mem(image.data(), image.rowStride(), image.width(), image.height(), ZXing::PixStride(image.format()), &len);
-
-    if (bytes == nullptr || len <= 0) {
-      free(bytes);
-      return {.error = "Failed to encode PNG"};
-    }
-
-    // Wrap into JS typed array *before* freeing.
-    val jsImage = Uint8Array.new_(val(typed_memory_view(len, bytes)));
-
-    free(bytes); // Prevent leak – STBI allocates with malloc
-
-    auto barcodeSymbol = barcode.symbol();
-
-    return {
-      .svg = ZXing::WriteBarcodeToSVG(barcode, writerOptions),
-      .utf8 = ZXing::WriteBarcodeToUtf8(barcode, writerOptions),
-      .image = std::move(jsImage),
-      .symbol = createSymbolFromBarcodeSymbol(barcodeSymbol)
-    };
+    return renderBarcode(barcode, jsWriterOptions);
   } catch (const std::exception &e) {
     return {.error = e.what()};
   } catch (...) {

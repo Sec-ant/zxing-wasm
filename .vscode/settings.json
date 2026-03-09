@@ -22,5 +22,6 @@
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
 }
