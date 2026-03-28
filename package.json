@@ -192,7 +192,7 @@
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/types": "^7.29.0",
-    "@biomejs/biome": "2.4.6",
+    "@biomejs/biome": "2.4.9",
     "@changesets/cli": "^2.30.0",
     "@napi-rs/canvas": "^0.1.96",
     "@types/babel__core": "^7.20.5",
