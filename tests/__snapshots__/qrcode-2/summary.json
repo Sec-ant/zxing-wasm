@@ -1,7 +1,7 @@
 {
-  "total": 53,
+  "total": 54,
   "passAll": 23,
-  "passSome": 50,
+  "passSome": 51,
   "fast": {
     "0": {
       "failures": 6,
@@ -108,7 +108,7 @@
   },
   "pure": {
     "0": {
-      "failures": 30,
+      "failures": 31,
       "misreads": {
         "total": 1,
         "images": [
@@ -119,13 +119,14 @@
         ]
       },
       "undetected": {
-        "total": 29,
+        "total": 30,
         "images": [
           "#142.jpg",
           "#199b.jpg",
           "#253.jpg",
           "#258.jpg",
           "#709.jpg",
+          "#1086.png",
           "#1314.jpg",
           "4.png",
           "5.png",

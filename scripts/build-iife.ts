@@ -19,7 +19,7 @@ async function buildIife() {
               formats: ["iife"],
               name: "ZXingWASM",
             },
-            rollupOptions: undefined,
+            rolldownOptions: undefined,
             outDir: "dist/iife",
             emptyOutDir: false,
           },

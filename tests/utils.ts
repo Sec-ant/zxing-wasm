@@ -57,7 +57,7 @@ const [warmUpCache, getRotatedImage] = (() => {
   ];
 })();
 
-export { warmUpCache, getRotatedImage };
+export { getRotatedImage, warmUpCache };
 
 export function escapeNonGraphical(str: string): string {
   const asciiNongraphs = [

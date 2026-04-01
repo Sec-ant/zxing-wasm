@@ -1,7 +1,7 @@
 {
-  "total": 21,
+  "total": 22,
   "passAll": 0,
-  "passSome": 21,
+  "passSome": 22,
   "fast": {
     "0": {
       "failures": 1,
@@ -13,11 +13,12 @@
       }
     },
     "90": {
-      "failures": 21,
+      "failures": 22,
       "undetected": {
-        "total": 21,
+        "total": 22,
         "images": [
           "#749.png",
+          "#794.png",
           "dm-0.jpg",
           "dm-1.jpg",
           "dm-2.jpg",
@@ -42,11 +43,12 @@
       }
     },
     "180": {
-      "failures": 21,
+      "failures": 22,
       "undetected": {
-        "total": 21,
+        "total": 22,
         "images": [
           "#749.png",
+          "#794.png",
           "dm-0.jpg",
           "dm-1.jpg",
           "dm-2.jpg",
@@ -71,11 +73,12 @@
       }
     },
     "270": {
-      "failures": 21,
+      "failures": 22,
       "undetected": {
-        "total": 21,
+        "total": 22,
         "images": [
           "#749.png",
+          "#794.png",
           "dm-0.jpg",
           "dm-1.jpg",
           "dm-2.jpg",
