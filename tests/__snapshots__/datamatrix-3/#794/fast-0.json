@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "symbology": "DataMatrix",
+  "bytes": "166861b",
+  "bytesECI": "241ddd0",
+  "text": "010890381998765921S1ND6MPPFCGG6B869XES<GS>1731063010BNav4Cam2",
+  "contentType": "GS1",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 12,
+      "y": 6
+    },
+    "topRight": {
+      "x": 94,
+      "y": 10
+    },
+    "bottomRight": {
+      "x": 89,
+      "y": 118
+    },
+    "bottomLeft": {
+      "x": 8,
+      "y": 112
+    }
+  },
+  "orientation": 4,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 0,
+  "symbol": {
+    "data": "8913ac6",
+    "width": 26,
+    "height": 26
+  },
+  "extra": "{\"Version\":\"26x26\"}",
+  "version": "26x26",
+  "readerInit": false,
+  "ecLevel": ""
+}

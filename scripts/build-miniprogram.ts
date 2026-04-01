@@ -19,11 +19,11 @@ async function buildMiniprogram() {
         formats: ["cjs"],
       },
       outDir: "dist/miniprogram",
-      rollupOptions: {
-        ...viteConfig.build?.rollupOptions,
+      rolldownOptions: {
+        ...viteConfig.build?.rolldownOptions,
         output: {
-          ...viteConfig.build?.rollupOptions?.output,
-          manualChunks: {},
+          ...viteConfig.build?.rolldownOptions?.output,
+          manualChunks: undefined,
         },
       },
     },
