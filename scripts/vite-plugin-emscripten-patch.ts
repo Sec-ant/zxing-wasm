@@ -68,6 +68,8 @@ function logResults(
   for (const log of logs) {
     console[log.level](log.message);
   }
+
+  return allPatchesSuccessful;
 }
 
 // --- Brace-matching helper ---
@@ -76,6 +78,11 @@ function logResults(
  * Given code and an index pointing at an opening `{`,
  * returns the index of the matching closing `}`.
  * Returns -1 if no match found.
+ *
+ * Note: This performs naive brace counting and does not skip braces inside
+ * string literals or comments. This is acceptable here because the input is
+ * minified, machine-generated Emscripten JS where the targeted for-of loop
+ * bodies do not contain string literals with unbalanced braces.
  */
 function findMatchingBrace(code: string, openIndex: number): number {
   let depth = 0;
@@ -234,7 +241,15 @@ export function emscriptenPatch(): Plugin {
       patched = entriesResult.code;
       results.entriesTransformed = entriesResult.count;
 
-      logResults(id, results);
+      const success = logResults(id, results);
+
+      if (!success) {
+        throw new Error(
+          `Emscripten JS patch failed for ${id}. ` +
+            "One or more required patches could not be applied. " +
+            "The Emscripten output format may have changed.",
+        );
+      }
 
       if (patched === code) return;
       return { code: patched, map: null };
