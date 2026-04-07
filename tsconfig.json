@@ -3,10 +3,17 @@
   "compilerOptions": {
     "types": ["emscripten", "node"],
     "lib": ["ESNext", "DOM"],
+    "jsx": "react-jsx",
     "allowJs": true,
     "noEmit": true
   },
-  "include": ["./scripts", "./vite.config.ts", "./package.json", "./tests"],
+  "include": [
+    "./scripts",
+    "./vite.config.ts",
+    "./vitest.browser.config.ts",
+    "./package.json",
+    "./tests"
+  ],
   "references": [
     {
       "path": "./tsconfig.pkg.json"

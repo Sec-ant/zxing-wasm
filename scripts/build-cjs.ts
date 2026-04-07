@@ -4,13 +4,23 @@ import { build, type LibraryOptions } from "vite";
 import viteConfig from "../vite.config.js";
 
 async function buildCjs() {
+  const libConfig = viteConfig.build?.lib as LibraryOptions;
+
+  // Filter out react entries — react is ESM-only
+  const entry = Object.fromEntries(
+    Object.entries(libConfig.entry).filter(
+      ([key]) => !key.startsWith("react/"),
+    ),
+  );
+
   await rimraf("dist/cjs");
   await build({
     ...viteConfig,
     build: {
       ...viteConfig.build,
       lib: {
-        ...(viteConfig.build?.lib as LibraryOptions),
+        ...libConfig,
+        entry,
         formats: ["cjs"],
       },
       outDir: "dist/cjs",

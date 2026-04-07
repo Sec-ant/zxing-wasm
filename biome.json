@@ -20,6 +20,19 @@
         "noEmptyInterface": "off",
         "noSparseArray": "off"
       },
+      "correctness": {
+        "useExhaustiveDependencies": {
+          "level": "error",
+          "options": {
+            "hooks": [
+              {
+                "name": "useScanner",
+                "stableResult": ["ref", "start", "stop"]
+              }
+            ]
+          }
+        }
+      },
       "style": {
         "noNonNullAssertion": "off",
         "noParameterAssign": "error",

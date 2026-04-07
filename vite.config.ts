@@ -1,86 +1,50 @@
-import { execSync } from "node:child_process";
-import { createHash } from "node:crypto";
-import { readFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { mergeConfig } from "vite";
 import { defineConfig } from "vitest/config";
-import { version } from "./package.json";
 import { emscriptenPatch } from "./scripts/vite-plugin-emscripten-patch.js";
+import baseConfig from "./vite.base.js";
 
-export default defineConfig({
-  build: {
-    target: ["es2020", "edge88", "firefox68", "chrome75", "safari13"],
-    lib: {
-      entry: {
-        "reader/index": "src/reader/index.ts",
-        "writer/index": "src/writer/index.ts",
-        "full/index": "src/full/index.ts",
+export default mergeConfig(
+  baseConfig,
+  defineConfig({
+    build: {
+      target: ["es2020", "edge88", "firefox68", "chrome75", "safari13"],
+      lib: {
+        entry: {
+          "reader/index": "src/reader/index.ts",
+          "writer/index": "src/writer/index.ts",
+          "full/index": "src/full/index.ts",
+          "react/index": "src/react/index.ts",
+          "react/scanner-worker": "src/react/scanner-worker.ts",
+        },
+        formats: ["es"],
+        fileName: (_, entryName) => `${entryName}.js`,
       },
-      formats: ["es"],
-      fileName: (_, entryName) => `${entryName}.js`,
-    },
-    outDir: "dist/es",
-    rolldownOptions: {
-      output: {
-        chunkFileNames: "[name].js",
-        manualChunks: (id) => {
-          if (
-            /share\.ts|exposedReaderBindings\.ts|exposedWriterBindings\.ts/.test(
-              id,
-            )
-          ) {
-            return "share";
-          }
+      outDir: "dist/es",
+      rolldownOptions: {
+        external: ["react"],
+        output: {
+          chunkFileNames: "[name].js",
+          manualChunks: (id) => {
+            if (
+              /share\.ts|exposedReaderBindings\.ts|exposedWriterBindings\.ts/.test(
+                id,
+              )
+            ) {
+              return "share";
+            }
+          },
         },
       },
     },
-  },
-  plugins: [emscriptenPatch()],
-  define: {
-    NPM_PACKAGE_VERSION: JSON.stringify(version),
-    "import.meta.vitest": "undefined",
-    READER_HASH: JSON.stringify(
-      createHash("sha256")
-        .update(
-          await readFile(
-            fileURLToPath(
-              new URL("./src/reader/zxing_reader.wasm", import.meta.url),
-            ),
-          ),
-        )
-        .digest("hex"),
-    ),
-    WRITER_HASH: JSON.stringify(
-      createHash("sha256")
-        .update(
-          await readFile(
-            fileURLToPath(
-              new URL("./src/writer/zxing_writer.wasm", import.meta.url),
-            ),
-          ),
-        )
-        .digest("hex"),
-    ),
-    FULL_HASH: JSON.stringify(
-      createHash("sha256")
-        .update(
-          await readFile(
-            fileURLToPath(
-              new URL("./src/full/zxing_full.wasm", import.meta.url),
-            ),
-          ),
-        )
-        .digest("hex"),
-    ),
-    SUBMODULE_COMMIT: JSON.stringify(
-      execSync("git submodule status | cut -c-41", {
-        encoding: "utf-8",
-      })
-        .trim()
-        .replace(/[^0-9a-f]/g, ""),
-    ),
-  },
-  test: {
-    testTimeout: 10000,
-    includeSource: ["src/bindings/barcodeFormat.ts"],
-  },
-});
+    plugins: [emscriptenPatch()],
+    test: {
+      testTimeout: 10000,
+      includeSource: ["src/bindings/barcodeFormat.ts"],
+      exclude: [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/*.browser.test.{ts,tsx}",
+      ],
+    },
+  }),
+);

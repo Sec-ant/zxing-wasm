@@ -36,3 +36,5 @@ src/**/zxing_*.js
 *.tar.gz
 *.tsbuildinfo
 bench/
+tests/__screenshots__/
+.vitest-attachments/

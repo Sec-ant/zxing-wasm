@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "types": ["emscripten", "vitest/importMeta"],
+    "noEmit": true,
+    "paths": {
+      "zxing-wasm/reader": ["../src/reader/index.ts"],
+      "zxing-wasm/react": ["../src/react/index.ts"]
+    }
+  },
+  "include": ["./src", "../src"]
+}

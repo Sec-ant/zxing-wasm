@@ -6,8 +6,8 @@ on:
     branches: [main]
 
 jobs:
-  deploy:
-    name: Deploy
+  deploy-docs:
+    name: Deploy Docs
     runs-on: ubuntu-latest
 
     permissions:
@@ -35,3 +35,35 @@ jobs:
           project: "zxing-wasm"
           entrypoint: "https://deno.land/std/http/file_server.ts"
           root: "docs"
+
+  deploy-demo:
+    name: Deploy Demo
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # Needed for auth with Deno Deploy
+      contents: read # Needed to clone the repository
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          submodules: recursive
+
+      - name: Install Deno
+        uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
+        with:
+          deno-version: vx.x.x
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Build demo
+        run: "pnpm -s demo:build"
+
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@7bded90d0d09cd99bbfb513966146315db97618b # 1.13.1
+        with:
+          project: "zxing-wasm-demo"
+          entrypoint: "https://deno.land/std/http/file_server.ts"
+          root: "dist/demo"

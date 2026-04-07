@@ -11,3 +11,11 @@ runs:
     - name: Run Tests
       shell: bash
       run: pnpm -s test --exclude ".*/**/*"
+
+    - name: Install Playwright Chromium
+      shell: bash
+      run: pnpm exec playwright install chromium --with-deps
+
+    - name: Run Browser Tests
+      shell: bash
+      run: pnpm -s test:browser
