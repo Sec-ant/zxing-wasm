@@ -190,7 +190,7 @@
     "bench:compare": "vitest bench --run --compare bench/bench.json"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.10",
+    "@biomejs/biome": "2.4.13",
     "@changesets/cli": "^2.30.0",
     "@napi-rs/canvas": "^0.1.97",
     "@types/node": "^25.5.0",
