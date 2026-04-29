@@ -1,6 +1,9 @@
 /// <reference types="vite/client" />
-declare const NPM_PACKAGE_VERSION: string;
-declare const READER_HASH: string;
-declare const WRITER_HASH: string;
-declare const FULL_HASH: string;
-declare const SUBMODULE_COMMIT: string;
+
+declare interface ImportMetaEnv {
+  readonly NPM_PACKAGE_VERSION: string;
+  readonly READER_HASH: string;
+  readonly WRITER_HASH: string;
+  readonly FULL_HASH: string;
+  readonly SUBMODULE_COMMIT: string;
+}

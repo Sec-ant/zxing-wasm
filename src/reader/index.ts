@@ -107,4 +107,4 @@ export {
   type ZXingModuleOverrides,
   type ZXingReaderModule,
 } from "../share.js";
-export const ZXING_WASM_SHA256 = READER_HASH;
+export const ZXING_WASM_SHA256 = import.meta.env.READER_HASH;

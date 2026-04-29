@@ -79,9 +79,9 @@ export type ZXingModuleFactory<T extends ZXingModuleType = ZXingModuleType> =
 
 export type ZXingModuleOverrides = Partial<EmscriptenModule>;
 
-export const ZXING_WASM_VERSION = NPM_PACKAGE_VERSION;
+export const ZXING_WASM_VERSION = import.meta.env.NPM_PACKAGE_VERSION;
 
-export const ZXING_CPP_COMMIT = SUBMODULE_COMMIT;
+export const ZXING_CPP_COMMIT = import.meta.env.SUBMODULE_COMMIT;
 
 const DEFAULT_MODULE_OVERRIDES: ZXingModuleOverrides =
   import.meta.env.MODE === "miniprogram"
@@ -114,7 +114,7 @@ Learn more:
           locateFile: (path, prefix) => {
             const match = path.match(/_(.+?)\.wasm$/);
             if (match) {
-              return `https://fastly.jsdelivr.net/npm/zxing-wasm@${NPM_PACKAGE_VERSION}/dist/${match[1]}/${path}`;
+              return `https://fastly.jsdelivr.net/npm/zxing-wasm@${import.meta.env.NPM_PACKAGE_VERSION}/dist/${match[1]}/${path}`;
             }
             return prefix + path;
           },
@@ -123,7 +123,7 @@ Learn more:
           locateFile: (path, prefix) => {
             const match = path.match(/_(.+?)\.wasm$/);
             if (match) {
-              return `/src/${match[1]}/${path}`;
+              return new URL(`./${match[1]}/${path}`, import.meta.url).href;
             }
             return prefix + path;
           },

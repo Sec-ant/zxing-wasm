@@ -6,10 +6,9 @@ import viteConfig from "../vite.config.js";
 async function buildCjs() {
   const libConfig = viteConfig.build?.lib as LibraryOptions;
 
-  // Filter out react entries — react is ESM-only
   const entry = Object.fromEntries(
     Object.entries(libConfig.entry).filter(
-      ([key]) => !key.startsWith("react/"),
+      ([key]) => key !== "internal/scanner-worker",
     ),
   );
 

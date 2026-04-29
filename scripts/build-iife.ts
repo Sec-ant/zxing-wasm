@@ -5,9 +5,8 @@ import viteConfig from "../vite.config.js";
 async function buildIife() {
   const libConfig = viteConfig.build?.lib as LibraryOptions;
 
-  // Filter out react entries — react is ESM-only
   const entries = Object.entries(libConfig.entry).filter(
-    ([key]) => !key.startsWith("react/"),
+    ([key]) => !key.startsWith("scanner/") && !key.startsWith("internal/"),
   );
 
   await rimraf("dist/iife");

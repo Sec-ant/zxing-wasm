@@ -18,7 +18,7 @@ The core model is simple: scanning is a sequence of frames that arrive over time
 import { scan } from "zxing-wasm/scanner";
 ```
 
-`scan()` is the only public export for scanning streams. `frames()` remains an internal primitive and is documented below because it is still a key part of the design.
+`scan()` is the only public export for scanning streams. `capture()` remains an internal primitive and is documented below because it is still a key part of the design.
 
 ### `scan`
 
@@ -29,18 +29,18 @@ function scan(
 ): AsyncGenerator<ReadResult[]>;
 ```
 
-Composes `frames()` with `readBarcodes()` or Worker decode. Each successful decode yields one `ReadResult[]`, including `[]` when no barcode is found.
+Composes `capture()` with `readBarcodes()` or Worker decode. Each successful decode yields one `ReadResult[]`, including `[]` when no barcode is found.
 
 `scan()` follows native async-iteration error semantics: if decode fails, the generator throws and ends. There is no built-in recovery side channel such as `onError` or `recover`.
 
 #### `ScanOptions`
 
-| Option             | Type                         | Description                                                                                     |
-| ------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------- |
-| `readerOptions`    | `ReaderOptions \| (() => ReaderOptions)` | Static reader config object, or a getter evaluated per decode for dynamic config.     |
-| `wasmBinary`       | `ArrayBuffer`                | Pre-fetched WASM binary. Passed to `prepareZXingModule` or transferred to the Worker on init.   |
-| `worker`           | `boolean \| string`          | `undefined` / `false`: main thread. `true`: shared Worker. `string`: keyed Worker.             |
-| `signal`           | `AbortSignal`                | Cancels the generator. Passed through to `frames()`.                                            |
+| Option          | Type                                     | Description                                                                                   |
+| --------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `readerOptions` | `ReaderOptions \| (() => ReaderOptions)` | Static reader config object, or a getter evaluated per decode for dynamic config.             |
+| `wasmBinary`    | `ArrayBuffer`                            | Pre-fetched WASM binary. Passed to `prepareZXingModule` or transferred to the Worker on init. |
+| `worker`        | `boolean \| string`                      | `undefined` / `false`: main thread. `true`: shared Worker. `string`: keyed Worker.            |
+| `signal`        | `AbortSignal`                            | Cancels the generator. Passed through to `capture()`.                                         |
 
 ### Exported utilities
 
@@ -51,25 +51,25 @@ Composes `frames()` with `readBarcodes()` or Worker decode. Each successful deco
 
 ## Internal Primitive
 
-### `frames()`
+### `capture()`
 
 ```ts
-function frames(
+function capture(
   element: ScannerElement,
-  options?: FramesOptions,
+  options?: CaptureOptions,
 ): AsyncGenerator<ImageData>;
 ```
 
-`frames()` is not a public export. It is the internal frame-capture primitive used by `scan()`.
+`capture()` is not a public export. It is the internal frame-capture primitive used by `scan()`.
 
 It yields `ImageData` from a DOM element, one visual frame at a time. It owns scheduling (`requestAnimationFrame` / `requestVideoFrameCallback`), video readiness checks, and pixel extraction.
 
 Pixel extraction errors propagate and terminate the generator.
 
-#### `FramesOptions`
+#### `CaptureOptions`
 
-| Option   | Type          | Description                                                         |
-| -------- | ------------- | ------------------------------------------------------------------- |
+| Option   | Type          | Description                                                        |
+| -------- | ------------- | ------------------------------------------------------------------ |
 | `signal` | `AbortSignal` | Cancels the generator. Rejects any pending frame wait immediately. |
 
 ## Usage Patterns
@@ -77,7 +77,9 @@ Pixel extraction errors propagate and terminate the generator.
 ### Scan until found
 
 ```ts
-for await (const results of scan(videoElement, { readerOptions: { formats: ["QRCode"] } })) {
+for await (const results of scan(videoElement, {
+  readerOptions: { formats: ["QRCode"] },
+})) {
   if (results.length > 0) {
     console.log(results[0].text);
     break;
@@ -122,15 +124,15 @@ try {
 
 ### Pull model vs push model
 
-| Aspect         | Push (`createScanLoop`)                 | Pull (async generator)                     |
-| -------------- | --------------------------------------- | ------------------------------------------ |
-| Backpressure   | Implicit completion-based scheduling    | Inherent: no `next()` call means no work   |
-| Stop           | Custom `stop()` / `destroy()`           | `break`, `.return()`, or `AbortSignal`     |
-| Cleanup        | Manual resource lifecycle               | `finally` block                            |
-| Composition    | Callback wiring                         | Generator composition                      |
-| Error handling | Callback-based                          | Native `throw` / `try` / `catch`           |
-| Throttling     | Internal `interval`                     | Consumer-controlled                        |
-| State          | Manual booleans and scheduled handles   | Suspension is language-level               |
+| Aspect         | Push (`createScanLoop`)               | Pull (async generator)                   |
+| -------------- | ------------------------------------- | ---------------------------------------- |
+| Backpressure   | Implicit completion-based scheduling  | Inherent: no `next()` call means no work |
+| Stop           | Custom `stop()` / `destroy()`         | `break`, `.return()`, or `AbortSignal`   |
+| Cleanup        | Manual resource lifecycle             | `finally` block                          |
+| Composition    | Callback wiring                       | Generator composition                    |
+| Error handling | Callback-based                        | Native `throw` / `try` / `catch`         |
+| Throttling     | Internal `interval`                   | Consumer-controlled                      |
+| State          | Manual booleans and scheduled handles | Suspension is language-level             |
 
 The existing push loop is already completion-based: decode finishes, then the next frame is scheduled. Async generators express the same sequencing directly, without a hand-written state machine.
 
@@ -245,6 +247,38 @@ For a keyed Worker, `wasmBinary` is part of the Worker's initialization identity
 
 If different binaries need to coexist, they must use different Worker keys.
 
+### Worker protocol: per-client `MessagePort` and automatic queueing
+
+Shared Worker mode should not rely on request ids, client ids, or sequence numbers.
+
+Instead:
+
+1. Each `createWorkerDecode()` call creates a `MessageChannel`
+2. One port stays with the caller and becomes that decoder client's private reply channel
+3. The other port is transferred to the shared `scanner-worker`
+4. The Worker keeps one listener per client port
+5. Requests from one client are processed in order
+
+This gives each decoder client its own mailbox. Routing is based on the port itself rather than tagged message ids.
+
+### Automatic per-client queueing
+
+Concurrent `decode()` calls from the same client should queue automatically rather than error.
+
+Rationale:
+
+1. The scanning model is already naturally sequential
+2. A single decoder client rarely benefits from intra-client parallelism
+3. Queueing avoids extra request-id machinery
+4. It keeps the public API simple: callers never manage decode concurrency directly
+
+The intended behavior is:
+
+- one decoder client may submit many decode requests
+- those requests are serialized in submission order
+- different decoder clients may still share one Worker
+- the shared Worker may also serialize all decode execution internally for simplicity
+
 ## Architecture
 
 ```
@@ -252,18 +286,12 @@ src/scanner/
   ├── helpers.ts           — ScannerElement, type guards, canvas helpers,
   │                          dimensions
   ├── nextFrame.ts         — wait for the next scheduled frame
-  ├── frames.ts            — internal frame stream primitive
+  ├── capture.ts           — internal frame stream primitive
   ├── scan.ts              — scan() async generator + decoder setup
-  ├── workerDecode.ts      — keyed Worker pool + Worker decode wrapper
+  ├── workerDecode.ts      — keyed Worker pool + per-client port wrapper
   ├── scanner-worker.ts    — internal Worker entry
   └── index.ts             — public re-exports
-
-src/react/
-  ├── useScanner.ts        — hook that runs scan() inside React lifecycle
-  └── index.ts             — public re-exports
 ```
-
-`react/` depends on `scanner/`, never the reverse.
 
 ## Implementation Sketches
 
@@ -304,12 +332,12 @@ function nextFrame(
 }
 ```
 
-### Internal `frames()`
+### Internal `capture()`
 
 ```ts
-async function* frames(
+async function* capture(
   element: ScannerElement,
-  options?: FramesOptions,
+  options?: CaptureOptions,
 ): AsyncGenerator<ImageData> {
   const signal = options?.signal;
   const isVideo = isHTMLVideoElement(element);
@@ -376,17 +404,10 @@ async function* scan(
   element: ScannerElement,
   options?: ScanOptions,
 ): AsyncGenerator<ReadResult[]> {
-  const {
-    readerOptions = {},
-    worker,
-    wasmBinary,
-    signal,
-  } = options ?? {};
+  const { readerOptions = {}, worker, wasmBinary, signal } = options ?? {};
 
   const resolveReaderOptions =
-    typeof readerOptions === "function"
-      ? readerOptions
-      : () => readerOptions;
+    typeof readerOptions === "function" ? readerOptions : () => readerOptions;
 
   let decode: DecodeFn;
   let cleanupDecode: (() => void) | undefined;
@@ -406,7 +427,7 @@ async function* scan(
   }
 
   try {
-    for await (const imageData of frames(element, { signal })) {
+    for await (const imageData of capture(element, { signal })) {
       yield await decode(imageData, resolveReaderOptions());
     }
   } finally {
@@ -415,90 +436,65 @@ async function* scan(
 }
 ```
 
-## React Integration
+### Worker decode model
 
-`useScanner()` should consume `scan()` directly rather than rebuilding its own decode loop on top of `frames()`.
+`createWorkerDecode()` should use one `MessageChannel` per decoder client.
 
-### Hook option model
-
-- **Structural options**: `worker`, `wasmBinary`
-  - changing them ends the current scan session and starts a new one if needed
-- **Latest-ref options**: `readerOptions`, `onScan`, `onFrame`, `onError`, `equalityFn`
-  - they are read through refs during iteration
-
-`readerOptions` stays latest-ref in the hook by passing a getter into `scan()`:
+Sketch:
 
 ```ts
-readerOptions: () => optionsRef.current.readerOptions ?? {},
+function createWorkerDecode(workerKey?: string, wasmBinary?: ArrayBuffer) {
+  const worker = acquireWorker(workerKey, wasmBinary);
+  const channel = new MessageChannel();
+  const port = channel.port1;
+
+  worker.postMessage({ type: "attach-client", port: channel.port2 }, [
+    channel.port2,
+  ]);
+
+  let tail = Promise.resolve<ReadResult[] | void>(undefined);
+
+  function sendOne(
+    imageData: ImageData,
+    readerOptions: ReaderOptions,
+  ): Promise<ReadResult[]> {
+    return new Promise<ReadResult[]>((resolve, reject) => {
+      const onMessage = (e: MessageEvent) => {
+        port.removeEventListener("message", onMessage);
+        if (e.data.type === "result") resolve(e.data.results);
+        else if (e.data.type === "error") reject(new Error(e.data.error));
+      };
+
+      port.addEventListener("message", onMessage, { once: true });
+      const buffer = imageData.data.buffer as ArrayBuffer;
+      port.postMessage(
+        {
+          type: "scan",
+          buffer,
+          width: imageData.width,
+          height: imageData.height,
+          readerOptions,
+        },
+        [buffer],
+      );
+    });
+  }
+
+  return {
+    decode(imageData: ImageData, readerOptions: ReaderOptions) {
+      const task = tail.then(() => sendOne(imageData, readerOptions));
+      tail = task.catch(() => undefined);
+      return task;
+    },
+    destroy() {
+      port.close();
+      releaseWorker(workerKey);
+    },
+  };
+}
 ```
 
-Result dedup is a React-layer concern. `useScanner()` may keep `equalityFn` and a React-local `defaultScanEqualityFn`, but `scanner/` itself does not expose or depend on any result equality policy.
-
-### Fatal error handling in the hook
-
-`scan()` itself throws. `useScanner()` catches that error, calls `onError`, and ends the current session. Recovery, if desired, is explicit: start a new session.
-
-### Run-token race protection
-
-The hook should use a token identity rather than a numeric generation counter. Each running scan session gets a unique token object. Async completion paths only mutate hook state if their token is still current.
-
-```ts
-const runTokenRef = useRef<object | null>(null);
-const abortRef = useRef<AbortController | null>(null);
-
-const start = useCallback(() => {
-  if (!elementRef.current || runTokenRef.current) return;
-
-  const token = {};
-  const ac = new AbortController();
-
-  runTokenRef.current = token;
-  abortRef.current = ac;
-  setScanning(true);
-
-  (async () => {
-    try {
-      for await (const results of scan(elementRef.current!, {
-        signal: ac.signal,
-        worker: workerRef.current,
-        wasmBinary: wasmBinaryRef.current,
-        readerOptions: () => optionsRef.current.readerOptions ?? {},
-      })) {
-        if (runTokenRef.current !== token) return;
-
-        optionsRef.current.onFrame?.(results);
-
-        const eq = optionsRef.current.equalityFn ?? defaultScanEqualityFn;
-        if (!eq(prevResultsRef.current, results)) {
-          prevResultsRef.current = results;
-          optionsRef.current.onScan?.(results);
-        }
-      }
-    } catch (error) {
-      if (runTokenRef.current !== token) return;
-      if (!(error instanceof DOMException && error.name === "AbortError")) {
-        optionsRef.current.onError?.(error);
-      }
-    } finally {
-      if (runTokenRef.current !== token) return;
-      runTokenRef.current = null;
-      abortRef.current = null;
-      prevResultsRef.current = EMPTY_RESULTS;
-      setScanning(false);
-    }
-  })();
-}, []);
-
-const stop = useCallback(() => {
-  runTokenRef.current = null;
-  abortRef.current?.abort();
-  abortRef.current = null;
-  prevResultsRef.current = EMPTY_RESULTS;
-  setScanning(false);
-}, []);
-```
-
-This prevents stale `finally` blocks from an older run from clearing state for a newer run.
+This preserves a simple invariant: one decoder client behaves like a sequential mailbox, even when many decoder clients share the same Worker.
 
 ## Lifecycle
 
@@ -515,33 +511,16 @@ This prevents stale `finally` blocks from an older run from clearing state for a
 8. run finally cleanup
 ```
 
-### `useScanner()`
-
-```
-1. ref(element) stores the element
-2. start() creates a run token and AbortController
-3. hook consumes scan(element, ...)
-4. stop(), ref detach, or structural option change aborts the current run
-5. current run settles and finally cleanup only wins if its token is still current
-```
-
 ## Build
 
 - `scanner/index` should ship as `ES + CJS`
-- `react/index` should ship as `ES + CJS`
 - `reader` / `writer` / `full` may continue shipping `ES + CJS + IIFE`
 - `scanner-worker` is an internal build artifact owned by `scanner/`, not a public API surface
 - there should be exactly one scanner Worker entry in the package architecture
 
-`react/` must not own a separate Worker. It should always reuse the Worker pipeline defined in `scanner/`.
-
 ### External dependencies
 
 - `scanner/` has no framework dependencies
-- `react/` must externalize React runtime dependencies in both ES and CJS builds
-- expected externals:
-  - `react`
-  - `react/jsx-runtime`
 
 Package-local subpaths such as `zxing-wasm/reader`, `zxing-wasm/full`, and `zxing-wasm/scanner` are not external dependencies. They are part of the package's own published surface and should be built and referenced as internal outputs.
 
@@ -550,6 +529,8 @@ Package-local subpaths such as `zxing-wasm/reader`, `zxing-wasm/full`, and `zxin
 `scanner/scanner-worker` should be built as an internal browser Worker artifact used by `scanner/index`.
 
 This artifact exists for runtime loading, not as a user-facing entry point. Users choose worker mode through `scan(..., { worker })`; they do not configure Worker construction directly.
+
+Inside the Worker, attached client ports should be treated as independent mailboxes. The Worker implementation may serialize decode execution globally for simplicity.
 
 ### IIFE policy
 
@@ -568,8 +549,8 @@ Rationale:
   "./scanner": {
     "import": "./dist/es/scanner/index.js",
     "require": "./dist/cjs/scanner/index.js",
-    "default": "./dist/es/scanner/index.js"
-  }
+    "default": "./dist/es/scanner/index.js",
+  },
 }
 ```
 
@@ -585,11 +566,12 @@ Browser integration tests should cover:
 
 1. `scan()` decodes from `<img>` on main thread
 2. `scan()` decodes from `<img>` in Worker mode
-3. `scan()` throws on decode failure
-4. `scan()` propagates frame extraction `SecurityError` for tainted canvas, if testable
-5. `scan()` respects `AbortSignal`
-6. `useScanner()` catches fatal scan errors, calls `onError`, and ends the current session
-7. `useScanner()` handles rapid stop/start without stale cleanup races
+3. `scan()` respects `readerOptions` getter updates on subsequent frames
+4. `scan()` throws on decode failure
+5. `scan()` propagates frame extraction `SecurityError` for tainted canvas, if testable
+6. `scan()` respects `AbortSignal`
+7. multiple scanner clients can share one Worker without result cross-talk
+8. concurrent decode requests from one client are queued and resolved in order
 
 ## Migration Plan
 
@@ -597,26 +579,16 @@ Browser integration tests should cover:
 
 - `src/scanner/helpers.ts`
 - `src/scanner/nextFrame.ts`
-- `src/scanner/frames.ts`
+- `src/scanner/capture.ts`
 - `src/scanner/scan.ts`
 - `src/scanner/workerDecode.ts`
 - `src/scanner/scanner-worker.ts`
 - `src/scanner/index.ts`
 
-### Phase 2: refactor `react/`
-
-- rewrite `react/useScanner.ts` to consume `scan()`
-- move shared helpers into `scanner/`
-- delete `react/scanLoop.ts`
-- delete `react/workerDecode.ts`
-- delete `react/scanner-worker.ts`
-
-### Phase 3: update build and publishing
+### Phase 2: update build and publishing
 
 - add `scanner/` Vite entries
 - build `scanner/index` as ES + CJS
-- build `react/index` as ES + CJS
-- externalize `react` and `react/jsx-runtime` in ES + CJS builds
 - add `./scanner` export
 - update `typesVersions`
 - update TypeDoc entry points

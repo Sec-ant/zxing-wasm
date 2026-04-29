@@ -94,4 +94,4 @@ export {
   type ZXingModuleOverrides,
   type ZXingWriterModule,
 } from "../share.js";
-export const ZXING_WASM_SHA256 = WRITER_HASH;
+export const ZXING_WASM_SHA256 = import.meta.env.WRITER_HASH;

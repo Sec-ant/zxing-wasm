@@ -116,4 +116,4 @@ export {
   type ZXingFullModule,
   type ZXingModuleOverrides,
 } from "../share.js";
-export const ZXING_WASM_SHA256 = FULL_HASH;
+export const ZXING_WASM_SHA256 = import.meta.env.FULL_HASH;

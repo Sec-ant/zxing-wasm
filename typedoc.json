@@ -5,7 +5,7 @@
     "./src/full/index.ts",
     "./src/reader/index.ts",
     "./src/writer/index.ts",
-    "./src/react/index.ts"
+    "./src/scanner/index.ts"
   ],
   "out": "docs",
   "plugin": ["typedoc-plugin-replace-text"],

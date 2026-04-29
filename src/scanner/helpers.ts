@@ -1,14 +1,7 @@
-import type { ReadResult } from "../bindings/index.js";
-
-/**
- * DOM element types that can be scanned for barcodes.
- */
 export type ScannerElement =
   | HTMLImageElement
   | HTMLVideoElement
   | HTMLCanvasElement;
-
-// --- Cross-realm type guards (iframe-safe) ---
 
 export function isHTMLVideoElement(
   element: ScannerElement,
@@ -36,12 +29,6 @@ export function isHTMLImageElement(
   }
 }
 
-/**
- * Create a canvas + 2d context for pixel extraction.
- * Prefers OffscreenCanvas but verifies the context is a real
- * OffscreenCanvasRenderingContext2D (not a polyfill stub), falling back
- * to a regular HTMLCanvasElement.
- */
 export function createCanvas(width: number, height: number) {
   try {
     const canvas = new OffscreenCanvas(width, height);
@@ -61,9 +48,6 @@ export function createCanvas(width: number, height: number) {
   }
 }
 
-/**
- * Get natural dimensions of a source element.
- */
 export function getDimensions(element: ScannerElement): [number, number] {
   if (isHTMLVideoElement(element)) {
     return [element.videoWidth, element.videoHeight];
@@ -74,28 +58,18 @@ export function getDimensions(element: ScannerElement): [number, number] {
   return [element.width, element.height];
 }
 
-export const EMPTY_RESULTS: ReadResult[] = [];
+function createAbortError() {
+  return new DOMException("The operation was aborted.", "AbortError");
+}
 
-/**
- * Default equality function for onScan gating.
- * Compares results by format + text content, sorted.
- * Ignores position — only detects content changes.
- *
- * Returns true if results are "equal" (suppress onScan).
- * Same convention as zustand's equalityFn.
- */
-export function defaultScanEqualityFn(
-  prev: ReadResult[],
-  next: ReadResult[],
-): boolean {
-  if (prev.length !== next.length) return false;
-  if (prev.length === 0) return true;
+export function getAbortReason(signal?: AbortSignal) {
+  if (!signal?.aborted) return undefined;
+  return signal.reason ?? createAbortError();
+}
 
-  const toKey = (results: ReadResult[]) =>
-    results
-      .map((r) => `${r.format}\0${r.text}`)
-      .sort()
-      .join("\n");
-
-  return toKey(prev) === toKey(next);
+export function throwIfAborted(signal?: AbortSignal) {
+  const reason = getAbortReason(signal);
+  if (reason !== undefined) {
+    throw reason;
+  }
 }

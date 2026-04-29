@@ -13,15 +13,14 @@ export default mergeConfig(
           "reader/index": "src/reader/index.ts",
           "writer/index": "src/writer/index.ts",
           "full/index": "src/full/index.ts",
-          "react/index": "src/react/index.ts",
-          "react/scanner-worker": "src/react/scanner-worker.ts",
+          "scanner/index": "src/scanner/index.ts",
+          "internal/scanner-worker": "src/scanner/scanner-worker.ts",
         },
         formats: ["es"],
         fileName: (_, entryName) => `${entryName}.js`,
       },
       outDir: "dist/es",
       rolldownOptions: {
-        external: ["react"],
         output: {
           chunkFileNames: "[name].js",
           manualChunks: (id) => {
