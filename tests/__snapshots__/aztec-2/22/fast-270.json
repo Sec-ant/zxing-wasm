@@ -10,20 +10,20 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 275,
-      "y": 76
+      "x": 276,
+      "y": 75
     },
     "topRight": {
-      "x": 301,
+      "x": 300,
       "y": 332
     },
     "bottomRight": {
-      "x": 53,
-      "y": 362
+      "x": 54,
+      "y": 360
     },
     "bottomLeft": {
-      "x": 32,
-      "y": 56
+      "x": 31,
+      "y": 50
     }
   },
   "orientation": 85,
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "382d09a",
+    "data": "0ff918e",
     "width": 37,
     "height": 37
   },

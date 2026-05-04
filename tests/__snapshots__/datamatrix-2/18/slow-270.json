@@ -23,7 +23,7 @@
     },
     "bottomLeft": {
       "x": 55,
-      "y": 36
+      "y": 37
     }
   },
   "orientation": 85,
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "52fc9c5",
+    "data": "a4689e0",
     "width": 40,
     "height": 40
   },

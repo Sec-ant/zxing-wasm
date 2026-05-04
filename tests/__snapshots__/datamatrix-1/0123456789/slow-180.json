@@ -11,7 +11,7 @@
   "position": {
     "topLeft": {
       "x": 161,
-      "y": 170
+      "y": 171
     },
     "topRight": {
       "x": 7,
@@ -26,7 +26,7 @@
       "y": 16
     }
   },
-  "orientation": 180,
+  "orientation": -180,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",

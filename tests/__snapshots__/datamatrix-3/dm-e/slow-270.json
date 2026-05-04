@@ -15,7 +15,7 @@
     },
     "topRight": {
       "x": 113,
-      "y": 121
+      "y": 122
     },
     "bottomRight": {
       "x": 59,
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "6c105e5",
+    "data": "ea344f3",
     "width": 24,
     "height": 24
   },

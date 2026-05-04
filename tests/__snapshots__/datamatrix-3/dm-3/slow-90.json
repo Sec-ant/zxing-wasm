@@ -18,12 +18,12 @@
       "y": 30
     },
     "bottomRight": {
-      "x": 48,
-      "y": 23
+      "x": 47,
+      "y": 24
     },
     "bottomLeft": {
       "x": 63,
-      "y": 112
+      "y": 111
     }
   },
   "orientation": -100,

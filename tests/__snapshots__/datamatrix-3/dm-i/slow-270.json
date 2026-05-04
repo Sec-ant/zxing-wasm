@@ -10,23 +10,23 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 120,
-      "y": 35
+      "x": 119,
+      "y": 34
     },
     "topRight": {
-      "x": 155,
-      "y": 127
+      "x": 157,
+      "y": 128
     },
     "bottomRight": {
-      "x": 71,
-      "y": 160
+      "x": 72,
+      "y": 161
     },
     "bottomLeft": {
-      "x": 36,
+      "x": 35,
       "y": 76
     }
   },
-  "orientation": 68,
+  "orientation": 67,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",

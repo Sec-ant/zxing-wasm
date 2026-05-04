@@ -19,11 +19,11 @@
     },
     "bottomRight": {
       "x": 8,
-      "y": 7
+      "y": 6
     },
     "bottomLeft": {
       "x": 163,
-      "y": 7
+      "y": 6
     }
   },
   "orientation": 180,

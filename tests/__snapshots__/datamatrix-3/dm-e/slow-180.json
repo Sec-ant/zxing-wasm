@@ -10,7 +10,7 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 122,
+      "x": 121,
       "y": 127
     },
     "topRight": {
@@ -26,7 +26,7 @@
       "y": 74
     }
   },
-  "orientation": -168,
+  "orientation": -167,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "fdb8edb",
+    "data": "2880541",
     "width": 24,
     "height": 24
   },

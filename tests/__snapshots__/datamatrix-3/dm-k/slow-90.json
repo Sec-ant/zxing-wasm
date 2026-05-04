@@ -11,10 +11,10 @@
   "position": {
     "topLeft": {
       "x": 49,
-      "y": 133
+      "y": 132
     },
     "topRight": {
-      "x": 17,
+      "x": 18,
       "y": 57
     },
     "bottomRight": {
@@ -22,7 +22,7 @@
       "y": 24
     },
     "bottomLeft": {
-      "x": 125,
+      "x": 124,
       "y": 100
     }
   },
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "8753f29",
+    "data": "0c06e9c",
     "width": 14,
     "height": 14
   },

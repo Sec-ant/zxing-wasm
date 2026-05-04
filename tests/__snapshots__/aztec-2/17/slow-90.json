@@ -10,8 +10,8 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 46,
-      "y": 349
+      "x": 44,
+      "y": 350
     },
     "topRight": {
       "x": 77,
@@ -23,7 +23,7 @@
     },
     "bottomLeft": {
       "x": 299,
-      "y": 389
+      "y": 390
     }
   },
   "orientation": -83,

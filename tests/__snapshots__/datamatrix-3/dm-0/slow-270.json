@@ -18,11 +18,11 @@
       "y": 155
     },
     "bottomRight": {
-      "x": 47,
+      "x": 48,
       "y": 154
     },
     "bottomLeft": {
-      "x": 48,
+      "x": 49,
       "y": 46
     }
   },
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "163f896",
+    "data": "9834427",
     "width": 26,
     "height": 12
   },

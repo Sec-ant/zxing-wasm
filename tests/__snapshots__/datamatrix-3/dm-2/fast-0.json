@@ -14,11 +14,11 @@
       "y": 53
     },
     "topRight": {
-      "x": 140,
-      "y": 39
+      "x": 139,
+      "y": 38
     },
     "bottomRight": {
-      "x": 183,
+      "x": 182,
       "y": 72
     },
     "bottomLeft": {
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "3771b28",
+    "data": "925b92b",
     "width": 22,
     "height": 22
   },

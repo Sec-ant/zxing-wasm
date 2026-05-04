@@ -1,0 +1,4 @@
+dedupePeers: true
+allowBuilds:
+  esbuild: true
+  simple-git-hooks: true

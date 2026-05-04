@@ -10,11 +10,11 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 209,
+      "x": 210,
       "y": 121
     },
     "topRight": {
-      "x": 150,
+      "x": 149,
       "y": 136
     },
     "bottomRight": {
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "925b92b",
+    "data": "4fc7e09",
     "width": 22,
     "height": 22
   },

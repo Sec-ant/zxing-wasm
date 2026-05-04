@@ -10,19 +10,19 @@
   "hasECI": true,
   "position": {
     "topLeft": {
-      "x": 209,
-      "y": 209
+      "x": 207,
+      "y": 208
     },
     "topRight": {
       "x": 0,
-      "y": 209
+      "y": 208
     },
     "bottomRight": {
       "x": 0,
-      "y": 0
+      "y": 1
     },
     "bottomLeft": {
-      "x": 209,
+      "x": 208,
       "y": 0
     }
   },

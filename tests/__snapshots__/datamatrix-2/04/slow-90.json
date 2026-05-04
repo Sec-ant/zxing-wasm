@@ -15,15 +15,15 @@
     },
     "topRight": {
       "x": 35,
-      "y": 77
+      "y": 76
     },
     "bottomRight": {
       "x": 189,
-      "y": 80
+      "y": 79
     },
     "bottomLeft": {
       "x": 179,
-      "y": 218
+      "y": 217
     }
   },
   "orientation": -88,

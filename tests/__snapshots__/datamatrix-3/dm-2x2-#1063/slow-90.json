@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "symbology": "DataMatrix",
+  "bytes": "3a901ff",
+  "bytesECI": "8df7237",
+  "text": "DC04FR0500011FB31FB30701FR60RICHARD/LOUIS/CHRISTIAN<GS>62RAULT<GS>65ID66JCW222YD6<GS>67FR68M6CFR<US>6IVQMZGCE76T6AADCKLMXDUDRRE4S3K4SZ2N4FYHRQSE45BFH5MFTHCOUVAOFU36KMIPSCDRBKDWGR675ZY4BCUIVB3GR3JYNMOOPKI",
+  "contentType": "Binary",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 7,
+      "y": 133
+    },
+    "topRight": {
+      "x": 9,
+      "y": 6
+    },
+    "bottomRight": {
+      "x": 140,
+      "y": 9
+    },
+    "bottomLeft": {
+      "x": 137,
+      "y": 135
+    }
+  },
+  "orientation": -89,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 0,
+  "symbol": {
+    "data": "8ecaedb",
+    "width": 44,
+    "height": 44
+  },
+  "extra": "{\"Version\":\"44x44\"}",
+  "version": "44x44",
+  "readerInit": false,
+  "ecLevel": ""
+}

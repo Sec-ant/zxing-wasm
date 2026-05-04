@@ -11,18 +11,18 @@
   "position": {
     "topLeft": {
       "x": 89,
-      "y": 66
+      "y": 65
     },
     "topRight": {
       "x": 335,
-      "y": 41
+      "y": 42
     },
     "bottomRight": {
-      "x": 387,
+      "x": 388,
       "y": 270
     },
     "bottomLeft": {
-      "x": 111,
+      "x": 110,
       "y": 309
     }
   },

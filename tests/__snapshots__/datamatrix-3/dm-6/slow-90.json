@@ -10,12 +10,12 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 33,
+      "x": 34,
       "y": 182
     },
     "topRight": {
       "x": 28,
-      "y": 44
+      "y": 43
     },
     "bottomRight": {
       "x": 167,

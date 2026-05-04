@@ -10,7 +10,7 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 15,
+      "x": 16,
       "y": 21
     },
     "topRight": {
@@ -23,7 +23,7 @@
     },
     "bottomLeft": {
       "x": 26,
-      "y": 60
+      "y": 59
     }
   },
   "orientation": -16,
