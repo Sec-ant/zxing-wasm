@@ -559,3 +559,4 @@ This project contains code from multiple sources, each with its own license:
 - [src/cpp/ZXingWasm.cpp](https://github.com/Sec-ant/zxing-wasm/blob/main/src/cpp/ZXingWasm.cpp): [Apache License 2.0](https://github.com/Sec-ant/zxing-wasm/blob/main/src/cpp/LICENSE)
 - [zint](https://sourceforge.net/projects/zint/): [BSD 3-Clause License](https://sourceforge.net/p/zint/code/ci/master/tree/LICENSE)
 - zxing-wasm specific code: [MIT License](https://github.com/Sec-ant/zxing-wasm/blob/main/LICENSE)
+
