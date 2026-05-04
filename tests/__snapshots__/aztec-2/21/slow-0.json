@@ -10,23 +10,23 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 370,
-      "y": 85
+      "x": 371,
+      "y": 84
     },
     "topRight": {
       "x": 324,
-      "y": 287
+      "y": 286
     },
     "bottomRight": {
-      "x": 58,
-      "y": 231
+      "x": 57,
+      "y": 227
     },
     "bottomLeft": {
       "x": 147,
-      "y": 46
+      "y": 44
     }
   },
-  "orientation": 109,
+  "orientation": 110,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]z0",
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "42c0aed",
+    "data": "0ff918e",
     "width": 37,
     "height": 37
   },

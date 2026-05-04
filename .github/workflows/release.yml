@@ -15,6 +15,7 @@ permissions:
 
 env:
   NPM_CONFIG_PROVENANCE: true
+  PNPM_CONFIG_PROVENANCE: true
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

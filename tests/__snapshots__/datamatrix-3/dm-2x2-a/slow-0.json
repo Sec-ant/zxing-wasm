@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "DataMatrix",
+  "symbology": "DataMatrix",
+  "bytes": "c125c54",
+  "bytesECI": "30c4c04",
+  "text": "[)><RS>06<GS>PMBR120VLSFT1GOSCT-ND<GS>1PMBR120VLSFT1G<GS>30PMBR120VLSFT1GOSCT-ND<GS>K<GS>1K98237652<GS>10K123034605<GS>9D2525<GS>1TPT25SF00J<GS>11K1<GS>4LMY<GS>Q3<GS>11ZPICK<GS>12Z893874<GS>13Z999999<GS>20Z000000000000000000000000000000000000000000000000000000000000000000000000000<RS><EOT>",
+  "contentType": "ISO15434",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 46,
+      "y": 13
+    },
+    "topRight": {
+      "x": 482,
+      "y": 52
+    },
+    "bottomRight": {
+      "x": 446,
+      "y": 482
+    },
+    "bottomLeft": {
+      "x": 16,
+      "y": 445
+    }
+  },
+  "orientation": 5,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]d1",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 0,
+  "symbol": {
+    "data": "b3f8db4",
+    "width": 48,
+    "height": 48
+  },
+  "extra": "{\"Version\":\"48x48\"}",
+  "version": "48x48",
+  "readerInit": false,
+  "ecLevel": ""
+}

@@ -11,14 +11,14 @@
   "position": {
     "topLeft": {
       "x": 25,
-      "y": 13
+      "y": 14
     },
     "topRight": {
-      "x": 196,
-      "y": 15
+      "x": 195,
+      "y": 14
     },
     "bottomRight": {
-      "x": 201,
+      "x": 200,
       "y": 185
     },
     "bottomLeft": {

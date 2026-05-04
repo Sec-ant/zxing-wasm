@@ -10,7 +10,7 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 47,
+      "x": 46,
       "y": 228
     },
     "topRight": {
@@ -19,7 +19,7 @@
     },
     "bottomRight": {
       "x": 166,
-      "y": 12
+      "y": 13
     },
     "bottomLeft": {
       "x": 165,

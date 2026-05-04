@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "Aztec",
+  "symbology": "Aztec",
+  "bytes": "6f55061",
+  "bytesECI": "9bc33f3",
+  "text": "347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invalid  347918003403 347918003403 invalid  invali",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 201,
+      "y": 197
+    },
+    "topRight": {
+      "x": 12,
+      "y": 202
+    },
+    "bottomRight": {
+      "x": 4,
+      "y": 10
+    },
+    "bottomLeft": {
+      "x": 200,
+      "y": 6
+    }
+  },
+  "orientation": 179,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]z0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 0,
+  "symbol": {
+    "data": "d9fa82e",
+    "width": 67,
+    "height": 67
+  },
+  "extra": "{\"Version\":\"12\",\"ECLevel\":\"33%\"}",
+  "version": "12",
+  "readerInit": false,
+  "ecLevel": "33%"
+}

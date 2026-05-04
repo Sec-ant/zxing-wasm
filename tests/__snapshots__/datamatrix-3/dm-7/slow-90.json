@@ -10,15 +10,15 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 36,
+      "x": 37,
       "y": 124
     },
     "topRight": {
-      "x": 60,
+      "x": 59,
       "y": 70
     },
     "bottomRight": {
-      "x": 107,
+      "x": 106,
       "y": 95
     },
     "bottomLeft": {
@@ -26,7 +26,7 @@
       "y": 148
     }
   },
-  "orientation": -68,
+  "orientation": -69,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "1e041d4",
+    "data": "28515a3",
     "width": 10,
     "height": 10
   },

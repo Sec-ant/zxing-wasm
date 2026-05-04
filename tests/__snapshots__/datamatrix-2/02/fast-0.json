@@ -15,18 +15,18 @@
     },
     "topRight": {
       "x": 188,
-      "y": 49
+      "y": 50
     },
     "bottomRight": {
       "x": 183,
-      "y": 180
+      "y": 181
     },
     "bottomLeft": {
       "x": 54,
       "y": 179
     }
   },
-  "orientation": 0,
+  "orientation": 1,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",

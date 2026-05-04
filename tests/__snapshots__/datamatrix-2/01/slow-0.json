@@ -15,7 +15,7 @@
     },
     "topRight": {
       "x": 171,
-      "y": 38
+      "y": 37
     },
     "bottomRight": {
       "x": 173,
@@ -23,7 +23,7 @@
     },
     "bottomLeft": {
       "x": 26,
-      "y": 189
+      "y": 188
     }
   },
   "orientation": -1,

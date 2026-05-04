@@ -11,11 +11,11 @@
   "position": {
     "topLeft": {
       "x": 53,
-      "y": 209
+      "y": 210
     },
     "topRight": {
-      "x": 39,
-      "y": 149
+      "x": 38,
+      "y": 150
     },
     "bottomRight": {
       "x": 72,
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "f8ac491",
+    "data": "cad24dc",
     "width": 22,
     "height": 22
   },

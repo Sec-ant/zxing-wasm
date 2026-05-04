@@ -15,7 +15,7 @@
     },
     "topRight": {
       "x": 75,
-      "y": 20
+      "y": 19
     },
     "bottomRight": {
       "x": 75,
@@ -26,7 +26,7 @@
       "y": 71
     }
   },
-  "orientation": 0,
+  "orientation": -1,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "e3d5d15",
+    "data": "52c7871",
     "width": 18,
     "height": 18
   },

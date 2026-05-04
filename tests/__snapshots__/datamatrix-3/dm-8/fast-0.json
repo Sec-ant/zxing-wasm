@@ -15,18 +15,18 @@
     },
     "topRight": {
       "x": 177,
-      "y": 74
+      "y": 75
     },
     "bottomRight": {
       "x": 177,
-      "y": 235
+      "y": 234
     },
     "bottomLeft": {
-      "x": 13,
-      "y": 233
+      "x": 14,
+      "y": 232
     }
   },
-  "orientation": 0,
+  "orientation": 1,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "0a11b9b",
+    "data": "8dfa658",
     "width": 32,
     "height": 32
   },

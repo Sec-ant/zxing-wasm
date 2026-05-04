@@ -11,19 +11,19 @@
   "position": {
     "topLeft": {
       "x": 111,
-      "y": 104
+      "y": 103
     },
     "topRight": {
-      "x": 188,
+      "x": 187,
       "y": 83
     },
     "bottomRight": {
       "x": 164,
-      "y": 157
+      "y": 156
     },
     "bottomLeft": {
-      "x": 85,
-      "y": 182
+      "x": 86,
+      "y": 181
     }
   },
   "orientation": -16,
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "a5033c3",
+    "data": "a8370d7",
     "width": 26,
     "height": 26
   },

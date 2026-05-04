@@ -10,11 +10,11 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 27,
+      "x": 28,
       "y": 49
     },
     "topRight": {
-      "x": 104,
+      "x": 103,
       "y": 17
     },
     "bottomRight": {
@@ -23,7 +23,7 @@
     },
     "bottomLeft": {
       "x": 60,
-      "y": 124
+      "y": 125
     }
   },
   "orientation": -23,
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "8753f29",
+    "data": "ee42756",
     "width": 14,
     "height": 14
   },

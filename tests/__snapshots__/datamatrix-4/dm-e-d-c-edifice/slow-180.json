@@ -10,15 +10,15 @@
   "hasECI": false,
   "position": {
     "topLeft": {
-      "x": 721,
+      "x": 720,
       "y": 46
     },
     "topRight": {
-      "x": 523,
+      "x": 522,
       "y": 46
     },
     "bottomRight": {
-      "x": 523,
+      "x": 522,
       "y": 22
     },
     "bottomLeft": {

@@ -11,14 +11,14 @@
   "position": {
     "topLeft": {
       "x": 144,
-      "y": 144
+      "y": 145
     },
     "topRight": {
       "x": 34,
-      "y": 148
+      "y": 149
     },
     "bottomRight": {
-      "x": 29,
+      "x": 30,
       "y": 37
     },
     "bottomLeft": {
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "52fc9c5",
+    "data": "6dd237a",
     "width": 40,
     "height": 40
   },

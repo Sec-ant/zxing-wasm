@@ -11,22 +11,22 @@
   "position": {
     "topLeft": {
       "x": 124,
-      "y": 126
+      "y": 127
     },
     "topRight": {
       "x": 70,
-      "y": 103
+      "y": 104
     },
     "bottomRight": {
-      "x": 94,
-      "y": 56
+      "x": 95,
+      "y": 57
     },
     "bottomLeft": {
       "x": 148,
       "y": 76
     }
   },
-  "orientation": -158,
+  "orientation": -159,
   "isMirrored": false,
   "isInverted": false,
   "symbologyIdentifier": "]d1",
@@ -35,7 +35,7 @@
   "sequenceId": "",
   "lineCount": 0,
   "symbol": {
-    "data": "1e041d4",
+    "data": "28515a3",
     "width": 10,
     "height": 10
   },

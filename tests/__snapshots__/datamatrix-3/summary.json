@@ -1,27 +1,34 @@
 {
-  "total": 22,
+  "total": 28,
   "passAll": 0,
-  "passSome": 22,
+  "passSome": 27,
   "fast": {
     "0": {
-      "failures": 1,
+      "failures": 2,
       "undetected": {
-        "total": 1,
+        "total": 2,
         "images": [
+          "dm-2x2-b.png",
           "OldDetectorFallback.jpg"
         ]
       }
     },
     "90": {
-      "failures": 22,
+      "failures": 28,
       "undetected": {
-        "total": 22,
+        "total": 28,
         "images": [
           "#749.png",
           "#794.png",
           "dm-0.jpg",
           "dm-1.jpg",
           "dm-2.jpg",
+          "dm-2x2-#669-2.png",
+          "dm-2x2-#1063.png",
+          "dm-2x2-#1072-2.png",
+          "dm-2x2-#1088.png",
+          "dm-2x2-a.png",
+          "dm-2x2-b.png",
           "dm-3.png",
           "dm-4.jpg",
           "dm-5.png",
@@ -43,15 +50,21 @@
       }
     },
     "180": {
-      "failures": 22,
+      "failures": 28,
       "undetected": {
-        "total": 22,
+        "total": 28,
         "images": [
           "#749.png",
           "#794.png",
           "dm-0.jpg",
           "dm-1.jpg",
           "dm-2.jpg",
+          "dm-2x2-#669-2.png",
+          "dm-2x2-#1063.png",
+          "dm-2x2-#1072-2.png",
+          "dm-2x2-#1088.png",
+          "dm-2x2-a.png",
+          "dm-2x2-b.png",
           "dm-3.png",
           "dm-4.jpg",
           "dm-5.png",
@@ -73,15 +86,21 @@
       }
     },
     "270": {
-      "failures": 22,
+      "failures": 28,
       "undetected": {
-        "total": 22,
+        "total": 28,
         "images": [
           "#749.png",
           "#794.png",
           "dm-0.jpg",
           "dm-1.jpg",
           "dm-2.jpg",
+          "dm-2x2-#669-2.png",
+          "dm-2x2-#1063.png",
+          "dm-2x2-#1072-2.png",
+          "dm-2x2-#1088.png",
+          "dm-2x2-a.png",
+          "dm-2x2-b.png",
           "dm-3.png",
           "dm-4.jpg",
           "dm-5.png",
@@ -104,9 +123,41 @@
     }
   },
   "slow": {
-    "0": {},
-    "90": {},
-    "180": {},
-    "270": {}
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "dm-2x2-b.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "dm-2x2-b.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "dm-2x2-b.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "dm-2x2-b.png"
+        ]
+      }
+    }
   }
 }
