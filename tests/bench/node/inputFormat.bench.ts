@@ -96,7 +96,7 @@ beforeAll(async () => {
     });
     imageDataInputs[res] = id as ImageData;
   }
-});
+}, 120_000);
 
 /* ------------------------------------------------------------------ */
 /*  Benchmarks                                                         */
