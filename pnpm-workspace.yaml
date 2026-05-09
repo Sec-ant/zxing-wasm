@@ -1,4 +1,6 @@
 dedupePeers: true
+publicHoistPattern:
+  - "@changesets/config"
 allowBuilds:
   esbuild: true
   simple-git-hooks: true
