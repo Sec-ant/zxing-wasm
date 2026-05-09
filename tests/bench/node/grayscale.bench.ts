@@ -6,13 +6,11 @@
  * of the ImageData pipeline is spent on colour conversion vs WASM decode.
  *
  * Also benchmarks the Uint8Array allocation that backs the output buffer.
+ *
+ * Input bytes don't affect timing — the function is fixed-cost per pixel —
+ * so we synthesise the RGBA buffer in-memory rather than reading a fixture.
  */
-import { readFile } from "node:fs/promises";
-import { resolve } from "node:path";
-import { createCanvas, loadImage } from "@napi-rs/canvas";
 import { beforeAll, bench, describe } from "vitest";
-
-const fixtureDir = resolve(import.meta.dirname, "../fixtures");
 
 // 4K omitted to keep total bench runtime in check; 720p/1080p already
 // shows the linear scaling clearly.
@@ -42,17 +40,20 @@ function rgbaToGrayscale(data: Uint8ClampedArray): Uint8Array {
 
 const rgbaData: Record<string, Uint8ClampedArray> = {};
 
-beforeAll(async () => {
+beforeAll(() => {
   for (const { name, width, height } of resolutions) {
-    const pngBuf = await readFile(resolve(fixtureDir, `qrcode-${name}.png`));
-    const img = await loadImage(pngBuf);
-    const canvas = createCanvas(width, height);
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0, width, height);
-    const id = ctx.getImageData(0, 0, width, height);
-    rgbaData[name] = id.data as unknown as Uint8ClampedArray;
+    // Pseudo-random pattern keeps the JIT honest (avoids any constant-
+    // folding optimisation around a single repeated byte) without the
+    // overhead of crypto.getRandomValues for multi-MiB buffers.
+    const buf = new Uint8ClampedArray(width * height * 4);
+    let seed = 0x9e3779b1;
+    for (let i = 0; i < buf.length; i++) {
+      seed = (seed * 1664525 + 1013904223) | 0;
+      buf[i] = seed & 0xff;
+    }
+    rgbaData[name] = buf;
   }
-}, 30_000);
+});
 
 /* ------------------------------------------------------------------ */
 /*  rgbaToGrayscale (conversion + allocation)                          */

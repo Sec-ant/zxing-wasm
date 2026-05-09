@@ -18,7 +18,7 @@
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { createCanvas, loadImage } from "@napi-rs/canvas";
+import { createCanvas, ImageData, loadImage } from "@napi-rs/canvas";
 import { beforeAll, bench, describe } from "vitest";
 import type {
   ReaderOptions,
@@ -48,10 +48,15 @@ const samples: FormatSample[] = [
   { format: "EAN-13", path: "zxing-cpp/test/samples/ean13-1/1.png" },
 ];
 
-const noBarcodePath = resolve(
-  repoRoot,
-  "tests/bench/fixtures/no-barcode-1080p.png",
-);
+const noBarcodeKey = "__none__";
+
+/** Build a blank 1920x1080 white ImageData in-memory (failure-path input). */
+function blankImageData(width: number, height: number): ImageData {
+  const data = new Uint8ClampedArray(width * height * 4).fill(0xff);
+  const id = new ImageData(data, width, height);
+  Object.defineProperty(id, "colorSpace", { value: "srgb", writable: false });
+  return id;
+}
 
 /** Pre-decoded ImageData per format, plus the no-barcode frame. */
 const inputs = new Map<string, ImageData>();
@@ -75,12 +80,12 @@ beforeAll(async () => {
     fireImmediately: true,
   });
 
-  await Promise.all([
-    ...samples.map(async ({ format, path }) => {
+  inputs.set(noBarcodeKey, blankImageData(1920, 1080));
+  await Promise.all(
+    samples.map(async ({ format, path }) => {
       inputs.set(format, await loadAsImageData(resolve(repoRoot, path)));
     }),
-    loadAsImageData(noBarcodePath).then((id) => inputs.set("__none__", id)),
-  ]);
+  );
 }, 60_000);
 
 describe("decode — fast path (single format, no rotate / no invert)", () => {
@@ -108,7 +113,7 @@ describe("decode — failure path (default options, no barcode in frame)", () =>
   bench(
     "no-barcode 1080p",
     async () => {
-      await readBarcodes(inputs.get("__none__")!);
+      await readBarcodes(inputs.get(noBarcodeKey)!);
     },
     { warmupIterations: 5, iterations: 20 },
   );

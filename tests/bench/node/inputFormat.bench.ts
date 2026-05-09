@@ -6,18 +6,26 @@
  *   PNG/JPEG/BMP/GIF as Uint8Array → readBarcodesFromImage (stb_image decoding)
  *   PNG as Blob → arrayBuffer() + readBarcodesFromImage
  *
- * 3 resolutions x 6 input types = 18 benchmark cases.
+ * 2 resolutions x 6 input types = 12 benchmark cases.
  * Uses optimized reader options to minimise scanning time and isolate
  * input-path overhead.
+ *
+ * Fixtures are generated in-memory at startup from
+ * `tests/samples/qrcode/wikipedia.png` via jimp — no on-disk fixtures
+ * required, so this bench works in CI without any prep step.
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
+import { Jimp } from "jimp";
 import { beforeAll, bench, describe } from "vitest";
 import type { ReaderOptions } from "../../../src/bindings/index.js";
 import { prepareZXingModule, readBarcodes } from "../../../src/reader/index.js";
 
-const fixtureDir = resolve(import.meta.dirname, "../fixtures");
+const sourceImage = resolve(
+  import.meta.dirname,
+  "../../samples/qrcode/wikipedia.png",
+);
 const wasmPath = resolve(
   import.meta.dirname,
   "../../../src/reader/zxing_reader.wasm",
@@ -56,27 +64,28 @@ beforeAll(async () => {
     fireImmediately: true,
   });
 
+  // Load source QR once, then resize + re-encode per resolution per format.
+  // QR is centred on a white background (40% of the smaller dimension) so
+  // it stays decodable at every target resolution.
+  const source = await Jimp.read(sourceImage);
+
   for (const res of resolutions) {
     const [w, h] = dims[res];
+    const qrSize = Math.round(Math.min(w, h) * 0.4);
+    const qr = source.clone().resize({ w: qrSize, h: qrSize });
+    const composite = new Jimp({ width: w, height: h, color: 0xffffffff });
+    composite.composite(qr, (w - qrSize) >> 1, (h - qrSize) >> 1);
 
-    // Encoded buffers
-    const pngBuf = await readFile(resolve(fixtureDir, `qrcode-${res}.png`));
-    pngU8[res] = new Uint8Array(pngBuf);
+    pngU8[res] = new Uint8Array(await composite.getBuffer("image/png"));
     jpegU8[res] = new Uint8Array(
-      await readFile(resolve(fixtureDir, `qrcode-${res}.jpg`)),
+      await composite.getBuffer("image/jpeg", { quality: 85 }),
     );
-    bmpU8[res] = new Uint8Array(
-      await readFile(resolve(fixtureDir, `qrcode-${res}.bmp`)),
-    );
-    gifU8[res] = new Uint8Array(
-      await readFile(resolve(fixtureDir, `qrcode-${res}.gif`)),
-    );
-
-    // Blob
+    bmpU8[res] = new Uint8Array(await composite.getBuffer("image/bmp"));
+    gifU8[res] = new Uint8Array(await composite.getBuffer("image/gif"));
     pngBlobs[res] = new Blob([pngU8[res] as BlobPart], { type: "image/png" });
 
-    // ImageData via @napi-rs/canvas
-    const img = await loadImage(pngBuf);
+    // ImageData via @napi-rs/canvas (matches browser ImageData semantics)
+    const img = await loadImage(pngU8[res]);
     const canvas = createCanvas(w, h);
     const ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0, w, h);
