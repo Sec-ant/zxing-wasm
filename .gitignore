@@ -35,4 +35,13 @@ src/**/zxing_*.js
 *.tgz
 *.tar.gz
 *.tsbuildinfo
-bench/
+/bench/
+
+# Browser bench harness output
+tests/bench/browser/results.json
+
+# Generated bench fixtures (regenerate via `pnpm tsx tests/bench/fixtures/prepare.ts`)
+tests/bench/fixtures/qrcode-*.png
+tests/bench/fixtures/qrcode-*.jpg
+tests/bench/fixtures/qrcode-*.bmp
+tests/bench/fixtures/qrcode-*.gif
