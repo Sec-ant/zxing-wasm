@@ -83,5 +83,12 @@ export default defineConfig({
   test: {
     testTimeout: 10000,
     includeSource: ["src/bindings/barcodeFormat.ts"],
+    // Scope benchmarks to the project's tests/ tree. The default glob
+    // (**/*.{bench,benchmark}.?(c|m)[jt]s?(x)) otherwise picks up files
+    // inside .emsdk-cache/ on CI (e.g. emscripten's embind.benchmark.js),
+    // which fail to load outside their own runtime.
+    benchmark: {
+      include: ["tests/**/*.bench.?(c|m)[jt]s?(x)"],
+    },
   },
 });
