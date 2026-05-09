@@ -1,0 +1,47 @@
+name: CodSpeed
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  # Allow manual runs to seed a baseline.
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# OIDC authentication with CodSpeed (recommended since Nov 2025).
+# Short-lived tokens are issued per-run; no long-lived secrets to manage.
+# Public-repo fork PRs automatically fall back to tokenless validation.
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  benchmarks:
+    name: Run benchmarks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          submodules: recursive
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build WASM
+        shell: bash
+        run: pnpm -s build:wasm
+
+      - name: Run benchmarks
+        uses: CodSpeedHQ/action@3194d9a39c4d46684cb44bf7207fc56626aad8fd # v4
+        with:
+          run: pnpm bench
+          # `simulation` matches @codspeed/vitest-plugin (Cachegrind-based,
+          # CI-noise-stable). v4 renamed this from `instrumentation`.
+          # Avoid `walltime` on standard ubuntu-latest — it's inconsistent
+          # without CodSpeed Hosted Macro Runners.
+          mode: simulation
