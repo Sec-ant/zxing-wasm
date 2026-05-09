@@ -1,14 +1,10 @@
 <!-- markdownlint-disable MD041 MD033 -->
 
-> [!NOTE]
->
-> For the v1 release, please visit the [`channel/v1`](https://www.github.com/Sec-ant/zxing-wasm/tree/channel/v1) branch.
->
-> For the v2 release, please visit the [`channel/v2`](https://www.github.com/Sec-ant/zxing-wasm/tree/channel/v2) branch.
-
 # zxing-wasm
 
 [![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![deploy status](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml/badge.svg)](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml)
+
+[![v1 branch](https://img.shields.io/badge/legacy-channel%2Fv1-9e9e9e?logo=github)](https://github.com/Sec-ant/zxing-wasm/tree/channel/v1) [![v2 branch](https://img.shields.io/badge/legacy-channel%2Fv2-9e9e9e?logo=github)](https://github.com/Sec-ant/zxing-wasm/tree/channel/v2)
 
 [ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES/CJS module with types. Read or write barcodes in various JS runtimes: Web, Node.js, Bun, and Deno.
 
@@ -22,37 +18,37 @@ Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belong
 
 <div align="center">
 
-|    Format[^sym]    |         HRI Label          | Read | Write | GS1 |  Category  |
-| :----------------: | :------------------------: | :--: | :---: | :-: | :--------: |
-|     `Codabar`      |         `Codabar`          |  ✅  |  ✅   |     |            |
-|    **`Code39`**    |         `Code 39`          |  ✅  |  ✅   |     | Industrial |
-|    `Code39Std`     |     `Code 39 Standard`     |  ✅  |  ✅   |     | Industrial |
-|    `Code39Ext`     |     `Code 39 Extended`     |  ✅  |  ✅   |     | Industrial |
-|      `Code32`      |         `Code 32`          |  ✅  |  ✅   |     | Industrial |
-|       `PZN`        |   `Pharmazentralnummer`    |  ✅  |  ✅   |     | Industrial |
-|      `Code93`      |         `Code 93`          |  ✅  |  ✅   |     | Industrial |
-|     `Code128`      |         `Code 128`         |  ✅  |  ✅   | ✅  | Industrial |
-|     **`ITF`**      |           `ITF`            |  ✅  |  ✅   |     | Industrial |
-|      `ITF14`       |          `ITF-14`          |  ✅  |  ✅   |     | Industrial |
-|   **`DataBar`**    |         `DataBar`          |  ✅  |  ✅   | ✅  |   Retail   |
-|   `DataBarOmni`    |       `DataBar Omni`       |  ✅  |  ✅   | ✅  |   Retail   |
-|    `DataBarStk`    |     `DataBar Stacked`      |  ✅  |  ✅   | ✅  |   Retail   |
-|  `DataBarStkOmni`  |   `DataBar Stacked Omni`   |  ✅  |  ✅   | ✅  |   Retail   |
-|    `DataBarLtd`    |     `DataBar Limited`      |  ✅  |  ✅   | ✅  |   Retail   |
-|    `DataBarExp`    |     `DataBar Expanded`     |  ✅  |  ✅   | ✅  |   Retail   |
-|  `DataBarExpStk`   | `DataBar Expanded Stacked` |  ✅  |  ✅   | ✅  |   Retail   |
-|    **`EANUPC`**    |         `EAN/UPC`          |  ✅  |  ✅   |     |   Retail   |
-|      `EAN13`       |          `EAN-13`          |  ✅  |  ✅   |     |   Retail   |
-|       `EAN8`       |          `EAN-8`           |  ✅  |  ✅   |     |   Retail   |
-|       `EAN5`       |          `EAN-5`           |      |  ✅   |     |   Retail   |
-|       `EAN2`       |          `EAN-2`           |      |  ✅   |     |   Retail   |
-|       `ISBN`       |           `ISBN`           |  ✅  |  ✅   |     |   Retail   |
-|       `UPCA`       |          `UPC-A`           |  ✅  |  ✅   |     |   Retail   |
-|       `UPCE`       |          `UPC-E`           |  ✅  |  ✅   |     |   Retail   |
-| **`OtherBarcode`** |      `Other barcode`       |  ✅  |       |     |            |
-|    `DXFilmEdge`    |       `DX Film Edge`       |  ✅  |  ✅   |     |            |
+|     Format[^sym]     |         HRI Label          | Read | Write | GS1 |  Category  |
+| :------------------: | :------------------------: | :--: | :---: | :-: | :--------: |
+|      `Codabar`       |         `Codabar`          |  ✅  |  ✅   |     |            |
+|    **_`Code39`_**    |         `Code 39`          |  ✅  |  ✅   |     | Industrial |
+|     `Code39Std`      |     `Code 39 Standard`     |  ✅  |  ✅   |     | Industrial |
+|     `Code39Ext`      |     `Code 39 Extended`     |  ✅  |  ✅   |     | Industrial |
+|       `Code32`       |         `Code 32`          |  ✅  |  ✅   |     | Industrial |
+|        `PZN`         |   `Pharmazentralnummer`    |  ✅  |  ✅   |     | Industrial |
+|       `Code93`       |         `Code 93`          |  ✅  |  ✅   |     | Industrial |
+|      `Code128`       |         `Code 128`         |  ✅  |  ✅   | ✅  | Industrial |
+|     **_`ITF`_**      |           `ITF`            |  ✅  |  ✅   |     | Industrial |
+|       `ITF14`        |          `ITF-14`          |  ✅  |  ✅   |     | Industrial |
+|   **_`DataBar`_**    |         `DataBar`          |  ✅  |  ✅   | ✅  |   Retail   |
+|    `DataBarOmni`     |       `DataBar Omni`       |  ✅  |  ✅   | ✅  |   Retail   |
+|     `DataBarStk`     |     `DataBar Stacked`      |  ✅  |  ✅   | ✅  |   Retail   |
+|   `DataBarStkOmni`   |   `DataBar Stacked Omni`   |  ✅  |  ✅   | ✅  |   Retail   |
+|     `DataBarLtd`     |     `DataBar Limited`      |  ✅  |  ✅   | ✅  |   Retail   |
+|     `DataBarExp`     |     `DataBar Expanded`     |  ✅  |  ✅   | ✅  |   Retail   |
+|   `DataBarExpStk`    | `DataBar Expanded Stacked` |  ✅  |  ✅   | ✅  |   Retail   |
+|    **_`EANUPC`_**    |         `EAN/UPC`          |  ✅  |  ✅   |     |   Retail   |
+|       `EAN13`        |          `EAN-13`          |  ✅  |  ✅   |     |   Retail   |
+|        `EAN8`        |          `EAN-8`           |  ✅  |  ✅   |     |   Retail   |
+|        `EAN5`        |          `EAN-5`           |      |  ✅   |     |   Retail   |
+|        `EAN2`        |          `EAN-2`           |      |  ✅   |     |   Retail   |
+|        `ISBN`        |           `ISBN`           |  ✅  |  ✅   |     |   Retail   |
+|        `UPCA`        |          `UPC-A`           |  ✅  |  ✅   |     |   Retail   |
+|        `UPCE`        |          `UPC-E`           |  ✅  |  ✅   |     |   Retail   |
+| **_`OtherBarcode`_** |      `Other barcode`       |  ✅  |       |     |            |
+|     `DXFilmEdge`     |       `DX Film Edge`       |  ✅  |  ✅   |     |            |
 
-[^sym]: **Bold** rows are symbology roots — they group the variants listed under them, and themselves can be used as a format that matches any of those variants.
+[^sym]: Rows in **_bold italic_** are symbology roots — they group the variants listed under them, and themselves can be used as a format that matches any of those variants.
 
 </div>
 
@@ -60,21 +56,21 @@ Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belong
 
 <div align="center">
 
-|   Format[^sym]   |     HRI Label     |   Read    | Write | GS1 |
-| :--------------: | :---------------: | :-------: | :---: | :-: |
-|   **`PDF417`**   |     `PDF417`      |    ✅     |  ✅   |     |
-| `CompactPDF417`  | `Compact PDF417`  |    ✅     |  ✅   |     |
-|  `MicroPDF417`   |   `MicroPDF417`   |           |  ✅   |     |
-|   **`Aztec`**    |      `Aztec`      |    ✅     |  ✅   | ✅  |
-|   `AztecCode`    |   `Aztec Code`    |    ✅     |  ✅   | ✅  |
-|   `AztecRune`    |   `Aztec Rune`    |    ✅     |  ✅   |     |
-|   **`QRCode`**   |     `QR Code`     |    ✅     |  ✅   | ✅  |
-|  `QRCodeModel1`  | `QR Code Model 1` |    ✅     |       |     |
-|  `QRCodeModel2`  | `QR Code Model 2` |    ✅     |  ✅   |     |
-|  `MicroQRCode`   |  `Micro QR Code`  |    ✅     |  ✅   |     |
-|    `RMQRCode`    |    `rMQR Code`    |    ✅     |  ✅   | ✅  |
-| **`DataMatrix`** |   `Data Matrix`   |    ✅     |  ✅   | ✅  |
-|  **`MaxiCode`**  |    `MaxiCode`     | ✅[^maxi] |  ✅   |     |
+|    Format[^sym]    |     HRI Label     |   Read    | Write | GS1 |
+| :----------------: | :---------------: | :-------: | :---: | :-: |
+|   **_`PDF417`_**   |     `PDF417`      |    ✅     |  ✅   |     |
+|  `CompactPDF417`   | `Compact PDF417`  |    ✅     |  ✅   |     |
+|   `MicroPDF417`    |   `MicroPDF417`   |           |  ✅   |     |
+|   **_`Aztec`_**    |      `Aztec`      |    ✅     |  ✅   | ✅  |
+|    `AztecCode`     |   `Aztec Code`    |    ✅     |  ✅   | ✅  |
+|    `AztecRune`     |   `Aztec Rune`    |    ✅     |  ✅   |     |
+|   **_`QRCode`_**   |     `QR Code`     |    ✅     |  ✅   | ✅  |
+|   `QRCodeModel1`   | `QR Code Model 1` |    ✅     |       |     |
+|   `QRCodeModel2`   | `QR Code Model 2` |    ✅     |  ✅   |     |
+|   `MicroQRCode`    |  `Micro QR Code`  |    ✅     |  ✅   |     |
+|     `RMQRCode`     |    `rMQR Code`    |    ✅     |  ✅   | ✅  |
+| **_`DataMatrix`_** |   `Data Matrix`   |    ✅     |  ✅   | ✅  |
+|  **_`MaxiCode`_**  |    `MaxiCode`     | ✅[^maxi] |  ✅   |     |
 
 [^maxi]: Reading `MaxiCode` requires a pure monochrome image that contains an unrotated and unskewed symbol, along with a sufficient white border surrounding it.
 
