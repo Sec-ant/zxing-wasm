@@ -2,13 +2,17 @@
  * Bench A — Input format comparison.
  *
  * Compares readBarcodes performance across input types:
- *   ImageData  → rgbaToGrayscale + readBarcodesFromPixmap
- *   PNG/JPEG/BMP/GIF as Uint8Array → readBarcodesFromImage (stb_image decoding)
- *   PNG as Blob → arrayBuffer() + readBarcodesFromImage
+ *   ImageData       → rgbaToGrayscale + readBarcodesFromPixmap
+ *   PNG/JPEG as Uint8Array → readBarcodesFromImage (stb_image decoding)
+ *   PNG as Blob     → arrayBuffer() + readBarcodesFromImage
  *
- * 2 resolutions x 6 input types = 12 benchmark cases.
- * Uses optimized reader options to minimise scanning time and isolate
- * input-path overhead.
+ * 2 resolutions × 4 input types = 8 benchmark cases.
+ *
+ * Format coverage is limited to the formats users actually capture in the
+ * wild (PNG + JPEG). BMP/GIF were dropped because GIF encoding under
+ * jimp dominates startup time (~5s/1080p locally, multi-x worse under
+ * CodSpeed's valgrind simulation) and BMP/GIF are vanishingly rare for
+ * QR-scanning workloads.
  *
  * Fixtures are generated in-memory at startup from
  * `tests/samples/qrcode/wikipedia.png` via jimp — no on-disk fixtures
@@ -52,8 +56,6 @@ const optimizedOpts: ReaderOptions = {
 const imageDataInputs: Record<string, ImageData> = {};
 const pngU8: Record<string, Uint8Array> = {};
 const jpegU8: Record<string, Uint8Array> = {};
-const bmpU8: Record<string, Uint8Array> = {};
-const gifU8: Record<string, Uint8Array> = {};
 const pngBlobs: Record<string, Blob> = {};
 
 beforeAll(async () => {
@@ -80,8 +82,6 @@ beforeAll(async () => {
     jpegU8[res] = new Uint8Array(
       await composite.getBuffer("image/jpeg", { quality: 85 }),
     );
-    bmpU8[res] = new Uint8Array(await composite.getBuffer("image/bmp"));
-    gifU8[res] = new Uint8Array(await composite.getBuffer("image/gif"));
     pngBlobs[res] = new Blob([pngU8[res] as BlobPart], { type: "image/png" });
 
     // ImageData via @napi-rs/canvas (matches browser ImageData semantics)
@@ -96,7 +96,7 @@ beforeAll(async () => {
     });
     imageDataInputs[res] = id as ImageData;
   }
-}, 60_000);
+});
 
 /* ------------------------------------------------------------------ */
 /*  Benchmarks                                                         */
@@ -124,22 +124,6 @@ for (const res of resolutions) {
       "JPEG / Uint8Array",
       async () => {
         await readBarcodes(jpegU8[res]!, optimizedOpts);
-      },
-      { warmupIterations: 10, iterations: 50 },
-    );
-
-    bench(
-      "BMP / Uint8Array",
-      async () => {
-        await readBarcodes(bmpU8[res]!, optimizedOpts);
-      },
-      { warmupIterations: 10, iterations: 50 },
-    );
-
-    bench(
-      "GIF / Uint8Array",
-      async () => {
-        await readBarcodes(gifU8[res]!, optimizedOpts);
       },
       { warmupIterations: 10, iterations: 50 },
     );
