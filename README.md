@@ -2,9 +2,7 @@
 
 # zxing-wasm
 
-[![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![deploy status](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml/badge.svg)](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml)
-
-[![v1 branch](https://img.shields.io/badge/legacy-channel%2Fv1-9e9e9e?logo=github)](https://github.com/Sec-ant/zxing-wasm/tree/channel/v1) [![v2 branch](https://img.shields.io/badge/legacy-channel%2Fv2-9e9e9e?logo=github)](https://github.com/Sec-ant/zxing-wasm/tree/channel/v2)
+[![npm](https://img.shields.io/npm/v/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/zxing-wasm)](https://www.npmjs.com/package/zxing-wasm/v/latest) [![jsDelivr hits](https://img.shields.io/jsdelivr/npm/hm/zxing-wasm?color=%23ff5627)](https://cdn.jsdelivr.net/npm/zxing-wasm@latest/) [![deploy status](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml/badge.svg)](https://github.com/Sec-ant/zxing-wasm/actions/workflows/deploy.yml) [![v1 branch](https://img.shields.io/badge/legacy-channel%2Fv1-9e9e9e?logo=github)](https://github.com/Sec-ant/zxing-wasm/tree/channel/v1) [![v2 branch](https://img.shields.io/badge/legacy-channel%2Fv2-9e9e9e?logo=github)](https://github.com/Sec-ant/zxing-wasm/tree/channel/v2)
 
 [ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) WebAssembly as an ES/CJS module with types. Read or write barcodes in various JS runtimes: Web, Node.js, Bun, and Deno.
 
