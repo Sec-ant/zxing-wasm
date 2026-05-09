@@ -14,41 +14,45 @@
 
 ## Supported Barcode Formats
 
-This library supports a comprehensive set of barcode formats organized into **symbology families**. Each symbology is a base format that may have one or more **variants** (sub-formats). The reader detects specific variants (e.g. `"EAN13"`, `"MicroQRCode"`, `"Code39Ext"`) and returns the detected format via `ReadResult.format`. The `ReadResult.symbology` field reports which symbology family the detected format belongs to (e.g. `"EANUPC"` if the format was `EAN13`, `EAN8`, `UPCA`, or `UPCE`).
+Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belongs to a **symbology** (e.g. `EAN13` &rarr; `EANUPC`, `MicroQRCode` &rarr; `QRCode`). A symbology is itself a usable format — passing it to the reader matches any variant in its group.
+
+`ReadResult.format` returns the detected format (a variant, or the symbology root if no finer variant was identified). `ReadResult.symbology` always returns the symbology root.
 
 ### Linear (1D) Barcodes
 
 <div align="center">
 
-|    Symbology     |      Format      |         HRI Label          | Read | Write | GS1 |  Category  |
-| :--------------: | :--------------: | :------------------------: | :--: | :---: | :-: | :--------: |
-|   **Codabar**    |    `Codabar`     |         `Codabar`          |  ✅  |  ✅   |     |            |
-|    **Code39**    |     `Code39`     |         `Code 39`          |  ✅  |  ✅   |     | Industrial |
-|                  |   `Code39Std`    |     `Code 39 Standard`     |  ✅  |  ✅   |     | Industrial |
-|                  |   `Code39Ext`    |     `Code 39 Extended`     |  ✅  |  ✅   |     | Industrial |
-|                  |     `Code32`     |         `Code 32`          |  ✅  |  ✅   |     | Industrial |
-|                  |      `PZN`       |   `Pharmazentralnummer`    |  ✅  |  ✅   |     | Industrial |
-|    **Code93**    |     `Code93`     |         `Code 93`          |  ✅  |  ✅   |     | Industrial |
-|   **Code128**    |    `Code128`     |         `Code 128`         |  ✅  |  ✅   | ✅  | Industrial |
-|     **ITF**      |      `ITF`       |           `ITF`            |  ✅  |  ✅   |     | Industrial |
-|                  |     `ITF14`      |          `ITF-14`          |  ✅  |  ✅   |     | Industrial |
-|   **DataBar**    |    `DataBar`     |         `DataBar`          |  ✅  |  ✅   | ✅  |   Retail   |
-|                  |  `DataBarOmni`   |       `DataBar Omni`       |  ✅  |  ✅   | ✅  |   Retail   |
-|                  |   `DataBarStk`   |     `DataBar Stacked`      |  ✅  |  ✅   | ✅  |   Retail   |
-|                  | `DataBarStkOmni` |   `DataBar Stacked Omni`   |  ✅  |  ✅   | ✅  |   Retail   |
-|                  |   `DataBarLtd`   |     `DataBar Limited`      |  ✅  |  ✅   | ✅  |   Retail   |
-|                  |   `DataBarExp`   |     `DataBar Expanded`     |  ✅  |  ✅   | ✅  |   Retail   |
-|                  | `DataBarExpStk`  | `DataBar Expanded Stacked` |  ✅  |  ✅   | ✅  |   Retail   |
-|    **EANUPC**    |     `EANUPC`     |         `EAN/UPC`          |  ✅  |  ✅   |     |   Retail   |
-|                  |     `EAN13`      |          `EAN-13`          |  ✅  |  ✅   |     |   Retail   |
-|                  |      `EAN8`      |          `EAN-8`           |  ✅  |  ✅   |     |   Retail   |
-|                  |      `EAN5`      |          `EAN-5`           |      |  ✅   |     |   Retail   |
-|                  |      `EAN2`      |          `EAN-2`           |      |  ✅   |     |   Retail   |
-|                  |      `ISBN`      |           `ISBN`           |  ✅  |  ✅   |     |   Retail   |
-|                  |      `UPCA`      |          `UPC-A`           |  ✅  |  ✅   |     |   Retail   |
-|                  |      `UPCE`      |          `UPC-E`           |  ✅  |  ✅   |     |   Retail   |
-| **OtherBarcode** |  `OtherBarcode`  |      `Other barcode`       |  ✅  |       |     |            |
-|                  |   `DXFilmEdge`   |       `DX Film Edge`       |  ✅  |  ✅   |     |            |
+|    Format[^sym]    |         HRI Label          | Read | Write | GS1 |  Category  |
+| :----------------: | :------------------------: | :--: | :---: | :-: | :--------: |
+|     `Codabar`      |         `Codabar`          |  ✅  |  ✅   |     |            |
+|    **`Code39`**    |         `Code 39`          |  ✅  |  ✅   |     | Industrial |
+|    `Code39Std`     |     `Code 39 Standard`     |  ✅  |  ✅   |     | Industrial |
+|    `Code39Ext`     |     `Code 39 Extended`     |  ✅  |  ✅   |     | Industrial |
+|      `Code32`      |         `Code 32`          |  ✅  |  ✅   |     | Industrial |
+|       `PZN`        |   `Pharmazentralnummer`    |  ✅  |  ✅   |     | Industrial |
+|      `Code93`      |         `Code 93`          |  ✅  |  ✅   |     | Industrial |
+|     `Code128`      |         `Code 128`         |  ✅  |  ✅   | ✅  | Industrial |
+|     **`ITF`**      |           `ITF`            |  ✅  |  ✅   |     | Industrial |
+|      `ITF14`       |          `ITF-14`          |  ✅  |  ✅   |     | Industrial |
+|   **`DataBar`**    |         `DataBar`          |  ✅  |  ✅   | ✅  |   Retail   |
+|   `DataBarOmni`    |       `DataBar Omni`       |  ✅  |  ✅   | ✅  |   Retail   |
+|    `DataBarStk`    |     `DataBar Stacked`      |  ✅  |  ✅   | ✅  |   Retail   |
+|  `DataBarStkOmni`  |   `DataBar Stacked Omni`   |  ✅  |  ✅   | ✅  |   Retail   |
+|    `DataBarLtd`    |     `DataBar Limited`      |  ✅  |  ✅   | ✅  |   Retail   |
+|    `DataBarExp`    |     `DataBar Expanded`     |  ✅  |  ✅   | ✅  |   Retail   |
+|  `DataBarExpStk`   | `DataBar Expanded Stacked` |  ✅  |  ✅   | ✅  |   Retail   |
+|    **`EANUPC`**    |         `EAN/UPC`          |  ✅  |  ✅   |     |   Retail   |
+|      `EAN13`       |          `EAN-13`          |  ✅  |  ✅   |     |   Retail   |
+|       `EAN8`       |          `EAN-8`           |  ✅  |  ✅   |     |   Retail   |
+|       `EAN5`       |          `EAN-5`           |      |  ✅   |     |   Retail   |
+|       `EAN2`       |          `EAN-2`           |      |  ✅   |     |   Retail   |
+|       `ISBN`       |           `ISBN`           |  ✅  |  ✅   |     |   Retail   |
+|       `UPCA`       |          `UPC-A`           |  ✅  |  ✅   |     |   Retail   |
+|       `UPCE`       |          `UPC-E`           |  ✅  |  ✅   |     |   Retail   |
+| **`OtherBarcode`** |      `Other barcode`       |  ✅  |       |     |            |
+|    `DXFilmEdge`    |       `DX Film Edge`       |  ✅  |  ✅   |     |            |
+
+[^sym]: **Bold** rows are symbology roots — they group the variants listed under them, and themselves can be used as a format that matches any of those variants.
 
 </div>
 
@@ -56,55 +60,50 @@ This library supports a comprehensive set of barcode formats organized into **sy
 
 <div align="center">
 
-|   Symbology    |     Format      |     HRI Label     |  Read  | Write | GS1 |
-| :------------: | :-------------: | :---------------: | :----: | :---: | :-: |
-|   **PDF417**   |    `PDF417`     |     `PDF417`      |   ✅   |  ✅   |     |
-|                | `CompactPDF417` | `Compact PDF417`  |   ✅   |  ✅   |     |
-|                |  `MicroPDF417`  |   `MicroPDF417`   |        |  ✅   |     |
-|   **Aztec**    |     `Aztec`     |      `Aztec`      |   ✅   |  ✅   | ✅  |
-|                |   `AztecCode`   |   `Aztec Code`    |   ✅   |  ✅   | ✅  |
-|                |   `AztecRune`   |   `Aztec Rune`    |   ✅   |  ✅   |     |
-|   **QRCode**   |    `QRCode`     |     `QR Code`     |   ✅   |  ✅   | ✅  |
-|                | `QRCodeModel1`  | `QR Code Model 1` |   ✅   |       |     |
-|                | `QRCodeModel2`  | `QR Code Model 2` |   ✅   |  ✅   |     |
-|                |  `MicroQRCode`  |  `Micro QR Code`  |   ✅   |  ✅   |     |
-|                |   `RMQRCode`    |    `rMQR Code`    |   ✅   |  ✅   | ✅  |
-| **DataMatrix** |  `DataMatrix`   |   `Data Matrix`   |   ✅   |  ✅   | ✅  |
-|  **MaxiCode**  |   `MaxiCode`    |    `MaxiCode`     | ✅[^1] |  ✅   |     |
+|   Format[^sym]   |     HRI Label     |   Read    | Write | GS1 |
+| :--------------: | :---------------: | :-------: | :---: | :-: |
+|   **`PDF417`**   |     `PDF417`      |    ✅     |  ✅   |     |
+| `CompactPDF417`  | `Compact PDF417`  |    ✅     |  ✅   |     |
+|  `MicroPDF417`   |   `MicroPDF417`   |           |  ✅   |     |
+|   **`Aztec`**    |      `Aztec`      |    ✅     |  ✅   | ✅  |
+|   `AztecCode`    |   `Aztec Code`    |    ✅     |  ✅   | ✅  |
+|   `AztecRune`    |   `Aztec Rune`    |    ✅     |  ✅   |     |
+|   **`QRCode`**   |     `QR Code`     |    ✅     |  ✅   | ✅  |
+|  `QRCodeModel1`  | `QR Code Model 1` |    ✅     |       |     |
+|  `QRCodeModel2`  | `QR Code Model 2` |    ✅     |  ✅   |     |
+|  `MicroQRCode`   |  `Micro QR Code`  |    ✅     |  ✅   |     |
+|    `RMQRCode`    |    `rMQR Code`    |    ✅     |  ✅   | ✅  |
+| **`DataMatrix`** |   `Data Matrix`   |    ✅     |  ✅   | ✅  |
+|  **`MaxiCode`**  |    `MaxiCode`     | ✅[^maxi] |  ✅   |     |
 
-[^1]: Reading support for `MaxiCode` requires a pure monochrome image that contains an unrotated and unskewed symbol, along with a sufficient white border surrounding it.
-
-</div>
-
-### Meta-Formats
-
-Meta-formats are logical groupings that can be passed to `ReaderOptions.formats` to match multiple formats at once:
-
-<div align="center">
-
-|   Meta-Format   |    HRI Label     |
-| :-------------: | :--------------: |
-|      `All`      |      `All`       |
-|  `AllReadable`  |  `All Readable`  |
-| `AllCreatable`  | `All Creatable`  |
-|   `AllLinear`   |   `All Linear`   |
-|   `AllMatrix`   |   `All Matrix`   |
-|    `AllGS1`     |    `All GS1`     |
-|   `AllRetail`   |   `All Retail`   |
-| `AllIndustrial` | `All Industrial` |
+[^maxi]: Reading `MaxiCode` requires a pure monochrome image that contains an unrotated and unskewed symbol, along with a sufficient white border surrounding it.
 
 </div>
 
-### Format Names and Labels
+### Format Names Accepted as Input
 
-When specifying formats in `ReaderOptions.formats` or `WriterOptions.format`, you can use:
+Anywhere a format name is accepted (`ReaderOptions.formats`, `WriterOptions.format`), you can pass:
 
-- **Canonical names** (e.g. `"QRCode"`, `"EAN13"`, `"Code128"`)
-- **Human-readable labels** (e.g. `"QR Code"`, `"EAN-13"`, `"Code 128"`)
-- **Meta-format names** (e.g. `"All"`, `"AllLinear"`)
-- **Deprecated aliases** for backward compatibility: `"DataBarExpanded"` &rarr; `"DataBarExp"`, `"DataBarLimited"` &rarr; `"DataBarLtd"`, `"Linear-Codes"` &rarr; `"AllLinear"`, `"Matrix-Codes"` &rarr; `"AllMatrix"`, `"Any"` &rarr; `"All"`, `"rMQRCode"` &rarr; `"RMQRCode"`
+- the **canonical name** from the tables above (e.g. `"QRCode"`, `"Code128"`, `"EAN13"`);
+- the **HRI label** (e.g. `"QR Code"`, `"Code 128"`, `"EAN-13"`) — the separators `-`, `_`, `/` and space are optional and matching is case-insensitive, so `"qr-code"`, `"qr_code"` and `"QRCode"` all resolve to the same format;
+- a **meta-format** name that selects a group of formats (these are never returned as a `ReadResult.format`):
 
-`ReadResult.format` returns the canonical name of the barcode format actually detected by the reader (e.g. `"EAN13"`, `"MicroQRCode"`, `"Code39Ext"`). Format names never use hyphens (e.g. `"EAN13"` not `"EAN-13"`) and can be either a format variant or a symbology name. The `ReadResult.symbology` field returns the symbology family name (e.g. `"EANUPC"` for detected EAN/UPC variants like `EAN13`, `EAN8`, `UPCA`, or `UPCE`; `"QRCode"` for detected QR Code variants like `QRCode`, `MicroQRCode`, or `RMQRCode`).
+  <div align="center">
+
+  |   Meta-Format   |    HRI Label     |
+  | :-------------: | :--------------: |
+  |      `All`      |      `All`       |
+  |  `AllReadable`  |  `All Readable`  |
+  | `AllCreatable`  | `All Creatable`  |
+  |   `AllLinear`   |   `All Linear`   |
+  |   `AllMatrix`   |   `All Matrix`   |
+  |    `AllGS1`     |    `All GS1`     |
+  |   `AllRetail`   |   `All Retail`   |
+  | `AllIndustrial` | `All Industrial` |
+
+  </div>
+
+- a **deprecated alias** kept for backward compatibility: `"DataBarExpanded"` &rarr; `"DataBarExp"`, `"DataBarLimited"` &rarr; `"DataBarLtd"`, `"Linear-Codes"` &rarr; `"AllLinear"`, `"Matrix-Codes"` &rarr; `"AllMatrix"`, `"Any"` &rarr; `"All"`, `"rMQRCode"` &rarr; `"RMQRCode"`.
 
 Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic reading functions. It works best on the latest Chromium browsers.
 
