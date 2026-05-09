@@ -2,6 +2,7 @@ import { execSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import codspeedPlugin from "@codspeed/vitest-plugin";
 import { defineConfig } from "vitest/config";
 import { version } from "./package.json";
 import { emscriptenPatch } from "./scripts/vite-plugin-emscripten-patch.js";
@@ -34,7 +35,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [emscriptenPatch()],
+  plugins: [emscriptenPatch(), codspeedPlugin()],
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(version),
     "import.meta.vitest": "undefined",
@@ -82,5 +83,12 @@ export default defineConfig({
   test: {
     testTimeout: 10000,
     includeSource: ["src/bindings/barcodeFormat.ts"],
+    // Scope benchmarks to the project's tests/ tree. The default glob
+    // (**/*.{bench,benchmark}.?(c|m)[jt]s?(x)) otherwise picks up files
+    // inside .emsdk-cache/ on CI (e.g. emscripten's embind.benchmark.js),
+    // which fail to load outside their own runtime.
+    benchmark: {
+      include: ["tests/**/*.bench.?(c|m)[jt]s?(x)"],
+    },
   },
 });
