@@ -49,6 +49,8 @@ jobs:
 
       - name: Upload to Bencher (main)
         if: env.BENCHER_API_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bencher run \
             --branch main \
@@ -58,7 +60,7 @@ jobs:
             --threshold-upper-boundary 0.99 \
             --thresholds-reset \
             --file bench/bmf.json \
-            --github-actions "${{ secrets.GITHUB_TOKEN }}" \
+            --github-actions "$GH_TOKEN" \
             true
 
   # Pull request: compare against main, post a PR comment.
@@ -92,15 +94,22 @@ jobs:
       # for them. The bench artifacts can still be uploaded for inspection.
       - name: Upload to Bencher (PR)
         if: env.BENCHER_API_TOKEN != ''
+        env:
+          # Indirect via env to prevent shell injection from attacker-controlled
+          # ref names (a fork branch could otherwise inject `$(...)` etc.).
+          HEAD_REF: ${{ github.head_ref }}
+          BASE_REF: ${{ github.base_ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bencher run \
-            --branch '${{ github.head_ref }}' \
-            --start-point '${{ github.base_ref }}' \
-            --start-point-hash '${{ github.event.pull_request.base.sha }}' \
+            --branch "$HEAD_REF" \
+            --start-point "$BASE_REF" \
+            --start-point-hash "$BASE_SHA" \
             --start-point-clone-thresholds \
             --start-point-reset \
             --file bench/bmf.json \
-            --github-actions "${{ secrets.GITHUB_TOKEN }}" \
+            --github-actions "$GH_TOKEN" \
             true
 
       - name: Upload BMF artifact

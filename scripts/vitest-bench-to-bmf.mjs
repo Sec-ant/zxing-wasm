@@ -35,7 +35,14 @@ for (const file of raw.files ?? []) {
       : group.fullName;
 
     for (const bench of group.benchmarks ?? []) {
-      const key = `${groupLabel} > ${bench.name}`;
+      const baseKey = `${groupLabel} > ${bench.name}`;
+      // Guard against duplicate keys: silent overwrite would lose metrics.
+      // Group + bench names are unique by construction in this repo, but
+      // append " (n)" if that ever stops being true.
+      let key = baseKey;
+      for (let n = 1; Object.hasOwn(bmf, key); n++) {
+        key = `${baseKey} (${n})`;
+      }
       // mean ± moe gives Bencher a confidence interval for its t-test
       // threshold. Falls back to min/max if moe is missing.
       const value = bench.mean;
