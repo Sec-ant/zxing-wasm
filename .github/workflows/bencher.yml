@@ -28,6 +28,9 @@ jobs:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     name: Update main baseline
     runs-on: ubuntu-latest
+    permissions:
+      # Outside a PR context bencher posts results as a GitHub Check.
+      checks: write
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
