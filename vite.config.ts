@@ -2,7 +2,6 @@ import { execSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import codspeedPlugin from "@codspeed/vitest-plugin";
 import { defineConfig } from "vitest/config";
 import { version } from "./package.json";
 import { emscriptenPatch } from "./scripts/vite-plugin-emscripten-patch.js";
@@ -35,7 +34,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [emscriptenPatch(), codspeedPlugin()],
+  plugins: [emscriptenPatch()],
   define: {
     NPM_PACKAGE_VERSION: JSON.stringify(version),
     "import.meta.vitest": "undefined",
