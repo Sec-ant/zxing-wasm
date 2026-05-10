@@ -1,0 +1,121 @@
+name: Benchmarks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  # Allow manual baseline seeding from the Actions tab.
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Bencher requires:
+#   - Repository secret `BENCHER_API_TOKEN` (from https://bencher.dev → user → API tokens)
+#   - Repository variable `BENCHER_PROJECT`  (the project slug, e.g. `zxing-wasm`)
+# Workflow runs from forked PRs skip the upload step (no secrets available).
+env:
+  BENCHER_PROJECT: ${{ vars.BENCHER_PROJECT }}
+  BENCHER_API_TOKEN: ${{ secrets.BENCHER_API_TOKEN }}
+  BENCHER_TESTBED: ubuntu-latest
+  BENCHER_ADAPTER: json
+
+jobs:
+  # Push-to-main: refresh the baseline on the main branch.
+  baseline:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    name: Update main baseline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          submodules: recursive
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build WASM
+        run: pnpm -s build:wasm
+
+      - name: Run benches → BMF
+        run: pnpm -s bench:bmf
+
+      - name: Install Bencher CLI
+        if: env.BENCHER_API_TOKEN != ''
+        uses: bencherdev/bencher@main
+
+      - name: Upload to Bencher (main)
+        if: env.BENCHER_API_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bencher run \
+            --branch main \
+            --threshold-measure latency \
+            --threshold-test t_test \
+            --threshold-max-sample-size 64 \
+            --threshold-upper-boundary 0.99 \
+            --thresholds-reset \
+            --file bench/bmf.json \
+            --github-actions "$GH_TOKEN" \
+            true
+
+  # Pull request: compare against main, post a PR comment.
+  pr:
+    if: github.event_name == 'pull_request'
+    name: Compare PR vs main
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      checks: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          submodules: recursive
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build WASM
+        run: pnpm -s build:wasm
+
+      - name: Run benches → BMF
+        run: pnpm -s bench:bmf
+
+      - name: Install Bencher CLI
+        if: env.BENCHER_API_TOKEN != ''
+        uses: bencherdev/bencher@main
+
+      # Fork PRs have no access to BENCHER_API_TOKEN, so this step is skipped
+      # for them. The bench artifacts can still be uploaded for inspection.
+      - name: Upload to Bencher (PR)
+        if: env.BENCHER_API_TOKEN != ''
+        env:
+          # Indirect via env to prevent shell injection from attacker-controlled
+          # ref names (a fork branch could otherwise inject `$(...)` etc.).
+          HEAD_REF: ${{ github.head_ref }}
+          BASE_REF: ${{ github.base_ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bencher run \
+            --branch "$HEAD_REF" \
+            --start-point "$BASE_REF" \
+            --start-point-hash "$BASE_SHA" \
+            --start-point-clone-thresholds \
+            --start-point-reset \
+            --file bench/bmf.json \
+            --github-actions "$GH_TOKEN" \
+            true
+
+      - name: Upload BMF artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bench-bmf
+          path: bench/bmf.json
+          if-no-files-found: warn

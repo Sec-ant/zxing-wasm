@@ -187,12 +187,12 @@
     "test:ui": "vitest --hideSkippedTests --ui",
     "bench": "vitest bench --run",
     "bench:save": "vitest bench --run --outputJson bench/bench.json",
-    "bench:compare": "vitest bench --run --compare bench/bench.json"
+    "bench:compare": "vitest bench --run --compare bench/bench.json",
+    "bench:bmf": "vitest bench --run --outputJson bench/bench.json && node ./scripts/vitest-bench-to-bmf.mjs bench/bench.json bench/bmf.json"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.14",
     "@changesets/cli": "^2.31.0",
-    "@codspeed/vitest-plugin": "^5.4.0",
     "@napi-rs/canvas": "^1.0.0",
     "@types/node": "^25.6.2",
     "@vitest/ui": "^4.1.5",
