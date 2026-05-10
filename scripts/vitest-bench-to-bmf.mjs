@@ -8,12 +8,19 @@
  * Naming: we use `<group label> > <benchmark name>` as the BMF key. The file
  * path prefix is stripped from the group's fullName since it adds noise without
  * helping disambiguate (group labels are already unique across files in this
- * repo). Units stay in milliseconds — Bencher is unit-agnostic and the
- * dashboard scaling works fine with ms.
+ * repo).
+ *
+ * Units: vitest reports `mean`/`moe` in **milliseconds** (tinybench convention).
+ * Bencher's built-in `latency` measure is labelled **nanoseconds** on the
+ * dashboard — to keep the rendered axis honest we multiply by 1e6 here. If you
+ * ever want raw ms instead, define a custom measure with a `milliseconds` unit
+ * in the Bencher project settings and rename the metric key below to match.
  *
  * Usage: node scripts/vitest-bench-to-bmf.mjs <input.json> <output.json>
  */
 import { readFile, writeFile } from "node:fs/promises";
+
+const MS_TO_NS = 1_000_000;
 
 const [, , inputPath, outputPath] = process.argv;
 if (!inputPath || !outputPath) {
@@ -45,8 +52,8 @@ for (const file of raw.files ?? []) {
       }
       // mean ± moe gives Bencher a confidence interval for its t-test
       // threshold. Falls back to min/max if moe is missing.
-      const value = bench.mean;
-      const moe = bench.moe ?? 0;
+      const value = bench.mean * MS_TO_NS;
+      const moe = (bench.moe ?? 0) * MS_TO_NS;
       bmf[key] = {
         latency: {
           value,
