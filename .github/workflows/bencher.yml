@@ -57,7 +57,7 @@ jobs:
         run: |
           bencher run \
             --branch main \
-            --threshold-measure latency \
+            --threshold-measure latency-ms \
             --threshold-test t_test \
             --threshold-max-sample-size 64 \
             --threshold-upper-boundary 0.99 \

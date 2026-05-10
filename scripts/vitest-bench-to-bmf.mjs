@@ -3,24 +3,23 @@
  * Convert a vitest --outputJson bench report into Bencher Metric Format (BMF).
  *
  * Vitest emits a tree of files → groups → benchmarks. Bencher expects a flat
- * map of `{ "<benchmark name>": { "latency": { value, lower_value, upper_value } } }`.
+ * map of `{ "<benchmark name>": { "latency-ms": { value, lower_value, upper_value } } }`.
  *
  * Naming: we use `<group label> > <benchmark name>` as the BMF key. The file
  * path prefix is stripped from the group's fullName since it adds noise without
  * helping disambiguate (group labels are already unique across files in this
  * repo).
  *
- * Units: vitest reports `mean`/`moe` in **milliseconds** (tinybench convention).
- * Bencher's built-in `latency` measure is labelled **nanoseconds** on the
- * dashboard — to keep the rendered axis honest we multiply by 1e6 here. If you
- * ever want raw ms instead, define a custom measure with a `milliseconds` unit
- * in the Bencher project settings and rename the metric key below to match.
+ * Units: vitest reports `mean`/`moe` in **milliseconds** (tinybench convention),
+ * so metrics are written to the custom Bencher `latency-ms` measure. This keeps
+ * GitHub PR comments readable (`milliseconds (ms)`) instead of using Bencher's
+ * built-in `latency` measure, which is labelled `nanoseconds (ns)`.
  *
  * Usage: node scripts/vitest-bench-to-bmf.mjs <input.json> <output.json>
  */
 import { readFile, writeFile } from "node:fs/promises";
 
-const MS_TO_NS = 1_000_000;
+const LATENCY_MEASURE = "latency-ms";
 
 const [, , inputPath, outputPath] = process.argv;
 if (!inputPath || !outputPath) {
@@ -52,10 +51,10 @@ for (const file of raw.files ?? []) {
       }
       // mean ± moe gives Bencher a confidence interval for its t-test
       // threshold. Falls back to min/max if moe is missing.
-      const value = bench.mean * MS_TO_NS;
-      const moe = (bench.moe ?? 0) * MS_TO_NS;
+      const value = bench.mean;
+      const moe = bench.moe ?? 0;
       bmf[key] = {
-        latency: {
+        [LATENCY_MEASURE]: {
           value,
           lower_value: Math.max(0, value - moe),
           upper_value: value + moe,
