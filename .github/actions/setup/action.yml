@@ -10,6 +10,10 @@ inputs:
     description: EMSDK Cache Directory
     required: true
     default: .emsdk-cache
+  ccache-key:
+    description: ccache cache key suffix (use distinct keys per workflow to avoid cross-job thrash)
+    required: false
+    default: shared
 
 runs:
   using: composite
@@ -22,3 +26,16 @@ runs:
       with:
         emsdk-version: ${{ inputs.emsdk-version }}
         emsdk-cache-dir: ${{ inputs.emsdk-cache-dir }}
+
+    - name: Setup ccache
+      uses: hendrikmuhs/ccache-action@d62db5f07c26379fc4b4e0916f098a92573c3b03 # v1.2.23
+      with:
+        key: ${{ runner.os }}-emsdk-${{ inputs.emsdk-version }}-${{ inputs.ccache-key }}
+        # 2 GiB is plenty for the three wasm targets across recent commits.
+        max-size: 2G
+
+    - name: Wire ccache into CMake
+      shell: bash
+      run: |
+        echo "CMAKE_C_COMPILER_LAUNCHER=ccache" >> "$GITHUB_ENV"
+        echo "CMAKE_CXX_COMPILER_LAUNCHER=ccache" >> "$GITHUB_ENV"

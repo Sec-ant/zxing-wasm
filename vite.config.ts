@@ -82,5 +82,21 @@ export default defineConfig({
   test: {
     testTimeout: 10000,
     includeSource: ["src/bindings/barcodeFormat.ts"],
+    // Scope benchmarks to the project's tests/ tree. The default glob
+    // (**/*.{bench,benchmark}.?(c|m)[jt]s?(x)) otherwise picks up files
+    // inside .emsdk-cache/ on CI (e.g. emscripten's embind.benchmark.js),
+    // which fail to load outside their own runtime.
+    benchmark: {
+      include: ["tests/**/*.bench.?(c|m)[jt]s?(x)"],
+      // tinybench defaults (time: 500ms, warmupTime: 100ms) leave wall-clock
+      // means too noisy on GitHub-hosted runners — micro-ops show ±20% swings
+      // run-to-run. Longer sampling windows tighten the mean's confidence
+      // interval, which the Bencher t-test relies on. Trade-off: roughly 4×
+      // longer bench job on CI (still well under the size workflow's runtime).
+      time: 2000,
+      warmupTime: 500,
+      iterations: 32,
+      warmupIterations: 16,
+    },
   },
 });

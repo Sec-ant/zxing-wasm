@@ -1,0 +1,40 @@
+name: Size
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  size:
+    name: Compressed size diff
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          submodules: recursive
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Compressed size diff
+        uses: preactjs/compressed-size-action@66325aad6443cb7cf89c4bfcd414aea2367cda94 # v2.9.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # Build wasm + all JS bundles for both base and PR refs.
+          build-script: "build:all"
+          # Track wasm artifacts and the published JS bundles (ES + CJS + IIFE).
+          # `share.js` is the chunked common code; index.js per entry is small
+          # but worth tracking so JS regressions are caught too.
+          pattern: "dist/{full,reader,writer}/*.wasm,dist/{es,cjs,iife,miniprogram}/**/*.js"
+          exclude: "**/*.map,**/*.d.ts,**/*.d.cts"
+          # Brotli matches what most CDNs serve wasm with and gives the most
+          # meaningful size signal for wasm. Switch to "gzip" if preferred.
+          compression: "brotli"
+          # Don't post a comment for sub-byte changes (TS-only PRs).
+          minimum-change-threshold: 100
