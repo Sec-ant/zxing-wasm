@@ -196,7 +196,7 @@
     "@napi-rs/canvas": "^1.0.0",
     "@types/node": "^25.6.2",
     "@vitest/ui": "^4.1.5",
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.0",
     "copy-files-from-to": "^4.0.1",
     "jimp": "^1.6.1",
     "lint-staged": "^17.0.3",
