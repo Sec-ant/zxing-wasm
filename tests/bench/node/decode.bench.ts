@@ -18,7 +18,11 @@
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { createCanvas, ImageData, loadImage } from "@napi-rs/canvas";
+import {
+  ImageData as CanvasImageData,
+  createCanvas,
+  loadImage,
+} from "@napi-rs/canvas";
 import { beforeAll, bench, describe } from "vitest";
 import type {
   ReaderOptions,
@@ -58,12 +62,18 @@ const samples: FormatSample[] = [
 
 const noBarcodeKey = "__none__";
 
+function addColorSpace(imageData: CanvasImageData): ImageData {
+  Object.defineProperty(imageData, "colorSpace", {
+    value: "srgb",
+    writable: false,
+  });
+  return imageData as unknown as ImageData;
+}
+
 /** Build a blank 1920x1080 white ImageData in-memory (failure-path input). */
 function blankImageData(width: number, height: number): ImageData {
   const data = new Uint8ClampedArray(width * height * 4).fill(0xff);
-  const id = new ImageData(data, width, height);
-  Object.defineProperty(id, "colorSpace", { value: "srgb", writable: false });
-  return id;
+  return addColorSpace(new CanvasImageData(data, width, height));
 }
 
 /** Pre-decoded ImageData per format, plus the no-barcode frame. */
@@ -76,8 +86,7 @@ async function loadAsImageData(path: string): Promise<ImageData> {
   const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
   const id = ctx.getImageData(0, 0, img.width, img.height);
-  Object.defineProperty(id, "colorSpace", { value: "srgb", writable: false });
-  return id as ImageData;
+  return addColorSpace(id);
 }
 
 beforeAll(async () => {
