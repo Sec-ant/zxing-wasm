@@ -8,7 +8,7 @@
 
 ## Supported Barcode Formats
 
-Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belongs to a **symbology** (e.g. `EAN13` &rarr; `EANUPC`, `MicroQRCode` &rarr; `QRCode`). A symbology is itself a usable format — passing it to the reader matches any variant in its group.
+Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belongs to a **symbology** (e.g. `EAN13` &rarr; `EANUPC`, `MicroQRCode` &rarr; `QRCode`). A symbology is itself a usable format — passing it to the reader matches that symbology, including any variants in its group.
 
 `ReadResult.format` returns the detected format (a variant, or the symbology root if no finer variant was identified). `ReadResult.symbology` always returns the symbology root.
 
@@ -18,14 +18,14 @@ Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belong
 
 |     Format[^sym]     |         HRI Label          | Read | Write | GS1 |  Category  |
 | :------------------: | :------------------------: | :--: | :---: | :-: | :--------: |
-|      `Codabar`       |         `Codabar`          |  ✅  |  ✅   |     |            |
+|   **_`Codabar`_**    |         `Codabar`          |  ✅  |  ✅   |     |            |
 |    **_`Code39`_**    |         `Code 39`          |  ✅  |  ✅   |     | Industrial |
 |     `Code39Std`      |     `Code 39 Standard`     |  ✅  |  ✅   |     | Industrial |
 |     `Code39Ext`      |     `Code 39 Extended`     |  ✅  |  ✅   |     | Industrial |
 |       `Code32`       |         `Code 32`          |  ✅  |  ✅   |     | Industrial |
 |        `PZN`         |   `Pharmazentralnummer`    |  ✅  |  ✅   |     | Industrial |
-|       `Code93`       |         `Code 93`          |  ✅  |  ✅   |     | Industrial |
-|      `Code128`       |         `Code 128`         |  ✅  |  ✅   | ✅  | Industrial |
+|    **_`Code93`_**    |         `Code 93`          |  ✅  |  ✅   |     | Industrial |
+|   **_`Code128`_**    |         `Code 128`         |  ✅  |  ✅   | ✅  | Industrial |
 |     **_`ITF`_**      |           `ITF`            |  ✅  |  ✅   |     | Industrial |
 |       `ITF14`        |          `ITF-14`          |  ✅  |  ✅   |     | Industrial |
 |   **_`DataBar`_**    |         `DataBar`          |  ✅  |  ✅   | ✅  |   Retail   |
@@ -101,8 +101,6 @@ Anywhere a format name is accepted (`ReaderOptions.formats`, `WriterOptions.form
   </div>
 
 - a **deprecated alias** kept for backward compatibility: `"DataBarExpanded"` &rarr; `"DataBarExp"`, `"DataBarLimited"` &rarr; `"DataBarLtd"`, `"Linear-Codes"` &rarr; `"AllLinear"`, `"Matrix-Codes"` &rarr; `"AllMatrix"`, `"Any"` &rarr; `"All"`, `"rMQRCode"` &rarr; `"RMQRCode"`.
-
-Visit [this online demo](https://zxing-wasm-demo.deno.dev/) to quickly explore its basic reading functions. It works best on the latest Chromium browsers.
 
 ## Build
 
