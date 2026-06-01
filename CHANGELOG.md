@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 3.1.0
+
+### Minor Changes
+
+- 689dc7d: Bump zxing-cpp to `f5adf687`, enabling MicroPDF417 reading and Telepen support, and refresh format metadata, docs, and tests.
+
 ## 3.0.3
 
 ### Patch Changes
