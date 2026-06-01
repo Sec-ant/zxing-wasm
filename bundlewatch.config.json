@@ -1,0 +1,28 @@
+{
+  "defaultCompression": "none",
+  "files": [
+    {
+      "path": "dist/full/*.wasm",
+      "maxSize": "2MB",
+      "compression": "none"
+    },
+    {
+      "path": "dist/reader/*.wasm",
+      "maxSize": "1.5MB",
+      "compression": "none"
+    },
+    {
+      "path": "dist/writer/*.wasm",
+      "maxSize": "1MB",
+      "compression": "none"
+    },
+    {
+      "path": "dist/**/*.js",
+      "maxSize": "100kB",
+      "compression": "none"
+    }
+  ],
+  "ci": {
+    "trackBranches": ["main"]
+  }
+}

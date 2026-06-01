@@ -188,7 +188,8 @@
     "bench": "vitest bench --run",
     "bench:save": "vitest bench --run --outputJson bench/bench.json",
     "bench:compare": "vitest bench --run --compare bench/bench.json",
-    "bench:bmf": "vitest bench --run --outputJson bench/bench.json && node ./scripts/vitest-bench-to-bmf.mjs bench/bench.json bench/bmf.json"
+    "bench:bmf": "vitest bench --run --outputJson bench/bench.json && node ./scripts/vitest-bench-to-bmf.mjs bench/bench.json bench/bmf.json",
+    "bundlewatch": "bundlewatch --config bundlewatch.config.json"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
@@ -196,6 +197,7 @@
     "@napi-rs/canvas": "^1.0.0",
     "@types/node": "^25.9.1",
     "@vitest/ui": "^4.1.8",
+    "bundlewatch": "^0.4.2",
     "concurrently": "^10.0.1",
     "copy-files-from-to": "^4.0.1",
     "jimp": "^1.6.1",
