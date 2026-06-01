@@ -28,11 +28,11 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           # Build wasm + all JS bundles for both base and PR refs.
           build-script: "build:all"
-          # Track wasm artifacts and the published JS bundles (ES + CJS + IIFE).
+          # Track wasm artifacts and the published JS bundles.
           # `share.js` is the chunked common code; index.js per entry is small
           # but worth tracking so JS regressions are caught too.
-          pattern: "dist/{full,reader,writer}/*.wasm,dist/{es,cjs,iife,miniprogram}/**/*.js"
-          exclude: "**/*.map,**/*.d.ts,**/*.d.cts"
+          pattern: "dist/**/*.{wasm,js}"
+          exclude: "**/*.{map,d.ts,d.cts}"
           # Brotli matches what most CDNs serve wasm with and gives the most
           # meaningful size signal for wasm. Switch to "gzip" if preferred.
           compression: "brotli"
