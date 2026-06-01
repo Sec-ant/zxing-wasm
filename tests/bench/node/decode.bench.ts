@@ -44,7 +44,15 @@ const samples: FormatSample[] = [
   { format: "DataMatrix", path: "zxing-cpp/test/samples/datamatrix-2/01.png" },
   { format: "Aztec", path: "zxing-cpp/test/samples/aztec-1/abc-19x19C.png" },
   { format: "PDF417", path: "zxing-cpp/test/samples/pdf417-1/01.png" },
+  {
+    format: "MicroPDF417",
+    path: "zxing-cpp/test/samples/micropdf417-1/MPDF-0.png",
+  },
   { format: "Code128", path: "zxing-cpp/test/samples/code128-1/1.png" },
+  {
+    format: "Telepen",
+    path: "zxing-cpp/test/samples/telepen-1/telepen-alpha-2.png",
+  },
   { format: "EAN-13", path: "zxing-cpp/test/samples/ean13-1/1.png" },
 ];
 

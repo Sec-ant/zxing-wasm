@@ -43,6 +43,9 @@ Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belong
 |        `ISBN`        |           `ISBN`           |  ✅  |  ✅   |     |   Retail   |
 |        `UPCA`        |          `UPC-A`           |  ✅  |  ✅   |     |   Retail   |
 |        `UPCE`        |          `UPC-E`           |  ✅  |  ✅   |     |   Retail   |
+|   **_`Telepen`_**    |         `Telepen`          |  ✅  |  ✅   |     | Industrial |
+|    `TelepenAlpha`    |      `Telepen Alpha`       |  ✅  |  ✅   |     | Industrial |
+|   `TelepenNumeric`   |     `Telepen Numeric`      |  ✅  |  ✅   |     | Industrial |
 | **_`OtherBarcode`_** |      `Other barcode`       |  ✅  |       |     |            |
 |     `DXFilmEdge`     |       `DX Film Edge`       |  ✅  |  ✅   |     |            |
 
@@ -58,7 +61,7 @@ Each barcode format has a **canonical name** (e.g. `QRCode`, `EAN13`) and belong
 | :----------------: | :---------------: | :-------: | :---: | :-: |
 |   **_`PDF417`_**   |     `PDF417`      |    ✅     |  ✅   |     |
 |  `CompactPDF417`   | `Compact PDF417`  |    ✅     |  ✅   |     |
-|   `MicroPDF417`    |   `MicroPDF417`   |           |  ✅   |     |
+|   `MicroPDF417`    |   `MicroPDF417`   |    ✅     |  ✅   |     |
 |   **_`Aztec`_**    |      `Aztec`      |    ✅     |  ✅   | ✅  |
 |    `AztecCode`     |   `Aztec Code`    |    ✅     |  ✅   | ✅  |
 |    `AztecRune`     |   `Aztec Rune`    |    ✅     |  ✅   |     |
@@ -142,7 +145,7 @@ This package exports three subpaths: `full`, `reader`, and `writer`.
 
 ### `zxing-wasm` or `zxing-wasm/full`
 
-These two subpaths provide functions to read and write barcodes. The wasm binary size is ~1.37 MiB.
+These two subpaths provide functions to read and write barcodes. The wasm binary size is ~1.46 MiB.
 
 ```ts
 import { readBarcodes, writeBarcode } from "zxing-wasm";
@@ -156,7 +159,7 @@ import { readBarcodes, writeBarcode } from "zxing-wasm/full";
 
 ### `zxing-wasm/reader`
 
-This subpath only provides a function to read barcodes. The wasm binary size is ~966 KiB.
+This subpath only provides a function to read barcodes. The wasm binary size is ~1.04 MiB.
 
 ```ts
 import { readBarcodes } from "zxing-wasm/reader";

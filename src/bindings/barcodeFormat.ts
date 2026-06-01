@@ -37,11 +37,14 @@ const BCF = [
   ["ISBN",            "E", "i", "lr  R",  69, "ISBN"                    ],
   ["UPCA",            "E", "a", "lrw R",  34, "UPC-A"                   ],
   ["UPCE",            "E", "e", "lrw R",  37, "UPC-E"                   ],
+  ["Telepen",         "B", " ", "lr  I",  32, "Telepen"                 ],
+  ["TelepenAlpha",    "B", "0", "lr  I",  32, "Telepen Alpha"           ],
+  ["TelepenNumeric",  "B", "1", "lr  I",  87, "Telepen Numeric"         ],
   ["OtherBarcode",    "X", " ", " r   ",   0, "Other barcode"           ],
   ["DXFilmEdge",      "X", "x", "lr   ", 147, "DX Film Edge"            ],
   ["PDF417",          "L", " ", "mrw  ",  55, "PDF417"                  ],
   ["CompactPDF417",   "L", "c", "mr   ",  56, "Compact PDF417"          ],
-  ["MicroPDF417",     "L", "m", "m    ",  84, "MicroPDF417"             ],
+  ["MicroPDF417",     "L", "m", "mr   ",  84, "MicroPDF417"             ],
   ["Aztec",           "z", " ", "mr G ",  92, "Aztec"                   ],
   ["AztecCode",       "z", "c", "mrwG ",  92, "Aztec Code"              ],
   ["AztecRune",       "z", "r", "mr   ", 128, "Aztec Rune"              ],
@@ -87,14 +90,14 @@ type WithAliases<T extends string> =
 // ----
 
 /**
- * Array of all human-readable interface (HRI) labels for barcode formats.
- * These are display-friendly names like "Code 39", "EAN-13", "QR Code", etc.
+ * Array of all human-readable interface (HRI) labels for barcode formats and meta-formats.
+ * These are display-friendly names like "Code 39", "EAN-13", "QR Code", "All Readable", etc.
  */
 export const BARCODE_HRI_LABELS = BCF.map((e) => e[5]);
 
 /**
- * Human-readable interface (HRI) label for a barcode format.
- * For example: "Code 39", "EAN-13", "QR Code", "Pharmazentralnummer".
+ * Human-readable interface (HRI) label for a barcode format or meta-format.
+ * For example: "Code 39", "EAN-13", "QR Code", "All Readable", "Pharmazentralnummer".
  */
 export type BarcodeHriLabel = (typeof BARCODE_HRI_LABELS)[number];
 
@@ -105,7 +108,7 @@ const BARCODE_META_FORMAT_ENTRIES = BCF.filter((e) => e[1] === "*");
 /**
  * Array of meta-formats that represent groups of barcode formats.
  * Includes: "All", "AllReadable", "AllCreatable", "AllLinear", "AllMatrix", "AllGS1", "AllRetail", "AllIndustrial".
- * These are not actual barcode formats but logical groupings for reader/writer configuration.
+ * These are not actual barcode formats but logical groupings for reader configuration.
  */
 export const BARCODE_META_FORMATS = BARCODE_META_FORMAT_ENTRIES.map(
   (e) => e[0],
@@ -362,9 +365,9 @@ export function formatToSymbology(
 }
 
 /**
- * Returns the human-readable label of a given barcode format.
+ * Returns the human-readable label of a barcode format name, deprecated alias, or HRI label.
  * For example, "Code32" returns "Code 32", "PZN" returns "Pharmazentralnummer".
- * Returns `undefined` if the format is not found.
+ * Returns `undefined` if the input is not found.
  */
 export function formatToLabel(format: string): BarcodeHriLabel | undefined {
   const normalized = ALIASES[format as keyof typeof ALIASES] ?? format;
@@ -406,7 +409,7 @@ export type LooseBarcodeFormat =
   | ReadOutputBarcodeFormat;
 
 /**
- * Encodes a barcode format into its canonical string representation.
+ * Encodes a barcode format into the string representation accepted by the C++ parser.
  *
  * This normalizes deprecated aliases (e.g. `"Linear-Codes"` -> `"AllLinear"`).
  * Human-readable labels and canonical names are passed through.
@@ -454,10 +457,13 @@ if (import.meta.vitest) {
       ]);
       expect(formatToSymbology("UPCA")).toBe("EANUPC");
       expect(formatToSymbology("RMQRCode")).toBe("QRCode");
+      expect(formatToSymbology("MicroPDF417")).toBe("PDF417");
+      expect(formatToSymbology("TelepenNumeric")).toBe("Telepen");
     });
 
     it("includes industrial barcode formats", () => {
       expect(INDUSTRIAL_BARCODE_FORMATS).toContain("Code39");
+      expect(INDUSTRIAL_BARCODE_FORMATS).toContain("Telepen");
     });
   });
 }

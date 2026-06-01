@@ -105,6 +105,17 @@ export interface ZXingReadResult {
   /**
    * A stringified JSON object containing additional information about the barcode.
    *
+   * Known keys currently forwarded by zxing-cpp include:
+   * - `DataMask`: data mask pattern for QR-family symbols.
+   * - `ECLevel`: error correction level or percentage.
+   * - `EanAddOn`: EAN/UPC add-on content.
+   * - `Addressee` / `Checksum` / `FileId` / `FileName` / `FileSize` / `Sender` / `Timestamp`:
+   *   PDF417 macro metadata.
+   * - `ReaderInit`: reader-initialization / programming symbol marker.
+   * - `UEC`: unused error correction margin in the range `[0, 1]`.
+   * - `UPCE`: original non-normalized UPC-E value.
+   * - `Version`: symbol version or size.
+   *
    * @experimental The final form of this property is not yet settled and may change without a major version bump.
    */
   extra: string;
@@ -112,7 +123,7 @@ export interface ZXingReadResult {
   // ---- deprecated fields ----
 
   /**
-   * QRCode / DataMatrix / Aztec version or size.
+   * QR-family / DataMatrix / Aztec version or size.
    *
    * @deprecated Parse the result from {@link ReadResult.extra | `ReadResult.extra`} instead.
    */
