@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "TelepenAlpha",
+  "symbology": "Telepen",
+  "bytes": "273c574",
+  "bytesECI": "a1a46b6",
+  "text": "TELEPEN BARCODE",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 12,
+      "y": 27
+    },
+    "topRight": {
+      "x": 792,
+      "y": 27
+    },
+    "bottomRight": {
+      "x": 792,
+      "y": 28
+    },
+    "bottomLeft": {
+      "x": 12,
+      "y": 28
+    }
+  },
+  "orientation": 0,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]B0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 2,
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
+}

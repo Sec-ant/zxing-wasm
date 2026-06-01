@@ -81,11 +81,10 @@ export interface WriterOptions
    * - `eci`: (string/integer) Specifies ECI designator.
    * - `gs1`: (boolean) Enables GS1 encoding.
    * - `readerInit`: (boolean) Sets reader-initialization / programming mode.
-   * - `stacked`: (boolean) Generates a stacked version for DataBar / DataBarExpanded.
    * - `forceSquare`: (boolean) Only consider square symbol versions.
    *   Supported only for the `DataMatrix` format.
-   * - `columns`: (integer) Specifies number of columns (e.g., PDF417 / DataBarExpanded stacked).
-   * - `rows`: (integer) Specifies number of rows (e.g., PDF417 / DataBarExpanded stacked).
+   * - `columns`: (integer) Specifies number of columns (e.g., PDF417, MicroPDF417, DataBarExpStk).
+   * - `rows`: (integer) Specifies number of rows (e.g., PDF417, DataBarExpStk).
    * - `version`: (integer) Specifies the version / size of most 2D symbols.
    * - `dataMask`: (integer) Specifies the data mask pattern for QRCode / MicroQRCode.
    * - `ecLevel`: (string) Error correction level / percentage where supported (e.g. `L`, `M`, `Q`, `H`, `30%`).

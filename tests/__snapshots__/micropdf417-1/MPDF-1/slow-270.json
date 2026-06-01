@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MicroPDF417",
+  "symbology": "PDF417",
+  "bytes": "90bc9cf",
+  "bytesECI": "59a4a7b",
+  "text": "#Mirco PDF417-test#",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 195,
+      "y": 84
+    },
+    "topRight": {
+      "x": 158,
+      "y": 319
+    },
+    "bottomRight": {
+      "x": 48,
+      "y": 297
+    },
+    "bottomLeft": {
+      "x": 84,
+      "y": 67
+    }
+  },
+  "orientation": 99,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]L2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 0,
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "{\"ECLevel\":\"31%\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "31%"
+}

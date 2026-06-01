@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "TelepenAlpha",
+  "symbology": "Telepen",
+  "bytes": "6a5bb18",
+  "bytesECI": "4897413",
+  "text": "TELEPEN",
+  "contentType": "Text",
+  "hasECI": false,
+  "position": {
+    "topLeft": {
+      "x": 253,
+      "y": 7
+    },
+    "topRight": {
+      "x": 19,
+      "y": 7
+    },
+    "bottomRight": {
+      "x": 19,
+      "y": 8
+    },
+    "bottomLeft": {
+      "x": 253,
+      "y": 8
+    }
+  },
+  "orientation": 180,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]B0",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 2,
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": ""
+}

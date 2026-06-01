@@ -39,7 +39,7 @@
     "width": 96,
     "height": 8
   },
-  "extra": "{\"Version\":\"8x96\"}",
+  "extra": "{\"UEC\":1.0,\"Version\":\"8x96\"}",
   "version": "8x96",
   "readerInit": false,
   "ecLevel": ""

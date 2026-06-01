@@ -39,7 +39,7 @@
     "width": 23,
     "height": 23
   },
-  "extra": "{\"Version\":\"3\",\"ECLevel\":\"37%\"}",
+  "extra": "{\"UEC\":1.0,\"Version\":\"3\",\"ECLevel\":\"37%\"}",
   "version": "3",
   "readerInit": false,
   "ecLevel": "37%"

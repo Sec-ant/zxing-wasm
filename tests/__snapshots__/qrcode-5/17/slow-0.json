@@ -39,7 +39,7 @@
     "width": 177,
     "height": 177
   },
-  "extra": "{\"DataMask\":2,\"Version\":\"40\",\"ECLevel\":\"M\"}",
+  "extra": "{\"DataMask\":2,\"UEC\":1.0,\"Version\":\"40\",\"ECLevel\":\"M\"}",
   "version": "40",
   "readerInit": false,
   "ecLevel": "M"

@@ -1,0 +1,101 @@
+{
+  "total": 5,
+  "passAll": 0,
+  "passSome": 4,
+  "fast": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "MPDF-0-q.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 5,
+      "undetected": {
+        "total": 5,
+        "images": [
+          "MPDF-0-p.png",
+          "MPDF-0-q.png",
+          "MPDF-0.png",
+          "MPDF-1.jpg",
+          "MPDF-2.jpg"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "MPDF-0-q.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 5,
+      "undetected": {
+        "total": 5,
+        "images": [
+          "MPDF-0-p.png",
+          "MPDF-0-q.png",
+          "MPDF-0.png",
+          "MPDF-1.jpg",
+          "MPDF-2.jpg"
+        ]
+      }
+    }
+  },
+  "slow": {
+    "0": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "MPDF-0-q.png"
+        ]
+      }
+    },
+    "90": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "MPDF-0-q.png"
+        ]
+      }
+    },
+    "180": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "MPDF-0-q.png"
+        ]
+      }
+    },
+    "270": {
+      "failures": 1,
+      "undetected": {
+        "total": 1,
+        "images": [
+          "MPDF-0-q.png"
+        ]
+      }
+    }
+  },
+  "pure": {
+    "0": {
+      "failures": 2,
+      "undetected": {
+        "total": 2,
+        "images": [
+          "MPDF-0-q.png",
+          "MPDF-2.jpg"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "isValid": true,
+  "error": "",
+  "format": "MicroPDF417",
+  "symbology": "PDF417",
+  "bytes": "577a6f6",
+  "bytesECI": "aeb0f4a",
+  "text": "I have the best words.",
+  "contentType": "Text",
+  "hasECI": true,
+  "position": {
+    "topLeft": {
+      "x": 15,
+      "y": 36
+    },
+    "topRight": {
+      "x": 346,
+      "y": 42
+    },
+    "bottomRight": {
+      "x": 319,
+      "y": 112
+    },
+    "bottomLeft": {
+      "x": 14,
+      "y": 107
+    }
+  },
+  "orientation": 1,
+  "isMirrored": false,
+  "isInverted": false,
+  "symbologyIdentifier": "]L2",
+  "sequenceSize": -1,
+  "sequenceIndex": -1,
+  "sequenceId": "",
+  "lineCount": 0,
+  "symbol": {
+    "data": "e3b0c44",
+    "width": 0,
+    "height": 0
+  },
+  "extra": "{\"ECLevel\":\"48%\"}",
+  "version": "",
+  "readerInit": false,
+  "ecLevel": "48%"
+}

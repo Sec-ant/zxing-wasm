@@ -136,6 +136,10 @@ export const testEntries: TestEntry[] = [
     barcodeFormat: "ITF",
   },
   {
+    directory: "telepen-1",
+    barcodeFormat: "Telepen",
+  },
+  {
     directory: "upca-1",
     barcodeFormat: "UPCA",
     readerOptions: {
@@ -295,6 +299,11 @@ export const testEntries: TestEntry[] = [
     testPure: true,
   },
   // TODO: pdf417-4
+  {
+    directory: "micropdf417-1",
+    barcodeFormat: "MicroPDF417",
+    testPure: true,
+  },
   {
     directory: "falsepositives-1",
     barcodeFormat: "None",
