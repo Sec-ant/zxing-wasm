@@ -1,37 +1,62 @@
 name: Deploy
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
+permissions:
+  contents: read
 
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-docs:
+    name: Build Docs
+    runs-on: ubuntu-latest
 
     steps:
       - name: Clone repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Install Deno
-        uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
-        with:
-          deno-version: vx.x.x
-
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
-      - name: Build step
+      - name: Build docs
         run: "pnpm -s docs:build"
 
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@7bded90d0d09cd99bbfb513966146315db97618b # 1.13.1
+      - name: Stage GitHub Pages artifact
+        if: github.event_name == 'push'
+        run: |
+          rm -rf .pages
+          mkdir -p .pages
+          cp -R docs .pages/docs
+          touch .pages/.nojekyll
+
+      - name: Upload GitHub Pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          project: "zxing-wasm"
-          entrypoint: "https://deno.land/std/http/file_server.ts"
-          root: "docs"
+          path: .pages
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push'
+    needs: build-docs
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}docs/
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

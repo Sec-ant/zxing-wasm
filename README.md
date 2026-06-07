@@ -129,7 +129,7 @@ npm i zxing-wasm
 
 ## Documentation
 
-<https://zxing-wasm.deno.dev/>
+<https://sec-ant.github.io/zxing-wasm/docs/>
 
 ## Demo
 
@@ -189,11 +189,11 @@ Apart from ES and CJS modules, this package also ships IIFE scripts. The registe
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@<version>/dist/iife/writer/index.js"></script>
 ```
 
-### [`readBarcodes`](https://zxing-wasm.deno.dev/functions/full.readBarcodes.html)
+### [`readBarcodes`](https://sec-ant.github.io/zxing-wasm/docs/functions/full.readBarcodes.html)
 
-[`readBarcodes`](https://zxing-wasm.deno.dev/functions/full.readBarcodes.html) accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob), image [`File`](https://developer.mozilla.org/docs/Web/API/File), [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), or an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as its first argument, and various options are supported in [`ReaderOptions`](https://zxing-wasm.deno.dev/interfaces/full.ReaderOptions.html) as an optional second argument.
+[`readBarcodes`](https://sec-ant.github.io/zxing-wasm/docs/functions/full.readBarcodes.html) accepts an image [`Blob`](https://developer.mozilla.org/docs/Web/API/Blob), image [`File`](https://developer.mozilla.org/docs/Web/API/File), [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), or an [`ImageData`](https://developer.mozilla.org/docs/Web/API/ImageData) as its first argument, and various options are supported in [`ReaderOptions`](https://sec-ant.github.io/zxing-wasm/docs/interfaces/full.ReaderOptions.html) as an optional second argument.
 
-The return result of this function is a `Promise` of an array of [`ReadResult`](https://zxing-wasm.deno.dev/interfaces/full.ReadResult.html)s.
+The return result of this function is a `Promise` of an array of [`ReadResult`](https://sec-ant.github.io/zxing-wasm/docs/interfaces/full.ReadResult.html)s.
 
 e.g.
 
@@ -238,11 +238,11 @@ console.log(imageDataReadResults[0].format); // QRCode
 console.log(imageDataReadResults[0].symbology); // QRCode
 ```
 
-### [`writeBarcode`](https://zxing-wasm.deno.dev/functions/full.writeBarcode.html)
+### [`writeBarcode`](https://sec-ant.github.io/zxing-wasm/docs/functions/full.writeBarcode.html)
 
-The first argument of [`writeBarcode`](https://zxing-wasm.deno.dev/functions/full.writeBarcode.html) is a text string or an [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes to be encoded, and the optional second argument [`WriterOptions`](https://zxing-wasm.deno.dev/interfaces/full.WriterOptions.html) accepts several writer options.
+The first argument of [`writeBarcode`](https://sec-ant.github.io/zxing-wasm/docs/functions/full.writeBarcode.html) is a text string or an [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes to be encoded, and the optional second argument [`WriterOptions`](https://sec-ant.github.io/zxing-wasm/docs/interfaces/full.WriterOptions.html) accepts several writer options.
 
-The return result of this function is a `Promise` of a [`WriteResult`](https://zxing-wasm.deno.dev/interfaces/full.WriteResult.html).
+The return result of this function is a `Promise` of a [`WriteResult`](https://sec-ant.github.io/zxing-wasm/docs/interfaces/full.WriteResult.html).
 
 e.g.
 
@@ -272,7 +272,7 @@ console.log(writeOutput.symbol); // { data: Uint8ClampedArray, width: number, he
 
 When using this package, a `.wasm` binary file needs to be served somewhere, so the runtime can fetch, compile and instantiate the WASM module. To provide a smooth development experience, the serve path is automatically assigned a [jsDelivr CDN](https://fastly.jsdelivr.net/npm/zxing-wasm/) URL upon build.
 
-If you want to change the serve path to your own server or other CDNs, please use [`prepareZXingModule`](https://zxing-wasm.deno.dev/functions/full.prepareZXingModule.html) and pass an [`overrides`](http://localhost:4173/interfaces/full.PrepareZXingModuleOptions.html#overrides) object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
+If you want to change the serve path to your own server or other CDNs, please use [`prepareZXingModule`](https://sec-ant.github.io/zxing-wasm/docs/functions/full.prepareZXingModule.html) and pass an [`overrides`](https://sec-ant.github.io/zxing-wasm/docs/interfaces/full.PrepareZXingModuleOptions.html#overrides) object with a custom defined [`locateFile`](https://emscripten.org/docs/api_reference/module.html?highlight=locatefile#Module.locateFile) function before reading or writing barcodes. `locateFile` is one of the [Emscripten `Module` attribute hooks](https://emscripten.org/docs/api_reference/module.html#affecting-execution) that can affect the code execution of the `Module` object during its lifecycle.
 
 e.g.
 
@@ -488,7 +488,7 @@ prepareZXingModule({
 }); // <-- returns void
 ```
 
-However, if you want to explicitly trigger the download and instantiation of the `.wasm` binary, you can set the [`fireImmediately`](https://zxing-wasm.deno.dev/interfaces/full.PrepareZXingModuleOptions.html#fireimmediately) option to `true`. Doing so also causes `prepareZXingModule` to return a `Promise` that resolves to the underlying Emscripten module. This allows you to `await` the instantiation process:
+However, if you want to explicitly trigger the download and instantiation of the `.wasm` binary, you can set the [`fireImmediately`](https://sec-ant.github.io/zxing-wasm/docs/interfaces/full.PrepareZXingModuleOptions.html#fireimmediately) option to `true`. Doing so also causes `prepareZXingModule` to return a `Promise` that resolves to the underlying Emscripten module. This allows you to `await` the instantiation process:
 
 ```ts
 prepareZXingModule({
@@ -499,7 +499,7 @@ prepareZXingModule({
 }); // <-- returns a promise
 ```
 
-Because different `overrides` settings can influence how this library locates and instantiates the `.wasm` binary, the library performs an equality check on `overrides` to determine if the `.wasm` binary should be re-fetched and re-instantiated. By default, it is determined by a shallow comparison of the `overrides` object. If you prefer a different method of comparison, you can supply a custom [`equalityFn`](https://zxing-wasm.deno.dev/interfaces/full.PrepareZXingModuleOptions.html#equalityfn):
+Because different `overrides` settings can influence how this library locates and instantiates the `.wasm` binary, the library performs an equality check on `overrides` to determine if the `.wasm` binary should be re-fetched and re-instantiated. By default, it is determined by a shallow comparison of the `overrides` object. If you prefer a different method of comparison, you can supply a custom [`equalityFn`](https://sec-ant.github.io/zxing-wasm/docs/interfaces/full.PrepareZXingModuleOptions.html#equalityfn):
 
 ```ts
 prepareZXingModule({

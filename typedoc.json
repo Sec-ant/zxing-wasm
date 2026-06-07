@@ -15,8 +15,8 @@
         "replace": ""
       },
       {
-        "pattern": "]\\(https:\\/\\/zxing-wasm\\.deno\\.dev\\/",
-        "replace": "](/"
+        "pattern": "]\\(https:\\/\\/(?:zxing-wasm\\.deno\\.dev|sec-ant\\.github\\.io\\/zxing-wasm\\/docs?)\\/",
+        "replace": "](./"
       }
     ]
   }
