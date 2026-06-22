@@ -39,7 +39,7 @@
     "width": 0,
     "height": 0
   },
-  "extra": "{\"FileId\":\"099046122105112\",\"ECLevel\":\"4%\"}",
+  "extra": "{\"UEC\":1.0,\"FileId\":\"099046122105112\",\"ECLevel\":\"4%\"}",
   "version": "",
   "readerInit": false,
   "ecLevel": "4%"

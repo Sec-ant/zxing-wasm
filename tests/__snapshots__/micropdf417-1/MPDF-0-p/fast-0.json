@@ -39,7 +39,7 @@
     "width": 0,
     "height": 0
   },
-  "extra": "{\"ECLevel\":\"48%\"}",
+  "extra": "{\"UEC\":0.88,\"ECLevel\":\"48%\"}",
   "version": "",
   "readerInit": false,
   "ecLevel": "48%"
