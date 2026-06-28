@@ -192,7 +192,7 @@
     "bundlewatch": "bundlewatch --config bundlewatch.config.json"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.0",
+    "@biomejs/biome": "2.5.1",
     "@changesets/cli": "^2.31.0",
     "@napi-rs/canvas": "^1.0.0",
     "@types/node": "^25.9.1",
