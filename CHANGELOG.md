@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 3.1.1
+
+### Patch Changes
+
+- c4b1d38: upgrade zxing-cpp to v3.1.0-3-g6c2961d2 and rewrite blackbox test infrastructure with YAML snapshots and upstream contract validation
+
 ## 3.1.0
 
 ### Minor Changes

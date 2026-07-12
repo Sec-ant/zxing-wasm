@@ -1,0 +1,23 @@
+{
+  "changesets": [
+    {
+      "releases": [
+        {
+          "name": "zxing-wasm",
+          "type": "patch"
+        }
+      ],
+      "summary": "upgrade zxing-cpp to v3.1.0-3-g6c2961d2 and rewrite blackbox test infrastructure with YAML snapshots and upstream contract validation",
+      "id": "test-infra-yaml-snapshots"
+    }
+  ],
+  "releases": [
+    {
+      "name": "zxing-wasm",
+      "type": "patch",
+      "oldVersion": "3.1.0",
+      "changesets": ["test-infra-yaml-snapshots"],
+      "newVersion": "3.1.1"
+    }
+  ]
+}
