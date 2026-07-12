@@ -7,6 +7,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check:
+    name: Lint, format & type-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
+      - name: Check
+        run: pnpm -s check
+
   test:
     runs-on: ubuntu-latest
     steps:

@@ -159,7 +159,7 @@
     "copy:wasm": "copy-files-from-to",
     "type-check": "tsc -p ./tsconfig.pkg.json --noEmit --emitDeclarationOnly false",
     "clear:dist": "rimraf dist",
-    "prebuild": "pnpm --workspace-root -s check && pnpm -s clear:dist",
+    "prebuild": "pnpm -s type-check && pnpm -s clear:dist",
     "build:es": "vite build",
     "build:cjs": "tsx ./scripts/build-cjs.ts",
     "build:iife": "tsx ./scripts/build-iife.ts",

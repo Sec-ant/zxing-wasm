@@ -10,7 +10,7 @@
     "build:wasm": "pnpm --filter zxing-wasm run build:wasm",
     "build:all": "pnpm -s submodule:init && pnpm -s build:wasm && pnpm -s build",
     "build": "pnpm --filter zxing-wasm run build && pnpm -s docs:build",
-    "type-check": "pnpm --filter zxing-wasm run type-check && pnpm --filter @zxing-wasm/demo run type-check",
+    "type-check": "pnpm --filter zxing-wasm run type-check",
     "type-check:demo": "pnpm --filter @zxing-wasm/demo run type-check",
     "lint": "biome lint .",
     "format:prettier": "prettier --write .",
