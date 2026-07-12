@@ -1,5 +1,9 @@
 {
   "$schema": "https://typedoc.org/schema.json",
+  "navigationLinks": {
+    "Demo": "/demo/",
+    "GitHub": "https://github.com/Sec-ant/zxing-wasm"
+  },
   "tsconfig": "../../packages/zxing-wasm/tsconfig.pkg.json",
   "entryPoints": [
     "../../packages/zxing-wasm/src/full/index.ts",

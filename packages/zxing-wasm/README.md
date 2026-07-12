@@ -143,7 +143,7 @@ A local Vite scanning workbench is included in the `apps/demo` workspace. It sup
 pnpm demo:dev
 ```
 
-The hosted demo remains available at https://zxing-wasm-demo.deno.dev/.
+The hosted demo is available at <https://sec-ant.github.io/zxing-wasm/demo/>.
 
 ## Usage
 

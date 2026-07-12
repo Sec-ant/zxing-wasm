@@ -6,6 +6,7 @@ import {
   ZXING_CPP_COMMIT,
   ZXING_WASM_VERSION,
 } from "zxing-wasm/reader";
+import IconBookOpen from "~icons/lucide/book-open";
 import IconX from "~icons/lucide/x";
 import { FileDropZone } from "./components/file-drop-zone";
 import { ReaderOptionsPanel } from "./components/reader-options";
@@ -229,6 +230,13 @@ function DemoApp() {
           </span>
         </div>
         <div className="flex items-center gap-3">
+          <a
+            href="/docs/"
+            className="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium text-(--muted) outline-none transition hover:bg-(--paper-deep) hover:text-(--ink) focus-visible:ring-2 focus-visible:ring-(--signal)"
+          >
+            <IconBookOpen aria-hidden="true" className="size-3.5" />
+            Docs
+          </a>
           <fieldset
             aria-label="Color theme"
             className="flex rounded-lg border border-(--line) bg-(--paper-deep) p-0.5"
