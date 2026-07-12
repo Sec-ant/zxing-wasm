@@ -1,0 +1,278 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 90bc9cf
+    bytesECI: 59a4a7b
+    text: "#Mirco PDF417-test#"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 85
+        y: 11
+      topRight:
+        x: 320
+        y: 46
+      bottomRight:
+        x: 299
+        y: 161
+      bottomLeft:
+        x: 67
+        y: 127
+    orientation: 8
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"31%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 31%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 90bc9cf
+    bytesECI: 59a4a7b
+    text: "#Mirco PDF417-test#"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 270
+        y: 199
+      topRight:
+        x: 35
+        y: 163
+      bottomRight:
+        x: 57
+        y: 48
+      bottomLeft:
+        x: 287
+        y: 83
+    orientation: -171
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"31%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 31%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 90bc9cf
+    bytesECI: 59a4a7b
+    text: "#Mirco PDF417-test#"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 85
+        y: 11
+      topRight:
+        x: 320
+        y: 46
+      bottomRight:
+        x: 298
+        y: 162
+      bottomLeft:
+        x: 68
+        y: 127
+    orientation: 9
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"31%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 31%
+  "90":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 90bc9cf
+    bytesECI: 59a4a7b
+    text: "#Mirco PDF417-test#"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 200
+        y: 86
+      topRight:
+        x: 163
+        y: 320
+      bottomRight:
+        x: 47
+        y: 298
+      bottomLeft:
+        x: 83
+        y: 68
+    orientation: 99
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"31%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 31%
+  "180":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 90bc9cf
+    bytesECI: 59a4a7b
+    text: "#Mirco PDF417-test#"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 269
+        y: 199
+      topRight:
+        x: 35
+        y: 163
+      bottomRight:
+        x: 56
+        y: 47
+      bottomLeft:
+        x: 287
+        y: 83
+    orientation: -171
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"31%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 31%
+  "270":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 90bc9cf
+    bytesECI: 59a4a7b
+    text: "#Mirco PDF417-test#"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 269
+      topRight:
+        x: 46
+        y: 35
+      bottomRight:
+        x: 162
+        y: 57
+      bottomLeft:
+        x: 127
+        y: 287
+    orientation: -81
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"31%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 31%
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 90bc9cf
+    bytesECI: 59a4a7b
+    text: "#Mirco PDF417-test#"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 85
+        y: 12
+      topRight:
+        x: 320
+        y: 47
+      bottomRight:
+        x: 299
+        y: 163
+      bottomLeft:
+        x: 68
+        y: 127
+    orientation: 9
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"31%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 31%

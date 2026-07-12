@@ -1,0 +1,198 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN8
+    symbology: EANUPC
+    bytes: 2bc04cf
+    bytesECI: 15dcbe1
+    text: "59001270"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 41
+        y: 125
+      topRight:
+        x: 219
+        y: 125
+      bottomRight:
+        x: 219
+        y: 127
+      bottomLeft:
+        x: 41
+        y: 127
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E4"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN8
+    symbology: EANUPC
+    bytes: 2bc04cf
+    bytesECI: 15dcbe1
+    text: "59001270"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 219
+        y: 125
+      topRight:
+        x: 41
+        y: 125
+      bottomRight:
+        x: 41
+        y: 127
+      bottomLeft:
+        x: 219
+        y: 127
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E4"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN8
+    symbology: EANUPC
+    bytes: 2bc04cf
+    bytesECI: 15dcbe1
+    text: "59001270"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 41
+        y: 124
+      topRight:
+        x: 219
+        y: 124
+      bottomRight:
+        x: 219
+        y: 125
+      bottomLeft:
+        x: 41
+        y: 125
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E4"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN8
+    symbology: EANUPC
+    bytes: 2bc04cf
+    bytesECI: 15dcbe1
+    text: "59001270"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 219
+        y: 124
+      topRight:
+        x: 41
+        y: 124
+      bottomRight:
+        x: 41
+        y: 125
+      bottomLeft:
+        x: 219
+        y: 125
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E4"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN8
+    symbology: EANUPC
+    bytes: 2bc04cf
+    bytesECI: 15dcbe1
+    text: "59001270"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 41
+        y: 125
+      topRight:
+        x: 218
+        y: 125
+      bottomRight:
+        x: 218
+        y: 125
+      bottomLeft:
+        x: 41
+        y: 125
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E4"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 1
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

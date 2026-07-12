@@ -1,0 +1,240 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 1c7bbd4
+    bytesECI: 9751a9c
+    text: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmno
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 2
+      topRight:
+        x: 289
+        y: 2
+      bottomRight:
+        x: 289
+        y: 17
+      bottomLeft:
+        x: 2
+        y: 17
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a9fa2c2
+      width: 144
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x144"}'
+    version: 8x144
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 1c7bbd4
+    bytesECI: 9751a9c
+    text: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmno
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 2
+      topRight:
+        x: 289
+        y: 2
+      bottomRight:
+        x: 289
+        y: 17
+      bottomLeft:
+        x: 2
+        y: 17
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a9fa2c2
+      width: 144
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x144"}'
+    version: 8x144
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 1c7bbd4
+    bytesECI: 9751a9c
+    text: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmno
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 18
+        y: 2
+      topRight:
+        x: 18
+        y: 290
+      bottomRight:
+        x: 2
+        y: 290
+      bottomLeft:
+        x: 2
+        y: 2
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a9fa2c2
+      width: 144
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x144"}'
+    version: 8x144
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 1c7bbd4
+    bytesECI: 9751a9c
+    text: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmno
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 290
+        y: 18
+      topRight:
+        x: 2
+        y: 18
+      bottomRight:
+        x: 2
+        y: 2
+      bottomLeft:
+        x: 290
+        y: 2
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a9fa2c2
+      width: 144
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x144"}'
+    version: 8x144
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 1c7bbd4
+    bytesECI: 9751a9c
+    text: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmno
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 290
+      topRight:
+        x: 2
+        y: 2
+      bottomRight:
+        x: 18
+        y: 2
+      bottomLeft:
+        x: 18
+        y: 290
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a9fa2c2
+      width: 144
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x144"}'
+    version: 8x144
+    readerInit: false
+    ecLevel: ""
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 1c7bbd4
+    bytesECI: 9751a9c
+    text: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmno
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 2
+      topRight:
+        x: 289
+        y: 2
+      bottomRight:
+        x: 289
+        y: 17
+      bottomLeft:
+        x: 2
+        y: 17
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a9fa2c2
+      width: 144
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x144"}'
+    version: 8x144
+    readerInit: false
+    ecLevel: ""

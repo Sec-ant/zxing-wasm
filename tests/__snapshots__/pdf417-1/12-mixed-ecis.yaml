@@ -1,0 +1,278 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 27a33e8
+    bytesECI: c1b6587
+    text: AB点茗テ齄膀赧αђŹ
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 1
+        y: 0
+      topRight:
+        x: 138
+        y: 0
+      bottomRight:
+        x: 138
+        y: 35
+      bottomLeft:
+        x: 1
+        y: 35
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"16%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 16%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 27a33e8
+    bytesECI: c1b6587
+    text: AB点茗テ齄膀赧αђŹ
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 137
+        y: 35
+      topRight:
+        x: 0
+        y: 35
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 137
+        y: 0
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"16%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 16%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 27a33e8
+    bytesECI: c1b6587
+    text: AB点茗テ齄膀赧αђŹ
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 1
+        y: 0
+      topRight:
+        x: 138
+        y: 0
+      bottomRight:
+        x: 138
+        y: 35
+      bottomLeft:
+        x: 1
+        y: 35
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"16%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 16%
+  "90":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 27a33e8
+    bytesECI: c1b6587
+    text: AB点茗テ齄膀赧αђŹ
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 35
+        y: 1
+      topRight:
+        x: 35
+        y: 138
+      bottomRight:
+        x: 0
+        y: 138
+      bottomLeft:
+        x: 0
+        y: 1
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"16%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 16%
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 27a33e8
+    bytesECI: c1b6587
+    text: AB点茗テ齄膀赧αђŹ
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 137
+        y: 35
+      topRight:
+        x: 0
+        y: 35
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 137
+        y: 0
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"16%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 16%
+  "270":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 27a33e8
+    bytesECI: c1b6587
+    text: AB点茗テ齄膀赧αђŹ
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 0
+        y: 137
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 35
+        y: 0
+      bottomLeft:
+        x: 35
+        y: 137
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"16%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 16%
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 27a33e8
+    bytesECI: c1b6587
+    text: AB点茗テ齄膀赧αђŹ
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 1
+        y: 0
+      topRight:
+        x: 137
+        y: 0
+      bottomRight:
+        x: 137
+        y: 35
+      bottomLeft:
+        x: 1
+        y: 35
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"16%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 16%

@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 36
+        y: 38
+      topRight:
+        x: 199
+        y: 32
+      bottomRight:
+        x: 225
+        y: 193
+      bottomLeft:
+        x: 51
+        y: 211
+    orientation: -4
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 202
+        y: 36
+      topRight:
+        x: 208
+        y: 199
+      bottomRight:
+        x: 47
+        y: 225
+      bottomLeft:
+        x: 29
+        y: 51
+    orientation: 86
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 204
+        y: 202
+      topRight:
+        x: 41
+        y: 208
+      bottomRight:
+        x: 15
+        y: 47
+      bottomLeft:
+        x: 189
+        y: 29
+    orientation: 176
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 38
+        y: 204
+      topRight:
+        x: 32
+        y: 41
+      bottomRight:
+        x: 193
+        y: 15
+      bottomLeft:
+        x: 211
+        y: 189
+    orientation: -94
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 36
+        y: 38
+      topRight:
+        x: 199
+        y: 32
+      bottomRight:
+        x: 225
+        y: 193
+      bottomLeft:
+        x: 51
+        y: 211
+    orientation: -4
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 202
+        y: 36
+      topRight:
+        x: 208
+        y: 199
+      bottomRight:
+        x: 47
+        y: 225
+      bottomLeft:
+        x: 29
+        y: 51
+    orientation: 86
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 204
+        y: 202
+      topRight:
+        x: 41
+        y: 208
+      bottomRight:
+        x: 15
+        y: 47
+      bottomLeft:
+        x: 189
+        y: 29
+    orientation: 176
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: abc48e3
+    bytesECI: f766405
+    text: http://arnaud.sahuguet.com/graffiti/test.php?ll=-74.00309961503218,40.74102573163046,0
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 38
+        y: 204
+      topRight:
+        x: 32
+        y: 41
+      bottomRight:
+        x: 193
+        y: 15
+      bottomLeft:
+        x: 211
+        y: 189
+    orientation: -94
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5b9551f
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.75,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M

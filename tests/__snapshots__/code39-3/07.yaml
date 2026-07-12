@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Code39
+    symbology: Code39
+    bytes: "7439017"
+    bytesECI: 98aacb2
+    text: "165340"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 28
+        y: 96
+      topRight:
+        x: 370
+        y: 96
+      bottomRight:
+        x: 370
+        y: 98
+      bottomLeft:
+        x: 28
+        y: 98
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]A0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Code39
+    symbology: Code39
+    bytes: "7439017"
+    bytesECI: 98aacb2
+    text: "165340"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 370
+        y: 96
+      topRight:
+        x: 28
+        y: 96
+      bottomRight:
+        x: 28
+        y: 98
+      bottomLeft:
+        x: 370
+        y: 98
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]A0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Code39
+    symbology: Code39
+    bytes: "7439017"
+    bytesECI: 98aacb2
+    text: "165340"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 28
+        y: 95
+      topRight:
+        x: 370
+        y: 95
+      bottomRight:
+        x: 370
+        y: 96
+      bottomLeft:
+        x: 28
+        y: 96
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]A0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Code39
+    symbology: Code39
+    bytes: "7439017"
+    bytesECI: 98aacb2
+    text: "165340"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 370
+        y: 95
+      topRight:
+        x: 28
+        y: 95
+      bottomRight:
+        x: 28
+        y: 96
+      bottomLeft:
+        x: 370
+        y: 96
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]A0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

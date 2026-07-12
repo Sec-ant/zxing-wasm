@@ -1,0 +1,120 @@
+total: 54
+passAll: 23
+passSome: 52
+fast:
+  "0":
+    failures: 6
+    undetected:
+      total: 6
+      images:
+        - "#709.webp"
+        - 12.webp
+        - 13.webp
+        - 28.webp
+        - qr-inv-1.webp
+        - qr-inv-2.webp
+  "90":
+    failures: 5
+    undetected:
+      total: 5
+      images:
+        - "#709.webp"
+        - 12.webp
+        - 13.webp
+        - qr-inv-1.webp
+        - qr-inv-2.webp
+  "180":
+    failures: 6
+    undetected:
+      total: 6
+      images:
+        - "#709.webp"
+        - 12.webp
+        - 13.webp
+        - 28.webp
+        - qr-inv-1.webp
+        - qr-inv-2.webp
+  "270":
+    failures: 6
+    undetected:
+      total: 6
+      images:
+        - "#709.webp"
+        - 12.webp
+        - 13.webp
+        - 28.webp
+        - qr-inv-1.webp
+        - qr-inv-2.webp
+slow:
+  "0":
+    failures: 3
+    undetected:
+      total: 3
+      images:
+        - 12.webp
+        - 13.webp
+        - 28.webp
+  "90":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 12.webp
+        - 13.webp
+  "180":
+    failures: 3
+    undetected:
+      total: 3
+      images:
+        - 12.webp
+        - 13.webp
+        - 28.webp
+  "270":
+    failures: 3
+    undetected:
+      total: 3
+      images:
+        - 12.webp
+        - 13.webp
+        - 28.webp
+pure:
+  "0":
+    failures: 31
+    misreads:
+      total: 1
+      images:
+        - path: 16.webp
+          description: "[Text content mismatch]: expected '[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/', but got '[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/'"
+    undetected:
+      total: 30
+      images:
+        - "#142.webp"
+        - "#199b.jpg"
+        - "#253.webp"
+        - "#258.webp"
+        - "#709.webp"
+        - "#1086.png"
+        - "#1314.webp"
+        - 4.webp
+        - 5.webp
+        - 6.webp
+        - 7.webp
+        - 8.png
+        - 12.webp
+        - 13.webp
+        - 15.webp
+        - 22.webp
+        - 23.webp
+        - 24.webp
+        - 25.webp
+        - 28.webp
+        - 30a.webp
+        - 31.webp
+        - 33.png
+        - estimate-tilt.jpg
+        - fix-finderpattern-order.webp
+        - fix-traceline.webp
+        - high-res-1.jpg
+        - qr-circles-1.png
+        - qr-inv-1.webp
+        - qr-inv-2.webp

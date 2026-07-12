@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Code128
+    symbology: Code128
+    bytes: 0060ad7
+    bytesECI: 3df4180
+    text: "15182881"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 81
+        y: 68
+      topRight:
+        x: 323
+        y: 68
+      bottomRight:
+        x: 323
+        y: 70
+      bottomLeft:
+        x: 80
+        y: 70
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]C0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Code128
+    symbology: Code128
+    bytes: 0060ad7
+    bytesECI: 3df4180
+    text: "15182881"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 282
+        y: 74
+      topRight:
+        x: 39
+        y: 74
+      bottomRight:
+        x: 39
+        y: 76
+      bottomLeft:
+        x: 281
+        y: 76
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]C0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Code128
+    symbology: Code128
+    bytes: 0060ad7
+    bytesECI: 3df4180
+    text: "15182881"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 80
+        y: 70
+      topRight:
+        x: 323
+        y: 70
+      bottomRight:
+        x: 323
+        y: 69
+      bottomLeft:
+        x: 81
+        y: 69
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]C0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Code128
+    symbology: Code128
+    bytes: 0060ad7
+    bytesECI: 3df4180
+    text: "15182881"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 282
+        y: 74
+      topRight:
+        x: 39
+        y: 74
+      bottomRight:
+        x: 39
+        y: 75
+      bottomLeft:
+        x: 281
+        y: 75
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]C0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

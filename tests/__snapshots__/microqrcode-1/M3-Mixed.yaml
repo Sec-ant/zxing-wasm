@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 2
+      topRight:
+        x: 32
+        y: 2
+      bottomRight:
+        x: 32
+        y: 32
+      bottomLeft:
+        x: 2
+        y: 32
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 32
+        y: 2
+      topRight:
+        x: 32
+        y: 32
+      bottomRight:
+        x: 2
+        y: 32
+      bottomLeft:
+        x: 2
+        y: 2
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 32
+        y: 32
+      topRight:
+        x: 2
+        y: 32
+      bottomRight:
+        x: 2
+        y: 2
+      bottomLeft:
+        x: 32
+        y: 2
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 32
+      topRight:
+        x: 2
+        y: 2
+      bottomRight:
+        x: 32
+        y: 2
+      bottomLeft:
+        x: 32
+        y: 32
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 2
+      topRight:
+        x: 32
+        y: 2
+      bottomRight:
+        x: 32
+        y: 32
+      bottomLeft:
+        x: 2
+        y: 32
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 32
+        y: 2
+      topRight:
+        x: 32
+        y: 32
+      bottomRight:
+        x: 2
+        y: 32
+      bottomLeft:
+        x: 2
+        y: 2
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 32
+        y: 32
+      topRight:
+        x: 2
+        y: 32
+      bottomRight:
+        x: 2
+        y: 2
+      bottomLeft:
+        x: 32
+        y: 2
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 32
+      topRight:
+        x: 2
+        y: 2
+      bottomRight:
+        x: 32
+        y: 2
+      bottomLeft:
+        x: 32
+        y: 32
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 2a33f4a
+    bytesECI: fbf836b
+    text: 1234 ABCD
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 2
+      topRight:
+        x: 31
+        y: 2
+      bottomRight:
+        x: 31
+        y: 31
+      bottomLeft:
+        x: 2
+        y: 31
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 409f1a6
+      width: 15
+      height: 15
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M3","ECLevel":"M"}'
+    version: M3
+    readerInit: false
+    ecLevel: M

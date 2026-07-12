@@ -1,0 +1,120 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DXFilmEdge
+    symbology: OtherBarcode
+    bytes: 2f0305a
+    bytesECI: 178f06a
+    text: 10-3
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 222
+        y: 39
+      topRight:
+        x: 13
+        y: 39
+      bottomRight:
+        x: 12
+        y: 40
+      bottomLeft:
+        x: 223
+        y: 40
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]XF"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DXFilmEdge
+    symbology: OtherBarcode
+    bytes: 2f0305a
+    bytesECI: 178f06a
+    text: 10-3
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 222
+        y: 38
+      topRight:
+        x: 13
+        y: 38
+      bottomRight:
+        x: 13
+        y: 39
+      bottomLeft:
+        x: 222
+        y: 39
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]XF"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DXFilmEdge
+    symbology: OtherBarcode
+    bytes: 2f0305a
+    bytesECI: 178f06a
+    text: 10-3
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 31
+      topRight:
+        x: 220
+        y: 31
+      bottomRight:
+        x: 220
+        y: 32
+      bottomLeft:
+        x: 11
+        y: 32
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]XF"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

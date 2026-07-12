@@ -1,0 +1,200 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 378ba61
+    bytesECI: fa0cb57
+    text: DEA<ETX><SYN>-<STX><RS>íý<NUL>ª<EOT>Va© <SOH><NUL><NUL><SI>½G<EM><ETX><U+98>á+,<ENQ><U+84>ê<SI><U+99><U+9C>~õ<U+9E>ëEMþÝ ÌäÕòrÈnhH<U+9E><NUL><NUL><NUL><SI>½<NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL>Ó¾<U+86>°
+    contentType: Binary
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 13
+      topRight:
+        x: 130
+        y: 12
+      bottomRight:
+        x: 131
+        y: 130
+      bottomLeft:
+        x: 10
+        y: 130
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e7e92e9
+      width: 36
+      height: 36
+    extra: '{"UEC":1.0,"Version":"36x36"}'
+    version: 36x36
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 378ba61
+    bytesECI: fa0cb57
+    text: DEA<ETX><SYN>-<STX><RS>íý<NUL>ª<EOT>Va© <SOH><NUL><NUL><SI>½G<EM><ETX><U+98>á+,<ENQ><U+84>ê<SI><U+99><U+9C>~õ<U+9E>ëEMþÝ ÌäÕòrÈnhH<U+9E><NUL><NUL><NUL><SI>½<NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL>Ó¾<U+86>°
+    contentType: Binary
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 13
+      topRight:
+        x: 130
+        y: 12
+      bottomRight:
+        x: 131
+        y: 130
+      bottomLeft:
+        x: 10
+        y: 130
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e7e92e9
+      width: 36
+      height: 36
+    extra: '{"UEC":1.0,"Version":"36x36"}'
+    version: 36x36
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 378ba61
+    bytesECI: fa0cb57
+    text: DEA<ETX><SYN>-<STX><RS>íý<NUL>ª<EOT>Va© <SOH><NUL><NUL><SI>½G<EM><ETX><U+98>á+,<ENQ><U+84>ê<SI><U+99><U+9C>~õ<U+9E>ëEMþÝ ÌäÕòrÈnhH<U+9E><NUL><NUL><NUL><SI>½<NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL>Ó¾<U+86>°
+    contentType: Binary
+    hasECI: false
+    position:
+      topLeft:
+        x: 132
+        y: 11
+      topRight:
+        x: 133
+        y: 130
+      bottomRight:
+        x: 15
+        y: 131
+      bottomLeft:
+        x: 15
+        y: 10
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e7e92e9
+      width: 36
+      height: 36
+    extra: '{"UEC":1.0,"Version":"36x36"}'
+    version: 36x36
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 378ba61
+    bytesECI: fa0cb57
+    text: DEA<ETX><SYN>-<STX><RS>íý<NUL>ª<EOT>Va© <SOH><NUL><NUL><SI>½G<EM><ETX><U+98>á+,<ENQ><U+84>ê<SI><U+99><U+9C>~õ<U+9E>ëEMþÝ ÌäÕòrÈnhH<U+9E><NUL><NUL><NUL><SI>½<NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL>Ó¾<U+86>°
+    contentType: Binary
+    hasECI: false
+    position:
+      topLeft:
+        x: 336
+        y: 132
+      topRight:
+        x: 217
+        y: 133
+      bottomRight:
+        x: 216
+        y: 15
+      bottomLeft:
+        x: 337
+        y: 15
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e7e92e9
+      width: 36
+      height: 36
+    extra: '{"UEC":1.0,"Version":"36x36"}'
+    version: 36x36
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 378ba61
+    bytesECI: fa0cb57
+    text: DEA<ETX><SYN>-<STX><RS>íý<NUL>ª<EOT>Va© <SOH><NUL><NUL><SI>½G<EM><ETX><U+98>á+,<ENQ><U+84>ê<SI><U+99><U+9C>~õ<U+9E>ëEMþÝ ÌäÕòrÈnhH<U+9E><NUL><NUL><NUL><SI>½<NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL><NUL>Ó¾<U+86>°
+    contentType: Binary
+    hasECI: false
+    position:
+      topLeft:
+        x: 13
+        y: 336
+      topRight:
+        x: 12
+        y: 217
+      bottomRight:
+        x: 130
+        y: 216
+      bottomLeft:
+        x: 130
+        y: 337
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e7e92e9
+      width: 36
+      height: 36
+    extra: '{"UEC":1.0,"Version":"36x36"}'
+    version: 36x36
+    readerInit: false
+    ecLevel: ""

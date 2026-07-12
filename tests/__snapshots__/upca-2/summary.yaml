@@ -1,0 +1,75 @@
+total: 26
+passAll: 10
+passSome: 16
+fast:
+  "0":
+    failures: 16
+    undetected:
+      total: 16
+      images:
+        - 01.webp
+        - 02.webp
+        - 10.webp
+        - 11.webp
+        - 15.webp
+        - 16.webp
+        - 28.webp
+        - 32.webp
+        - 34.webp
+        - 38.webp
+        - 39.webp
+        - 41.webp
+        - 42.webp
+        - 48.webp
+        - 49.webp
+        - 50.webp
+  "180":
+    failures: 14
+    undetected:
+      total: 14
+      images:
+        - 01.webp
+        - 02.webp
+        - 10.webp
+        - 11.webp
+        - 16.webp
+        - 28.webp
+        - 32.webp
+        - 34.webp
+        - 38.webp
+        - 41.webp
+        - 42.webp
+        - 48.webp
+        - 49.webp
+        - 50.webp
+slow:
+  "0":
+    failures: 10
+    undetected:
+      total: 10
+      images:
+        - 01.webp
+        - 10.webp
+        - 11.webp
+        - 28.webp
+        - 34.webp
+        - 38.webp
+        - 41.webp
+        - 48.webp
+        - 49.webp
+        - 50.webp
+  "180":
+    failures: 10
+    undetected:
+      total: 10
+      images:
+        - 01.webp
+        - 10.webp
+        - 11.webp
+        - 28.webp
+        - 34.webp
+        - 38.webp
+        - 41.webp
+        - 48.webp
+        - 49.webp
+        - 50.webp

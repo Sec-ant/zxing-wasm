@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 75
+        y: 15
+      topRight:
+        x: 195
+        y: 60
+      bottomRight:
+        x: 137
+        y: 177
+      bottomLeft:
+        x: 16
+        y: 147
+    orientation: 17
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 75
+      topRight:
+        x: 126
+        y: 195
+      bottomRight:
+        x: 9
+        y: 137
+      bottomLeft:
+        x: 39
+        y: 16
+    orientation: 107
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 125
+        y: 171
+      topRight:
+        x: 5
+        y: 126
+      bottomRight:
+        x: 63
+        y: 9
+      bottomLeft:
+        x: 184
+        y: 39
+    orientation: -163
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 125
+      topRight:
+        x: 60
+        y: 5
+      bottomRight:
+        x: 177
+        y: 63
+      bottomLeft:
+        x: 147
+        y: 184
+    orientation: -73
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 75
+        y: 15
+      topRight:
+        x: 195
+        y: 60
+      bottomRight:
+        x: 137
+        y: 177
+      bottomLeft:
+        x: 16
+        y: 147
+    orientation: 17
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 75
+      topRight:
+        x: 126
+        y: 195
+      bottomRight:
+        x: 9
+        y: 137
+      bottomLeft:
+        x: 39
+        y: 16
+    orientation: 107
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 125
+        y: 171
+      topRight:
+        x: 5
+        y: 126
+      bottomRight:
+        x: 63
+        y: 9
+      bottomLeft:
+        x: 184
+        y: 39
+    orientation: -163
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 4c1a41c
+    bytesECI: 899e5b2
+    text: MECARD:N:Sean Owen;TEL:+12125658770;EMAIL:srowen@google.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 125
+      topRight:
+        x: 60
+        y: 5
+      bottomRight:
+        x: 177
+        y: 63
+      bottomLeft:
+        x: 147
+        y: 184
+    orientation: -73
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 93b671c
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"L"}'
+    version: "4"
+    readerInit: false
+    ecLevel: L

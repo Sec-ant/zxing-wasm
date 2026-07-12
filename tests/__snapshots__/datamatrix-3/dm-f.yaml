@@ -1,0 +1,200 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 616b5a1
+    bytesECI: a7cc0af
+    text: "[)><RS>06<GS>9N111234567842S3300045321T89209876D151217<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 51
+        y: 42
+      topRight:
+        x: 127
+        y: 21
+      bottomRight:
+        x: 104
+        y: 95
+      bottomLeft:
+        x: 26
+        y: 119
+    orientation: -16
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a5033c3
+      width: 26
+      height: 26
+    extra: '{"UEC":1.0,"Version":"26x26"}'
+    version: 26x26
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 616b5a1
+    bytesECI: a7cc0af
+    text: "[)><RS>06<GS>9N111234567842S3300045321T89209876D151217<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 51
+        y: 42
+      topRight:
+        x: 127
+        y: 21
+      bottomRight:
+        x: 104
+        y: 95
+      bottomLeft:
+        x: 26
+        y: 119
+    orientation: -16
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a5033c3
+      width: 26
+      height: 26
+    extra: '{"UEC":1.0,"Version":"26x26"}'
+    version: 26x26
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 616b5a1
+    bytesECI: a7cc0af
+    text: "[)><RS>06<GS>9N111234567842S3300045321T89209876D151217<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 106
+        y: 52
+      topRight:
+        x: 126
+        y: 127
+      bottomRight:
+        x: 53
+        y: 104
+      bottomLeft:
+        x: 28
+        y: 26
+    orientation: 74
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a5033c3
+      width: 26
+      height: 26
+    extra: '{"UEC":1.0,"Version":"26x26"}'
+    version: 26x26
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 616b5a1
+    bytesECI: a7cc0af
+    text: "[)><RS>06<GS>9N111234567842S3300045321T89209876D151217<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 100
+        y: 106
+      topRight:
+        x: 24
+        y: 126
+      bottomRight:
+        x: 47
+        y: 52
+      bottomLeft:
+        x: 125
+        y: 28
+    orientation: 164
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 815b241
+      width: 26
+      height: 26
+    extra: '{"UEC":0.92,"Version":"26x26"}'
+    version: 26x26
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 616b5a1
+    bytesECI: a7cc0af
+    text: "[)><RS>06<GS>9N111234567842S3300045321T89209876D151217<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 42
+        y: 100
+      topRight:
+        x: 21
+        y: 24
+      bottomRight:
+        x: 95
+        y: 47
+      bottomLeft:
+        x: 119
+        y: 125
+    orientation: -106
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a5033c3
+      width: 26
+      height: 26
+    extra: '{"UEC":1.0,"Version":"26x26"}'
+    version: 26x26
+    readerInit: false
+    ecLevel: ""

@@ -1,0 +1,135 @@
+total: 28
+passAll: 0
+passSome: 27
+fast:
+  "0":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - dm-2x2-b.webp
+        - OldDetectorFallback.webp
+  "90":
+    failures: 28
+    undetected:
+      total: 28
+      images:
+        - "#749.png"
+        - "#794.png"
+        - dm-0.webp
+        - dm-1.jpg
+        - dm-2.jpg
+        - dm-2x2-#669-2.png
+        - dm-2x2-#1063.webp
+        - dm-2x2-#1072-2.png
+        - dm-2x2-#1088.webp
+        - dm-2x2-a.webp
+        - dm-2x2-b.webp
+        - dm-3.webp
+        - dm-4.webp
+        - dm-5.webp
+        - dm-6.webp
+        - dm-7.webp
+        - dm-8.webp
+        - dm-9.webp
+        - dm-a.webp
+        - dm-c.jpg
+        - dm-d.webp
+        - dm-e.webp
+        - dm-f.webp
+        - dm-h.webp
+        - dm-i.webp
+        - dm-j.webp
+        - dm-k.webp
+        - OldDetectorFallback.webp
+  "180":
+    failures: 28
+    undetected:
+      total: 28
+      images:
+        - "#749.png"
+        - "#794.png"
+        - dm-0.webp
+        - dm-1.jpg
+        - dm-2.jpg
+        - dm-2x2-#669-2.png
+        - dm-2x2-#1063.webp
+        - dm-2x2-#1072-2.png
+        - dm-2x2-#1088.webp
+        - dm-2x2-a.webp
+        - dm-2x2-b.webp
+        - dm-3.webp
+        - dm-4.webp
+        - dm-5.webp
+        - dm-6.webp
+        - dm-7.webp
+        - dm-8.webp
+        - dm-9.webp
+        - dm-a.webp
+        - dm-c.jpg
+        - dm-d.webp
+        - dm-e.webp
+        - dm-f.webp
+        - dm-h.webp
+        - dm-i.webp
+        - dm-j.webp
+        - dm-k.webp
+        - OldDetectorFallback.webp
+  "270":
+    failures: 28
+    undetected:
+      total: 28
+      images:
+        - "#749.png"
+        - "#794.png"
+        - dm-0.webp
+        - dm-1.jpg
+        - dm-2.jpg
+        - dm-2x2-#669-2.png
+        - dm-2x2-#1063.webp
+        - dm-2x2-#1072-2.png
+        - dm-2x2-#1088.webp
+        - dm-2x2-a.webp
+        - dm-2x2-b.webp
+        - dm-3.webp
+        - dm-4.webp
+        - dm-5.webp
+        - dm-6.webp
+        - dm-7.webp
+        - dm-8.webp
+        - dm-9.webp
+        - dm-a.webp
+        - dm-c.jpg
+        - dm-d.webp
+        - dm-e.webp
+        - dm-f.webp
+        - dm-h.webp
+        - dm-i.webp
+        - dm-j.webp
+        - dm-k.webp
+        - OldDetectorFallback.webp
+slow:
+  "0":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - dm-2x2-b.webp
+  "90":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - dm-2x2-b.webp
+  "180":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - dm-2x2-b.webp
+  "270":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - dm-2x2-b.webp

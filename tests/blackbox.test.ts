@@ -16,8 +16,10 @@ import {
   readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";
+import { parseUpstreamBlackboxContracts } from "./upstreamBlackbox.js";
 import {
   DEFAULT_READER_OPTIONS_FOR_TESTS,
+  formatSnapshot,
   getRotatedImage,
   isLinearBarcodeFormat,
   parseExpectedBinary,
@@ -58,19 +60,25 @@ type Entries<T> = {
   [K in keyof T]: [K, T[K]];
 }[keyof T][];
 
+type UpstreamStats = {
+  passCount: number;
+  misreadImages: Set<string>;
+};
+
 const TEST_RUNNER_PATH = resolve(
   import.meta.dirname,
   "../zxing-cpp/test/blackbox/BlackboxTestRunner.cpp",
 );
 const SAMPLES_PATH_PREFIX = "zxing-cpp/test/samples";
+const zxingCppBlackBoxTestRunner = await readFile(TEST_RUNNER_PATH, "utf-8");
+const upstreamContracts = parseUpstreamBlackboxContracts(
+  zxingCppBlackBoxTestRunner,
+);
 
 test("consistent test entries", async () => {
-  const zxingCppBlackBoxTestRunner = await readFile(TEST_RUNNER_PATH, "utf-8");
-  const testDirs = zxingCppBlackBoxTestRunner.match(
-    /(?<=runTests\(")[^"]+?(?=",)/g,
+  expect([...upstreamContracts.keys()]).toEqual(
+    testEntries.map(({ directory }) => directory),
   );
-  expect(testDirs).toBeDefined();
-  expect(testDirs).toEqual(testEntries.map(({ directory }) => directory));
 });
 
 await prepareZXingModule({
@@ -96,24 +104,34 @@ for (const {
   readerOptions = DEFAULT_READER_OPTIONS_FOR_TESTS,
 } of testEntries) {
   describe(directory, async () => {
+    const upstreamContract = upstreamContracts.get(directory);
+    if (!upstreamContract) {
+      throw new Error(`Missing zxing-cpp blackbox contract for ${directory}`);
+    }
     const types = [
       ...(testFast ? ["fast"] : []),
       ...(testSlow ? ["slow"] : []),
       ...(testPure ? ["pure"] : []),
     ] as Type[];
     const imagePaths = (
-      await glob([`${SAMPLES_PATH_PREFIX}/${directory}/*.(png|jpg|pgm|gif)`])
+      await glob([
+        `${SAMPLES_PATH_PREFIX}/${directory}/*.(png|jpg|pgm|gif|webp)`,
+      ])
     ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
     const summary: Summary = {
       total: imagePaths.length,
       passAll: 0,
       passSome: 0,
     };
+    const upstreamStats = new Map<string, UpstreamStats>();
     for (const imagePath of imagePaths) {
       let passAll = true;
       let passSome = false;
       const imageName = basename(imagePath, extname(imagePath));
       const imageNameWithExt = basename(imagePath);
+      const snapshots: Partial<
+        Record<Type, Record<number, ReturnType<typeof takeSnapshot>>>
+      > = {};
       const [expectedResult, expectedText, expectedBinary] = await Promise.all([
         parseExpectedResult(imagePath),
         parseExpectedText(imagePath),
@@ -133,7 +151,22 @@ for (const {
         });
         for (const type of types) {
           summary[type] ??= {};
+          snapshots[type] ??= {};
           for (const rotation of type === "pure" ? [0] : rotations) {
+            const upstreamExpectation = upstreamContract.expectations.find(
+              (expectation) =>
+                expectation.type === type && expectation.rotation === rotation,
+            );
+            if (!upstreamExpectation) {
+              throw new Error(
+                `Test matrix differs from zxing-cpp for ${directory} ${type} ${rotation}`,
+              );
+            }
+            const upstreamKey = `${type}:${rotation}`;
+            upstreamStats.set(upstreamKey, {
+              passCount: 0,
+              misreadImages: new Set(),
+            });
             summary[type][rotation] ??= {
               failures: 0,
               misreads: {
@@ -147,15 +180,20 @@ for (const {
             };
             test(`${directory} ${imageName} ${type} ${rotation}`, async () => {
               let passCurrent = true;
+              let detected = false;
 
               onTestFinished(() => {
                 passAll &&= passCurrent;
                 passSome ||= passCurrent;
+                const stats = upstreamStats.get(upstreamKey)!;
+                if (passCurrent) {
+                  stats.passCount += 1;
+                } else if (detected) {
+                  stats.misreadImages.add(imageNameWithExt);
+                }
               });
 
-              const imageBlob = new Blob([
-                (await getRotatedImage(imagePath, rotation)) as BlobPart,
-              ]);
+              const input = await getRotatedImage(imagePath, rotation);
 
               const appliedReaderOptions: ReaderOptions = {
                 ...readerOptions,
@@ -167,19 +205,14 @@ for (const {
               };
 
               const [barcode] = await readBarcodes(
-                imageBlob,
+                Buffer.isBuffer(input)
+                  ? new Blob([input as BlobPart])
+                  : (input as ImageData),
                 appliedReaderOptions,
               );
 
-              // Snapshot
-              await expect(takeSnapshot(barcode)).toMatchFileSnapshot(
-                resolve(
-                  import.meta.dirname,
-                  `./__snapshots__/${directory}/${imageName}/${type}-${rotation}.json`,
-                ),
-              );
+              snapshots[type]![rotation] = takeSnapshot(barcode);
 
-              // Undetected
               if (barcode === undefined || !barcode.isValid) {
                 summary[type]![rotation].undetected!.images.push(
                   imageNameWithExt,
@@ -188,9 +221,8 @@ for (const {
                 passCurrent = false;
                 return;
               }
+              detected = true;
 
-              // Format mismatch (allow matching either format or symbology,
-              // mirroring zxing-cpp BlackboxTestRunner.cpp)
               if (
                 barcode.format !== barcodeFormat &&
                 barcode.symbology !== barcodeFormat
@@ -203,16 +235,12 @@ for (const {
                 passCurrent = false;
               }
 
-              // .result.txt
               if (expectedResult) {
                 let misread = false;
                 let description = "[Result mismatch]:";
                 for (const [key, value] of Object.entries(
                   expectedResult,
                 ) as Entries<typeof expectedResult>) {
-                  // Mirror C++ getBarcodeValue: for "format" key, compare
-                  // against the HRI label (e.g. "Code 32") rather than
-                  // the canonical name (e.g. "Code32").
                   const actual =
                     key === "format"
                       ? (formatToLabel(barcode[key]) ?? barcode[key].toString())
@@ -232,7 +260,6 @@ for (const {
                 }
               }
 
-              // .txt
               if (expectedText) {
                 if (barcode.text !== expectedText) {
                   summary[type]![rotation].misreads!.images.push({
@@ -244,7 +271,6 @@ for (const {
                 }
               }
 
-              // .bin
               if (expectedBinary) {
                 if (!expectedBinary.equals(Buffer.from(barcode.bytes))) {
                   summary[type]![rotation].misreads!.images.push({
@@ -258,6 +284,14 @@ for (const {
             });
           }
         }
+        test.sequential(`${directory} ${imageName} snapshot`, async () => {
+          await expect(formatSnapshot(snapshots)).toMatchFileSnapshot(
+            resolve(
+              import.meta.dirname,
+              `./__snapshots__/${directory}/${imageName}.yaml`,
+            ),
+          );
+        });
       });
     }
     test.sequential(`${directory} summary`, async () => {
@@ -278,12 +312,25 @@ for (const {
           }
         }
       }
-      await expect(`${JSON.stringify(summary, null, 2)}\n`).toMatchFileSnapshot(
+      await expect(formatSnapshot(summary)).toMatchFileSnapshot(
         resolve(
           import.meta.dirname,
-          `./__snapshots__/${directory}/summary.json`,
+          `./__snapshots__/${directory}/summary.yaml`,
         ),
       );
+      expect(imagePaths).toHaveLength(upstreamContract.imageCount);
+      for (const expectation of upstreamContract.expectations) {
+        const stats = upstreamStats.get(
+          `${expectation.type}:${expectation.rotation}`,
+        );
+        expect(stats).toBeDefined();
+        expect(stats!.passCount).toBeGreaterThanOrEqual(
+          expectation.minPassCount,
+        );
+        expect(stats!.misreadImages.size).toBeLessThanOrEqual(
+          expectation.maxMisreads,
+        );
+      }
     });
   });
 }

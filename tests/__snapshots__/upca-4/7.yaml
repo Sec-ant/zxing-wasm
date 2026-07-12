@@ -1,0 +1,120 @@
+fast:
+  "0": null
+  "180":
+    isValid: true
+    error: ""
+    format: UPCA
+    symbology: EANUPC
+    bytes: 12f20d4
+    bytesECI: 046885f
+    text: "0023942431015"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 280
+        y: 105
+      topRight:
+        x: 85
+        y: 105
+      bottomRight:
+        x: 85
+        y: 107
+      bottomLeft:
+        x: 280
+        y: 107
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: UPCA
+    symbology: EANUPC
+    bytes: 12f20d4
+    bytesECI: 046885f
+    text: "0023942431015"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 68
+        y: 73
+      topRight:
+        x: 263
+        y: 73
+      bottomRight:
+        x: 263
+        y: 74
+      bottomLeft:
+        x: 68
+        y: 74
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: UPCA
+    symbology: EANUPC
+    bytes: 12f20d4
+    bytesECI: 046885f
+    text: "0023942431015"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 280
+        y: 105
+      topRight:
+        x: 85
+        y: 105
+      bottomRight:
+        x: 85
+        y: 106
+      bottomLeft:
+        x: 280
+        y: 106
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

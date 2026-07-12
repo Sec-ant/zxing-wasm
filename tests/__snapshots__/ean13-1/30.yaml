@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: a8c034a
+    bytesECI: d9916de
+    text: "5025121072311"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 30
+        y: 46
+      topRight:
+        x: 246
+        y: 46
+      bottomRight:
+        x: 246
+        y: 47
+      bottomLeft:
+        x: 30
+        y: 47
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: a8c034a
+    bytesECI: d9916de
+    text: "5025121072311"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 245
+        y: 46
+      topRight:
+        x: 29
+        y: 46
+      bottomRight:
+        x: 29
+        y: 47
+      bottomLeft:
+        x: 245
+        y: 47
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: a8c034a
+    bytesECI: d9916de
+    text: "5025121072311"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 30
+        y: 45
+      topRight:
+        x: 246
+        y: 45
+      bottomRight:
+        x: 246
+        y: 46
+      bottomLeft:
+        x: 30
+        y: 46
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: a8c034a
+    bytesECI: d9916de
+    text: "5025121072311"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 245
+        y: 45
+      topRight:
+        x: 29
+        y: 45
+      bottomRight:
+        x: 29
+        y: 46
+      bottomLeft:
+        x: 245
+        y: 46
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

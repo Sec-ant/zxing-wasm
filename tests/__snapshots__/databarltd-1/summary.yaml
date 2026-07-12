@@ -1,0 +1,16 @@
+total: 2
+passAll: 1
+passSome: 2
+fast:
+  "0": {}
+  "180": {}
+slow:
+  "0": {}
+  "180": {}
+pure:
+  "0":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - 01.webp

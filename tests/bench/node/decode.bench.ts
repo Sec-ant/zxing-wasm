@@ -44,8 +44,8 @@ interface FormatSample {
  * inputs so per-case time stays in the millisecond range.
  */
 const samples: FormatSample[] = [
-  { format: "QRCode", path: "zxing-cpp/test/samples/qrcode-1/1.png" },
-  { format: "DataMatrix", path: "zxing-cpp/test/samples/datamatrix-2/01.png" },
+  { format: "QRCode", path: "zxing-cpp/test/samples/qrcode-1/1.webp" },
+  { format: "DataMatrix", path: "zxing-cpp/test/samples/datamatrix-2/01.webp" },
   { format: "Aztec", path: "zxing-cpp/test/samples/aztec-1/abc-19x19C.png" },
   { format: "PDF417", path: "zxing-cpp/test/samples/pdf417-1/01.png" },
   {
@@ -57,7 +57,7 @@ const samples: FormatSample[] = [
     format: "Telepen",
     path: "zxing-cpp/test/samples/telepen-1/telepen-alpha-2.png",
   },
-  { format: "EAN-13", path: "zxing-cpp/test/samples/ean13-1/1.png" },
+  { format: "EAN-13", path: "zxing-cpp/test/samples/ean13-1/4.webp" },
 ];
 
 const noBarcodeKey = "__none__";

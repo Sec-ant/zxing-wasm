@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 389
+        y: 391
+      topRight:
+        x: 478
+        y: 389
+      bottomRight:
+        x: 484
+        y: 479
+      bottomLeft:
+        x: 392
+        y: 486
+    orientation: -3
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 4542cd4
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+  "90":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 292
+        y: 389
+      topRight:
+        x: 296
+        y: 479
+      bottomRight:
+        x: 205
+        y: 484
+      bottomLeft:
+        x: 200
+        y: 392
+    orientation: 87
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 8a47a48
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+  "180":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 411
+        y: 292
+      topRight:
+        x: 321
+        y: 296
+      bottomRight:
+        x: 316
+        y: 205
+      bottomLeft:
+        x: 408
+        y: 200
+    orientation: 177
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 8a47a48
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+  "270":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 391
+        y: 411
+      topRight:
+        x: 389
+        y: 322
+      bottomRight:
+        x: 479
+        y: 316
+      bottomLeft:
+        x: 486
+        y: 408
+    orientation: -93
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 4542cd4
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 389
+        y: 391
+      topRight:
+        x: 478
+        y: 389
+      bottomRight:
+        x: 484
+        y: 479
+      bottomLeft:
+        x: 392
+        y: 486
+    orientation: -3
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 4542cd4
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+  "90":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 292
+        y: 389
+      topRight:
+        x: 296
+        y: 479
+      bottomRight:
+        x: 205
+        y: 484
+      bottomLeft:
+        x: 200
+        y: 392
+    orientation: 87
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 8a47a48
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+  "180":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 411
+        y: 292
+      topRight:
+        x: 321
+        y: 296
+      bottomRight:
+        x: 316
+        y: 205
+      bottomLeft:
+        x: 408
+        y: 200
+    orientation: 177
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 8a47a48
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+  "270":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 97a0730
+    bytesECI: 3f8d0b9
+    text: Loser
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 391
+        y: 411
+      topRight:
+        x: 389
+        y: 322
+      bottomRight:
+        x: 479
+        y: 316
+      bottomLeft:
+        x: 486
+        y: 408
+    orientation: -93
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 4542cd4
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"Q"}'
+    version: M4
+    readerInit: false
+    ecLevel: Q
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

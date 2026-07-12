@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 167
+        y: 39
+      topRight:
+        x: 472
+        y: 39
+      bottomRight:
+        x: 472
+        y: 344
+      bottomLeft:
+        x: 167
+        y: 344
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 343
+        y: 167
+      topRight:
+        x: 343
+        y: 472
+      bottomRight:
+        x: 38
+        y: 472
+      bottomLeft:
+        x: 38
+        y: 167
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 368
+        y: 343
+      topRight:
+        x: 63
+        y: 343
+      bottomRight:
+        x: 63
+        y: 38
+      bottomLeft:
+        x: 368
+        y: 38
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 39
+        y: 368
+      topRight:
+        x: 39
+        y: 63
+      bottomRight:
+        x: 344
+        y: 63
+      bottomLeft:
+        x: 344
+        y: 368
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 167
+        y: 39
+      topRight:
+        x: 472
+        y: 39
+      bottomRight:
+        x: 472
+        y: 344
+      bottomLeft:
+        x: 167
+        y: 344
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 343
+        y: 167
+      topRight:
+        x: 343
+        y: 472
+      bottomRight:
+        x: 38
+        y: 472
+      bottomLeft:
+        x: 38
+        y: 167
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 368
+        y: 343
+      topRight:
+        x: 63
+        y: 343
+      bottomRight:
+        x: 63
+        y: 38
+      bottomLeft:
+        x: 368
+        y: 38
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 97d8ce7
+    bytesECI: 07b6d7e
+    text: In 25 words or less in the comments, below, tell us how QR codes will make the world less ordinary.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 39
+        y: 368
+      topRight:
+        x: 39
+        y: 63
+      bottomRight:
+        x: 344
+        y: 63
+      bottomLeft:
+        x: 344
+        y: 368
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e6f05bc
+      width: 41
+      height: 41
+    extra: '{"DataMask":7,"UEC":0.50,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

@@ -1,0 +1,200 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 4f518bb
+    bytesECI: 6beb1da
+    text: tec-it
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 100
+        y: 61
+      topRight:
+        x: 161
+        y: 67
+      bottomRight:
+        x: 156
+        y: 121
+      bottomLeft:
+        x: 94
+        y: 114
+    orientation: 6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: c4075fa
+      width: 20
+      height: 20
+    extra: '{"UEC":1.0,"Version":"20x20"}'
+    version: 20x20
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 4f518bb
+    bytesECI: 6beb1da
+    text: tec-it
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 100
+        y: 61
+      topRight:
+        x: 161
+        y: 67
+      bottomRight:
+        x: 156
+        y: 121
+      bottomLeft:
+        x: 94
+        y: 114
+    orientation: 6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: c4075fa
+      width: 20
+      height: 20
+    extra: '{"UEC":1.0,"Version":"20x20"}'
+    version: 20x20
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 4f518bb
+    bytesECI: 6beb1da
+    text: tec-it
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 133
+        y: 100
+      topRight:
+        x: 127
+        y: 161
+      bottomRight:
+        x: 73
+        y: 156
+      bottomLeft:
+        x: 80
+        y: 94
+    orientation: 96
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: c4075fa
+      width: 20
+      height: 20
+    extra: '{"UEC":1.0,"Version":"20x20"}'
+    version: 20x20
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 4f518bb
+    bytesECI: 6beb1da
+    text: tec-it
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 124
+        y: 133
+      topRight:
+        x: 63
+        y: 127
+      bottomRight:
+        x: 68
+        y: 73
+      bottomLeft:
+        x: 130
+        y: 80
+    orientation: -174
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: c4075fa
+      width: 20
+      height: 20
+    extra: '{"UEC":1.0,"Version":"20x20"}'
+    version: 20x20
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 4f518bb
+    bytesECI: 6beb1da
+    text: tec-it
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 61
+        y: 124
+      topRight:
+        x: 67
+        y: 63
+      bottomRight:
+        x: 121
+        y: 68
+      bottomLeft:
+        x: 114
+        y: 130
+    orientation: -84
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: c4075fa
+      width: 20
+      height: 20
+    extra: '{"UEC":1.0,"Version":"20x20"}'
+    version: 20x20
+    readerInit: false
+    ecLevel: ""

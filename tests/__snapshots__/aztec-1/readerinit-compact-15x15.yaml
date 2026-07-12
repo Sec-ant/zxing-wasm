@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 15
+        y: 0
+      bottomRight:
+        x: 15
+        y: 15
+      bottomLeft:
+        x: 0
+        y: 15
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 0
+      topRight:
+        x: 15
+        y: 15
+      bottomRight:
+        x: 0
+        y: 15
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 15
+      topRight:
+        x: 0
+        y: 15
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 15
+        y: 0
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 15
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 15
+        y: 0
+      bottomLeft:
+        x: 15
+        y: 15
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 15
+        y: 0
+      bottomRight:
+        x: 15
+        y: 15
+      bottomLeft:
+        x: 0
+        y: 15
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 0
+      topRight:
+        x: 15
+        y: 15
+      bottomRight:
+        x: 0
+        y: 15
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 15
+      topRight:
+        x: 0
+        y: 15
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 15
+        y: 0
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 15
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 15
+        y: 0
+      bottomLeft:
+        x: 15
+        y: 15
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: f590405
+    bytesECI: 7b64449
+    text: $I
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 15
+        y: 0
+      bottomRight:
+        x: 15
+        y: 15
+      bottomLeft:
+        x: 0
+        y: 15
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: cbfb791
+      width: 15
+      height: 15
+    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    version: "1"
+    readerInit: true
+    ecLevel: 82%

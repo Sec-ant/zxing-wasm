@@ -1,0 +1,141 @@
+total: 30
+passAll: 0
+passSome: 30
+fast:
+  "0": {}
+  "90":
+    failures: 30
+    undetected:
+      total: 30
+      images:
+        - "#378.png"
+        - 144x144_wrong.png
+        - 0123456789.png
+        - abcd-18x8.png
+        - abcd-26x12.png
+        - abcd-32x8.png
+        - abcd-36x12-mirrored.png
+        - abcd-36x12.png
+        - abcd-36x16.png
+        - abcd-48x16.png
+        - abcd-52x52-IDAutomation.png
+        - abcd-52x52.png
+        - abcdefg-64x64.png
+        - abcdefg.png
+        - C40.png
+        - distorted.png
+        - eci-mixed.png
+        - eci.png
+        - EDIFACT.png
+        - gs1-figure-4.15.1-2-32x32.png
+        - GUID.webp
+        - HelloWorld_Text_L_Kaywa_1_error_byte.png
+        - HelloWorld_Text_L_Kaywa_2_error_byte.png
+        - HelloWorld_Text_L_Kaywa_3_error_byte.png
+        - HelloWorld_Text_L_Kaywa_4_error_byte.png
+        - HelloWorld_Text_L_Kaywa.png
+        - mod-size-1.png
+        - readerinit.png
+        - X12.png
+        - zxing_URL_L_Kayway.png
+  "180":
+    failures: 30
+    undetected:
+      total: 30
+      images:
+        - "#378.png"
+        - 144x144_wrong.png
+        - 0123456789.png
+        - abcd-18x8.png
+        - abcd-26x12.png
+        - abcd-32x8.png
+        - abcd-36x12-mirrored.png
+        - abcd-36x12.png
+        - abcd-36x16.png
+        - abcd-48x16.png
+        - abcd-52x52-IDAutomation.png
+        - abcd-52x52.png
+        - abcdefg-64x64.png
+        - abcdefg.png
+        - C40.png
+        - distorted.png
+        - eci-mixed.png
+        - eci.png
+        - EDIFACT.png
+        - gs1-figure-4.15.1-2-32x32.png
+        - GUID.webp
+        - HelloWorld_Text_L_Kaywa_1_error_byte.png
+        - HelloWorld_Text_L_Kaywa_2_error_byte.png
+        - HelloWorld_Text_L_Kaywa_3_error_byte.png
+        - HelloWorld_Text_L_Kaywa_4_error_byte.png
+        - HelloWorld_Text_L_Kaywa.png
+        - mod-size-1.png
+        - readerinit.png
+        - X12.png
+        - zxing_URL_L_Kayway.png
+  "270":
+    failures: 30
+    undetected:
+      total: 30
+      images:
+        - "#378.png"
+        - 144x144_wrong.png
+        - 0123456789.png
+        - abcd-18x8.png
+        - abcd-26x12.png
+        - abcd-32x8.png
+        - abcd-36x12-mirrored.png
+        - abcd-36x12.png
+        - abcd-36x16.png
+        - abcd-48x16.png
+        - abcd-52x52-IDAutomation.png
+        - abcd-52x52.png
+        - abcdefg-64x64.png
+        - abcdefg.png
+        - C40.png
+        - distorted.png
+        - eci-mixed.png
+        - eci.png
+        - EDIFACT.png
+        - gs1-figure-4.15.1-2-32x32.png
+        - GUID.webp
+        - HelloWorld_Text_L_Kaywa_1_error_byte.png
+        - HelloWorld_Text_L_Kaywa_2_error_byte.png
+        - HelloWorld_Text_L_Kaywa_3_error_byte.png
+        - HelloWorld_Text_L_Kaywa_4_error_byte.png
+        - HelloWorld_Text_L_Kaywa.png
+        - mod-size-1.png
+        - readerinit.png
+        - X12.png
+        - zxing_URL_L_Kayway.png
+slow:
+  "0": {}
+  "90":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - "#378.png"
+        - mod-size-1.png
+  "180":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - "#378.png"
+        - mod-size-1.png
+  "270":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - "#378.png"
+        - mod-size-1.png
+pure:
+  "0":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 0123456789.png
+        - distorted.png
