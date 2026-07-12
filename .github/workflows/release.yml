@@ -38,7 +38,7 @@ jobs:
 
       - name: Get Next Package Version
         id: package-version
-        run: echo "version=$(pnpm -s changeset status --output=release.json && jq -r '.releases[0].newVersion // '$(npm pkg get version)'' release.json && rm release.json)" >> $GITHUB_OUTPUT
+        run: echo "version=$(pnpm -s changeset status --output=release.json && jq -r --arg fallback "$(npm pkg get version | tr -d '"')" '.releases[0].newVersion // $fallback' release.json && rm release.json)" >> $GITHUB_OUTPUT
 
       - name: Create Release Pull Request or Publish to NPM
         id: changesets
