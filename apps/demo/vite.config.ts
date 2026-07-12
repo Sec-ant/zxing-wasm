@@ -24,6 +24,7 @@ export default defineConfig(({ command }) => {
   const useSourceReader = command === "serve";
 
   return {
+    base: "/demo/",
     plugins: [
       tailwindcss(),
       Icons({ compiler: "jsx", jsx: "react" }),

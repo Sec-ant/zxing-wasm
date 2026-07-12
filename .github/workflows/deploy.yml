@@ -14,19 +14,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-docs:
-    name: Build Docs
+  build-site:
+    name: Build site (docs + demo)
     runs-on: ubuntu-latest
 
     steps:
       - name: Clone repository
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          submodules: recursive
 
-      - name: Setup Node
-        uses: ./.github/actions/setup-node
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build WASM
+        run: pnpm -s build:wasm
 
       - name: Build docs
         run: "pnpm -s docs:build"
+
+      - name: Build demo
+        run: pnpm -s demo:build
 
       - name: Stage GitHub Pages artifact
         if: github.event_name == 'push'
@@ -34,6 +42,7 @@ jobs:
           rm -rf .pages
           mkdir -p .pages
           cp -R artifacts/docs .pages/docs
+          cp -R apps/demo/dist .pages/demo
           touch .pages/.nojekyll
 
       - name: Upload GitHub Pages artifact
@@ -45,7 +54,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     if: github.event_name == 'push'
-    needs: build-docs
+    needs: build-site
     runs-on: ubuntu-latest
 
     permissions:
@@ -54,7 +63,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}docs/
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
