@@ -133,7 +133,7 @@ npm i zxing-wasm
 
 ## Demo
 
-Demo page: https://zxing-wasm-demo.deno.dev/
+Demo page: https://sec-ant.github.io/zxing-wasm-demo/
 
 Demo source: https://github.com/Sec-ant/zxing-wasm-demo
 
