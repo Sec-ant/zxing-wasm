@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 0383a04
+    bytesECI: a549965
+    text: "01906141410000153202000150"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 34
+      topRight:
+        x: 323
+        y: 34
+      bottomRight:
+        x: 323
+        y: 35
+      bottomLeft:
+        x: 11
+        y: 35
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 0383a04
+    bytesECI: a549965
+    text: "01906141410000153202000150"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 398
+        y: 42
+      topRight:
+        x: 86
+        y: 42
+      bottomRight:
+        x: 86
+        y: 43
+      bottomLeft:
+        x: 398
+        y: 43
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 0383a04
+    bytesECI: a549965
+    text: "01906141410000153202000150"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 34
+      topRight:
+        x: 323
+        y: 34
+      bottomRight:
+        x: 323
+        y: 35
+      bottomLeft:
+        x: 11
+        y: 35
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 0383a04
+    bytesECI: a549965
+    text: "01906141410000153202000150"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 398
+        y: 41
+      topRight:
+        x: 86
+        y: 41
+      bottomRight:
+        x: 86
+        y: 42
+      bottomLeft:
+        x: 398
+        y: 42
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

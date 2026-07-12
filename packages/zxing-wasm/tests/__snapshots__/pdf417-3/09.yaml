@@ -1,0 +1,278 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 974af0b
+    bytesECI: 4fdde74
+    text: A larger PDF417 barcode with text and error correction level 4.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 11
+      topRight:
+        x: 421
+        y: 13
+      bottomRight:
+        x: 422
+        y: 164
+      bottomLeft:
+        x: 11
+        y: 165
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.75,"ECLevel":"46%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 46%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 974af0b
+    bytesECI: 4fdde74
+    text: A larger PDF417 barcode with text and error correction level 4.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 419
+        y: 165
+      topRight:
+        x: 9
+        y: 163
+      bottomRight:
+        x: 8
+        y: 12
+      bottomLeft:
+        x: 419
+        y: 11
+    orientation: -180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.75,"ECLevel":"46%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 46%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 974af0b
+    bytesECI: 4fdde74
+    text: A larger PDF417 barcode with text and error correction level 4.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 11
+      topRight:
+        x: 421
+        y: 13
+      bottomRight:
+        x: 422
+        y: 164
+      bottomLeft:
+        x: 11
+        y: 165
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.75,"ECLevel":"46%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 46%
+  "90":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 974af0b
+    bytesECI: 4fdde74
+    text: A larger PDF417 barcode with text and error correction level 4.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 165
+        y: 11
+      topRight:
+        x: 163
+        y: 421
+      bottomRight:
+        x: 12
+        y: 422
+      bottomLeft:
+        x: 11
+        y: 11
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.75,"ECLevel":"46%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 46%
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 974af0b
+    bytesECI: 4fdde74
+    text: A larger PDF417 barcode with text and error correction level 4.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 419
+        y: 165
+      topRight:
+        x: 9
+        y: 163
+      bottomRight:
+        x: 8
+        y: 12
+      bottomLeft:
+        x: 419
+        y: 11
+    orientation: -180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.75,"ECLevel":"46%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 46%
+  "270":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 974af0b
+    bytesECI: 4fdde74
+    text: A larger PDF417 barcode with text and error correction level 4.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 419
+      topRight:
+        x: 13
+        y: 9
+      bottomRight:
+        x: 164
+        y: 8
+      bottomLeft:
+        x: 165
+        y: 419
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.75,"ECLevel":"46%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 46%
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

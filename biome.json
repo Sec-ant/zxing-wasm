@@ -4,6 +4,8 @@
     "ignoreUnknown": true,
     "includes": [
       "**",
+      "!.ccache",
+      "!.emsdk-cache",
       "!**/zxing-cpp",
       "!**/__snapshots__",
       "!**/.changeset/pre.json"
@@ -14,7 +16,7 @@
   },
   "linter": {
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "suspicious": {
         "noAssignInExpressions": "off",
         "noEmptyInterface": "off",

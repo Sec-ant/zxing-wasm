@@ -22,7 +22,8 @@ jobs:
         run: pnpm -s changeset version
 
       - name: Build
-        run: pnpm -s prepublishOnly
+        run: pnpm -s build:all
 
       - name: Publish Preview Release
         run: pnpx pkg-pr-new publish --compact
+        working-directory: packages/zxing-wasm

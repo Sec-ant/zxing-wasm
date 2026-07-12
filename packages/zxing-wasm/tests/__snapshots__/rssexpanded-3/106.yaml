@@ -1,0 +1,198 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 65036c8
+    bytesECI: 3313f5a
+    text: 10123456A123456
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 34
+      topRight:
+        x: 359
+        y: 34
+      bottomRight:
+        x: 359
+        y: 35
+      bottomLeft:
+        x: 2
+        y: 35
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 65036c8
+    bytesECI: 3313f5a
+    text: 10123456A123456
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 361
+        y: 34
+      topRight:
+        x: 4
+        y: 34
+      bottomRight:
+        x: 4
+        y: 35
+      bottomLeft:
+        x: 361
+        y: 35
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 65036c8
+    bytesECI: 3313f5a
+    text: 10123456A123456
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 33
+      topRight:
+        x: 359
+        y: 33
+      bottomRight:
+        x: 359
+        y: 34
+      bottomLeft:
+        x: 2
+        y: 34
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 65036c8
+    bytesECI: 3313f5a
+    text: 10123456A123456
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 361
+        y: 33
+      topRight:
+        x: 4
+        y: 33
+      bottomRight:
+        x: 4
+        y: 34
+      bottomLeft:
+        x: 361
+        y: 34
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: 65036c8
+    bytesECI: 3313f5a
+    text: 10123456A123456
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 2
+        y: 34
+      topRight:
+        x: 359
+        y: 34
+      bottomRight:
+        x: 359
+        y: 34
+      bottomLeft:
+        x: 2
+        y: 34
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 1
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

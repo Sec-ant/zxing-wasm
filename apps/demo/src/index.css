@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --paper: #fffcf0;
+    --paper-deep: #f2f0e5;
+    --ink: #100f0f;
+    --muted: #6f6e69;
+    --line: #cecdc3;
+    --blue: var(--cyan);
+    --blue-soft: color-mix(in_srgb, var(--blue) 14%, transparent);
+    --brand: var(--cyan);
+    --yellow: #ad8301;
+    --green: #66800b;
+    --red: #af3029;
+    --cyan: #24837b;
+    --magenta: #ce5d97;
+    --orange: #bc5215;
+    --purple: #8b7ec8;
+    --amber: #d0a216;
+    --signal: var(--brand);
+    --signal-soft: color-mix(in_srgb, var(--signal) 12%, transparent);
+    --signal-deep: color-mix(in_srgb, var(--signal) 66%, var(--ink));
+    --action: var(--brand);
+    --action-soft: color-mix(in_srgb, var(--action) 12%, transparent);
+    --action-deep: color-mix(in_srgb, var(--action) 66%, var(--ink));
+    --focus: var(--brand);
+    --focus-soft: color-mix(in_srgb, var(--focus) 24%, transparent);
+    --info: var(--cyan);
+    --success: var(--green);
+    --warning: var(--yellow);
+    --danger: var(--red);
+    --danger-deep: color-mix(in_srgb, var(--danger) 66%, var(--ink));
+    --danger-soft: color-mix(in_srgb, var(--danger) 10%, transparent);
+    --on-status: #fffcf0;
+    --code-bg: #100f0f;
+    --code-fg: #fffcf0;
+    --serif: "Iowan Old Style", "Baskerville", "Songti SC", serif;
+    --mono: "SFMono-Regular", "Cascadia Mono", "Noto Sans Mono", monospace;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #100f0f;
+    --paper-deep: #1c1b1a;
+    --ink: #cecdc3;
+    --muted: #878580;
+    --line: #403e3c;
+    --blue: var(--cyan);
+    --blue-soft: color-mix(in_srgb, var(--blue) 14%, transparent);
+    --brand: var(--cyan);
+    --yellow: #d0a215;
+    --green: #879a39;
+    --red: #d14d41;
+    --cyan: #3f8c86;
+    --magenta: #d28baf;
+    --orange: #d08e38;
+    --purple: #8c86ff;
+    --amber: #f5a623;
+    --signal: var(--brand);
+    --signal-soft: color-mix(in_srgb, var(--signal) 12%, transparent);
+    --signal-deep: color-mix(in_srgb, var(--signal) 66%, var(--ink));
+    --action: var(--brand);
+    --action-soft: color-mix(in_srgb, var(--action) 12%, transparent);
+    --action-deep: color-mix(in_srgb, var(--action) 66%, var(--ink));
+    --focus: var(--brand);
+    --focus-soft: color-mix(in_srgb, var(--focus) 24%, transparent);
+    --info: var(--cyan);
+    --success: var(--green);
+    --warning: var(--yellow);
+    --danger: var(--red);
+    --danger-deep: color-mix(in_srgb, var(--danger) 66%, var(--ink));
+    --danger-soft: color-mix(in_srgb, var(--danger) 12%, transparent);
+    --on-status: #100f0f;
+    --code-bg: #1c1b1a;
+    --code-fg: #cecdc3;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      color-scheme: dark;
+      --paper: #100f0f;
+      --paper-deep: #1c1b1a;
+      --ink: #cecdc3;
+      --muted: #878580;
+      --line: #403e3c;
+      --blue: var(--cyan);
+      --blue-soft: color-mix(in_srgb, var(--blue) 14%, transparent);
+      --brand: var(--cyan);
+      --yellow: #d0a215;
+      --green: #879a39;
+      --red: #d14d41;
+      --cyan: #3f8c86;
+      --magenta: #d28baf;
+      --orange: #d08e38;
+      --purple: #8c86ff;
+      --amber: #f5a623;
+      --signal: var(--brand);
+      --signal-soft: color-mix(in_srgb, var(--signal) 12%, transparent);
+      --signal-deep: color-mix(in_srgb, var(--signal) 66%, var(--ink));
+      --action: var(--brand);
+      --action-soft: color-mix(in_srgb, var(--action) 12%, transparent);
+      --action-deep: color-mix(in_srgb, var(--action) 66%, var(--ink));
+      --focus: var(--brand);
+      --focus-soft: color-mix(in_srgb, var(--focus) 24%, transparent);
+      --info: var(--cyan);
+      --success: var(--green);
+      --warning: var(--yellow);
+      --danger: var(--red);
+      --danger-deep: color-mix(in_srgb, var(--danger) 66%, var(--ink));
+      --danger-soft: color-mix(in_srgb, var(--danger) 12%, transparent);
+      --on-status: #100f0f;
+      --code-bg: #1c1b1a;
+      --code-fg: #cecdc3;
+    }
+  }
+
+  html {
+    background: var(--paper);
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    min-width: 320px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Avenir Next", "Noto Sans SC", "PingFang SC", sans-serif;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+}

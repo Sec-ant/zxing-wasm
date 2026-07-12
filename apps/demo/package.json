@@ -1,0 +1,32 @@
+{
+  "name": "@zxing-wasm/demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node ./scripts/ensure-reader-wasm.mjs",
+    "dev": "vite",
+    "build": "pnpm -s type-check && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@base-ui/react": "catalog:",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-json-view-lite": "catalog:",
+    "zxing-wasm": "workspace:*"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "catalog:",
+    "@svgr/core": "catalog:",
+    "@svgr/plugin-jsx": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:typescript7",
+    "unplugin-icons": "catalog:",
+    "vite": "catalog:"
+  }
+}

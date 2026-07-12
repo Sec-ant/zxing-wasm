@@ -1,0 +1,238 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 35a6729
+    bytesECI: 89d43d5
+    text: A PDF 417 barcode with ASCII text
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 98
+        y: 57
+      topRight:
+        x: 426
+        y: 57
+      bottomRight:
+        x: 423
+        y: 186
+      bottomLeft:
+        x: 101
+        y: 188
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"14%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 14%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 35a6729
+    bytesECI: 89d43d5
+    text: A PDF 417 barcode with ASCII text
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 381
+        y: 182
+      topRight:
+        x: 53
+        y: 182
+      bottomRight:
+        x: 56
+        y: 53
+      bottomLeft:
+        x: 378
+        y: 51
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"14%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 14%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 35a6729
+    bytesECI: 89d43d5
+    text: A PDF 417 barcode with ASCII text
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 98
+        y: 57
+      topRight:
+        x: 426
+        y: 57
+      bottomRight:
+        x: 423
+        y: 186
+      bottomLeft:
+        x: 101
+        y: 188
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"14%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 14%
+  "90":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 35a6729
+    bytesECI: 89d43d5
+    text: A PDF 417 barcode with ASCII text
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 182
+        y: 98
+      topRight:
+        x: 182
+        y: 426
+      bottomRight:
+        x: 53
+        y: 423
+      bottomLeft:
+        x: 51
+        y: 101
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"14%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 14%
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 35a6729
+    bytesECI: 89d43d5
+    text: A PDF 417 barcode with ASCII text
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 381
+        y: 182
+      topRight:
+        x: 53
+        y: 182
+      bottomRight:
+        x: 56
+        y: 53
+      bottomLeft:
+        x: 378
+        y: 51
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"14%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 14%
+  "270":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 35a6729
+    bytesECI: 89d43d5
+    text: A PDF 417 barcode with ASCII text
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 57
+        y: 381
+      topRight:
+        x: 57
+        y: 53
+      bottomRight:
+        x: 186
+        y: 56
+      bottomLeft:
+        x: 188
+        y: 378
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"14%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 14%

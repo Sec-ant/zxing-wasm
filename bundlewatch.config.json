@@ -2,22 +2,22 @@
   "defaultCompression": "none",
   "files": [
     {
-      "path": "dist/full/*.wasm",
+      "path": "packages/zxing-wasm/dist/full/*.wasm",
       "maxSize": "2MB",
       "compression": "none"
     },
     {
-      "path": "dist/reader/*.wasm",
+      "path": "packages/zxing-wasm/dist/reader/*.wasm",
       "maxSize": "1.5MB",
       "compression": "none"
     },
     {
-      "path": "dist/writer/*.wasm",
+      "path": "packages/zxing-wasm/dist/writer/*.wasm",
       "maxSize": "1MB",
       "compression": "none"
     },
     {
-      "path": "dist/**/*.js",
+      "path": "packages/zxing-wasm/dist/**/*.js",
       "maxSize": "100kB",
       "compression": "none"
     }

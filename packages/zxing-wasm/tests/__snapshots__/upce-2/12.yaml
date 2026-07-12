@@ -1,0 +1,82 @@
+fast:
+  "0": null
+  "180": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: UPCE
+    symbology: EANUPC
+    bytes: 1513c94
+    bytesECI: ce09388
+    text: "0049000006346"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 25
+        y: 52
+      topRight:
+        x: 125
+        y: 52
+      bottomRight:
+        x: 125
+        y: 54
+      bottomLeft:
+        x: 26
+        y: 54
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UPCE":"04963406"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: UPCE
+    symbology: EANUPC
+    bytes: 1513c94
+    bytesECI: ce09388
+    text: "0049000006346"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 182
+        y: 24
+      topRight:
+        x: 83
+        y: 24
+      bottomRight:
+        x: 83
+        y: 26
+      bottomLeft:
+        x: 183
+        y: 26
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UPCE":"04963406"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""

@@ -1,0 +1,23 @@
+total: 4
+passAll: 0
+passSome: 0
+fast:
+  "0":
+    failures: 4
+    undetected:
+      total: 4
+      images:
+        - 01.webp
+        - 03.webp
+        - 04.webp
+        - 05.webp
+slow:
+  "0":
+    failures: 4
+    undetected:
+      total: 4
+      images:
+        - 01.webp
+        - 03.webp
+        - 04.webp
+        - 05.webp

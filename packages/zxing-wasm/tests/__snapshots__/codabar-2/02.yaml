@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Codabar
+    symbology: Codabar
+    bytes: c7a9176
+    bytesECI: 1c9b6f7
+    text: A80125178+B
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 118
+        y: 108
+      topRight:
+        x: 603
+        y: 108
+      bottomRight:
+        x: 603
+        y: 110
+      bottomLeft:
+        x: 118
+        y: 110
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]F0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Codabar
+    symbology: Codabar
+    bytes: c7a9176
+    bytesECI: 1c9b6f7
+    text: A80125178+B
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 629
+        y: 102
+      topRight:
+        x: 143
+        y: 102
+      bottomRight:
+        x: 143
+        y: 104
+      bottomLeft:
+        x: 629
+        y: 104
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]F0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Codabar
+    symbology: Codabar
+    bytes: c7a9176
+    bytesECI: 1c9b6f7
+    text: A80125178+B
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 118
+        y: 108
+      topRight:
+        x: 603
+        y: 108
+      bottomRight:
+        x: 603
+        y: 109
+      bottomLeft:
+        x: 118
+        y: 109
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]F0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Codabar
+    symbology: Codabar
+    bytes: c7a9176
+    bytesECI: 1c9b6f7
+    text: A80125178+B
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 629
+        y: 106
+      topRight:
+        x: 144
+        y: 106
+      bottomRight:
+        x: 144
+        y: 107
+      bottomLeft:
+        x: 629
+        y: 107
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]F0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

@@ -1,0 +1,240 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 03ac674
+    bytesECI: f3ea575
+    text: "1234"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 83
+        y: 30
+      topRight:
+        x: 295
+        y: 30
+      bottomRight:
+        x: 295
+        y: 59
+      bottomLeft:
+        x: 82
+        y: 59
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: bb724ba
+      width: 64
+      height: 8
+    extra: '{"UEC":0.88,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 03ac674
+    bytesECI: f3ea575
+    text: "1234"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 83
+        y: 30
+      topRight:
+        x: 295
+        y: 30
+      bottomRight:
+        x: 295
+        y: 59
+      bottomLeft:
+        x: 82
+        y: 59
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: bb724ba
+      width: 64
+      height: 8
+    extra: '{"UEC":0.88,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 03ac674
+    bytesECI: f3ea575
+    text: "1234"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 50
+        y: 83
+      topRight:
+        x: 50
+        y: 295
+      bottomRight:
+        x: 21
+        y: 295
+      bottomLeft:
+        x: 21
+        y: 82
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: bb724ba
+      width: 64
+      height: 8
+    extra: '{"UEC":0.88,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 03ac674
+    bytesECI: f3ea575
+    text: "1234"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 402
+        y: 50
+      topRight:
+        x: 189
+        y: 50
+      bottomRight:
+        x: 189
+        y: 21
+      bottomLeft:
+        x: 402
+        y: 21
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: c6bbc8c
+      width: 64
+      height: 8
+    extra: '{"UEC":0.88,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 03ac674
+    bytesECI: f3ea575
+    text: "1234"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 30
+        y: 402
+      topRight:
+        x: 30
+        y: 189
+      bottomRight:
+        x: 59
+        y: 189
+      bottomLeft:
+        x: 59
+        y: 402
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: c6bbc8c
+      width: 64
+      height: 8
+    extra: '{"UEC":0.88,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

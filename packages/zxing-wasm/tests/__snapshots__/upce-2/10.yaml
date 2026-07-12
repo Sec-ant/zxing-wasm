@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: UPCE
+    symbology: EANUPC
+    bytes: 1513c94
+    bytesECI: ce09388
+    text: "0049000006346"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 50
+        y: 33
+      topRight:
+        x: 151
+        y: 33
+      bottomRight:
+        x: 150
+        y: 34
+      bottomLeft:
+        x: 50
+        y: 34
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UPCE":"04963406"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: UPCE
+    symbology: EANUPC
+    bytes: 1513c94
+    bytesECI: ce09388
+    text: "0049000006346"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 190
+        y: 33
+      topRight:
+        x: 89
+        y: 33
+      bottomRight:
+        x: 89
+        y: 34
+      bottomLeft:
+        x: 190
+        y: 34
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UPCE":"04963406"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: UPCE
+    symbology: EANUPC
+    bytes: 1513c94
+    bytesECI: ce09388
+    text: "0049000006346"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 50
+        y: 34
+      topRight:
+        x: 150
+        y: 34
+      bottomRight:
+        x: 150
+        y: 36
+      bottomLeft:
+        x: 49
+        y: 36
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UPCE":"04963406"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: UPCE
+    symbology: EANUPC
+    bytes: 1513c94
+    bytesECI: ce09388
+    text: "0049000006346"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 190
+        y: 34
+      topRight:
+        x: 89
+        y: 34
+      bottomRight:
+        x: 89
+        y: 36
+      bottomLeft:
+        x: 189
+        y: 36
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UPCE":"04963406"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""

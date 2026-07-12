@@ -1,0 +1,126 @@
+fast:
+  "0": null
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 217
+        y: 79
+      topRight:
+        x: 220
+        y: 252
+      bottomRight:
+        x: 52
+        y: 254
+      bottomLeft:
+        x: 51
+        y: 76
+    orientation: 89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 287dd19
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":0.75,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
+  "180": null
+  "270": null
+slow:
+  "0": null
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 217
+        y: 79
+      topRight:
+        x: 220
+        y: 252
+      bottomRight:
+        x: 52
+        y: 254
+      bottomLeft:
+        x: 51
+        y: 76
+    orientation: 89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 287dd19
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":0.75,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
+  "180": null
+  "270": null
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

@@ -25,13 +25,15 @@ dist-ssr
 *.sln
 *.sw?
 
+artifacts
 docs
 build
 coverage
-src/**/zxing_*.wasm
-src/**/zxing_*.js
+**/src/**/zxing_*.wasm
+**/src/**/zxing_*.js
 
 .emsdk-cache
+.ccache
 *.tgz
 *.tar.gz
 *.tsbuildinfo

@@ -1,0 +1,82 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MaxiCode
+    symbology: MaxiCode
+    bytes: c37d691
+    bytesECI: 3c2c7b0
+    text: "123456789012345678901234567890123456789012345678901234567890123456789012\
+      345678901234567890123456789012345678901"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 98
+        y: 0
+      bottomRight:
+        x: 98
+        y: 94
+      bottomLeft:
+        x: 0
+        y: 94
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]U0"
+    sequenceSize: 3
+    sequenceIndex: 1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 7b1bc71
+      width: 30
+      height: 33
+    extra: '{"ECLevel":"5"}'
+    version: ""
+    readerInit: false
+    ecLevel: "5"
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: MaxiCode
+    symbology: MaxiCode
+    bytes: c37d691
+    bytesECI: 3c2c7b0
+    text: "123456789012345678901234567890123456789012345678901234567890123456789012\
+      345678901234567890123456789012345678901"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 98
+        y: 0
+      bottomRight:
+        x: 98
+        y: 94
+      bottomLeft:
+        x: 0
+        y: 94
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]U0"
+    sequenceSize: 3
+    sequenceIndex: 1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 7b1bc71
+      width: 30
+      height: 33
+    extra: '{"ECLevel":"5"}'
+    version: ""
+    readerInit: false
+    ecLevel: "5"

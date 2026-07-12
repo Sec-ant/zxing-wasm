@@ -1,0 +1,82 @@
+fast:
+  "0": null
+  "180": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: ad4bb09
+    bytesECI: 8981cb0
+    text: "0198898765432106320201234515991231"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 40
+        y: 361
+      topRight:
+        x: 40
+        y: 12
+      bottomRight:
+        x: 38
+        y: 12
+      bottomLeft:
+        x: 38
+        y: 361
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarExp
+    symbology: DataBar
+    bytes: ad4bb09
+    bytesECI: 8981cb0
+    text: "0198898765432106320201234515991231"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 44
+        y: 23
+      topRight:
+        x: 44
+        y: 372
+      bottomRight:
+        x: 42
+        y: 372
+      bottomLeft:
+        x: 42
+        y: 23
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

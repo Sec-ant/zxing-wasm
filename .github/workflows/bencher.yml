@@ -62,7 +62,7 @@ jobs:
             --threshold-max-sample-size 64 \
             --threshold-upper-boundary 0.99 \
             --thresholds-reset \
-            --file bench/bmf.json \
+            --file packages/zxing-wasm/bench/bmf.json \
             --github-actions "$GH_TOKEN" \
             true
 
@@ -111,7 +111,7 @@ jobs:
             --start-point-hash "$BASE_SHA" \
             --start-point-clone-thresholds \
             --start-point-reset \
-            --file bench/bmf.json \
+            --file packages/zxing-wasm/bench/bmf.json \
             --github-actions "$GH_TOKEN" \
             true
 
@@ -120,5 +120,5 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: bench-bmf
-          path: bench/bmf.json
+          path: packages/zxing-wasm/bench/bmf.json
           if-no-files-found: warn

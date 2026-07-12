@@ -1,0 +1,14 @@
+{
+  "name": "@zxing-wasm/typedoc",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "typedoc --options typedoc.json --excludeInternal",
+    "watch": "typedoc --options typedoc.json --watch --excludeInternal"
+  },
+  "devDependencies": {
+    "typedoc": "0.28.20",
+    "typedoc-plugin-replace-text": "4.2.0",
+    "typescript": "catalog:typescript6"
+  }
+}

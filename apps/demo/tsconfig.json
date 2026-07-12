@@ -1,0 +1,16 @@
+{
+  "extends": "../../tooling/tsconfig/base.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "paths": {
+      "zxing-wasm": ["../../packages/zxing-wasm/dist/cjs/full/index.d.ts"],
+      "zxing-wasm/reader": [
+        "../../packages/zxing-wasm/dist/cjs/reader/index.d.ts"
+      ]
+    },
+    "types": ["vite/client", "unplugin-icons/types/react"],
+    "jsx": "react-jsx",
+    "noEmit": true
+  },
+  "include": ["src", "vite.config.ts"]
+}

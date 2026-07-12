@@ -1,0 +1,126 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: e967788
+    bytesECI: 21ed91a
+    text: Data Matrix Code
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 51
+        y: 0
+      bottomRight:
+        x: 51
+        y: 23
+      bottomLeft:
+        x: 0
+        y: 23
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f1646d3
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: e967788
+    bytesECI: 21ed91a
+    text: Data Matrix Code
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 51
+        y: 0
+      bottomRight:
+        x: 51
+        y: 23
+      bottomLeft:
+        x: 0
+        y: 23
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f1646d3
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: e967788
+    bytesECI: 21ed91a
+    text: Data Matrix Code
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 51
+        y: 0
+      bottomRight:
+        x: 51
+        y: 23
+      bottomLeft:
+        x: 0
+        y: 23
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f1646d3
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""

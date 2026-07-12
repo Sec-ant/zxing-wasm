@@ -1,0 +1,278 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 19
+        y: 16
+      topRight:
+        x: 349
+        y: 40
+      bottomRight:
+        x: 319
+        y: 117
+      bottomLeft:
+        x: 15
+        y: 107
+    orientation: 3
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 336
+        y: 115
+      topRight:
+        x: 6
+        y: 91
+      bottomRight:
+        x: 36
+        y: 14
+      bottomLeft:
+        x: 340
+        y: 24
+    orientation: -177
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 20
+        y: 15
+      topRight:
+        x: 349
+        y: 40
+      bottomRight:
+        x: 320
+        y: 118
+      bottomLeft:
+        x: 17
+        y: 107
+    orientation: 3
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+  "90":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 116
+        y: 20
+      topRight:
+        x: 91
+        y: 349
+      bottomRight:
+        x: 13
+        y: 320
+      bottomLeft:
+        x: 24
+        y: 17
+    orientation: 93
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+  "180":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 335
+        y: 116
+      topRight:
+        x: 6
+        y: 91
+      bottomRight:
+        x: 35
+        y: 13
+      bottomLeft:
+        x: 338
+        y: 24
+    orientation: -177
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+  "270":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 15
+        y: 335
+      topRight:
+        x: 40
+        y: 6
+      bottomRight:
+        x: 118
+        y: 35
+      bottomLeft:
+        x: 107
+        y: 338
+    orientation: -87
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 19
+        y: 16
+      topRight:
+        x: 349
+        y: 40
+      bottomRight:
+        x: 319
+        y: 117
+      bottomLeft:
+        x: 15
+        y: 107
+    orientation: 3
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%

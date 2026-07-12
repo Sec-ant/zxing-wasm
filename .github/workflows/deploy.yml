@@ -33,7 +33,7 @@ jobs:
         run: |
           rm -rf .pages
           mkdir -p .pages
-          cp -R docs .pages/docs
+          cp -R artifacts/docs .pages/docs
           touch .pages/.nojekyll
 
       - name: Upload GitHub Pages artifact

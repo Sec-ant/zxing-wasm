@@ -1,0 +1,122 @@
+fast:
+  "0": null
+  "180": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarExpStk
+    symbology: DataBar
+    bytes: 9f6bd4e
+    bytesECI: 45ae55b
+    text: 1599123131030017501012A<GS>422123<GS>21123456<GS>4230123456789012
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 4
+        y: 67
+      topRight:
+        x: 101
+        y: 67
+      bottomRight:
+        x: 165
+        y: 296
+      bottomLeft:
+        x: 102
+        y: 296
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarExpStk
+    symbology: DataBar
+    bytes: 9f6bd4e
+    bytesECI: 45ae55b
+    text: 1599123131030017501012A<GS>422123<GS>21123456<GS>4230123456789012
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 199
+        y: 296
+      topRight:
+        x: 102
+        y: 296
+      bottomRight:
+        x: 38
+        y: 67
+      bottomLeft:
+        x: 101
+        y: 67
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

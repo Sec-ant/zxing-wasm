@@ -1,0 +1,362 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 27
+        y: 197
+      topRight:
+        x: 195
+        y: 197
+      bottomRight:
+        x: 194
+        y: 364
+      bottomLeft:
+        x: 27
+        y: 365
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 197
+        y: 27
+      topRight:
+        x: 197
+        y: 195
+      bottomRight:
+        x: 30
+        y: 194
+      bottomLeft:
+        x: 29
+        y: 27
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 228
+        y: 197
+      topRight:
+        x: 60
+        y: 197
+      bottomRight:
+        x: 61
+        y: 30
+      bottomLeft:
+        x: 228
+        y: 29
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 197
+        y: 228
+      topRight:
+        x: 197
+        y: 60
+      bottomRight:
+        x: 364
+        y: 61
+      bottomLeft:
+        x: 365
+        y: 228
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 27
+        y: 197
+      topRight:
+        x: 195
+        y: 197
+      bottomRight:
+        x: 194
+        y: 364
+      bottomLeft:
+        x: 27
+        y: 365
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 197
+        y: 27
+      topRight:
+        x: 197
+        y: 195
+      bottomRight:
+        x: 30
+        y: 194
+      bottomLeft:
+        x: 29
+        y: 27
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 228
+        y: 197
+      topRight:
+        x: 60
+        y: 197
+      bottomRight:
+        x: 61
+        y: 30
+      bottomLeft:
+        x: 228
+        y: 29
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 04f0689
+    bytesECI: 7eb3969
+    text: BIZCARD:N:Todd;X:Ogasawara;T:Tech Geek;C:MobileViews.com;A:MobileTown
+      USA;E:editor@mobileviews.com;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 197
+        y: 228
+      topRight:
+        x: 197
+        y: 60
+      bottomRight:
+        x: 364
+        y: 61
+      bottomLeft:
+        x: 365
+        y: 228
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3a371e8
+      width: 41
+      height: 41
+    extra: '{"DataMask":3,"UEC":1.0,"Version":"6","ECLevel":"M"}'
+    version: "6"
+    readerInit: false
+    ecLevel: M
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

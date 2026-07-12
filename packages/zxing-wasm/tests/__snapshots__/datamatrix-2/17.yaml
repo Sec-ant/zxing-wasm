@@ -1,0 +1,205 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: d42d407
+    bytesECI: c013fd4
+    text: This is a test of our DataMatrix support using a longer piece of text, and
+      therefore a more dense barcode.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 96
+        y: 96
+      topRight:
+        x: 206
+        y: 92
+      bottomRight:
+        x: 211
+        y: 203
+      bottomLeft:
+        x: 99
+        y: 207
+    orientation: -2
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: de5f039
+      width: 40
+      height: 40
+    extra: '{"UEC":0.87,"Version":"40x40"}'
+    version: 40x40
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: d42d407
+    bytesECI: c013fd4
+    text: This is a test of our DataMatrix support using a longer piece of text, and
+      therefore a more dense barcode.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 96
+        y: 96
+      topRight:
+        x: 206
+        y: 92
+      bottomRight:
+        x: 211
+        y: 203
+      bottomLeft:
+        x: 99
+        y: 207
+    orientation: -2
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: de5f039
+      width: 40
+      height: 40
+    extra: '{"UEC":0.87,"Version":"40x40"}'
+    version: 40x40
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: d42d407
+    bytesECI: c013fd4
+    text: This is a test of our DataMatrix support using a longer piece of text, and
+      therefore a more dense barcode.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 144
+        y: 96
+      topRight:
+        x: 148
+        y: 206
+      bottomRight:
+        x: 37
+        y: 211
+      bottomLeft:
+        x: 33
+        y: 99
+    orientation: 88
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: de5f039
+      width: 40
+      height: 40
+    extra: '{"UEC":0.87,"Version":"40x40"}'
+    version: 40x40
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: d42d407
+    bytesECI: c013fd4
+    text: This is a test of our DataMatrix support using a longer piece of text, and
+      therefore a more dense barcode.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 144
+        y: 144
+      topRight:
+        x: 34
+        y: 148
+      bottomRight:
+        x: 29
+        y: 37
+      bottomLeft:
+        x: 141
+        y: 33
+    orientation: 178
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: de5f039
+      width: 40
+      height: 40
+    extra: '{"UEC":0.87,"Version":"40x40"}'
+    version: 40x40
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: d42d407
+    bytesECI: c013fd4
+    text: This is a test of our DataMatrix support using a longer piece of text, and
+      therefore a more dense barcode.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 96
+        y: 144
+      topRight:
+        x: 92
+        y: 34
+      bottomRight:
+        x: 203
+        y: 29
+      bottomLeft:
+        x: 207
+        y: 141
+    orientation: -92
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: de5f039
+      width: 40
+      height: 40
+    extra: '{"UEC":0.87,"Version":"40x40"}'
+    version: 40x40
+    readerInit: false
+    ecLevel: ""

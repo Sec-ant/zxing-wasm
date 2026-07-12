@@ -1,0 +1,278 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: c91a5a7
+    bytesECI: f8cb329
+    text: ABCDEFGHIJKLMNOPQRSTUV
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 48
+        y: 58
+      topRight:
+        x: 203
+        y: 56
+      bottomRight:
+        x: 248
+        y: 206
+      bottomLeft:
+        x: 0
+        y: 209
+    orientation: -1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"38%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 38%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: c91a5a7
+    bytesECI: f8cb329
+    text: ABCDEFGHIJKLMNOPQRSTUV
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 207
+        y: 175
+      topRight:
+        x: 52
+        y: 177
+      bottomRight:
+        x: 7
+        y: 27
+      bottomLeft:
+        x: 255
+        y: 24
+    orientation: 179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"38%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 38%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: c91a5a7
+    bytesECI: f8cb329
+    text: ABCDEFGHIJKLMNOPQRSTUV
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 48
+        y: 58
+      topRight:
+        x: 202
+        y: 56
+      bottomRight:
+        x: 248
+        y: 205
+      bottomLeft:
+        x: 0
+        y: 209
+    orientation: -1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"38%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 38%
+  "90":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: c91a5a7
+    bytesECI: f8cb329
+    text: ABCDEFGHIJKLMNOPQRSTUV
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 175
+        y: 48
+      topRight:
+        x: 177
+        y: 202
+      bottomRight:
+        x: 28
+        y: 248
+      bottomLeft:
+        x: 24
+        y: 0
+    orientation: 89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"38%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 38%
+  "180":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: c91a5a7
+    bytesECI: f8cb329
+    text: ABCDEFGHIJKLMNOPQRSTUV
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 207
+        y: 175
+      topRight:
+        x: 53
+        y: 177
+      bottomRight:
+        x: 7
+        y: 28
+      bottomLeft:
+        x: 255
+        y: 24
+    orientation: 179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"38%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 38%
+  "270":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: c91a5a7
+    bytesECI: f8cb329
+    text: ABCDEFGHIJKLMNOPQRSTUV
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 58
+        y: 207
+      topRight:
+        x: 56
+        y: 53
+      bottomRight:
+        x: 205
+        y: 7
+      bottomLeft:
+        x: 209
+        y: 255
+    orientation: -91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"38%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 38%
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: c91a5a7
+    bytesECI: f8cb329
+    text: ABCDEFGHIJKLMNOPQRSTUV
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 48
+        y: 58
+      topRight:
+        x: 203
+        y: 56
+      bottomRight:
+        x: 248
+        y: 206
+      bottomLeft:
+        x: 0
+        y: 209
+    orientation: -1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"38%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 38%

@@ -1,0 +1,35 @@
+total: 13
+passAll: 10
+passSome: 11
+fast:
+  "0":
+    failures: 3
+    undetected:
+      total: 3
+      images:
+        - 8.webp
+        - 11.webp
+        - 15.webp
+  "180":
+    failures: 3
+    undetected:
+      total: 3
+      images:
+        - 8.webp
+        - 11.webp
+        - 15.webp
+slow:
+  "0":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 11.webp
+        - 15.webp
+  "180":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 11.webp
+        - 15.webp

@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 1
+        y: 0
+      topRight:
+        x: 208
+        y: 0
+      bottomRight:
+        x: 208
+        y: 207
+      bottomLeft:
+        x: 0
+        y: 208
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 208
+        y: 1
+      topRight:
+        x: 208
+        y: 208
+      bottomRight:
+        x: 1
+        y: 208
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 207
+        y: 208
+      topRight:
+        x: 0
+        y: 208
+      bottomRight:
+        x: 0
+        y: 1
+      bottomLeft:
+        x: 208
+        y: 0
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 0
+        y: 207
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 207
+        y: 0
+      bottomLeft:
+        x: 208
+        y: 208
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 1
+        y: 0
+      topRight:
+        x: 208
+        y: 0
+      bottomRight:
+        x: 208
+        y: 207
+      bottomLeft:
+        x: 0
+        y: 208
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 208
+        y: 1
+      topRight:
+        x: 208
+        y: 208
+      bottomRight:
+        x: 1
+        y: 208
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 207
+        y: 208
+      topRight:
+        x: 0
+        y: 208
+      bottomRight:
+        x: 0
+        y: 1
+      bottomLeft:
+        x: 208
+        y: 0
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 0
+        y: 207
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 207
+        y: 0
+      bottomLeft:
+        x: 208
+        y: 208
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: e438471
+    bytesECI: c73080e
+    text: ""
+    contentType: UnknownECI
+    hasECI: true
+    position:
+      topLeft:
+        x: 1
+        y: 0
+      topRight:
+        x: 208
+        y: 0
+      bottomRight:
+        x: 208
+        y: 207
+      bottomLeft:
+        x: 0
+        y: 208
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: aedd038
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"37%"}'
+    version: "6"
+    readerInit: false
+    ecLevel: 37%

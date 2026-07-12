@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 6
+        y: 5
+      topRight:
+        x: 96
+        y: 5
+      bottomRight:
+        x: 96
+        y: 95
+      bottomLeft:
+        x: 6
+        y: 95
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 95
+        y: 6
+      topRight:
+        x: 95
+        y: 96
+      bottomRight:
+        x: 5
+        y: 96
+      bottomLeft:
+        x: 5
+        y: 6
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 96
+        y: 95
+      topRight:
+        x: 6
+        y: 95
+      bottomRight:
+        x: 6
+        y: 5
+      bottomLeft:
+        x: 96
+        y: 5
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 5
+        y: 96
+      topRight:
+        x: 5
+        y: 6
+      bottomRight:
+        x: 95
+        y: 6
+      bottomLeft:
+        x: 95
+        y: 96
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 6
+        y: 5
+      topRight:
+        x: 96
+        y: 5
+      bottomRight:
+        x: 96
+        y: 95
+      bottomLeft:
+        x: 6
+        y: 95
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 95
+        y: 6
+      topRight:
+        x: 95
+        y: 96
+      bottomRight:
+        x: 5
+        y: 96
+      bottomLeft:
+        x: 5
+        y: 6
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 96
+        y: 95
+      topRight:
+        x: 6
+        y: 95
+      bottomRight:
+        x: 6
+        y: 5
+      bottomLeft:
+        x: 96
+        y: 5
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 5
+        y: 96
+      topRight:
+        x: 5
+        y: 6
+      bottomRight:
+        x: 95
+        y: 6
+      bottomLeft:
+        x: 95
+        y: 96
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 3aa43e9
+    bytesECI: 30f5fc3
+    text: "*ﾃﾞｻﾞｲﾝQR*  <CR><LF>http://d-qr.net/ex/        "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 6
+        y: 5
+      topRight:
+        x: 95
+        y: 5
+      bottomRight:
+        x: 95
+        y: 94
+      bottomLeft:
+        x: 6
+        y: 94
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5652a05
+      width: 37
+      height: 37
+    extra: '{"DataMask":0,"UEC":0.45,"Version":"5","ECLevel":"H"}'
+    version: "5"
+    readerInit: false
+    ecLevel: H

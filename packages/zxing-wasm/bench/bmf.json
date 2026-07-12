@@ -1,0 +1,205 @@
+{
+  "decode — fast path (single format, no rotate / no invert) > QRCode": {
+    "latency-ms": {
+      "value": 0.42187192158516046,
+      "lower_value": 0.4188131703233179,
+      "upper_value": 0.42493067284700303
+    }
+  },
+  "decode — fast path (single format, no rotate / no invert) > DataMatrix": {
+    "latency-ms": {
+      "value": 0.2352115936030102,
+      "lower_value": 0.23354164206866815,
+      "upper_value": 0.23688154513735224
+    }
+  },
+  "decode — fast path (single format, no rotate / no invert) > Aztec": {
+    "latency-ms": {
+      "value": 0.09786891094147773,
+      "lower_value": 0.09696213018295521,
+      "upper_value": 0.09877569170000025
+    }
+  },
+  "decode — fast path (single format, no rotate / no invert) > PDF417": {
+    "latency-ms": {
+      "value": 0.12547842986198643,
+      "lower_value": 0.12443864553093699,
+      "upper_value": 0.12651821419303586
+    }
+  },
+  "decode — fast path (single format, no rotate / no invert) > MicroPDF417": {
+    "latency-ms": {
+      "value": 0.26905376062398395,
+      "lower_value": 0.2682280068314937,
+      "upper_value": 0.2698795144164742
+    }
+  },
+  "decode — fast path (single format, no rotate / no invert) > Code128": {
+    "latency-ms": {
+      "value": 0.20594766021416525,
+      "lower_value": 0.20416981655399735,
+      "upper_value": 0.20772550387433314
+    }
+  },
+  "decode — fast path (single format, no rotate / no invert) > Telepen": {
+    "latency-ms": {
+      "value": 0.024689706794391083,
+      "lower_value": 0.024147328472413365,
+      "upper_value": 0.0252320851163688
+    }
+  },
+  "decode — fast path (single format, no rotate / no invert) > EAN-13": {
+    "latency-ms": {
+      "value": 0.16460550098748472,
+      "lower_value": 0.16320736118646476,
+      "upper_value": 0.16600364078850469
+    }
+  },
+  "decode — failure path (default options, no barcode in frame) > no-barcode 1080p": {
+    "latency-ms": {
+      "value": 36.88085839999999,
+      "lower_value": 36.78120767038062,
+      "upper_value": 36.98050912961936
+    }
+  },
+  "rgbaToGrayscale > 720p — 921,600 px": {
+    "latency-ms": {
+      "value": 1.1427255410958916,
+      "lower_value": 1.1297740194164008,
+      "upper_value": 1.1556770627753825
+    }
+  },
+  "rgbaToGrayscale > 1080p — 2,073,600 px": {
+    "latency-ms": {
+      "value": 2.5550692704081697,
+      "lower_value": 2.5274316776824186,
+      "upper_value": 2.5827068631339207
+    }
+  },
+  "Uint8Array allocation (baseline) > new Uint8Array(921,600)": {
+    "latency-ms": {
+      "value": 0.013659097880127863,
+      "lower_value": 0.01318442004864013,
+      "upper_value": 0.014133775711615596
+    }
+  },
+  "Uint8Array allocation (baseline) > new Uint8Array(2,073,600)": {
+    "latency-ms": {
+      "value": 0.021403440537303274,
+      "lower_value": 0.02069542208044809,
+      "upper_value": 0.022111458994158457
+    }
+  },
+  "Input formats — 720p > ImageData": {
+    "latency-ms": {
+      "value": 3.004628023952098,
+      "lower_value": 2.978713572031481,
+      "upper_value": 3.030542475872715
+    }
+  },
+  "Input formats — 720p > PNG / Uint8Array": {
+    "latency-ms": {
+      "value": 5.819144883720943,
+      "lower_value": 5.798849090994536,
+      "upper_value": 5.83944067644735
+    }
+  },
+  "Input formats — 720p > JPEG / Uint8Array": {
+    "latency-ms": {
+      "value": 4.189700341666676,
+      "lower_value": 4.18249267387124,
+      "upper_value": 4.196908009462112
+    }
+  },
+  "Input formats — 720p > PNG / Blob": {
+    "latency-ms": {
+      "value": 5.819898197674399,
+      "lower_value": 5.803327697016293,
+      "upper_value": 5.836468698332505
+    }
+  },
+  "Input formats — 1080p > ImageData": {
+    "latency-ms": {
+      "value": 6.765601310810799,
+      "lower_value": 6.719853146765375,
+      "upper_value": 6.811349474856223
+    }
+  },
+  "Input formats — 1080p > PNG / Uint8Array": {
+    "latency-ms": {
+      "value": 13.082295099999984,
+      "lower_value": 13.051585106917178,
+      "upper_value": 13.113005093082789
+    }
+  },
+  "Input formats — 1080p > JPEG / Uint8Array": {
+    "latency-ms": {
+      "value": 9.09106816363639,
+      "lower_value": 9.073480551904405,
+      "upper_value": 9.108655775368375
+    }
+  },
+  "Input formats — 1080p > PNG / Blob": {
+    "latency-ms": {
+      "value": 13.15566580000006,
+      "lower_value": 13.107768059501643,
+      "upper_value": 13.203563540498477
+    }
+  },
+  "readBarcodes — default options > 720p": {
+    "latency-ms": {
+      "value": 18.883631620000003,
+      "lower_value": 18.833781656433995,
+      "upper_value": 18.93348158356601
+    }
+  },
+  "readBarcodes — default options > 1080p": {
+    "latency-ms": {
+      "value": 37.54240918000001,
+      "lower_value": 37.44928408321662,
+      "upper_value": 37.635534276783396
+    }
+  },
+  "readBarcodes — optimized options > 720p": {
+    "latency-ms": {
+      "value": 2.981743011904758,
+      "lower_value": 2.9541959497645043,
+      "upper_value": 3.0092900740450115
+    }
+  },
+  "readBarcodes — optimized options > 1080p": {
+    "latency-ms": {
+      "value": 6.7547336599999745,
+      "lower_value": 6.715185808121247,
+      "upper_value": 6.794281511878702
+    }
+  },
+  "writeBarcode — encoder > QRCode (URL)": {
+    "latency-ms": {
+      "value": 0.3090051105620752,
+      "lower_value": 0.30795982210323253,
+      "upper_value": 0.31005039902091786
+    }
+  },
+  "writeBarcode — encoder > DataMatrix (URL)": {
+    "latency-ms": {
+      "value": 0.206212395876289,
+      "lower_value": 0.20580258301935447,
+      "upper_value": 0.20662220873322354
+    }
+  },
+  "writeBarcode — encoder > Aztec (text)": {
+    "latency-ms": {
+      "value": 0.18289174615947312,
+      "lower_value": 0.18248998017835888,
+      "upper_value": 0.18329351214058737
+    }
+  },
+  "writeBarcode — encoder > EAN-13 (12 digits)": {
+    "latency-ms": {
+      "value": 0.16105430370370072,
+      "lower_value": 0.16064978845250696,
+      "upper_value": 0.16145881895489447
+    }
+  }
+}

@@ -1,0 +1,345 @@
+import { readFile } from "node:fs/promises";
+import { basename, extname, resolve } from "node:path";
+import { glob } from "tinyglobby";
+import {
+  afterAll,
+  beforeAll,
+  describe,
+  expect,
+  onTestFinished,
+  test,
+} from "vitest";
+import { formatToLabel } from "../src/bindings/barcodeFormat.js";
+import {
+  prepareZXingModule,
+  type ReaderOptions,
+  readBarcodes,
+} from "../src/reader/index.js";
+import { testEntries } from "./testEntries.js";
+import { parseUpstreamBlackboxContracts } from "./upstreamBlackbox.js";
+import {
+  DEFAULT_READER_OPTIONS_FOR_TESTS,
+  formatSnapshot,
+  getRotatedImage,
+  isLinearBarcodeFormat,
+  parseExpectedBinary,
+  parseExpectedResult,
+  parseExpectedText,
+  takeSnapshot,
+  warmUpCache,
+} from "./utils.js";
+
+type Type = "fast" | "slow" | "pure";
+
+type _Summary = {
+  [type in Type]?: {
+    [rotation in number]: {
+      failures?: number;
+      misreads?: {
+        total: number;
+        images: {
+          path: string;
+          description: string;
+        }[];
+      };
+      undetected?: {
+        total: number;
+        images: string[];
+      };
+    };
+  };
+};
+
+interface Summary extends _Summary {
+  total: number;
+  passAll: number;
+  passSome: number;
+}
+
+type Entries<T> = {
+  [K in keyof T]: [K, T[K]];
+}[keyof T][];
+
+type UpstreamStats = {
+  passCount: number;
+  misreadImages: Set<string>;
+};
+
+const TEST_RUNNER_PATH = resolve(
+  import.meta.dirname,
+  "../../../vendor/zxing-cpp/test/blackbox/BlackboxTestRunner.cpp",
+);
+const SAMPLES_PATH_PREFIX = "../../vendor/zxing-cpp/test/samples";
+const zxingCppBlackBoxTestRunner = await readFile(TEST_RUNNER_PATH, "utf-8");
+const upstreamContracts = parseUpstreamBlackboxContracts(
+  zxingCppBlackBoxTestRunner,
+);
+
+test("consistent test entries", async () => {
+  expect([...upstreamContracts.keys()]).toEqual(
+    testEntries.map(({ directory }) => directory),
+  );
+});
+
+await prepareZXingModule({
+  overrides: {
+    wasmBinary: (
+      await readFile(
+        resolve(import.meta.dirname, "../src/reader/zxing_reader.wasm"),
+      )
+    ).buffer as ArrayBuffer,
+  },
+  fireImmediately: true,
+});
+
+for (const {
+  directory,
+  barcodeFormat,
+  testFast = true,
+  testSlow = true,
+  testPure = false,
+  rotations = isLinearBarcodeFormat(barcodeFormat)
+    ? [0, 180]
+    : [0, 90, 180, 270],
+  readerOptions = DEFAULT_READER_OPTIONS_FOR_TESTS,
+} of testEntries) {
+  describe(directory, async () => {
+    const upstreamContract = upstreamContracts.get(directory);
+    if (!upstreamContract) {
+      throw new Error(`Missing zxing-cpp blackbox contract for ${directory}`);
+    }
+    const types = [
+      ...(testFast ? ["fast"] : []),
+      ...(testSlow ? ["slow"] : []),
+      ...(testPure ? ["pure"] : []),
+    ] as Type[];
+    const imagePaths = (
+      await glob([
+        `${SAMPLES_PATH_PREFIX}/${directory}/*.(png|jpg|pgm|gif|webp)`,
+      ])
+    ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    const summary: Summary = {
+      total: imagePaths.length,
+      passAll: 0,
+      passSome: 0,
+    };
+    const upstreamStats = new Map<string, UpstreamStats>();
+    for (const imagePath of imagePaths) {
+      let passAll = true;
+      let passSome = false;
+      const imageName = basename(imagePath, extname(imagePath));
+      const imageNameWithExt = basename(imagePath);
+      const snapshots: Partial<
+        Record<Type, Record<number, ReturnType<typeof takeSnapshot>>>
+      > = {};
+      const [expectedResult, expectedText, expectedBinary] = await Promise.all([
+        parseExpectedResult(imagePath),
+        parseExpectedText(imagePath),
+        parseExpectedBinary(imagePath),
+      ]);
+      describe(`${directory} ${imageName}`, async () => {
+        beforeAll(async () => {
+          await warmUpCache(imagePath, rotations);
+        });
+        afterAll(() => {
+          if (passAll) {
+            ++summary.passAll;
+          }
+          if (passSome) {
+            ++summary.passSome;
+          }
+        });
+        for (const type of types) {
+          summary[type] ??= {};
+          snapshots[type] ??= {};
+          for (const rotation of type === "pure" ? [0] : rotations) {
+            const upstreamExpectation = upstreamContract.expectations.find(
+              (expectation) =>
+                expectation.type === type && expectation.rotation === rotation,
+            );
+            if (!upstreamExpectation) {
+              throw new Error(
+                `Test matrix differs from zxing-cpp for ${directory} ${type} ${rotation}`,
+              );
+            }
+            const upstreamKey = `${type}:${rotation}`;
+            upstreamStats.set(upstreamKey, {
+              passCount: 0,
+              misreadImages: new Set(),
+            });
+            summary[type][rotation] ??= {
+              failures: 0,
+              misreads: {
+                total: 0,
+                images: [],
+              },
+              undetected: {
+                total: 0,
+                images: [],
+              },
+            };
+            test(`${directory} ${imageName} ${type} ${rotation}`, async () => {
+              let passCurrent = true;
+              let detected = false;
+
+              onTestFinished(() => {
+                passAll &&= passCurrent;
+                passSome ||= passCurrent;
+                const stats = upstreamStats.get(upstreamKey)!;
+                if (passCurrent) {
+                  stats.passCount += 1;
+                } else if (detected) {
+                  stats.misreadImages.add(imageNameWithExt);
+                }
+              });
+
+              const input = await getRotatedImage(imagePath, rotation);
+
+              const appliedReaderOptions: ReaderOptions = {
+                ...readerOptions,
+                tryHarder: type === "slow",
+                tryRotate: type === "slow",
+                tryInvert: type === "slow",
+                isPure: type === "pure",
+                binarizer: type === "pure" ? "FixedThreshold" : "LocalAverage",
+              };
+
+              const [barcode] = await readBarcodes(
+                Buffer.isBuffer(input)
+                  ? new Blob([input as BlobPart])
+                  : (input as ImageData),
+                appliedReaderOptions,
+              );
+
+              snapshots[type]![rotation] = takeSnapshot(barcode);
+
+              // Undetected
+              if (barcode === undefined || !barcode.isValid) {
+                summary[type]![rotation].undetected!.images.push(
+                  imageNameWithExt,
+                );
+                summary[type]![rotation].undetected!.total += 1;
+                passCurrent = false;
+                return;
+              }
+              detected = true;
+
+              // Format mismatch (allow matching either format or symbology,
+              // mirroring zxing-cpp BlackboxTestRunner.cpp)
+              if (
+                barcode.format !== barcodeFormat &&
+                barcode.symbology !== barcodeFormat
+              ) {
+                summary[type]![rotation].misreads!.images.push({
+                  path: imageNameWithExt,
+                  description: `[Format mismatch]: expected '${barcodeFormat}', but got '${barcode.format}'`,
+                });
+                summary[type]![rotation].misreads!.total += 1;
+                passCurrent = false;
+              }
+
+              // .result.txt
+              if (expectedResult) {
+                let misread = false;
+                let description = "[Result mismatch]:";
+                for (const [key, value] of Object.entries(
+                  expectedResult,
+                ) as Entries<typeof expectedResult>) {
+                  // Mirror C++ getBarcodeValue: for "format" key, compare
+                  // against the HRI label (e.g. "Code 32") rather than
+                  // the canonical name (e.g. "Code32").
+                  const actual =
+                    key === "format"
+                      ? (formatToLabel(barcode[key]) ?? barcode[key].toString())
+                      : barcode[key].toString();
+                  if (actual !== value) {
+                    misread = true;
+                    description += `\n  ${key}: expected '${value}', but got '${actual}'`;
+                  }
+                }
+                if (misread) {
+                  summary[type]![rotation].misreads!.images.push({
+                    path: imageNameWithExt,
+                    description,
+                  });
+                  summary[type]![rotation].misreads!.total += 1;
+                  passCurrent = false;
+                }
+              }
+
+              // .txt
+              if (expectedText) {
+                if (barcode.text !== expectedText) {
+                  summary[type]![rotation].misreads!.images.push({
+                    path: imageNameWithExt,
+                    description: `[Text content mismatch]: expected '${expectedText}', but got '${barcode.text}'`,
+                  });
+                  summary[type]![rotation].misreads!.total += 1;
+                  passCurrent = false;
+                }
+              }
+
+              // .bin
+              if (expectedBinary) {
+                if (!expectedBinary.equals(Buffer.from(barcode.bytes))) {
+                  summary[type]![rotation].misreads!.images.push({
+                    path: imageNameWithExt,
+                    description: "[Binary content mismatch]",
+                  });
+                  summary[type]![rotation].misreads!.total += 1;
+                  passCurrent = false;
+                }
+              }
+            });
+          }
+        }
+        test.sequential(`${directory} ${imageName} snapshot`, async () => {
+          await expect(formatSnapshot(snapshots)).toMatchFileSnapshot(
+            resolve(
+              import.meta.dirname,
+              `./__snapshots__/${directory}/${imageName}.yaml`,
+            ),
+          );
+        });
+      });
+    }
+    test.sequential(`${directory} summary`, async () => {
+      for (const type of types) {
+        for (const _summary of Object.values(summary[type]!)) {
+          _summary!.failures = new Set([
+            ..._summary!.misreads!.images,
+            ..._summary!.undetected!.images,
+          ]).size;
+          if (_summary!.misreads!.total === 0) {
+            delete _summary!.misreads;
+          }
+          if (_summary!.undetected!.total === 0) {
+            delete _summary!.undetected;
+          }
+          if (_summary!.failures === 0) {
+            delete _summary!.failures;
+          }
+        }
+      }
+      await expect(formatSnapshot(summary)).toMatchFileSnapshot(
+        resolve(
+          import.meta.dirname,
+          `./__snapshots__/${directory}/summary.yaml`,
+        ),
+      );
+      expect(imagePaths).toHaveLength(upstreamContract.imageCount);
+      for (const expectation of upstreamContract.expectations) {
+        const stats = upstreamStats.get(
+          `${expectation.type}:${expectation.rotation}`,
+        );
+        expect(stats).toBeDefined();
+        expect(stats!.passCount).toBeGreaterThanOrEqual(
+          expectation.minPassCount,
+        );
+        expect(stats!.misreadImages.size).toBeLessThanOrEqual(
+          expectation.maxMisreads,
+        );
+      }
+    });
+  });
+}

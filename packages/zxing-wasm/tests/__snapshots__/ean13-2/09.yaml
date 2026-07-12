@@ -1,0 +1,82 @@
+fast:
+  "0": null
+  "180": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 3bc85e2
+    bytesECI: dec3e35
+    text: "9780345348036"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 46
+        y: 96
+      topRight:
+        x: 267
+        y: 96
+      bottomRight:
+        x: 264
+        y: 134
+      bottomLeft:
+        x: 40
+        y: 134
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 3bc85e2
+    bytesECI: dec3e35
+    text: "9780345348036"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 306
+        y: 116
+      topRight:
+        x: 82
+        y: 116
+      bottomRight:
+        x: 79
+        y: 154
+      bottomLeft:
+        x: 300
+        y: 154
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

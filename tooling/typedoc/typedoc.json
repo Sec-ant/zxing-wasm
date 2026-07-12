@@ -1,0 +1,24 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "tsconfig": "../../packages/zxing-wasm/tsconfig.pkg.json",
+  "entryPoints": [
+    "../../packages/zxing-wasm/src/full/index.ts",
+    "../../packages/zxing-wasm/src/reader/index.ts",
+    "../../packages/zxing-wasm/src/writer/index.ts"
+  ],
+  "readme": "../../packages/zxing-wasm/README.md",
+  "out": "../../artifacts/docs",
+  "plugin": ["typedoc-plugin-replace-text"],
+  "replaceText": {
+    "replacements": [
+      {
+        "pattern": "# zxing-wasm[\\s\\n]+",
+        "replace": ""
+      },
+      {
+        "pattern": "]\\(https:\\/\\/(?:zxing-wasm\\.deno\\.dev|sec-ant\\.github\\.io\\/zxing-wasm\\/docs?)\\/",
+        "replace": "](./"
+      }
+    ]
+  }
+}

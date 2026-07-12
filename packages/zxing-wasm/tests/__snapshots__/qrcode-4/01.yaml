@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 37
+        y: 40
+      topRight:
+        x: 208
+        y: 36
+      bottomRight:
+        x: 200
+        y: 206
+      bottomLeft:
+        x: 38
+        y: 204
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 200
+        y: 37
+      topRight:
+        x: 204
+        y: 208
+      bottomRight:
+        x: 34
+        y: 200
+      bottomLeft:
+        x: 36
+        y: 38
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 203
+        y: 200
+      topRight:
+        x: 32
+        y: 204
+      bottomRight:
+        x: 40
+        y: 34
+      bottomLeft:
+        x: 202
+        y: 36
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 40
+        y: 203
+      topRight:
+        x: 36
+        y: 32
+      bottomRight:
+        x: 206
+        y: 40
+      bottomLeft:
+        x: 204
+        y: 202
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 37
+        y: 40
+      topRight:
+        x: 208
+        y: 36
+      bottomRight:
+        x: 200
+        y: 206
+      bottomLeft:
+        x: 38
+        y: 204
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 200
+        y: 37
+      topRight:
+        x: 204
+        y: 208
+      bottomRight:
+        x: 34
+        y: 200
+      bottomLeft:
+        x: 36
+        y: 38
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 203
+        y: 200
+      topRight:
+        x: 32
+        y: 204
+      bottomRight:
+        x: 40
+        y: 34
+      bottomLeft:
+        x: 202
+        y: 36
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "43e2286"
+    bytesECI: 269c58c
+    text: Google Print Ads - T.G.I.A.F. - January 31, 2008
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 40
+        y: 203
+      topRight:
+        x: 36
+        y: 32
+      bottomRight:
+        x: 206
+        y: 40
+      bottomLeft:
+        x: 204
+        y: 202
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: f235244
+      width: 29
+      height: 29
+    extra: '{"DataMask":6,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L

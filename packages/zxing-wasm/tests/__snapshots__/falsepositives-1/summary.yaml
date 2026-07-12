@@ -1,0 +1,240 @@
+total: 21
+passAll: 0
+passSome: 0
+fast:
+  "0":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+  "90":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+  "180":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+  "270":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+slow:
+  "0":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+  "90":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+  "180":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+  "270":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg
+pure:
+  "0":
+    failures: 21
+    undetected:
+      total: 21
+      images:
+        - "#245.png"
+        - "#570.png"
+        - 01.webp
+        - 1x1.webp
+        - 1x100.webp
+        - 02.webp
+        - 05.webp
+        - 06.webp
+        - 07.webp
+        - 08.webp
+        - 09.webp
+        - 10.webp
+        - 11.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp
+        - 16.webp
+        - 17.webp
+        - 19.webp
+        - 21.webp
+        - MQR-falsepositive.jpg

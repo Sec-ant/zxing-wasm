@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarStk
+    symbology: DataBar
+    bytes: d07c5c9
+    bytesECI: d5ddc2c
+    text: "0100012345678905"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 324
+        y: 141
+      topRight:
+        x: 48
+        y: 141
+      bottomRight:
+        x: 46
+        y: 113
+      bottomLeft:
+        x: 329
+        y: 113
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarStk
+    symbology: DataBar
+    bytes: d07c5c9
+    bytesECI: d5ddc2c
+    text: "0100012345678905"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 34
+        y: 99
+      topRight:
+        x: 314
+        y: 99
+      bottomRight:
+        x: 313
+        y: 127
+      bottomLeft:
+        x: 30
+        y: 127
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataBarStk
+    symbology: DataBar
+    bytes: d07c5c9
+    bytesECI: d5ddc2c
+    text: "0100012345678905"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 324
+        y: 136
+      topRight:
+        x: 45
+        y: 136
+      bottomRight:
+        x: 43
+        y: 114
+      bottomLeft:
+        x: 329
+        y: 114
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataBarStk
+    symbology: DataBar
+    bytes: d07c5c9
+    bytesECI: d5ddc2c
+    text: "0100012345678905"
+    contentType: GS1
+    hasECI: false
+    position:
+      topLeft:
+        x: 35
+        y: 103
+      topRight:
+        x: 314
+        y: 103
+      bottomRight:
+        x: 316
+        y: 125
+      bottomLeft:
+        x: 30
+        y: 125
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]e0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

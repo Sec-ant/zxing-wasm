@@ -1,0 +1,31 @@
+total: 16
+passAll: 4
+passSome: 16
+fast:
+  "0": {}
+  "90": {}
+  "180": {}
+  "270": {}
+slow:
+  "0": {}
+  "90": {}
+  "180": {}
+  "270": {}
+pure:
+  "0":
+    failures: 12
+    undetected:
+      total: 12
+      images:
+        - 01.webp
+        - 02.webp
+        - 03.webp
+        - 04.webp
+        - 05.webp
+        - 08.webp
+        - 09.webp
+        - 11.webp
+        - 12.webp
+        - 13.webp
+        - 14.webp
+        - 15.webp

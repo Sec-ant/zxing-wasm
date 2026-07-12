@@ -1,0 +1,80 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MaxiCode
+    symbology: MaxiCode
+    bytes: c4d868f
+    bytesECI: 963f6a8
+    text: "[)><RS>01<GS>96123450000<GS>222<GS>111<GS>MODE4"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 12
+        y: 14
+      topRight:
+        x: 249
+        y: 14
+      bottomRight:
+        x: 249
+        y: 244
+      bottomLeft:
+        x: 12
+        y: 244
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]U1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 479791f
+      width: 30
+      height: 33
+    extra: '{"ECLevel":"2"}'
+    version: ""
+    readerInit: false
+    ecLevel: "2"
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: MaxiCode
+    symbology: MaxiCode
+    bytes: c4d868f
+    bytesECI: 963f6a8
+    text: "[)><RS>01<GS>96123450000<GS>222<GS>111<GS>MODE4"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 12
+        y: 14
+      topRight:
+        x: 249
+        y: 14
+      bottomRight:
+        x: 249
+        y: 244
+      bottomLeft:
+        x: 12
+        y: 244
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]U1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 479791f
+      width: 30
+      height: 33
+    extra: '{"ECLevel":"2"}'
+    version: ""
+    readerInit: false
+    ecLevel: "2"

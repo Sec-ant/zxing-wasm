@@ -1,7 +1,10 @@
 zxing-cpp
+.ccache
+.emsdk-cache
 docs
 dist
 build
+**/__snapshots__
 *.js
 *.ts
 *.cjs

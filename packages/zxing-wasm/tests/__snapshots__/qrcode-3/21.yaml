@@ -1,0 +1,322 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 17
+        y: 14
+      topRight:
+        x: 197
+        y: 17
+      bottomRight:
+        x: 184
+        y: 158
+      bottomLeft:
+        x: 31
+        y: 156
+    orientation: 1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 6a5937b
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.77,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 166
+        y: 17
+      topRight:
+        x: 163
+        y: 197
+      bottomRight:
+        x: 22
+        y: 184
+      bottomLeft:
+        x: 24
+        y: 30
+    orientation: 91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0758cf1
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 194
+        y: 166
+      topRight:
+        x: 14
+        y: 163
+      bottomRight:
+        x: 27
+        y: 22
+      bottomLeft:
+        x: 180
+        y: 24
+    orientation: -179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 56260eb
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 14
+        y: 194
+      topRight:
+        x: 17
+        y: 14
+      bottomRight:
+        x: 157
+        y: 27
+      bottomLeft:
+        x: 156
+        y: 181
+    orientation: -89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "5265424"
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 17
+        y: 14
+      topRight:
+        x: 197
+        y: 17
+      bottomRight:
+        x: 184
+        y: 158
+      bottomLeft:
+        x: 31
+        y: 156
+    orientation: 1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 6a5937b
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.77,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 166
+        y: 17
+      topRight:
+        x: 163
+        y: 197
+      bottomRight:
+        x: 22
+        y: 184
+      bottomLeft:
+        x: 24
+        y: 30
+    orientation: 91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0758cf1
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 194
+        y: 166
+      topRight:
+        x: 14
+        y: 163
+      bottomRight:
+        x: 27
+        y: 22
+      bottomLeft:
+        x: 180
+        y: 24
+    orientation: -179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 56260eb
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 65a30ce
+    bytesECI: a351329
+    text: UI office hours
+      signup<CR><LF>http://www.corp.google.com/sparrow/ui_office_hours/ <CR><LF>
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 14
+        y: 194
+      topRight:
+        x: 17
+        y: 14
+      bottomRight:
+        x: 157
+        y: 27
+      bottomLeft:
+        x: 156
+        y: 181
+    orientation: -89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "5265424"
+      width: 45
+      height: 45
+    extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
+    version: "7"
+    readerInit: false
+    ecLevel: Q

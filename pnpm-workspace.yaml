@@ -1,3 +1,29 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "tooling/*"
+
+catalog:
+  "@base-ui/react": ^1.6.0
+  "@iconify-json/lucide": ^1.2.116
+  "@svgr/core": ^8.1.0
+  "@svgr/plugin-jsx": ^8.1.0
+  "@types/node": ^26.1.1
+  "@vitest/ui": ^4.1.10
+  "@tailwindcss/vite": ^4.1.18
+  concurrently: ^10.0.3
+  react-json-view-lite: ^2.5.0
+  tailwindcss: ^4.1.18
+  unplugin-icons: ^23.0.1
+  vite: ^8.1.4
+  vitest: ^4.1.10
+
+catalogs:
+  typescript6:
+    typescript: 6.0.2
+  typescript7:
+    typescript: 7.0.2
+
 dedupePeers: true
 publicHoistPattern:
   - "@changesets/config"

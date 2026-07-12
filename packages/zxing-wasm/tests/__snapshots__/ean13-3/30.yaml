@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: "4823268"
+    bytesECI: 1d2d208
+    text: "9780201310054"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 46
+        y: 54
+      topRight:
+        x: 189
+        y: 54
+      bottomRight:
+        x: 190
+        y: 57
+      bottomLeft:
+        x: 47
+        y: 57
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: "4823268"
+    bytesECI: 1d2d208
+    text: "9780201310054"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 192
+        y: 63
+      topRight:
+        x: 49
+        y: 63
+      bottomRight:
+        x: 50
+        y: 66
+      bottomLeft:
+        x: 193
+        y: 66
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: "4823268"
+    bytesECI: 1d2d208
+    text: "9780201310054"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 47
+        y: 57
+      topRight:
+        x: 190
+        y: 57
+      bottomRight:
+        x: 191
+        y: 64
+      bottomLeft:
+        x: 47
+        y: 64
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: "4823268"
+    bytesECI: 1d2d208
+    text: "9780201310054"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 192
+        y: 56
+      topRight:
+        x: 48
+        y: 56
+      bottomRight:
+        x: 49
+        y: 63
+      bottomLeft:
+        x: 192
+        y: 63
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

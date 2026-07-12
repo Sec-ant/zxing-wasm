@@ -1,0 +1,117 @@
+total: 24
+passAll: 15
+passSome: 15
+fast:
+  "0":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
+  "90":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
+  "180":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
+  "270":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
+slow:
+  "0":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
+  "90":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
+  "180":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
+  "270":
+    failures: 9
+    undetected:
+      total: 9
+      images:
+        - 05.webp
+        - 06.webp
+        - 08.webp
+        - 09.webp
+        - 13.webp
+        - 14.webp
+        - 30.webp
+        - 31.webp
+        - 33.webp
