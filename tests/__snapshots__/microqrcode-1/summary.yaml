@@ -1,0 +1,70 @@
+total: 16
+passAll: 9
+passSome: 15
+fast:
+  "0":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - 12.webp
+  "90":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 12.webp
+        - MQR-needs-br-update.jpg
+  "180":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 12.webp
+        - MQR-needs-br-update.jpg
+  "270":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - 12.webp
+slow:
+  "0":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - 12.webp
+  "90":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 12.webp
+        - MQR-needs-br-update.jpg
+  "180":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 12.webp
+        - MQR-needs-br-update.jpg
+  "270":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - 12.webp
+pure:
+  "0":
+    failures: 7
+    undetected:
+      total: 7
+      images:
+        - 1.png
+        - 3.webp
+        - 7.webp
+        - 9.webp
+        - 11.webp
+        - 12.webp
+        - MQR-needs-br-update.jpg

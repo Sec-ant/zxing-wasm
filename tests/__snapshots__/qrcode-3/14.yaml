@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 21
+        y: 14
+      topRight:
+        x: 162
+        y: 33
+      bottomRight:
+        x: 187
+        y: 174
+      bottomLeft:
+        x: 31
+        y: 173
+    orientation: 4
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 21
+      topRight:
+        x: 152
+        y: 162
+      bottomRight:
+        x: 11
+        y: 187
+      bottomLeft:
+        x: 12
+        y: 31
+    orientation: 94
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 184
+        y: 171
+      topRight:
+        x: 43
+        y: 152
+      bottomRight:
+        x: 18
+        y: 11
+      bottomLeft:
+        x: 174
+        y: 12
+    orientation: -176
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 14
+        y: 184
+      topRight:
+        x: 33
+        y: 43
+      bottomRight:
+        x: 174
+        y: 18
+      bottomLeft:
+        x: 173
+        y: 174
+    orientation: -86
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 21
+        y: 14
+      topRight:
+        x: 162
+        y: 33
+      bottomRight:
+        x: 187
+        y: 174
+      bottomLeft:
+        x: 31
+        y: 173
+    orientation: 4
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 21
+      topRight:
+        x: 152
+        y: 162
+      bottomRight:
+        x: 11
+        y: 187
+      bottomLeft:
+        x: 12
+        y: 31
+    orientation: 94
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 184
+        y: 171
+      topRight:
+        x: 43
+        y: 152
+      bottomRight:
+        x: 18
+        y: 11
+      bottomLeft:
+        x: 174
+        y: 12
+    orientation: -176
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: a4f962e
+    bytesECI: 17b2f54
+    text: MECARD:N:Google 411,;TEL:18665881077;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 14
+        y: 184
+      topRight:
+        x: 33
+        y: 43
+      bottomRight:
+        x: 174
+        y: 18
+      bottomLeft:
+        x: 173
+        y: 174
+    orientation: -86
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b0a86a5
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"M"}'
+    version: "3"
+    readerInit: false
+    ecLevel: M

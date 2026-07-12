@@ -1,0 +1,82 @@
+fast:
+  "0": null
+  "180": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Code128
+    symbology: Code128
+    bytes: e4de835
+    bytesECI: 1e6af12
+    text: FGGQ6D1
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 34
+        y: 22
+      topRight:
+        x: 199
+        y: 22
+      bottomRight:
+        x: 198
+        y: 23
+      bottomLeft:
+        x: 34
+        y: 23
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]C0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Code128
+    symbology: Code128
+    bytes: e4de835
+    bytesECI: 1e6af12
+    text: FGGQ6D1
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 200
+        y: 88
+      topRight:
+        x: 36
+        y: 88
+      bottomRight:
+        x: 35
+        y: 89
+      bottomLeft:
+        x: 200
+        y: 89
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]C0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

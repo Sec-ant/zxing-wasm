@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: 70d5240
+    bytesECI: 527ce69
+    text: "00123456"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 1
+      topRight:
+        x: 163
+        y: 1
+      bottomRight:
+        x: 163
+        y: 2
+      bottomLeft:
+        x: 15
+        y: 2
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: 70d5240
+    bytesECI: 527ce69
+    text: "00123456"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 240
+        y: 1
+      topRight:
+        x: 92
+        y: 1
+      bottomRight:
+        x: 92
+        y: 2
+      bottomLeft:
+        x: 240
+        y: 2
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: 70d5240
+    bytesECI: 527ce69
+    text: "00123456"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 1
+      topRight:
+        x: 163
+        y: 1
+      bottomRight:
+        x: 163
+        y: 2
+      bottomLeft:
+        x: 15
+        y: 2
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: 70d5240
+    bytesECI: 527ce69
+    text: "00123456"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 240
+        y: 1
+      topRight:
+        x: 92
+        y: 1
+      bottomRight:
+        x: 92
+        y: 2
+      bottomLeft:
+        x: 240
+        y: 2
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: f1ee529
+    bytesECI: 0201cf8
+    text: "1515"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 3
+        y: 25
+      topRight:
+        x: 138
+        y: 25
+      bottomRight:
+        x: 138
+        y: 26
+      bottomLeft:
+        x: 3
+        y: 26
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: f1ee529
+    bytesECI: 0201cf8
+    text: "1515"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 139
+        y: 25
+      topRight:
+        x: 4
+        y: 25
+      bottomRight:
+        x: 4
+        y: 26
+      bottomLeft:
+        x: 139
+        y: 26
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: f1ee529
+    bytesECI: 0201cf8
+    text: "1515"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 3
+        y: 25
+      topRight:
+        x: 138
+        y: 25
+      bottomRight:
+        x: 138
+        y: 26
+      bottomLeft:
+        x: 3
+        y: 26
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: ITF
+    symbology: ITF
+    bytes: f1ee529
+    bytesECI: 0201cf8
+    text: "1515"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 139
+        y: 25
+      topRight:
+        x: 4
+        y: 25
+      bottomRight:
+        x: 4
+        y: 26
+      bottomLeft:
+        x: 139
+        y: 26
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]I0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

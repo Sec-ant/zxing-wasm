@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 8
+        y: 8
+      topRight:
+        x: 103
+        y: 8
+      bottomRight:
+        x: 102
+        y: 101
+      bottomLeft:
+        x: 8
+        y: 102
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 102
+        y: 9
+      topRight:
+        x: 101
+        y: 103
+      bottomRight:
+        x: 8
+        y: 102
+      bottomLeft:
+        x: 7
+        y: 8
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 104
+        y: 102
+      topRight:
+        x: 10
+        y: 101
+      bottomRight:
+        x: 11
+        y: 8
+      bottomLeft:
+        x: 105
+        y: 7
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 8
+        y: 105
+      topRight:
+        x: 8
+        y: 10
+      bottomRight:
+        x: 101
+        y: 11
+      bottomLeft:
+        x: 102
+        y: 105
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 8
+        y: 8
+      topRight:
+        x: 103
+        y: 8
+      bottomRight:
+        x: 102
+        y: 101
+      bottomLeft:
+        x: 8
+        y: 102
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 102
+        y: 9
+      topRight:
+        x: 101
+        y: 103
+      bottomRight:
+        x: 8
+        y: 102
+      bottomLeft:
+        x: 7
+        y: 8
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 104
+        y: 102
+      topRight:
+        x: 10
+        y: 101
+      bottomRight:
+        x: 11
+        y: 8
+      bottomLeft:
+        x: 105
+        y: 7
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "6664752"
+    bytesECI: a10bca2
+    text: MEBKM:TITLE:;URL:http://d.kaywa.com/2020400102;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 8
+        y: 105
+      topRight:
+        x: 8
+        y: 10
+      bottomRight:
+        x: 101
+        y: 11
+      bottomLeft:
+        x: 102
+        y: 105
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 61133b6
+      width: 49
+      height: 49
+    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    version: "8"
+    readerInit: false
+    ecLevel: H
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

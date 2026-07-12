@@ -1,0 +1,162 @@
+fast:
+  "0": null
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: a591a6d
+    bytesECI: ec2509d
+    text: Hello World
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 15
+      topRight:
+        x: 234
+        y: 15
+      bottomRight:
+        x: 234
+        y: 234
+      bottomLeft:
+        x: 15
+        y: 234
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: bc93516
+      width: 16
+      height: 16
+    extra: '{"UEC":0.83,"Version":"16x16"}'
+    version: 16x16
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: a591a6d
+    bytesECI: ec2509d
+    text: Hello World
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 234
+        y: 15
+      topRight:
+        x: 234
+        y: 234
+      bottomRight:
+        x: 15
+        y: 234
+      bottomLeft:
+        x: 15
+        y: 15
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: bc93516
+      width: 16
+      height: 16
+    extra: '{"UEC":0.83,"Version":"16x16"}'
+    version: 16x16
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: a591a6d
+    bytesECI: ec2509d
+    text: Hello World
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 234
+        y: 234
+      topRight:
+        x: 15
+        y: 234
+      bottomRight:
+        x: 15
+        y: 15
+      bottomLeft:
+        x: 234
+        y: 15
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: bc93516
+      width: 16
+      height: 16
+    extra: '{"UEC":0.83,"Version":"16x16"}'
+    version: 16x16
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: a591a6d
+    bytesECI: ec2509d
+    text: Hello World
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 234
+      topRight:
+        x: 15
+        y: 15
+      bottomRight:
+        x: 234
+        y: 15
+      bottomLeft:
+        x: 234
+        y: 234
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: bc93516
+      width: 16
+      height: 16
+    extra: '{"UEC":0.83,"Version":"16x16"}'
+    version: 16x16
+    readerInit: false
+    ecLevel: ""

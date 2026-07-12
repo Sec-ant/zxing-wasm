@@ -15,13 +15,12 @@
  * QR-scanning workloads.
  *
  * Fixtures are generated in-memory at startup from
- * `tests/samples/qrcode/wikipedia.png` via jimp — no on-disk fixtures
+ * `tests/samples/qrcode/wikipedia.png` via @napi-rs/canvas — no on-disk fixtures
  * required, so this bench works in CI without any prep step.
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
-import { Jimp } from "jimp";
 import { beforeAll, bench, describe } from "vitest";
 import type { ReaderOptions } from "../../../src/bindings/index.js";
 import { prepareZXingModule, readBarcodes } from "../../../src/reader/index.js";
@@ -69,26 +68,22 @@ beforeAll(async () => {
   // Load source QR once, then resize + re-encode per resolution per format.
   // QR is centred on a white background (40% of the smaller dimension) so
   // it stays decodable at every target resolution.
-  const source = await Jimp.read(sourceImage);
+  const source = await loadImage(await readFile(sourceImage));
 
   for (const res of resolutions) {
     const [w, h] = dims[res];
     const qrSize = Math.round(Math.min(w, h) * 0.4);
-    const qr = source.clone().resize({ w: qrSize, h: qrSize });
-    const composite = new Jimp({ width: w, height: h, color: 0xffffffff });
-    composite.composite(qr, (w - qrSize) >> 1, (h - qrSize) >> 1);
+    const canvas = createCanvas(w, h);
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, w, h);
+    ctx.drawImage(source, (w - qrSize) >> 1, (h - qrSize) >> 1, qrSize, qrSize);
 
-    pngU8[res] = new Uint8Array(await composite.getBuffer("image/png"));
-    jpegU8[res] = new Uint8Array(
-      await composite.getBuffer("image/jpeg", { quality: 85 }),
-    );
+    pngU8[res] = new Uint8Array(canvas.toBuffer("image/png"));
+    jpegU8[res] = new Uint8Array(canvas.toBuffer("image/jpeg", 85));
     pngBlobs[res] = new Blob([pngU8[res] as BlobPart], { type: "image/png" });
 
     // ImageData via @napi-rs/canvas (matches browser ImageData semantics)
-    const img = await loadImage(pngU8[res]);
-    const canvas = createCanvas(w, h);
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0, w, h);
     const id = ctx.getImageData(0, 0, w, h);
     Object.defineProperty(id, "colorSpace", {
       value: "srgb",

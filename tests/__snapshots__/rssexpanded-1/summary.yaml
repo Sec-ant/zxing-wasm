@@ -1,0 +1,11 @@
+total: 37
+passAll: 37
+passSome: 37
+fast:
+  "0": {}
+  "180": {}
+slow:
+  "0": {}
+  "180": {}
+pure:
+  "0": {}

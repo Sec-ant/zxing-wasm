@@ -1,0 +1,126 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 7
+        y: 81
+      topRight:
+        x: 685
+        y: 10
+      bottomRight:
+        x: 679
+        y: 190
+      bottomLeft:
+        x: 50
+        y: 256
+    orientation: -6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.16,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 692
+        y: 181
+      topRight:
+        x: 15
+        y: 252
+      bottomRight:
+        x: 20
+        y: 72
+      bottomLeft:
+        x: 650
+        y: 6
+    orientation: 174
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.16,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%
+  "270": null
+slow:
+  "0": null
+  "90": null
+  "180": null
+  "270": null
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: MicroPDF417
+    symbology: PDF417
+    bytes: 577a6f6
+    bytesECI: aeb0f4a
+    text: I have the best words.
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 7
+        y: 81
+      topRight:
+        x: 685
+        y: 10
+      bottomRight:
+        x: 679
+        y: 190
+      bottomLeft:
+        x: 50
+        y: 256
+    orientation: -6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.16,"ECLevel":"48%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 48%

@@ -1,0 +1,240 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 49f8f95
+    bytesECI: 9bfdf21
+    text: "[)><RS>06<GS>25PLEIBMAQ7BBC448559AC<GS>S44AACC<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 32
+      topRight:
+        x: 369
+        y: 32
+      bottomRight:
+        x: 369
+        y: 56
+      bottomLeft:
+        x: 171
+        y: 56
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a875ba5
+      width: 64
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 49f8f95
+    bytesECI: 9bfdf21
+    text: "[)><RS>06<GS>25PLEIBMAQ7BBC448559AC<GS>S44AACC<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 32
+      topRight:
+        x: 369
+        y: 32
+      bottomRight:
+        x: 369
+        y: 56
+      bottomLeft:
+        x: 171
+        y: 56
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a875ba5
+      width: 64
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 49f8f95
+    bytesECI: 9bfdf21
+    text: "[)><RS>06<GS>25PLEIBMAQ7BBC448559AC<GS>S44AACC<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 46
+        y: 171
+      topRight:
+        x: 46
+        y: 369
+      bottomRight:
+        x: 22
+        y: 369
+      bottomLeft:
+        x: 22
+        y: 171
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a875ba5
+      width: 64
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 49f8f95
+    bytesECI: 9bfdf21
+    text: "[)><RS>06<GS>25PLEIBMAQ7BBC448559AC<GS>S44AACC<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 720
+        y: 46
+      topRight:
+        x: 522
+        y: 46
+      bottomRight:
+        x: 522
+        y: 22
+      bottomLeft:
+        x: 721
+        y: 22
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a875ba5
+      width: 64
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: 49f8f95
+    bytesECI: 9bfdf21
+    text: "[)><RS>06<GS>25PLEIBMAQ7BBC448559AC<GS>S44AACC<RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 32
+        y: 720
+      topRight:
+        x: 32
+        y: 522
+      bottomRight:
+        x: 56
+        y: 522
+      bottomLeft:
+        x: 56
+        y: 721
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d7"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a875ba5
+      width: 64
+      height: 8
+    extra: '{"UEC":1.0,"Version":"8x64"}'
+    version: 8x64
+    readerInit: false
+    ecLevel: ""
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

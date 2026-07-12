@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: UPCA
+    symbology: EANUPC
+    bytes: 79736df
+    bytesECI: 37aa98c
+    text: "0752050200137"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 22
+        y: 60
+      topRight:
+        x: 157
+        y: 60
+      bottomRight:
+        x: 157
+        y: 62
+      bottomLeft:
+        x: 22
+        y: 62
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: UPCA
+    symbology: EANUPC
+    bytes: 79736df
+    bytesECI: 37aa98c
+    text: "0752050200137"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 153
+        y: 52
+      topRight:
+        x: 18
+        y: 52
+      bottomRight:
+        x: 18
+        y: 54
+      bottomLeft:
+        x: 153
+        y: 54
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: UPCA
+    symbology: EANUPC
+    bytes: 79736df
+    bytesECI: 37aa98c
+    text: "0752050200137"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 22
+        y: 55
+      topRight:
+        x: 157
+        y: 55
+      bottomRight:
+        x: 157
+        y: 60
+      bottomLeft:
+        x: 22
+        y: 60
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: UPCA
+    symbology: EANUPC
+    bytes: 79736df
+    bytesECI: 37aa98c
+    text: "0752050200137"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 153
+        y: 54
+      topRight:
+        x: 18
+        y: 54
+      bottomRight:
+        x: 18
+        y: 59
+      bottomLeft:
+        x: 153
+        y: 59
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

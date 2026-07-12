@@ -1,0 +1,79 @@
+total: 10
+passAll: 0
+passSome: 10
+fast:
+  "0":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - 4x6-thick-1.webp
+  "90":
+    failures: 10
+    undetected:
+      total: 10
+      images:
+        - 1x20-pitch+45.webp
+        - 1x20-rot+35.webp
+        - 1x20.webp
+        - 2x20.webp
+        - 4x6-thick-1.webp
+        - MPDF-0-p.png
+        - MPDF-0-q.png
+        - MPDF-0.png
+        - MPDF-1.webp
+        - MPDF-2.webp
+  "180":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - 4x6-thick-1.webp
+  "270":
+    failures: 10
+    undetected:
+      total: 10
+      images:
+        - 1x20-pitch+45.webp
+        - 1x20-rot+35.webp
+        - 1x20.webp
+        - 2x20.webp
+        - 4x6-thick-1.webp
+        - MPDF-0-p.png
+        - MPDF-0-q.png
+        - MPDF-0.png
+        - MPDF-1.webp
+        - MPDF-2.webp
+slow:
+  "0":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - MPDF-0-q.png
+  "90":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - MPDF-0-q.png
+  "180":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - MPDF-0-q.png
+  "270":
+    failures: 1
+    undetected:
+      total: 1
+      images:
+        - MPDF-0-q.png
+pure:
+  "0":
+    failures: 2
+    undetected:
+      total: 2
+      images:
+        - 4x6-thick-1.webp
+        - MPDF-2.webp

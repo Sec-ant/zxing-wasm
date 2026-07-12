@@ -1,0 +1,238 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: c775e7b
+    bytesECI: e4f77d6
+    text: "1234567890"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 136
+        y: 70
+      topRight:
+        x: 366
+        y: 70
+      bottomRight:
+        x: 381
+        y: 145
+      bottomLeft:
+        x: 123
+        y: 148
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"30%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 30%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: c775e7b
+    bytesECI: e4f77d6
+    text: "1234567890"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 343
+        y: 169
+      topRight:
+        x: 113
+        y: 169
+      bottomRight:
+        x: 98
+        y: 94
+      bottomLeft:
+        x: 356
+        y: 91
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"30%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 30%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: c775e7b
+    bytesECI: e4f77d6
+    text: "1234567890"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 136
+        y: 70
+      topRight:
+        x: 366
+        y: 70
+      bottomRight:
+        x: 381
+        y: 145
+      bottomLeft:
+        x: 123
+        y: 148
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"30%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 30%
+  "90":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: c775e7b
+    bytesECI: e4f77d6
+    text: "1234567890"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 169
+        y: 136
+      topRight:
+        x: 169
+        y: 366
+      bottomRight:
+        x: 94
+        y: 381
+      bottomLeft:
+        x: 91
+        y: 123
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"30%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 30%
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: c775e7b
+    bytesECI: e4f77d6
+    text: "1234567890"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 343
+        y: 169
+      topRight:
+        x: 113
+        y: 169
+      bottomRight:
+        x: 98
+        y: 94
+      bottomLeft:
+        x: 356
+        y: 91
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"30%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 30%
+  "270":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: c775e7b
+    bytesECI: e4f77d6
+    text: "1234567890"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 70
+        y: 343
+      topRight:
+        x: 70
+        y: 113
+      bottomRight:
+        x: 145
+        y: 98
+      bottomLeft:
+        x: 148
+        y: 356
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"30%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 30%

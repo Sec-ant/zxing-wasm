@@ -1,0 +1,278 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 59799a2
+    bytesECI: d232a54
+    text: "[)><RS>01<GS>0210011<GS>840<GS>53<GS>9080122327430201<GS>FDE<GS>238351251<GS>289<GS> <GS>1/1<GS>3.0LB<GS>Y<GS>76 NINTH AVENUE<GS>NEW YORK CITY<GS>NY<GS>SUSAN ZOLEZZI<RS>06<GS>10ZED004<GS>11ZGOOGLE<GS>12Z2125654186<GS>30Z31001192000001<FS><GS>14Z4TH FLOOR<GS>15Z397957<GS>20Z0.00<FS>0.00<GS>28Z9080122327430201<GS>K533 PROGRAMS<GS>26Z584a<FS><GS><RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 24
+        y: 19
+      topRight:
+        x: 575
+        y: 20
+      bottomRight:
+        x: 577
+        y: 235
+      bottomLeft:
+        x: 22
+        y: 238
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.87,"ECLevel":"24%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 24%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 59799a2
+    bytesECI: d232a54
+    text: "[)><RS>01<GS>0210011<GS>840<GS>53<GS>9080122327430201<GS>FDE<GS>238351251<GS>289<GS> <GS>1/1<GS>3.0LB<GS>Y<GS>76 NINTH AVENUE<GS>NEW YORK CITY<GS>NY<GS>SUSAN ZOLEZZI<RS>06<GS>10ZED004<GS>11ZGOOGLE<GS>12Z2125654186<GS>30Z31001192000001<FS><GS>14Z4TH FLOOR<GS>15Z397957<GS>20Z0.00<FS>0.00<GS>28Z9080122327430201<GS>K533 PROGRAMS<GS>26Z584a<FS><GS><RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 571
+        y: 246
+      topRight:
+        x: 20
+        y: 245
+      bottomRight:
+        x: 18
+        y: 30
+      bottomLeft:
+        x: 573
+        y: 27
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.87,"ECLevel":"24%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 24%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 59799a2
+    bytesECI: d232a54
+    text: "[)><RS>01<GS>0210011<GS>840<GS>53<GS>9080122327430201<GS>FDE<GS>238351251<GS>289<GS> <GS>1/1<GS>3.0LB<GS>Y<GS>76 NINTH AVENUE<GS>NEW YORK CITY<GS>NY<GS>SUSAN ZOLEZZI<RS>06<GS>10ZED004<GS>11ZGOOGLE<GS>12Z2125654186<GS>30Z31001192000001<FS><GS>14Z4TH FLOOR<GS>15Z397957<GS>20Z0.00<FS>0.00<GS>28Z9080122327430201<GS>K533 PROGRAMS<GS>26Z584a<FS><GS><RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 24
+        y: 19
+      topRight:
+        x: 575
+        y: 20
+      bottomRight:
+        x: 577
+        y: 235
+      bottomLeft:
+        x: 22
+        y: 238
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.87,"ECLevel":"24%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 24%
+  "90":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 59799a2
+    bytesECI: d232a54
+    text: "[)><RS>01<GS>0210011<GS>840<GS>53<GS>9080122327430201<GS>FDE<GS>238351251<GS>289<GS> <GS>1/1<GS>3.0LB<GS>Y<GS>76 NINTH AVENUE<GS>NEW YORK CITY<GS>NY<GS>SUSAN ZOLEZZI<RS>06<GS>10ZED004<GS>11ZGOOGLE<GS>12Z2125654186<GS>30Z31001192000001<FS><GS>14Z4TH FLOOR<GS>15Z397957<GS>20Z0.00<FS>0.00<GS>28Z9080122327430201<GS>K533 PROGRAMS<GS>26Z584a<FS><GS><RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 246
+        y: 24
+      topRight:
+        x: 245
+        y: 575
+      bottomRight:
+        x: 30
+        y: 577
+      bottomLeft:
+        x: 27
+        y: 22
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.87,"ECLevel":"24%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 24%
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 59799a2
+    bytesECI: d232a54
+    text: "[)><RS>01<GS>0210011<GS>840<GS>53<GS>9080122327430201<GS>FDE<GS>238351251<GS>289<GS> <GS>1/1<GS>3.0LB<GS>Y<GS>76 NINTH AVENUE<GS>NEW YORK CITY<GS>NY<GS>SUSAN ZOLEZZI<RS>06<GS>10ZED004<GS>11ZGOOGLE<GS>12Z2125654186<GS>30Z31001192000001<FS><GS>14Z4TH FLOOR<GS>15Z397957<GS>20Z0.00<FS>0.00<GS>28Z9080122327430201<GS>K533 PROGRAMS<GS>26Z584a<FS><GS><RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 571
+        y: 246
+      topRight:
+        x: 20
+        y: 245
+      bottomRight:
+        x: 18
+        y: 30
+      bottomLeft:
+        x: 573
+        y: 27
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.87,"ECLevel":"24%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 24%
+  "270":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 59799a2
+    bytesECI: d232a54
+    text: "[)><RS>01<GS>0210011<GS>840<GS>53<GS>9080122327430201<GS>FDE<GS>238351251<GS>289<GS> <GS>1/1<GS>3.0LB<GS>Y<GS>76 NINTH AVENUE<GS>NEW YORK CITY<GS>NY<GS>SUSAN ZOLEZZI<RS>06<GS>10ZED004<GS>11ZGOOGLE<GS>12Z2125654186<GS>30Z31001192000001<FS><GS>14Z4TH FLOOR<GS>15Z397957<GS>20Z0.00<FS>0.00<GS>28Z9080122327430201<GS>K533 PROGRAMS<GS>26Z584a<FS><GS><RS><EOT>"
+    contentType: ISO15434
+    hasECI: false
+    position:
+      topLeft:
+        x: 19
+        y: 571
+      topRight:
+        x: 20
+        y: 20
+      bottomRight:
+        x: 235
+        y: 18
+      bottomLeft:
+        x: 238
+        y: 573
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":0.87,"ECLevel":"24%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 24%
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

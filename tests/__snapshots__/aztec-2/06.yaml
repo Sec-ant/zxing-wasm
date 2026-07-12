@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 305
+        y: 42
+      topRight:
+        x: 337
+        y: 233
+      bottomRight:
+        x: 104
+        y: 261
+      bottomLeft:
+        x: 95
+        y: 59
+    orientation: 84
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 318
+        y: 305
+      topRight:
+        x: 127
+        y: 337
+      bottomRight:
+        x: 99
+        y: 104
+      bottomLeft:
+        x: 301
+        y: 95
+    orientation: 174
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 175
+        y: 318
+      topRight:
+        x: 143
+        y: 127
+      bottomRight:
+        x: 376
+        y: 99
+      bottomLeft:
+        x: 385
+        y: 301
+    orientation: -96
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 42
+        y: 175
+      topRight:
+        x: 233
+        y: 143
+      bottomRight:
+        x: 261
+        y: 376
+      bottomLeft:
+        x: 59
+        y: 385
+    orientation: -6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 305
+        y: 42
+      topRight:
+        x: 337
+        y: 233
+      bottomRight:
+        x: 104
+        y: 261
+      bottomLeft:
+        x: 95
+        y: 59
+    orientation: 84
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 318
+        y: 305
+      topRight:
+        x: 127
+        y: 337
+      bottomRight:
+        x: 99
+        y: 104
+      bottomLeft:
+        x: 301
+        y: 95
+    orientation: 174
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 175
+        y: 318
+      topRight:
+        x: 143
+        y: 127
+      bottomRight:
+        x: 376
+        y: 99
+      bottomLeft:
+        x: 385
+        y: 301
+    orientation: -96
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 55ed3ad
+    bytesECI: 2560c9a
+    text: This is a real world Aztec barcode test.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 42
+        y: 175
+      topRight:
+        x: 233
+        y: 143
+      bottomRight:
+        x: 261
+        y: 376
+      bottomLeft:
+        x: 59
+        y: 385
+    orientation: -6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 67bddbb
+      width: 23
+      height: 23
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"22%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 22%

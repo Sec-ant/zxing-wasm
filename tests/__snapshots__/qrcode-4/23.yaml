@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 61
+        y: 68
+      topRight:
+        x: 171
+        y: 67
+      bottomRight:
+        x: 180
+        y: 177
+      bottomLeft:
+        x: 65
+        y: 183
+    orientation: -2
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 172
+        y: 61
+      topRight:
+        x: 173
+        y: 171
+      bottomRight:
+        x: 63
+        y: 180
+      bottomLeft:
+        x: 57
+        y: 65
+    orientation: 88
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 179
+        y: 172
+      topRight:
+        x: 69
+        y: 173
+      bottomRight:
+        x: 60
+        y: 63
+      bottomLeft:
+        x: 175
+        y: 57
+    orientation: 178
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 68
+        y: 179
+      topRight:
+        x: 67
+        y: 69
+      bottomRight:
+        x: 177
+        y: 60
+      bottomLeft:
+        x: 183
+        y: 175
+    orientation: -92
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 61
+        y: 68
+      topRight:
+        x: 171
+        y: 67
+      bottomRight:
+        x: 180
+        y: 177
+      bottomLeft:
+        x: 65
+        y: 183
+    orientation: -2
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 172
+        y: 61
+      topRight:
+        x: 173
+        y: 171
+      bottomRight:
+        x: 63
+        y: 180
+      bottomLeft:
+        x: 57
+        y: 65
+    orientation: 88
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 179
+        y: 172
+      topRight:
+        x: 69
+        y: 173
+      bottomRight:
+        x: 60
+        y: 63
+      bottomLeft:
+        x: 175
+        y: 57
+    orientation: 178
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 9c9045e
+    bytesECI: 61864a8
+    text: http://code.google.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 68
+        y: 179
+      topRight:
+        x: 67
+        y: 69
+      bottomRight:
+        x: 177
+        y: 60
+      bottomLeft:
+        x: 183
+        y: 175
+    orientation: -92
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 35482cb
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.54,"Version":"3","ECLevel":"H"}'
+    version: "3"
+    readerInit: false
+    ecLevel: H

@@ -1,0 +1,238 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 8e37a35
+    bytesECI: ecb97e8
+    text: A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 68
+        y: 41
+      topRight:
+        x: 423
+        y: 42
+      bottomRight:
+        x: 423
+        y: 203
+      bottomLeft:
+        x: 66
+        y: 205
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"9%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 9%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 8e37a35
+    bytesECI: ecb97e8
+    text: A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 411
+        y: 198
+      topRight:
+        x: 56
+        y: 197
+      bottomRight:
+        x: 56
+        y: 36
+      bottomLeft:
+        x: 413
+        y: 34
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"9%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 9%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 8e37a35
+    bytesECI: ecb97e8
+    text: A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 68
+        y: 41
+      topRight:
+        x: 423
+        y: 42
+      bottomRight:
+        x: 423
+        y: 203
+      bottomLeft:
+        x: 66
+        y: 205
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"9%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 9%
+  "90":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 8e37a35
+    bytesECI: ecb97e8
+    text: A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 198
+        y: 68
+      topRight:
+        x: 197
+        y: 423
+      bottomRight:
+        x: 36
+        y: 423
+      bottomLeft:
+        x: 34
+        y: 66
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"9%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 9%
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 8e37a35
+    bytesECI: ecb97e8
+    text: A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 411
+        y: 198
+      topRight:
+        x: 56
+        y: 197
+      bottomRight:
+        x: 56
+        y: 36
+      bottomLeft:
+        x: 413
+        y: 34
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"9%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 9%
+  "270":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 8e37a35
+    bytesECI: ecb97e8
+    text: A larger PDF 417 barcode with a greater amount of text. This is a more difficult test for mobile devices to resolve.
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 41
+        y: 411
+      topRight:
+        x: 42
+        y: 56
+      bottomRight:
+        x: 203
+        y: 56
+      bottomLeft:
+        x: 205
+        y: 413
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.0,"ECLevel":"9%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 9%

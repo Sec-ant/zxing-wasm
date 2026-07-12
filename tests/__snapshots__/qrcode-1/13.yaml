@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 57
+        y: 171
+      topRight:
+        x: 56
+        y: 42
+      bottomRight:
+        x: 196
+        y: 43
+      bottomLeft:
+        x: 192
+        y: 172
+    orientation: -89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: fef5e2c
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 22
+        y: 57
+      topRight:
+        x: 151
+        y: 56
+      bottomRight:
+        x: 150
+        y: 195
+      bottomLeft:
+        x: 21
+        y: 192
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "4613719"
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 238
+        y: 23
+      topRight:
+        x: 238
+        y: 150
+      bottomRight:
+        x: 98
+        y: 150
+      bottomLeft:
+        x: 102
+        y: 21
+    orientation: 91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "4613719"
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 238
+      topRight:
+        x: 42
+        y: 238
+      bottomRight:
+        x: 43
+        y: 99
+      bottomLeft:
+        x: 172
+        y: 102
+    orientation: -179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5298e2c
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.86,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 57
+        y: 171
+      topRight:
+        x: 56
+        y: 42
+      bottomRight:
+        x: 196
+        y: 43
+      bottomLeft:
+        x: 192
+        y: 172
+    orientation: -89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: fef5e2c
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.73,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 22
+        y: 57
+      topRight:
+        x: 151
+        y: 56
+      bottomRight:
+        x: 150
+        y: 195
+      bottomLeft:
+        x: 21
+        y: 192
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "4613719"
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 238
+        y: 23
+      topRight:
+        x: 238
+        y: 150
+      bottomRight:
+        x: 98
+        y: 150
+      bottomLeft:
+        x: 102
+        y: 21
+    orientation: 91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "4613719"
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: ad7126e
+    bytesECI: b7a72ff
+    text: http://google.com/gwt/n?u=bluenile.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 171
+        y: 238
+      topRight:
+        x: 42
+        y: 238
+      bottomRight:
+        x: 43
+        y: 99
+      bottomLeft:
+        x: 172
+        y: 102
+    orientation: -179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5298e2c
+      width: 29
+      height: 29
+    extra: '{"DataMask":2,"UEC":0.86,"Version":"3","ECLevel":"L"}'
+    version: "3"
+    readerInit: false
+    ecLevel: L

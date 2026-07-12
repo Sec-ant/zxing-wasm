@@ -1,0 +1,23 @@
+total: 6
+passAll: 3
+passSome: 6
+fast:
+  "0":
+    failures: 3
+    undetected:
+      total: 3
+      images:
+        - 11.webp
+        - 13.webp
+        - 16.webp
+  "180":
+    failures: 3
+    undetected:
+      total: 3
+      images:
+        - 11.webp
+        - 13.webp
+        - 16.webp
+slow:
+  "0": {}
+  "180": {}

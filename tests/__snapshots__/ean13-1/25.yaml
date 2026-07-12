@@ -1,0 +1,120 @@
+fast:
+  "0": null
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 2e098c2
+    bytesECI: fe5ffc8
+    text: "9780140013993"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 515
+        y: 173
+      topRight:
+        x: 196
+        y: 173
+      bottomRight:
+        x: 196
+        y: 174
+      bottomLeft:
+        x: 515
+        y: 174
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 2e098c2
+    bytesECI: fe5ffc8
+    text: "9780140013993"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 46
+        y: 136
+      topRight:
+        x: 365
+        y: 136
+      bottomRight:
+        x: 365
+        y: 139
+      bottomLeft:
+        x: 46
+        y: 139
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 2e098c2
+    bytesECI: fe5ffc8
+    text: "9780140013993"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 515
+        y: 170
+      topRight:
+        x: 196
+        y: 170
+      bottomRight:
+        x: 196
+        y: 173
+      bottomLeft:
+        x: 515
+        y: 173
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

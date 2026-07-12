@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 273
+        y: 25
+      topRight:
+        x: 280
+        y: 258
+      bottomRight:
+        x: 31
+        y: 259
+      bottomLeft:
+        x: 35
+        y: 34
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 262
+        y: 273
+      topRight:
+        x: 29
+        y: 280
+      bottomRight:
+        x: 28
+        y: 31
+      bottomLeft:
+        x: 254
+        y: 35
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 39
+        y: 262
+      topRight:
+        x: 32
+        y: 29
+      bottomRight:
+        x: 281
+        y: 28
+      bottomLeft:
+        x: 277
+        y: 254
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 25
+        y: 39
+      topRight:
+        x: 258
+        y: 32
+      bottomRight:
+        x: 259
+        y: 281
+      bottomLeft:
+        x: 34
+        y: 277
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 273
+        y: 25
+      topRight:
+        x: 280
+        y: 258
+      bottomRight:
+        x: 31
+        y: 259
+      bottomLeft:
+        x: 35
+        y: 34
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 262
+        y: 273
+      topRight:
+        x: 29
+        y: 280
+      bottomRight:
+        x: 28
+        y: 31
+      bottomLeft:
+        x: 254
+        y: 35
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 39
+        y: 262
+      topRight:
+        x: 32
+        y: 29
+      bottomRight:
+        x: 281
+        y: 28
+      bottomLeft:
+        x: 277
+        y: 254
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 89a2b52
+    bytesECI: b2a6ba4
+    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 25
+        y: 39
+      topRight:
+        x: 258
+        y: 32
+      bottomRight:
+        x: 259
+        y: 281
+      bottomLeft:
+        x: 34
+        y: 277
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d46ca5b
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
+    version: "4"
+    readerInit: false
+    ecLevel: M

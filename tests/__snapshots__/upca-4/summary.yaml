@@ -1,0 +1,48 @@
+total: 13
+passAll: 5
+passSome: 9
+fast:
+  "0":
+    failures: 8
+    undetected:
+      total: 8
+      images:
+        - 1.webp
+        - 2.webp
+        - 6.webp
+        - 7.webp
+        - 9.webp
+        - 10.webp
+        - 14.webp
+        - 16.webp
+  "180":
+    failures: 7
+    undetected:
+      total: 7
+      images:
+        - 1.webp
+        - 2.webp
+        - 6.webp
+        - 9.webp
+        - 10.webp
+        - 14.webp
+        - 16.webp
+slow:
+  "0":
+    failures: 4
+    undetected:
+      total: 4
+      images:
+        - 1.webp
+        - 2.webp
+        - 6.webp
+        - 9.webp
+  "180":
+    failures: 4
+    undetected:
+      total: 4
+      images:
+        - 1.webp
+        - 2.webp
+        - 6.webp
+        - 9.webp

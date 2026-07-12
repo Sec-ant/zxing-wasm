@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 61
+        y: 11
+      topRight:
+        x: 179
+        y: 11
+      bottomRight:
+        x: 179
+        y: 130
+      bottomLeft:
+        x: 61
+        y: 129
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b96dff4
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 173
+        y: 61
+      topRight:
+        x: 173
+        y: 179
+      bottomRight:
+        x: 54
+        y: 179
+      bottomLeft:
+        x: 55
+        y: 61
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b96dff4
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 176
+        y: 173
+      topRight:
+        x: 58
+        y: 173
+      bottomRight:
+        x: 58
+        y: 54
+      bottomLeft:
+        x: 176
+        y: 55
+    orientation: -180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d55daab
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 176
+      topRight:
+        x: 11
+        y: 58
+      bottomRight:
+        x: 130
+        y: 58
+      bottomLeft:
+        x: 129
+        y: 176
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d55daab
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 61
+        y: 11
+      topRight:
+        x: 179
+        y: 11
+      bottomRight:
+        x: 179
+        y: 130
+      bottomLeft:
+        x: 61
+        y: 129
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b96dff4
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 173
+        y: 61
+      topRight:
+        x: 173
+        y: 179
+      bottomRight:
+        x: 54
+        y: 179
+      bottomLeft:
+        x: 55
+        y: 61
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: b96dff4
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 176
+        y: 173
+      topRight:
+        x: 58
+        y: 173
+      bottomRight:
+        x: 58
+        y: 54
+      bottomLeft:
+        x: 176
+        y: 55
+    orientation: -180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d55daab
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: aaf472b
+    bytesECI: ec685c5
+    text: "http://aniful.jp/pr/  "
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 11
+        y: 176
+      topRight:
+        x: 11
+        y: 58
+      bottomRight:
+        x: 130
+        y: 58
+      bottomLeft:
+        x: 129
+        y: 176
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: d55daab
+      width: 41
+      height: 41
+    extra: '{"DataMask":4,"UEC":0.42,"Version":"6","ECLevel":"H"}'
+    version: "6"
+    readerInit: false
+    ecLevel: H
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

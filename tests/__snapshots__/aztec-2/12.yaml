@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 133
+        y: 144
+      topRight:
+        x: 317
+        y: 145
+      bottomRight:
+        x: 296
+        y: 317
+      bottomLeft:
+        x: 119
+        y: 325
+    orientation: -1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 216
+        y: 133
+      topRight:
+        x: 215
+        y: 317
+      bottomRight:
+        x: 43
+        y: 296
+      bottomLeft:
+        x: 35
+        y: 119
+    orientation: 89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 349
+        y: 218
+      topRight:
+        x: 163
+        y: 215
+      bottomRight:
+        x: 185
+        y: 44
+      bottomLeft:
+        x: 361
+        y: 34
+    orientation: 179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 142
+        y: 349
+      topRight:
+        x: 145
+        y: 163
+      bottomRight:
+        x: 316
+        y: 185
+      bottomLeft:
+        x: 326
+        y: 361
+    orientation: -91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 133
+        y: 144
+      topRight:
+        x: 317
+        y: 145
+      bottomRight:
+        x: 296
+        y: 317
+      bottomLeft:
+        x: 119
+        y: 325
+    orientation: -1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 216
+        y: 133
+      topRight:
+        x: 215
+        y: 317
+      bottomRight:
+        x: 43
+        y: 296
+      bottomLeft:
+        x: 35
+        y: 119
+    orientation: 89
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 349
+        y: 218
+      topRight:
+        x: 163
+        y: 215
+      bottomRight:
+        x: 185
+        y: 44
+      bottomLeft:
+        x: 361
+        y: 34
+    orientation: 179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 150bd79
+    bytesECI: 5adb247
+    text: mailto:zxing@googlegroups.com
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 142
+        y: 349
+      topRight:
+        x: 145
+        y: 163
+      bottomRight:
+        x: 316
+        y: 185
+      bottomLeft:
+        x: 326
+        y: 361
+    orientation: -91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: ac74325
+      width: 19
+      height: 19
+    extra: '{"UEC":1.0,"Version":"2","ECLevel":"25%"}'
+    version: "2"
+    readerInit: false
+    ecLevel: 25%

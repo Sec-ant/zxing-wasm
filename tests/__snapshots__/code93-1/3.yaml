@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Code93
+    symbology: Code93
+    bytes: c97c29c
+    bytesECI: 268428b
+    text: DATA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 50
+        y: 146
+      topRight:
+        x: 331
+        y: 146
+      bottomRight:
+        x: 331
+        y: 148
+      bottomLeft:
+        x: 50
+        y: 148
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]G0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Code93
+    symbology: Code93
+    bytes: c97c29c
+    bytesECI: 268428b
+    text: DATA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 349
+        y: 114
+      topRight:
+        x: 68
+        y: 114
+      bottomRight:
+        x: 68
+        y: 116
+      bottomLeft:
+        x: 349
+        y: 116
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]G0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Code93
+    symbology: Code93
+    bytes: c97c29c
+    bytesECI: 268428b
+    text: DATA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 50
+        y: 139
+      topRight:
+        x: 331
+        y: 139
+      bottomRight:
+        x: 331
+        y: 140
+      bottomLeft:
+        x: 50
+        y: 140
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]G0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Code93
+    symbology: Code93
+    bytes: c97c29c
+    bytesECI: 268428b
+    text: DATA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 349
+        y: 119
+      topRight:
+        x: 68
+        y: 119
+      bottomRight:
+        x: 68
+        y: 120
+      bottomLeft:
+        x: 349
+        y: 120
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]G0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

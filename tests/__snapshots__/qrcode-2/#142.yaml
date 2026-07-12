@@ -1,0 +1,354 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 25
+        y: 26
+      topRight:
+        x: 354
+        y: 37
+      bottomRight:
+        x: 339
+        y: 361
+      bottomLeft:
+        x: 16
+        y: 352
+    orientation: 2
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: dd1b608
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.70,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 355
+        y: 24
+      topRight:
+        x: 345
+        y: 354
+      bottomRight:
+        x: 20
+        y: 339
+      bottomLeft:
+        x: 30
+        y: 16
+    orientation: 92
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0d83ebc
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 341
+        y: 355
+      topRight:
+        x: 11
+        y: 345
+      bottomRight:
+        x: 26
+        y: 20
+      bottomLeft:
+        x: 349
+        y: 30
+    orientation: -178
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a1e1a35
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 26
+        y: 341
+      topRight:
+        x: 36
+        y: 11
+      bottomRight:
+        x: 361
+        y: 26
+      bottomLeft:
+        x: 351
+        y: 350
+    orientation: -88
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: dee4536
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 25
+        y: 26
+      topRight:
+        x: 354
+        y: 37
+      bottomRight:
+        x: 339
+        y: 361
+      bottomLeft:
+        x: 16
+        y: 352
+    orientation: 2
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: dd1b608
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.70,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 355
+        y: 24
+      topRight:
+        x: 345
+        y: 354
+      bottomRight:
+        x: 20
+        y: 339
+      bottomLeft:
+        x: 30
+        y: 16
+    orientation: 92
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0d83ebc
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 341
+        y: 355
+      topRight:
+        x: 11
+        y: 345
+      bottomRight:
+        x: 26
+        y: 20
+      bottomLeft:
+        x: 349
+        y: 30
+    orientation: -178
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a1e1a35
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: bf2544d
+    bytesECI: 432d6f9
+    text: vmess://eyJhZGQiOiJ6cHh1LnNhZGZ3d3cuY2YiLCJhaWQiOjIzMywiaG9zdCI6InpweHUuc2FkZnd3dy5jZiIsImlkIjoiZTcwNGYxZjgtOTBlZS00NzIwLTljMjktMzY2ZjY2YTM5ODVmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJ6cHh1LnNhZGZ3d3cuY2YtWzQ0M10tdm1lc3MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOjJ9
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 26
+        y: 341
+      topRight:
+        x: 36
+        y: 11
+      bottomRight:
+        x: 361
+        y: 26
+      bottomLeft:
+        x: 351
+        y: 350
+    orientation: -88
+    isMirrored: true
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: dee4536
+      width: 61
+      height: 61
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"11","ECLevel":"L"}'
+    version: "11"
+    readerInit: false
+    ecLevel: L
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

@@ -1,0 +1,200 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: b93b2b2
+    bytesECI: 8ed7395
+    text: A12206200417:02:38
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 46
+        y: 44
+      topRight:
+        x: 155
+        y: 44
+      bottomRight:
+        x: 154
+        y: 88
+      bottomLeft:
+        x: 46
+        y: 87
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 15ce25f
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: b93b2b2
+    bytesECI: 8ed7395
+    text: A12206200417:02:38
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 46
+        y: 44
+      topRight:
+        x: 155
+        y: 44
+      bottomRight:
+        x: 154
+        y: 88
+      bottomLeft:
+        x: 46
+        y: 87
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 15ce25f
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: b93b2b2
+    bytesECI: 8ed7395
+    text: A12206200417:02:38
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 92
+        y: 46
+      topRight:
+        x: 92
+        y: 155
+      bottomRight:
+        x: 48
+        y: 154
+      bottomLeft:
+        x: 49
+        y: 46
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 15ce25f
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: b93b2b2
+    bytesECI: 8ed7395
+    text: A12206200417:02:38
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 163
+        y: 92
+      topRight:
+        x: 54
+        y: 92
+      bottomRight:
+        x: 55
+        y: 48
+      bottomLeft:
+        x: 163
+        y: 49
+    orientation: -180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "9834427"
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: DataMatrix
+    symbology: DataMatrix
+    bytes: b93b2b2
+    bytesECI: 8ed7395
+    text: A12206200417:02:38
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 44
+        y: 163
+      topRight:
+        x: 44
+        y: 54
+      bottomRight:
+        x: 88
+        y: 55
+      bottomLeft:
+        x: 87
+        y: 163
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]d1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: "9834427"
+      width: 26
+      height: 12
+    extra: '{"UEC":1.0,"Version":"12x26"}'
+    version: 12x26
+    readerInit: false
+    ecLevel: ""

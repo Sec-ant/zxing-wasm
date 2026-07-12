@@ -1,0 +1,202 @@
+fast:
+  "0": null
+  "90": null
+  "180": null
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "1650469"
+    bytesECI: 91c67ae
+    text: https://u.wechat.com/ELaSWShWyTFQvXJkp9vCgFA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 36
+        y: 97
+      topRight:
+        x: 197
+        y: 97
+      bottomRight:
+        x: 198
+        y: 258
+      bottomLeft:
+        x: 37
+        y: 258
+    orientation: 0
+    isMirrored: false
+    isInverted: true
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3eecd09
+      width: 37
+      height: 37
+    extra: '{"DataMask":3,"UEC":0.0,"Version":"5","ECLevel":"M"}'
+    version: "5"
+    readerInit: false
+    ecLevel: M
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "1650469"
+    bytesECI: 91c67ae
+    text: https://u.wechat.com/ELaSWShWyTFQvXJkp9vCgFA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 246
+        y: 36
+      topRight:
+        x: 246
+        y: 197
+      bottomRight:
+        x: 85
+        y: 198
+      bottomLeft:
+        x: 85
+        y: 37
+    orientation: 90
+    isMirrored: false
+    isInverted: true
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 3eecd09
+      width: 37
+      height: 37
+    extra: '{"DataMask":3,"UEC":0.0,"Version":"5","ECLevel":"M"}'
+    version: "5"
+    readerInit: false
+    ecLevel: M
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "1650469"
+    bytesECI: 91c67ae
+    text: https://u.wechat.com/ELaSWShWyTFQvXJkp9vCgFA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 198
+        y: 246
+      topRight:
+        x: 37
+        y: 246
+      bottomRight:
+        x: 36
+        y: 85
+      bottomLeft:
+        x: 197
+        y: 85
+    orientation: 180
+    isMirrored: false
+    isInverted: true
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 21f842f
+      width: 37
+      height: 37
+    extra: '{"DataMask":3,"UEC":0.8,"Version":"5","ECLevel":"M"}'
+    version: "5"
+    readerInit: false
+    ecLevel: M
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: "1650469"
+    bytesECI: 91c67ae
+    text: https://u.wechat.com/ELaSWShWyTFQvXJkp9vCgFA
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 97
+        y: 197
+      topRight:
+        x: 97
+        y: 37
+      bottomRight:
+        x: 258
+        y: 36
+      bottomLeft:
+        x: 258
+        y: 197
+    orientation: -90
+    isMirrored: false
+    isInverted: true
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 21f842f
+      width: 37
+      height: 37
+    extra: '{"DataMask":3,"UEC":0.8,"Version":"5","ECLevel":"M"}'
+    version: "5"
+    readerInit: false
+    ecLevel: M
+pure:
+  "0":
+    isValid: false
+    error: ""
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 0
+        y: 0
+      topRight:
+        x: 0
+        y: 0
+      bottomRight:
+        x: 0
+        y: 0
+      bottomLeft:
+        x: 0
+        y: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: ""
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""

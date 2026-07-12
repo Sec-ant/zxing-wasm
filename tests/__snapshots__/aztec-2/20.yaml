@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 390
+        y: 309
+      topRight:
+        x: 82
+        y: 298
+      bottomRight:
+        x: 131
+        y: 71
+      bottomLeft:
+        x: 383
+        y: 81
+    orientation: -178
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 51
+        y: 390
+      topRight:
+        x: 62
+        y: 82
+      bottomRight:
+        x: 288
+        y: 131
+      bottomLeft:
+        x: 279
+        y: 383
+    orientation: -88
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 90
+        y: 51
+      topRight:
+        x: 398
+        y: 62
+      bottomRight:
+        x: 349
+        y: 289
+      bottomLeft:
+        x: 97
+        y: 279
+    orientation: 2
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 309
+        y: 90
+      topRight:
+        x: 298
+        y: 398
+      bottomRight:
+        x: 71
+        y: 349
+      bottomLeft:
+        x: 81
+        y: 97
+    orientation: 92
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 390
+        y: 309
+      topRight:
+        x: 82
+        y: 298
+      bottomRight:
+        x: 131
+        y: 71
+      bottomLeft:
+        x: 383
+        y: 81
+    orientation: -178
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 51
+        y: 390
+      topRight:
+        x: 62
+        y: 82
+      bottomRight:
+        x: 288
+        y: 131
+      bottomLeft:
+        x: 279
+        y: 383
+    orientation: -88
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 90
+        y: 51
+      topRight:
+        x: 398
+        y: 62
+      bottomRight:
+        x: 349
+        y: 289
+      bottomLeft:
+        x: 97
+        y: 279
+    orientation: 2
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: "8517347"
+    bytesECI: fdd1fa3
+    text: http://code.google.com/p/zxing/source/browse/trunk/android/src/com/google/zxing/client/android/result/URIResultHandler.java
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 309
+        y: 90
+      topRight:
+        x: 298
+        y: 398
+      bottomRight:
+        x: 71
+        y: 349
+      bottomLeft:
+        x: 81
+        y: 97
+    orientation: 92
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]z0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0ff918e
+      width: 37
+      height: 37
+    extra: '{"UEC":1.0,"Version":"5","ECLevel":"19%"}'
+    version: "5"
+    readerInit: false
+    ecLevel: 19%

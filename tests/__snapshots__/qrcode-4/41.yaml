@@ -1,0 +1,314 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 45
+        y: 25
+      topRight:
+        x: 129
+        y: 36
+      bottomRight:
+        x: 115
+        y: 120
+      bottomLeft:
+        x: 34
+        y: 115
+    orientation: 6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: eab20a9
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 127
+        y: 45
+      topRight:
+        x: 116
+        y: 129
+      bottomRight:
+        x: 32
+        y: 115
+      bottomLeft:
+        x: 37
+        y: 34
+    orientation: 96
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: eab20a9
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 128
+        y: 127
+      topRight:
+        x: 44
+        y: 117
+      bottomRight:
+        x: 59
+        y: 32
+      bottomLeft:
+        x: 139
+        y: 37
+    orientation: -175
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a2ff729
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.40,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 25
+        y: 128
+      topRight:
+        x: 35
+        y: 44
+      bottomRight:
+        x: 120
+        y: 59
+      bottomLeft:
+        x: 115
+        y: 139
+    orientation: -85
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a2ff729
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.40,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 45
+        y: 25
+      topRight:
+        x: 129
+        y: 36
+      bottomRight:
+        x: 115
+        y: 120
+      bottomLeft:
+        x: 34
+        y: 115
+    orientation: 6
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: eab20a9
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 127
+        y: 45
+      topRight:
+        x: 116
+        y: 129
+      bottomRight:
+        x: 32
+        y: 115
+      bottomLeft:
+        x: 37
+        y: 34
+    orientation: 96
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: eab20a9
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.80,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 128
+        y: 127
+      topRight:
+        x: 44
+        y: 117
+      bottomRight:
+        x: 59
+        y: 32
+      bottomLeft:
+        x: 139
+        y: 37
+    orientation: -175
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a2ff729
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.40,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 1bf6bb1
+    bytesECI: "2873576"
+    text: http://code.google.com/p/zxing/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 25
+        y: 128
+      topRight:
+        x: 35
+        y: 44
+      bottomRight:
+        x: 120
+        y: 59
+      bottomLeft:
+        x: 115
+        y: 139
+    orientation: -85
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: a2ff729
+      width: 25
+      height: 25
+    extra: '{"DataMask":2,"UEC":0.40,"Version":"2","ECLevel":"L"}'
+    version: "2"
+    readerInit: false
+    ecLevel: L

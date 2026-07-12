@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 2801edf
+    bytesECI: 807b189
+    text: "978039305867352595"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 93
+        y: 90
+      topRight:
+        x: 371
+        y: 90
+      bottomRight:
+        x: 371
+        y: 92
+      bottomLeft:
+        x: 92
+        y: 92
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E3"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"EanAddOn":"52595"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 2801edf
+    bytesECI: 807b189
+    text: "978039305867352595"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 336
+        y: 106
+      topRight:
+        x: 52
+        y: 106
+      bottomRight:
+        x: 52
+        y: 108
+      bottomLeft:
+        x: 335
+        y: 108
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E3"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"EanAddOn":"52595"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 2801edf
+    bytesECI: 807b189
+    text: "978039305867352595"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 90
+        y: 107
+      topRight:
+        x: 373
+        y: 107
+      bottomRight:
+        x: 373
+        y: 109
+      bottomLeft:
+        x: 89
+        y: 109
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E3"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"EanAddOn":"52595"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 2801edf
+    bytesECI: 807b189
+    text: "978039305867352595"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 335
+        y: 108
+      topRight:
+        x: 52
+        y: 108
+      bottomRight:
+        x: 52
+        y: 109
+      bottomLeft:
+        x: 335
+        y: 109
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E3"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"EanAddOn":"52595"}'
+    version: ""
+    readerInit: false
+    ecLevel: ""

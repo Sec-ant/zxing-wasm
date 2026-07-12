@@ -1,0 +1,158 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 4e1ed42
+    bytesECI: 70dcb8c
+    text: "9780441014989"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 47
+        y: 120
+      topRight:
+        x: 214
+        y: 120
+      bottomRight:
+        x: 214
+        y: 122
+      bottomLeft:
+        x: 47
+        y: 122
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 4e1ed42
+    bytesECI: 70dcb8c
+    text: "9780441014989"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 192
+        y: 118
+      topRight:
+        x: 25
+        y: 118
+      bottomRight:
+        x: 25
+        y: 120
+      bottomLeft:
+        x: 192
+        y: 120
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 4e1ed42
+    bytesECI: 70dcb8c
+    text: "9780441014989"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 47
+        y: 119
+      topRight:
+        x: 214
+        y: 119
+      bottomRight:
+        x: 214
+        y: 120
+      bottomLeft:
+        x: 47
+        y: 120
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: 4e1ed42
+    bytesECI: 70dcb8c
+    text: "9780441014989"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 192
+        y: 119
+      topRight:
+        x: 25
+        y: 119
+      bottomRight:
+        x: 25
+        y: 120
+      bottomLeft:
+        x: 192
+        y: 120
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 2
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
