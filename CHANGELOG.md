@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 3.1.2
+
+### Patch Changes
+
+- 7cf9128: Bump zxing-wasm to `179be6ac` and ship upstream bug fixes.
+
 ## 3.1.1
 
 ### Patch Changes
