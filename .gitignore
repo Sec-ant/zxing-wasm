@@ -32,6 +32,7 @@ src/**/zxing_*.wasm
 src/**/zxing_*.js
 
 .emsdk-cache
+/.ccache/
 *.tgz
 *.tar.gz
 *.tsbuildinfo
