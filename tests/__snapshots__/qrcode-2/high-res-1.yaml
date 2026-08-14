@@ -31,7 +31,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f2294b8
+      data: 1eb6243
       width: 153
       height: 153
     extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
@@ -70,7 +70,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: df50021
+      data: a99d480
       width: 153
       height: 153
     extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
@@ -109,7 +109,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e2d2b89
+      data: de1a870
       width: 153
       height: 153
     extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
@@ -148,10 +148,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8d6b687
+      data: e647396
       width: 153
       height: 153
-    extra: '{"DataMask":3,"UEC":0.21,"Version":"34","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
     version: "34"
     readerInit: false
     ecLevel: M
@@ -188,7 +188,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f2294b8
+      data: 1eb6243
       width: 153
       height: 153
     extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
@@ -227,7 +227,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: df50021
+      data: a99d480
       width: 153
       height: 153
     extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
@@ -266,7 +266,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e2d2b89
+      data: de1a870
       width: 153
       height: 153
     extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
@@ -305,10 +305,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8d6b687
+      data: e647396
       width: 153
       height: 153
-    extra: '{"DataMask":3,"UEC":0.21,"Version":"34","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":0.28,"Version":"34","ECLevel":"M"}'
     version: "34"
     readerInit: false
     ecLevel: M

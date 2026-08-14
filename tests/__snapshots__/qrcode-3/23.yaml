@@ -17,7 +17,7 @@ fast:
         x: 173
         y: 57
       bottomRight:
-        x: 164
+        x: 163
         y: 190
       bottomLeft:
         x: 55
@@ -31,7 +31,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'
@@ -57,7 +57,7 @@ fast:
         y: 173
       bottomRight:
         x: 50
-        y: 164
+        y: 163
       bottomLeft:
         x: 40
         y: 55
@@ -70,7 +70,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'
@@ -95,7 +95,7 @@ fast:
         x: 67
         y: 183
       bottomRight:
-        x: 76
+        x: 77
         y: 50
       bottomLeft:
         x: 185
@@ -109,7 +109,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'
@@ -135,7 +135,7 @@ fast:
         y: 67
       bottomRight:
         x: 190
-        y: 76
+        y: 77
       bottomLeft:
         x: 200
         y: 185
@@ -148,7 +148,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'
@@ -174,7 +174,7 @@ slow:
         x: 173
         y: 57
       bottomRight:
-        x: 164
+        x: 163
         y: 190
       bottomLeft:
         x: 55
@@ -188,7 +188,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'
@@ -214,7 +214,7 @@ slow:
         y: 173
       bottomRight:
         x: 50
-        y: 164
+        y: 163
       bottomLeft:
         x: 40
         y: 55
@@ -227,7 +227,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'
@@ -252,7 +252,7 @@ slow:
         x: 67
         y: 183
       bottomRight:
-        x: 76
+        x: 77
         y: 50
       bottomLeft:
         x: 185
@@ -266,7 +266,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'
@@ -292,7 +292,7 @@ slow:
         y: 67
       bottomRight:
         x: 190
-        y: 76
+        y: 77
       bottomLeft:
         x: 200
         y: 185
@@ -305,7 +305,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f8be4b3
+      data: a0f253e
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.55,"Version":"7","ECLevel":"Q"}'

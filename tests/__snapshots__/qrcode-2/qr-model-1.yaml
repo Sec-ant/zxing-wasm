@@ -56,12 +56,12 @@ fast:
         x: 58
         y: 58
       bottomRight:
-        x: 8
-        y: 58
+        x: 9
+        y: 57
       bottomLeft:
         x: 8
         y: 8
-    orientation: 90
+    orientation: 89
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q0"
@@ -70,10 +70,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4ea2ebe
+      data: b597060
       width: 25
       height: 25
-    extra: '{"DataMask":5,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":5,"UEC":0.50,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -134,12 +134,12 @@ fast:
         x: 8
         y: 8
       bottomRight:
-        x: 58
-        y: 8
+        x: 57
+        y: 9
       bottomLeft:
         x: 58
         y: 58
-    orientation: -90
+    orientation: -91
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q0"
@@ -148,10 +148,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4ea2ebe
+      data: fe76afb
       width: 25
       height: 25
-    extra: '{"DataMask":5,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":5,"UEC":0.50,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -213,12 +213,12 @@ slow:
         x: 58
         y: 58
       bottomRight:
-        x: 8
-        y: 58
+        x: 9
+        y: 57
       bottomLeft:
         x: 8
         y: 8
-    orientation: 90
+    orientation: 89
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q0"
@@ -227,10 +227,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4ea2ebe
+      data: b597060
       width: 25
       height: 25
-    extra: '{"DataMask":5,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":5,"UEC":0.50,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -291,12 +291,12 @@ slow:
         x: 8
         y: 8
       bottomRight:
-        x: 58
-        y: 8
+        x: 57
+        y: 9
       bottomLeft:
         x: 58
         y: 58
-    orientation: -90
+    orientation: -91
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q0"
@@ -305,10 +305,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4ea2ebe
+      data: fe76afb
       width: 25
       height: 25
-    extra: '{"DataMask":5,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":5,"UEC":0.50,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M

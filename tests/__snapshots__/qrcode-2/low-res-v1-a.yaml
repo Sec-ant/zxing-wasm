@@ -4,25 +4,25 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 0
-        y: 0
+        x: 23
+        y: 20
       topRight:
-        x: 111
-        y: 0
+        x: 209
+        y: 25
       bottomRight:
-        x: 111
-        y: 111
+        x: 250
+        y: 178
       bottomLeft:
-        x: 0
-        y: 111
-    orientation: 0
+        x: 51
+        y: 174
+    orientation: 1
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -31,37 +31,37 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
   "90":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 111
-        y: 0
+        x: 175
+        y: 23
       topRight:
-        x: 111
-        y: 111
+        x: 170
+        y: 209
       bottomRight:
-        x: 1
-        y: 109
+        x: 17
+        y: 250
       bottomLeft:
-        x: 0
-        y: 0
-    orientation: 90
+        x: 21
+        y: 51
+    orientation: 91
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -70,37 +70,37 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
   "180":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 111
-        y: 111
+        x: 250
+        y: 175
       topRight:
-        x: 0
-        y: 110
+        x: 64
+        y: 170
       bottomRight:
-        x: 0
-        y: 0
+        x: 23
+        y: 17
       bottomLeft:
-        x: 110
-        y: 0
-    orientation: -180
+        x: 222
+        y: 21
+    orientation: -179
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -109,37 +109,37 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
   "270":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 0
-        y: 111
+        x: 20
+        y: 250
       topRight:
-        x: 0
-        y: 0
+        x: 25
+        y: 64
       bottomRight:
-        x: 109
-        y: 1
+        x: 178
+        y: 23
       bottomLeft:
-        x: 111
-        y: 111
-    orientation: -91
+        x: 174
+        y: 222
+    orientation: -89
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -148,38 +148,38 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
 slow:
   "0":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 0
-        y: 0
+        x: 23
+        y: 20
       topRight:
-        x: 111
-        y: 0
+        x: 209
+        y: 25
       bottomRight:
-        x: 111
-        y: 111
+        x: 250
+        y: 178
       bottomLeft:
-        x: 0
-        y: 111
-    orientation: 0
+        x: 51
+        y: 174
+    orientation: 1
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -188,37 +188,37 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
   "90":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 111
-        y: 0
+        x: 175
+        y: 23
       topRight:
-        x: 111
-        y: 111
+        x: 170
+        y: 209
       bottomRight:
-        x: 1
-        y: 109
+        x: 17
+        y: 250
       bottomLeft:
-        x: 0
-        y: 0
-    orientation: 90
+        x: 21
+        y: 51
+    orientation: 91
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -227,37 +227,37 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
   "180":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 111
-        y: 111
+        x: 250
+        y: 175
       topRight:
-        x: 0
-        y: 110
+        x: 64
+        y: 170
       bottomRight:
-        x: 0
-        y: 0
+        x: 23
+        y: 17
       bottomLeft:
-        x: 110
-        y: 0
-    orientation: -180
+        x: 222
+        y: 21
+    orientation: -179
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -266,37 +266,37 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
   "270":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    bytes: 2f7493d
+    bytesECI: eee591b
+    text: Version 1 QR
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 0
-        y: 111
+        x: 20
+        y: 250
       topRight:
-        x: 0
-        y: 0
+        x: 25
+        y: 64
       bottomRight:
-        x: 109
-        y: 1
+        x: 178
+        y: 23
       bottomLeft:
-        x: 111
-        y: 111
-    orientation: -91
+        x: 174
+        y: 222
+    orientation: -89
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -305,22 +305,22 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
+      data: 61f98c1
       width: 21
       height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
+    extra: '{"DataMask":1,"UEC":1.0,"Version":"1","ECLevel":"L"}'
     version: "1"
     readerInit: false
-    ecLevel: M
+    ecLevel: L
 pure:
   "0":
-    isValid: true
+    isValid: false
     error: ""
-    format: QRCode
-    symbology: QRCode
-    bytes: a20b5b4
-    bytesECI: 39e3c72
-    text: M$K0YGV0G
+    format: None
+    symbology: None
+    bytes: e3b0c44
+    bytesECI: e3b0c44
+    text: ""
     contentType: Text
     hasECI: false
     position:
@@ -328,27 +328,27 @@ pure:
         x: 0
         y: 0
       topRight:
-        x: 109
+        x: 0
         y: 0
       bottomRight:
-        x: 109
-        y: 109
+        x: 0
+        y: 0
       bottomLeft:
         x: 0
-        y: 109
+        y: 0
     orientation: 0
     isMirrored: false
     isInverted: false
-    symbologyIdentifier: "]Q1"
+    symbologyIdentifier: ""
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 380a2f1
-      width: 21
-      height: 21
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"1","ECLevel":"M"}'
-    version: "1"
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
     readerInit: false
-    ecLevel: M
+    ecLevel: ""

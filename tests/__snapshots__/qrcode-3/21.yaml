@@ -70,7 +70,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 0758cf1
+      data: 9ebde7d
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
@@ -227,7 +227,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 0758cf1
+      data: 9ebde7d
       width: 45
       height: 45
     extra: '{"DataMask":3,"UEC":0.88,"Version":"7","ECLevel":"Q"}'
