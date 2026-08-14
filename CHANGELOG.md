@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 3.1.3
+
+### Patch Changes
+
+- 3ed2ffa: Bump zxing-wasm to `a17fd9dc` and ship upstream bug fixes and performance improvements.
+
 ## 3.1.2
 
 ### Patch Changes
