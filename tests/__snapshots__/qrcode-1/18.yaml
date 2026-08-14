@@ -11,7 +11,7 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 293
+        x: 292
         y: 45
       topRight:
         x: 277
@@ -51,7 +51,7 @@ fast:
     position:
       topLeft:
         x: 259
-        y: 293
+        y: 292
       topRight:
         x: 27
         y: 277
@@ -89,10 +89,10 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 22
+        x: 23
         y: 259
       topRight:
-        x: 38
+        x: 37
         y: 27
       bottomRight:
         x: 291
@@ -129,10 +129,10 @@ fast:
     position:
       topLeft:
         x: 45
-        y: 22
+        y: 23
       topRight:
         x: 277
-        y: 38
+        y: 37
       bottomRight:
         x: 260
         y: 291
@@ -168,7 +168,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 293
+        x: 292
         y: 45
       topRight:
         x: 277
@@ -208,7 +208,7 @@ slow:
     position:
       topLeft:
         x: 259
-        y: 293
+        y: 292
       topRight:
         x: 27
         y: 277
@@ -246,10 +246,10 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 22
+        x: 23
         y: 259
       topRight:
-        x: 38
+        x: 37
         y: 27
       bottomRight:
         x: 291
@@ -286,10 +286,10 @@ slow:
     position:
       topLeft:
         x: 45
-        y: 22
+        y: 23
       topRight:
         x: 277
-        y: 38
+        y: 37
       bottomRight:
         x: 260
         y: 291

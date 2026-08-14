@@ -31,10 +31,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L
@@ -70,10 +70,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L
@@ -109,10 +109,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L
@@ -148,10 +148,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L
@@ -188,10 +188,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L
@@ -227,10 +227,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L
@@ -266,10 +266,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L
@@ -305,10 +305,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8e69b73
+      data: faa88a8
       width: 33
       height: 33
-    extra: '{"DataMask":2,"UEC":0.60,"Version":"4","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.50,"Version":"4","ECLevel":"L"}'
     version: "4"
     readerInit: false
     ecLevel: L

@@ -15,7 +15,7 @@ fast:
         y: 21
       topRight:
         x: 235
-        y: 220
+        y: 221
       bottomRight:
         x: 23
         y: 224
@@ -93,7 +93,7 @@ fast:
         y: 228
       topRight:
         x: 22
-        y: 29
+        y: 28
       bottomRight:
         x: 234
         y: 25
@@ -172,7 +172,7 @@ slow:
         y: 21
       topRight:
         x: 235
-        y: 220
+        y: 221
       bottomRight:
         x: 23
         y: 224
@@ -250,7 +250,7 @@ slow:
         y: 228
       topRight:
         x: 22
-        y: 29
+        y: 28
       bottomRight:
         x: 234
         y: 25

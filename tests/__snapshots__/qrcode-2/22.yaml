@@ -31,7 +31,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 516852a
+      data: 80a80c9
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'
@@ -70,7 +70,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: a482b05
+      data: 2b937b3
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'
@@ -109,7 +109,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: fa84ffb
+      data: b42ee15
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'
@@ -148,7 +148,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: daeaa1a
+      data: 5b1dc72
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'
@@ -188,7 +188,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 516852a
+      data: 80a80c9
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'
@@ -227,7 +227,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: a482b05
+      data: 2b937b3
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'
@@ -266,7 +266,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: fa84ffb
+      data: b42ee15
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'
@@ -305,7 +305,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: daeaa1a
+      data: 5b1dc72
       width: 53
       height: 53
     extra: '{"DataMask":2,"UEC":0.8,"Version":"9","ECLevel":"H"}'

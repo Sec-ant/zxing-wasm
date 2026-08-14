@@ -34,7 +34,7 @@ fast:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":0.25,"ECLevel":"9%"}'
+    extra: '{"UEC":0.0,"ECLevel":"9%"}'
     version: ""
     readerInit: false
     ecLevel: 9%
@@ -74,7 +74,7 @@ fast:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":0.25,"ECLevel":"9%"}'
+    extra: '{"UEC":0.0,"ECLevel":"9%"}'
     version: ""
     readerInit: false
     ecLevel: 9%
@@ -115,7 +115,7 @@ slow:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":0.25,"ECLevel":"9%"}'
+    extra: '{"UEC":0.0,"ECLevel":"9%"}'
     version: ""
     readerInit: false
     ecLevel: 9%
@@ -154,7 +154,7 @@ slow:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":0.25,"ECLevel":"9%"}'
+    extra: '{"UEC":0.0,"ECLevel":"9%"}'
     version: ""
     readerInit: false
     ecLevel: 9%
@@ -193,7 +193,7 @@ slow:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":0.25,"ECLevel":"9%"}'
+    extra: '{"UEC":0.0,"ECLevel":"9%"}'
     version: ""
     readerInit: false
     ecLevel: 9%
@@ -232,7 +232,7 @@ slow:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":0.25,"ECLevel":"9%"}'
+    extra: '{"UEC":0.0,"ECLevel":"9%"}'
     version: ""
     readerInit: false
     ecLevel: 9%

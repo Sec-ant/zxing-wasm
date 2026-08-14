@@ -56,7 +56,7 @@ fast:
         x: 261
         y: 269
       bottomRight:
-        x: 25
+        x: 26
         y: 269
       bottomLeft:
         x: 26
@@ -129,7 +129,7 @@ fast:
     position:
       topLeft:
         x: 39
-        y: 265
+        y: 266
       topRight:
         x: 39
         y: 31
@@ -213,7 +213,7 @@ slow:
         x: 261
         y: 269
       bottomRight:
-        x: 25
+        x: 26
         y: 269
       bottomLeft:
         x: 26
@@ -286,7 +286,7 @@ slow:
     position:
       topLeft:
         x: 39
-        y: 265
+        y: 266
       topRight:
         x: 39
         y: 31
