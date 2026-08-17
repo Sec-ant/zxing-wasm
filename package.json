@@ -209,7 +209,7 @@
     "tsx": "^4.23.12",
     "typedoc": "^0.28.20",
     "typedoc-plugin-replace-text": "^4.2.0",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.0",
     "vite": "^8.2.1",
     "vitest": "^4.1.10",
     "yaml": "^2.9.0"
