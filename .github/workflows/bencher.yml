@@ -49,7 +49,7 @@ jobs:
 
       - name: Install Bencher CLI
         if: env.BENCHER_API_TOKEN != ''
-        uses: bencherdev/bencher@6a0a8855eb0c7dad27f6dafa5ce36844d54d27ad # main
+        uses: bencherdev/bencher@33cfa4adbcee218fc0b4eb19fb3cb1f1b376401c # main
 
       - name: Upload to Bencher (main)
         if: env.BENCHER_API_TOKEN != ''
@@ -93,7 +93,7 @@ jobs:
 
       - name: Install Bencher CLI
         if: env.BENCHER_API_TOKEN != ''
-        uses: bencherdev/bencher@6a0a8855eb0c7dad27f6dafa5ce36844d54d27ad # main
+        uses: bencherdev/bencher@33cfa4adbcee218fc0b4eb19fb3cb1f1b376401c # main
 
       # Fork PRs have no access to BENCHER_API_TOKEN, so this step is skipped
       # for them. The bench artifacts can still be uploaded for inspection.
