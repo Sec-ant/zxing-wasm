@@ -22,6 +22,7 @@ fast:
       bottomLeft:
         x: 294
         y: 241
+    rotation: -145
     orientation: -145
     isMirrored: false
     isInverted: false
@@ -61,6 +62,7 @@ fast:
       bottomLeft:
         x: 259
         y: 294
+    rotation: -55
     orientation: -55
     isMirrored: false
     isInverted: false
@@ -100,6 +102,7 @@ fast:
       bottomLeft:
         x: 206
         y: 259
+    rotation: 35
     orientation: 35
     isMirrored: false
     isInverted: false
@@ -139,6 +142,7 @@ fast:
       bottomLeft:
         x: 241
         y: 206
+    rotation: 125
     orientation: 125
     isMirrored: false
     isInverted: false
@@ -179,6 +183,7 @@ slow:
       bottomLeft:
         x: 294
         y: 241
+    rotation: -145
     orientation: -145
     isMirrored: false
     isInverted: false
@@ -218,6 +223,7 @@ slow:
       bottomLeft:
         x: 259
         y: 294
+    rotation: -55
     orientation: -55
     isMirrored: false
     isInverted: false
@@ -257,6 +263,7 @@ slow:
       bottomLeft:
         x: 206
         y: 259
+    rotation: 35
     orientation: 35
     isMirrored: false
     isInverted: false
@@ -296,6 +303,7 @@ slow:
       bottomLeft:
         x: 241
         y: 206
+    rotation: 125
     orientation: 125
     isMirrored: false
     isInverted: false

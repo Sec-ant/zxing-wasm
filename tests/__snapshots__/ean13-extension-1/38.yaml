@@ -25,6 +25,7 @@ slow:
       bottomLeft:
         x: 100
         y: 98
+    rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
@@ -64,6 +65,7 @@ slow:
       bottomLeft:
         x: 441
         y: 135
+    rotation: 180
     orientation: 180
     isMirrored: false
     isInverted: false

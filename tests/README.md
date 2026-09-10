@@ -13,7 +13,7 @@ maximum-misread threshold for every `(directory, mode, rotation)` combination.
 
 The additional YAML fixture is a complete `ReadResult` contract represented in
 YAML rather than JSON. It preserves validity, errors, format, text, payload
-hashes, all position vertices, orientation, flags, structured-append data,
+hashes, all position vertices, rotation and its deprecated orientation alias, flags, structured-append data,
 symbol data, and metadata exactly as the previous JSON snapshots did.
 
 The WASM wrapper decodes byte inputs with `stb_image`, which does not support

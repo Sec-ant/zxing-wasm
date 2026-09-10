@@ -10,7 +10,7 @@
  * Input bytes don't affect timing — the function is fixed-cost per pixel —
  * so we synthesise the RGBA buffer in-memory rather than reading a fixture.
  */
-import { beforeAll, bench, describe } from "vitest";
+import { beforeAll, describe, test } from "vitest";
 
 // 4K omitted to keep total bench runtime in check; 720p/1080p already
 // shows the linear scaling clearly.
@@ -62,13 +62,17 @@ beforeAll(() => {
 describe("rgbaToGrayscale", () => {
   for (const { name, width, height } of resolutions) {
     const pixels = width * height;
-    bench(
-      `${name} — ${pixels.toLocaleString()} px`,
-      () => {
-        rgbaToGrayscale(rgbaData[name]!);
-      },
-      { warmupIterations: 20, iterations: 100 },
-    );
+    test(`${name} — ${pixels.toLocaleString()} px`, {
+      timeout: 120_000,
+    }, async ({ bench }) => {
+      await bench(
+        `${name} — ${pixels.toLocaleString()} px`,
+        { warmupIterations: 20, iterations: 100 },
+        () => {
+          rgbaToGrayscale(rgbaData[name]!);
+        },
+      ).run();
+    });
   }
 });
 
@@ -79,12 +83,16 @@ describe("rgbaToGrayscale", () => {
 describe("Uint8Array allocation (baseline)", () => {
   for (const { width, height } of resolutions) {
     const size = width * height;
-    bench(
-      `new Uint8Array(${size.toLocaleString()})`,
-      () => {
-        new Uint8Array(size);
-      },
-      { warmupIterations: 20, iterations: 100 },
-    );
+    test(`new Uint8Array(${size.toLocaleString()})`, {
+      timeout: 120_000,
+    }, async ({ bench }) => {
+      await bench(
+        `new Uint8Array(${size.toLocaleString()})`,
+        { warmupIterations: 20, iterations: 100 },
+        () => {
+          new Uint8Array(size);
+        },
+      ).run();
+    });
   }
 });

@@ -12,7 +12,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
-import { beforeAll, bench, describe } from "vitest";
+import { beforeAll, describe, test } from "vitest";
 import type { ReaderOptions } from "../../../src/bindings/index.js";
 import { prepareZXingModule, readBarcodes } from "../../../src/reader/index.js";
 
@@ -62,35 +62,35 @@ beforeAll(async () => {
 }, 60_000);
 
 describe("readBarcodes — default options", () => {
-  bench(
-    "720p",
-    async () => {
+  test("720p", { timeout: 120_000 }, async ({ bench }) => {
+    await bench("720p", { warmupIterations: 20, iterations: 100 }, async () => {
       await readBarcodes(img720);
-    },
-    { warmupIterations: 20, iterations: 100 },
-  );
-  bench(
-    "1080p",
-    async () => {
-      await readBarcodes(img1080);
-    },
-    { warmupIterations: 20, iterations: 100 },
-  );
+    }).run();
+  });
+  test("1080p", { timeout: 120_000 }, async ({ bench }) => {
+    await bench(
+      "1080p",
+      { warmupIterations: 20, iterations: 100 },
+      async () => {
+        await readBarcodes(img1080);
+      },
+    ).run();
+  });
 });
 
 describe("readBarcodes — optimized options", () => {
-  bench(
-    "720p",
-    async () => {
+  test("720p", { timeout: 120_000 }, async ({ bench }) => {
+    await bench("720p", { warmupIterations: 20, iterations: 100 }, async () => {
       await readBarcodes(img720, optimizedOpts);
-    },
-    { warmupIterations: 20, iterations: 100 },
-  );
-  bench(
-    "1080p",
-    async () => {
-      await readBarcodes(img1080, optimizedOpts);
-    },
-    { warmupIterations: 20, iterations: 100 },
-  );
+    }).run();
+  });
+  test("1080p", { timeout: 120_000 }, async ({ bench }) => {
+    await bench(
+      "1080p",
+      { warmupIterations: 20, iterations: 100 },
+      async () => {
+        await readBarcodes(img1080, optimizedOpts);
+      },
+    ).run();
+  });
 });

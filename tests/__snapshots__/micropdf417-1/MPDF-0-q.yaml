@@ -22,6 +22,7 @@ fast:
       bottomLeft:
         x: 50
         y: 256
+    rotation: -6
     orientation: -6
     isMirrored: false
     isInverted: false
@@ -62,6 +63,7 @@ fast:
       bottomLeft:
         x: 650
         y: 6
+    rotation: 174
     orientation: 174
     isMirrored: false
     isInverted: false
@@ -108,6 +110,7 @@ pure:
       bottomLeft:
         x: 50
         y: 256
+    rotation: -6
     orientation: -6
     isMirrored: false
     isInverted: false

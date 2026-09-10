@@ -22,6 +22,7 @@ fast:
       bottomLeft:
         x: 7
         y: 163
+    rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
@@ -61,6 +62,7 @@ fast:
       bottomLeft:
         x: 7
         y: 7
+    rotation: 90
     orientation: 90
     isMirrored: false
     isInverted: false
@@ -100,6 +102,7 @@ fast:
       bottomLeft:
         x: 163
         y: 7
+    rotation: 180
     orientation: 180
     isMirrored: false
     isInverted: false
@@ -139,6 +142,7 @@ fast:
       bottomLeft:
         x: 163
         y: 163
+    rotation: -90
     orientation: -90
     isMirrored: false
     isInverted: false
@@ -179,6 +183,7 @@ slow:
       bottomLeft:
         x: 7
         y: 163
+    rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
@@ -218,6 +223,7 @@ slow:
       bottomLeft:
         x: 7
         y: 7
+    rotation: 90
     orientation: 90
     isMirrored: false
     isInverted: false
@@ -257,6 +263,7 @@ slow:
       bottomLeft:
         x: 163
         y: 7
+    rotation: 180
     orientation: 180
     isMirrored: false
     isInverted: false
@@ -296,6 +303,7 @@ slow:
       bottomLeft:
         x: 163
         y: 163
+    rotation: -90
     orientation: -90
     isMirrored: false
     isInverted: false
@@ -314,41 +322,42 @@ slow:
     ecLevel: 30%
 pure:
   "0":
-    isValid: false
+    isValid: true
     error: ""
-    format: None
-    symbology: None
-    bytes: e3b0c44
-    bytesECI: e3b0c44
-    text: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 29767a7
+    bytesECI: 50979c1
+    text: Aztec Code is a public domain 2D matrix barcode symbology of nominally square symbols built on a square grid with a distinctive square bullseye pattern at their center.
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 0
-        y: 0
+        x: 7
+        y: 8
       topRight:
-        x: 0
-        y: 0
+        x: 162
+        y: 8
       bottomRight:
-        x: 0
-        y: 0
+        x: 162
+        y: 163
       bottomLeft:
-        x: 0
-        y: 0
+        x: 7
+        y: 163
+    rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
-    symbologyIdentifier: ""
+    symbologyIdentifier: "]z0"
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e3b0c44
-      width: 0
-      height: 0
-    extra: ""
-    version: ""
+      data: 3a33a27
+      width: 41
+      height: 41
+    extra: '{"UEC":1.0,"Version":"6","ECLevel":"30%"}'
+    version: "6"
     readerInit: false
-    ecLevel: ""
+    ecLevel: 30%

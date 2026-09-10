@@ -55,9 +55,9 @@ export interface ZXingReadResult {
    */
   position: ZXingPosition;
   /**
-   * Orientation of the barcode in degree.
+   * Rotation of the barcode in degrees.
    */
-  orientation: number;
+  rotation: number;
   /**
    * Whether the symbol is mirrored (currently only supported by QRCode and DataMatrix).
    */
@@ -172,6 +172,12 @@ export interface ReadResult
    * Position of the detected barcode.
    */
   position: Position;
+  /**
+   * Legacy alias for {@link ReadResult.rotation | `ReadResult.rotation`}.
+   *
+   * @deprecated Use {@link ReadResult.rotation | `ReadResult.rotation`} instead.
+   */
+  orientation: number;
 }
 
 /**
@@ -185,6 +191,7 @@ export function zxingReadResultToReadResult(
 ): ReadResult {
   return {
     ...zxingReadResult,
+    orientation: zxingReadResult.rotation,
     format: zxingReadResult.format as ReadOutputBarcodeFormat,
     symbology: zxingReadResult.symbology as BarcodeSymbology,
     contentType: decodeContentType(zxingReadResult.contentType),

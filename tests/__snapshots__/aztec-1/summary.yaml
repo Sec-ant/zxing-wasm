@@ -1,5 +1,5 @@
 total: 32
-passAll: 30
+passAll: 31
 passSome: 32
 fast:
   "0":
@@ -33,9 +33,8 @@ slow:
   "270": {}
 pure:
   "0":
-    failures: 2
+    failures: 1
     undetected:
-      total: 2
+      total: 1
       images:
         - abc-inverted.png
-        - az-thick.png

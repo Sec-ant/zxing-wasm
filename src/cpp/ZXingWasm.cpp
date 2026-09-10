@@ -96,7 +96,7 @@ struct JsReadResult {
   int contentType;
   bool hasECI;
   ZXing::Position position;
-  int orientation;
+  int rotation;
   bool isMirrored;
   bool isInverted;
   std::string symbologyIdentifier;
@@ -160,7 +160,7 @@ JsReadResults readBarcodes(ZXing::ImageView imageView, const JsReaderOptions &js
          .contentType = static_cast<int>(barcode.contentType()),
          .hasECI = barcode.hasECI(),
          .position = barcode.position(),
-         .orientation = barcode.orientation(),
+         .rotation = barcode.rotation(),
          .isMirrored = barcode.isMirrored(),
          .isInverted = barcode.isInverted(),
          .symbologyIdentifier = barcode.symbologyIdentifier(),
@@ -343,7 +343,7 @@ EMSCRIPTEN_BINDINGS(ZXingWasm) {
     .field("contentType", &JsReadResult::contentType)
     .field("hasECI", &JsReadResult::hasECI)
     .field("position", &JsReadResult::position)
-    .field("orientation", &JsReadResult::orientation)
+    .field("rotation", &JsReadResult::rotation)
     .field("isMirrored", &JsReadResult::isMirrored)
     .field("isInverted", &JsReadResult::isInverted)
     .field("symbologyIdentifier", &JsReadResult::symbologyIdentifier)
