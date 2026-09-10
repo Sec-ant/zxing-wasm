@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 3.1.4
+
+### Patch Changes
+
+- 5c836b6: Update ZXing-C++ with the latest decoding fixes, expose `rotation` as the canonical read-result property while preserving `orientation` as deprecated, and refresh the development toolchain.
+
 ## 3.1.3
 
 ### Patch Changes
