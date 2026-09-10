@@ -253,6 +253,7 @@ export function takeSnapshot(
       bottomRight: readResult.position.bottomRight,
       bottomLeft: readResult.position.bottomLeft,
     },
+    rotation: readResult.rotation,
     orientation: readResult.orientation,
     isMirrored: readResult.isMirrored,
     isInverted: readResult.isInverted,

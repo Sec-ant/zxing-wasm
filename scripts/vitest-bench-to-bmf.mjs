@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 /**
- * Convert a vitest --outputJson bench report into Bencher Metric Format (BMF).
+ * Convert a Vitest JSON report into Bencher Metric Format (BMF).
  *
- * Vitest emits a tree of files → groups → benchmarks. Bencher expects a flat
+ * Vitest emits files → test cases → benchmark groups → tasks. Bencher expects a flat
  * map of `{ "<benchmark name>": { "latency-ms": { value, lower_value, upper_value } } }`.
  *
- * Naming: we use `<group label> > <benchmark name>` as the BMF key. The file
- * path prefix is stripped from the group's fullName since it adds noise without
- * helping disambiguate (group labels are already unique across files in this
- * repo).
+ * Naming: the Vitest benchmark group's full name is used as the BMF key.
  *
  * Units: vitest reports `mean`/`moe` in **milliseconds** (tinybench convention),
  * so metrics are written to the custom Bencher `latency-ms` measure. This keeps
@@ -32,34 +29,33 @@ if (!inputPath || !outputPath) {
 const raw = JSON.parse(await readFile(inputPath, "utf8"));
 const bmf = {};
 
-for (const file of raw.files ?? []) {
-  for (const group of file.groups ?? []) {
-    // Strip leading "<filepath> > " from fullName so the benchmark key stays
-    // stable across local runs and CI runs (where absolute paths differ).
-    const groupLabel = group.fullName.includes(" > ")
-      ? group.fullName.slice(group.fullName.indexOf(" > ") + 3)
-      : group.fullName;
-
-    for (const bench of group.benchmarks ?? []) {
-      const baseKey = `${groupLabel} > ${bench.name}`;
-      // Guard against duplicate keys: silent overwrite would lose metrics.
-      // Group + bench names are unique by construction in this repo, but
-      // append " (n)" if that ever stops being true.
-      let key = baseKey;
-      for (let n = 1; Object.hasOwn(bmf, key); n++) {
-        key = `${baseKey} (${n})`;
+for (const file of raw.testResults ?? []) {
+  for (const testCase of file.assertionResults ?? []) {
+    for (const group of testCase.benchmarks ?? []) {
+      for (const bench of group.tasks ?? []) {
+        const baseKey =
+          group.tasks.length === 1
+            ? group.name
+            : `${group.name} > ${bench.name}`;
+        // Guard against duplicate keys: silent overwrite would lose metrics.
+        // Group + bench names are unique by construction in this repo, but
+        // append " (n)" if that ever stops being true.
+        let key = baseKey;
+        for (let n = 1; Object.hasOwn(bmf, key); n++) {
+          key = `${baseKey} (${n})`;
+        }
+        // mean ± moe gives Bencher a confidence interval for its t-test
+        // threshold. A zero-width interval is used if moe is missing.
+        const value = bench.latency.mean;
+        const moe = bench.latency.moe ?? 0;
+        bmf[key] = {
+          [LATENCY_MEASURE]: {
+            value,
+            lower_value: Math.max(0, value - moe),
+            upper_value: value + moe,
+          },
+        };
       }
-      // mean ± moe gives Bencher a confidence interval for its t-test
-      // threshold. Falls back to min/max if moe is missing.
-      const value = bench.mean;
-      const moe = bench.moe ?? 0;
-      bmf[key] = {
-        [LATENCY_MEASURE]: {
-          value,
-          lower_value: Math.max(0, value - moe),
-          upper_value: value + moe,
-        },
-      };
     }
   }
 }

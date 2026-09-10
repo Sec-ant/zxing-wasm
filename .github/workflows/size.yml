@@ -28,10 +28,10 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Build artifacts
-        run: pnpm -s build:all
+        run: pnpm build:all
 
       - name: BundleWatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
           CI_BRANCH_BASE: ${{ github.base_ref || github.event.repository.default_branch }}
-        run: pnpm -s bundlewatch
+        run: pnpm bundlewatch

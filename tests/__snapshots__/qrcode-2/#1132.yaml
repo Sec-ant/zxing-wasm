@@ -22,6 +22,7 @@ fast:
       bottomLeft:
         x: 12
         y: 771
+    rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
@@ -61,6 +62,7 @@ fast:
       bottomLeft:
         x: 9
         y: 12
+    rotation: 90
     orientation: 90
     isMirrored: false
     isInverted: false
@@ -100,6 +102,7 @@ fast:
       bottomLeft:
         x: 768
         y: 10
+    rotation: 180
     orientation: 180
     isMirrored: false
     isInverted: false
@@ -139,6 +142,7 @@ fast:
       bottomLeft:
         x: 772
         y: 768
+    rotation: -90
     orientation: -90
     isMirrored: false
     isInverted: false
@@ -179,6 +183,7 @@ slow:
       bottomLeft:
         x: 12
         y: 771
+    rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
@@ -218,6 +223,7 @@ slow:
       bottomLeft:
         x: 9
         y: 12
+    rotation: 90
     orientation: 90
     isMirrored: false
     isInverted: false
@@ -257,6 +263,7 @@ slow:
       bottomLeft:
         x: 768
         y: 10
+    rotation: 180
     orientation: 180
     isMirrored: false
     isInverted: false
@@ -296,6 +303,7 @@ slow:
       bottomLeft:
         x: 772
         y: 768
+    rotation: -90
     orientation: -90
     isMirrored: false
     isInverted: false
@@ -313,42 +321,4 @@ slow:
     readerInit: false
     ecLevel: M
 pure:
-  "0":
-    isValid: false
-    error: ""
-    format: None
-    symbology: None
-    bytes: e3b0c44
-    bytesECI: e3b0c44
-    text: ""
-    contentType: Text
-    hasECI: false
-    position:
-      topLeft:
-        x: 0
-        y: 0
-      topRight:
-        x: 0
-        y: 0
-      bottomRight:
-        x: 0
-        y: 0
-      bottomLeft:
-        x: 0
-        y: 0
-    orientation: 0
-    isMirrored: false
-    isInverted: false
-    symbologyIdentifier: ""
-    sequenceSize: -1
-    sequenceIndex: -1
-    sequenceId: ""
-    lineCount: 0
-    symbol:
-      data: e3b0c44
-      width: 0
-      height: 0
-    extra: ""
-    version: ""
-    readerInit: false
-    ecLevel: ""
+  "0": null

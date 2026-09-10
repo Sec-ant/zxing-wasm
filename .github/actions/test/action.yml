@@ -6,8 +6,8 @@ runs:
   steps:
     - name: Build WASM
       shell: bash
-      run: pnpm -s build:wasm
+      run: pnpm build:wasm
 
     - name: Run Tests
       shell: bash
-      run: pnpm -s test --exclude ".*/**/*"
+      run: pnpm test --exclude ".*/**/*"

@@ -22,6 +22,7 @@ fast:
       bottomLeft:
         x: 51
         y: 298
+    rotation: -26
     orientation: -26
     isMirrored: false
     isInverted: false
@@ -61,6 +62,7 @@ fast:
       bottomLeft:
         x: 52
         y: 51
+    rotation: 64
     orientation: 64
     isMirrored: false
     isInverted: false
@@ -100,6 +102,7 @@ fast:
       bottomLeft:
         x: 299
         y: 52
+    rotation: 154
     orientation: 154
     isMirrored: false
     isInverted: false
@@ -139,6 +142,7 @@ fast:
       bottomLeft:
         x: 298
         y: 299
+    rotation: -116
     orientation: -116
     isMirrored: false
     isInverted: false
@@ -179,6 +183,7 @@ slow:
       bottomLeft:
         x: 51
         y: 298
+    rotation: -26
     orientation: -26
     isMirrored: false
     isInverted: false
@@ -218,6 +223,7 @@ slow:
       bottomLeft:
         x: 52
         y: 51
+    rotation: 64
     orientation: 64
     isMirrored: false
     isInverted: false
@@ -257,6 +263,7 @@ slow:
       bottomLeft:
         x: 299
         y: 52
+    rotation: 154
     orientation: 154
     isMirrored: false
     isInverted: false
@@ -296,6 +303,7 @@ slow:
       bottomLeft:
         x: 298
         y: 299
+    rotation: -116
     orientation: -116
     isMirrored: false
     isInverted: false
@@ -313,42 +321,4 @@ slow:
     readerInit: false
     ecLevel: L
 pure:
-  "0":
-    isValid: false
-    error: ""
-    format: None
-    symbology: None
-    bytes: e3b0c44
-    bytesECI: e3b0c44
-    text: ""
-    contentType: Text
-    hasECI: false
-    position:
-      topLeft:
-        x: 0
-        y: 0
-      topRight:
-        x: 0
-        y: 0
-      bottomRight:
-        x: 0
-        y: 0
-      bottomLeft:
-        x: 0
-        y: 0
-    orientation: 0
-    isMirrored: false
-    isInverted: false
-    symbologyIdentifier: ""
-    sequenceSize: -1
-    sequenceIndex: -1
-    sequenceId: ""
-    lineCount: 0
-    symbol:
-      data: e3b0c44
-      width: 0
-      height: 0
-    extra: ""
-    version: ""
-    readerInit: false
-    ecLevel: ""
+  "0": null

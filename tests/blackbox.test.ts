@@ -284,7 +284,9 @@ for (const {
             });
           }
         }
-        test.sequential(`${directory} ${imageName} snapshot`, async () => {
+        test(`${directory} ${imageName} snapshot`, {
+          concurrent: false,
+        }, async () => {
           await expect(formatSnapshot(snapshots)).toMatchFileSnapshot(
             resolve(
               import.meta.dirname,
@@ -294,7 +296,7 @@ for (const {
         });
       });
     }
-    test.sequential(`${directory} summary`, async () => {
+    test(`${directory} summary`, { concurrent: false }, async () => {
       for (const type of types) {
         for (const _summary of Object.values(summary[type]!)) {
           _summary!.failures = new Set([

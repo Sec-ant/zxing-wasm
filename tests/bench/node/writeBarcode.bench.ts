@@ -15,7 +15,7 @@
  */
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { beforeAll, bench, describe } from "vitest";
+import { beforeAll, describe, test } from "vitest";
 import { prepareZXingModule, writeBarcode } from "../../../src/writer/index.js";
 
 const wasmPath = resolve(
@@ -57,12 +57,10 @@ beforeAll(async () => {
 
 describe("writeBarcode — encoder", () => {
   for (const { name, input, format } of cases) {
-    bench(
-      name,
-      async () => {
+    test(name, { timeout: 120_000 }, async ({ bench }) => {
+      await bench(name, { warmupIterations: 10, iterations: 50 }, async () => {
         await writeBarcode(input, { format, scale: 1 });
-      },
-      { warmupIterations: 10, iterations: 50 },
-    );
+      }).run();
+    });
   }
 });

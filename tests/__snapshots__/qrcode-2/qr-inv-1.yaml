@@ -27,6 +27,7 @@ slow:
       bottomLeft:
         x: 145
         y: 214
+    rotation: -13
     orientation: -13
     isMirrored: false
     isInverted: true
@@ -66,6 +67,7 @@ slow:
       bottomLeft:
         x: 189
         y: 145
+    rotation: 77
     orientation: 77
     isMirrored: false
     isInverted: true
@@ -105,6 +107,7 @@ slow:
       bottomLeft:
         x: 274
         y: 189
+    rotation: 167
     orientation: 167
     isMirrored: false
     isInverted: true
@@ -144,6 +147,7 @@ slow:
       bottomLeft:
         x: 214
         y: 274
+    rotation: -103
     orientation: -103
     isMirrored: false
     isInverted: true
@@ -161,42 +165,4 @@ slow:
     readerInit: false
     ecLevel: M
 pure:
-  "0":
-    isValid: false
-    error: ""
-    format: None
-    symbology: None
-    bytes: e3b0c44
-    bytesECI: e3b0c44
-    text: ""
-    contentType: Text
-    hasECI: false
-    position:
-      topLeft:
-        x: 0
-        y: 0
-      topRight:
-        x: 0
-        y: 0
-      bottomRight:
-        x: 0
-        y: 0
-      bottomLeft:
-        x: 0
-        y: 0
-    orientation: 0
-    isMirrored: false
-    isInverted: false
-    symbologyIdentifier: ""
-    sequenceSize: -1
-    sequenceIndex: -1
-    sequenceId: ""
-    lineCount: 0
-    symbol:
-      data: e3b0c44
-      width: 0
-      height: 0
-    extra: ""
-    version: ""
-    readerInit: false
-    ecLevel: ""
+  "0": null

@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitest/config";
-import { version } from "./package.json";
+import { version } from "./package.json" with { type: "json" };
 import { emscriptenPatch } from "./scripts/vite-plugin-emscripten-patch.js";
 
 export default defineConfig({

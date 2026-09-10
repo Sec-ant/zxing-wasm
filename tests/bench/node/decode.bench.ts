@@ -23,7 +23,7 @@ import {
   createCanvas,
   loadImage,
 } from "@napi-rs/canvas";
-import { beforeAll, bench, describe } from "vitest";
+import { beforeAll, describe, test } from "vitest";
 import type {
   ReaderOptions,
   ReadInputBarcodeFormat,
@@ -113,13 +113,15 @@ describe("decode — fast path (single format, no rotate / no invert)", () => {
       tryRotate: false,
       maxNumberOfSymbols: 1,
     };
-    bench(
-      format,
-      async () => {
-        await readBarcodes(inputs.get(format)!, opts);
-      },
-      { warmupIterations: 10, iterations: 50 },
-    );
+    test(format, { timeout: 120_000 }, async ({ bench }) => {
+      await bench(
+        format,
+        { warmupIterations: 10, iterations: 50 },
+        async () => {
+          await readBarcodes(inputs.get(format)!, opts);
+        },
+      ).run();
+    });
   }
 });
 
@@ -127,11 +129,13 @@ describe("decode — failure path (default options, no barcode in frame)", () =>
   // Default options enable tryHarder / tryInvert / tryRotate / all formats —
   // the heavy try-everything path that dominates "scanner is slow when
   // there's nothing to scan" complaints.
-  bench(
-    "no-barcode 1080p",
-    async () => {
-      await readBarcodes(inputs.get(noBarcodeKey)!);
-    },
-    { warmupIterations: 5, iterations: 20 },
-  );
+  test("no-barcode 1080p", { timeout: 120_000 }, async ({ bench }) => {
+    await bench(
+      "no-barcode 1080p",
+      { warmupIterations: 5, iterations: 20 },
+      async () => {
+        await readBarcodes(inputs.get(noBarcodeKey)!);
+      },
+    ).run();
+  });
 });
