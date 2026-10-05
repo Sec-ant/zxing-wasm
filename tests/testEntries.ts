@@ -7,6 +7,8 @@ import { DEFAULT_READER_OPTIONS_FOR_TESTS } from "./utils.js";
 interface TestEntry {
   directory: string;
   barcodeFormat: ReadOutputBarcodeFormat;
+  /** Assert the upstream TOML contract, including all returned symbols. */
+  upstreamContract?: boolean;
   /**
    * default: true
    */
@@ -29,7 +31,7 @@ interface TestEntry {
   readerOptions?: ReaderOptions;
 }
 
-// Source: https://github.com/zxing-cpp/zxing-cpp/blob/daa502d6b4a1e15cd29f48269c01e383f1b384db/test/blackbox/BlackboxTestRunner.cpp#L338-L681
+// The upstream fixture directories are checked by the consistency test.
 export const testEntries: TestEntry[] = [
   {
     directory: "aztec-1",
@@ -172,7 +174,6 @@ export const testEntries: TestEntry[] = [
     directory: "qrcode-4",
     barcodeFormat: "QRCode",
   },
-  // TODO: qrcode-7
   {
     directory: "microqrcode-1",
     barcodeFormat: "MicroQRCode",
@@ -197,10 +198,54 @@ export const testEntries: TestEntry[] = [
     barcodeFormat: "PDF417",
     testPure: true,
   },
-  // TODO: pdf417-4
   {
     directory: "micropdf417-1",
     barcodeFormat: "MicroPDF417",
     testPure: true,
   },
+  {
+    directory: "code39ext-1",
+    barcodeFormat: "Code39Ext",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarExp-1",
+    barcodeFormat: "DataBarExp",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarExp-2",
+    barcodeFormat: "DataBarExp",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarExp-3",
+    barcodeFormat: "DataBarExp",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarExpStk-1",
+    barcodeFormat: "DataBarExpStk",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarOmni-1",
+    barcodeFormat: "DataBarOmni",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarStk-1",
+    barcodeFormat: "DataBarStk",
+    upstreamContract: true,
+  },
+  {
+    directory: "datamatrix-5",
+    barcodeFormat: "DataMatrix",
+    upstreamContract: true,
+  },
+  { directory: "ean13-ext-1", barcodeFormat: "EAN13", upstreamContract: true },
+  { directory: "upca-ext-1", barcodeFormat: "UPCA", upstreamContract: true },
+  { directory: "multi-1", barcodeFormat: "None", upstreamContract: true },
+  { directory: "none-1", barcodeFormat: "None", upstreamContract: true },
+  { directory: "none-2", barcodeFormat: "None", upstreamContract: true },
 ];

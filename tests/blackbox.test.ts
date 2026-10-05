@@ -72,44 +72,34 @@ const upstreamSampleDirectories = execFileSync(
 const configuredSampleDirectories = new Set(
   testEntries.map(({ directory }) => directory),
 );
-const intentionallyUncoveredSampleDirectories = new Set([
-  "code39ext-1",
-  "databarExp-1",
-  "databarExp-2",
-  "databarExp-3",
-  "databarExpStk-1",
-  "databarLtd-1",
-  "databarOmni-1",
-  "databarStk-1",
-  "datamatrix-5",
-  "ean13-ext-1",
-  "multi-1",
-  "none-1",
-  "none-2",
-  "upca-ext-1",
-]);
-const upstreamSampleDirectorySet = new Set(upstreamSampleDirectories);
+// Upstream has a separate, case-sensitive directory containing only defaults.
+// The actual DataBar Limited images remain in databarltd-1.
+const metadataOnlySampleDirectory = "databarLtd-1";
 
 test("consistent test entries", async () => {
-  expect(
-    [...configuredSampleDirectories].filter(
-      (directory) => !upstreamSampleDirectorySet.has(directory),
-    ),
-  ).toEqual([]);
-  expect(
+  expect([...configuredSampleDirectories].sort()).toEqual(
     upstreamSampleDirectories.filter(
-      (directory) =>
-        !configuredSampleDirectories.has(directory) &&
-        !intentionallyUncoveredSampleDirectories.has(directory),
+      (directory) => directory !== metadataOnlySampleDirectory,
     ),
-  ).toEqual([]);
+  );
+  expect(configuredSampleDirectories.size).toBe(testEntries.length);
   expect(
-    [...intentionallyUncoveredSampleDirectories].filter(
-      (directory) =>
-        !upstreamSampleDirectorySet.has(directory) ||
-        configuredSampleDirectories.has(directory),
-    ),
-  ).toEqual([]);
+    execFileSync(
+      "git",
+      [
+        "-C",
+        "zxing-cpp",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "HEAD",
+        `test/samples/${metadataOnlySampleDirectory}`,
+      ],
+      { encoding: "utf8" },
+    )
+      .trim()
+      .split("\n"),
+  ).toEqual([`test/samples/${metadataOnlySampleDirectory}/!defaults.toml`]);
 });
 
 await prepareZXingModule({
@@ -133,9 +123,7 @@ for (const {
     ? [0, 180]
     : [0, 90, 180, 270],
   readerOptions = DEFAULT_READER_OPTIONS_FOR_TESTS,
-} of testEntries.filter(({ directory }) =>
-  upstreamSampleDirectories.includes(directory),
-)) {
+} of testEntries.filter(({ upstreamContract }) => !upstreamContract)) {
   describe(directory, async () => {
     const types = [
       ...(testFast ? ["fast"] : []),
