@@ -68,12 +68,45 @@ const upstreamSampleDirectories = (
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name)
   .sort();
+const configuredSampleDirectories = new Set(
+  testEntries.map(({ directory }) => directory),
+);
+const intentionallyUncoveredSampleDirectories = new Set([
+  "code39ext-1",
+  "databarExp-1",
+  "databarExp-2",
+  "databarExp-3",
+  "databarExpStk-1",
+  "databarOmni-1",
+  "databarStk-1",
+  "datamatrix-5",
+  "ean13-ext-1",
+  "multi-1",
+  "none-1",
+  "none-2",
+  "upca-ext-1",
+]);
+const upstreamSampleDirectorySet = new Set(upstreamSampleDirectories);
 
 test("consistent test entries", async () => {
   expect(
-    testEntries
-      .map(({ directory }) => directory)
-      .filter((directory) => !upstreamSampleDirectories.includes(directory)),
+    [...configuredSampleDirectories].filter(
+      (directory) => !upstreamSampleDirectorySet.has(directory),
+    ),
+  ).toEqual([]);
+  expect(
+    upstreamSampleDirectories.filter(
+      (directory) =>
+        !configuredSampleDirectories.has(directory) &&
+        !intentionallyUncoveredSampleDirectories.has(directory),
+    ),
+  ).toEqual([]);
+  expect(
+    [...intentionallyUncoveredSampleDirectories].filter(
+      (directory) =>
+        !upstreamSampleDirectorySet.has(directory) ||
+        configuredSampleDirectories.has(directory),
+    ),
   ).toEqual([]);
 });
 
