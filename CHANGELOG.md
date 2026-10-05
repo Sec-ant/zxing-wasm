@@ -1,5 +1,11 @@
 # zxing-wasm
 
+## 3.1.5
+
+### Patch Changes
+
+- ba5c3da: Update ZXing-C++ and refresh dependencies, including upstream decoding and security fixes.
+
 ## 3.1.4
 
 ### Patch Changes
