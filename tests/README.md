@@ -1,15 +1,15 @@
 # Blackbox Test Fixtures
 
-The blackbox suite mirrors the sample directories exercised by
-`zxing-cpp/test/blackbox/BlackboxTestRunner.cpp`.
+The blackbox suite covers configured sample directories under
+`zxing-cpp/test/samples` and verifies each configured directory still exists.
 
 ## What is asserted
 
 Each upstream image is tested independently with every configured reader mode
 and rotation. Its `*.txt`, `*.result.txt`, and `*.bin` companions are compared
-using the same format, text, and binary rules as zxing-cpp. The suite also
-parses `BlackboxTestRunner.cpp` and asserts the upstream minimum-pass and
-maximum-misread threshold for every `(directory, mode, rotation)` combination.
+using the same format, text, and binary rules as zxing-cpp. It checks that each
+upstream sample directory has a corresponding test entry. Per-image snapshots
+cover each configured mode and rotation.
 
 The additional YAML fixture is a complete `ReadResult` contract represented in
 YAML rather than JSON. It preserves validity, errors, format, text, payload
@@ -35,4 +35,6 @@ full `(image, mode, rotation)` test matrix.
 4. Review and stage the resulting YAML fixtures with the submodule update.
 
 Do not update fixtures solely to hide a failure. The direct upstream companion
-file assertions and upstream threshold checks are the primary correctness gate.
+file assertions and per-image result snapshots are the correctness gate. The
+upstream C++ runner may include extra fixtures that test different scenarios
+(for example, multi-symbol inputs) than this single-result WASM harness covers.

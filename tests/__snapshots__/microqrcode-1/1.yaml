@@ -14,7 +14,7 @@ fast:
         x: 228
         y: 45
       topRight:
-        x: 405
+        x: 404
         y: 45
       bottomRight:
         x: 405
@@ -35,7 +35,7 @@ fast:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L
@@ -54,7 +54,7 @@ fast:
         x: 268
         y: 228
       topRight:
-        x: 268
+        x: 269
         y: 405
       bottomRight:
         x: 92
@@ -75,7 +75,7 @@ fast:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L
@@ -94,14 +94,14 @@ fast:
         x: 216
         y: 269
       topRight:
-        x: 41
+        x: 40
         y: 268
       bottomRight:
-        x: 41
-        y: 93
+        x: 40
+        y: 92
       bottomLeft:
         x: 216
-        y: 92
+        y: 91
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -115,7 +115,7 @@ fast:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L
@@ -137,7 +137,7 @@ fast:
         x: 45
         y: 39
       bottomRight:
-        x: 223
+        x: 222
         y: 39
       bottomLeft:
         x: 223
@@ -155,7 +155,7 @@ fast:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L
@@ -175,7 +175,7 @@ slow:
         x: 228
         y: 45
       topRight:
-        x: 405
+        x: 404
         y: 45
       bottomRight:
         x: 405
@@ -196,7 +196,7 @@ slow:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L
@@ -215,7 +215,7 @@ slow:
         x: 268
         y: 228
       topRight:
-        x: 268
+        x: 269
         y: 405
       bottomRight:
         x: 92
@@ -236,7 +236,7 @@ slow:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L
@@ -255,14 +255,14 @@ slow:
         x: 216
         y: 269
       topRight:
-        x: 41
+        x: 40
         y: 268
       bottomRight:
-        x: 41
-        y: 93
+        x: 40
+        y: 92
       bottomLeft:
         x: 216
-        y: 92
+        y: 91
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -276,7 +276,7 @@ slow:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L
@@ -298,7 +298,7 @@ slow:
         x: 45
         y: 39
       bottomRight:
-        x: 223
+        x: 222
         y: 39
       bottomLeft:
         x: 223
@@ -316,7 +316,7 @@ slow:
       data: cd1043d
       width: 15
       height: 15
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"M3","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"M3","ECLevel":"L"}'
     version: M3
     readerInit: false
     ecLevel: L

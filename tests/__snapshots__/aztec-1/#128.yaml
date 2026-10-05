@@ -35,7 +35,7 @@ fast:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -75,7 +75,7 @@ fast:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -115,7 +115,7 @@ fast:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -155,7 +155,7 @@ fast:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -196,7 +196,7 @@ slow:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -236,7 +236,7 @@ slow:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -276,7 +276,7 @@ slow:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -316,7 +316,7 @@ slow:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%
@@ -357,7 +357,7 @@ pure:
       data: 8d12dac
       width: 23
       height: 23
-    extra: '{"UEC":1.0,"Version":"3","ECLevel":"37%"}'
+    extra: '{"UEC":1.00,"Version":"3","ECLevel":"37%"}'
     version: "3"
     readerInit: false
     ecLevel: 37%

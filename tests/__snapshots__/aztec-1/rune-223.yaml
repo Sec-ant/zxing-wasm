@@ -35,7 +35,7 @@ fast:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -75,7 +75,7 @@ fast:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -115,7 +115,7 @@ fast:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -155,7 +155,7 @@ fast:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -196,7 +196,7 @@ slow:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -236,7 +236,7 @@ slow:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -276,7 +276,7 @@ slow:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -316,7 +316,7 @@ slow:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""
@@ -357,7 +357,7 @@ pure:
       data: 0919da7
       width: 11
       height: 11
-    extra: ""
+    extra: '{"UEC":1.00}'
     version: ""
     readerInit: false
     ecLevel: ""

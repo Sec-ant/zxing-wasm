@@ -1,9 +1,0 @@
-total: 5
-passAll: 5
-passSome: 5
-fast:
-  "0": {}
-  "180": {}
-slow:
-  "0": {}
-  "180": {}

@@ -35,7 +35,7 @@ fast:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -75,7 +75,7 @@ fast:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -115,7 +115,7 @@ fast:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -155,7 +155,7 @@ fast:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -196,7 +196,7 @@ slow:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -236,7 +236,7 @@ slow:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -276,7 +276,7 @@ slow:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -316,7 +316,7 @@ slow:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%
@@ -357,7 +357,7 @@ pure:
       data: da1786c
       width: 75
       height: 75
-    extra: '{"UEC":1.0,"Version":"14","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"14","ECLevel":"29%"}'
     version: "14"
     readerInit: false
     ecLevel: 29%

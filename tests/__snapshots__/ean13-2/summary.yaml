@@ -1,75 +1,131 @@
-total: 16
-passAll: 1
-passSome: 6
+total: 42
+passAll: 8
+passSome: 22
 fast:
   "0":
-    failures: 15
+    failures: 33
     undetected:
-      total: 15
+      total: 33
       images:
-        - 01.webp
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 05.webp
-        - 09.webp
-        - 12.webp
-        - 17.webp
-        - 19.webp
-        - 21.webp
-        - 22.webp
-        - 23.webp
-        - 25.webp
-        - 26.webp
-        - 28.webp
+        - 036-1.webp
+        - 036-2!.webp
+        - 632-1.webp
+        - 632-2.webp
+        - 632-3.webp
+        - 632-4!.webp
+        - 632-5!.webp
+        - 888-2.webp
+        - 888-3!.webp
+        - 888-4!.webp
+        - 888-5!.webp
+        - 888-6!.webp
+        - 888-7!.webp
+        - 888-8!.webp
+        - 888-9!.webp
+        - 989-3.webp
+        - 989-7.webp
+        - 989-a.webp
+        - 989-c.webp
+        - 989-d!.webp
+        - 989-e!.webp
+        - 989-f!.webp
+        - 989-g!.webp
+        - 989-h!.webp
+        - 989-i!.webp
+        - 989-j!.webp
+        - 989-k!.webp
+        - a.webp
+        - b.webp
+        - c.webp
+        - d.webp
+        - e!.webp
+        - f!.webp
   "180":
-    failures: 15
+    failures: 33
     undetected:
-      total: 15
+      total: 33
       images:
-        - 01.webp
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 05.webp
-        - 09.webp
-        - 12.webp
-        - 17.webp
-        - 19.webp
-        - 21.webp
-        - 22.webp
-        - 23.webp
-        - 25.webp
-        - 26.webp
-        - 28.webp
+        - 036-1.webp
+        - 036-2!.webp
+        - 632-1.webp
+        - 632-2.webp
+        - 632-3.webp
+        - 632-4!.webp
+        - 632-5!.webp
+        - 888-2.webp
+        - 888-3!.webp
+        - 888-4!.webp
+        - 888-5!.webp
+        - 888-6!.webp
+        - 888-7!.webp
+        - 888-8!.webp
+        - 888-9!.webp
+        - 989-3.webp
+        - 989-4.webp
+        - 989-7.webp
+        - 989-a.webp
+        - 989-c.webp
+        - 989-d!.webp
+        - 989-e!.webp
+        - 989-f!.webp
+        - 989-g!.webp
+        - 989-h!.webp
+        - 989-i!.webp
+        - 989-j!.webp
+        - 989-k!.webp
+        - a.webp
+        - c.webp
+        - d.webp
+        - e!.webp
+        - f!.webp
 slow:
   "0":
-    failures: 10
+    failures: 20
     undetected:
-      total: 10
+      total: 20
       images:
-        - 01.webp
-        - 02.webp
-        - 12.webp
-        - 17.webp
-        - 21.webp
-        - 22.webp
-        - 23.webp
-        - 25.webp
-        - 26.webp
-        - 28.webp
+        - 036-2!.webp
+        - 632-4!.webp
+        - 632-5!.webp
+        - 888-3!.webp
+        - 888-4!.webp
+        - 888-5!.webp
+        - 888-6!.webp
+        - 888-7!.webp
+        - 888-8!.webp
+        - 888-9!.webp
+        - 989-d!.webp
+        - 989-e!.webp
+        - 989-f!.webp
+        - 989-g!.webp
+        - 989-h!.webp
+        - 989-i!.webp
+        - 989-j!.webp
+        - 989-k!.webp
+        - e!.webp
+        - f!.webp
   "180":
-    failures: 10
+    failures: 20
     undetected:
-      total: 10
+      total: 20
       images:
-        - 01.webp
-        - 02.webp
-        - 12.webp
-        - 17.webp
-        - 21.webp
-        - 22.webp
-        - 23.webp
-        - 25.webp
-        - 26.webp
-        - 28.webp
+        - 036-2!.webp
+        - 632-4!.webp
+        - 632-5!.webp
+        - 888-3!.webp
+        - 888-4!.webp
+        - 888-5!.webp
+        - 888-6!.webp
+        - 888-7!.webp
+        - 888-8!.webp
+        - 888-9!.webp
+        - 989-d!.webp
+        - 989-e!.webp
+        - 989-f!.webp
+        - 989-g!.webp
+        - 989-h!.webp
+        - 989-i!.webp
+        - 989-j!.webp
+        - 989-k!.webp
+        - e!.webp
+        - f!.webp

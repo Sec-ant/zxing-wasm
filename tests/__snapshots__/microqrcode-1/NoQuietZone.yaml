@@ -35,7 +35,7 @@ fast:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -75,7 +75,7 @@ fast:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -115,7 +115,7 @@ fast:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -155,7 +155,7 @@ fast:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -196,7 +196,7 @@ slow:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -236,7 +236,7 @@ slow:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -276,7 +276,7 @@ slow:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -316,7 +316,7 @@ slow:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L
@@ -357,7 +357,7 @@ pure:
       data: 6ea72b5
       width: 11
       height: 11
-    extra: '{"DataMask":2,"UEC":0.0,"Version":"M1","ECLevel":"L"}'
+    extra: '{"DataMask":2,"UEC":0.00,"Version":"M1","ECLevel":"L"}'
     version: M1
     readerInit: false
     ecLevel: L

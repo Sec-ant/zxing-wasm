@@ -35,7 +35,7 @@ fast:
       data: f1646d3
       width: 26
       height: 12
-    extra: '{"UEC":1.0,"Version":"12x26"}'
+    extra: '{"UEC":1.00,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""
@@ -79,7 +79,7 @@ slow:
       data: f1646d3
       width: 26
       height: 12
-    extra: '{"UEC":1.0,"Version":"12x26"}'
+    extra: '{"UEC":1.00,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""
@@ -123,7 +123,7 @@ pure:
       data: f1646d3
       width: 26
       height: 12
-    extra: '{"UEC":1.0,"Version":"12x26"}'
+    extra: '{"UEC":1.00,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""

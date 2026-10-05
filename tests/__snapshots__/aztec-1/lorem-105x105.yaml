@@ -35,7 +35,7 @@ fast:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -75,7 +75,7 @@ fast:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -115,7 +115,7 @@ fast:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -155,7 +155,7 @@ fast:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -196,7 +196,7 @@ slow:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -236,7 +236,7 @@ slow:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -276,7 +276,7 @@ slow:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -316,7 +316,7 @@ slow:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%
@@ -357,7 +357,7 @@ pure:
       data: a40f563
       width: 105
       height: 105
-    extra: '{"UEC":1.0,"Version":"21","ECLevel":"29%"}'
+    extra: '{"UEC":1.00,"Version":"21","ECLevel":"29%"}'
     version: "21"
     readerInit: false
     ecLevel: 29%

@@ -35,7 +35,7 @@ fast:
       data: 925b92b
       width: 22
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x22"}'
+    extra: '{"UEC":1.00,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""
@@ -79,7 +79,7 @@ slow:
       data: 925b92b
       width: 22
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x22"}'
+    extra: '{"UEC":1.00,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""
@@ -119,7 +119,7 @@ slow:
       data: cad24dc
       width: 22
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x22"}'
+    extra: '{"UEC":1.00,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""
@@ -159,7 +159,7 @@ slow:
       data: 4fc7e09
       width: 22
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x22"}'
+    extra: '{"UEC":1.00,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""
@@ -199,7 +199,7 @@ slow:
       data: cad24dc
       width: 22
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x22"}'
+    extra: '{"UEC":1.00,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""

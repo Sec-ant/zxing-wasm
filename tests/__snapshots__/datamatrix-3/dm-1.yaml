@@ -35,7 +35,7 @@ fast:
       data: 52c7871
       width: 18
       height: 18
-    extra: '{"UEC":1.0,"Version":"18x18"}'
+    extra: '{"UEC":1.00,"Version":"18x18"}'
     version: 18x18
     readerInit: false
     ecLevel: ""
@@ -79,7 +79,7 @@ slow:
       data: 52c7871
       width: 18
       height: 18
-    extra: '{"UEC":1.0,"Version":"18x18"}'
+    extra: '{"UEC":1.00,"Version":"18x18"}'
     version: 18x18
     readerInit: false
     ecLevel: ""

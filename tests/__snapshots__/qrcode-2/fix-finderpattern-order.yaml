@@ -35,7 +35,7 @@ fast:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -75,7 +75,7 @@ fast:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -115,7 +115,7 @@ fast:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -155,7 +155,7 @@ fast:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -196,7 +196,7 @@ slow:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -236,7 +236,7 @@ slow:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -276,7 +276,7 @@ slow:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M
@@ -316,7 +316,7 @@ slow:
       data: 2dc1ec3
       width: 25
       height: 25
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"2","ECLevel":"M"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"2","ECLevel":"M"}'
     version: "2"
     readerInit: false
     ecLevel: M

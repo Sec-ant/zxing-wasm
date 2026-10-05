@@ -17,10 +17,10 @@ fast:
         x: 547
         y: 228
       bottomRight:
-        x: 537
-        y: 371
+        x: 538
+        y: 372
       bottomLeft:
-        x: 398
+        x: 399
         y: 372
     rotation: -1
     orientation: -1
@@ -54,10 +54,10 @@ fast:
         x: 238
         y: 389
       topRight:
-        x: 243
-        y: 549
+        x: 242
+        y: 548
       bottomRight:
-        x: 98
+        x: 97
         y: 539
       bottomLeft:
         x: 98
@@ -94,13 +94,13 @@ fast:
         x: 285
         y: 238
       topRight:
-        x: 127
-        y: 243
+        x: 126
+        y: 242
       bottomRight:
-        x: 135
+        x: 134
         y: 97
       bottomLeft:
-        x: 277
+        x: 275
         y: 97
     rotation: 179
     orientation: 179
@@ -134,14 +134,14 @@ fast:
         x: 232
         y: 285
       topRight:
-        x: 227
-        y: 127
+        x: 228
+        y: 126
       bottomRight:
         x: 374
         y: 134
       bottomLeft:
-        x: 374
-        y: 277
+        x: 373
+        y: 275
     rotation: -91
     orientation: -91
     isMirrored: false
@@ -178,10 +178,10 @@ slow:
         x: 547
         y: 228
       bottomRight:
-        x: 537
-        y: 371
+        x: 538
+        y: 372
       bottomLeft:
-        x: 398
+        x: 399
         y: 372
     rotation: -1
     orientation: -1
@@ -215,10 +215,10 @@ slow:
         x: 238
         y: 389
       topRight:
-        x: 243
-        y: 549
+        x: 242
+        y: 548
       bottomRight:
-        x: 98
+        x: 97
         y: 539
       bottomLeft:
         x: 98
@@ -255,13 +255,13 @@ slow:
         x: 285
         y: 238
       topRight:
-        x: 127
-        y: 243
+        x: 126
+        y: 242
       bottomRight:
-        x: 135
+        x: 134
         y: 97
       bottomLeft:
-        x: 277
+        x: 275
         y: 97
     rotation: 179
     orientation: 179
@@ -295,14 +295,14 @@ slow:
         x: 232
         y: 285
       topRight:
-        x: 227
-        y: 127
+        x: 228
+        y: 126
       bottomRight:
         x: 374
         y: 134
       bottomLeft:
-        x: 374
-        y: 277
+        x: 373
+        y: 275
     rotation: -91
     orientation: -91
     isMirrored: false

@@ -35,7 +35,7 @@ fast:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M
@@ -75,7 +75,7 @@ fast:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M
@@ -115,7 +115,7 @@ fast:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M
@@ -155,7 +155,7 @@ fast:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M
@@ -196,7 +196,7 @@ slow:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M
@@ -236,7 +236,7 @@ slow:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M
@@ -276,7 +276,7 @@ slow:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M
@@ -316,7 +316,7 @@ slow:
       data: 821a5ea
       width: 139
       height: 17
-    extra: '{"DataMask":4,"UEC":1.0,"Version":"R17x139","ECLevel":"M"}'
+    extra: '{"DataMask":4,"UEC":1.00,"Version":"R17x139","ECLevel":"M"}'
     version: R17x139
     readerInit: false
     ecLevel: M

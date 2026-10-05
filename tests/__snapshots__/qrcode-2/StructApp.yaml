@@ -1,0 +1,324 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 286
+        y: 26
+      topRight:
+        x: 500
+        y: 26
+      bottomRight:
+        x: 501
+        y: 241
+      bottomLeft:
+        x: 285
+        y: 241
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 508
+        y: 286
+      topRight:
+        x: 508
+        y: 500
+      bottomRight:
+        x: 293
+        y: 501
+      bottomLeft:
+        x: 293
+        y: 285
+    rotation: 90
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 248
+        y: 508
+      topRight:
+        x: 34
+        y: 508
+      bottomRight:
+        x: 33
+        y: 293
+      bottomLeft:
+        x: 249
+        y: 293
+    rotation: 180
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 26
+        y: 248
+      topRight:
+        x: 26
+        y: 34
+      bottomRight:
+        x: 241
+        y: 33
+      bottomLeft:
+        x: 241
+        y: 249
+    rotation: -90
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 286
+        y: 26
+      topRight:
+        x: 500
+        y: 26
+      bottomRight:
+        x: 501
+        y: 241
+      bottomLeft:
+        x: 285
+        y: 241
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+  "90":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 508
+        y: 286
+      topRight:
+        x: 508
+        y: 500
+      bottomRight:
+        x: 293
+        y: 501
+      bottomLeft:
+        x: 293
+        y: 285
+    rotation: 90
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 248
+        y: 508
+      topRight:
+        x: 34
+        y: 508
+      bottomRight:
+        x: 33
+        y: 293
+      bottomLeft:
+        x: 249
+        y: 293
+    rotation: 180
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 38acb95
+    bytesECI: b066769
+    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 26
+        y: 248
+      topRight:
+        x: 26
+        y: 34
+      bottomRight:
+        x: 241
+        y: 33
+      bottomLeft:
+        x: 241
+        y: 249
+    rotation: -90
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: 4
+    sequenceIndex: 1
+    sequenceId: "95"
+    lineCount: 0
+    symbol:
+      data: 11475b5
+      width: 77
+      height: 77
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
+    version: "15"
+    readerInit: false
+    ecLevel: L
+pure:
+  "0": null

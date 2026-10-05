@@ -35,7 +35,7 @@ fast:
       data: d699131
       width: 10
       height: 10
-    extra: '{"UEC":1.0,"Version":"10x10"}'
+    extra: '{"UEC":1.00,"Version":"10x10"}'
     version: 10x10
     readerInit: false
     ecLevel: ""
@@ -79,7 +79,7 @@ slow:
       data: d699131
       width: 10
       height: 10
-    extra: '{"UEC":1.0,"Version":"10x10"}'
+    extra: '{"UEC":1.00,"Version":"10x10"}'
     version: 10x10
     readerInit: false
     ecLevel: ""
@@ -123,7 +123,7 @@ pure:
       data: d699131
       width: 10
       height: 10
-    extra: '{"UEC":1.0,"Version":"10x10"}'
+    extra: '{"UEC":1.00,"Version":"10x10"}'
     version: 10x10
     readerInit: false
     ecLevel: ""

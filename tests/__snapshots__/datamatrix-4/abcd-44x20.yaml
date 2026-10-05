@@ -35,7 +35,7 @@ fast:
       data: a8de138
       width: 44
       height: 20
-    extra: '{"UEC":1.0,"Version":"20x44"}'
+    extra: '{"UEC":1.00,"Version":"20x44"}'
     version: 20x44
     readerInit: false
     ecLevel: ""
@@ -79,7 +79,7 @@ slow:
       data: a8de138
       width: 44
       height: 20
-    extra: '{"UEC":1.0,"Version":"20x44"}'
+    extra: '{"UEC":1.00,"Version":"20x44"}'
     version: 20x44
     readerInit: false
     ecLevel: ""
@@ -119,7 +119,7 @@ slow:
       data: a8de138
       width: 44
       height: 20
-    extra: '{"UEC":1.0,"Version":"20x44"}'
+    extra: '{"UEC":1.00,"Version":"20x44"}'
     version: 20x44
     readerInit: false
     ecLevel: ""
@@ -159,7 +159,7 @@ slow:
       data: a8de138
       width: 44
       height: 20
-    extra: '{"UEC":1.0,"Version":"20x44"}'
+    extra: '{"UEC":1.00,"Version":"20x44"}'
     version: 20x44
     readerInit: false
     ecLevel: ""
@@ -199,7 +199,7 @@ slow:
       data: a8de138
       width: 44
       height: 20
-    extra: '{"UEC":1.0,"Version":"20x44"}'
+    extra: '{"UEC":1.00,"Version":"20x44"}'
     version: 20x44
     readerInit: false
     ecLevel: ""
@@ -240,7 +240,7 @@ pure:
       data: a8de138
       width: 44
       height: 20
-    extra: '{"UEC":1.0,"Version":"20x44"}'
+    extra: '{"UEC":1.00,"Version":"20x44"}'
     version: 20x44
     readerInit: false
     ecLevel: ""

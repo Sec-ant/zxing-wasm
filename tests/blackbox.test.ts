@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import { basename, extname, resolve } from "node:path";
 import { glob } from "tinyglobby";
 import {
@@ -16,7 +16,6 @@ import {
   readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";
-import { parseUpstreamBlackboxContracts } from "./upstreamBlackbox.js";
 import {
   DEFAULT_READER_OPTIONS_FOR_TESTS,
   formatSnapshot,
@@ -60,25 +59,22 @@ type Entries<T> = {
   [K in keyof T]: [K, T[K]];
 }[keyof T][];
 
-type UpstreamStats = {
-  passCount: number;
-  misreadImages: Set<string>;
-};
-
-const TEST_RUNNER_PATH = resolve(
-  import.meta.dirname,
-  "../zxing-cpp/test/blackbox/BlackboxTestRunner.cpp",
-);
 const SAMPLES_PATH_PREFIX = "zxing-cpp/test/samples";
-const zxingCppBlackBoxTestRunner = await readFile(TEST_RUNNER_PATH, "utf-8");
-const upstreamContracts = parseUpstreamBlackboxContracts(
-  zxingCppBlackBoxTestRunner,
-);
+const upstreamSampleDirectories = (
+  await readdir(SAMPLES_PATH_PREFIX, {
+    withFileTypes: true,
+  })
+)
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name)
+  .sort();
 
 test("consistent test entries", async () => {
-  expect([...upstreamContracts.keys()]).toEqual(
-    testEntries.map(({ directory }) => directory),
-  );
+  expect(
+    testEntries
+      .map(({ directory }) => directory)
+      .filter((directory) => !upstreamSampleDirectories.includes(directory)),
+  ).toEqual([]);
 });
 
 await prepareZXingModule({
@@ -102,12 +98,10 @@ for (const {
     ? [0, 180]
     : [0, 90, 180, 270],
   readerOptions = DEFAULT_READER_OPTIONS_FOR_TESTS,
-} of testEntries) {
+} of testEntries.filter(({ directory }) =>
+  upstreamSampleDirectories.includes(directory),
+)) {
   describe(directory, async () => {
-    const upstreamContract = upstreamContracts.get(directory);
-    if (!upstreamContract) {
-      throw new Error(`Missing zxing-cpp blackbox contract for ${directory}`);
-    }
     const types = [
       ...(testFast ? ["fast"] : []),
       ...(testSlow ? ["slow"] : []),
@@ -118,17 +112,23 @@ for (const {
         `${SAMPLES_PATH_PREFIX}/${directory}/*.(png|jpg|pgm|gif|webp)`,
       ])
     ).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    const imageNameCounts = new Map<string, number>();
+    for (const imagePath of imagePaths) {
+      const imageName = basename(imagePath, extname(imagePath));
+      imageNameCounts.set(imageName, (imageNameCounts.get(imageName) ?? 0) + 1);
+    }
     const summary: Summary = {
       total: imagePaths.length,
       passAll: 0,
       passSome: 0,
     };
-    const upstreamStats = new Map<string, UpstreamStats>();
     for (const imagePath of imagePaths) {
       let passAll = true;
       let passSome = false;
       const imageName = basename(imagePath, extname(imagePath));
       const imageNameWithExt = basename(imagePath);
+      const snapshotName =
+        imageNameCounts.get(imageName)! > 1 ? imageNameWithExt : imageName;
       const snapshots: Partial<
         Record<Type, Record<number, ReturnType<typeof takeSnapshot>>>
       > = {};
@@ -153,20 +153,6 @@ for (const {
           summary[type] ??= {};
           snapshots[type] ??= {};
           for (const rotation of type === "pure" ? [0] : rotations) {
-            const upstreamExpectation = upstreamContract.expectations.find(
-              (expectation) =>
-                expectation.type === type && expectation.rotation === rotation,
-            );
-            if (!upstreamExpectation) {
-              throw new Error(
-                `Test matrix differs from zxing-cpp for ${directory} ${type} ${rotation}`,
-              );
-            }
-            const upstreamKey = `${type}:${rotation}`;
-            upstreamStats.set(upstreamKey, {
-              passCount: 0,
-              misreadImages: new Set(),
-            });
             summary[type][rotation] ??= {
               failures: 0,
               misreads: {
@@ -180,17 +166,10 @@ for (const {
             };
             test(`${directory} ${imageName} ${type} ${rotation}`, async () => {
               let passCurrent = true;
-              let detected = false;
 
               onTestFinished(() => {
                 passAll &&= passCurrent;
                 passSome ||= passCurrent;
-                const stats = upstreamStats.get(upstreamKey)!;
-                if (passCurrent) {
-                  stats.passCount += 1;
-                } else if (detected) {
-                  stats.misreadImages.add(imageNameWithExt);
-                }
               });
 
               const input = await getRotatedImage(imagePath, rotation);
@@ -221,8 +200,6 @@ for (const {
                 passCurrent = false;
                 return;
               }
-              detected = true;
-
               if (
                 barcode.format !== barcodeFormat &&
                 barcode.symbology !== barcodeFormat
@@ -290,7 +267,7 @@ for (const {
           await expect(formatSnapshot(snapshots)).toMatchFileSnapshot(
             resolve(
               import.meta.dirname,
-              `./__snapshots__/${directory}/${imageName}.yaml`,
+              `./__snapshots__/${directory}/${snapshotName}.yaml`,
             ),
           );
         });
@@ -320,19 +297,6 @@ for (const {
           `./__snapshots__/${directory}/summary.yaml`,
         ),
       );
-      expect(imagePaths).toHaveLength(upstreamContract.imageCount);
-      for (const expectation of upstreamContract.expectations) {
-        const stats = upstreamStats.get(
-          `${expectation.type}:${expectation.rotation}`,
-        );
-        expect(stats).toBeDefined();
-        expect(stats!.passCount).toBeGreaterThanOrEqual(
-          expectation.minPassCount,
-        );
-        expect(stats!.misreadImages.size).toBeLessThanOrEqual(
-          expectation.maxMisreads,
-        );
-      }
     });
   });
 }

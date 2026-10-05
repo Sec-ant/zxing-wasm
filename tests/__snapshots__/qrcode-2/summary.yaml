@@ -1,15 +1,15 @@
-total: 56
-passAll: 23
-passSome: 54
+total: 38
+passAll: 4
+passSome: 36
 fast:
   "0":
     failures: 6
     undetected:
       total: 6
       images:
-        - "#709.webp"
-        - 12.webp
-        - 13.webp
+        - "#709!f.webp"
+        - 12!.webp
+        - 13!.webp
         - 28.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
@@ -18,9 +18,9 @@ fast:
     undetected:
       total: 5
       images:
-        - "#709.webp"
-        - 12.webp
-        - 13.webp
+        - "#709!f.webp"
+        - 12!.webp
+        - 13!.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
   "180":
@@ -28,9 +28,9 @@ fast:
     undetected:
       total: 6
       images:
-        - "#709.webp"
-        - 12.webp
-        - 13.webp
+        - "#709!f.webp"
+        - 12!.webp
+        - 13!.webp
         - 28.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
@@ -39,9 +39,9 @@ fast:
     undetected:
       total: 6
       images:
-        - "#709.webp"
-        - 12.webp
-        - 13.webp
+        - "#709!f.webp"
+        - 12!.webp
+        - 13!.webp
         - 28.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
@@ -51,48 +51,43 @@ slow:
     undetected:
       total: 3
       images:
-        - 12.webp
-        - 13.webp
+        - 12!.webp
+        - 13!.webp
         - 28.webp
   "90":
     failures: 2
     undetected:
       total: 2
       images:
-        - 12.webp
-        - 13.webp
+        - 12!.webp
+        - 13!.webp
   "180":
     failures: 3
     undetected:
       total: 3
       images:
-        - 12.webp
-        - 13.webp
+        - 12!.webp
+        - 13!.webp
         - 28.webp
   "270":
     failures: 3
     undetected:
       total: 3
       images:
-        - 12.webp
-        - 13.webp
+        - 12!.webp
+        - 13!.webp
         - 28.webp
 pure:
   "0":
-    failures: 33
-    misreads:
-      total: 1
-      images:
-        - path: 16.webp
-          description: "[Text content mismatch]: expected '[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/', but got '[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/'"
+    failures: 34
     undetected:
-      total: 32
+      total: 34
       images:
         - "#142.webp"
         - "#199b.jpg"
         - "#253.webp"
         - "#258.webp"
-        - "#709.webp"
+        - "#709!f.webp"
         - "#1086.png"
         - "#1132.webp"
         - "#1314.webp"
@@ -101,8 +96,8 @@ pure:
         - 6.webp
         - 7.webp
         - 8.png
-        - 12.webp
-        - 13.webp
+        - 12!.webp
+        - 13!.webp
         - 15.webp
         - 22.webp
         - 23.webp
@@ -120,3 +115,5 @@ pure:
         - qr-circles-1.png
         - qr-inv-1.webp
         - qr-inv-2.webp
+        - StructApp.webp
+        - uec.webp

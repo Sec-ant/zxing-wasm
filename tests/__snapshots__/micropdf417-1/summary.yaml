@@ -1,23 +1,24 @@
-total: 10
+total: 11
 passAll: 0
-passSome: 10
+passSome: 11
 fast:
   "0":
     failures: 1
     undetected:
       total: 1
       images:
-        - 4x6-thick-1.webp
+        - 4x6-thick-1!f.webp
   "90":
-    failures: 10
+    failures: 11
     undetected:
-      total: 10
+      total: 11
       images:
+        - "#1159.webp"
         - 1x20-pitch+45.webp
         - 1x20-rot+35.webp
         - 1x20.webp
         - 2x20.webp
-        - 4x6-thick-1.webp
+        - 4x6-thick-1!f.webp
         - MPDF-0-p.png
         - MPDF-0-q.png
         - MPDF-0.png
@@ -28,17 +29,18 @@ fast:
     undetected:
       total: 1
       images:
-        - 4x6-thick-1.webp
+        - 4x6-thick-1!f.webp
   "270":
-    failures: 10
+    failures: 11
     undetected:
-      total: 10
+      total: 11
       images:
+        - "#1159.webp"
         - 1x20-pitch+45.webp
         - 1x20-rot+35.webp
         - 1x20.webp
         - 2x20.webp
-        - 4x6-thick-1.webp
+        - 4x6-thick-1!f.webp
         - MPDF-0-p.png
         - MPDF-0-q.png
         - MPDF-0.png
@@ -75,5 +77,5 @@ pure:
     undetected:
       total: 2
       images:
-        - 4x6-thick-1.webp
+        - 4x6-thick-1!f.webp
         - MPDF-2.webp
