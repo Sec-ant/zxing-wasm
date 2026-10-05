@@ -1,0 +1,244 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: cf618ea
+    bytesECI: "6386798"
+    text: "US:$439.97;CN:"
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 6
+        y: 6
+      topRight:
+        x: 246
+        y: 6
+      bottomRight:
+        x: 246
+        y: 65
+      bottomLeft:
+        x: 6
+        y: 65
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: 3
+    sequenceIndex: 0
+    sequenceId: "001"
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.00,"FileId":"001","ECLevel":"26%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 26%
+  "90": null
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 4db944e
+    bytesECI: 021fbc3
+    text: 444,90 ､;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 261
+        y: 59
+      topRight:
+        x: 21
+        y: 59
+      bottomRight:
+        x: 21
+        y: 6
+      bottomLeft:
+        x: 261
+        y: 6
+    rotation: 180
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: 3
+    sequenceIndex: 2
+    sequenceId: "001"
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.00,"FileId":"001","ECLevel":"29%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 29%
+  "270": null
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: cf618ea
+    bytesECI: "6386798"
+    text: "US:$439.97;CN:"
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 6
+        y: 6
+      topRight:
+        x: 246
+        y: 6
+      bottomRight:
+        x: 246
+        y: 65
+      bottomLeft:
+        x: 6
+        y: 65
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: 3
+    sequenceIndex: 0
+    sequenceId: "001"
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.00,"FileId":"001","ECLevel":"26%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 26%
+  "90":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: cf618ea
+    bytesECI: "6386798"
+    text: "US:$439.97;CN:"
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 220
+        y: 6
+      topRight:
+        x: 220
+        y: 246
+      bottomRight:
+        x: 161
+        y: 246
+      bottomLeft:
+        x: 161
+        y: 6
+    rotation: 90
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: 3
+    sequenceIndex: 0
+    sequenceId: "001"
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.00,"FileId":"001","ECLevel":"26%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 26%
+  "180":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 4db944e
+    bytesECI: 021fbc3
+    text: 444,90 ､;
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 261
+        y: 59
+      topRight:
+        x: 21
+        y: 59
+      bottomRight:
+        x: 21
+        y: 6
+      bottomLeft:
+        x: 261
+        y: 6
+    rotation: 180
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: 3
+    sequenceIndex: 2
+    sequenceId: "001"
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.00,"FileId":"001","ECLevel":"29%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 29%
+  "270":
+    isValid: true
+    error: ""
+    format: PDF417
+    symbology: PDF417
+    bytes: 6b6a301
+    bytesECI: "7989256"
+    text: "£¤ 3149.79;DE:"
+    contentType: Text
+    hasECI: true
+    position:
+      topLeft:
+        x: 82
+        y: 243
+      topRight:
+        x: 82
+        y: 3
+      bottomRight:
+        x: 147
+        y: 3
+      bottomLeft:
+        x: 147
+        y: 243
+    rotation: -90
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]L2"
+    sequenceSize: 3
+    sequenceIndex: 1
+    sequenceId: "001"
+    lineCount: 0
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: '{"UEC":1.00,"FileId":"001","ECLevel":"24%"}'
+    version: ""
+    readerInit: false
+    ecLevel: 24%

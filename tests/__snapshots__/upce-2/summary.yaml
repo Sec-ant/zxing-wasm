@@ -1,47 +1,67 @@
-total: 15
-passAll: 9
-passSome: 10
+total: 26
+passAll: 14
+passSome: 17
 fast:
   "0":
-    failures: 6
+    failures: 12
     undetected:
-      total: 6
+      total: 12
       images:
-        - 02.webp
-        - 12.webp
-        - 14.webp
-        - 20.webp
-        - 35.webp
-        - 38.webp
+        - 12649-4!.webp
+        - 12649-5!.webp
+        - 49634-2!f.webp
+        - 49634-3!.webp
+        - 49658-6!f.webp
+        - 49658-7!f.webp
+        - 49658-8!.webp
+        - 49658-9!.webp
+        - 49658-a!.webp
+        - 49658-b!.webp
+        - 412449-4!.webp
+        - 509689-3!.webp
   "180":
-    failures: 6
+    failures: 12
     undetected:
-      total: 6
+      total: 12
       images:
-        - 02.webp
-        - 12.webp
-        - 14.webp
-        - 20.webp
-        - 35.webp
-        - 38.webp
+        - 12649-4!.webp
+        - 12649-5!.webp
+        - 49634-2!f.webp
+        - 49634-3!.webp
+        - 49658-6!f.webp
+        - 49658-7!f.webp
+        - 49658-8!.webp
+        - 49658-9!.webp
+        - 49658-a!.webp
+        - 49658-b!.webp
+        - 412449-4!.webp
+        - 509689-3!.webp
 slow:
   "0":
-    failures: 5
+    failures: 9
     undetected:
-      total: 5
+      total: 9
       images:
-        - 02.webp
-        - 14.webp
-        - 20.webp
-        - 35.webp
-        - 38.webp
+        - 12649-4!.webp
+        - 12649-5!.webp
+        - 49634-3!.webp
+        - 49658-8!.webp
+        - 49658-9!.webp
+        - 49658-a!.webp
+        - 49658-b!.webp
+        - 412449-4!.webp
+        - 509689-3!.webp
   "180":
-    failures: 5
+    failures: 9
     undetected:
-      total: 5
+      total: 9
       images:
-        - 02.webp
-        - 14.webp
-        - 20.webp
-        - 35.webp
-        - 38.webp
+        - 12649-4!.webp
+        - 12649-5!.webp
+        - 49634-3!.webp
+        - 49658-8!.webp
+        - 49658-9!.webp
+        - 49658-a!.webp
+        - 49658-b!.webp
+        - 412449-4!.webp
+        - 509689-3!.webp

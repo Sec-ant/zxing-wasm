@@ -1,21 +1,22 @@
-total: 28
+total: 29
 passAll: 0
-passSome: 27
+passSome: 28
 fast:
   "0":
     failures: 2
     undetected:
       total: 2
       images:
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp
         - OldDetectorFallback.webp
   "90":
-    failures: 28
+    failures: 29
     undetected:
-      total: 28
+      total: 29
       images:
         - "#749.png"
         - "#794.png"
+        - distorted.png
         - dm-0.webp
         - dm-1.jpg
         - dm-2.jpg
@@ -24,7 +25,7 @@ fast:
         - dm-2x2-#1072-2.png
         - dm-2x2-#1088.webp
         - dm-2x2-a.webp
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp
         - dm-3.webp
         - dm-4.webp
         - dm-5.webp
@@ -43,12 +44,13 @@ fast:
         - dm-k.webp
         - OldDetectorFallback.webp
   "180":
-    failures: 28
+    failures: 29
     undetected:
-      total: 28
+      total: 29
       images:
         - "#749.png"
         - "#794.png"
+        - distorted.png
         - dm-0.webp
         - dm-1.jpg
         - dm-2.jpg
@@ -57,7 +59,7 @@ fast:
         - dm-2x2-#1072-2.png
         - dm-2x2-#1088.webp
         - dm-2x2-a.webp
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp
         - dm-3.webp
         - dm-4.webp
         - dm-5.webp
@@ -76,12 +78,13 @@ fast:
         - dm-k.webp
         - OldDetectorFallback.webp
   "270":
-    failures: 28
+    failures: 29
     undetected:
-      total: 28
+      total: 29
       images:
         - "#749.png"
         - "#794.png"
+        - distorted.png
         - dm-0.webp
         - dm-1.jpg
         - dm-2.jpg
@@ -90,7 +93,7 @@ fast:
         - dm-2x2-#1072-2.png
         - dm-2x2-#1088.webp
         - dm-2x2-a.webp
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp
         - dm-3.webp
         - dm-4.webp
         - dm-5.webp
@@ -114,22 +117,22 @@ slow:
     undetected:
       total: 1
       images:
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp
   "90":
     failures: 1
     undetected:
       total: 1
       images:
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp
   "180":
     failures: 1
     undetected:
       total: 1
       images:
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp
   "270":
     failures: 1
     undetected:
       total: 1
       images:
-        - dm-2x2-b.webp
+        - dm-2x2-b!.webp

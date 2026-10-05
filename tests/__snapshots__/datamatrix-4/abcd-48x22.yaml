@@ -35,7 +35,7 @@ fast:
       data: 3ce6a5b
       width: 48
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x48"}'
+    extra: '{"UEC":1.00,"Version":"22x48"}'
     version: 22x48
     readerInit: false
     ecLevel: ""
@@ -79,7 +79,7 @@ slow:
       data: 3ce6a5b
       width: 48
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x48"}'
+    extra: '{"UEC":1.00,"Version":"22x48"}'
     version: 22x48
     readerInit: false
     ecLevel: ""
@@ -119,7 +119,7 @@ slow:
       data: 3ce6a5b
       width: 48
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x48"}'
+    extra: '{"UEC":1.00,"Version":"22x48"}'
     version: 22x48
     readerInit: false
     ecLevel: ""
@@ -159,7 +159,7 @@ slow:
       data: 3ce6a5b
       width: 48
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x48"}'
+    extra: '{"UEC":1.00,"Version":"22x48"}'
     version: 22x48
     readerInit: false
     ecLevel: ""
@@ -199,7 +199,7 @@ slow:
       data: 3ce6a5b
       width: 48
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x48"}'
+    extra: '{"UEC":1.00,"Version":"22x48"}'
     version: 22x48
     readerInit: false
     ecLevel: ""
@@ -240,7 +240,7 @@ pure:
       data: 3ce6a5b
       width: 48
       height: 22
-    extra: '{"UEC":1.0,"Version":"22x48"}'
+    extra: '{"UEC":1.00,"Version":"22x48"}'
     version: 22x48
     readerInit: false
     ecLevel: ""

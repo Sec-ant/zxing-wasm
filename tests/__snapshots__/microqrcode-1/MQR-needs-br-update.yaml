@@ -18,10 +18,10 @@ fast:
         y: 28
       bottomRight:
         x: 85
-        y: 77
+        y: 76
       bottomLeft:
         x: 39
-        y: 77
+        y: 76
     rotation: 1
     orientation: 1
     isMirrored: false
@@ -35,12 +35,90 @@ fast:
       data: 5e6773a
       width: 17
       height: 17
-    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"L"}'
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
     version: M4
     readerInit: false
     ecLevel: L
-  "90": null
-  "180": null
+  "90":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 19280d8
+    bytesECI: 97896a0
+    text: Micro QR Code
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 68
+        y: 38
+      topRight:
+        x: 67
+        y: 84
+      bottomRight:
+        x: 18
+        y: 85
+      bottomLeft:
+        x: 19
+        y: 39
+    rotation: 91
+    orientation: 91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5e6773a
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
+    version: M4
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 19280d8
+    bytesECI: 97896a0
+    text: Micro QR Code
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 82
+        y: 68
+      topRight:
+        x: 36
+        y: 67
+      bottomRight:
+        x: 35
+        y: 18
+      bottomLeft:
+        x: 81
+        y: 19
+    rotation: -179
+    orientation: -179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5e6773a
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
+    version: M4
+    readerInit: false
+    ecLevel: L
   "270":
     isValid: true
     error: ""
@@ -59,10 +137,10 @@ fast:
         x: 28
         y: 37
       bottomRight:
-        x: 77
+        x: 76
         y: 35
       bottomLeft:
-        x: 77
+        x: 76
         y: 81
     rotation: -89
     orientation: -89
@@ -77,7 +155,7 @@ fast:
       data: 5e6773a
       width: 17
       height: 17
-    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"L"}'
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
     version: M4
     readerInit: false
     ecLevel: L
@@ -101,10 +179,10 @@ slow:
         y: 28
       bottomRight:
         x: 85
-        y: 77
+        y: 76
       bottomLeft:
         x: 39
-        y: 77
+        y: 76
     rotation: 1
     orientation: 1
     isMirrored: false
@@ -118,12 +196,90 @@ slow:
       data: 5e6773a
       width: 17
       height: 17
-    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"L"}'
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
     version: M4
     readerInit: false
     ecLevel: L
-  "90": null
-  "180": null
+  "90":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 19280d8
+    bytesECI: 97896a0
+    text: Micro QR Code
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 68
+        y: 38
+      topRight:
+        x: 67
+        y: 84
+      bottomRight:
+        x: 18
+        y: 85
+      bottomLeft:
+        x: 19
+        y: 39
+    rotation: 91
+    orientation: 91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5e6773a
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
+    version: M4
+    readerInit: false
+    ecLevel: L
+  "180":
+    isValid: true
+    error: ""
+    format: MicroQRCode
+    symbology: QRCode
+    bytes: 19280d8
+    bytesECI: 97896a0
+    text: Micro QR Code
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 82
+        y: 68
+      topRight:
+        x: 36
+        y: 67
+      bottomRight:
+        x: 35
+        y: 18
+      bottomLeft:
+        x: 81
+        y: 19
+    rotation: -179
+    orientation: -179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 5e6773a
+      width: 17
+      height: 17
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
+    version: M4
+    readerInit: false
+    ecLevel: L
   "270":
     isValid: true
     error: ""
@@ -142,10 +298,10 @@ slow:
         x: 28
         y: 37
       bottomRight:
-        x: 77
+        x: 76
         y: 35
       bottomLeft:
-        x: 77
+        x: 76
         y: 81
     rotation: -89
     orientation: -89
@@ -160,7 +316,7 @@ slow:
       data: 5e6773a
       width: 17
       height: 17
-    extra: '{"DataMask":0,"UEC":1.0,"Version":"M4","ECLevel":"L"}'
+    extra: '{"DataMask":0,"UEC":1.00,"Version":"M4","ECLevel":"L"}'
     version: M4
     readerInit: false
     ecLevel: L

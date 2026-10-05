@@ -1,9 +1,73 @@
-total: 3
-passAll: 3
-passSome: 3
+total: 6
+passAll: 0
+passSome: 0
 fast:
-  "0": {}
-  "180": {}
+  "0":
+    failures: 6
+    misreads:
+      total: 6
+      images:
+        - path: 01.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 03.png
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 05.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 07.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 10.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 15.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+  "180":
+    failures: 6
+    misreads:
+      total: 6
+      images:
+        - path: 01.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 03.png
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 05.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 07.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 10.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 15.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
 slow:
-  "0": {}
-  "180": {}
+  "0":
+    failures: 6
+    misreads:
+      total: 6
+      images:
+        - path: 01.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 03.png
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 05.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 07.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 10.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 15.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+  "180":
+    failures: 6
+    misreads:
+      total: 6
+      images:
+        - path: 01.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 03.png
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 05.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 07.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 10.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"
+        - path: 15.webp
+          description: "[Format mismatch]: expected 'Code39Ext', but got 'Code39'"

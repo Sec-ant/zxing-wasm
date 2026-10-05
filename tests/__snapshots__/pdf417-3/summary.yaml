@@ -1,51 +1,93 @@
-total: 16
+total: 37
 passAll: 0
-passSome: 16
+passSome: 37
 fast:
   "0": {}
   "90":
-    failures: 16
+    failures: 37
     undetected:
-      total: 16
+      total: 37
       images:
-        - 01.png
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 05.webp
-        - 06.webp
-        - 07.png
-        - 08.webp
-        - 09.webp
-        - 10.webp
-        - 11.png
-        - 12.webp
-        - 16.png
-        - 17.png
-        - 18.png
-        - 19.png
+        - 1x-1.webp
+        - 1x-2.webp
+        - 1x-3.webp
+        - 1x-4.webp
+        - 1x-5.webp
+        - 1x-6.webp
+        - 1x-7.webp
+        - 2x-1.webp
+        - 2x-2.webp
+        - 2x-3.webp
+        - 2x-4.webp
+        - 2x-5.webp
+        - 2x-6.webp
+        - 2x-7.webp
+        - 2x-8.webp
+        - 4x-1.webp
+        - 4x-2.webp
+        - 4x-3.webp
+        - 4x-4.webp
+        - 4x-5.webp
+        - 4x-6.webp
+        - 4x-7.webp
+        - 4x-8.webp
+        - error4-0.png
+        - error4-1.png
+        - error4-2.webp
+        - error4-3.webp
+        - error4-4.webp
+        - error8-1.png
+        - error8-2.webp
+        - error8-3.webp
+        - error8-4.webp
+        - error8-5.webp
+        - error8-6.webp
+        - error8-7.png
+        - error8-8.png
+        - error8-9.png
   "180": {}
   "270":
-    failures: 16
+    failures: 37
     undetected:
-      total: 16
+      total: 37
       images:
-        - 01.png
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 05.webp
-        - 06.webp
-        - 07.png
-        - 08.webp
-        - 09.webp
-        - 10.webp
-        - 11.png
-        - 12.webp
-        - 16.png
-        - 17.png
-        - 18.png
-        - 19.png
+        - 1x-1.webp
+        - 1x-2.webp
+        - 1x-3.webp
+        - 1x-4.webp
+        - 1x-5.webp
+        - 1x-6.webp
+        - 1x-7.webp
+        - 2x-1.webp
+        - 2x-2.webp
+        - 2x-3.webp
+        - 2x-4.webp
+        - 2x-5.webp
+        - 2x-6.webp
+        - 2x-7.webp
+        - 2x-8.webp
+        - 4x-1.webp
+        - 4x-2.webp
+        - 4x-3.webp
+        - 4x-4.webp
+        - 4x-5.webp
+        - 4x-6.webp
+        - 4x-7.webp
+        - 4x-8.webp
+        - error4-0.png
+        - error4-1.png
+        - error4-2.webp
+        - error4-3.webp
+        - error4-4.webp
+        - error8-1.png
+        - error8-2.webp
+        - error8-3.webp
+        - error8-4.webp
+        - error8-5.webp
+        - error8-6.webp
+        - error8-7.png
+        - error8-8.png
+        - error8-9.png
 slow:
   "0": {}
   "90": {}
@@ -53,16 +95,38 @@ slow:
   "270": {}
 pure:
   "0":
-    failures: 9
+    failures: 31
     undetected:
-      total: 9
+      total: 31
       images:
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 05.webp
-        - 08.webp
-        - 09.webp
-        - 10.webp
-        - 11.png
-        - 12.webp
+        - 1x-1.webp
+        - 1x-2.webp
+        - 1x-3.webp
+        - 1x-4.webp
+        - 1x-5.webp
+        - 1x-6.webp
+        - 1x-7.webp
+        - 2x-1.webp
+        - 2x-2.webp
+        - 2x-3.webp
+        - 2x-4.webp
+        - 2x-5.webp
+        - 2x-6.webp
+        - 2x-7.webp
+        - 2x-8.webp
+        - 4x-1.webp
+        - 4x-2.webp
+        - 4x-3.webp
+        - 4x-4.webp
+        - 4x-5.webp
+        - 4x-6.webp
+        - 4x-7.webp
+        - 4x-8.webp
+        - error4-1.png
+        - error4-2.webp
+        - error4-3.webp
+        - error4-4.webp
+        - error8-2.webp
+        - error8-3.webp
+        - error8-4.webp
+        - error8-5.webp

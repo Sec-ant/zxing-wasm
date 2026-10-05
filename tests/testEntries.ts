@@ -7,6 +7,8 @@ import { DEFAULT_READER_OPTIONS_FOR_TESTS } from "./utils.js";
 interface TestEntry {
   directory: string;
   barcodeFormat: ReadOutputBarcodeFormat;
+  /** Assert the upstream TOML contract, including all returned symbols. */
+  upstreamContract?: boolean;
   /**
    * default: true
    */
@@ -29,7 +31,7 @@ interface TestEntry {
   readerOptions?: ReaderOptions;
 }
 
-// Source: https://github.com/zxing-cpp/zxing-cpp/blob/daa502d6b4a1e15cd29f48269c01e383f1b384db/test/blackbox/BlackboxTestRunner.cpp#L338-L681
+// The upstream fixture directories are checked by the consistency test.
 export const testEntries: TestEntry[] = [
   {
     directory: "aztec-1",
@@ -79,10 +81,6 @@ export const testEntries: TestEntry[] = [
     barcodeFormat: "Code39Ext",
   },
   {
-    directory: "code39-3",
-    barcodeFormat: "Code39",
-  },
-  {
     directory: "code93-1",
     barcodeFormat: "Code93",
   },
@@ -92,10 +90,6 @@ export const testEntries: TestEntry[] = [
   },
   {
     directory: "code128-2",
-    barcodeFormat: "Code128",
-  },
-  {
-    directory: "code128-3",
     barcodeFormat: "Code128",
   },
   {
@@ -110,22 +104,6 @@ export const testEntries: TestEntry[] = [
   {
     directory: "ean13-2",
     barcodeFormat: "EAN13",
-  },
-  {
-    directory: "ean13-3",
-    barcodeFormat: "EAN13",
-  },
-  {
-    directory: "ean13-4",
-    barcodeFormat: "EAN13",
-  },
-  {
-    directory: "ean13-extension-1",
-    barcodeFormat: "EAN13",
-    readerOptions: {
-      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      eanAddOnSymbol: "Require",
-    },
   },
   {
     directory: "itf-1",
@@ -156,39 +134,6 @@ export const testEntries: TestEntry[] = [
     },
   },
   {
-    directory: "upca-3",
-    barcodeFormat: "UPCA",
-    readerOptions: {
-      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPCA"],
-    },
-  },
-  {
-    directory: "upca-4",
-    barcodeFormat: "UPCA",
-    readerOptions: {
-      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPCA"],
-    },
-  },
-  {
-    directory: "upca-5",
-    barcodeFormat: "UPCA",
-    readerOptions: {
-      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      formats: ["UPCA"],
-    },
-  },
-  {
-    directory: "upca-extension-1",
-    barcodeFormat: "UPCA",
-    readerOptions: {
-      ...DEFAULT_READER_OPTIONS_FOR_TESTS,
-      eanAddOnSymbol: "Require",
-      formats: ["UPCA"],
-    },
-  },
-  {
     directory: "upce-1",
     barcodeFormat: "UPCE",
     testPure: true,
@@ -196,41 +141,6 @@ export const testEntries: TestEntry[] = [
   {
     directory: "upce-2",
     barcodeFormat: "UPCE",
-  },
-  {
-    directory: "upce-3",
-    barcodeFormat: "UPCE",
-  },
-  {
-    directory: "rss14-1",
-    barcodeFormat: "DataBarOmni",
-  },
-  {
-    directory: "rss14-2",
-    barcodeFormat: "DataBarStk",
-  },
-  {
-    directory: "rssexpanded-1",
-    barcodeFormat: "DataBarExp",
-    testPure: true,
-  },
-  {
-    directory: "rssexpanded-2",
-    barcodeFormat: "DataBarExp",
-  },
-  {
-    directory: "rssexpanded-3",
-    barcodeFormat: "DataBarExp",
-    testPure: true,
-  },
-  {
-    directory: "rssexpandedstacked-1",
-    barcodeFormat: "DataBarExpStk",
-    testPure: true,
-  },
-  {
-    directory: "rssexpandedstacked-2",
-    barcodeFormat: "DataBarExpStk",
   },
   {
     directory: "databarltd-1",
@@ -265,16 +175,6 @@ export const testEntries: TestEntry[] = [
     barcodeFormat: "QRCode",
   },
   {
-    directory: "qrcode-5",
-    barcodeFormat: "QRCode",
-    testPure: true,
-  },
-  {
-    directory: "qrcode-6",
-    barcodeFormat: "QRCode",
-  },
-  // TODO: qrcode-7
-  {
     directory: "microqrcode-1",
     barcodeFormat: "MicroQRCode",
     testPure: true,
@@ -298,20 +198,54 @@ export const testEntries: TestEntry[] = [
     barcodeFormat: "PDF417",
     testPure: true,
   },
-  // TODO: pdf417-4
   {
     directory: "micropdf417-1",
     barcodeFormat: "MicroPDF417",
     testPure: true,
   },
   {
-    directory: "falsepositives-1",
-    barcodeFormat: "None",
-    testPure: true,
+    directory: "code39ext-1",
+    barcodeFormat: "Code39Ext",
+    upstreamContract: true,
   },
   {
-    directory: "falsepositives-2",
-    barcodeFormat: "None",
-    testPure: true,
+    directory: "databarExp-1",
+    barcodeFormat: "DataBarExp",
+    upstreamContract: true,
   },
+  {
+    directory: "databarExp-2",
+    barcodeFormat: "DataBarExp",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarExp-3",
+    barcodeFormat: "DataBarExp",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarExpStk-1",
+    barcodeFormat: "DataBarExpStk",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarOmni-1",
+    barcodeFormat: "DataBarOmni",
+    upstreamContract: true,
+  },
+  {
+    directory: "databarStk-1",
+    barcodeFormat: "DataBarStk",
+    upstreamContract: true,
+  },
+  {
+    directory: "datamatrix-5",
+    barcodeFormat: "DataMatrix",
+    upstreamContract: true,
+  },
+  { directory: "ean13-ext-1", barcodeFormat: "EAN13", upstreamContract: true },
+  { directory: "upca-ext-1", barcodeFormat: "UPCA", upstreamContract: true },
+  { directory: "multi-1", barcodeFormat: "None", upstreamContract: true },
+  { directory: "none-1", barcodeFormat: "None", upstreamContract: true },
+  { directory: "none-2", barcodeFormat: "None", upstreamContract: true },
 ];

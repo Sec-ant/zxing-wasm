@@ -1,0 +1,363 @@
+fast:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 1
+        y: 1
+      topRight:
+        x: 12
+        y: 1
+      bottomRight:
+        x: 12
+        y: 12
+      bottomLeft:
+        x: 1
+        y: 12
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 12
+        y: 1
+      topRight:
+        x: 12
+        y: 12
+      bottomRight:
+        x: 1
+        y: 12
+      bottomLeft:
+        x: 1
+        y: 1
+    rotation: 90
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 12
+        y: 12
+      topRight:
+        x: 1
+        y: 12
+      bottomRight:
+        x: 1
+        y: 1
+      bottomLeft:
+        x: 12
+        y: 1
+    rotation: 180
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 1
+        y: 12
+      topRight:
+        x: 1
+        y: 1
+      bottomRight:
+        x: 12
+        y: 1
+      bottomLeft:
+        x: 12
+        y: 12
+    rotation: -90
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 1
+        y: 1
+      topRight:
+        x: 12
+        y: 1
+      bottomRight:
+        x: 12
+        y: 12
+      bottomLeft:
+        x: 1
+        y: 12
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "90":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 12
+        y: 1
+      topRight:
+        x: 12
+        y: 12
+      bottomRight:
+        x: 1
+        y: 12
+      bottomLeft:
+        x: 1
+        y: 1
+    rotation: 90
+    orientation: 90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 12
+        y: 12
+      topRight:
+        x: 1
+        y: 12
+      bottomRight:
+        x: 1
+        y: 1
+      bottomLeft:
+        x: 12
+        y: 1
+    rotation: 180
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "270":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 1
+        y: 12
+      topRight:
+        x: 1
+        y: 1
+      bottomRight:
+        x: 12
+        y: 1
+      bottomLeft:
+        x: 12
+        y: 12
+    rotation: -90
+    orientation: -90
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""
+pure:
+  "0":
+    isValid: true
+    error: ""
+    format: Aztec
+    symbology: Aztec
+    bytes: 28a14b9
+    bytesECI: 1cd478b
+    text: "068"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 1
+        y: 1
+      topRight:
+        x: 12
+        y: 1
+      bottomRight:
+        x: 12
+        y: 12
+      bottomLeft:
+        x: 1
+        y: 12
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]zC"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 1c9e387
+      width: 11
+      height: 11
+    extra: '{"UEC":1.00}'
+    version: ""
+    readerInit: false
+    ecLevel: ""

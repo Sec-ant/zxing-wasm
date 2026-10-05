@@ -40,7 +40,7 @@ slow:
       data: db1f7f9
       width: 19
       height: 19
-    extra: '{"UEC":1.0,"Version":"2","ECLevel":"42%"}'
+    extra: '{"UEC":1.00,"Version":"2","ECLevel":"42%"}'
     version: "2"
     readerInit: false
     ecLevel: 42%
@@ -80,7 +80,7 @@ slow:
       data: db1f7f9
       width: 19
       height: 19
-    extra: '{"UEC":1.0,"Version":"2","ECLevel":"42%"}'
+    extra: '{"UEC":1.00,"Version":"2","ECLevel":"42%"}'
     version: "2"
     readerInit: false
     ecLevel: 42%
@@ -120,7 +120,7 @@ slow:
       data: db1f7f9
       width: 19
       height: 19
-    extra: '{"UEC":1.0,"Version":"2","ECLevel":"42%"}'
+    extra: '{"UEC":1.00,"Version":"2","ECLevel":"42%"}'
     version: "2"
     readerInit: false
     ecLevel: 42%
@@ -160,7 +160,7 @@ slow:
       data: db1f7f9
       width: 19
       height: 19
-    extra: '{"UEC":1.0,"Version":"2","ECLevel":"42%"}'
+    extra: '{"UEC":1.00,"Version":"2","ECLevel":"42%"}'
     version: "2"
     readerInit: false
     ecLevel: 42%

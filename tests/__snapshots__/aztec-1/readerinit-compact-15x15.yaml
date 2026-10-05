@@ -35,7 +35,7 @@ fast:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -75,7 +75,7 @@ fast:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -115,7 +115,7 @@ fast:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -155,7 +155,7 @@ fast:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -196,7 +196,7 @@ slow:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -236,7 +236,7 @@ slow:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -276,7 +276,7 @@ slow:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -316,7 +316,7 @@ slow:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%
@@ -357,7 +357,7 @@ pure:
       data: cbfb791
       width: 15
       height: 15
-    extra: '{"UEC":1.0,"Version":"1","ECLevel":"82%","ReaderInit":true}'
+    extra: '{"UEC":1.00,"Version":"1","ECLevel":"82%","ReaderInit":true}'
     version: "1"
     readerInit: true
     ecLevel: 82%

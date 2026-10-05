@@ -1,113 +1,110 @@
-total: 30
+total: 29
 passAll: 0
-passSome: 30
+passSome: 29
 fast:
   "0": {}
   "90":
-    failures: 30
+    failures: 29
     undetected:
-      total: 30
+      total: 29
       images:
         - "#378.png"
         - 144x144_wrong.png
         - 0123456789.png
-        - abcd-18x8.png
-        - abcd-26x12.png
-        - abcd-32x8.png
-        - abcd-36x12-mirrored.png
-        - abcd-36x12.png
-        - abcd-36x16.png
-        - abcd-48x16.png
-        - abcd-52x52-IDAutomation.png
-        - abcd-52x52.png
-        - abcdefg-64x64.png
-        - abcdefg.png
         - C40.png
-        - distorted.png
+        - dm-18x8.png
+        - dm-26x12.png
+        - dm-32x8.png
+        - dm-36x12.png
+        - dm-36x16.png
+        - dm-36x36.png
+        - dm-48x16.png
+        - dm-52x52-IDAutomation.png
+        - dm-52x52.png
+        - dm-64x64.png
         - eci-mixed.png
         - eci.png
         - EDIFACT.png
+        - error-0.png
+        - error-1.png
+        - error-2.png
+        - error-3.png
+        - error-4.png
         - gs1-figure-4.15.1-2-32x32.png
         - GUID.webp
-        - HelloWorld_Text_L_Kaywa_1_error_byte.png
-        - HelloWorld_Text_L_Kaywa_2_error_byte.png
-        - HelloWorld_Text_L_Kaywa_3_error_byte.png
-        - HelloWorld_Text_L_Kaywa_4_error_byte.png
-        - HelloWorld_Text_L_Kaywa.png
+        - mirrored.png
         - mod-size-1.png
         - readerinit.png
+        - URL.png
         - X12.png
-        - zxing_URL_L_Kayway.png
   "180":
-    failures: 30
+    failures: 29
     undetected:
-      total: 30
+      total: 29
       images:
         - "#378.png"
         - 144x144_wrong.png
         - 0123456789.png
-        - abcd-18x8.png
-        - abcd-26x12.png
-        - abcd-32x8.png
-        - abcd-36x12-mirrored.png
-        - abcd-36x12.png
-        - abcd-36x16.png
-        - abcd-48x16.png
-        - abcd-52x52-IDAutomation.png
-        - abcd-52x52.png
-        - abcdefg-64x64.png
-        - abcdefg.png
         - C40.png
-        - distorted.png
+        - dm-18x8.png
+        - dm-26x12.png
+        - dm-32x8.png
+        - dm-36x12.png
+        - dm-36x16.png
+        - dm-36x36.png
+        - dm-48x16.png
+        - dm-52x52-IDAutomation.png
+        - dm-52x52.png
+        - dm-64x64.png
         - eci-mixed.png
         - eci.png
         - EDIFACT.png
+        - error-0.png
+        - error-1.png
+        - error-2.png
+        - error-3.png
+        - error-4.png
         - gs1-figure-4.15.1-2-32x32.png
         - GUID.webp
-        - HelloWorld_Text_L_Kaywa_1_error_byte.png
-        - HelloWorld_Text_L_Kaywa_2_error_byte.png
-        - HelloWorld_Text_L_Kaywa_3_error_byte.png
-        - HelloWorld_Text_L_Kaywa_4_error_byte.png
-        - HelloWorld_Text_L_Kaywa.png
+        - mirrored.png
         - mod-size-1.png
         - readerinit.png
+        - URL.png
         - X12.png
-        - zxing_URL_L_Kayway.png
   "270":
-    failures: 30
+    failures: 29
     undetected:
-      total: 30
+      total: 29
       images:
         - "#378.png"
         - 144x144_wrong.png
         - 0123456789.png
-        - abcd-18x8.png
-        - abcd-26x12.png
-        - abcd-32x8.png
-        - abcd-36x12-mirrored.png
-        - abcd-36x12.png
-        - abcd-36x16.png
-        - abcd-48x16.png
-        - abcd-52x52-IDAutomation.png
-        - abcd-52x52.png
-        - abcdefg-64x64.png
-        - abcdefg.png
         - C40.png
-        - distorted.png
+        - dm-18x8.png
+        - dm-26x12.png
+        - dm-32x8.png
+        - dm-36x12.png
+        - dm-36x16.png
+        - dm-36x36.png
+        - dm-48x16.png
+        - dm-52x52-IDAutomation.png
+        - dm-52x52.png
+        - dm-64x64.png
         - eci-mixed.png
         - eci.png
         - EDIFACT.png
+        - error-0.png
+        - error-1.png
+        - error-2.png
+        - error-3.png
+        - error-4.png
         - gs1-figure-4.15.1-2-32x32.png
         - GUID.webp
-        - HelloWorld_Text_L_Kaywa_1_error_byte.png
-        - HelloWorld_Text_L_Kaywa_2_error_byte.png
-        - HelloWorld_Text_L_Kaywa_3_error_byte.png
-        - HelloWorld_Text_L_Kaywa_4_error_byte.png
-        - HelloWorld_Text_L_Kaywa.png
+        - mirrored.png
         - mod-size-1.png
         - readerinit.png
+        - URL.png
         - X12.png
-        - zxing_URL_L_Kayway.png
 slow:
   "0": {}
   "90":
@@ -133,9 +130,8 @@ slow:
         - mod-size-1.png
 pure:
   "0":
-    failures: 2
+    failures: 1
     undetected:
-      total: 2
+      total: 1
       images:
         - 0123456789.png
-        - distorted.png

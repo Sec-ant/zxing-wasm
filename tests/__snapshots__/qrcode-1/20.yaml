@@ -4,26 +4,26 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 257
-        y: 52
+        x: 11
+        y: 11
       topRight:
-        x: 222
-        y: 251
+        x: 194
+        y: 11
       bottomRight:
-        x: 10
-        y: 221
+        x: 194
+        y: 194
       bottomLeft:
-        x: 42
-        y: 20
-    rotation: 100
-    orientation: 100
+        x: 11
+        y: 194
+    rotation: 0
+    orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -32,38 +32,38 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e18f798
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "90":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 213
-        y: 257
+        x: 193
+        y: 11
       topRight:
-        x: 13
-        y: 222
+        x: 193
+        y: 194
       bottomRight:
-        x: 44
-        y: 10
+        x: 10
+        y: 194
       bottomLeft:
-        x: 244
-        y: 42
-    rotation: -170
-    orientation: -170
+        x: 10
+        y: 11
+    rotation: 90
+    orientation: 90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -72,38 +72,38 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 71f1da2
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":0.92,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "180":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 9
-        y: 213
+        x: 195
+        y: 193
       topRight:
-        x: 44
-        y: 13
+        x: 12
+        y: 193
       bottomRight:
-        x: 256
-        y: 44
+        x: 12
+        y: 10
       bottomLeft:
-        x: 224
-        y: 244
-    rotation: -80
-    orientation: -80
+        x: 195
+        y: 10
+    rotation: 180
+    orientation: 180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -112,38 +112,38 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 71f1da2
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":0.92,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "270":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 52
-        y: 9
+        x: 11
+        y: 195
       topRight:
-        x: 252
-        y: 44
+        x: 11
+        y: 12
       bottomRight:
-        x: 221
-        y: 256
+        x: 194
+        y: 12
       bottomLeft:
-        x: 20
-        y: 224
-    rotation: 9
-    orientation: 9
+        x: 194
+        y: 195
+    rotation: -90
+    orientation: -90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -152,39 +152,39 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 71f1da2
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":0.92,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
 slow:
   "0":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 257
-        y: 52
+        x: 11
+        y: 11
       topRight:
-        x: 222
-        y: 251
+        x: 194
+        y: 11
       bottomRight:
-        x: 10
-        y: 221
+        x: 194
+        y: 194
       bottomLeft:
-        x: 42
-        y: 20
-    rotation: 100
-    orientation: 100
+        x: 11
+        y: 194
+    rotation: 0
+    orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -193,38 +193,38 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e18f798
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":1.0,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "90":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 213
-        y: 257
+        x: 193
+        y: 11
       topRight:
-        x: 13
-        y: 222
+        x: 193
+        y: 194
       bottomRight:
-        x: 44
-        y: 10
+        x: 10
+        y: 194
       bottomLeft:
-        x: 244
-        y: 42
-    rotation: -170
-    orientation: -170
+        x: 10
+        y: 11
+    rotation: 90
+    orientation: 90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -233,38 +233,38 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 71f1da2
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":0.92,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "180":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 9
-        y: 213
+        x: 195
+        y: 193
       topRight:
-        x: 44
-        y: 13
+        x: 12
+        y: 193
       bottomRight:
-        x: 256
-        y: 44
+        x: 12
+        y: 10
       bottomLeft:
-        x: 224
-        y: 244
-    rotation: -80
-    orientation: -80
+        x: 195
+        y: 10
+    rotation: 180
+    orientation: 180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -273,38 +273,38 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 71f1da2
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":0.92,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "270":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: ab95fb8
-    bytesECI: 8c72684
-    text: Sean Owen<CR><LF>srowen@google.com<CR><LF>917-364-2918<CR><LF>http://awesome-thoughts.com
+    bytes: 8361a49
+    bytesECI: a268b93
+    text: "*ﾃﾞｻﾞｲﾝQR*<CR><LF>http://d-qr.net/ex/    "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 52
-        y: 9
+        x: 11
+        y: 195
       topRight:
-        x: 252
-        y: 44
+        x: 11
+        y: 12
       bottomRight:
-        x: 221
-        y: 256
+        x: 194
+        y: 12
       bottomLeft:
-        x: 20
-        y: 224
-    rotation: 9
-    orientation: 9
+        x: 194
+        y: 195
+    rotation: -90
+    orientation: -90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -313,10 +313,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 71f1da2
-      width: 57
-      height: 57
-    extra: '{"DataMask":3,"UEC":0.92,"Version":"10","ECLevel":"M"}'
-    version: "10"
+      data: 521d7e6
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H

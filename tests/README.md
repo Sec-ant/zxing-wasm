@@ -1,15 +1,24 @@
 # Blackbox Test Fixtures
 
-The blackbox suite mirrors the sample directories exercised by
-`zxing-cpp/test/blackbox/BlackboxTestRunner.cpp`.
+The blackbox suites cover every upstream sample directory containing images
+under `zxing-cpp/test/samples`. The consistency test reads the case-sensitive Git
+tree and compares it with the configured directories. The only excluded
+directory, `databarLtd-1`, contains just `!defaults.toml`; the test asserts that
+exact file list so new images cannot be silently excluded. Its lowercase
+counterpart, `databarltd-1`, contains images and is covered.
 
 ## What is asserted
 
-Each upstream image is tested independently with every configured reader mode
-and rotation. Its `*.txt`, `*.result.txt`, and `*.bin` companions are compared
-using the same format, text, and binary rules as zxing-cpp. The suite also
-parses `BlackboxTestRunner.cpp` and asserts the upstream minimum-pass and
-maximum-misread threshold for every `(directory, mode, rotation)` combination.
+The snapshot suite tests each image with every configured reader mode and
+rotation. It records comparisons with `*.txt`, `*.result.txt`, and `*.bin`
+companions in directory summaries and snapshots every returned result.
+
+Entries marked `upstreamContract` use the upstream TOML expectations instead.
+They inherit `!defaults.toml`, resolve companion files, and honor upstream
+mode, rotation, reader-option, and known-missing settings. Required symbols
+are matched individually by format, text, and symbology identifier, including
+multiple symbols in one image. The `none-*` datasets assert zero detections.
+These assertions are independent of snapshot updates.
 
 The additional YAML fixture is a complete `ReadResult` contract represented in
 YAML rather than JSON. It preserves validity, errors, format, text, payload
@@ -22,9 +31,9 @@ with `@napi-rs/canvas`. This supplies zxing-cpp with the same pixels that its
 native blackbox runner obtains through libwebp, so a container-format gap
 cannot be mistaken for a barcode-reading regression.
 
-There is one YAML file per input image, plus one summary fixture for each
-upstream sample directory. This keeps review diffs focused while retaining the
-full `(image, mode, rotation)` test matrix.
+For snapshot entries there is one YAML file per input image, plus one directory
+summary. This keeps review diffs focused while retaining the full
+`(image, mode, rotation)` test matrix.
 
 ## Updating after a zxing-cpp change
 
@@ -34,5 +43,7 @@ full `(image, mode, rotation)` test matrix.
 3. If those changes are expected, run `pnpm test --update`.
 4. Review and stage the resulting YAML fixtures with the submodule update.
 
-Do not update fixtures solely to hide a failure. The direct upstream companion
-file assertions and upstream threshold checks are the primary correctness gate.
+Do not update fixtures solely to hide a failure. Investigate upstream contract
+failures against the sample expectations and C++ runner; updating snapshots
+does not change those assertions. Add or migrate test entries when upstream
+adds, renames, or merges sample directories.

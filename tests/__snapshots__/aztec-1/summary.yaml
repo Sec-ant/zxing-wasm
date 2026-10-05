@@ -1,6 +1,6 @@
-total: 32
-passAll: 31
-passSome: 32
+total: 33
+passAll: 32
+passSome: 33
 fast:
   "0":
     failures: 1

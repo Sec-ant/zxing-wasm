@@ -4,24 +4,24 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 39
-        y: 20
+        x: 16
+        y: 16
       topRight:
-        x: 309
-        y: 24
+        x: 388
+        y: 16
       bottomRight:
-        x: 328
-        y: 281
+        x: 388
+        y: 388
       bottomLeft:
-        x: 15
-        y: 281
+        x: 16
+        y: 388
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -32,11 +32,11 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M
   "90":
@@ -44,24 +44,24 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 290
-        y: 38
+        x: 388
+        y: 16
       topRight:
-        x: 285
-        y: 309
+        x: 388
+        y: 388
       bottomRight:
-        x: 30
-        y: 328
+        x: 16
+        y: 388
       bottomLeft:
-        x: 28
-        y: 15
+        x: 16
+        y: 16
     rotation: 90
     orientation: 90
     isMirrored: false
@@ -72,11 +72,11 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M
   "180":
@@ -84,26 +84,26 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 320
-        y: 290
+        x: 388
+        y: 388
       topRight:
-        x: 49
-        y: 285
+        x: 16
+        y: 388
       bottomRight:
-        x: 30
-        y: 29
+        x: 16
+        y: 16
       bottomLeft:
-        x: 344
-        y: 28
-    rotation: -180
-    orientation: -180
+        x: 388
+        y: 16
+    rotation: 180
+    orientation: 180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -112,11 +112,11 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M
   "270":
@@ -124,24 +124,24 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 20
-        y: 320
+        x: 16
+        y: 388
       topRight:
-        x: 25
-        y: 49
+        x: 16
+        y: 16
       bottomRight:
-        x: 281
-        y: 30
+        x: 388
+        y: 16
       bottomLeft:
-        x: 281
-        y: 343
+        x: 388
+        y: 388
     rotation: -90
     orientation: -90
     isMirrored: false
@@ -152,11 +152,11 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M
 slow:
@@ -165,24 +165,24 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 39
-        y: 20
+        x: 16
+        y: 16
       topRight:
-        x: 309
-        y: 24
+        x: 388
+        y: 16
       bottomRight:
-        x: 328
-        y: 281
+        x: 388
+        y: 388
       bottomLeft:
-        x: 15
-        y: 281
+        x: 16
+        y: 388
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -193,11 +193,11 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M
   "90":
@@ -205,24 +205,24 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 290
-        y: 38
+        x: 388
+        y: 16
       topRight:
-        x: 285
-        y: 309
+        x: 388
+        y: 388
       bottomRight:
-        x: 30
-        y: 328
+        x: 16
+        y: 388
       bottomLeft:
-        x: 28
-        y: 15
+        x: 16
+        y: 16
     rotation: 90
     orientation: 90
     isMirrored: false
@@ -233,11 +233,11 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M
   "180":
@@ -245,26 +245,26 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 320
-        y: 290
+        x: 388
+        y: 388
       topRight:
-        x: 49
-        y: 285
+        x: 16
+        y: 388
       bottomRight:
-        x: 30
-        y: 29
+        x: 16
+        y: 16
       bottomLeft:
-        x: 344
-        y: 28
-    rotation: -180
-    orientation: -180
+        x: 388
+        y: 16
+    rotation: 180
+    orientation: 180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -273,11 +273,11 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M
   "270":
@@ -285,24 +285,24 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 89a2b52
-    bytesECI: b2a6ba4
-    text: MEBKM:URL:http\://en.wikipedia.org/wiki/Main_Page;;
+    bytes: ff463ff
+    bytesECI: af52a3c
+    text: When we at WRT talk about \"text,\" we are generally talking about a particular kind of readable information encoding - and readable is a complex proposition. Text may be stylized in a way we are unfamiliar with, as in blackletter - it may be interspersed with some markup we don\'t understand, such as HTML - it may be be a substitution system we aren\'t familiar with, such as braille or morse code - or it may be a system that, while technically human-readable, isn\'t particularly optimized for reading by humans, as with barcodes (although barcodes can be read).
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 20
-        y: 320
+        x: 16
+        y: 388
       topRight:
-        x: 25
-        y: 49
+        x: 16
+        y: 16
       bottomRight:
-        x: 281
-        y: 30
+        x: 388
+        y: 16
       bottomLeft:
-        x: 281
-        y: 343
+        x: 388
+        y: 388
     rotation: -90
     orientation: -90
     isMirrored: false
@@ -313,10 +313,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d46ca5b
-      width: 33
-      height: 33
-    extra: '{"DataMask":2,"UEC":1.0,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: "6426497"
+      width: 93
+      height: 93
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"19","ECLevel":"M"}'
+    version: "19"
     readerInit: false
     ecLevel: M

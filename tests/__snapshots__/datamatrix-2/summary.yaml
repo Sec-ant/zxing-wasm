@@ -8,55 +8,55 @@ fast:
     undetected:
       total: 13
       images:
-        - 01.webp
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 09.webp
-        - 10.webp
-        - 11.webp
-        - 12.webp
-        - 13.webp
-        - 14.webp
-        - 16.webp
-        - 17.webp
-        - 18.webp
+        - 1-1.webp
+        - 1-2.webp
+        - 1-3.webp
+        - 1-4.webp
+        - 2-1.webp
+        - 2-2.webp
+        - 2-3.webp
+        - 2-4.webp
+        - 2-5.webp
+        - 2-6.webp
+        - 2-7.webp
+        - 2-8.webp
+        - 2-9.webp
   "180":
     failures: 13
     undetected:
       total: 13
       images:
-        - 01.webp
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 09.webp
-        - 10.webp
-        - 11.webp
-        - 12.webp
-        - 13.webp
-        - 14.webp
-        - 16.webp
-        - 17.webp
-        - 18.webp
+        - 1-1.webp
+        - 1-2.webp
+        - 1-3.webp
+        - 1-4.webp
+        - 2-1.webp
+        - 2-2.webp
+        - 2-3.webp
+        - 2-4.webp
+        - 2-5.webp
+        - 2-6.webp
+        - 2-7.webp
+        - 2-8.webp
+        - 2-9.webp
   "270":
     failures: 13
     undetected:
       total: 13
       images:
-        - 01.webp
-        - 02.webp
-        - 03.webp
-        - 04.webp
-        - 09.webp
-        - 10.webp
-        - 11.webp
-        - 12.webp
-        - 13.webp
-        - 14.webp
-        - 16.webp
-        - 17.webp
-        - 18.webp
+        - 1-1.webp
+        - 1-2.webp
+        - 1-3.webp
+        - 1-4.webp
+        - 2-1.webp
+        - 2-2.webp
+        - 2-3.webp
+        - 2-4.webp
+        - 2-5.webp
+        - 2-6.webp
+        - 2-7.webp
+        - 2-8.webp
+        - 2-9.webp
 slow:
   "0": {}
   "90": {}

@@ -7,54 +7,50 @@ fast:
     undetected:
       total: 1
       images:
-        - 12.webp
+        - 12!.webp
   "90":
-    failures: 2
+    failures: 1
     undetected:
-      total: 2
+      total: 1
       images:
-        - 12.webp
-        - MQR-needs-br-update.jpg
+        - 12!.webp
   "180":
-    failures: 2
+    failures: 1
     undetected:
-      total: 2
+      total: 1
       images:
-        - 12.webp
-        - MQR-needs-br-update.jpg
+        - 12!.webp
   "270":
     failures: 1
     undetected:
       total: 1
       images:
-        - 12.webp
+        - 12!.webp
 slow:
   "0":
     failures: 1
     undetected:
       total: 1
       images:
-        - 12.webp
+        - 12!.webp
   "90":
-    failures: 2
+    failures: 1
     undetected:
-      total: 2
+      total: 1
       images:
-        - 12.webp
-        - MQR-needs-br-update.jpg
+        - 12!.webp
   "180":
-    failures: 2
+    failures: 1
     undetected:
-      total: 2
+      total: 1
       images:
-        - 12.webp
-        - MQR-needs-br-update.jpg
+        - 12!.webp
   "270":
     failures: 1
     undetected:
       total: 1
       images:
-        - 12.webp
+        - 12!.webp
 pure:
   "0":
     failures: 7
@@ -66,5 +62,5 @@ pure:
         - 7.webp
         - 9.webp
         - 11.webp
-        - 12.webp
+        - 12!.webp
         - MQR-needs-br-update.jpg

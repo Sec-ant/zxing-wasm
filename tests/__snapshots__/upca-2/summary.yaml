@@ -1,75 +1,154 @@
-total: 26
-passAll: 10
-passSome: 16
+total: 64
+passAll: 23
+passSome: 39
 fast:
   "0":
-    failures: 16
+    failures: 41
     undetected:
-      total: 16
+      total: 41
       images:
-        - 01.webp
-        - 02.webp
+        - 003-2.webp
+        - 003-4!.webp
         - 10.webp
-        - 11.webp
-        - 15.webp
+        - 14.webp
+        - 015-1.webp
+        - 015-2!.webp
+        - 015-3!.webp
+        - 015-4!.webp
         - 16.webp
-        - 28.webp
-        - 32.webp
-        - 34.webp
-        - 38.webp
-        - 39.webp
-        - 41.webp
-        - 42.webp
-        - 48.webp
-        - 49.webp
-        - 50.webp
+        - 17!.webp
+        - 058-1.webp
+        - 058-6!.webp
+        - 058-7!.webp
+        - 058-8!.webp
+        - 058-9!.webp
+        - 058-a!.webp
+        - 058-b!.webp
+        - 088.webp
+        - 116-1.webp
+        - 116-3.webp
+        - 116-4.webp
+        - 137-4!.webp
+        - 259-3!.webp
+        - 259-4!.webp
+        - 259-5!.webp
+        - 310-3.webp
+        - 310-5!.webp
+        - 310-6!.webp
+        - 310-7!.webp
+        - 310-8!.webp
+        - 310-9!.webp
+        - 335-3.webp
+        - 335-4!.webp
+        - 592-1.webp
+        - 592-2.webp
+        - 592-3!.webp
+        - 592-4!.webp
+        - 675-1.webp
+        - 675-2.webp
+        - 879-2!.webp
+        - 879-3!.webp
   "180":
-    failures: 14
+    failures: 38
     undetected:
-      total: 14
+      total: 38
       images:
-        - 01.webp
-        - 02.webp
+        - 003-2.webp
+        - 003-4!.webp
         - 10.webp
-        - 11.webp
+        - 14.webp
+        - 015-2!.webp
+        - 015-3!.webp
+        - 015-4!.webp
         - 16.webp
-        - 28.webp
-        - 32.webp
-        - 34.webp
-        - 38.webp
-        - 41.webp
-        - 42.webp
-        - 48.webp
-        - 49.webp
-        - 50.webp
+        - 17!.webp
+        - 058-1.webp
+        - 058-6!.webp
+        - 058-7!.webp
+        - 058-8!.webp
+        - 058-9!.webp
+        - 058-a!.webp
+        - 058-b!.webp
+        - 088.webp
+        - 116-1.webp
+        - 116-3.webp
+        - 116-4.webp
+        - 137-4!.webp
+        - 259-3!.webp
+        - 259-4!.webp
+        - 259-5!.webp
+        - 310-3.webp
+        - 310-5!.webp
+        - 310-6!.webp
+        - 310-7!.webp
+        - 310-8!.webp
+        - 310-9!.webp
+        - 335-3.webp
+        - 335-4!.webp
+        - 592-2.webp
+        - 592-3!.webp
+        - 592-4!.webp
+        - 675-2.webp
+        - 879-2!.webp
+        - 879-3!.webp
 slow:
   "0":
-    failures: 10
+    failures: 25
     undetected:
-      total: 10
+      total: 25
       images:
-        - 01.webp
-        - 10.webp
-        - 11.webp
-        - 28.webp
-        - 34.webp
-        - 38.webp
-        - 41.webp
-        - 48.webp
-        - 49.webp
-        - 50.webp
+        - 003-4!.webp
+        - 015-2!.webp
+        - 015-3!.webp
+        - 015-4!.webp
+        - 17!.webp
+        - 058-6!.webp
+        - 058-7!.webp
+        - 058-8!.webp
+        - 058-9!.webp
+        - 058-a!.webp
+        - 058-b!.webp
+        - 137-4!.webp
+        - 259-3!.webp
+        - 259-4!.webp
+        - 259-5!.webp
+        - 310-5!.webp
+        - 310-6!.webp
+        - 310-7!.webp
+        - 310-8!.webp
+        - 310-9!.webp
+        - 335-4!.webp
+        - 592-3!.webp
+        - 592-4!.webp
+        - 879-2!.webp
+        - 879-3!.webp
   "180":
-    failures: 10
+    failures: 25
     undetected:
-      total: 10
+      total: 25
       images:
-        - 01.webp
-        - 10.webp
-        - 11.webp
-        - 28.webp
-        - 34.webp
-        - 38.webp
-        - 41.webp
-        - 48.webp
-        - 49.webp
-        - 50.webp
+        - 003-4!.webp
+        - 015-2!.webp
+        - 015-3!.webp
+        - 015-4!.webp
+        - 17!.webp
+        - 058-6!.webp
+        - 058-7!.webp
+        - 058-8!.webp
+        - 058-9!.webp
+        - 058-a!.webp
+        - 058-b!.webp
+        - 137-4!.webp
+        - 259-3!.webp
+        - 259-4!.webp
+        - 259-5!.webp
+        - 310-5!.webp
+        - 310-6!.webp
+        - 310-7!.webp
+        - 310-8!.webp
+        - 310-9!.webp
+        - 335-4!.webp
+        - 592-3!.webp
+        - 592-4!.webp
+        - 879-2!.webp
+        - 879-3!.webp
