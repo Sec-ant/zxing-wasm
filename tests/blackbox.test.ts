@@ -1,4 +1,5 @@
-import { readdir, readFile } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
+import { readFile } from "node:fs/promises";
 import { basename, extname, resolve } from "node:path";
 import { glob } from "tinyglobby";
 import {
@@ -60,14 +61,14 @@ type Entries<T> = {
 }[keyof T][];
 
 const SAMPLES_PATH_PREFIX = "zxing-cpp/test/samples";
-const upstreamSampleDirectories = (
-  await readdir(SAMPLES_PATH_PREFIX, {
-    withFileTypes: true,
-  })
+const upstreamSampleDirectories = execFileSync(
+  "git",
+  ["-C", "zxing-cpp", "ls-tree", "-d", "--name-only", "HEAD:test/samples"],
+  { encoding: "utf8" },
 )
-  .filter((entry) => entry.isDirectory())
-  .map((entry) => entry.name)
-  .sort();
+  .trim()
+  .split("\n")
+  .filter(Boolean);
 const configuredSampleDirectories = new Set(
   testEntries.map(({ directory }) => directory),
 );
@@ -77,6 +78,7 @@ const intentionallyUncoveredSampleDirectories = new Set([
   "databarExp-2",
   "databarExp-3",
   "databarExpStk-1",
+  "databarLtd-1",
   "databarOmni-1",
   "databarStk-1",
   "datamatrix-5",
