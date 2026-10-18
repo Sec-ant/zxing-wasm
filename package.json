@@ -196,7 +196,7 @@
     "@napi-rs/canvas": "^1.0.10",
     "@types/node": "^26.6.4",
     "@vitest/ui": "^5.0.3",
-    "bundlewatch": "^0.4.2",
+    "bundlewatch": "^1.0.0",
     "concurrently": "^10.0.5",
     "copy-files-from-to": "^4.0.1",
     "lint-staged": "^17.6.0",
