@@ -1,9 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "timezone": "Asia/Shanghai",
-  "schedule": ["before 9am on monday"],
   "extends": [
     "config:best-practices",
+    "github>Sec-ant/renovate-config",
+    "github>Sec-ant/renovate-config:silent-automerge",
     "helpers:pinGitHubActionDigestsToSemver",
     "customManagers:biomeVersions",
     ":preserveSemverRanges"
