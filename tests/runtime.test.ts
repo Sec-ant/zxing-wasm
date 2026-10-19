@@ -1,5 +1,6 @@
 import { execFile } from "node:child_process";
 import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 import { runInNewContext } from "node:vm";
 import { describe, expect, test, vi } from "vitest";
@@ -10,7 +11,9 @@ describe.runIf(process.env.ZXING_TEST_RUNTIME)("package runtimes", () => {
   test.each(["node", "bun", "deno"])(
     "%s loads ESM and CJS packages",
     async (runtime) => {
-      const fixture = new URL("fixtures/runtime.mjs", import.meta.url).pathname;
+      const fixture = fileURLToPath(
+        new URL("fixtures/runtime.mjs", import.meta.url),
+      );
       const args = runtime === "deno" ? ["run", "-A", fixture] : [fixture];
       const { stdout } = await promisify(execFile)(runtime, args, {
         timeout: 30_000,
