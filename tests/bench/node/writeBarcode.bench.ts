@@ -58,9 +58,9 @@ beforeAll(async () => {
 describe("writeBarcode — encoder", () => {
   for (const { name, input, format } of cases) {
     test(name, { timeout: 120_000 }, async ({ bench }) => {
-      await bench(name, { warmupIterations: 10, iterations: 50 }, async () => {
+      await bench(name, async () => {
         await writeBarcode(input, { format, scale: 1 });
-      }).run();
+      }).run({ warmupIterations: 10, iterations: 50 });
     });
   }
 });

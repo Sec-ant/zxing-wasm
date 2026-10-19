@@ -63,34 +63,26 @@ beforeAll(async () => {
 
 describe("readBarcodes — default options", () => {
   test("720p", { timeout: 120_000 }, async ({ bench }) => {
-    await bench("720p", { warmupIterations: 20, iterations: 100 }, async () => {
+    await bench("720p", async () => {
       await readBarcodes(img720);
-    }).run();
+    }).run({ warmupIterations: 20, iterations: 100 });
   });
   test("1080p", { timeout: 120_000 }, async ({ bench }) => {
-    await bench(
-      "1080p",
-      { warmupIterations: 20, iterations: 100 },
-      async () => {
-        await readBarcodes(img1080);
-      },
-    ).run();
+    await bench("1080p", async () => {
+      await readBarcodes(img1080);
+    }).run({ warmupIterations: 20, iterations: 100 });
   });
 });
 
 describe("readBarcodes — optimized options", () => {
   test("720p", { timeout: 120_000 }, async ({ bench }) => {
-    await bench("720p", { warmupIterations: 20, iterations: 100 }, async () => {
+    await bench("720p", async () => {
       await readBarcodes(img720, optimizedOpts);
-    }).run();
+    }).run({ warmupIterations: 20, iterations: 100 });
   });
   test("1080p", { timeout: 120_000 }, async ({ bench }) => {
-    await bench(
-      "1080p",
-      { warmupIterations: 20, iterations: 100 },
-      async () => {
-        await readBarcodes(img1080, optimizedOpts);
-      },
-    ).run();
+    await bench("1080p", async () => {
+      await readBarcodes(img1080, optimizedOpts);
+    }).run({ warmupIterations: 20, iterations: 100 });
   });
 });

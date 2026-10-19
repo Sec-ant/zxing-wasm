@@ -2,6 +2,7 @@ dedupePeers: true
 publicHoistPattern:
   - "@changesets/config"
 allowBuilds:
+  "@swc/core": true
   esbuild: true
   simple-git-hooks: true
 overrides:

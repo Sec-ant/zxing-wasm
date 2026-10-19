@@ -12,15 +12,15 @@
 
 #if defined(READER)
   #include "ReadBarcode.h"
-  #define STB_IMAGE_IMPLEMENTATION
   #include <stb_image.h>
 #endif
 
 #if defined(WRITER)
   #include "CreateBarcode.h"
   #include "WriteBarcode.h"
-  #define STB_IMAGE_WRITE_IMPLEMENTATION
   #include <stb_image_write.h>
+  // stb exposes this helper from its implementation rather than its public header.
+  extern "C" unsigned char *stbi_write_png_to_mem(const unsigned char *, int, int, int, int, int *);
 #endif
 
 using namespace emscripten;

@@ -104,20 +104,15 @@ Anywhere a format name is accepted (`ReaderOptions.formats`, `WriterOptions.form
 
 ## Build
 
+Install [pnpm](https://pnpm.io/installation), [CMake](https://cmake.org/download/),
+and [Emscripten](https://emscripten.org/docs/getting_started/downloads.html).
+With Homebrew, install the build tools using `brew install cmake emscripten`.
+
 ```bash
 git clone --recurse-submodules https://github.com/Sec-ant/zxing-wasm
 cd zxing-wasm
-
-# Install pnpm before executing the next command:
-# https://pnpm.io/installation
 pnpm i --frozen-lockfile
-
-# Install CMake before executing the next command:
-# https://cmake.org/download/
-# Install Emscripten before executing the next command:
-# https://emscripten.org/docs/getting_started/downloads.html
 pnpm build:wasm
-
 pnpm build
 ```
 
@@ -482,9 +477,7 @@ By default, the `.wasm` binary will not be fetched and instantiated until a `rea
 
 ```ts
 prepareZXingModule({
-  overrides: {
-    /* ... your desired overrides ... */
-  },
+  overrides: {/* ... your desired overrides ... */},
 }); // <-- returns void
 ```
 
@@ -492,9 +485,7 @@ However, if you want to explicitly trigger the download and instantiation of the
 
 ```ts
 prepareZXingModule({
-  overrides: {
-    /* ... your desired overrides ... */
-  },
+  overrides: {/* ... your desired overrides ... */},
   fireImmediately: true,
 }); // <-- returns a promise
 ```
@@ -503,9 +494,7 @@ Because different `overrides` settings can influence how this library locates an
 
 ```ts
 prepareZXingModule({
-  overrides: {
-    /* ... your desired overrides ... */
-  },
+  overrides: {/* ... your desired overrides ... */},
   fireImmediately: true,
   equalityFn: () => false, // <-- force re-fetch and re-instantiate
 });

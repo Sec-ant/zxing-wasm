@@ -5,7 +5,7 @@ inputs:
   emsdk-version:
     description: EMSDK Version
     required: true
-    default: 5.0.4
+    default: 6.0.12
   emsdk-cache-dir:
     description: EMSDK Cache Directory
     required: true

@@ -2,13 +2,22 @@ import { execSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import browserslist from "browserslist";
+import browserslistToEsbuild from "browserslist-to-esbuild";
+import swc from "unplugin-swc";
 import { defineConfig } from "vitest/config";
-import { version } from "./package.json" with { type: "json" };
-import { emscriptenPatch } from "./scripts/vite-plugin-emscripten-patch.js";
+import pkgJson from "./package.json" with { type: "json" };
+import { swcEmscripten } from "./scripts/swc-emscripten.js";
+
+const browsers = browserslist();
+const swcOptions = {
+  tsconfigFile: false as const,
+  env: { targets: browsers },
+};
 
 export default defineConfig({
   build: {
-    target: ["es2020", "edge88", "firefox68", "chrome75", "safari13"],
+    target: browserslistToEsbuild(browsers),
     lib: {
       entry: {
         "reader/index": "src/reader/index.ts",
@@ -34,9 +43,12 @@ export default defineConfig({
       },
     },
   },
-  plugins: [emscriptenPatch()],
+  plugins: [
+    swcEmscripten(),
+    swc.vite({ ...swcOptions, include: /\.[jt]sx?$/ }),
+  ],
   define: {
-    NPM_PACKAGE_VERSION: JSON.stringify(version),
+    NPM_PACKAGE_VERSION: JSON.stringify(pkgJson.version),
     "import.meta.vitest": "undefined",
     READER_HASH: JSON.stringify(
       createHash("sha256")
@@ -80,6 +92,7 @@ export default defineConfig({
     ),
   },
   test: {
+    include: ["tests/**/*.test.ts"],
     testTimeout: 10000,
     includeSource: ["src/bindings/barcodeFormat.ts"],
     // Scope benchmarks to the project's tests/ tree. The default glob

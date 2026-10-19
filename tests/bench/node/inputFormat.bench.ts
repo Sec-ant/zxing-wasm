@@ -100,43 +100,27 @@ beforeAll(async () => {
 for (const res of resolutions) {
   describe(`Input formats — ${res}`, () => {
     test("ImageData", { timeout: 120_000 }, async ({ bench }) => {
-      await bench(
-        "ImageData",
-        { warmupIterations: 10, iterations: 50 },
-        async () => {
-          await readBarcodes(imageDataInputs[res]!, optimizedOpts);
-        },
-      ).run();
+      await bench("ImageData", async () => {
+        await readBarcodes(imageDataInputs[res]!, optimizedOpts);
+      }).run({ warmupIterations: 10, iterations: 50 });
     });
 
     test("PNG / Uint8Array", { timeout: 120_000 }, async ({ bench }) => {
-      await bench(
-        "PNG / Uint8Array",
-        { warmupIterations: 10, iterations: 50 },
-        async () => {
-          await readBarcodes(pngU8[res]!, optimizedOpts);
-        },
-      ).run();
+      await bench("PNG / Uint8Array", async () => {
+        await readBarcodes(pngU8[res]!, optimizedOpts);
+      }).run({ warmupIterations: 10, iterations: 50 });
     });
 
     test("JPEG / Uint8Array", { timeout: 120_000 }, async ({ bench }) => {
-      await bench(
-        "JPEG / Uint8Array",
-        { warmupIterations: 10, iterations: 50 },
-        async () => {
-          await readBarcodes(jpegU8[res]!, optimizedOpts);
-        },
-      ).run();
+      await bench("JPEG / Uint8Array", async () => {
+        await readBarcodes(jpegU8[res]!, optimizedOpts);
+      }).run({ warmupIterations: 10, iterations: 50 });
     });
 
     test("PNG / Blob", { timeout: 120_000 }, async ({ bench }) => {
-      await bench(
-        "PNG / Blob",
-        { warmupIterations: 10, iterations: 50 },
-        async () => {
-          await readBarcodes(pngBlobs[res]!, optimizedOpts);
-        },
-      ).run();
+      await bench("PNG / Blob", async () => {
+        await readBarcodes(pngBlobs[res]!, optimizedOpts);
+      }).run({ warmupIterations: 10, iterations: 50 });
     });
   });
 }
