@@ -117,13 +117,9 @@ describe("decode — fast path (single format, no rotate / no invert)", () => {
       maxNumberOfSymbols: 1,
     };
     test(format, { timeout: 120_000 }, async ({ bench }) => {
-      await bench(
-        format,
-        { warmupIterations: 10, iterations: 50 },
-        async () => {
-          await readBarcodes(inputs.get(format)!, opts);
-        },
-      ).run();
+      await bench(format, async () => {
+        await readBarcodes(inputs.get(format)!, opts);
+      }).run({ warmupIterations: 10, iterations: 50 });
     });
   }
 });
@@ -133,12 +129,8 @@ describe("decode — failure path (default options, no barcode in frame)", () =>
   // the heavy try-everything path that dominates "scanner is slow when
   // there's nothing to scan" complaints.
   test("no-barcode 1080p", { timeout: 120_000 }, async ({ bench }) => {
-    await bench(
-      "no-barcode 1080p",
-      { warmupIterations: 5, iterations: 20 },
-      async () => {
-        await readBarcodes(inputs.get(noBarcodeKey)!);
-      },
-    ).run();
+    await bench("no-barcode 1080p", async () => {
+      await readBarcodes(inputs.get(noBarcodeKey)!);
+    }).run({ warmupIterations: 5, iterations: 20 });
   });
 });

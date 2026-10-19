@@ -43,7 +43,7 @@ jobs:
           fallback=$(npm pkg get version | tr -d '"')
           version=$(jq -r --arg fallback "$fallback" '.releases[0].newVersion // $fallback' release.json)
           rm release.json
-          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Create Release Pull Request or Publish to NPM
         id: changesets

@@ -15,6 +15,7 @@ import {
   zxingReadResultToReadResult,
   zxingWriteResultToWriteResult,
 } from "./bindings/index.js";
+import { rgbaToGrayscale } from "./grayscale.js";
 
 export type ZXingModuleType = "reader" | "writer" | "full";
 
@@ -190,7 +191,9 @@ export function shallow<T extends Record<string, unknown>>(a: T, b: T) {
     (Object.keys(a).length === Object.keys(b).length &&
       Object.keys(a).every(
         (key) =>
-          Object.hasOwn(b, key) && a[key as keyof T] === b[key as keyof T],
+          // biome-ignore lint/suspicious/noPrototypeBuiltins: Safari 13 compatibility.
+          Object.prototype.hasOwnProperty.call(b, key) &&
+          a[key as keyof T] === b[key as keyof T],
       ))
   );
 }
@@ -283,30 +286,6 @@ export function purgeZXingModuleWithFactory<T extends ZXingModuleType>(
 }
 
 /**
- * Converts RGBA pixel data to grayscale (luminance) using the same formula
- * as ZXing-C++ `RGBToLum`: (306*R + 601*G + 117*B + 0x200) >> 10.
- *
- * This avoids sending 4x the data to WASM and skips the C++ ExtractLum pass.
- *
- * @internal
- */
-function rgbaToGrayscale(data: Uint8ClampedArray) {
-  // Each pixel consists of 4 bytes (RGBA), so the number of pixels is data.byteLength / 4
-  const pixelCount = data.byteLength >> 2;
-  const lum = new Uint8Array(pixelCount);
-  for (let i = 0; i < pixelCount; i++) {
-    const offset = i << 2; // i * 4
-    lum[i] =
-      (306 * data[offset]! +
-        601 * data[offset + 1]! +
-        117 * data[offset + 2]! +
-        0x200) >>
-      10;
-  }
-  return lum;
-}
-
-/**
  * Reads barcodes from an image using a ZXing module factory.
  *
  * @param zxingModuleFactory - Factory function to create a ZXing module instance
@@ -316,7 +295,7 @@ function rgbaToGrayscale(data: Uint8ClampedArray) {
  *
  * @remarks
  * The function manages memory allocation and deallocation for the ZXing module
- * and properly cleans up resources after processing.
+ * and deletes C++ result vectors after processing.
  */
 export async function readBarcodesWithFactory<T extends "reader" | "full">(
   zxingModuleFactory: ZXingModuleFactory<T>,
@@ -331,66 +310,77 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
     fireImmediately: true,
   });
   let zxingReadResultVector: ZXingVector<ZXingReadResult>;
-  let bufferPtr: number;
+  const zxingReaderOptions = readerOptionsToZXingReaderOptions(
+    requiredReaderOptions,
+  );
 
   if ("width" in input && "height" in input && "data" in input) {
-    // convert RGBA to grayscale on JS side to reduce
-    // WASM heap copy by 4x and skip C++ ExtractLum conversion
-    const { data, width, height } = input;
-    const lumBuffer = rgbaToGrayscale(data);
-    const lumSize = lumBuffer.byteLength;
-    bufferPtr = zxingModule._malloc(lumSize);
+    const { width, height } = input;
+    // Preserve heap-backed input if allocating the destination grows memory.
+    const data =
+      input.data.buffer === zxingModule.HEAPU8.buffer
+        ? input.data.slice()
+        : input.data;
+    const lumSize = data.byteLength / 4;
+    const bufferPtr = zxingModule._malloc(lumSize);
     if (!bufferPtr) {
       throw new Error(`Failed to allocate ${lumSize} bytes in WASM memory`);
     }
     try {
-      zxingModule.HEAPU8.set(lumBuffer, bufferPtr);
+      // Obtain the view after allocation, which may replace HEAPU8.
+      rgbaToGrayscale(
+        data,
+        zxingModule.HEAPU8.subarray(bufferPtr, bufferPtr + lumSize),
+      );
       zxingReadResultVector = zxingModule.readBarcodesFromPixmap(
         bufferPtr,
         width,
         height,
-        readerOptionsToZXingReaderOptions(requiredReaderOptions),
+        zxingReaderOptions,
       );
     } finally {
       zxingModule._free(bufferPtr);
     }
   } else {
-    let size: number;
     let buffer: Uint8Array;
     if ("buffer" in input) {
-      /* Uint8Array */
-      [size, buffer] = [input.byteLength, input];
+      buffer = input;
     } else if ("byteLength" in input) {
-      /* ArrayBuffer */
-      [size, buffer] = [input.byteLength, new Uint8Array(input)];
+      buffer = new Uint8Array(input);
     } else if ("size" in input) {
-      /* Blob */
-      [size, buffer] = [input.size, new Uint8Array(await input.arrayBuffer())];
+      buffer = new Uint8Array(await input.arrayBuffer());
     } else {
       throw new TypeError("Invalid input type");
     }
-    bufferPtr = zxingModule._malloc(size);
+    const bufferPtr = zxingModule._malloc(buffer.byteLength);
     if (!bufferPtr) {
-      throw new Error(`Failed to allocate ${size} bytes in WASM memory`);
+      throw new Error(
+        `Failed to allocate ${buffer.byteLength} bytes in WASM memory`,
+      );
     }
     try {
       zxingModule.HEAPU8.set(buffer, bufferPtr);
       zxingReadResultVector = zxingModule.readBarcodesFromImage(
         bufferPtr,
-        size,
-        readerOptionsToZXingReaderOptions(requiredReaderOptions),
+        buffer.byteLength,
+        zxingReaderOptions,
       );
     } finally {
       zxingModule._free(bufferPtr);
     }
   }
-  const readResults: ReadResult[] = [];
-  for (let i = 0; i < zxingReadResultVector.size(); ++i) {
-    readResults.push(
-      zxingReadResultToReadResult(zxingReadResultVector.get(i)!),
-    );
+  try {
+    const readResults: ReadResult[] = [];
+    const count = zxingReadResultVector.size();
+    for (let i = 0; i < count; ++i) {
+      readResults.push(
+        zxingReadResultToReadResult(zxingReadResultVector.get(i)!),
+      );
+    }
+    return readResults;
+  } finally {
+    zxingReadResultVector.delete();
   }
-  return readResults;
 }
 
 /**
