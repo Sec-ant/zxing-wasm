@@ -1,5 +1,15 @@
 # zxing-wasm
 
+## 3.1.6
+
+### Patch Changes
+
+- ee1f3df: Prevent out-of-bounds memory access when decoding very wide images with `tryDenoise` and `tryDownscale` enabled.
+- ee1f3df: Reduce temporary memory allocations and speed up `ImageData` decoding by writing grayscale pixels directly into WASM memory.
+- ee1f3df: Update Emscripten to 6.0.12 while retaining support for existing browser targets and `wasmBinary` initialization.
+- ee1f3df: Improve barcode decoding performance with ThinLTO and optimized WASM memory operations.
+- ee1f3df: Fix WASM memory leaks by releasing C++ result vectors after `readBarcodes` finishes, including when result conversion throws.
+
 ## 3.1.5
 
 ### Patch Changes
