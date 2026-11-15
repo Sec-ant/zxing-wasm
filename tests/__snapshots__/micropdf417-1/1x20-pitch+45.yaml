@@ -258,11 +258,11 @@ pure:
         x: 48
         y: 58
       topRight:
-        x: 203
+        x: 202
         y: 56
       bottomRight:
         x: 248
-        y: 206
+        y: 205
       bottomLeft:
         x: 0
         y: 209

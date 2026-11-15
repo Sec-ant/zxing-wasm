@@ -18,7 +18,7 @@ fast:
         y: 298
       bottomRight:
         x: 131
-        y: 71
+        y: 72
       bottomLeft:
         x: 383
         y: 81
@@ -98,7 +98,7 @@ fast:
         y: 62
       bottomRight:
         x: 349
-        y: 289
+        y: 288
       bottomLeft:
         x: 97
         y: 279
@@ -137,7 +137,7 @@ fast:
         x: 298
         y: 398
       bottomRight:
-        x: 71
+        x: 72
         y: 349
       bottomLeft:
         x: 81
@@ -179,7 +179,7 @@ slow:
         y: 298
       bottomRight:
         x: 131
-        y: 71
+        y: 72
       bottomLeft:
         x: 383
         y: 81
@@ -259,7 +259,7 @@ slow:
         y: 62
       bottomRight:
         x: 349
-        y: 289
+        y: 288
       bottomLeft:
         x: 97
         y: 279
@@ -298,7 +298,7 @@ slow:
         x: 298
         y: 398
       bottomRight:
-        x: 71
+        x: 72
         y: 349
       bottomLeft:
         x: 81

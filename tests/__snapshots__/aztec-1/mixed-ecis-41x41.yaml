@@ -11,14 +11,14 @@ fast:
     hasECI: true
     position:
       topLeft:
-        x: 1
+        x: 0
         y: 0
       topRight:
         x: 208
         y: 0
       bottomRight:
         x: 208
-        y: 207
+        y: 208
       bottomLeft:
         x: 0
         y: 208
@@ -52,12 +52,12 @@ fast:
     position:
       topLeft:
         x: 208
-        y: 1
+        y: 0
       topRight:
         x: 208
         y: 208
       bottomRight:
-        x: 1
+        x: 0
         y: 208
       bottomLeft:
         x: 0
@@ -91,14 +91,14 @@ fast:
     hasECI: true
     position:
       topLeft:
-        x: 207
+        x: 208
         y: 208
       topRight:
         x: 0
         y: 208
       bottomRight:
         x: 0
-        y: 1
+        y: 0
       bottomLeft:
         x: 208
         y: 0
@@ -132,12 +132,12 @@ fast:
     position:
       topLeft:
         x: 0
-        y: 207
+        y: 208
       topRight:
         x: 0
         y: 0
       bottomRight:
-        x: 207
+        x: 208
         y: 0
       bottomLeft:
         x: 208
@@ -172,14 +172,14 @@ slow:
     hasECI: true
     position:
       topLeft:
-        x: 1
+        x: 0
         y: 0
       topRight:
         x: 208
         y: 0
       bottomRight:
         x: 208
-        y: 207
+        y: 208
       bottomLeft:
         x: 0
         y: 208
@@ -213,12 +213,12 @@ slow:
     position:
       topLeft:
         x: 208
-        y: 1
+        y: 0
       topRight:
         x: 208
         y: 208
       bottomRight:
-        x: 1
+        x: 0
         y: 208
       bottomLeft:
         x: 0
@@ -252,14 +252,14 @@ slow:
     hasECI: true
     position:
       topLeft:
-        x: 207
+        x: 208
         y: 208
       topRight:
         x: 0
         y: 208
       bottomRight:
         x: 0
-        y: 1
+        y: 0
       bottomLeft:
         x: 208
         y: 0
@@ -293,12 +293,12 @@ slow:
     position:
       topLeft:
         x: 0
-        y: 207
+        y: 208
       topRight:
         x: 0
         y: 0
       bottomRight:
-        x: 207
+        x: 208
         y: 0
       bottomLeft:
         x: 208
@@ -333,17 +333,17 @@ pure:
     hasECI: true
     position:
       topLeft:
-        x: 1
+        x: 0
         y: 0
       topRight:
-        x: 208
+        x: 209
         y: 0
       bottomRight:
-        x: 208
-        y: 207
+        x: 209
+        y: 209
       bottomLeft:
         x: 0
-        y: 208
+        y: 209
     rotation: 0
     orientation: 0
     isMirrored: false

@@ -17,13 +17,13 @@ fast:
         x: 103
         y: 8
       bottomRight:
-        x: 103
-        y: 102
+        x: 99
+        y: 99
       bottomLeft:
-        x: 9
+        x: 8
         y: 102
-    rotation: 0
-    orientation: 0
+    rotation: -1
+    orientation: -1
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 832cfa4
+      data: 8621d48
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H
@@ -57,13 +57,13 @@ fast:
         x: 101
         y: 103
       bottomRight:
-        x: 7
-        y: 103
+        x: 10
+        y: 99
       bottomLeft:
         x: 7
-        y: 9
-    rotation: 90
-    orientation: 90
+        y: 8
+    rotation: 89
+    orientation: 89
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -72,10 +72,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 832cfa4
+      data: 8621d48
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H
@@ -97,13 +97,13 @@ fast:
         x: 10
         y: 101
       bottomRight:
-        x: 10
-        y: 7
+        x: 14
+        y: 10
       bottomLeft:
-        x: 104
+        x: 105
         y: 7
-    rotation: -180
-    orientation: -180
+    rotation: 179
+    orientation: 179
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -112,10 +112,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 61133b6
+      data: 8621d48
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H
@@ -137,13 +137,13 @@ fast:
         x: 8
         y: 10
       bottomRight:
-        x: 102
-        y: 10
+        x: 99
+        y: 14
       bottomLeft:
         x: 102
-        y: 104
-    rotation: -90
-    orientation: -90
+        y: 105
+    rotation: -91
+    orientation: -91
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -152,10 +152,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 832cfa4
+      data: "4867731"
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H
@@ -178,13 +178,13 @@ slow:
         x: 103
         y: 8
       bottomRight:
-        x: 103
-        y: 102
+        x: 99
+        y: 99
       bottomLeft:
-        x: 9
+        x: 8
         y: 102
-    rotation: 0
-    orientation: 0
+    rotation: -1
+    orientation: -1
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -193,10 +193,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 832cfa4
+      data: 8621d48
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H
@@ -218,13 +218,13 @@ slow:
         x: 101
         y: 103
       bottomRight:
-        x: 7
-        y: 103
+        x: 10
+        y: 99
       bottomLeft:
         x: 7
-        y: 9
-    rotation: 90
-    orientation: 90
+        y: 8
+    rotation: 89
+    orientation: 89
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -233,10 +233,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 832cfa4
+      data: 8621d48
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H
@@ -258,13 +258,13 @@ slow:
         x: 10
         y: 101
       bottomRight:
-        x: 10
-        y: 7
+        x: 14
+        y: 10
       bottomLeft:
-        x: 104
+        x: 105
         y: 7
-    rotation: -180
-    orientation: -180
+    rotation: 179
+    orientation: 179
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -273,10 +273,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 61133b6
+      data: 8621d48
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H
@@ -298,13 +298,13 @@ slow:
         x: 8
         y: 10
       bottomRight:
-        x: 102
-        y: 10
+        x: 99
+        y: 14
       bottomLeft:
         x: 102
-        y: 104
-    rotation: -90
-    orientation: -90
+        y: 105
+    rotation: -91
+    orientation: -91
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -313,10 +313,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 832cfa4
+      data: "4867731"
       width: 49
       height: 49
-    extra: '{"DataMask":3,"UEC":0.38,"Version":"8","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":0.30,"Version":"8","ECLevel":"H"}'
     version: "8"
     readerInit: false
     ecLevel: H

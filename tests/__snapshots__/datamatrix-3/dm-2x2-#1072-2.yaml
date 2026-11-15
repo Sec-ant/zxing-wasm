@@ -11,7 +11,7 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 11
+        x: 12
         y: 6
       topRight:
         x: 252
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 06a2c7b
+      data: 5e508a6
       width: 48
       height: 48
-    extra: '{"UEC":0.44,"Version":"48x48"}'
+    extra: '{"UEC":0.17,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -55,7 +55,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 11
+        x: 12
         y: 6
       topRight:
         x: 252
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 06a2c7b
+      data: 5e508a6
       width: 48
       height: 48
-    extra: '{"UEC":0.44,"Version":"48x48"}'
+    extra: '{"UEC":0.17,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -96,7 +96,7 @@ slow:
     position:
       topLeft:
         x: 250
-        y: 11
+        y: 12
       topRight:
         x: 250
         y: 252
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 06a2c7b
+      data: d65abe5
       width: 48
       height: 48
-    extra: '{"UEC":0.44,"Version":"48x48"}'
+    extra: '{"UEC":0.11,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -135,7 +135,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 250
+        x: 249
         y: 250
       topRight:
         x: 9
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 06a2c7b
+      data: 87684dc
       width: 48
       height: 48
-    extra: '{"UEC":0.44,"Version":"48x48"}'
+    extra: '{"UEC":0.14,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -176,7 +176,7 @@ slow:
     position:
       topLeft:
         x: 6
-        y: 250
+        y: 249
       topRight:
         x: 6
         y: 9
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 06a2c7b
+      data: 87684dc
       width: 48
       height: 48
-    extra: '{"UEC":0.44,"Version":"48x48"}'
+    extra: '{"UEC":0.14,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""

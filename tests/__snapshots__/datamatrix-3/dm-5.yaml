@@ -20,7 +20,7 @@ fast:
         x: 156
         y: 121
       bottomLeft:
-        x: 94
+        x: 93
         y: 114
     rotation: 6
     orientation: 6
@@ -64,7 +64,7 @@ slow:
         x: 156
         y: 121
       bottomLeft:
-        x: 94
+        x: 93
         y: 114
     rotation: 6
     orientation: 6
@@ -105,7 +105,7 @@ slow:
         y: 156
       bottomLeft:
         x: 80
-        y: 94
+        y: 93
     rotation: 96
     orientation: 96
     isMirrored: false
@@ -144,7 +144,7 @@ slow:
         x: 68
         y: 73
       bottomLeft:
-        x: 130
+        x: 131
         y: 80
     rotation: -174
     orientation: -174
@@ -185,7 +185,7 @@ slow:
         y: 68
       bottomLeft:
         x: 114
-        y: 130
+        y: 131
     rotation: -84
     orientation: -84
     isMirrored: false

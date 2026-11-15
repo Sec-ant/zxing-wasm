@@ -12,16 +12,16 @@ fast:
     position:
       topLeft:
         x: 22
-        y: 70
+        y: 42
       topRight:
-        x: 339
-        y: 70
+        x: 338
+        y: 42
       bottomRight:
         x: 339
-        y: 72
+        y: 98
       bottomLeft:
         x: 22
-        y: 72
+        y: 98
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -30,14 +30,14 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 18
     symbol:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"ReaderInit":true}'
+    extra: ""
     version: ""
-    readerInit: true
+    readerInit: false
     ecLevel: ""
   "180":
     isValid: true
@@ -52,16 +52,16 @@ fast:
     position:
       topLeft:
         x: 351
-        y: 70
+        y: 42
       topRight:
         x: 34
-        y: 70
+        y: 42
       bottomRight:
-        x: 34
-        y: 72
+        x: 35
+        y: 98
       bottomLeft:
         x: 351
-        y: 72
+        y: 98
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -70,14 +70,14 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 18
     symbol:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"ReaderInit":true}'
+    extra: ""
     version: ""
-    readerInit: true
+    readerInit: false
     ecLevel: ""
 slow:
   "0":
@@ -93,16 +93,16 @@ slow:
     position:
       topLeft:
         x: 22
-        y: 69
+        y: 23
       topRight:
-        x: 339
-        y: 69
+        x: 337
+        y: 23
       bottomRight:
-        x: 339
-        y: 70
+        x: 338
+        y: 104
       bottomLeft:
         x: 22
-        y: 70
+        y: 104
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -111,14 +111,14 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 80
     symbol:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"ReaderInit":true}'
+    extra: ""
     version: ""
-    readerInit: true
+    readerInit: false
     ecLevel: ""
   "180":
     isValid: true
@@ -133,16 +133,16 @@ slow:
     position:
       topLeft:
         x: 351
-        y: 69
+        y: 36
       topRight:
-        x: 34
-        y: 69
+        x: 35
+        y: 36
       bottomRight:
-        x: 34
-        y: 70
+        x: 36
+        y: 117
       bottomLeft:
         x: 351
-        y: 70
+        y: 117
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,12 +151,12 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 80
     symbol:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"ReaderInit":true}'
+    extra: ""
     version: ""
-    readerInit: true
+    readerInit: false
     ecLevel: ""

@@ -1,5 +1,44 @@
 fast:
-  "0": null
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 79
+        y: 16
+      topRight:
+        x: 251
+        y: 13
+      bottomRight:
+        x: 254
+        y: 181
+      bottomLeft:
+        x: 76
+        y: 183
+    rotation: -1
+    orientation: -1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0465ce7
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
   "90":
     isValid: true
     error: ""
@@ -40,10 +79,127 @@ fast:
     version: "4"
     readerInit: false
     ecLevel: H
-  "180": null
-  "270": null
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 260
+        y: 217
+      topRight:
+        x: 88
+        y: 220
+      bottomRight:
+        x: 85
+        y: 52
+      bottomLeft:
+        x: 263
+        y: 50
+    rotation: 179
+    orientation: 179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0465ce7
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 260
+      topRight:
+        x: 13
+        y: 87
+      bottomRight:
+        x: 181
+        y: 85
+      bottomLeft:
+        x: 183
+        y: 263
+    rotation: -91
+    orientation: -91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0465ce7
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
 slow:
-  "0": null
+  "0":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 79
+        y: 16
+      topRight:
+        x: 251
+        y: 13
+      bottomRight:
+        x: 254
+        y: 181
+      bottomLeft:
+        x: 76
+        y: 183
+    rotation: -1
+    orientation: -1
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0465ce7
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
   "90":
     isValid: true
     error: ""
@@ -84,7 +240,85 @@ slow:
     version: "4"
     readerInit: false
     ecLevel: H
-  "180": null
-  "270": null
+  "180":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 260
+        y: 217
+      topRight:
+        x: 88
+        y: 220
+      bottomRight:
+        x: 85
+        y: 52
+      bottomLeft:
+        x: 263
+        y: 50
+    rotation: 179
+    orientation: 179
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0465ce7
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
+  "270":
+    isValid: true
+    error: ""
+    format: QRCode
+    symbology: QRCode
+    bytes: 6b48b8a
+    bytesECI: "8208949"
+    text: http://www.webtech.co.jp/k/
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 15
+        y: 260
+      topRight:
+        x: 13
+        y: 87
+      bottomRight:
+        x: 181
+        y: 85
+      bottomLeft:
+        x: 183
+        y: 263
+    rotation: -91
+    orientation: -91
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]Q1"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 0
+    symbol:
+      data: 0465ce7
+      width: 33
+      height: 33
+    extra: '{"DataMask":2,"UEC":1.00,"Version":"4","ECLevel":"H"}'
+    version: "4"
+    readerInit: false
+    ecLevel: H
 pure:
   "0": null

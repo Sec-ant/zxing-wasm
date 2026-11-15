@@ -14,13 +14,13 @@ fast:
         x: 21
         y: 37
       topRight:
-        x: 164
+        x: 163
         y: 35
       bottomRight:
         x: 160
         y: 189
       bottomLeft:
-        x: 23
+        x: 22
         y: 179
     rotation: 2
     orientation: 2
@@ -58,13 +58,13 @@ slow:
         x: 21
         y: 37
       topRight:
-        x: 164
+        x: 163
         y: 35
       bottomRight:
         x: 160
         y: 189
       bottomLeft:
-        x: 23
+        x: 22
         y: 179
     rotation: 2
     orientation: 2
@@ -99,13 +99,13 @@ slow:
         y: 21
       topRight:
         x: 205
-        y: 164
+        y: 163
       bottomRight:
         x: 51
         y: 160
       bottomLeft:
         x: 61
-        y: 23
+        y: 22
     rotation: 92
     orientation: 92
     isMirrored: false
@@ -138,13 +138,13 @@ slow:
         x: 219
         y: 203
       topRight:
-        x: 76
+        x: 77
         y: 205
       bottomRight:
         x: 80
         y: 51
       bottomLeft:
-        x: 217
+        x: 218
         y: 61
     rotation: -178
     orientation: -178
@@ -179,13 +179,13 @@ slow:
         y: 219
       topRight:
         x: 35
-        y: 76
+        y: 77
       bottomRight:
         x: 189
         y: 80
       bottomLeft:
         x: 179
-        y: 217
+        y: 218
     rotation: -88
     orientation: -88
     isMirrored: false

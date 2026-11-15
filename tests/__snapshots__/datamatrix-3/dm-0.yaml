@@ -18,10 +18,10 @@ fast:
         y: 44
       bottomRight:
         x: 154
-        y: 88
+        y: 89
       bottomLeft:
         x: 46
-        y: 87
+        y: 88
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 15ce25f
+      data: ad6046e
       width: 26
       height: 12
-    extra: '{"UEC":1.00,"Version":"12x26"}'
+    extra: '{"UEC":0.85,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""
@@ -62,10 +62,10 @@ slow:
         y: 44
       bottomRight:
         x: 154
-        y: 88
+        y: 89
       bottomLeft:
         x: 46
-        y: 87
+        y: 88
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 15ce25f
+      data: ad6046e
       width: 26
       height: 12
-    extra: '{"UEC":1.00,"Version":"12x26"}'
+    extra: '{"UEC":0.85,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""
@@ -101,10 +101,10 @@ slow:
         x: 92
         y: 155
       bottomRight:
-        x: 48
+        x: 47
         y: 154
       bottomLeft:
-        x: 49
+        x: 48
         y: 46
     rotation: 90
     orientation: 90
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 15ce25f
+      data: ad6046e
       width: 26
       height: 12
-    extra: '{"UEC":1.00,"Version":"12x26"}'
+    extra: '{"UEC":0.85,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""
@@ -142,10 +142,10 @@ slow:
         y: 92
       bottomRight:
         x: 55
-        y: 48
+        y: 47
       bottomLeft:
         x: 163
-        y: 49
+        y: 48
     rotation: -180
     orientation: -180
     isMirrored: false
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9834427"
+      data: ad6046e
       width: 26
       height: 12
-    extra: '{"UEC":1.00,"Version":"12x26"}'
+    extra: '{"UEC":0.85,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""
@@ -181,10 +181,10 @@ slow:
         x: 44
         y: 54
       bottomRight:
-        x: 88
+        x: 89
         y: 55
       bottomLeft:
-        x: 87
+        x: 88
         y: 163
     rotation: -90
     orientation: -90
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9834427"
+      data: ad6046e
       width: 26
       height: 12
-    extra: '{"UEC":1.00,"Version":"12x26"}'
+    extra: '{"UEC":0.85,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""

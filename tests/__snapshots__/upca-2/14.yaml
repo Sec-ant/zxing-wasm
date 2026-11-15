@@ -15,10 +15,10 @@ slow:
     position:
       topLeft:
         x: 39
-        y: 22
+        y: 20
       topRight:
         x: 232
-        y: 22
+        y: 20
       bottomRight:
         x: 232
         y: 23
@@ -33,7 +33,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 4
     symbol:
       data: e3b0c44
       width: 0
@@ -61,10 +61,10 @@ slow:
         y: 174
       bottomRight:
         x: 37
-        y: 175
+        y: 177
       bottomLeft:
         x: 230
-        y: 175
+        y: 177
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -73,7 +73,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 4
     symbol:
       data: e3b0c44
       width: 0

@@ -21,9 +21,9 @@ fast:
         y: 234
       bottomLeft:
         x: 14
-        y: 232
-    rotation: 1
-    orientation: 1
+        y: 233
+    rotation: 0
+    orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -65,9 +65,9 @@ slow:
         y: 234
       bottomLeft:
         x: 14
-        y: 232
-    rotation: 1
-    orientation: 1
+        y: 233
+    rotation: 0
+    orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -95,7 +95,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 180
+        x: 179
         y: 19
       topRight:
         x: 179
@@ -104,10 +104,10 @@ slow:
         x: 20
         y: 177
       bottomLeft:
-        x: 22
+        x: 21
         y: 14
-    rotation: 91
-    orientation: 91
+    rotation: 90
+    orientation: 90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4422b14
+      data: 0a11b9b
       width: 32
       height: 32
-    extra: '{"UEC":0.94,"Version":"32x32"}'
+    extra: '{"UEC":1.00,"Version":"32x32"}'
     version: 32x32
     readerInit: false
     ecLevel: ""
@@ -136,7 +136,7 @@ slow:
     position:
       topLeft:
         x: 181
-        y: 180
+        y: 179
       topRight:
         x: 24
         y: 179
@@ -145,9 +145,9 @@ slow:
         y: 20
       bottomLeft:
         x: 186
-        y: 22
-    rotation: -179
-    orientation: -179
+        y: 21
+    rotation: -180
+    orientation: -180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4422b14
+      data: 0a11b9b
       width: 32
       height: 32
-    extra: '{"UEC":0.94,"Version":"32x32"}'
+    extra: '{"UEC":1.00,"Version":"32x32"}'
     version: 32x32
     readerInit: false
     ecLevel: ""
@@ -184,10 +184,10 @@ slow:
         x: 234
         y: 23
       bottomLeft:
-        x: 232
+        x: 233
         y: 186
-    rotation: -89
-    orientation: -89
+    rotation: -90
+    orientation: -90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"

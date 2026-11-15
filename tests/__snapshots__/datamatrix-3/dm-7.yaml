@@ -14,16 +14,16 @@ fast:
         x: 89
         y: 37
       topRight:
-        x: 141
-        y: 59
+        x: 142
+        y: 60
       bottomRight:
-        x: 117
-        y: 106
+        x: 118
+        y: 107
       bottomLeft:
         x: 64
         y: 87
-    rotation: 21
-    orientation: 21
+    rotation: 22
+    orientation: 22
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -58,16 +58,16 @@ slow:
         x: 89
         y: 37
       topRight:
-        x: 141
-        y: 59
+        x: 142
+        y: 60
       bottomRight:
-        x: 117
-        y: 106
+        x: 118
+        y: 107
       bottomLeft:
         x: 64
         y: 87
-    rotation: 21
-    orientation: 21
+    rotation: 22
+    orientation: 22
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -98,16 +98,16 @@ slow:
         x: 126
         y: 88
       topRight:
-        x: 104
+        x: 103
         y: 142
       bottomRight:
-        x: 57
-        y: 117
+        x: 56
+        y: 118
       bottomLeft:
         x: 76
         y: 64
-    rotation: 111
-    orientation: 111
+    rotation: 112
+    orientation: 112
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -141,13 +141,13 @@ slow:
         x: 70
         y: 103
       bottomRight:
-        x: 95
-        y: 57
+        x: 94
+        y: 56
       bottomLeft:
         x: 148
         y: 76
-    rotation: -159
-    orientation: -159
+    rotation: -158
+    orientation: -158
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -176,18 +176,18 @@ slow:
     position:
       topLeft:
         x: 36
-        y: 126
+        y: 124
       topRight:
-        x: 59
+        x: 60
         y: 70
       bottomRight:
-        x: 106
+        x: 107
         y: 95
       bottomLeft:
         x: 87
         y: 148
-    rotation: -69
-    orientation: -69
+    rotation: -68
+    orientation: -68
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: fa7e199
+      data: 28515a3
       width: 10
       height: 10
-    extra: '{"UEC":0.60,"Version":"10x10"}'
+    extra: '{"UEC":1.00,"Version":"10x10"}'
     version: 10x10
     readerInit: false
     ecLevel: ""

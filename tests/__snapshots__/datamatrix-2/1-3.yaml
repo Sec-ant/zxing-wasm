@@ -12,12 +12,12 @@ fast:
     position:
       topLeft:
         x: 25
-        y: 14
+        y: 13
       topRight:
-        x: 195
-        y: 14
+        x: 196
+        y: 15
       bottomRight:
-        x: 200
+        x: 201
         y: 185
       bottomLeft:
         x: 21
@@ -56,12 +56,12 @@ slow:
     position:
       topLeft:
         x: 25
-        y: 14
+        y: 13
       topRight:
-        x: 195
-        y: 14
+        x: 196
+        y: 15
       bottomRight:
-        x: 200
+        x: 201
         y: 185
       bottomLeft:
         x: 21
@@ -95,14 +95,14 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 226
+        x: 227
         y: 25
       topRight:
-        x: 226
-        y: 195
+        x: 225
+        y: 196
       bottomRight:
         x: 55
-        y: 200
+        y: 201
       bottomLeft:
         x: 53
         y: 21
@@ -136,12 +136,12 @@ slow:
     position:
       topLeft:
         x: 215
-        y: 226
+        y: 227
       topRight:
-        x: 45
-        y: 226
+        x: 44
+        y: 225
       bottomRight:
-        x: 40
+        x: 39
         y: 55
       bottomLeft:
         x: 219
@@ -175,14 +175,14 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 14
+        x: 13
         y: 215
       topRight:
-        x: 14
-        y: 45
+        x: 15
+        y: 44
       bottomRight:
         x: 185
-        y: 40
+        y: 39
       bottomLeft:
         x: 187
         y: 219

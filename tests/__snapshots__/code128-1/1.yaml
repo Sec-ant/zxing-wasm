@@ -12,16 +12,16 @@ fast:
     position:
       topLeft:
         x: 69
-        y: 195
+        y: 194
       topRight:
         x: 337
-        y: 195
+        y: 194
       bottomRight:
         x: 337
-        y: 197
+        y: 235
       bottomLeft:
         x: 69
-        y: 197
+        y: 235
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -30,7 +30,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 9
     symbol:
       data: e3b0c44
       width: 0
@@ -52,16 +52,16 @@ fast:
     position:
       topLeft:
         x: 346
-        y: 135
+        y: 95
       topRight:
         x: 78
-        y: 135
+        y: 95
       bottomRight:
         x: 78
-        y: 137
+        y: 136
       bottomLeft:
         x: 346
-        y: 137
+        y: 136
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -70,7 +70,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 9
     symbol:
       data: e3b0c44
       width: 0
@@ -99,10 +99,10 @@ slow:
         y: 187
       bottomRight:
         x: 337
-        y: 188
+        y: 258
       bottomLeft:
         x: 69
-        y: 188
+        y: 258
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -111,7 +111,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 72
     symbol:
       data: e3b0c44
       width: 0
@@ -133,10 +133,10 @@ slow:
     position:
       topLeft:
         x: 346
-        y: 141
+        y: 71
       topRight:
         x: 78
-        y: 141
+        y: 71
       bottomRight:
         x: 78
         y: 142
@@ -151,7 +151,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 72
     symbol:
       data: e3b0c44
       width: 0

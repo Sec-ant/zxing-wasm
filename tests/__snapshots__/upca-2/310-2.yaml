@@ -11,17 +11,17 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 100
-        y: 40
+        x: 109
+        y: 26
       topRight:
-        x: 395
-        y: 40
+        x: 402
+        y: 26
       bottomRight:
-        x: 395
-        y: 41
+        x: 390
+        y: 50
       bottomLeft:
-        x: 100
-        y: 41
+        x: 94
+        y: 50
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -30,7 +30,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 11
     symbol:
       data: e3b0c44
       width: 0
@@ -51,17 +51,17 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 379
-        y: 39
+        x: 385
+        y: 30
       topRight:
-        x: 84
-        y: 39
+        x: 89
+        y: 30
       bottomRight:
-        x: 84
-        y: 40
+        x: 77
+        y: 54
       bottomLeft:
-        x: 379
-        y: 40
+        x: 370
+        y: 54
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -70,7 +70,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 11
     symbol:
       data: e3b0c44
       width: 0
@@ -92,17 +92,17 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 100
-        y: 40
+        x: 109
+        y: 26
       topRight:
-        x: 395
-        y: 40
+        x: 402
+        y: 26
       bottomRight:
-        x: 395
-        y: 41
+        x: 390
+        y: 50
       bottomLeft:
-        x: 100
-        y: 41
+        x: 94
+        y: 50
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -111,7 +111,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 12
     symbol:
       data: e3b0c44
       width: 0
@@ -132,17 +132,17 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 379
-        y: 39
+        x: 385
+        y: 30
       topRight:
-        x: 84
-        y: 39
+        x: 89
+        y: 30
       bottomRight:
-        x: 84
-        y: 40
+        x: 77
+        y: 54
       bottomLeft:
-        x: 379
-        y: 40
+        x: 370
+        y: 54
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,7 +151,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 12
     symbol:
       data: e3b0c44
       width: 0

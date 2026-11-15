@@ -47,7 +47,7 @@ fast:
     symbology: PDF417
     bytes: 4db944e
     bytesECI: 021fbc3
-    text: 444,90 ､;
+    text: 444,90 ¤;
     contentType: Text
     hasECI: false
     position:
@@ -169,7 +169,7 @@ slow:
     symbology: PDF417
     bytes: 4db944e
     bytesECI: 021fbc3
-    text: 444,90 ､;
+    text: 444,90 ¤;
     contentType: Text
     hasECI: false
     position:

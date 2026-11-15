@@ -18,12 +18,12 @@ fast:
         y: 78
       bottomRight:
         x: 358
-        y: 333
+        y: 334
       bottomLeft:
         x: 91
         y: 299
-    rotation: 7
-    orientation: 7
+    rotation: 8
+    orientation: 8
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -57,13 +57,13 @@ fast:
         x: 282
         y: 386
       bottomRight:
-        x: 27
+        x: 26
         y: 358
       bottomLeft:
         x: 61
         y: 91
-    rotation: 97
-    orientation: 97
+    rotation: 98
+    orientation: 98
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -98,12 +98,12 @@ fast:
         y: 282
       bottomRight:
         x: 122
-        y: 27
+        y: 26
       bottomLeft:
         x: 389
         y: 61
-    rotation: -173
-    orientation: -173
+    rotation: -172
+    orientation: -172
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -179,12 +179,12 @@ slow:
         y: 78
       bottomRight:
         x: 358
-        y: 333
+        y: 334
       bottomLeft:
         x: 91
         y: 299
-    rotation: 7
-    orientation: 7
+    rotation: 8
+    orientation: 8
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -218,13 +218,13 @@ slow:
         x: 282
         y: 386
       bottomRight:
-        x: 27
+        x: 26
         y: 358
       bottomLeft:
         x: 61
         y: 91
-    rotation: 97
-    orientation: 97
+    rotation: 98
+    orientation: 98
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -259,12 +259,12 @@ slow:
         y: 282
       bottomRight:
         x: 122
-        y: 27
+        y: 26
       bottomLeft:
         x: 389
         y: 61
-    rotation: -173
-    orientation: -173
+    rotation: -172
+    orientation: -172
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"

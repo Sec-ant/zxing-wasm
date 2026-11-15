@@ -11,7 +11,7 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 31
+        x: 30
         y: 47
       topRight:
         x: 175
@@ -55,7 +55,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 31
+        x: 30
         y: 47
       topRight:
         x: 175

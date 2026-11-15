@@ -12,16 +12,16 @@ fast:
     position:
       topLeft:
         x: 51
-        y: 50
+        y: 49
       topRight:
         x: 188
         y: 50
       bottomRight:
-        x: 184
+        x: 183
         y: 180
       bottomLeft:
         x: 54
-        y: 178
+        y: 179
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -56,16 +56,16 @@ slow:
     position:
       topLeft:
         x: 51
-        y: 50
+        y: 49
       topRight:
         x: 188
         y: 50
       bottomRight:
-        x: 184
+        x: 183
         y: 180
       bottomLeft:
         x: 54
-        y: 178
+        y: 179
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -95,16 +95,16 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 190
+        x: 191
         y: 51
       topRight:
         x: 190
         y: 188
       bottomRight:
         x: 60
-        y: 184
+        y: 183
       bottomLeft:
-        x: 62
+        x: 61
         y: 54
     rotation: 90
     orientation: 90
@@ -136,16 +136,16 @@ slow:
     position:
       topLeft:
         x: 189
-        y: 190
+        y: 191
       topRight:
         x: 52
         y: 190
       bottomRight:
-        x: 56
+        x: 57
         y: 60
       bottomLeft:
         x: 186
-        y: 62
+        y: 61
     rotation: -180
     orientation: -180
     isMirrored: false
@@ -175,16 +175,16 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 50
+        x: 49
         y: 189
       topRight:
         x: 50
         y: 52
       bottomRight:
         x: 180
-        y: 56
+        y: 57
       bottomLeft:
-        x: 178
+        x: 179
         y: 186
     rotation: -90
     orientation: -90

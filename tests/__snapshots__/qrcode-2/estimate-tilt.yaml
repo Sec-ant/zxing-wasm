@@ -58,7 +58,7 @@ fast:
         y: 73
       bottomRight:
         x: 10
-        y: 89
+        y: 90
       bottomLeft:
         x: 5
         y: 6
@@ -97,7 +97,7 @@ fast:
         x: 22
         y: 68
       bottomRight:
-        x: 6
+        x: 5
         y: 10
       bottomLeft:
         x: 89
@@ -219,7 +219,7 @@ slow:
         y: 73
       bottomRight:
         x: 10
-        y: 89
+        y: 90
       bottomLeft:
         x: 5
         y: 6
@@ -258,7 +258,7 @@ slow:
         x: 22
         y: 68
       bottomRight:
-        x: 6
+        x: 5
         y: 10
       bottomLeft:
         x: 89

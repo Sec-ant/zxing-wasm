@@ -255,19 +255,19 @@ pure:
     hasECI: false
     position:
       topLeft:
-        x: 148
-        y: 30
+        x: 145
+        y: 36
       topRight:
-        x: 307
-        y: 139
+        x: 312
+        y: 133
       bottomRight:
-        x: 192
-        y: 305
+        x: 196
+        y: 299
       bottomLeft:
-        x: 33
-        y: 195
-    rotation: 35
-    orientation: 35
+        x: 28
+        y: 202
+    rotation: 30
+    orientation: 30
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]L2"
@@ -279,7 +279,7 @@ pure:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":1.00,"ECLevel":"38%"}'
+    extra: '{"UEC":0.87,"ECLevel":"38%"}'
     version: ""
     readerInit: false
     ecLevel: 38%

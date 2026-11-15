@@ -11,7 +11,7 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 83
+        x: 82
         y: 30
       topRight:
         x: 295
@@ -32,7 +32,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: bb724ba
+      data: dd7900f
       width: 64
       height: 8
     extra: '{"UEC":0.88,"Version":"8x64"}'
@@ -55,7 +55,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 83
+        x: 82
         y: 30
       topRight:
         x: 295
@@ -76,7 +76,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: bb724ba
+      data: dd7900f
       width: 64
       height: 8
     extra: '{"UEC":0.88,"Version":"8x64"}'
@@ -96,7 +96,7 @@ slow:
     position:
       topLeft:
         x: 50
-        y: 83
+        y: 82
       topRight:
         x: 50
         y: 295
@@ -116,7 +116,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: bb724ba
+      data: dd7900f
       width: 64
       height: 8
     extra: '{"UEC":0.88,"Version":"8x64"}'
@@ -156,7 +156,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: c6bbc8c
+      data: dd7900f
       width: 64
       height: 8
     extra: '{"UEC":0.88,"Version":"8x64"}'
@@ -196,7 +196,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: c6bbc8c
+      data: dd7900f
       width: 64
       height: 8
     extra: '{"UEC":0.88,"Version":"8x64"}'

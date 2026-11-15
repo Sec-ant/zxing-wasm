@@ -12,12 +12,12 @@ fast:
     position:
       topLeft:
         x: 96
-        y: 96
+        y: 95
       topRight:
-        x: 206
+        x: 207
         y: 92
       bottomRight:
-        x: 211
+        x: 210
         y: 203
       bottomLeft:
         x: 99
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: de5f039
+      data: 60d2c0b
       width: 40
       height: 40
-    extra: '{"UEC":0.87,"Version":"40x40"}'
+    extra: '{"UEC":0.70,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""
@@ -56,12 +56,12 @@ slow:
     position:
       topLeft:
         x: 96
-        y: 96
+        y: 95
       topRight:
-        x: 206
+        x: 207
         y: 92
       bottomRight:
-        x: 211
+        x: 210
         y: 203
       bottomLeft:
         x: 99
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: de5f039
+      data: 60d2c0b
       width: 40
       height: 40
-    extra: '{"UEC":0.87,"Version":"40x40"}'
+    extra: '{"UEC":0.70,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""
@@ -95,14 +95,14 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 144
+        x: 145
         y: 96
       topRight:
         x: 148
-        y: 206
+        y: 207
       bottomRight:
         x: 37
-        y: 211
+        y: 210
       bottomLeft:
         x: 33
         y: 99
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: de5f039
+      data: a7c102f
       width: 40
       height: 40
-    extra: '{"UEC":0.87,"Version":"40x40"}'
+    extra: '{"UEC":0.70,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""
@@ -136,12 +136,12 @@ slow:
     position:
       topLeft:
         x: 144
-        y: 144
+        y: 145
       topRight:
-        x: 34
+        x: 33
         y: 148
       bottomRight:
-        x: 29
+        x: 30
         y: 37
       bottomLeft:
         x: 141
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: de5f039
+      data: a7c102f
       width: 40
       height: 40
-    extra: '{"UEC":0.87,"Version":"40x40"}'
+    extra: '{"UEC":0.70,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""
@@ -175,14 +175,14 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 96
+        x: 95
         y: 144
       topRight:
         x: 92
-        y: 34
+        y: 33
       bottomRight:
         x: 203
-        y: 29
+        y: 30
       bottomLeft:
         x: 207
         y: 141
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: de5f039
+      data: a7c102f
       width: 40
       height: 40
-    extra: '{"UEC":0.87,"Version":"40x40"}'
+    extra: '{"UEC":0.70,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""

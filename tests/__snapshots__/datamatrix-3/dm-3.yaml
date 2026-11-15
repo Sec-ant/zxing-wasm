@@ -11,16 +11,16 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 17
+        x: 16
         y: 24
       topRight:
         x: 103
         y: 8
       bottomRight:
-        x: 109
-        y: 47
+        x: 110
+        y: 48
       bottomLeft:
-        x: 22
+        x: 21
         y: 63
     rotation: -10
     orientation: -10
@@ -32,7 +32,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4607ce3
+      data: ec501fc
       width: 26
       height: 12
     extra: '{"UEC":1.00,"Version":"12x26"}'
@@ -55,16 +55,16 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 17
+        x: 16
         y: 24
       topRight:
         x: 103
         y: 8
       bottomRight:
-        x: 109
-        y: 47
+        x: 110
+        y: 48
       bottomLeft:
-        x: 22
+        x: 21
         y: 63
     rotation: -10
     orientation: -10
@@ -76,7 +76,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4607ce3
+      data: ec501fc
       width: 26
       height: 12
     extra: '{"UEC":1.00,"Version":"12x26"}'
@@ -101,11 +101,11 @@ slow:
         x: 68
         y: 103
       bottomRight:
-        x: 29
-        y: 109
+        x: 28
+        y: 110
       bottomLeft:
         x: 13
-        y: 22
+        y: 21
     rotation: 80
     orientation: 80
     isMirrored: false
@@ -141,10 +141,10 @@ slow:
         x: 30
         y: 68
       bottomRight:
-        x: 24
+        x: 23
         y: 28
       bottomLeft:
-        x: 111
+        x: 112
         y: 13
     rotation: 170
     orientation: 170
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4607ce3
+      data: 6a3ab58
       width: 26
       height: 12
-    extra: '{"UEC":1.00,"Version":"12x26"}'
+    extra: '{"UEC":0.85,"Version":"12x26"}'
     version: 12x26
     readerInit: false
     ecLevel: ""
@@ -181,11 +181,11 @@ slow:
         x: 8
         y: 30
       bottomRight:
-        x: 47
+        x: 48
         y: 23
       bottomLeft:
         x: 63
-        y: 111
+        y: 112
     rotation: -100
     orientation: -100
     isMirrored: false
@@ -196,7 +196,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4607ce3
+      data: ec501fc
       width: 26
       height: 12
     extra: '{"UEC":1.00,"Version":"12x26"}'

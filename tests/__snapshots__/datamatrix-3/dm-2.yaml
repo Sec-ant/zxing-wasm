@@ -14,10 +14,10 @@ fast:
         x: 80
         y: 53
       topRight:
-        x: 139
-        y: 38
+        x: 140
+        y: 39
       bottomRight:
-        x: 182
+        x: 183
         y: 72
       bottomLeft:
         x: 119
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 925b92b
+      data: 3771b28
       width: 22
       height: 22
-    extra: '{"UEC":1.00,"Version":"22x22"}'
+    extra: '{"UEC":0.90,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""
@@ -58,10 +58,10 @@ slow:
         x: 80
         y: 53
       topRight:
-        x: 139
-        y: 38
+        x: 140
+        y: 39
       bottomRight:
-        x: 182
+        x: 183
         y: 72
       bottomLeft:
         x: 119
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 925b92b
+      data: 3771b28
       width: 22
       height: 22
-    extra: '{"UEC":1.00,"Version":"22x22"}'
+    extra: '{"UEC":0.90,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""
@@ -96,13 +96,13 @@ slow:
     position:
       topLeft:
         x: 121
-        y: 79
+        y: 80
       topRight:
         x: 136
-        y: 139
+        y: 140
       bottomRight:
         x: 102
-        y: 182
+        y: 183
       bottomLeft:
         x: 81
         y: 119
@@ -116,7 +116,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: cad24dc
+      data: 925b92b
       width: 22
       height: 22
     extra: '{"UEC":1.00,"Version":"22x22"}'
@@ -135,10 +135,10 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 210
+        x: 209
         y: 121
       topRight:
-        x: 149
+        x: 150
         y: 136
       bottomRight:
         x: 106
@@ -156,7 +156,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4fc7e09
+      data: 925b92b
       width: 22
       height: 22
     extra: '{"UEC":1.00,"Version":"22x22"}'
@@ -176,10 +176,10 @@ slow:
     position:
       topLeft:
         x: 53
-        y: 210
+        y: 209
       topRight:
-        x: 38
-        y: 150
+        x: 39
+        y: 149
       bottomRight:
         x: 72
         y: 106
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: cad24dc
+      data: f8ac491
       width: 22
       height: 22
-    extra: '{"UEC":1.00,"Version":"22x22"}'
+    extra: '{"UEC":0.80,"Version":"22x22"}'
     version: 22x22
     readerInit: false
     ecLevel: ""

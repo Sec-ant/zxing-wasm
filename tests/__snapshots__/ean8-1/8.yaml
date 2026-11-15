@@ -12,16 +12,16 @@ fast:
     position:
       topLeft:
         x: 8
-        y: 60
+        y: 39
       topRight:
         x: 179
-        y: 60
+        y: 39
       bottomRight:
         x: 179
-        y: 62
+        y: 81
       bottomLeft:
         x: 8
-        y: 62
+        y: 81
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -30,7 +30,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 19
     symbol:
       data: e3b0c44
       width: 0
@@ -52,16 +52,16 @@ fast:
     position:
       topLeft:
         x: 185
-        y: 60
+        y: 39
       topRight:
         x: 14
-        y: 60
+        y: 39
       bottomRight:
         x: 14
-        y: 62
+        y: 81
       bottomLeft:
         x: 185
-        y: 62
+        y: 81
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -70,7 +70,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 19
     symbol:
       data: e3b0c44
       width: 0
@@ -93,16 +93,16 @@ slow:
     position:
       topLeft:
         x: 8
-        y: 59
+        y: 21
       topRight:
         x: 179
-        y: 59
+        y: 21
       bottomRight:
         x: 179
-        y: 60
+        y: 93
       bottomLeft:
         x: 8
-        y: 60
+        y: 93
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -111,7 +111,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 73
     symbol:
       data: e3b0c44
       width: 0
@@ -133,16 +133,16 @@ slow:
     position:
       topLeft:
         x: 185
-        y: 59
+        y: 26
       topRight:
         x: 14
-        y: 59
+        y: 26
       bottomRight:
         x: 14
-        y: 60
+        y: 98
       bottomLeft:
         x: 185
-        y: 60
+        y: 98
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,7 +151,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 73
     symbol:
       data: e3b0c44
       width: 0

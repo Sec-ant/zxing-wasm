@@ -12,7 +12,7 @@ fast:
     position:
       topLeft:
         x: 7
-        y: 2
+        y: 3
       topRight:
         x: 161
         y: 3
@@ -56,7 +56,7 @@ slow:
     position:
       topLeft:
         x: 7
-        y: 2
+        y: 3
       topRight:
         x: 161
         y: 3
@@ -95,7 +95,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 171
+        x: 170
         y: 7
       topRight:
         x: 170
@@ -136,7 +136,7 @@ slow:
     position:
       topLeft:
         x: 161
-        y: 171
+        y: 170
       topRight:
         x: 7
         y: 170
@@ -146,8 +146,8 @@ slow:
       bottomLeft:
         x: 161
         y: 16
-    rotation: -180
-    orientation: -180
+    rotation: 180
+    orientation: 180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -175,7 +175,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 2
+        x: 3
         y: 161
       topRight:
         x: 3

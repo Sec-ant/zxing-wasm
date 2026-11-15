@@ -105,7 +105,7 @@ slow:
         y: 166
       bottomLeft:
         x: 9
-        y: 5
+        y: 6
     rotation: 90
     orientation: 90
     isMirrored: false
@@ -144,7 +144,7 @@ slow:
         x: 6
         y: 9
       bottomLeft:
-        x: 167
+        x: 166
         y: 9
     rotation: 180
     orientation: 180
@@ -185,7 +185,7 @@ slow:
         y: 6
       bottomLeft:
         x: 46
-        y: 167
+        y: 166
     rotation: -90
     orientation: -90
     isMirrored: false

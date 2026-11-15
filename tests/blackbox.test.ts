@@ -17,8 +17,10 @@ import {
   readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";
+import { loadFixtureProperties } from "./upstreamFixtures.js";
 import {
   DEFAULT_READER_OPTIONS_FOR_TESTS,
+  escapeNonGraphical,
   formatSnapshot,
   getRotatedImage,
   isLinearBarcodeFormat,
@@ -155,11 +157,23 @@ for (const {
       const snapshots: Partial<
         Record<Type, Record<number, ReturnType<typeof takeSnapshot>>>
       > = {};
-      const [expectedResult, expectedText, expectedBinary] = await Promise.all([
+      const [
+        expectedResult,
+        expectedTextFile,
+        expectedBinary,
+        fixtureProperties,
+      ] = await Promise.all([
         parseExpectedResult(imagePath),
         parseExpectedText(imagePath),
         parseExpectedBinary(imagePath),
+        loadFixtureProperties(imagePath, barcodeFormat),
       ]);
+      const expectedText =
+        expectedTextFile ??
+        (fixtureProperties.length === 1 &&
+        fixtureProperties[0]!.TextPlain !== undefined
+          ? escapeNonGraphical(fixtureProperties[0]!.TextPlain)
+          : null);
       describe(`${directory} ${imageName}`, async () => {
         beforeAll(async () => {
           await warmUpCache(imagePath, rotations);
@@ -199,19 +213,34 @@ for (const {
 
               const appliedReaderOptions: ReaderOptions = {
                 ...readerOptions,
-                tryHarder: type === "slow",
-                tryRotate: type === "slow",
-                tryInvert: type === "slow",
+                tryHarder: type !== "fast",
+                tryRotate: type !== "fast",
+                tryInvert: type !== "fast",
                 isPure: type === "pure",
                 binarizer: type === "pure" ? "FixedThreshold" : "LocalAverage",
               };
+              if (fixtureProperties[0]!.tryDownscale !== undefined)
+                appliedReaderOptions.tryDownscale =
+                  fixtureProperties[0]!.tryDownscale === "true";
+              if (fixtureProperties[0]!.tryDenoise !== undefined)
+                appliedReaderOptions.tryDenoise =
+                  fixtureProperties[0]!.tryDenoise === "true";
 
-              const [barcode] = await readBarcodes(
+              const barcodes = await readBarcodes(
                 Buffer.isBuffer(input)
                   ? new Blob([input as BlobPart])
                   : (input as ImageData),
                 appliedReaderOptions,
               );
+              const barcode =
+                (expectedText &&
+                  barcodes.find(
+                    (result) =>
+                      (result.format === barcodeFormat ||
+                        result.symbology === barcodeFormat) &&
+                      result.text === expectedText,
+                  )) ||
+                barcodes[0];
 
               snapshots[type]![rotation] = takeSnapshot(barcode);
 

@@ -51,13 +51,13 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 197
+        x: 198
         y: 5
       topRight:
         x: 202
         y: 195
       bottomRight:
-        x: 10
+        x: 11
         y: 203
       bottomLeft:
         x: 6
@@ -91,14 +91,14 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 201
-        y: 197
+        x: 202
+        y: 198
       topRight:
         x: 12
         y: 202
       bottomRight:
         x: 4
-        y: 10
+        y: 11
       bottomLeft:
         x: 200
         y: 6
@@ -112,7 +112,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d9fa82e
+      data: 5a1dc69
       width: 67
       height: 67
     extra: '{"UEC":1.00,"Version":"12","ECLevel":"33%"}'
@@ -131,13 +131,13 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 12
+        x: 11
         y: 202
       topRight:
         x: 7
         y: 12
       bottomRight:
-        x: 199
+        x: 198
         y: 4
       bottomLeft:
         x: 203
@@ -152,7 +152,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d9fa82e
+      data: 5a1dc69
       width: 67
       height: 67
     extra: '{"UEC":1.00,"Version":"12","ECLevel":"33%"}'
@@ -212,13 +212,13 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 197
+        x: 198
         y: 5
       topRight:
         x: 202
         y: 195
       bottomRight:
-        x: 10
+        x: 11
         y: 203
       bottomLeft:
         x: 6
@@ -252,14 +252,14 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 201
-        y: 197
+        x: 202
+        y: 198
       topRight:
         x: 12
         y: 202
       bottomRight:
         x: 4
-        y: 10
+        y: 11
       bottomLeft:
         x: 200
         y: 6
@@ -273,7 +273,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d9fa82e
+      data: 5a1dc69
       width: 67
       height: 67
     extra: '{"UEC":1.00,"Version":"12","ECLevel":"33%"}'
@@ -292,13 +292,13 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 12
+        x: 11
         y: 202
       topRight:
         x: 7
         y: 12
       bottomRight:
-        x: 199
+        x: 198
         y: 4
       bottomLeft:
         x: 203
@@ -313,7 +313,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: d9fa82e
+      data: 5a1dc69
       width: 67
       height: 67
     extra: '{"UEC":1.00,"Version":"12","ECLevel":"33%"}'

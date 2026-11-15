@@ -5,6 +5,7 @@ import { beforeAll, describe, expect, test } from "vitest";
 import {
   prepareZXingModule,
   type ReaderOptions,
+  type ReadResult,
   readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";
@@ -49,6 +50,13 @@ test("upstream filters keep modes and rotations separate", () => {
   expect(() => fixtureApplies("x", "slow", 0)).toThrow();
 });
 
+test("upstream escaped text matches supplementary Unicode characters", () => {
+  const barcode = { text: "A😀\n\u00a0" } as ReadResult;
+  expect(
+    fixtureMismatch(barcode, { TextEscaped: "A😀<LF><U+A0>" }),
+  ).toBeUndefined();
+});
+
 for (const { directory, barcodeFormat } of testEntries.filter(
   ({ upstreamContract }) => upstreamContract,
 )) {
@@ -80,14 +88,16 @@ for (const { directory, barcodeFormat } of testEntries.filter(
             const options: ReaderOptions = {
               textMode: "Plain",
               tryDownscale: false,
-              downscaleFactor: 2,
-              downscaleThreshold: 180,
-              tryHarder: mode === "slow",
-              tryRotate: mode === "slow",
-              tryInvert: mode === "slow",
+              tryHarder: mode !== "fast",
+              tryRotate: mode !== "fast",
+              tryInvert: mode !== "fast",
               isPure: mode === "pure",
               binarizer: mode === "pure" ? "FixedThreshold" : "LocalAverage",
             };
+            if (first.tryDownscale !== undefined)
+              options.tryDownscale = first.tryDownscale === "true";
+            if (first.tryDenoise !== undefined)
+              options.tryDenoise = first.tryDenoise === "true";
             if (first.formats !== undefined) {
               if (first.formats !== "upca")
                 throw new Error(

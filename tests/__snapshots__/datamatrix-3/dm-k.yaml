@@ -11,8 +11,8 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 28
-        y: 50
+        x: 27
+        y: 49
       topRight:
         x: 103
         y: 17
@@ -20,10 +20,10 @@ fast:
         x: 136
         y: 92
       bottomLeft:
-        x: 60
+        x: 59
         y: 125
-    rotation: -24
-    orientation: -24
+    rotation: -23
+    orientation: -23
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -32,7 +32,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: ee42756
+      data: 8753f29
       width: 14
       height: 14
     extra: '{"UEC":1.00,"Version":"14x14"}'
@@ -55,8 +55,8 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 28
-        y: 50
+        x: 27
+        y: 49
       topRight:
         x: 103
         y: 17
@@ -64,10 +64,10 @@ slow:
         x: 136
         y: 92
       bottomLeft:
-        x: 60
+        x: 59
         y: 125
-    rotation: -24
-    orientation: -24
+    rotation: -23
+    orientation: -23
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -76,7 +76,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: ee42756
+      data: 8753f29
       width: 14
       height: 14
     extra: '{"UEC":1.00,"Version":"14x14"}'
@@ -98,16 +98,16 @@ slow:
         x: 101
         y: 27
       topRight:
-        x: 133
+        x: 134
         y: 103
       bottomRight:
-        x: 60
-        y: 134
+        x: 59
+        y: 136
       bottomLeft:
         x: 26
-        y: 60
-    rotation: 66
-    orientation: 66
+        y: 59
+    rotation: 67
+    orientation: 67
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -116,7 +116,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 1a4e0c5
+      data: dc6059d
       width: 14
       height: 14
     extra: '{"UEC":1.00,"Version":"14x14"}'
@@ -139,15 +139,15 @@ slow:
         y: 101
       topRight:
         x: 57
-        y: 133
+        y: 134
       bottomRight:
-        x: 26
-        y: 60
+        x: 24
+        y: 59
       bottomLeft:
-        x: 100
+        x: 101
         y: 26
-    rotation: 156
-    orientation: 156
+    rotation: 157
+    orientation: 157
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -156,7 +156,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 1a4e0c5
+      data: dc6059d
       width: 14
       height: 14
     extra: '{"UEC":1.00,"Version":"14x14"}'
@@ -175,8 +175,8 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 50
-        y: 132
+        x: 49
+        y: 133
       topRight:
         x: 17
         y: 57
@@ -185,9 +185,9 @@ slow:
         y: 24
       bottomLeft:
         x: 125
-        y: 100
-    rotation: -114
-    orientation: -114
+        y: 101
+    rotation: -113
+    orientation: -113
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -196,7 +196,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: ee42756
+      data: 8753f29
       width: 14
       height: 14
     extra: '{"UEC":1.00,"Version":"14x14"}'

@@ -11,19 +11,19 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 33
+        x: 35
         y: 87
       topRight:
         x: 127
-        y: 50
+        y: 52
       bottomRight:
         x: 160
-        y: 135
+        y: 137
       bottomLeft:
         x: 76
-        y: 172
-    rotation: -23
-    orientation: -23
+        y: 171
+    rotation: -21
+    orientation: -21
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -55,19 +55,19 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 33
+        x: 35
         y: 87
       topRight:
         x: 127
-        y: 50
+        y: 52
       bottomRight:
         x: 160
-        y: 135
+        y: 137
       bottomLeft:
         x: 76
-        y: 172
-    rotation: -23
-    orientation: -23
+        y: 171
+    rotation: -21
+    orientation: -21
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -96,18 +96,18 @@ slow:
     position:
       topLeft:
         x: 120
-        y: 33
+        y: 35
       topRight:
-        x: 157
+        x: 155
         y: 127
       bottomRight:
-        x: 72
+        x: 71
         y: 160
       bottomLeft:
-        x: 35
+        x: 36
         y: 76
-    rotation: 67
-    orientation: 67
+    rotation: 68
+    orientation: 68
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -135,19 +135,19 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 189
+        x: 187
         y: 120
       topRight:
-        x: 95
-        y: 157
+        x: 94
+        y: 155
       bottomRight:
         x: 62
-        y: 72
+        y: 71
       bottomLeft:
         x: 146
-        y: 35
-    rotation: 157
-    orientation: 157
+        y: 36
+    rotation: 158
+    orientation: 158
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -175,16 +175,16 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 86
-        y: 189
+        x: 87
+        y: 187
       topRight:
-        x: 50
-        y: 95
+        x: 52
+        y: 94
       bottomRight:
-        x: 135
+        x: 136
         y: 62
       bottomLeft:
-        x: 172
+        x: 171
         y: 146
     rotation: -112
     orientation: -112

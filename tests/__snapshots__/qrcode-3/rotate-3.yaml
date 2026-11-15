@@ -12,13 +12,13 @@ fast:
     position:
       topLeft:
         x: 263
-        y: 207
+        y: 208
       topRight:
         x: 292
         y: 264
       bottomRight:
         x: 237
-        y: 291
+        y: 293
       bottomLeft:
         x: 207
         y: 238
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H
@@ -51,13 +51,13 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 293
+        x: 292
         y: 263
       topRight:
         x: 236
         y: 292
       bottomRight:
-        x: 209
+        x: 207
         y: 237
       bottomLeft:
         x: 262
@@ -72,10 +72,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H
@@ -92,13 +92,13 @@ fast:
     position:
       topLeft:
         x: 237
-        y: 293
+        y: 292
       topRight:
         x: 208
         y: 236
       bottomRight:
         x: 263
-        y: 209
+        y: 207
       bottomLeft:
         x: 293
         y: 262
@@ -112,10 +112,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H
@@ -131,13 +131,13 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 207
+        x: 208
         y: 237
       topRight:
         x: 264
         y: 208
       bottomRight:
-        x: 291
+        x: 293
         y: 263
       bottomLeft:
         x: 238
@@ -152,10 +152,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H
@@ -173,13 +173,13 @@ slow:
     position:
       topLeft:
         x: 263
-        y: 207
+        y: 208
       topRight:
         x: 292
         y: 264
       bottomRight:
         x: 237
-        y: 291
+        y: 293
       bottomLeft:
         x: 207
         y: 238
@@ -193,10 +193,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H
@@ -212,13 +212,13 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 293
+        x: 292
         y: 263
       topRight:
         x: 236
         y: 292
       bottomRight:
-        x: 209
+        x: 207
         y: 237
       bottomLeft:
         x: 262
@@ -233,10 +233,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H
@@ -253,13 +253,13 @@ slow:
     position:
       topLeft:
         x: 237
-        y: 293
+        y: 292
       topRight:
         x: 208
         y: 236
       bottomRight:
         x: 263
-        y: 209
+        y: 207
       bottomLeft:
         x: 293
         y: 262
@@ -273,10 +273,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H
@@ -292,13 +292,13 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 207
+        x: 208
         y: 237
       topRight:
         x: 264
         y: 208
       bottomRight:
-        x: 291
+        x: 293
         y: 263
       bottomLeft:
         x: 238
@@ -313,10 +313,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 247b029
+      data: a5655a5
       width: 21
       height: 21
-    extra: '{"DataMask":3,"UEC":0.88,"Version":"1","ECLevel":"H"}'
+    extra: '{"DataMask":3,"UEC":1.00,"Version":"1","ECLevel":"H"}'
     version: "1"
     readerInit: false
     ecLevel: H

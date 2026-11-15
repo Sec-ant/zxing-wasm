@@ -12,16 +12,16 @@ fast:
     position:
       topLeft:
         x: 35
-        y: 111
+        y: 69
       topRight:
         x: 264
-        y: 111
+        y: 69
       bottomRight:
         x: 264
-        y: 113
+        y: 153
       bottomLeft:
         x: 35
-        y: 113
+        y: 153
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -30,7 +30,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 19
     symbol:
       data: e3b0c44
       width: 0
@@ -52,16 +52,16 @@ fast:
     position:
       topLeft:
         x: 264
-        y: 111
+        y: 69
       topRight:
         x: 35
-        y: 111
+        y: 69
       bottomRight:
         x: 35
-        y: 113
+        y: 153
       bottomLeft:
         x: 264
-        y: 113
+        y: 153
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -70,7 +70,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 19
     symbol:
       data: e3b0c44
       width: 0
@@ -93,16 +93,16 @@ slow:
     position:
       topLeft:
         x: 35
-        y: 110
+        y: 0
       topRight:
         x: 264
-        y: 110
+        y: 0
       bottomRight:
         x: 264
-        y: 111
+        y: 193
       bottomLeft:
         x: 35
-        y: 111
+        y: 193
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -111,7 +111,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 194
     symbol:
       data: e3b0c44
       width: 0
@@ -133,16 +133,16 @@ slow:
     position:
       topLeft:
         x: 264
-        y: 110
+        y: 29
       topRight:
         x: 35
-        y: 110
+        y: 29
       bottomRight:
         x: 35
-        y: 111
+        y: 222
       bottomLeft:
         x: 264
-        y: 111
+        y: 222
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,7 +151,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 194
     symbol:
       data: e3b0c44
       width: 0

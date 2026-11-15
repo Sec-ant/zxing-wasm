@@ -12,16 +12,16 @@ fast:
     position:
       topLeft:
         x: 93
-        y: 85
+        y: 84
       topRight:
         x: 385
-        y: 85
+        y: 84
       bottomRight:
         x: 385
-        y: 87
+        y: 101
       bottomLeft:
         x: 93
-        y: 87
+        y: 101
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -30,7 +30,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 8
     symbol:
       data: e3b0c44
       width: 0
@@ -52,16 +52,16 @@ fast:
     position:
       topLeft:
         x: 383
-        y: 59
+        y: 45
       topRight:
         x: 91
-        y: 59
+        y: 45
       bottomRight:
         x: 91
-        y: 61
+        y: 60
       bottomLeft:
         x: 383
-        y: 61
+        y: 60
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -70,7 +70,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 6
     symbol:
       data: e3b0c44
       width: 0
@@ -92,17 +92,17 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 93
-        y: 84
+        x: 94
+        y: 37
       topRight:
-        x: 385
-        y: 84
+        x: 386
+        y: 37
       bottomRight:
         x: 385
-        y: 85
+        y: 109
       bottomLeft:
         x: 93
-        y: 85
+        y: 109
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -111,7 +111,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 23
     symbol:
       data: e3b0c44
       width: 0
@@ -133,16 +133,16 @@ slow:
     position:
       topLeft:
         x: 383
-        y: 60
+        y: 36
       topRight:
         x: 91
-        y: 60
+        y: 36
       bottomRight:
-        x: 91
-        y: 61
+        x: 90
+        y: 108
       bottomLeft:
-        x: 383
-        y: 61
+        x: 382
+        y: 108
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,7 +151,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 23
     symbol:
       data: e3b0c44
       width: 0

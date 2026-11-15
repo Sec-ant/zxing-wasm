@@ -279,7 +279,7 @@ pure:
       data: e3b0c44
       width: 0
       height: 0
-    extra: '{"UEC":0.46,"ECLevel":"28%"}'
+    extra: '{"UEC":0.40,"ECLevel":"28%"}'
     version: ""
     readerInit: false
     ecLevel: 28%
