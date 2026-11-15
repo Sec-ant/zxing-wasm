@@ -147,6 +147,7 @@ export function escapeNonGraphical(str: string): string {
   let result = "";
   for (let i = 0; i < str.length; i++) {
     const codePoint = str.codePointAt(i)!;
+    if (codePoint > 0xffff) i++;
 
     if (codePoint < 32 || codePoint === 127) {
       result += `<${asciiNongraphs[codePoint === 127 ? 32 : codePoint]}>`;

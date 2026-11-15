@@ -5,6 +5,7 @@ import { beforeAll, describe, expect, test } from "vitest";
 import {
   prepareZXingModule,
   type ReaderOptions,
+  type ReadResult,
   readBarcodes,
 } from "../src/reader/index.js";
 import { testEntries } from "./testEntries.js";
@@ -47,6 +48,13 @@ test("upstream filters keep modes and rotations separate", () => {
   ).toEqual([true, false, true, false]);
   expect(fixtureApplies("sa fh p0", "pure", 90)).toBe(false);
   expect(() => fixtureApplies("x", "slow", 0)).toThrow();
+});
+
+test("upstream escaped text matches supplementary Unicode characters", () => {
+  const barcode = { text: "A😀\n\u00a0" } as ReadResult;
+  expect(
+    fixtureMismatch(barcode, { TextEscaped: "A😀<LF><U+A0>" }),
+  ).toBeUndefined();
 });
 
 for (const { directory, barcodeFormat } of testEntries.filter(
