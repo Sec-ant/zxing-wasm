@@ -9,7 +9,50 @@ import {
 
 afterEach(() => {
   vi.restoreAllMocks();
+  vi.unstubAllGlobals();
   purgeZXingModule();
+});
+
+test("reads Blob inputs without Blob.arrayBuffer and propagates read errors", async () => {
+  await prepareZXingModule({
+    overrides: {
+      wasmBinary: Uint8Array.from(
+        await readFile(
+          new URL("../src/reader/zxing_reader.wasm", import.meta.url),
+        ),
+      ).buffer,
+    },
+    fireImmediately: true,
+  });
+  const image = await readFile(
+    new URL("./samples/qrcode/wikipedia.png", import.meta.url),
+  );
+  const error = new DOMException("Failed to read", "NotReadableError");
+  let fail = false;
+  vi.stubGlobal(
+    "FileReader",
+    class {
+      result: ArrayBuffer | null = null;
+      error: DOMException | null = null;
+      onload: (() => void) | null = null;
+      onerror: (() => void) | null = null;
+      readAsArrayBuffer() {
+        if (fail) {
+          this.error = error;
+          this.onerror?.();
+        } else {
+          this.result = Uint8Array.from(image).buffer;
+          this.onload?.();
+        }
+      }
+    },
+  );
+  const blob = { size: image.length } as Blob;
+  expect((await readBarcodes(blob)).map(({ text }) => text)).toEqual([
+    "http://en.m.wikipedia.org",
+  ]);
+  fail = true;
+  await expect(readBarcodes(blob)).rejects.toBe(error);
 });
 
 test("writes grayscale values into the supplied destination", () => {

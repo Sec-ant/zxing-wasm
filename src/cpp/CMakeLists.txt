@@ -57,7 +57,9 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -s EXPORT_ES6=1 \
   -s MODULARIZE=1 \
   -s INCOMING_MODULE_JS_API=\"['ENVIRONMENT','arguments','canvas','dynamicLibraries','elementPointerLock','instantiateWasm','locateFile','monitorRunDependencies','noExitRuntime','noInitialRun','onAbort','onExit','onRuntimeInitialized','postRun','preInit','preRun','print','printErr','setStatus','statusMessage','stderr','stdin','stdout','thisProgram','wasm','websocket','wasmBinary']\" \
-  -s MIN_SAFARI_VERSION=150000 \
+  -s MIN_CHROME_VERSION=75 \
+  -s MIN_FIREFOX_VERSION=68 \
+  -s MIN_SAFARI_VERSION=130000 \
   -s WASM_BIGINT=0 \
   -s DYNAMIC_EXECUTION=0 \
   -s EXPORT_NAME=ZXing \
@@ -107,6 +109,10 @@ foreach(target zxing_reader zxing_writer zxing_full)
               -o "${wasm}"
       COMMAND "${WASM_OPT}" "${wasm}" --mvp-features
               --enable-mutable-globals --enable-sign-ext -O3 -o "${wasm}" --quiet
+      COMMAND "${WASM_OPT}" "${wasm}" --mvp-features
+              --enable-mutable-globals --enable-sign-ext --signext-lowering -o "${wasm}" --quiet
+      COMMAND "${WASM_OPT}" "${wasm}" --mvp-features
+              --enable-mutable-globals -o "${wasm}" --quiet
       COMMENT "Lowering, optimizing and validating ${target}.wasm for legacy browsers"
       VERBATIM)
   endif()

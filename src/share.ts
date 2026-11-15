@@ -348,7 +348,18 @@ export async function readBarcodesWithFactory<T extends "reader" | "full">(
     } else if ("byteLength" in input) {
       buffer = new Uint8Array(input);
     } else if ("size" in input) {
-      buffer = new Uint8Array(await input.arrayBuffer());
+      const bytes =
+        typeof input.arrayBuffer === "function"
+          ? await input.arrayBuffer()
+          : await new Promise<ArrayBuffer>((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result as ArrayBuffer);
+              reader.onerror = () => reject(reader.error);
+              reader.onabort = () =>
+                reject(new DOMException("File reading aborted", "AbortError"));
+              reader.readAsArrayBuffer(input);
+            });
+      buffer = new Uint8Array(bytes);
     } else {
       throw new TypeError("Invalid input type");
     }

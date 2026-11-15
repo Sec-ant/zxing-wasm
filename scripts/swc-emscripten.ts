@@ -86,12 +86,12 @@ function visit(node: unknown): unknown {
   ) {
     const body = (node as FunctionDeclaration).body!;
     const branch = body.stmts[0];
-    if (branch?.type === "IfStatement") {
+    if (
+      branch?.type === "IfStatement" &&
+      branch.consequent.type === "BlockStatement"
+    ) {
       // Keep the existing locateFile-based URL contract across output formats.
-      body.stmts =
-        branch.consequent.type === "BlockStatement"
-          ? branch.consequent.stmts
-          : [branch.consequent];
+      body.stmts = branch.consequent.stmts;
     }
   }
   return fields.type === "CallExpression"
