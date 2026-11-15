@@ -46,6 +46,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
   -fexceptions \
   -s DISABLE_EXCEPTION_CATCHING=0")
 
+# Emscripten 7 uses 0 to bypass its browser minimum-version checks; the
+# resulting WASM is lowered and validated against the legacy baseline below.
 # Set linker flags
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -lembind \
@@ -57,9 +59,9 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
   -s EXPORT_ES6=1 \
   -s MODULARIZE=1 \
   -s INCOMING_MODULE_JS_API=\"['ENVIRONMENT','arguments','canvas','dynamicLibraries','elementPointerLock','instantiateWasm','locateFile','monitorRunDependencies','noExitRuntime','noInitialRun','onAbort','onExit','onRuntimeInitialized','postRun','preInit','preRun','print','printErr','setStatus','statusMessage','stderr','stdin','stdout','thisProgram','wasm','websocket','wasmBinary']\" \
-  -s MIN_CHROME_VERSION=75 \
-  -s MIN_FIREFOX_VERSION=68 \
-  -s MIN_SAFARI_VERSION=130000 \
+  -s MIN_CHROME_VERSION=0 \
+  -s MIN_FIREFOX_VERSION=0 \
+  -s MIN_SAFARI_VERSION=0 \
   -s WASM_BIGINT=0 \
   -s DYNAMIC_EXECUTION=0 \
   -s EXPORT_NAME=ZXing \
