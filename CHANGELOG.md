@@ -1,5 +1,12 @@
 # zxing-wasm
 
+## 3.1.7
+
+### Patch Changes
+
+- 4c62ad1: Improve compatibility with Safari 13 and other older browsers by lowering WebAssembly instructions and supporting Blob inputs without `Blob.arrayBuffer()`.
+- 8780e72: Update ZXing-C++ and dependencies, including upstream barcode detection and decoding improvements.
+
 ## 3.1.6
 
 ### Patch Changes
