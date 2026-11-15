@@ -18,12 +18,12 @@ fast:
         y: 257
       bottomRight:
         x: 242
-        y: 205
+        y: 206
       bottomLeft:
         x: 294
         y: 241
-    rotation: -145
-    orientation: -145
+    rotation: -146
+    orientation: -146
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -57,13 +57,13 @@ fast:
         x: 243
         y: 206
       bottomRight:
-        x: 295
+        x: 294
         y: 242
       bottomLeft:
         x: 259
         y: 294
-    rotation: -55
-    orientation: -55
+    rotation: -56
+    orientation: -56
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -98,12 +98,12 @@ fast:
         y: 243
       bottomRight:
         x: 258
-        y: 295
+        y: 294
       bottomLeft:
         x: 206
         y: 259
-    rotation: 35
-    orientation: 35
+    rotation: 34
+    orientation: 34
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -137,13 +137,13 @@ fast:
         x: 257
         y: 294
       bottomRight:
-        x: 205
+        x: 206
         y: 258
       bottomLeft:
         x: 241
         y: 206
-    rotation: 125
-    orientation: 125
+    rotation: 124
+    orientation: 124
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -179,12 +179,12 @@ slow:
         y: 257
       bottomRight:
         x: 242
-        y: 205
+        y: 206
       bottomLeft:
         x: 294
         y: 241
-    rotation: -145
-    orientation: -145
+    rotation: -146
+    orientation: -146
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -218,13 +218,13 @@ slow:
         x: 243
         y: 206
       bottomRight:
-        x: 295
+        x: 294
         y: 242
       bottomLeft:
         x: 259
         y: 294
-    rotation: -55
-    orientation: -55
+    rotation: -56
+    orientation: -56
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -259,12 +259,12 @@ slow:
         y: 243
       bottomRight:
         x: 258
-        y: 295
+        y: 294
       bottomLeft:
         x: 206
         y: 259
-    rotation: 35
-    orientation: 35
+    rotation: 34
+    orientation: 34
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -298,13 +298,13 @@ slow:
         x: 257
         y: 294
       bottomRight:
-        x: 205
+        x: 206
         y: 258
       bottomLeft:
         x: 241
         y: 206
-    rotation: 125
-    orientation: 125
+    rotation: 124
+    orientation: 124
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"

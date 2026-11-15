@@ -141,7 +141,7 @@ slow:
         x: 522
         y: 46
       bottomRight:
-        x: 522
+        x: 523
         y: 22
       bottomLeft:
         x: 721
@@ -179,10 +179,10 @@ slow:
         y: 720
       topRight:
         x: 32
-        y: 522
+        y: 523
       bottomRight:
         x: 56
-        y: 522
+        y: 523
       bottomLeft:
         x: 56
         y: 721

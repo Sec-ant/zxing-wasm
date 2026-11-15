@@ -4,24 +4,24 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 80d04fb
-    bytesECI: 836f625
-    text: "[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/"
+    bytes: 2a04fa8
+    bytesECI: ae0d6b2
+    text: "[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/"
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 117
-        y: 117
+        x: 21
+        y: 22
       topRight:
-        x: 180
-        y: 117
+        x: 236
+        y: 21
       bottomRight:
-        x: 181
-        y: 181
+        x: 236
+        y: 237
       bottomLeft:
-        x: 117
-        y: 180
+        x: 21
+        y: 236
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -32,36 +32,36 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f507a64
-      width: 33
-      height: 33
-    extra: '{"DataMask":5,"UEC":1.00,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: d1a301e
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "90":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 80d04fb
-    bytesECI: 836f625
-    text: "[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/"
+    bytes: 2a04fa8
+    bytesECI: ae0d6b2
+    text: "[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/"
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 143
-        y: 117
+        x: 238
+        y: 21
       topRight:
-        x: 143
-        y: 180
+        x: 239
+        y: 236
       bottomRight:
-        x: 79
-        y: 181
+        x: 23
+        y: 236
       bottomLeft:
-        x: 80
-        y: 117
+        x: 24
+        y: 21
     rotation: 90
     orientation: 90
     isMirrored: false
@@ -72,13 +72,13 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f507a64
-      width: 33
-      height: 33
-    extra: '{"DataMask":5,"UEC":1.00,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: d1a301e
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "180":
     isValid: true
     error: ""
@@ -165,24 +165,24 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 80d04fb
-    bytesECI: 836f625
-    text: "[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/"
+    bytes: 2a04fa8
+    bytesECI: ae0d6b2
+    text: "[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/"
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 117
-        y: 117
+        x: 21
+        y: 22
       topRight:
-        x: 180
-        y: 117
+        x: 236
+        y: 21
       bottomRight:
-        x: 181
-        y: 181
+        x: 236
+        y: 237
       bottomLeft:
-        x: 117
-        y: 180
+        x: 21
+        y: 236
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -193,36 +193,36 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f507a64
-      width: 33
-      height: 33
-    extra: '{"DataMask":5,"UEC":1.00,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: d1a301e
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "90":
     isValid: true
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 80d04fb
-    bytesECI: 836f625
-    text: "[内側QRコード]<CR><LF><CR><LF>*ダブルQR*<CR><LF>http://d-qr.net/ex/"
+    bytes: 2a04fa8
+    bytesECI: ae0d6b2
+    text: "[外側QRコード]<CR><LF> <CR><LF>*ﾀﾞﾌﾞﾙQR*<CR><LF>http://d-qr.net/ex/"
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 143
-        y: 117
+        x: 238
+        y: 21
       topRight:
-        x: 143
-        y: 180
+        x: 239
+        y: 236
       bottomRight:
-        x: 79
-        y: 181
+        x: 23
+        y: 236
       bottomLeft:
-        x: 80
-        y: 117
+        x: 24
+        y: 21
     rotation: 90
     orientation: 90
     isMirrored: false
@@ -233,13 +233,13 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f507a64
-      width: 33
-      height: 33
-    extra: '{"DataMask":5,"UEC":1.00,"Version":"4","ECLevel":"M"}'
-    version: "4"
+      data: d1a301e
+      width: 41
+      height: 41
+    extra: '{"DataMask":5,"UEC":0.35,"Version":"6","ECLevel":"H"}'
+    version: "6"
     readerInit: false
-    ecLevel: M
+    ecLevel: H
   "180":
     isValid: true
     error: ""

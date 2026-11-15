@@ -255,14 +255,14 @@ pure:
     hasECI: false
     position:
       topLeft:
-        x: 85
-        y: 12
+        x: 86
+        y: 11
       topRight:
-        x: 320
-        y: 47
+        x: 319
+        y: 49
       bottomRight:
-        x: 299
-        y: 163
+        x: 298
+        y: 164
       bottomLeft:
         x: 68
         y: 127

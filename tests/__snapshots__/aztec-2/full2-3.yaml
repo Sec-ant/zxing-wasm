@@ -11,8 +11,8 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 77
-        y: 47
+        x: 76
+        y: 46
       topRight:
         x: 330
         y: 27
@@ -51,8 +51,8 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 313
-        y: 77
+        x: 314
+        y: 76
       topRight:
         x: 333
         y: 330
@@ -91,14 +91,14 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 403
-        y: 313
+        x: 404
+        y: 314
       topRight:
         x: 150
         y: 333
       bottomRight:
         x: 127
-        y: 86
+        y: 85
       bottomLeft:
         x: 380
         y: 60
@@ -132,12 +132,12 @@ fast:
     position:
       topLeft:
         x: 47
-        y: 403
+        y: 404
       topRight:
         x: 27
         y: 150
       bottomRight:
-        x: 274
+        x: 275
         y: 127
       bottomLeft:
         x: 300
@@ -172,8 +172,8 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 77
-        y: 47
+        x: 76
+        y: 46
       topRight:
         x: 330
         y: 27
@@ -212,8 +212,8 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 313
-        y: 77
+        x: 314
+        y: 76
       topRight:
         x: 333
         y: 330
@@ -252,14 +252,14 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 403
-        y: 313
+        x: 404
+        y: 314
       topRight:
         x: 150
         y: 333
       bottomRight:
         x: 127
-        y: 86
+        y: 85
       bottomLeft:
         x: 380
         y: 60
@@ -293,12 +293,12 @@ slow:
     position:
       topLeft:
         x: 47
-        y: 403
+        y: 404
       topRight:
         x: 27
         y: 150
       bottomRight:
-        x: 274
+        x: 275
         y: 127
       bottomLeft:
         x: 300

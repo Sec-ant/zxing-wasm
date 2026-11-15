@@ -14,7 +14,7 @@ fast:
         x: 55
         y: 57
       topRight:
-        x: 122
+        x: 121
         y: 72
       bottomRight:
         x: 121
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: bb06b1d
+      data: b023875
       width: 24
       height: 24
-    extra: '{"UEC":0.91,"Version":"24x24"}'
+    extra: '{"UEC":0.66,"Version":"24x24"}'
     version: 24x24
     readerInit: false
     ecLevel: ""
@@ -58,7 +58,7 @@ slow:
         x: 55
         y: 57
       topRight:
-        x: 122
+        x: 121
         y: 72
       bottomRight:
         x: 121
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: bb06b1d
+      data: b023875
       width: 24
       height: 24
-    extra: '{"UEC":0.91,"Version":"24x24"}'
+    extra: '{"UEC":0.66,"Version":"24x24"}'
     version: 24x24
     readerInit: false
     ecLevel: ""
@@ -99,7 +99,7 @@ slow:
         y: 55
       topRight:
         x: 113
-        y: 122
+        y: 121
       bottomRight:
         x: 59
         y: 121
@@ -116,7 +116,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: effdc6d
+      data: 697c34d
       width: 24
       height: 24
     extra: '{"UEC":0.91,"Version":"24x24"}'
@@ -135,7 +135,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 121
+        x: 122
         y: 127
       topRight:
         x: 55
@@ -146,8 +146,8 @@ slow:
       bottomLeft:
         x: 120
         y: 74
-    rotation: -167
-    orientation: -167
+    rotation: -168
+    orientation: -168
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: f67c39a
+      data: 8939d9a
       width: 24
       height: 24
-    extra: '{"UEC":0.91,"Version":"24x24"}'
+    extra: '{"UEC":0.75,"Version":"24x24"}'
     version: 24x24
     readerInit: false
     ecLevel: ""
@@ -176,7 +176,7 @@ slow:
     position:
       topLeft:
         x: 58
-        y: 121
+        y: 122
       topRight:
         x: 72
         y: 55
@@ -186,8 +186,8 @@ slow:
       bottomLeft:
         x: 111
         y: 120
-    rotation: -77
-    orientation: -77
+    rotation: -78
+    orientation: -78
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 62e03ba
+      data: f8689f1
       width: 24
       height: 24
-    extra: '{"UEC":0.91,"Version":"24x24"}'
+    extra: '{"UEC":0.58,"Version":"24x24"}'
     version: 24x24
     readerInit: false
     ecLevel: ""

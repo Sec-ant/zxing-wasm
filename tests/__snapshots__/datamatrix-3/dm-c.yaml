@@ -15,7 +15,7 @@ fast:
         y: 13
       topRight:
         x: 130
-        y: 12
+        y: 13
       bottomRight:
         x: 131
         y: 130
@@ -59,7 +59,7 @@ slow:
         y: 13
       topRight:
         x: 130
-        y: 12
+        y: 13
       bottomRight:
         x: 131
         y: 130
@@ -98,14 +98,14 @@ slow:
         x: 132
         y: 11
       topRight:
-        x: 133
+        x: 132
         y: 130
       bottomRight:
         x: 15
         y: 131
       bottomLeft:
         x: 15
-        y: 10
+        y: 11
     rotation: 90
     orientation: 90
     isMirrored: false
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e7e92e9
+      data: 064f453
       width: 36
       height: 36
-    extra: '{"UEC":1.00,"Version":"36x36"}'
+    extra: '{"UEC":0.90,"Version":"36x36"}'
     version: 36x36
     readerInit: false
     ecLevel: ""
@@ -139,7 +139,7 @@ slow:
         y: 132
       topRight:
         x: 217
-        y: 133
+        y: 132
       bottomRight:
         x: 216
         y: 15
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e7e92e9
+      data: 22c1025
       width: 36
       height: 36
-    extra: '{"UEC":1.00,"Version":"36x36"}'
+    extra: '{"UEC":0.90,"Version":"36x36"}'
     version: 36x36
     readerInit: false
     ecLevel: ""
@@ -178,7 +178,7 @@ slow:
         x: 13
         y: 336
       topRight:
-        x: 12
+        x: 13
         y: 217
       bottomRight:
         x: 130
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e7e92e9
+      data: "878e017"
       width: 36
       height: 36
-    extra: '{"UEC":1.00,"Version":"36x36"}'
+    extra: '{"UEC":0.95,"Version":"36x36"}'
     version: 36x36
     readerInit: false
     ecLevel: ""

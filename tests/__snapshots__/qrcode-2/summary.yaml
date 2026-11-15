@@ -3,14 +3,13 @@ passAll: 4
 passSome: 36
 fast:
   "0":
-    failures: 6
+    failures: 5
     undetected:
-      total: 6
+      total: 5
       images:
         - "#709!f.webp"
         - 12!.webp
         - 13!.webp
-        - 28.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
   "90":
@@ -24,36 +23,33 @@ fast:
         - qr-inv-1.webp
         - qr-inv-2.webp
   "180":
-    failures: 6
+    failures: 5
     undetected:
-      total: 6
+      total: 5
       images:
         - "#709!f.webp"
         - 12!.webp
         - 13!.webp
-        - 28.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
   "270":
-    failures: 6
+    failures: 5
     undetected:
-      total: 6
+      total: 5
       images:
         - "#709!f.webp"
         - 12!.webp
         - 13!.webp
-        - 28.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
 slow:
   "0":
-    failures: 3
+    failures: 2
     undetected:
-      total: 3
+      total: 2
       images:
         - 12!.webp
         - 13!.webp
-        - 28.webp
   "90":
     failures: 2
     undetected:
@@ -62,21 +58,19 @@ slow:
         - 12!.webp
         - 13!.webp
   "180":
-    failures: 3
+    failures: 2
     undetected:
-      total: 3
+      total: 2
       images:
         - 12!.webp
         - 13!.webp
-        - 28.webp
   "270":
-    failures: 3
+    failures: 2
     undetected:
-      total: 3
+      total: 2
       images:
         - 12!.webp
         - 13!.webp
-        - 28.webp
 pure:
   "0":
     failures: 34
@@ -112,7 +106,7 @@ pure:
         - fix-traceline.webp
         - high-res-1.jpg
         - low-res-v1-a.webp
-        - qr-circles-1.png
+        - qr-circles-1.webp
         - qr-inv-1.webp
         - qr-inv-2.webp
         - StructApp.webp

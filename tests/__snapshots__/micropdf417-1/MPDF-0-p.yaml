@@ -255,16 +255,16 @@ pure:
     hasECI: true
     position:
       topLeft:
-        x: 19
-        y: 16
+        x: 20
+        y: 15
       topRight:
         x: 349
         y: 40
       bottomRight:
-        x: 319
-        y: 117
+        x: 320
+        y: 118
       bottomLeft:
-        x: 15
+        x: 17
         y: 107
     rotation: 3
     orientation: 3

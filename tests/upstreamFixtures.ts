@@ -48,10 +48,16 @@ export function parseFixtureToml(
     const value = line.slice(equals + 1).trim();
     current[key] = value.startsWith('"')
       ? (JSON.parse(
-          value.replace(/\\U([0-9a-fA-F]{8})/g, (_, hex: string) => {
-            const codepoint = String.fromCodePoint(Number.parseInt(hex, 16));
-            return JSON.stringify(codepoint).slice(1, -1);
-          }),
+          value
+            .replace(/\\U([0-9a-fA-F]{8})/g, (_, hex: string) => {
+              const codepoint = String.fromCodePoint(Number.parseInt(hex, 16));
+              return JSON.stringify(codepoint).slice(1, -1);
+            })
+            .replace(/./g, (character) =>
+              character.charCodeAt(0) < 32
+                ? JSON.stringify(character).slice(1, -1)
+                : character,
+            ),
         ) as string)
       : value;
   }
@@ -136,7 +142,7 @@ export function fixtureMismatch(
   expected: FixtureProperties,
 ): string | undefined {
   for (const [key, value] of Object.entries(expected)) {
-    if (!/^[A-Z]/.test(key)) continue;
+    if (!/^[A-Z]/.test(key) || value === "") continue;
     let actual: string;
     switch (key) {
       case "Format":
@@ -150,6 +156,9 @@ export function fixtureMismatch(
         break;
       case "TextEscaped":
         actual = escapeNonGraphical(barcode.text);
+        break;
+      case "UEC":
+        actual = JSON.parse(barcode.extra).UEC?.toFixed(2);
         break;
       default:
         throw new Error(`Unsupported upstream fixture assertion: ${key}`);

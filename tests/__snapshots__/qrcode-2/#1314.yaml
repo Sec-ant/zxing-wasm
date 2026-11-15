@@ -11,16 +11,16 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 21
+        x: 22
         y: 22
       topRight:
         x: 238
-        y: 23
+        y: 22
       bottomRight:
         x: 207
-        y: 206
+        y: 207
       bottomLeft:
-        x: 29
+        x: 30
         y: 246
     rotation: -6
     orientation: -6
@@ -32,7 +32,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'
@@ -52,16 +52,16 @@ fast:
     position:
       topLeft:
         x: 233
-        y: 21
+        y: 22
       topRight:
         x: 233
         y: 238
       bottomRight:
-        x: 49
+        x: 48
         y: 207
       bottomLeft:
         x: 9
-        y: 29
+        y: 30
     rotation: 84
     orientation: 84
     isMirrored: false
@@ -72,7 +72,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'
@@ -91,14 +91,14 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 229
+        x: 228
         y: 233
       topRight:
         x: 12
         y: 233
       bottomRight:
-        x: 43
-        y: 49
+        x: 42
+        y: 48
       bottomLeft:
         x: 220
         y: 9
@@ -112,7 +112,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'
@@ -137,7 +137,7 @@ fast:
         x: 22
         y: 12
       bottomRight:
-        x: 206
+        x: 207
         y: 43
       bottomLeft:
         x: 246
@@ -152,7 +152,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'
@@ -172,16 +172,16 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 21
+        x: 22
         y: 22
       topRight:
         x: 238
-        y: 23
+        y: 22
       bottomRight:
         x: 207
-        y: 206
+        y: 207
       bottomLeft:
-        x: 29
+        x: 30
         y: 246
     rotation: -6
     orientation: -6
@@ -193,7 +193,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'
@@ -213,16 +213,16 @@ slow:
     position:
       topLeft:
         x: 233
-        y: 21
+        y: 22
       topRight:
         x: 233
         y: 238
       bottomRight:
-        x: 49
+        x: 48
         y: 207
       bottomLeft:
         x: 9
-        y: 29
+        y: 30
     rotation: 84
     orientation: 84
     isMirrored: false
@@ -233,7 +233,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'
@@ -252,14 +252,14 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 229
+        x: 228
         y: 233
       topRight:
         x: 12
         y: 233
       bottomRight:
-        x: 43
-        y: 49
+        x: 42
+        y: 48
       bottomLeft:
         x: 220
         y: 9
@@ -273,7 +273,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'
@@ -298,7 +298,7 @@ slow:
         x: 22
         y: 12
       bottomRight:
-        x: 206
+        x: 207
         y: 43
       bottomLeft:
         x: 246
@@ -313,7 +313,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: "9253001"
+      data: 5ea8602
       width: 29
       height: 29
     extra: '{"DataMask":2,"UEC":0.46,"Version":"3","ECLevel":"L"}'

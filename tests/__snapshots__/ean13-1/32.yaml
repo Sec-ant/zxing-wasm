@@ -92,11 +92,11 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 47
-        y: 57
+        x: 45
+        y: 49
       topRight:
-        x: 190
-        y: 57
+        x: 188
+        y: 49
       bottomRight:
         x: 191
         y: 64
@@ -111,7 +111,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 4
     symbol:
       data: e3b0c44
       width: 0
@@ -138,11 +138,11 @@ slow:
         x: 48
         y: 56
       bottomRight:
-        x: 49
-        y: 63
+        x: 51
+        y: 71
       bottomLeft:
-        x: 192
-        y: 63
+        x: 194
+        y: 71
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,7 +151,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 4
     symbol:
       data: e3b0c44
       width: 0

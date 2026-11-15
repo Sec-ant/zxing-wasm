@@ -23,5 +23,6 @@
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "C_Cpp.errorSquiggles": "disabled",
-  "js/ts.tsdk.path": "node_modules/typescript/lib"
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "cmake.sourceDirectory": "${workspaceFolder}/zxing-cpp"
 }

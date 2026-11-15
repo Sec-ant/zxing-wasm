@@ -20,10 +20,10 @@ fast:
         x: 388
         y: 270
       bottomLeft:
-        x: 113
-        y: 304
-    rotation: -6
-    orientation: -6
+        x: 110
+        y: 309
+    rotation: -7
+    orientation: -7
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 58201af
+      data: 0ff918e
       width: 37
       height: 37
-    extra: '{"UEC":0.91,"Version":"5","ECLevel":"19%"}'
+    extra: '{"UEC":1.00,"Version":"5","ECLevel":"19%"}'
     version: "5"
     readerInit: false
     ecLevel: 19%
@@ -61,7 +61,7 @@ fast:
         y: 388
       bottomLeft:
         x: 51
-        y: 112
+        y: 110
     rotation: 83
     orientation: 83
     isMirrored: false
@@ -100,10 +100,10 @@ fast:
         x: 92
         y: 90
       bottomLeft:
-        x: 367
-        y: 56
-    rotation: 174
-    orientation: 174
+        x: 370
+        y: 50
+    rotation: 173
+    orientation: 173
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -112,10 +112,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 58201af
+      data: 0ff918e
       width: 37
       height: 37
-    extra: '{"UEC":0.91,"Version":"5","ECLevel":"19%"}'
+    extra: '{"UEC":1.00,"Version":"5","ECLevel":"19%"}'
     version: "5"
     readerInit: false
     ecLevel: 19%
@@ -137,11 +137,11 @@ fast:
         x: 42
         y: 146
       bottomRight:
-        x: 271
+        x: 270
         y: 92
       bottomLeft:
-        x: 309
-        y: 367
+        x: 310
+        y: 370
     rotation: -97
     orientation: -97
     isMirrored: false
@@ -181,10 +181,10 @@ slow:
         x: 388
         y: 270
       bottomLeft:
-        x: 113
-        y: 304
-    rotation: -6
-    orientation: -6
+        x: 110
+        y: 309
+    rotation: -7
+    orientation: -7
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -193,10 +193,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 58201af
+      data: 0ff918e
       width: 37
       height: 37
-    extra: '{"UEC":0.91,"Version":"5","ECLevel":"19%"}'
+    extra: '{"UEC":1.00,"Version":"5","ECLevel":"19%"}'
     version: "5"
     readerInit: false
     ecLevel: 19%
@@ -222,7 +222,7 @@ slow:
         y: 388
       bottomLeft:
         x: 51
-        y: 112
+        y: 110
     rotation: 83
     orientation: 83
     isMirrored: false
@@ -261,10 +261,10 @@ slow:
         x: 92
         y: 90
       bottomLeft:
-        x: 367
-        y: 56
-    rotation: 174
-    orientation: 174
+        x: 370
+        y: 50
+    rotation: 173
+    orientation: 173
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -273,10 +273,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 58201af
+      data: 0ff918e
       width: 37
       height: 37
-    extra: '{"UEC":0.91,"Version":"5","ECLevel":"19%"}'
+    extra: '{"UEC":1.00,"Version":"5","ECLevel":"19%"}'
     version: "5"
     readerInit: false
     ecLevel: 19%
@@ -298,11 +298,11 @@ slow:
         x: 42
         y: 146
       bottomRight:
-        x: 271
+        x: 270
         y: 92
       bottomLeft:
-        x: 309
-        y: 367
+        x: 310
+        y: 370
     rotation: -97
     orientation: -97
     isMirrored: false

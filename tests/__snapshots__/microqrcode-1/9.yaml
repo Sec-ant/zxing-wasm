@@ -17,7 +17,7 @@ fast:
         x: 501
         y: 115
       bottomRight:
-        x: 494
+        x: 495
         y: 181
       bottomLeft:
         x: 428
@@ -58,7 +58,7 @@ fast:
         y: 501
       bottomRight:
         x: 95
-        y: 494
+        y: 495
       bottomLeft:
         x: 101
         y: 428
@@ -98,12 +98,12 @@ fast:
         y: 161
       bottomRight:
         x: 87
-        y: 94
+        y: 95
       bottomLeft:
         x: 154
         y: 101
-    rotation: -174
-    orientation: -174
+    rotation: -175
+    orientation: -175
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -178,7 +178,7 @@ slow:
         x: 501
         y: 115
       bottomRight:
-        x: 494
+        x: 495
         y: 181
       bottomLeft:
         x: 428
@@ -219,7 +219,7 @@ slow:
         y: 501
       bottomRight:
         x: 95
-        y: 494
+        y: 495
       bottomLeft:
         x: 101
         y: 428
@@ -259,12 +259,12 @@ slow:
         y: 161
       bottomRight:
         x: 87
-        y: 94
+        y: 95
       bottomLeft:
         x: 154
         y: 101
-    rotation: -174
-    orientation: -174
+    rotation: -175
+    orientation: -175
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"

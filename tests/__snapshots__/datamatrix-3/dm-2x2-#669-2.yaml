@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4d619f2
+      data: 4611fb1
       width: 48
       height: 48
-    extra: '{"UEC":0.47,"Version":"48x48"}'
+    extra: '{"UEC":0.02,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4d619f2
+      data: 4611fb1
       width: 48
       height: 48
-    extra: '{"UEC":0.47,"Version":"48x48"}'
+    extra: '{"UEC":0.02,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4d619f2
+      data: 4611fb1
       width: 48
       height: 48
-    extra: '{"UEC":0.47,"Version":"48x48"}'
+    extra: '{"UEC":0.02,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4d619f2
+      data: 4611fb1
       width: 48
       height: 48
-    extra: '{"UEC":0.47,"Version":"48x48"}'
+    extra: '{"UEC":0.02,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 4d619f2
+      data: 4611fb1
       width: 48
       height: 48
-    extra: '{"UEC":0.47,"Version":"48x48"}'
+    extra: '{"UEC":0.02,"Version":"48x48"}'
     version: 48x48
     readerInit: false
     ecLevel: ""

@@ -11,11 +11,11 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 124
-        y: 79
+        x: 123
+        y: 51
       topRight:
-        x: 465
-        y: 79
+        x: 466
+        y: 51
       bottomRight:
         x: 464
         y: 80
@@ -30,88 +30,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
-    symbol:
-      data: e3b0c44
-      width: 0
-      height: 0
-    extra: ""
-    version: ""
-    readerInit: false
-    ecLevel: ""
-  "180":
-    isValid: true
-    error: ""
-    format: EAN13
-    symbology: EANUPC
-    bytes: "4405244"
-    bytesECI: bc5246e
-    text: "5449000039231"
-    contentType: Text
-    hasECI: false
-    position:
-      topLeft:
-        x: 421
-        y: 79
-      topRight:
-        x: 80
-        y: 79
-      bottomRight:
-        x: 80
-        y: 80
-      bottomLeft:
-        x: 421
-        y: 80
-    rotation: 180
-    orientation: 180
-    isMirrored: false
-    isInverted: false
-    symbologyIdentifier: "]E0"
-    sequenceSize: -1
-    sequenceIndex: -1
-    sequenceId: ""
-    lineCount: 2
-    symbol:
-      data: e3b0c44
-      width: 0
-      height: 0
-    extra: ""
-    version: ""
-    readerInit: false
-    ecLevel: ""
-slow:
-  "0":
-    isValid: true
-    error: ""
-    format: EAN13
-    symbology: EANUPC
-    bytes: "4405244"
-    bytesECI: bc5246e
-    text: "5449000039231"
-    contentType: Text
-    hasECI: false
-    position:
-      topLeft:
-        x: 124
-        y: 78
-      topRight:
-        x: 465
-        y: 78
-      bottomRight:
-        x: 465
-        y: 79
-      bottomLeft:
-        x: 124
-        y: 79
-    rotation: 0
-    orientation: 0
-    isMirrored: false
-    isInverted: false
-    symbologyIdentifier: "]E0"
-    sequenceSize: -1
-    sequenceIndex: -1
-    sequenceId: ""
-    lineCount: 2
+    lineCount: 7
     symbol:
       data: e3b0c44
       width: 0
@@ -138,11 +57,11 @@ slow:
         x: 81
         y: 78
       bottomRight:
-        x: 80
-        y: 79
+        x: 79
+        y: 107
       bottomLeft:
-        x: 421
-        y: 79
+        x: 422
+        y: 107
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,7 +70,88 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 7
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+slow:
+  "0":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: "4405244"
+    bytesECI: bc5246e
+    text: "5449000039231"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 122
+        y: 23
+      topRight:
+        x: 467
+        y: 23
+      bottomRight:
+        x: 463
+        y: 92
+      bottomLeft:
+        x: 125
+        y: 92
+    rotation: 0
+    orientation: 0
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 35
+    symbol:
+      data: e3b0c44
+      width: 0
+      height: 0
+    extra: ""
+    version: ""
+    readerInit: false
+    ecLevel: ""
+  "180":
+    isValid: true
+    error: ""
+    format: EAN13
+    symbology: EANUPC
+    bytes: "4405244"
+    bytesECI: bc5246e
+    text: "5449000039231"
+    contentType: Text
+    hasECI: false
+    position:
+      topLeft:
+        x: 420
+        y: 66
+      topRight:
+        x: 82
+        y: 66
+      bottomRight:
+        x: 78
+        y: 135
+      bottomLeft:
+        x: 423
+        y: 135
+    rotation: 180
+    orientation: 180
+    isMirrored: false
+    isInverted: false
+    symbologyIdentifier: "]E0"
+    sequenceSize: -1
+    sequenceIndex: -1
+    sequenceId: ""
+    lineCount: 35
     symbol:
       data: e3b0c44
       width: 0

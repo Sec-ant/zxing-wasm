@@ -340,10 +340,10 @@ pure:
         y: 8
       bottomRight:
         x: 162
-        y: 164
+        y: 163
       bottomLeft:
         x: 7
-        y: 164
+        y: 163
     rotation: 0
     orientation: 0
     isMirrored: false

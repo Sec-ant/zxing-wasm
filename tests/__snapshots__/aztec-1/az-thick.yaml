@@ -18,7 +18,7 @@ fast:
         y: 8
       bottomRight:
         x: 162
-        y: 163
+        y: 164
       bottomLeft:
         x: 7
         y: 163
@@ -57,7 +57,7 @@ fast:
         x: 162
         y: 162
       bottomRight:
-        x: 7
+        x: 6
         y: 162
       bottomLeft:
         x: 7
@@ -98,12 +98,12 @@ fast:
         y: 162
       bottomRight:
         x: 8
-        y: 7
+        y: 6
       bottomLeft:
         x: 163
         y: 7
-    rotation: 180
-    orientation: 180
+    rotation: -180
+    orientation: -180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -137,7 +137,7 @@ fast:
         x: 8
         y: 8
       bottomRight:
-        x: 163
+        x: 164
         y: 8
       bottomLeft:
         x: 163
@@ -179,7 +179,7 @@ slow:
         y: 8
       bottomRight:
         x: 162
-        y: 163
+        y: 164
       bottomLeft:
         x: 7
         y: 163
@@ -218,7 +218,7 @@ slow:
         x: 162
         y: 162
       bottomRight:
-        x: 7
+        x: 6
         y: 162
       bottomLeft:
         x: 7
@@ -259,12 +259,12 @@ slow:
         y: 162
       bottomRight:
         x: 8
-        y: 7
+        y: 6
       bottomLeft:
         x: 163
         y: 7
-    rotation: 180
-    orientation: 180
+    rotation: -180
+    orientation: -180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]z0"
@@ -298,7 +298,7 @@ slow:
         x: 8
         y: 8
       bottomRight:
-        x: 163
+        x: 164
         y: 8
       bottomLeft:
         x: 163

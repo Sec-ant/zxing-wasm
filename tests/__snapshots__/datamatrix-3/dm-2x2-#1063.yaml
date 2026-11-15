@@ -11,7 +11,7 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 12
+        x: 13
         y: 7
       topRight:
         x: 139
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8ecaedb
+      data: 2a327c2
       width: 44
       height: 44
-    extra: '{"UEC":0.17,"Version":"44x44"}'
+    extra: '{"UEC":0.28,"Version":"44x44"}'
     version: 44x44
     readerInit: false
     ecLevel: ""
@@ -55,7 +55,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 12
+        x: 13
         y: 7
       topRight:
         x: 139
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8ecaedb
+      data: 2a327c2
       width: 44
       height: 44
-    extra: '{"UEC":0.17,"Version":"44x44"}'
+    extra: '{"UEC":0.28,"Version":"44x44"}'
     version: 44x44
     readerInit: false
     ecLevel: ""
@@ -96,7 +96,7 @@ slow:
     position:
       topLeft:
         x: 141
-        y: 12
+        y: 13
       topRight:
         x: 139
         y: 139
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8ecaedb
+      data: 2a327c2
       width: 44
       height: 44
-    extra: '{"UEC":0.17,"Version":"44x44"}'
+    extra: '{"UEC":0.28,"Version":"44x44"}'
     version: 44x44
     readerInit: false
     ecLevel: ""
@@ -135,7 +135,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 133
+        x: 132
         y: 141
       topRight:
         x: 6
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8ecaedb
+      data: 2a327c2
       width: 44
       height: 44
-    extra: '{"UEC":0.17,"Version":"44x44"}'
+    extra: '{"UEC":0.28,"Version":"44x44"}'
     version: 44x44
     readerInit: false
     ecLevel: ""
@@ -176,7 +176,7 @@ slow:
     position:
       topLeft:
         x: 7
-        y: 133
+        y: 132
       topRight:
         x: 9
         y: 6
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 8ecaedb
+      data: 2a327c2
       width: 44
       height: 44
-    extra: '{"UEC":0.17,"Version":"44x44"}'
+    extra: '{"UEC":0.28,"Version":"44x44"}'
     version: 44x44
     readerInit: false
     ecLevel: ""

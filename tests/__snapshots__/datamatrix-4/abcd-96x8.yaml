@@ -102,10 +102,10 @@ slow:
         y: 194
       bottomRight:
         x: 2
-        y: 194
+        y: 193
       bottomLeft:
         x: 2
-        y: 2
+        y: 3
     rotation: 90
     orientation: 90
     isMirrored: false
@@ -141,10 +141,10 @@ slow:
         x: 2
         y: 18
       bottomRight:
-        x: 2
+        x: 3
         y: 2
       bottomLeft:
-        x: 194
+        x: 193
         y: 2
     rotation: 180
     orientation: 180
@@ -182,10 +182,10 @@ slow:
         y: 2
       bottomRight:
         x: 18
-        y: 2
+        y: 3
       bottomLeft:
         x: 18
-        y: 194
+        y: 193
     rotation: -90
     orientation: -90
     isMirrored: false

@@ -16,7 +16,6 @@ export const DEFAULT_READER_OPTIONS_FOR_TESTS: ReaderOptions = {
   ...defaultReaderOptions,
   textMode: "Escaped",
   tryDownscale: false,
-  maxNumberOfSymbols: 1,
 };
 
 const [warmUpCache, getRotatedImage] = (() => {

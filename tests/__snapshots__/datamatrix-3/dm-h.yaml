@@ -14,7 +14,7 @@ fast:
         x: 46
         y: 39
       topRight:
-        x: 154
+        x: 155
         y: 40
       bottomRight:
         x: 149
@@ -58,7 +58,7 @@ slow:
         x: 46
         y: 39
       topRight:
-        x: 154
+        x: 155
         y: 40
       bottomRight:
         x: 149
@@ -99,7 +99,7 @@ slow:
         y: 46
       topRight:
         x: 140
-        y: 154
+        y: 155
       bottomRight:
         x: 30
         y: 149
@@ -138,7 +138,7 @@ slow:
         x: 154
         y: 140
       topRight:
-        x: 46
+        x: 45
         y: 140
       bottomRight:
         x: 51
@@ -179,7 +179,7 @@ slow:
         y: 154
       topRight:
         x: 40
-        y: 46
+        y: 45
       bottomRight:
         x: 150
         y: 51

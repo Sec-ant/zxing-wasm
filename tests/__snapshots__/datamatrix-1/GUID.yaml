@@ -99,9 +99,9 @@ slow:
         y: 4
       topRight:
         x: 71
-        y: 154
+        y: 153
       bottomRight:
-        x: 4
+        x: 5
         y: 154
       bottomLeft:
         x: 4
@@ -138,11 +138,11 @@ slow:
         x: 154
         y: 71
       topRight:
-        x: 4
+        x: 5
         y: 71
       bottomRight:
         x: 4
-        y: 4
+        y: 5
       bottomLeft:
         x: 154
         y: 4
@@ -179,9 +179,9 @@ slow:
         y: 154
       topRight:
         x: 4
-        y: 4
+        y: 5
       bottomRight:
-        x: 71
+        x: 70
         y: 4
       bottomLeft:
         x: 71

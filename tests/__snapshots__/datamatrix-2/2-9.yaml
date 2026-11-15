@@ -12,7 +12,7 @@ fast:
     position:
       topLeft:
         x: 28
-        y: 60
+        y: 59
       topRight:
         x: 152
         y: 51
@@ -32,10 +32,10 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e9d7e0c
+      data: d2e29a6
       width: 40
       height: 40
-    extra: '{"UEC":0.79,"Version":"40x40"}'
+    extra: '{"UEC":0.83,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""
@@ -56,7 +56,7 @@ slow:
     position:
       topLeft:
         x: 28
-        y: 60
+        y: 59
       topRight:
         x: 152
         y: 51
@@ -76,10 +76,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e9d7e0c
+      data: d2e29a6
       width: 40
       height: 40
-    extra: '{"UEC":0.79,"Version":"40x40"}'
+    extra: '{"UEC":0.83,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""
@@ -116,10 +116,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e9d7e0c
+      data: d2e29a6
       width: 40
       height: 40
-    extra: '{"UEC":0.79,"Version":"40x40"}'
+    extra: '{"UEC":0.83,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""
@@ -136,7 +136,7 @@ slow:
     position:
       topLeft:
         x: 212
-        y: 180
+        y: 181
       topRight:
         x: 88
         y: 189
@@ -156,7 +156,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e9d7e0c
+      data: 1ef4322
       width: 40
       height: 40
     extra: '{"UEC":0.79,"Version":"40x40"}'
@@ -196,10 +196,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: e9d7e0c
+      data: d2e29a6
       width: 40
       height: 40
-    extra: '{"UEC":0.79,"Version":"40x40"}'
+    extra: '{"UEC":0.83,"Version":"40x40"}'
     version: 40x40
     readerInit: false
     ecLevel: ""

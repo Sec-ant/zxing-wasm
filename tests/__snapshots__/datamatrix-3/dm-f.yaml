@@ -14,16 +14,16 @@ fast:
         x: 51
         y: 42
       topRight:
-        x: 127
-        y: 21
+        x: 128
+        y: 20
       bottomRight:
         x: 104
         y: 95
       bottomLeft:
-        x: 26
-        y: 119
-    rotation: -16
-    orientation: -16
+        x: 25
+        y: 120
+    rotation: -17
+    orientation: -17
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -58,16 +58,16 @@ slow:
         x: 51
         y: 42
       topRight:
-        x: 127
-        y: 21
+        x: 128
+        y: 20
       bottomRight:
         x: 104
         y: 95
       bottomLeft:
-        x: 26
-        y: 119
-    rotation: -16
-    orientation: -16
+        x: 25
+        y: 120
+    rotation: -17
+    orientation: -17
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -95,17 +95,17 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 106
-        y: 52
+        x: 105
+        y: 51
       topRight:
         x: 126
-        y: 127
+        y: 128
       bottomRight:
-        x: 53
+        x: 52
         y: 104
       bottomLeft:
-        x: 28
-        y: 26
+        x: 27
+        y: 25
     rotation: 74
     orientation: 74
     isMirrored: false
@@ -136,16 +136,16 @@ slow:
     position:
       topLeft:
         x: 100
-        y: 106
+        y: 105
       topRight:
-        x: 24
+        x: 23
         y: 126
       bottomRight:
         x: 47
         y: 52
       bottomLeft:
-        x: 125
-        y: 28
+        x: 126
+        y: 27
     rotation: 164
     orientation: 164
     isMirrored: false
@@ -156,10 +156,10 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: 815b241
+      data: a5033c3
       width: 26
       height: 26
-    extra: '{"UEC":0.92,"Version":"26x26"}'
+    extra: '{"UEC":1.00,"Version":"26x26"}'
     version: 26x26
     readerInit: false
     ecLevel: ""
@@ -178,16 +178,16 @@ slow:
         x: 42
         y: 100
       topRight:
-        x: 21
-        y: 24
+        x: 20
+        y: 23
       bottomRight:
         x: 95
         y: 47
       bottomLeft:
-        x: 119
-        y: 125
-    rotation: -106
-    orientation: -106
+        x: 120
+        y: 126
+    rotation: -107
+    orientation: -107
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"

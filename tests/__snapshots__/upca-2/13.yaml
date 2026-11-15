@@ -12,16 +12,16 @@ fast:
     position:
       topLeft:
         x: 67
-        y: 139
+        y: 138
       topRight:
         x: 289
-        y: 139
+        y: 138
       bottomRight:
         x: 289
-        y: 140
+        y: 151
       bottomLeft:
         x: 67
-        y: 140
+        y: 151
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -30,7 +30,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 5
     symbol:
       data: e3b0c44
       width: 0
@@ -52,10 +52,10 @@ fast:
     position:
       topLeft:
         x: 284
-        y: 79
+        y: 67
       topRight:
         x: 62
-        y: 79
+        y: 67
       bottomRight:
         x: 62
         y: 80
@@ -70,7 +70,7 @@ fast:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 5
     symbol:
       data: e3b0c44
       width: 0
@@ -92,17 +92,17 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 67
-        y: 128
+        x: 69
+        y: 22
       topRight:
-        x: 289
-        y: 128
+        x: 283
+        y: 22
       bottomRight:
         x: 289
-        y: 129
+        y: 171
       bottomLeft:
         x: 67
-        y: 129
+        y: 171
     rotation: 0
     orientation: 0
     isMirrored: false
@@ -111,7 +111,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 51
     symbol:
       data: e3b0c44
       width: 0
@@ -133,16 +133,16 @@ slow:
     position:
       topLeft:
         x: 284
-        y: 89
+        y: 47
       topRight:
         x: 62
-        y: 89
+        y: 47
       bottomRight:
-        x: 62
-        y: 90
+        x: 68
+        y: 196
       bottomLeft:
-        x: 284
-        y: 90
+        x: 282
+        y: 196
     rotation: 180
     orientation: 180
     isMirrored: false
@@ -151,7 +151,7 @@ slow:
     sequenceSize: -1
     sequenceIndex: -1
     sequenceId: ""
-    lineCount: 2
+    lineCount: 51
     symbol:
       data: e3b0c44
       width: 0

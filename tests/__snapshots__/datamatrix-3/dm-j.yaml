@@ -14,7 +14,7 @@ fast:
         x: 28
         y: 17
       topRight:
-        x: 108
+        x: 107
         y: 32
       bottomRight:
         x: 109
@@ -58,7 +58,7 @@ slow:
         x: 28
         y: 17
       topRight:
-        x: 108
+        x: 107
         y: 32
       bottomRight:
         x: 109
@@ -135,7 +135,7 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 137
+        x: 138
         y: 148
       topRight:
         x: 58
@@ -176,7 +176,7 @@ slow:
     position:
       topLeft:
         x: 17
-        y: 137
+        y: 138
       topRight:
         x: 32
         y: 58

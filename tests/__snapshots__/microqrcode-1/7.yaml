@@ -15,15 +15,15 @@ fast:
         y: 231
       topRight:
         x: 547
-        y: 228
+        y: 229
       bottomRight:
-        x: 538
-        y: 372
+        x: 539
+        y: 375
       bottomLeft:
-        x: 399
-        y: 372
-    rotation: -1
-    orientation: -1
+        x: 397
+        y: 373
+    rotation: 0
+    orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -54,16 +54,16 @@ fast:
         x: 238
         y: 389
       topRight:
-        x: 242
+        x: 241
         y: 548
       bottomRight:
-        x: 97
+        x: 95
         y: 539
       bottomLeft:
-        x: 98
+        x: 97
         y: 398
-    rotation: 89
-    orientation: 89
+    rotation: 90
+    orientation: 90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -95,15 +95,15 @@ fast:
         y: 238
       topRight:
         x: 126
-        y: 242
+        y: 241
       bottomRight:
         x: 134
-        y: 97
+        y: 95
       bottomLeft:
-        x: 275
+        x: 276
         y: 97
-    rotation: 179
-    orientation: 179
+    rotation: 180
+    orientation: 180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -134,16 +134,16 @@ fast:
         x: 232
         y: 285
       topRight:
-        x: 228
+        x: 229
         y: 126
       bottomRight:
-        x: 374
+        x: 375
         y: 134
       bottomLeft:
         x: 373
-        y: 275
-    rotation: -91
-    orientation: -91
+        y: 276
+    rotation: -90
+    orientation: -90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -176,15 +176,15 @@ slow:
         y: 231
       topRight:
         x: 547
-        y: 228
+        y: 229
       bottomRight:
-        x: 538
-        y: 372
+        x: 539
+        y: 375
       bottomLeft:
-        x: 399
-        y: 372
-    rotation: -1
-    orientation: -1
+        x: 397
+        y: 373
+    rotation: 0
+    orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -215,16 +215,16 @@ slow:
         x: 238
         y: 389
       topRight:
-        x: 242
+        x: 241
         y: 548
       bottomRight:
-        x: 97
+        x: 95
         y: 539
       bottomLeft:
-        x: 98
+        x: 97
         y: 398
-    rotation: 89
-    orientation: 89
+    rotation: 90
+    orientation: 90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -256,15 +256,15 @@ slow:
         y: 238
       topRight:
         x: 126
-        y: 242
+        y: 241
       bottomRight:
         x: 134
-        y: 97
+        y: 95
       bottomLeft:
-        x: 275
+        x: 276
         y: 97
-    rotation: 179
-    orientation: 179
+    rotation: 180
+    orientation: 180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
@@ -295,16 +295,16 @@ slow:
         x: 232
         y: 285
       topRight:
-        x: 228
+        x: 229
         y: 126
       bottomRight:
-        x: 374
+        x: 375
         y: 134
       bottomLeft:
         x: 373
-        y: 275
-    rotation: -91
-    orientation: -91
+        y: 276
+    rotation: -90
+    orientation: -90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"

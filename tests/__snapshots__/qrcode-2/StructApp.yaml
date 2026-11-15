@@ -4,35 +4,35 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 38acb95
-    bytesECI: b066769
-    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    bytes: e0bd8ff
+    bytesECI: 7e47f39
+    text: "initrd vs initramfs<LF><LF>Monolithic vs Modular kernel vs MicroKernel<LF><LF>Monolithic:<LF>    All drivers, operations and code to perform kernel related tasks are compilied into the kernel.  Interactions with kernel are done through system calls.<LF>    advantages:<LF>        1)  Less code = less complexity<LF>        2)  Less code = smaller size<LF>        3)  Less code = fewer bugs and security issues<LF>    disadvantages<LF>        1)  difficult to patch and test<LF>        2)  bugs can affect large parts of system<LF>  <LF>Microkernel<LF>   "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 286
-        y: 26
+        x: 20
+        y: 24
       topRight:
-        x: 500
-        y: 26
+        x: 237
+        y: 24
       bottomRight:
-        x: 501
-        y: 241
+        x: 236
+        y: 240
       bottomLeft:
-        x: 285
-        y: 241
+        x: 20
+        y: 240
     rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
     sequenceSize: 4
-    sequenceIndex: 1
+    sequenceIndex: 0
     sequenceId: "95"
     lineCount: 0
     symbol:
-      data: 11475b5
+      data: 164b562
       width: 77
       height: 77
     extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
@@ -44,35 +44,35 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 38acb95
-    bytesECI: b066769
-    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    bytes: e0bd8ff
+    bytesECI: 7e47f39
+    text: "initrd vs initramfs<LF><LF>Monolithic vs Modular kernel vs MicroKernel<LF><LF>Monolithic:<LF>    All drivers, operations and code to perform kernel related tasks are compilied into the kernel.  Interactions with kernel are done through system calls.<LF>    advantages:<LF>        1)  Less code = less complexity<LF>        2)  Less code = smaller size<LF>        3)  Less code = fewer bugs and security issues<LF>    disadvantages<LF>        1)  difficult to patch and test<LF>        2)  bugs can affect large parts of system<LF>  <LF>Microkernel<LF>   "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 508
-        y: 286
+        x: 510
+        y: 20
       topRight:
-        x: 508
-        y: 500
+        x: 510
+        y: 237
       bottomRight:
-        x: 293
-        y: 501
+        x: 294
+        y: 236
       bottomLeft:
-        x: 293
-        y: 285
+        x: 294
+        y: 20
     rotation: 90
     orientation: 90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
     sequenceSize: 4
-    sequenceIndex: 1
+    sequenceIndex: 0
     sequenceId: "95"
     lineCount: 0
     symbol:
-      data: 11475b5
+      data: 164b562
       width: 77
       height: 77
     extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
@@ -84,35 +84,35 @@ fast:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 38acb95
-    bytesECI: b066769
-    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    bytes: cff540a
+    bytesECI: 8f2ef7d
+    text: ed to having the module compiled into the kernel.  But, <LF>this can be offset by having an overall smaller footprint in the monolithic kernel due to not having unnecessary code compiled into the kernel.  This <LF>is chiefly beneficial to embedded systems.<LF>        <LF>        <LF>        <LF>        <LF>        <LF>Resources <LF><LF>http://www.systhread.net/texts/200510kdiff.php<LF>http://en.wikipedia.org/wiki/Microkernel<LF>http://en.wikipedia.org/wiki/Monolithic_kernel<LF>http://en.wikipedia.org/wiki/Initramfs<LF>
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 248
-        y: 508
+        x: 503
+        y: 262
       topRight:
-        x: 34
-        y: 508
+        x: 287
+        y: 261
       bottomRight:
-        x: 33
-        y: 293
+        x: 287
+        y: 46
       bottomLeft:
-        x: 249
-        y: 293
-    rotation: 180
-    orientation: 180
+        x: 503
+        y: 46
+    rotation: -180
+    orientation: -180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
     sequenceSize: 4
-    sequenceIndex: 1
+    sequenceIndex: 3
     sequenceId: "95"
     lineCount: 0
     symbol:
-      data: 11475b5
+      data: "0499206"
       width: 77
       height: 77
     extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
@@ -165,35 +165,35 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 38acb95
-    bytesECI: b066769
-    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    bytes: e0bd8ff
+    bytesECI: 7e47f39
+    text: "initrd vs initramfs<LF><LF>Monolithic vs Modular kernel vs MicroKernel<LF><LF>Monolithic:<LF>    All drivers, operations and code to perform kernel related tasks are compilied into the kernel.  Interactions with kernel are done through system calls.<LF>    advantages:<LF>        1)  Less code = less complexity<LF>        2)  Less code = smaller size<LF>        3)  Less code = fewer bugs and security issues<LF>    disadvantages<LF>        1)  difficult to patch and test<LF>        2)  bugs can affect large parts of system<LF>  <LF>Microkernel<LF>   "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 286
-        y: 26
+        x: 20
+        y: 24
       topRight:
-        x: 500
-        y: 26
+        x: 237
+        y: 24
       bottomRight:
-        x: 501
-        y: 241
+        x: 236
+        y: 240
       bottomLeft:
-        x: 285
-        y: 241
+        x: 20
+        y: 240
     rotation: 0
     orientation: 0
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
     sequenceSize: 4
-    sequenceIndex: 1
+    sequenceIndex: 0
     sequenceId: "95"
     lineCount: 0
     symbol:
-      data: 11475b5
+      data: 164b562
       width: 77
       height: 77
     extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
@@ -205,35 +205,35 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 38acb95
-    bytesECI: b066769
-    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    bytes: e0bd8ff
+    bytesECI: 7e47f39
+    text: "initrd vs initramfs<LF><LF>Monolithic vs Modular kernel vs MicroKernel<LF><LF>Monolithic:<LF>    All drivers, operations and code to perform kernel related tasks are compilied into the kernel.  Interactions with kernel are done through system calls.<LF>    advantages:<LF>        1)  Less code = less complexity<LF>        2)  Less code = smaller size<LF>        3)  Less code = fewer bugs and security issues<LF>    disadvantages<LF>        1)  difficult to patch and test<LF>        2)  bugs can affect large parts of system<LF>  <LF>Microkernel<LF>   "
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 508
-        y: 286
+        x: 510
+        y: 20
       topRight:
-        x: 508
-        y: 500
+        x: 510
+        y: 237
       bottomRight:
-        x: 293
-        y: 501
+        x: 294
+        y: 236
       bottomLeft:
-        x: 293
-        y: 285
+        x: 294
+        y: 20
     rotation: 90
     orientation: 90
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
     sequenceSize: 4
-    sequenceIndex: 1
+    sequenceIndex: 0
     sequenceId: "95"
     lineCount: 0
     symbol:
-      data: 11475b5
+      data: 164b562
       width: 77
       height: 77
     extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'
@@ -245,35 +245,35 @@ slow:
     error: ""
     format: QRCode
     symbology: QRCode
-    bytes: 38acb95
-    bytesECI: b066769
-    text: ' Only the fundamental tasks and drives are handled by the kernel - memory management, passing messages between processes.  <LF>    All other tasks are handled in user space by "servers" or "user-mode servers."<LF>    advantages<LF>        1)  easier to maintain<LF>        2)  testing is easier - can swap patches in and out<LF>    disadvantages<LF>        1)  Larger running footprint<LF>        2)  More complex to interact with - port calls from user-mode servers<LF>        3)  Process management can be more complex<LF>        <LF>Mo'
+    bytes: cff540a
+    bytesECI: 8f2ef7d
+    text: ed to having the module compiled into the kernel.  But, <LF>this can be offset by having an overall smaller footprint in the monolithic kernel due to not having unnecessary code compiled into the kernel.  This <LF>is chiefly beneficial to embedded systems.<LF>        <LF>        <LF>        <LF>        <LF>        <LF>Resources <LF><LF>http://www.systhread.net/texts/200510kdiff.php<LF>http://en.wikipedia.org/wiki/Microkernel<LF>http://en.wikipedia.org/wiki/Monolithic_kernel<LF>http://en.wikipedia.org/wiki/Initramfs<LF>
     contentType: Text
     hasECI: false
     position:
       topLeft:
-        x: 248
-        y: 508
+        x: 503
+        y: 262
       topRight:
-        x: 34
-        y: 508
+        x: 287
+        y: 261
       bottomRight:
-        x: 33
-        y: 293
+        x: 287
+        y: 46
       bottomLeft:
-        x: 249
-        y: 293
-    rotation: 180
-    orientation: 180
+        x: 503
+        y: 46
+    rotation: -180
+    orientation: -180
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]Q1"
     sequenceSize: 4
-    sequenceIndex: 1
+    sequenceIndex: 3
     sequenceId: "95"
     lineCount: 0
     symbol:
-      data: 11475b5
+      data: "0499206"
       width: 77
       height: 77
     extra: '{"DataMask":2,"UEC":1.00,"Version":"15","ECLevel":"L"}'

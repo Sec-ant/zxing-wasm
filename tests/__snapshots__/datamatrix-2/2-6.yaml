@@ -11,19 +11,19 @@ fast:
     hasECI: false
     position:
       topLeft:
-        x: 25
+        x: 26
         y: 59
       topRight:
         x: 159
         y: 25
       bottomRight:
         x: 194
-        y: 159
+        y: 160
       bottomLeft:
         x: 58
         y: 195
-    rotation: -15
-    orientation: -15
+    rotation: -14
+    orientation: -14
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -55,19 +55,19 @@ slow:
     hasECI: false
     position:
       topLeft:
-        x: 25
+        x: 26
         y: 59
       topRight:
         x: 159
         y: 25
       bottomRight:
         x: 194
-        y: 159
+        y: 160
       bottomLeft:
         x: 58
         y: 195
-    rotation: -15
-    orientation: -15
+    rotation: -14
+    orientation: -14
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"
@@ -181,13 +181,13 @@ slow:
         x: 25
         y: 81
       bottomRight:
-        x: 159
+        x: 160
         y: 46
       bottomLeft:
         x: 195
         y: 182
-    rotation: -105
-    orientation: -105
+    rotation: -104
+    orientation: -104
     isMirrored: false
     isInverted: false
     symbologyIdentifier: "]d1"

@@ -17,7 +17,7 @@ fast:
         x: 259
         y: 206
       bottomRight:
-        x: 295
+        x: 294
         y: 258
       bottomLeft:
         x: 243
@@ -58,7 +58,7 @@ fast:
         y: 259
       bottomRight:
         x: 242
-        y: 295
+        y: 294
       bottomLeft:
         x: 206
         y: 243
@@ -97,7 +97,7 @@ fast:
         x: 241
         y: 294
       bottomRight:
-        x: 205
+        x: 206
         y: 242
       bottomLeft:
         x: 257
@@ -138,7 +138,7 @@ fast:
         y: 241
       bottomRight:
         x: 258
-        y: 205
+        y: 206
       bottomLeft:
         x: 294
         y: 257
@@ -178,7 +178,7 @@ slow:
         x: 259
         y: 206
       bottomRight:
-        x: 295
+        x: 294
         y: 258
       bottomLeft:
         x: 243
@@ -219,7 +219,7 @@ slow:
         y: 259
       bottomRight:
         x: 242
-        y: 295
+        y: 294
       bottomLeft:
         x: 206
         y: 243
@@ -258,7 +258,7 @@ slow:
         x: 241
         y: 294
       bottomRight:
-        x: 205
+        x: 206
         y: 242
       bottomLeft:
         x: 257
@@ -299,7 +299,7 @@ slow:
         y: 241
       bottomRight:
         x: 258
-        y: 205
+        y: 206
       bottomLeft:
         x: 294
         y: 257

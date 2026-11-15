@@ -14,14 +14,14 @@ fast:
         x: 46
         y: 13
       topRight:
-        x: 482
+        x: 481
         y: 52
       bottomRight:
         x: 446
-        y: 482
+        y: 481
       bottomLeft:
         x: 16
-        y: 445
+        y: 444
     rotation: 5
     orientation: 5
     isMirrored: false
@@ -32,7 +32,7 @@ fast:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: b3f8db4
+      data: 4bc6e2a
       width: 48
       height: 48
     extra: '{"UEC":1.00,"Version":"48x48"}'
@@ -58,14 +58,14 @@ slow:
         x: 46
         y: 13
       topRight:
-        x: 482
+        x: 481
         y: 52
       bottomRight:
         x: 446
-        y: 482
+        y: 481
       bottomLeft:
         x: 16
-        y: 445
+        y: 444
     rotation: 5
     orientation: 5
     isMirrored: false
@@ -76,7 +76,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: b3f8db4
+      data: 4bc6e2a
       width: 48
       height: 48
     extra: '{"UEC":1.00,"Version":"48x48"}'
@@ -99,12 +99,12 @@ slow:
         y: 46
       topRight:
         x: 447
-        y: 482
+        y: 481
       bottomRight:
-        x: 17
+        x: 18
         y: 446
       bottomLeft:
-        x: 54
+        x: 55
         y: 16
     rotation: 95
     orientation: 95
@@ -116,7 +116,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: b3f8db4
+      data: 4bc6e2a
       width: 48
       height: 48
     extra: '{"UEC":1.00,"Version":"48x48"}'
@@ -138,14 +138,14 @@ slow:
         x: 453
         y: 486
       topRight:
-        x: 17
+        x: 18
         y: 447
       bottomRight:
         x: 53
-        y: 17
+        y: 18
       bottomLeft:
         x: 483
-        y: 54
+        y: 55
     rotation: -175
     orientation: -175
     isMirrored: false
@@ -156,7 +156,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: b3f8db4
+      data: 4bc6e2a
       width: 48
       height: 48
     extra: '{"UEC":1.00,"Version":"48x48"}'
@@ -179,12 +179,12 @@ slow:
         y: 453
       topRight:
         x: 52
-        y: 17
+        y: 18
       bottomRight:
-        x: 482
+        x: 481
         y: 53
       bottomLeft:
-        x: 445
+        x: 444
         y: 483
     rotation: -85
     orientation: -85
@@ -196,7 +196,7 @@ slow:
     sequenceId: ""
     lineCount: 0
     symbol:
-      data: b3f8db4
+      data: 4bc6e2a
       width: 48
       height: 48
     extra: '{"UEC":1.00,"Version":"48x48"}'
