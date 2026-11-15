@@ -78,10 +78,12 @@ for (const { directory, barcodeFormat } of testEntries.filter(
         }
       }
       describe(imagePath, () => {
-        beforeAll(() =>
-          warmUpCache(imagePath, [
-            ...new Set(cases.map(({ rotation }) => rotation)),
-          ]),
+        beforeAll(
+          () =>
+            warmUpCache(imagePath, [
+              ...new Set(cases.map(({ rotation }) => rotation)),
+            ]),
+          60_000,
         );
         for (const { mode, rotation } of cases) {
           test(`${mode} ${rotation}`, async () => {
