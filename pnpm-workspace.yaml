@@ -6,7 +6,7 @@ allowBuilds:
   esbuild: true
   simple-git-hooks: true
 overrides:
-  "bundlewatch>axios": 1.20.0
+  "bundlewatch>axios": 1.21.1
 minimumReleaseAgeExclude:
   - "@biomejs/biome@2.5.13"
   - "@biomejs/cli-darwin-arm64@2.5.13"
