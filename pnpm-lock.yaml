@@ -183,8 +183,8 @@ importers:
         specifier: ^1.41.6
         version: 1.41.6
       type-fest:
-        specifier: ^5.10.0
-        version: 5.10.0
+        specifier: ^6.0.0
+        version: 6.0.3
     devDependencies:
       '@biomejs/biome':
         specifier: 2.6.8
@@ -1737,9 +1737,9 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  type-fest@5.10.0:
-    resolution: {integrity: sha512-NoSdpq/WEiAg5sjmBkmV/hfxv6HJH4NqPNrqjtSO5CwRmpsDfaf4begxW34KdJykH/l1yHtwBWQkCRdoXO8mPA==}
-    engines: {node: '>=20'}
+  type-fest@6.0.3:
+    resolution: {integrity: sha512-MOJXegkac3h+sWdVb6VY/ACclsa71z3BprNpedGV8ljIzYCo+LRWgyIkWhidKNoiNJOb6kUds1pNCyzQ2p6hJQ==}
+    engines: {node: '>=22'}
 
   typedoc-plugin-replace-text@4.2.0:
     resolution: {integrity: sha512-vmhpFKg75l0CfHO7n3bdf/wwSWH6hQQxaZTqZ5HDe5Xd40tkk6jkVkP6SWhDhntSIflREQqwneflGJG3bCqPEA==}
@@ -3217,7 +3217,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  type-fest@5.10.0:
+  type-fest@6.0.3:
     dependencies:
       tagged-tag: 1.0.0
 

@@ -220,7 +220,7 @@
   },
   "dependencies": {
     "@types/emscripten": "^1.41.6",
-    "type-fest": "^5.10.0"
+    "type-fest": "^6.0.0"
   },
   "peerDependencies": {
     "@types/emscripten": ">=1.39.6"
