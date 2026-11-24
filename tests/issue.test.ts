@@ -48,6 +48,22 @@ describe("zxing/writer", async () => {
       }),
     ).resolves.not.toThrowError();
   });
+
+  test("UTF-8 output respects quiet zones and rotation", async () => {
+    const options = { format: "Code128", addQuietZones: false } as const;
+    const plain = await writeBarcode("123456", options);
+    const padded = await writeBarcode("123456", {
+      ...options,
+      addQuietZones: true,
+    });
+    const rotated = await writeBarcode("123456", { ...options, rotate: 90 });
+
+    const plainRows = plain.utf8.split("\n");
+    const paddedRows = padded.utf8.split("\n");
+    const rotatedRows = rotated.utf8.split("\n");
+    expect(paddedRows[0].length).toBeGreaterThan(plainRows[0].length);
+    expect(rotatedRows.length).toBeGreaterThan(plainRows.length);
+  });
 });
 
 describe("zxing/reader", async () => {

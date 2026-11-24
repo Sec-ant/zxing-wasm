@@ -5,7 +5,7 @@ inputs:
   emsdk-version:
     description: EMSDK Version
     required: true
-    default: 7.0.0
+    default: 7.0.1
   emsdk-cache-dir:
     description: EMSDK Cache Directory
     required: true
@@ -28,7 +28,7 @@ runs:
         emsdk-cache-dir: ${{ inputs.emsdk-cache-dir }}
 
     - name: Setup ccache
-      uses: hendrikmuhs/ccache-action@dbeefd73e8e2ffc1bbc412570072735eb4db3607 # v1.2.25
+      uses: hendrikmuhs/ccache-action@e91f31892a1d1b8c44424b1a94c0b7f52d337168 # v1.2.26
       with:
         key: ${{ runner.os }}-emsdk-${{ inputs.emsdk-version }}-${{ inputs.ccache-key }}
         # 2 GiB is plenty for the three wasm targets across recent commits.

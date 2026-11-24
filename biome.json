@@ -6,6 +6,7 @@
       "**",
       "!**/zxing-cpp",
       "!**/__snapshots__",
+      "!**/.changeset/*.md",
       "!**/.changeset/pre.json"
     ]
   },
