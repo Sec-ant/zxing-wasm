@@ -219,8 +219,7 @@
     "yaml": "^2.9.1"
   },
   "dependencies": {
-    "@types/emscripten": "^1.41.6",
-    "type-fest": "^5.10.0"
+    "@types/emscripten": "^1.41.6"
   },
   "peerDependencies": {
     "@types/emscripten": ">=1.39.6"

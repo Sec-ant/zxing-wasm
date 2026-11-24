@@ -1,4 +1,3 @@
-import type { Merge } from "type-fest";
 import {
   defaultReaderOptions,
   defaultWriterOptions,
@@ -200,12 +199,12 @@ export function shallow<T extends Record<string, unknown>>(a: T, b: T) {
 
 export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  options?: Merge<PrepareZXingModuleOptions, { fireImmediately?: false }>,
+  options?: PrepareZXingModuleOptions & { fireImmediately?: false },
 ): void;
 
 export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(
   zxingModuleFactory: ZXingModuleFactory<T>,
-  options: Merge<PrepareZXingModuleOptions, { fireImmediately: true }>,
+  options: PrepareZXingModuleOptions & { fireImmediately: true },
 ): Promise<ZXingModule<T>>;
 
 export function prepareZXingModuleWithFactory<T extends ZXingModuleType>(

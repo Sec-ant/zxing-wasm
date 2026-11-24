@@ -1,4 +1,3 @@
-import type { Merge } from "type-fest";
 import type { ReaderOptions } from "../bindings/index.js";
 import {
   type PrepareZXingModuleOptions,
@@ -11,11 +10,11 @@ import {
 import zxingModuleFactory from "./zxing_reader.js";
 
 export function prepareZXingModule(
-  options?: Merge<PrepareZXingModuleOptions, { fireImmediately?: false }>,
+  options?: PrepareZXingModuleOptions & { fireImmediately?: false },
 ): void;
 
 export function prepareZXingModule(
-  options: Merge<PrepareZXingModuleOptions, { fireImmediately: true }>,
+  options: PrepareZXingModuleOptions & { fireImmediately: true },
 ): Promise<ZXingReaderModule>;
 
 export function prepareZXingModule(
