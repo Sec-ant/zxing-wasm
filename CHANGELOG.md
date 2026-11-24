@@ -1,5 +1,12 @@
 # zxing-wasm
 
+## 3.1.8
+
+### Patch Changes
+
+- 4758fed: Remove the `type-fest` dependency while preserving the `prepareZXingModule` overloads and return types.
+- 7ec0e69: Update ZXing-C++ to v3.2.0, including upstream security fixes and improvements to barcode detection, text decoding, and UTF-8 writer output.
+
 ## 3.1.7
 
 ### Patch Changes
